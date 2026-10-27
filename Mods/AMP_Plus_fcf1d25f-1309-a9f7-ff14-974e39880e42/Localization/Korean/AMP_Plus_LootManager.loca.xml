@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="hf769fb1ag4839g46d7g888fg5c1d2b061113" version="1">Loot Manager</content>
-	<content contentuid="h9b0c5018g4d69g48f4gb03bg9f2e3273d85d" version="1">Auto-sorts capsules, runic shards, planar coins, magic artifacts, alchemy ingredients and camp supplies into their own containers.</content>
+	<content contentuid="h9b0c5018g4d69g48f4gb03bg9f2e3273d85d" version="1">캡슐, 룬 파편, 차원 주화, 마법 유물, 연금술 재료, 야영 물자를 각각의 보관함으로 자동 분류합니다.</content>
 	<content contentuid="h2ee3a584g2646g44e3g9739g7670c079e6d4" version="1">&lt;b&gt;Ancient Mega Pack&lt;/b&gt;&lt;br&gt;&lt;br&gt;The Loot Manager is on. Keep it on? Choose No to turn it off.</content>
 	<content contentuid="h5610ce6eg92acg4f06gb17bg3bab1cfdbe17" version="1">&lt;b&gt;Ancient Mega Pack&lt;/b&gt;&lt;br&gt;&lt;br&gt;The Loot Manager is off. Keep it off? Choose No to turn it on.</content>
 	<content contentuid="hcee8264fg163cg4a21ga030g10e8de7f7019" version="1">Loot Manager</content>
-	<content contentuid="ha5342819g764eg40fdg9318g598f537a0d75" version="1">Automatically files picked-up loot into dedicated containers. The switch is shared by the whole party: turn it off on any character and the filing stops for everyone.</content>
+	<content contentuid="ha5342819g764eg40fdg9318g598f537a0d75" version="1">주운 전리품을 전용 보관함에 자동으로 정리합니다. 설정은 파티 전체가 공유하므로 어느 캐릭터로든 끄면 모두의 자동 정리가 중단됩니다.</content>
 </contentList>

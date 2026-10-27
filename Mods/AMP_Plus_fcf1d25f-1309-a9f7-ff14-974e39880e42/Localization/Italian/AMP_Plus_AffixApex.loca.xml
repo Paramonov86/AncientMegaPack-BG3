@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="h856248b9g0bc6g4c8egbb36g4960e012b22e" version="1">&lt;b&gt;Apex&lt;/b&gt;&lt;br&gt;&lt;br&gt;un nemico potente con più della metà dei suoi punti ferita che non ha subito danni durante il proprio turno ottiene un'azione extra nel turno successivo.&lt;br&gt;&lt;br&gt;Attivarlo?</content>
-	<content contentuid="h4d0a816bgd6b8g4bb6gbebfge459c478864c" version="1">Se questa creatura Apex ha più della metà dei suoi punti ferita e non ha subito danni nel turno precedente, all'inizio del suo turno ottiene un'azione extra.</content>
+	<content contentuid="h4d0a816bgd6b8g4bb6gbebfge459c478864c" version="1">Se questa creatura Apex ha più della metà dei suoi punti ferita e non ha subito danni nel turno precedente, all'inizio del suo turno ottiene &lt;LSTag Type="Status" Tooltip="ACTION_SURGE"&gt;Impeto d’Azione&lt;/LSTag&gt;.</content>
 </contentList>

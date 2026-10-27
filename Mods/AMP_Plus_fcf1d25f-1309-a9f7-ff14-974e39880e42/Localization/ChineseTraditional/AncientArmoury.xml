@@ -50,7 +50,7 @@
 	<content contentuid="h5d2e6483gf35ag4e6cgad23g4dbcb1313855" version="1">進入&lt;b&gt;潛行狀態&lt;/b&gt;時，你獲得&lt;LSTag Type="Status" Tooltip="ARMOURC7_3"&gt;幽蟲覆影&lt;/LSTag&gt;。</content>
 	<content contentuid="hbb273666g474fg430dg9f2bg42564f5be162" version="1">進入&lt;b&gt;潛行狀態&lt;/b&gt;時，你獲得&lt;LSTag Type="Status" Tooltip="ARMOURC7_4"&gt;幽蟲覆影&lt;/LSTag&gt;。</content>
 	<content contentuid="hda1c1367gc8cag4d4bg91c3gc62f3f3fdcc3" version="1">幽蟲覆影</content>
-	<content contentuid="hdb11a4ecg013fg4b30gbfa3g0d89934f06d5" version="1">&lt;LSTag Type="Skills" Tooltip="Stealth"&gt;隱匿&lt;/LSTag&gt; &lt;b&gt;+[1]&lt;/b&gt;，&lt;b&gt;武器攻擊&lt;/b&gt;獲得&lt;b&gt;+[2]&lt;/b&gt;。&lt;br&gt;&lt;br&gt;當離開&lt;b&gt;隱匿狀態&lt;/b&gt;時，效果消失。&lt;/content&gt;</content>
+	<content contentuid="hdb11a4ecg013fg4b30gbfa3g0d89934f06d5" version="1">&lt;LSTag Type="Skills" Tooltip="Stealth"&gt;隱匿&lt;/LSTag&gt; &lt;b&gt;+[1]&lt;/b&gt;，&lt;b&gt;武器攻擊&lt;/b&gt;獲得&lt;b&gt;+[2]&lt;/b&gt;。&lt;br&gt;&lt;br&gt;當離開&lt;b&gt;隱匿狀態&lt;/b&gt;時，效果消失。</content>
 	<content contentuid="he3719f2dg1229g4962g9ce1gd9b4c1fd1f43" version="1">皇家信使禮服</content>
 	<content contentuid="h3e01c84bgbf23g43d0g837eg1a83dc811581" version="1">這件禮服做工精良，選用最上乘的織物。無須贅言，數百年來，它刺繡上的皇家紋章幾乎未有磨損，其內裡的布料微微閃爍著的附魔之光，昭示著前任主人所負使命之重大。</content>
 	<content contentuid="h101d936ag9a7cg43e8ga419g9a10b08faae5" version="1">輕身步</content>
@@ -121,7 +121,7 @@
 	<content contentuid="hcba9b31bg51e9g467ega240g3e67e6c2f2ce" version="1">風語長袍</content>
 	<content contentuid="hc22e5e4bga8c9g40e6g938fgf7de7a8a2827" version="1">梅加利斯並非風暴神殿唯一的先知，但他卻是最堅定不移者。當所有同伴都因絕望而一鬨而散時，他獨自堅守神殿大門，抵禦那些試圖奪取風暴與雷鳴祭壇的兇暴怪物。他遍體鱗傷，衣袍也瘡痍累累。無人知曉這件聖物為何流落凡塵，但它靈魂的歸宿，毋庸置疑，當屬天外高天的長空。</content>
 	<content contentuid="hea312ed6g9d6cg4e9ag9328g8e7e5b990c13" version="1">守護姿態</content>
-	<content contentuid="h60451073gc935g4cd0g8b07g31d0a94ee2f2" version="1">若你在自己的回合中未移動，則在回合結束時獲得&lt;b&gt;[1]&lt;/b&gt;層&lt;LSTag Type="Status" Tooltip="MAG_CHARGED_LIGHTNING"&gt;閃電充能&lt;/LSTag&gt;。&lt;/content&gt;</content>
+	<content contentuid="h60451073gc935g4cd0g8b07g31d0a94ee2f2" version="1">若你在自己的回合中未移動，則在回合結束時獲得&lt;b&gt;[1]&lt;/b&gt;層&lt;LSTag Type="Status" Tooltip="MAG_CHARGED_LIGHTNING"&gt;閃電充能&lt;/LSTag&gt;。</content>
 	<content contentuid="hf02a440bga502g425fgaf21g28e41f68d721" version="1">堅守陣地</content>
 	<content contentuid="hc959349bgfb2cg4903gbe59g6358a421f794" version="1">如堅守神殿大門的梅加利斯般屹立不倒。回合結束時獲得&lt;b&gt;[1]&lt;/b&gt;層&lt;LSTag Type="Status" Tooltip="MAG_CHARGED_LIGHTNING"&gt;閃電充能&lt;/LSTag&gt;。</content>
 	<content contentuid="hba68f3fcgc6cbg4eecg9f96g66322baf86f4" version="1">蓄能防護</content>
@@ -181,7 +181,7 @@
 	<content contentuid="hd9af817fg5c08g475cg97e9ge5f3e6e167b3" version="1">雷霆恩典</content>
 	<content contentuid="haf53dcbag131eg48e1g85dcg35e3149b777b" version="1">在絕望之際，梅里斯託斯向他的神祇祈求：“請降下您的恩典，賜我脫離仇敵之手！”於是，他藉由元素符文被賦予神力，頃刻間殲滅了所有敵人。日後，梅里斯託斯成為了偉大的國王，他彼時所穿衣物仍充盈著恩典餘暉，被珍藏於王室寶庫數千年，直至最後，惡魔之力毀滅了王國，蠻族將殘存之物洗劫一空。</content>
 	<content contentuid="hac3c6e43g41b2g44f8gbf90g5d8f3e5e9ca1" version="1">神賜</content>
-	<content contentuid="h028f3439g1db5g481ag88degb6341dbed984" version="1">受到&lt;LSTag Tooltip="CriticalHit"&gt;重擊&lt;/LSTag&gt;時，對攻擊者造成&lt;b&gt;[1]&lt;/b&gt;點傷害，並可令攻擊者&lt;LSTag Type="Status" Tooltip="PRONE"&gt;倒地&lt;/LSTag&gt;（力量豁免，對抗&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;）。</content>
+	<content contentuid="h028f3439g1db5g481ag88degb6341dbed984" version="2">受到&lt;LSTag Tooltip="CriticalHit"&gt;重擊&lt;/LSTag&gt;時，對攻擊者造成&lt;b&gt;[1]&lt;/b&gt;點傷害，並可令攻擊者&lt;LSTag Type="Status" Tooltip="PRONE"&gt;倒地&lt;/LSTag&gt;（力量豁免，對抗&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;）。</content>
 	<content contentuid="h4a3468a8g2f54g4109g94aeg820251dcbbb4" version="1">不息怒衣</content>
 	<content contentuid="h234c2043g9866g403agaa71gf9575dd403b6" version="1">傳說，奧列什是人們的良友，身為森林隱士的他，卻樂於對他人施以援手。但故事往往是真假參半的——其中並未記載，奧列什幫助“朋友”的代價是收取一個靈魂，他藉此獲得野獸般的力量，從而完成朋友們託付的任務。</content>
 	<content contentuid="h7eebf159g7fc9g4a99g83c6gcb1ad81356b3" version="1">隱者秘技</content>
@@ -302,7 +302,7 @@
 	<content contentuid="h0e48b39dga2c0g4b51gad31gc9cbd2702409" version="1">龍裔護爪</content>
 	<content contentuid="hdc70334dg289eg4575gba98g637354322689" version="1">這雙護爪曾屬於泰曼瑟最強大的龍裔鬥士，以遠古巨獸的皮革鞣製，並綴以鉚釘。它專為血脈中流淌著巨龍之力者打造，能讓鬥士的每一次打擊都迸發龍族傳承之力，將毀滅性的威能灌注於攻擊之中。如今，護爪正靜待新的英雄，以繼承龍之勇士的征途。</content>
 	<content contentuid="h04fa547fgc715g4d3dgb2afgadf1a9b76c9b" version="1">龍之勇武</content>
-	<content contentuid="h8e269030g4b84g4c0cgab01gfe89af16447f" version="1">若你為&lt;b&gt;龍裔&lt;/b&gt;（或&lt;b&gt;偽裝成龍裔&lt;/b&gt;），則你的&lt;b&gt;武器&lt;/b&gt;攻擊造成&lt;b&gt;[1]&lt;/b&gt;點額外傷害。</content>
+	<content contentuid="h8e269030g4b84g4c0cgab01gfe89af16447f" version="1">若你為&lt;b&gt;龍裔&lt;/b&gt;，你的&lt;b&gt;武器&lt;/b&gt;攻擊額外造成&lt;b&gt;[1]&lt;/b&gt;傷害，&lt;b&gt;徒手&lt;/b&gt;攻擊也額外造成&lt;b&gt;[1]&lt;/b&gt;傷害。</content>
 	<content contentuid="h61ae4e47gab06g4502g903agf7eb4a1a5714" version="1">鬥場直覺</content>
 	<content contentuid="hd1493823g03eeg41f1gac41gab4f73d55f50" version="1">當你&lt;b&gt;閃避&lt;/b&gt;一次&lt;b&gt;武器攻擊&lt;/b&gt;時，獲得&lt;b&gt;[1]&lt;/b&gt;層&lt;LSTag Type="Status" Tooltip="MAG_ZOC_FORCE_CONDUIT"&gt;力場導體&lt;/LSTag&gt;。若你為&lt;b&gt;龍裔&lt;/b&gt;，則改為獲得&lt;b&gt;[2]&lt;/b&gt;層。</content>
 	<content contentuid="h1a37ad6egd782g408dga5fcg7ee89c736909" version="1">泰曼瑟之威</content>
@@ -330,7 +330,7 @@
 	<content contentuid="h79c34ad2gffdcg4a0ag9fc2ga36b83fc5da8" version="1">神射護手</content>
 	<content contentuid="h4e941c8ag3fa1g46c3g9238g670be57ec81e" version="1">這雙護腕曾屬於拉倫·銳目，一位信奉西凡納斯的森林精靈弓箭手。在對抗卡林珊帝國的戰爭中，精靈們從先祖森林的陰影中出擊，向遠方的敵人傾瀉箭雨。拉倫是他們中最出色的箭手之一，以百發百中而聞名。護腕中的魔法引導著他的箭矢，精準得無可挑剔。在一次殘酷的伏擊中，拉倫陣亡，護腕落入卡林珊士兵之手，隨即被轉賣。它們真正的歷史就此被遺忘，淪落為集市貨堆裡一件來歷不明的奇巧物件。</content>
 	<content contentuid="h61eea65fgaafeg4c28g8509g4a903663beca" version="1">精準技藝</content>
-	<content contentuid="hbd49481bg1544g4c84g8c6bgd2f36184861c" version="1">你的遠端武器&lt;/b&gt;的&lt;LSTag Tooltip="AttackRoll"&gt;攻擊檢定&lt;/LSTag&gt;增加&lt;b&gt;+[1]&lt;/b&gt;。</content>
+	<content contentuid="hbd49481bg1544g4c84g8c6bgd2f36184861c" version="1">你的&lt;b&gt;遠程武器&lt;/b&gt;的&lt;LSTag Tooltip="AttackRoll"&gt;攻擊檢定&lt;/LSTag&gt;增加&lt;b&gt;+[1]&lt;/b&gt;。</content>
 	<content contentuid="h8e766c19g92e7g4316g9b34g3974016e7c12" version="1">最後的微光</content>
 	<content contentuid="h24649b89g3ac8g435cg816cga0e87917db78" version="1">這雙手套曾屬於安姆一位惡名昭著的刺客，他的獵物總在黑暗的安謐中迎來終結。手套被注入了禁忌儀式的力量，只需輕輕一彈指，便能令弱者目盲，在命運面前毫無還手之力。然而，在他膽大妄為地試圖刺殺城市執政官之後，這件珍貴的遺物便與它的主人一同消失得無影無蹤。刺客的結局至今成謎，而那雙浸染著陰影魔力的手套也再未現世——徒留傳說的餘音在風中低語。</content>
 	<content contentuid="h9e066c34gd8b3g4c31g8af5g40c3122f440a" version="1">束手待斃</content>
@@ -658,7 +658,7 @@
 	<content contentuid="h47d5d6b5g8db2g40ebgae64gdfda8eaa3cfa" version="1">天譴判官</content>
 	<content contentuid="hb673738fg278dg4d9bg90c7gb5003e147bc8" version="1">高階審判官奧勒良在光明大教堂地下的聖鍛爐中鑄就了這頂頭盔，併為其注入了所俘天界生物的精華。其獨特的飛鳥造型，靈感源於那隻曾在神啟異象中造訪他的傳奇鳳凰——它許諾了他對抗威脅國度的亡靈大軍的勝利。數十年來，奧勒良領導著對抗至強巫妖與吸血鬼領主的聖戰，頭盔的神聖魔法能將它們的攻擊如數奉還。當他最終隕落於暮光終焉之戰中時，他的屍身與頭盔均不知所蹤——直到今日。儘管原本的力量已有所衰減，但遺物中束縛著的天界精魂仍在燃燒著義憤之火，渴望著再度將黑暗從這片土地上驅逐出去。</content>
 	<content contentuid="h6718d472gac06g4c61gb071gdd34417cc9dc" version="1">聖火復仇</content>
-	<content contentuid="hd9f4bd16gf946g42beg8228g4c830ec93c07" version="1">&lt;b&gt;不死生物&lt;/b&gt;對你造成傷害時，必須透過對抗你的&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的體質&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則陷入&lt;LSTag Type="Status" Tooltip="ARMOURH117"&gt;天界閃光&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="hd9f4bd16gf946g42beg8228g4c830ec93c07" version="2">&lt;b&gt;不死生物&lt;/b&gt;對你造成傷害時，必須透過對抗你的&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的體質&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則陷入&lt;LSTag Type="Status" Tooltip="ARMOURH117"&gt;天界閃光&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
 	<content contentuid="h1fbe1dd9gb289g41b4ga41agb46578842f79" version="1">天界閃光</content>
 	<content contentuid="h61ba613fged0bg469fgada4g2e2eadac0aa5" version="1">該&lt;b&gt;不死生物&lt;/b&gt;被天界火焰環繞，損失&lt;b&gt;[1]&lt;/b&gt;點&lt;LSTag Tooltip="Strength"&gt;力量&lt;/LSTag&gt;和&lt;LSTag Tooltip="Dexterity"&gt;敏捷&lt;/LSTag&gt;。</content>
 	<content contentuid="h42fa8135g161dg4839g9368g24d8ea7f4f50" version="1">飢焰之冠</content>
@@ -670,7 +670,7 @@
 	<content contentuid="hda559eb2g389ag414cg89c5geec18ea7b305" version="1">巫毒媒質</content>
 	<content contentuid="hec559729g82c8g4566gb81cg787ba391c409" version="1">數個世紀前，臭名昭著的毒理學家馬萊凱，在深埋世界之脊下的實驗室中，遭遇了一整隊聖武士的圍剿。走投無路之下，他試圖進行一道絕望的儀式，將自己的軀體暫時化為純粹毒液——然而聖武士們合力施放的至聖斬打斷了這道法術。魔力的反噬震碎了他的血肉之軀，但他那飽浸了數十年鍊金實驗的精華，卻遁入了近旁的一件容器——他的兜帽之中。聖武士們只察覺到那看似無害的織物中殘留的微弱魔法，便將它當作證物登記在冊，束之高閣。</content>
 	<content contentuid="h6e9a94b8g6f02g41a2g8f16g42e27e590d5e" version="1">靈魂腐蝕</content>
-	<content contentuid="h20ef35c6gc907g4aa5g80fag2ad1c12f0291" version="1">當你造成&lt;b&gt;[1]&lt;/b&gt;時，目標必須透過一次對抗你的&lt;LSTag Tooltip="SpellDifficultyClass"&gt;法術豁免難度等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Constitution"&gt;體質&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則將受到&lt;LSTag Type="Status" Tooltip="MAG_POISON_POISON_LETHALITY"&gt;劇毒毒液&lt;/LSTag&gt;影響，持續至本回合結束。&lt;br&gt;&lt;br&gt;每回合只能觸發&lt;b&gt;一次&lt;/b&gt;。</content>
+	<content contentuid="h20ef35c6gc907g4aa5g80fag2ad1c12f0291" version="2">當你造成&lt;b&gt;[1]&lt;/b&gt;時，目標必須透過一次對抗你的&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Constitution"&gt;體質&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則將受到&lt;LSTag Type="Status" Tooltip="MAG_POISON_POISON_LETHALITY"&gt;劇毒毒液&lt;/LSTag&gt;影響，持續至本回合結束。&lt;br&gt;&lt;br&gt;每回合只能觸發&lt;b&gt;一次&lt;/b&gt;。</content>
 	<content contentuid="h01496253g1554g4df2gbfbdgd5cbd4efb085" version="1">劇毒毒液</content>
 	<content contentuid="h0e1b5179g776fg42bfg848bg1694447a5081" version="1">每回合開始時，有&lt;b&gt;[1]%&lt;/b&gt;的機率陷入&lt;LSTag Type="Status" Tooltip="AMP_TOXEMIA"&gt;毒血癥&lt;/LSTag&gt;，持續&lt;b&gt;[2]&lt;/b&gt;回合。</content>
 	<content contentuid="h1d0d2b44g1f12g4969g80bbgb16b49253d94" version="1">劇毒球</content>
