@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h7d5891e2gd28ag489bg9179gbafa07ad3c2c" version="1">ULTRA同時增援波次數量上限</content>
+	<content contentuid="h285cb17ag0364g425bga414g7707a9c6e779" version="1">設定同一場戰鬥中同時活躍的自動ULTRA增援波次數量上限：1至5波，或無限制（預設）。一波是一次生成的一批增援，並非首領數量。只要該波增援中至少有一名成員仍然存活並參與這場戰鬥，這一波就視為活躍。此設定不限制一場戰鬥中連續出現的增援波次總數。</content>
+	<content contentuid="h106d43d2gcc83g4d4fg82b3g92ed1dfe80de" version="1">&lt;b&gt;ULTRA同時增援波次數量上限: 1&lt;/b&gt;&lt;br&gt;&lt;br&gt;選擇「是」可採用此上限，選擇「否」可查看下一個選項。</content>
+	<content contentuid="h59bdf45fgb714g4644ga2d6ge5c5700030ae" version="1">&lt;b&gt;ULTRA同時增援波次數量上限: 2&lt;/b&gt;&lt;br&gt;&lt;br&gt;選擇「是」可採用此上限，選擇「否」可查看下一個選項。</content>
+	<content contentuid="h1ce0c0aagea21g461cg9e2ag49869f92a024" version="1">&lt;b&gt;ULTRA同時增援波次數量上限: 3&lt;/b&gt;&lt;br&gt;&lt;br&gt;選擇「是」可採用此上限，選擇「否」可查看下一個選項。</content>
+	<content contentuid="hb392be61g523bg4602g921dge05696c7f61f" version="1">&lt;b&gt;ULTRA同時增援波次數量上限: 4&lt;/b&gt;&lt;br&gt;&lt;br&gt;選擇「是」可採用此上限，選擇「否」可查看下一個選項。</content>
+	<content contentuid="ha61402c9g773eg4d14g9fe7g2954eb371acb" version="1">&lt;b&gt;ULTRA同時增援波次數量上限: 5&lt;/b&gt;&lt;br&gt;&lt;br&gt;選擇「是」可採用此上限，選擇「否」可查看下一個選項。</content>
+	<content contentuid="h407ca525g365eg474bg9bb5g2819f2249486" version="1">&lt;b&gt;ULTRA同時增援波次數量上限: 無限制&lt;/b&gt;&lt;br&gt;&lt;br&gt;選擇「是」可設為無限制，選擇「否」可返回1波選項。</content>
+	<content contentuid="h989c751cg5297g4b63gb7f4g19186ab514a9" version="1">ULTRA同時增援波次數量上限已更新。</content>
+</contentList>

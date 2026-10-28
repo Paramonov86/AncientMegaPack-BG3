@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h7d5891e2gd28ag489bg9179gbafa07ad3c2c" version="1">Limite de ondas ULTRA simultâneas</content>
+	<content contentuid="h285cb17ag0364g425bga414g7707a9c6e779" version="1">Defina o número máximo de ondas automáticas de reforços ULTRA ativas no mesmo combate: de 1 a 5 ou Sem limite (padrão). Uma onda é um grupo gerado de uma só vez, não uma quantidade de chefes. Ela permanece ativa enquanto pelo menos um de seus integrantes estiver vivo e participando desse combate. Isso não limita o número total de ondas sucessivas em um combate.</content>
+	<content contentuid="h106d43d2gcc83g4d4fg82b3g92ed1dfe80de" version="1">&lt;b&gt;Limite de ondas ULTRA simultâneas: 1&lt;/b&gt;&lt;br&gt;&lt;br&gt;Sim seleciona este limite. Não mostra a próxima opção.</content>
+	<content contentuid="h59bdf45fgb714g4644ga2d6ge5c5700030ae" version="1">&lt;b&gt;Limite de ondas ULTRA simultâneas: 2&lt;/b&gt;&lt;br&gt;&lt;br&gt;Sim seleciona este limite. Não mostra a próxima opção.</content>
+	<content contentuid="h1ce0c0aagea21g461cg9e2ag49869f92a024" version="1">&lt;b&gt;Limite de ondas ULTRA simultâneas: 3&lt;/b&gt;&lt;br&gt;&lt;br&gt;Sim seleciona este limite. Não mostra a próxima opção.</content>
+	<content contentuid="hb392be61g523bg4602g921dge05696c7f61f" version="1">&lt;b&gt;Limite de ondas ULTRA simultâneas: 4&lt;/b&gt;&lt;br&gt;&lt;br&gt;Sim seleciona este limite. Não mostra a próxima opção.</content>
+	<content contentuid="ha61402c9g773eg4d14g9fe7g2954eb371acb" version="1">&lt;b&gt;Limite de ondas ULTRA simultâneas: 5&lt;/b&gt;&lt;br&gt;&lt;br&gt;Sim seleciona este limite. Não mostra a próxima opção.</content>
+	<content contentuid="h407ca525g365eg474bg9bb5g2819f2249486" version="1">&lt;b&gt;Limite de ondas ULTRA simultâneas: Sem limite&lt;/b&gt;&lt;br&gt;&lt;br&gt;Sim seleciona Sem limite. Não retorna a 1.</content>
+	<content contentuid="h989c751cg5297g4b63gb7f4g19186ab514a9" version="1">Limite de ondas ULTRA simultâneas atualizado.</content>
+</contentList>

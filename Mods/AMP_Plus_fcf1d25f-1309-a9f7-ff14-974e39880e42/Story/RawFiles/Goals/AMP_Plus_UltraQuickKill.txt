@@ -74,6 +74,8 @@ AND
 IsDead(_Host, 0)
 AND
 GetPosition(_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Host)
 THEN
 DB_AMP_Plus_QuickKill_Guard(1);
 RealtimeObjectTimerLaunch(_Host, "AMP_Plus_QuickKillGuard", 10000);

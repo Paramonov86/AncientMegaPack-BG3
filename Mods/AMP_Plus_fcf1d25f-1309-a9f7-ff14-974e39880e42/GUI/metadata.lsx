@@ -536,6 +536,26 @@
 								</node>
 							</children>
 						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/AMP_Plus_UltraWaveLimit.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="8" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/AMP_Plus_UltraWaveLimit.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="9" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
 					</children>
 				</node>
 			</children>

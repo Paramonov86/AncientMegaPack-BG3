@@ -1,0 +1,1628 @@
+Category	Entry	Language	Before	After	Source file
+Localization	h7d5891e2gd28ag489bg9179gbafa07ad3c2c	BrazilianPortuguese	(absent)	Limite de ondas ULTRA simultâneas	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/BrazilianPortuguese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h285cb17ag0364g425bga414g7707a9c6e779	BrazilianPortuguese	(absent)	Defina o número máximo de ondas automáticas de reforços ULTRA ativas no mesmo combate: de 1 a 5 ou Sem limite (padrão). Uma onda é um grupo gerado de uma só vez, não uma quantidade de chefes. Ela permanece ativa enquanto pelo menos um de seus integrantes estiver vivo e participando desse combate. Isso não limita o número total de ondas sucessivas em um combate.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/BrazilianPortuguese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h106d43d2gcc83g4d4fg82b3g92ed1dfe80de	BrazilianPortuguese	(absent)	<b>Limite de ondas ULTRA simultâneas: 1</b><br><br>Sim seleciona este limite. Não mostra a próxima opção.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/BrazilianPortuguese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h59bdf45fgb714g4644ga2d6ge5c5700030ae	BrazilianPortuguese	(absent)	<b>Limite de ondas ULTRA simultâneas: 2</b><br><br>Sim seleciona este limite. Não mostra a próxima opção.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/BrazilianPortuguese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h1ce0c0aagea21g461cg9e2ag49869f92a024	BrazilianPortuguese	(absent)	<b>Limite de ondas ULTRA simultâneas: 3</b><br><br>Sim seleciona este limite. Não mostra a próxima opção.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/BrazilianPortuguese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	hb392be61g523bg4602g921dge05696c7f61f	BrazilianPortuguese	(absent)	<b>Limite de ondas ULTRA simultâneas: 4</b><br><br>Sim seleciona este limite. Não mostra a próxima opção.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/BrazilianPortuguese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	ha61402c9g773eg4d14g9fe7g2954eb371acb	BrazilianPortuguese	(absent)	<b>Limite de ondas ULTRA simultâneas: 5</b><br><br>Sim seleciona este limite. Não mostra a próxima opção.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/BrazilianPortuguese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h407ca525g365eg474bg9bb5g2819f2249486	BrazilianPortuguese	(absent)	<b>Limite de ondas ULTRA simultâneas: Sem limite</b><br><br>Sim seleciona Sem limite. Não retorna a 1.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/BrazilianPortuguese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h989c751cg5297g4b63gb7f4g19186ab514a9	BrazilianPortuguese	(absent)	Limite de ondas ULTRA simultâneas atualizado.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/BrazilianPortuguese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h7d5891e2gd28ag489bg9179gbafa07ad3c2c	Chinese	(absent)	ULTRA同时增援波次数量上限	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Chinese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h285cb17ag0364g425bga414g7707a9c6e779	Chinese	(absent)	设置同一场战斗中同时活跃的自动ULTRA增援波次数量上限：1至5波，或无限制（默认）。一波是一次生成的一批增援，并非首领数量。只要该波增援中至少有一名成员仍然存活并参与这场战斗，这一波就视为活跃。此设置不限制一场战斗中连续出现的增援波次总数。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Chinese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h106d43d2gcc83g4d4fg82b3g92ed1dfe80de	Chinese	(absent)	<b>ULTRA同时增援波次数量上限: 1</b><br><br>选择“是”可采用此上限，选择“否”可查看下一个选项。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Chinese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h59bdf45fgb714g4644ga2d6ge5c5700030ae	Chinese	(absent)	<b>ULTRA同时增援波次数量上限: 2</b><br><br>选择“是”可采用此上限，选择“否”可查看下一个选项。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Chinese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h1ce0c0aagea21g461cg9e2ag49869f92a024	Chinese	(absent)	<b>ULTRA同时增援波次数量上限: 3</b><br><br>选择“是”可采用此上限，选择“否”可查看下一个选项。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Chinese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	hb392be61g523bg4602g921dge05696c7f61f	Chinese	(absent)	<b>ULTRA同时增援波次数量上限: 4</b><br><br>选择“是”可采用此上限，选择“否”可查看下一个选项。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Chinese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	ha61402c9g773eg4d14g9fe7g2954eb371acb	Chinese	(absent)	<b>ULTRA同时增援波次数量上限: 5</b><br><br>选择“是”可采用此上限，选择“否”可查看下一个选项。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Chinese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h407ca525g365eg474bg9bb5g2819f2249486	Chinese	(absent)	<b>ULTRA同时增援波次数量上限: 无限制</b><br><br>选择“是”可设为无限制，选择“否”可返回1波选项。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Chinese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h989c751cg5297g4b63gb7f4g19186ab514a9	Chinese	(absent)	ULTRA同时增援波次数量上限已更新。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Chinese/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h7d5891e2gd28ag489bg9179gbafa07ad3c2c	ChineseTraditional	(absent)	ULTRA同時增援波次數量上限	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/ChineseTraditional/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h285cb17ag0364g425bga414g7707a9c6e779	ChineseTraditional	(absent)	設定同一場戰鬥中同時活躍的自動ULTRA增援波次數量上限：1至5波，或無限制（預設）。一波是一次生成的一批增援，並非首領數量。只要該波增援中至少有一名成員仍然存活並參與這場戰鬥，這一波就視為活躍。此設定不限制一場戰鬥中連續出現的增援波次總數。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/ChineseTraditional/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h106d43d2gcc83g4d4fg82b3g92ed1dfe80de	ChineseTraditional	(absent)	<b>ULTRA同時增援波次數量上限: 1</b><br><br>選擇「是」可採用此上限，選擇「否」可查看下一個選項。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/ChineseTraditional/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h59bdf45fgb714g4644ga2d6ge5c5700030ae	ChineseTraditional	(absent)	<b>ULTRA同時增援波次數量上限: 2</b><br><br>選擇「是」可採用此上限，選擇「否」可查看下一個選項。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/ChineseTraditional/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h1ce0c0aagea21g461cg9e2ag49869f92a024	ChineseTraditional	(absent)	<b>ULTRA同時增援波次數量上限: 3</b><br><br>選擇「是」可採用此上限，選擇「否」可查看下一個選項。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/ChineseTraditional/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	hb392be61g523bg4602g921dge05696c7f61f	ChineseTraditional	(absent)	<b>ULTRA同時增援波次數量上限: 4</b><br><br>選擇「是」可採用此上限，選擇「否」可查看下一個選項。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/ChineseTraditional/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	ha61402c9g773eg4d14g9fe7g2954eb371acb	ChineseTraditional	(absent)	<b>ULTRA同時增援波次數量上限: 5</b><br><br>選擇「是」可採用此上限，選擇「否」可查看下一個選項。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/ChineseTraditional/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h407ca525g365eg474bg9bb5g2819f2249486	ChineseTraditional	(absent)	<b>ULTRA同時增援波次數量上限: 無限制</b><br><br>選擇「是」可設為無限制，選擇「否」可返回1波選項。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/ChineseTraditional/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h989c751cg5297g4b63gb7f4g19186ab514a9	ChineseTraditional	(absent)	ULTRA同時增援波次數量上限已更新。	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/ChineseTraditional/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h7d5891e2gd28ag489bg9179gbafa07ad3c2c	English	(absent)	ULTRA Concurrent Wave Limit	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/English/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h285cb17ag0364g425bga414g7707a9c6e779	English	(absent)	Set the maximum number of automatic ULTRA reinforcement waves active in the same combat: 1–5 or Unlimited (default). A wave is one spawned batch, not a number of bosses. It remains active while at least one of its members is alive and in that combat. This does not limit the total number of successive waves in a combat.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/English/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h106d43d2gcc83g4d4fg82b3g92ed1dfe80de	English	(absent)	<b>ULTRA Concurrent Wave Limit: 1</b><br><br>Yes selects this limit. No shows the next option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/English/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h59bdf45fgb714g4644ga2d6ge5c5700030ae	English	(absent)	<b>ULTRA Concurrent Wave Limit: 2</b><br><br>Yes selects this limit. No shows the next option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/English/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h1ce0c0aagea21g461cg9e2ag49869f92a024	English	(absent)	<b>ULTRA Concurrent Wave Limit: 3</b><br><br>Yes selects this limit. No shows the next option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/English/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	hb392be61g523bg4602g921dge05696c7f61f	English	(absent)	<b>ULTRA Concurrent Wave Limit: 4</b><br><br>Yes selects this limit. No shows the next option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/English/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	ha61402c9g773eg4d14g9fe7g2954eb371acb	English	(absent)	<b>ULTRA Concurrent Wave Limit: 5</b><br><br>Yes selects this limit. No shows the next option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/English/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h407ca525g365eg474bg9bb5g2819f2249486	English	(absent)	<b>ULTRA Concurrent Wave Limit: Unlimited</b><br><br>Yes selects Unlimited. No returns to 1.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/English/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h989c751cg5297g4b63gb7f4g19186ab514a9	English	(absent)	ULTRA concurrent wave limit updated.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/English/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h7d5891e2gd28ag489bg9179gbafa07ad3c2c	French	(absent)	Limite de vagues ULTRA simultanées	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/French/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h285cb17ag0364g425bga414g7707a9c6e779	French	(absent)	Réglez le nombre maximal de vagues de renforts ULTRA automatiques actives dans le même combat : de 1 à 5, ou Illimité (par défaut). Une vague correspond à un groupe invoqué en une fois, et non à un nombre de boss. Elle reste active tant qu’au moins un de ses membres est vivant et participe à ce combat. Le nombre total de vagues successives dans un combat n’est pas limité.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/French/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h106d43d2gcc83g4d4fg82b3g92ed1dfe80de	French	(absent)	<b>Limite de vagues ULTRA simultanées: 1</b><br><br>Oui sélectionne cette limite. Non affiche l’option suivante.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/French/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h59bdf45fgb714g4644ga2d6ge5c5700030ae	French	(absent)	<b>Limite de vagues ULTRA simultanées: 2</b><br><br>Oui sélectionne cette limite. Non affiche l’option suivante.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/French/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h1ce0c0aagea21g461cg9e2ag49869f92a024	French	(absent)	<b>Limite de vagues ULTRA simultanées: 3</b><br><br>Oui sélectionne cette limite. Non affiche l’option suivante.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/French/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	hb392be61g523bg4602g921dge05696c7f61f	French	(absent)	<b>Limite de vagues ULTRA simultanées: 4</b><br><br>Oui sélectionne cette limite. Non affiche l’option suivante.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/French/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	ha61402c9g773eg4d14g9fe7g2954eb371acb	French	(absent)	<b>Limite de vagues ULTRA simultanées: 5</b><br><br>Oui sélectionne cette limite. Non affiche l’option suivante.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/French/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h407ca525g365eg474bg9bb5g2819f2249486	French	(absent)	<b>Limite de vagues ULTRA simultanées: Illimité</b><br><br>Oui sélectionne Illimité. Non revient à 1.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/French/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h989c751cg5297g4b63gb7f4g19186ab514a9	French	(absent)	Limite de vagues ULTRA simultanées mise à jour.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/French/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h7d5891e2gd28ag489bg9179gbafa07ad3c2c	German	(absent)	Limit gleichzeitiger ULTRA-Wellen	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/German/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h285cb17ag0364g425bga414g7707a9c6e779	German	(absent)	Legt die maximale Anzahl automatischer ULTRA-Verstärkungswellen fest, die im selben Kampf gleichzeitig aktiv sein können: 1–5 oder Unbegrenzt (Standard). Eine Welle ist eine gemeinsam erschienene Gruppe, keine Anzahl von Bossen. Sie bleibt aktiv, solange mindestens eines ihrer Mitglieder lebt und an diesem Kampf teilnimmt. Die Gesamtzahl aufeinanderfolgender Wellen in einem Kampf wird dadurch nicht begrenzt.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/German/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h106d43d2gcc83g4d4fg82b3g92ed1dfe80de	German	(absent)	<b>Limit gleichzeitiger ULTRA-Wellen: 1</b><br><br>Ja wählt dieses Limit. Nein zeigt die nächste Option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/German/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h59bdf45fgb714g4644ga2d6ge5c5700030ae	German	(absent)	<b>Limit gleichzeitiger ULTRA-Wellen: 2</b><br><br>Ja wählt dieses Limit. Nein zeigt die nächste Option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/German/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h1ce0c0aagea21g461cg9e2ag49869f92a024	German	(absent)	<b>Limit gleichzeitiger ULTRA-Wellen: 3</b><br><br>Ja wählt dieses Limit. Nein zeigt die nächste Option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/German/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	hb392be61g523bg4602g921dge05696c7f61f	German	(absent)	<b>Limit gleichzeitiger ULTRA-Wellen: 4</b><br><br>Ja wählt dieses Limit. Nein zeigt die nächste Option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/German/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	ha61402c9g773eg4d14g9fe7g2954eb371acb	German	(absent)	<b>Limit gleichzeitiger ULTRA-Wellen: 5</b><br><br>Ja wählt dieses Limit. Nein zeigt die nächste Option.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/German/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h407ca525g365eg474bg9bb5g2819f2249486	German	(absent)	<b>Limit gleichzeitiger ULTRA-Wellen: Unbegrenzt</b><br><br>Ja wählt Unbegrenzt. Nein kehrt zu 1 zurück.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/German/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h989c751cg5297g4b63gb7f4g19186ab514a9	German	(absent)	Limit gleichzeitiger ULTRA-Wellen aktualisiert.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/German/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h7d5891e2gd28ag489bg9179gbafa07ad3c2c	Italian	(absent)	Limite di ondate ULTRA simultanee	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Italian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h285cb17ag0364g425bga414g7707a9c6e779	Italian	(absent)	Imposta il numero massimo di ondate automatiche di rinforzi ULTRA attive nello stesso combattimento: da 1 a 5 oppure Illimitato (predefinito). Un’ondata è un gruppo generato in una sola volta, non un numero di boss. Rimane attiva finché almeno uno dei suoi membri è vivo e partecipa a quel combattimento. Il numero totale di ondate successive in un combattimento non viene limitato.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Italian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h106d43d2gcc83g4d4fg82b3g92ed1dfe80de	Italian	(absent)	<b>Limite di ondate ULTRA simultanee: 1</b><br><br>Sì seleziona questo limite. No mostra l’opzione successiva.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Italian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h59bdf45fgb714g4644ga2d6ge5c5700030ae	Italian	(absent)	<b>Limite di ondate ULTRA simultanee: 2</b><br><br>Sì seleziona questo limite. No mostra l’opzione successiva.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Italian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h1ce0c0aagea21g461cg9e2ag49869f92a024	Italian	(absent)	<b>Limite di ondate ULTRA simultanee: 3</b><br><br>Sì seleziona questo limite. No mostra l’opzione successiva.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Italian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	hb392be61g523bg4602g921dge05696c7f61f	Italian	(absent)	<b>Limite di ondate ULTRA simultanee: 4</b><br><br>Sì seleziona questo limite. No mostra l’opzione successiva.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Italian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	ha61402c9g773eg4d14g9fe7g2954eb371acb	Italian	(absent)	<b>Limite di ondate ULTRA simultanee: 5</b><br><br>Sì seleziona questo limite. No mostra l’opzione successiva.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Italian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h407ca525g365eg474bg9bb5g2819f2249486	Italian	(absent)	<b>Limite di ondate ULTRA simultanee: Illimitato</b><br><br>Sì seleziona Illimitato. No torna a 1.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Italian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h989c751cg5297g4b63gb7f4g19186ab514a9	Italian	(absent)	Limite di ondate ULTRA simultanee aggiornato.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Italian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h7d5891e2gd28ag489bg9179gbafa07ad3c2c	Korean	(absent)	ULTRA 동시 증원 횟수 제한	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Korean/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h285cb17ag0364g425bga414g7707a9c6e779	Korean	(absent)	같은 전투에서 동시에 활성화될 수 있는 자동 ULTRA 증원을 1~5회 또는 무제한(기본값)으로 설정합니다. 증원 1회는 한 번에 생성된 병력 집단을 뜻하며, 우두머리 수를 뜻하지 않습니다. 각 증원은 구성원 중 한 명이라도 살아서 해당 전투에 참여하고 있는 동안 활성 상태로 간주됩니다. 한 전투에서 연속해서 발생하는 증원의 총횟수는 제한하지 않습니다.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Korean/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h106d43d2gcc83g4d4fg82b3g92ed1dfe80de	Korean	(absent)	<b>ULTRA 동시 증원 횟수 제한: 1</b><br><br>예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Korean/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h59bdf45fgb714g4644ga2d6ge5c5700030ae	Korean	(absent)	<b>ULTRA 동시 증원 횟수 제한: 2</b><br><br>예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Korean/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h1ce0c0aagea21g461cg9e2ag49869f92a024	Korean	(absent)	<b>ULTRA 동시 증원 횟수 제한: 3</b><br><br>예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Korean/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	hb392be61g523bg4602g921dge05696c7f61f	Korean	(absent)	<b>ULTRA 동시 증원 횟수 제한: 4</b><br><br>예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Korean/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	ha61402c9g773eg4d14g9fe7g2954eb371acb	Korean	(absent)	<b>ULTRA 동시 증원 횟수 제한: 5</b><br><br>예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Korean/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h407ca525g365eg474bg9bb5g2819f2249486	Korean	(absent)	<b>ULTRA 동시 증원 횟수 제한: 무제한</b><br><br>예를 선택하면 무제한으로 설정합니다. 아니요를 선택하면 1로 돌아갑니다.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Korean/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h989c751cg5297g4b63gb7f4g19186ab514a9	Korean	(absent)	ULTRA 동시 증원 횟수 제한을 변경했습니다.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Korean/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h7d5891e2gd28ag489bg9179gbafa07ad3c2c	Russian	(absent)	Лимит одновременных волн ULTRA	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Russian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h285cb17ag0364g425bga414g7707a9c6e779	Russian	(absent)	Установите максимальное число автоматических волн подкреплений ULTRA, одновременно активных в одном бою: от 1 до 5 или Без ограничений (по умолчанию). Волна — это группа, появившаяся за один раз, а не количество боссов. Она остаётся активной, пока хотя бы один её участник жив и участвует в этом бою. Общее число последовательных волн в одном бою не ограничивается.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Russian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h106d43d2gcc83g4d4fg82b3g92ed1dfe80de	Russian	(absent)	<b>Лимит одновременных волн ULTRA: 1</b><br><br>«Да» выбирает этот лимит. «Нет» показывает следующий вариант.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Russian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h59bdf45fgb714g4644ga2d6ge5c5700030ae	Russian	(absent)	<b>Лимит одновременных волн ULTRA: 2</b><br><br>«Да» выбирает этот лимит. «Нет» показывает следующий вариант.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Russian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h1ce0c0aagea21g461cg9e2ag49869f92a024	Russian	(absent)	<b>Лимит одновременных волн ULTRA: 3</b><br><br>«Да» выбирает этот лимит. «Нет» показывает следующий вариант.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Russian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	hb392be61g523bg4602g921dge05696c7f61f	Russian	(absent)	<b>Лимит одновременных волн ULTRA: 4</b><br><br>«Да» выбирает этот лимит. «Нет» показывает следующий вариант.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Russian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	ha61402c9g773eg4d14g9fe7g2954eb371acb	Russian	(absent)	<b>Лимит одновременных волн ULTRA: 5</b><br><br>«Да» выбирает этот лимит. «Нет» показывает следующий вариант.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Russian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h407ca525g365eg474bg9bb5g2819f2249486	Russian	(absent)	<b>Лимит одновременных волн ULTRA: Без ограничений</b><br><br>«Да» выбирает вариант «Без ограничений». «Нет» возвращает к 1.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Russian/AMP_Plus_UltraWaveLimit.loca.xml
+Localization	h989c751cg5297g4b63gb7f4g19186ab514a9	Russian	(absent)	Лимит одновременных волн ULTRA обновлён.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/Russian/AMP_Plus_UltraWaveLimit.loca.xml
+Osiris rule	"ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")"		"IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")
+AND
+GetHostCharacter(_Host)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_ChasePending((GUIDSTRING)_Template)
+THEN
+DB_AMP_Plus_ChaseSpawnQ(_Template);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")
+AND
+GetHostCharacter(_Host)
+THEN
+PROC_AMP_Plus_ChaseDrainSpawnQ(_Host);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")
+AND
+DB_AMP_Plus_ChaseTimer(_Host)
+THEN
+NOT DB_AMP_Plus_ChaseTimer(_Host);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")
+AND
+GetHostCharacter(_Host)
+AND
+QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_ChasePending(_)
+THEN
+PROC_AMP_Plus_ChaseArmShort(_Host);"	"IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")
+AND
+GetHostCharacter(_Host)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_ChasePending((GUIDSTRING)_Template)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Host)
+THEN
+DB_AMP_Plus_ChaseSpawnQ(_Template);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")
+AND
+GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_ChaseSpawnQ(_)
+THEN
+PROC_AMP_Plus_UltraWaveBegin(_Host);
+PROC_AMP_Plus_ChaseDrainSpawnQ(_Host);
+PROC_AMP_Plus_UltraWaveEnd();
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")
+AND
+DB_AMP_Plus_ChaseTimer(_Host)
+THEN
+NOT DB_AMP_Plus_ChaseTimer(_Host);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")
+AND
+GetHostCharacter(_Host)
+AND
+QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_ChasePending(_)
+THEN
+PROC_AMP_Plus_ChaseArmShort(_Host);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_ChaseBreather"")
+AND
+GetHostCharacter(_Host)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_ChasePending(_)
+AND
+QRY_AMP_Plus_UltraWaveLimitReached(_Host)
+THEN
+PROC_AMP_Plus_ChaseArmShort(_Host);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_MirrorChaseRework.txt
+Osiris rule	"StatusApplied((CHARACTER)_Boss, ""AMP_PLUS_MIRROR_TRIGGER"", _, _)"		"IF
+StatusApplied((CHARACTER)_Boss, ""AMP_PLUS_MIRROR_TRIGGER"", _, _)
+AND
+NOT DB_AMP_MirrorSupport_Fired(_Boss)
+AND
+NOT DB_AMP_Plus_ChaseActive(_, _)
+AND
+IsBoss(_Boss, 1)
+AND
+IsInCombat(_Boss, 1)
+AND
+IsDead(_Boss, 0)
+AND
+GetHostCharacter((CHARACTER)_Host)
+AND
+IsEnemy(_Boss, _Host, 1)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_PoolSize)
+AND
+_PoolSize > 0
+AND
+CombatGetGuidFor(_Boss, (GUIDSTRING)_CombatId)
+AND
+NOT DB_AMP_Plus_MirrorFiredCombat(_CombatId)
+THEN
+DB_AMP_MirrorSupport_Fired(_Boss);
+DB_AMP_Plus_MirrorFiredCombat(_CombatId);
+PROC_AMP_Plus_MirrorSpawnSized(_Boss);"	"IF
+StatusApplied((CHARACTER)_Boss, ""AMP_PLUS_MIRROR_TRIGGER"", _, _)
+AND
+NOT DB_AMP_MirrorSupport_Fired(_Boss)
+AND
+NOT DB_AMP_Plus_ChaseActive(_, _)
+AND
+IsBoss(_Boss, 1)
+AND
+IsInCombat(_Boss, 1)
+AND
+IsDead(_Boss, 0)
+AND
+GetHostCharacter((CHARACTER)_Host)
+AND
+IsEnemy(_Boss, _Host, 1)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_PoolSize)
+AND
+_PoolSize > 0
+AND
+CombatGetGuidFor(_Boss, (GUIDSTRING)_CombatId)
+AND
+NOT DB_AMP_Plus_MirrorFiredCombat(_CombatId)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
+THEN
+DB_AMP_MirrorSupport_Fired(_Boss);
+DB_AMP_Plus_MirrorFiredCombat(_CombatId);
+PROC_AMP_Plus_MirrorSpawnSized(_Boss);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_MirrorSpawnRedirect.txt
+Osiris rule	PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)		"PROC
+PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Old)
+THEN
+NOT DB_AMP_Plus_PCAcc(_Old);
+DB_AMP_Plus_PCAcc(0);
+
+PROC
+PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+THEN
+PROC_AMP_Plus_CountPlayers();
+
+PROC
+PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+THEN
+PROC_AMP_Plus_UMax_MarkPick(_Host);
+
+PROC
+PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+NOT DB_AMP_Plus_UMax_Hunted(_)
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Players)
+AND
+DB_AMP_AvgPartyLevel((INTEGER)_Lvl)
+AND
+DB_AMP_Plus_SpawnIntensity_Size((INTEGER)_Tier)
+AND
+DB_AMP_Plus_UltraSizeTable(_Tier, (INTEGER)_PMin, (INTEGER)_PMax, (INTEGER)_LMin, (INTEGER)_LMax, (INTEGER)_N)
+AND
+_Players >= _PMin
+AND
+_Players <= _PMax
+AND
+_Lvl >= _LMin
+AND
+_Lvl <= _LMax
+THEN
+PROC_AMP_Plus_UltraSpawnN(0, _N, _Host, _HX, _HY, _HZ);
+
+PROC
+PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_UMax_Hunted((CHARACTER)_Quarry)
+AND
+IsDead(_Quarry, 0)
+AND
+GetPosition(_Quarry, (REAL)_QX, (REAL)_QY, (REAL)_QZ)
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Players)
+AND
+DB_AMP_AvgPartyLevel((INTEGER)_Lvl)
+AND
+DB_AMP_Plus_SpawnIntensity_Size((INTEGER)_Tier)
+AND
+DB_AMP_Plus_UltraSizeTable(_Tier, (INTEGER)_PMin, (INTEGER)_PMax, (INTEGER)_LMin, (INTEGER)_LMax, (INTEGER)_N)
+AND
+_Players >= _PMin
+AND
+_Players <= _PMax
+AND
+_Lvl >= _LMin
+AND
+_Lvl <= _LMax
+THEN
+PROC_AMP_Plus_UltraSpawnN(0, _N, _Host, _QX, _QY, _QZ);"	(absent)	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraBossCount.txt
+Osiris rule	PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)		"PROC
+PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Old)
+THEN
+NOT DB_AMP_Plus_PCAcc(_Old);
+DB_AMP_Plus_PCAcc(0);
+
+PROC
+PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+THEN
+PROC_AMP_Plus_CountPlayers();
+
+PROC
+PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+THEN
+PROC_AMP_Plus_TgtIndexBuild(_Boss);
+
+PROC
+PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Players)
+AND
+DB_AMP_AvgPartyLevel((INTEGER)_Lvl)
+AND
+DB_AMP_Plus_SpawnIntensity_Size((INTEGER)_Tier)
+AND
+DB_AMP_Plus_UltraSizeTable(_Tier, (INTEGER)_PMin, (INTEGER)_PMax, (INTEGER)_LMin, (INTEGER)_LMax, (INTEGER)_N)
+AND
+_Players >= _PMin
+AND
+_Players <= _PMax
+AND
+_Lvl >= _LMin
+AND
+_Lvl <= _LMax
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_Size)
+AND
+_Size > 0
+AND
+GetPosition(_Boss, (REAL)_BX, (REAL)_BY, (REAL)_BZ)
+THEN
+PROC_AMP_Plus_MirrorRandSpawn(_Boss, _N, _Size, _BX, _BY, _BZ);"	(absent)	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraBossCount.txt
+Osiris rule	PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)		(absent)	"PROC
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Old)
+THEN
+NOT DB_AMP_Plus_PCAcc(_Old);
+DB_AMP_Plus_PCAcc(0);
+
+PROC
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+THEN
+PROC_AMP_Plus_CountPlayers();
+
+PROC
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+THEN
+PROC_AMP_Plus_UMax_MarkPick(_Host);
+
+PROC
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+NOT DB_AMP_Plus_UMax_Hunted(_)
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Players)
+AND
+DB_AMP_AvgPartyLevel((INTEGER)_Lvl)
+AND
+DB_AMP_Plus_SpawnIntensity_Size((INTEGER)_Tier)
+AND
+DB_AMP_Plus_UltraSizeTable(_Tier, (INTEGER)_PMin, (INTEGER)_PMax, (INTEGER)_LMin, (INTEGER)_LMax, (INTEGER)_N)
+AND
+_Players >= _PMin
+AND
+_Players <= _PMax
+AND
+_Lvl >= _LMin
+AND
+_Lvl <= _LMax
+THEN
+PROC_AMP_Plus_UltraSpawnN(0, _N, _Host, _HX, _HY, _HZ);
+
+PROC
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_UMax_Hunted((CHARACTER)_Quarry)
+AND
+IsDead(_Quarry, 0)
+AND
+GetPosition(_Quarry, (REAL)_QX, (REAL)_QY, (REAL)_QZ)
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Players)
+AND
+DB_AMP_AvgPartyLevel((INTEGER)_Lvl)
+AND
+DB_AMP_Plus_SpawnIntensity_Size((INTEGER)_Tier)
+AND
+DB_AMP_Plus_UltraSizeTable(_Tier, (INTEGER)_PMin, (INTEGER)_PMax, (INTEGER)_LMin, (INTEGER)_LMax, (INTEGER)_N)
+AND
+_Players >= _PMin
+AND
+_Players <= _PMax
+AND
+_Lvl >= _LMin
+AND
+_Lvl <= _LMax
+THEN
+PROC_AMP_Plus_UltraSpawnN(0, _N, _Host, _QX, _QY, _QZ);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraBossCount.txt
+Osiris rule	PROC_AMP_Plus_MirrorSpawnAdmitted((CHARACTER)_Boss)		(absent)	"PROC
+PROC_AMP_Plus_MirrorSpawnAdmitted((CHARACTER)_Boss)
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Old)
+THEN
+NOT DB_AMP_Plus_PCAcc(_Old);
+DB_AMP_Plus_PCAcc(0);
+
+PROC
+PROC_AMP_Plus_MirrorSpawnAdmitted((CHARACTER)_Boss)
+THEN
+PROC_AMP_Plus_CountPlayers();
+
+PROC
+PROC_AMP_Plus_MirrorSpawnAdmitted((CHARACTER)_Boss)
+THEN
+PROC_AMP_Plus_TgtIndexBuild(_Boss);
+
+PROC
+PROC_AMP_Plus_MirrorSpawnAdmitted((CHARACTER)_Boss)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_PCAcc((INTEGER)_Players)
+AND
+DB_AMP_AvgPartyLevel((INTEGER)_Lvl)
+AND
+DB_AMP_Plus_SpawnIntensity_Size((INTEGER)_Tier)
+AND
+DB_AMP_Plus_UltraSizeTable(_Tier, (INTEGER)_PMin, (INTEGER)_PMax, (INTEGER)_LMin, (INTEGER)_LMax, (INTEGER)_N)
+AND
+_Players >= _PMin
+AND
+_Players <= _PMax
+AND
+_Lvl >= _LMin
+AND
+_Lvl <= _LMax
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_Size)
+AND
+_Size > 0
+AND
+GetPosition(_Boss, (REAL)_BX, (REAL)_BY, (REAL)_BZ)
+THEN
+PROC_AMP_Plus_MirrorRandSpawn(_Boss, _N, _Size, _BX, _BY, _BZ);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraBossCount.txt
+Osiris rule	PROC_AMP_Plus_UMax_DrainWaveDue((GUIDSTRING)_C)		"PROC
+PROC_AMP_Plus_UMax_DrainWaveDue((GUIDSTRING)_C)
+AND
+DB_AMP_Plus_UMax_WaveOwed((CHARACTER)_Boss, _C)
+AND
+IsDead(_Boss, 0)
+THEN
+NOT DB_AMP_Plus_UMax_WaveOwed(_Boss, _C);
+DB_AMP_Plus_UMax_WaveDone(_Boss, _C);
+PROC_AMP_Plus_MirrorSpawnSized(_Boss);"	"PROC
+PROC_AMP_Plus_UMax_DrainWaveDue((GUIDSTRING)_C)
+AND
+DB_AMP_Plus_UMax_WaveOwed((CHARACTER)_Boss, _C)
+AND
+IsDead(_Boss, 0)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
+THEN
+NOT DB_AMP_Plus_UMax_WaveOwed(_Boss, _C);
+DB_AMP_Plus_UMax_WaveDone(_Boss, _C);
+PROC_AMP_Plus_MirrorSpawnSized(_Boss);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraMaxMode.txt
+Osiris rule	Died((CHARACTER)_Boss)		"IF
+Died((CHARACTER)_Boss)
+AND
+DB_AMP_Plus_QuickKill_Turns(_Boss, (INTEGER)_N)
+AND
+DB_AMP_Plus_SpawnIntensity_Freq((INTEGER)_Tier)
+AND
+DB_AMP_Plus_QuickWindowByTier(_Tier, (INTEGER)_Window)
+AND
+_N <= _Window
+AND
+DB_AMP_Ultra_Active(1)
+AND
+NOT DB_AMP_Plus_UltraMob(_, _Boss)
+AND
+NOT DB_AMP_Plus_UltraAlly(_Boss)
+AND
+IsPlayer(_Boss, 0)
+AND
+NOT DB_PartOfTheTeam(_Boss)
+AND
+NOT DB_AMP_Plus_QuickKill_Guard(1)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_Size)
+AND
+_Size > 0
+AND
+GetHostCharacter((CHARACTER)_Host)
+AND
+IsDead(_Host, 0)
+AND
+GetPosition(_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+THEN
+DB_AMP_Plus_QuickKill_Guard(1);
+RealtimeObjectTimerLaunch(_Host, ""AMP_Plus_QuickKillGuard"", 10000);
+PROC_AMP_Plus_UltraSpawnSized(_Host, _HX, _HY, _HZ);
+
+IF
+Died((CHARACTER)_Boss)
+AND
+DB_AMP_Plus_QuickKill_Turns(_Boss, (INTEGER)_N)
+THEN
+NOT DB_AMP_Plus_QuickKill_Turns(_Boss, _N);"	"IF
+Died((CHARACTER)_Boss)
+AND
+DB_AMP_Plus_QuickKill_Turns(_Boss, (INTEGER)_N)
+AND
+DB_AMP_Plus_SpawnIntensity_Freq((INTEGER)_Tier)
+AND
+DB_AMP_Plus_QuickWindowByTier(_Tier, (INTEGER)_Window)
+AND
+_N <= _Window
+AND
+DB_AMP_Ultra_Active(1)
+AND
+NOT DB_AMP_Plus_UltraMob(_, _Boss)
+AND
+NOT DB_AMP_Plus_UltraAlly(_Boss)
+AND
+IsPlayer(_Boss, 0)
+AND
+NOT DB_PartOfTheTeam(_Boss)
+AND
+NOT DB_AMP_Plus_QuickKill_Guard(1)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_Size)
+AND
+_Size > 0
+AND
+GetHostCharacter((CHARACTER)_Host)
+AND
+IsDead(_Host, 0)
+AND
+GetPosition(_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Host)
+THEN
+DB_AMP_Plus_QuickKill_Guard(1);
+RealtimeObjectTimerLaunch(_Host, ""AMP_Plus_QuickKillGuard"", 10000);
+PROC_AMP_Plus_UltraSpawnSized(_Host, _HX, _HY, _HZ);
+
+IF
+Died((CHARACTER)_Boss)
+AND
+DB_AMP_Plus_QuickKill_Turns(_Boss, (INTEGER)_N)
+THEN
+NOT DB_AMP_Plus_QuickKill_Turns(_Boss, _N);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraQuickKill.txt
+Osiris rule	"ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_UltraRestAmbush"")"		"IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_UltraRestAmbush"")
+AND
+GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_UltraRestOwed(1)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+IsDead(_Host, 0)
+AND
+GetPosition(_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_Size)
+AND
+_Size > 0
+THEN
+NOT DB_AMP_Plus_UltraRestOwed(1);
+PROC_AMP_Plus_UltraSpawnSized(_Host, _HX, _HY, _HZ);
+PROC_AMP_Plus_ChaseMarkSync(_Host);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_UltraRestAmbush"")
+AND
+GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_UltraRestOwed(1)
+AND
+QRY_AMP_Plus_CampGuard()
+THEN
+PROC_AMP_Plus_UltraRestArm(_Host);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_UltraRestAmbush"")
+AND
+GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_UltraRestOwed(1)
+AND
+IsDead(_Host, 1)
+THEN
+PROC_AMP_Plus_UltraRestArm(_Host);"	"IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_UltraRestAmbush"")
+AND
+GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_UltraRestOwed(1)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+IsDead(_Host, 0)
+AND
+GetPosition(_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_Size)
+AND
+_Size > 0
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Host)
+THEN
+NOT DB_AMP_Plus_UltraRestOwed(1);
+PROC_AMP_Plus_UltraSpawnSized(_Host, _HX, _HY, _HZ);
+PROC_AMP_Plus_ChaseMarkSync(_Host);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_UltraRestAmbush"")
+AND
+GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_UltraRestOwed(1)
+AND
+QRY_AMP_Plus_CampGuard()
+THEN
+PROC_AMP_Plus_UltraRestArm(_Host);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_UltraRestAmbush"")
+AND
+GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_UltraRestOwed(1)
+AND
+IsDead(_Host, 1)
+THEN
+PROC_AMP_Plus_UltraRestArm(_Host);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, ""AMP_Plus_UltraRestAmbush"")
+AND
+GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_UltraRestOwed(1)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+IsDead(_Host, 0)
+AND
+QRY_AMP_Plus_UltraWaveLimitReached(_Host)
+THEN
+PROC_AMP_Plus_UltraRestArm(_Host);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraRestCatchup.txt
+Osiris rule	PROC_AMP_Turtle_Check((CHARACTER)_Player, (INTEGER)_N)		"PROC
+PROC_AMP_Turtle_Check((CHARACTER)_Player, (INTEGER)_N)
+AND
+DB_AMP_Plus_SpawnIntensity_Freq((INTEGER)_Tier)
+AND
+DB_AMP_Plus_TurtleThreshByTier(_Tier, (INTEGER)_Thresh)
+AND
+_N >= _Thresh
+AND
+DB_AMP_Ultra_Active(1)
+AND
+CombatGetGuidFor(_Player, (GUIDSTRING)_CombatGuid)
+AND
+DB_AMP_TurtleCombatBoss(_CombatGuid, (CHARACTER)_Boss)
+AND
+NOT DB_AMP_Plus_UltraAlly(_Boss)
+AND
+DB_AMP_Plus_TurtleEngaged(_CombatGuid)
+AND
+IsDead(_Boss, 0)
+AND
+NOT DB_AMP_Plus_MirrorFiredCombat(_CombatGuid)
+AND
+NOT DB_AMP_Plus_ChaseActive(_, _)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_PoolSize)
+AND
+_PoolSize > 0
+THEN
+DB_AMP_Plus_MirrorFiredCombat(_CombatGuid);
+NOT DB_AMP_TurtleStreak(_Player, _N);
+DB_AMP_TurtleStreak(_Player, 0);
+PROC_AMP_Plus_MirrorSpawnSized(_Boss);"	"PROC
+PROC_AMP_Turtle_Check((CHARACTER)_Player, (INTEGER)_N)
+AND
+DB_AMP_Plus_SpawnIntensity_Freq((INTEGER)_Tier)
+AND
+DB_AMP_Plus_TurtleThreshByTier(_Tier, (INTEGER)_Thresh)
+AND
+_N >= _Thresh
+AND
+DB_AMP_Ultra_Active(1)
+AND
+CombatGetGuidFor(_Player, (GUIDSTRING)_CombatGuid)
+AND
+DB_AMP_TurtleCombatBoss(_CombatGuid, (CHARACTER)_Boss)
+AND
+NOT DB_AMP_Plus_UltraAlly(_Boss)
+AND
+DB_AMP_Plus_TurtleEngaged(_CombatGuid)
+AND
+IsDead(_Boss, 0)
+AND
+NOT DB_AMP_Plus_MirrorFiredCombat(_CombatGuid)
+AND
+NOT DB_AMP_Plus_ChaseActive(_, _)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_PoolSize)
+AND
+_PoolSize > 0
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
+THEN
+DB_AMP_Plus_MirrorFiredCombat(_CombatGuid);
+NOT DB_AMP_TurtleStreak(_Player, _N);
+DB_AMP_TurtleStreak(_Player, 0);
+PROC_AMP_Plus_MirrorSpawnSized(_Boss);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraTurtleFix.txt
+Osiris rule	PROC_AMP_Plus_UnbWave_Check((GUIDSTRING)_C, (CHARACTER)_Boss, (INTEGER)_N)		"PROC
+PROC_AMP_Plus_UnbWave_Check((GUIDSTRING)_C, (CHARACTER)_Boss, (INTEGER)_N)
+AND
+DB_AMP_Plus_UnbWave_At(_C, _N)
+AND
+DB_AMP_Plus_SpawnIntensity_Freq(3)
+AND
+DB_AMP_Ultra_Active(1)
+AND
+NOT DB_AMP_Plus_MirrorFiredCombat(_C)
+AND
+NOT DB_AMP_Plus_ChaseActive(_, _)
+AND
+NOT DB_AMP_Plus_UltraAlly(_Boss)
+AND
+IsDead(_Boss, 0)
+AND
+GetHostCharacter((CHARACTER)_Host)
+AND
+IsEnemy(_Boss, _Host, 1)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_PoolSize)
+AND
+_PoolSize > 0
+THEN
+DB_AMP_Plus_MirrorFiredCombat(_C);
+PROC_AMP_Plus_MirrorSpawnSized(_Boss);"	"PROC
+PROC_AMP_Plus_UnbWave_Check((GUIDSTRING)_C, (CHARACTER)_Boss, (INTEGER)_N)
+AND
+DB_AMP_Plus_UnbWave_At(_C, (INTEGER)_At)
+AND
+QRY_AMP_Plus_UltraWaveDue(_N, _At)
+AND
+DB_AMP_Plus_SpawnIntensity_Freq(3)
+AND
+DB_AMP_Ultra_Active(1)
+AND
+NOT DB_AMP_Plus_MirrorFiredCombat(_C)
+AND
+NOT DB_AMP_Plus_ChaseActive(_, _)
+AND
+NOT DB_AMP_Plus_UltraAlly(_Boss)
+AND
+IsDead(_Boss, 0)
+AND
+GetHostCharacter((CHARACTER)_Host)
+AND
+IsEnemy(_Boss, _Host, 1)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_PoolSize)
+AND
+_PoolSize > 0
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
+THEN
+DB_AMP_Plus_MirrorFiredCombat(_C);
+PROC_AMP_Plus_MirrorSpawnSized(_Boss);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraUnbelievableWave.txt
+Osiris rule	SavegameLoaded()		(absent)	"IF
+SavegameLoaded()
+AND
+NOT DB_AMP_Plus_UltraWaveLimit(_)
+THEN
+DB_AMP_Plus_UltraWaveLimit(0);
+
+IF
+SavegameLoaded()
+AND
+NOT DB_AMP_Plus_UltraWaveNext(_)
+THEN
+DB_AMP_Plus_UltraWaveNext(1);
+
+IF
+SavegameLoaded()
+THEN
+PROC_AMP_Plus_UltraWaveResetTransient();
+PROC_AMP_Plus_UltraWaveAdoptExisting();
+PROC_AMP_Plus_UltraWaveSyncOmen();
+
+IF
+SavegameLoaded()
+AND
+DB_AMP_Plus_UltraWaveMenu((CHARACTER)_Caster)
+THEN
+NOT DB_AMP_Plus_UltraWaveMenu(_Caster);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	LevelGameplayStarted(_, _)		(absent)	"IF
+LevelGameplayStarted(_, _)
+AND
+NOT DB_AMP_Plus_UltraWaveLimit(_)
+THEN
+DB_AMP_Plus_UltraWaveLimit(0);
+
+IF
+LevelGameplayStarted(_, _)
+AND
+NOT DB_AMP_Plus_UltraWaveNext(_)
+THEN
+DB_AMP_Plus_UltraWaveNext(1);
+
+IF
+LevelGameplayStarted(_, _)
+THEN
+PROC_AMP_Plus_UltraWaveResetTransient();
+PROC_AMP_Plus_UltraWaveAdoptExisting();
+PROC_AMP_Plus_UltraWaveSyncOmen();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveResetTransient()		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveResetTransient()
+THEN
+PROC_AMP_Plus_UltraWaveDrainContext();
+PROC_AMP_Plus_UltraWaveDrainParents();
+PROC_AMP_Plus_UltraWaveDrainReservations();
+DB_AMP_Plus_UltraWaveContext(0, 0);
+PROC_AMP_Plus_UltraWavePruneMembers();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveDrainContext()		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveDrainContext()
+AND
+DB_AMP_Plus_UltraWaveContext((INTEGER)_Frame, (INTEGER)_Wave)
+THEN
+NOT DB_AMP_Plus_UltraWaveContext(_Frame, _Wave);
+PROC_AMP_Plus_UltraWaveDrainContext();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveDrainParents()		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveDrainParents()
+AND
+DB_AMP_Plus_UltraWaveParent((INTEGER)_Frame, (INTEGER)_Parent, (INTEGER)_Wave)
+THEN
+NOT DB_AMP_Plus_UltraWaveParent(_Frame, _Parent, _Wave);
+PROC_AMP_Plus_UltraWaveDrainParents();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveDrainReservations()		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveDrainReservations()
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_Wave, (CHARACTER)_Anchor)
+THEN
+NOT DB_AMP_Plus_UltraWaveReserved(_Wave, _Anchor);
+PROC_AMP_Plus_UltraWaveDrainReservations();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWavePruneMembers()		(absent)	"PROC
+PROC_AMP_Plus_UltraWavePruneMembers()
+AND
+DB_AMP_Plus_UltraWaveMember((CHARACTER)_Mob, (INTEGER)_Wave)
+AND
+IsDead(_Mob, 1)
+THEN
+DB_AMP_Plus_UltraWavePruneQ(_Mob, _Wave);
+
+PROC
+PROC_AMP_Plus_UltraWavePruneMembers()
+THEN
+PROC_AMP_Plus_UltraWaveDrainPruneQ();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveDrainPruneQ()		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveDrainPruneQ()
+AND
+DB_AMP_Plus_UltraWavePruneQ((CHARACTER)_Mob, (INTEGER)_Wave)
+THEN
+NOT DB_AMP_Plus_UltraWavePruneQ(_Mob, _Wave);
+NOT DB_AMP_Plus_UltraWaveMember(_Mob, _Wave);
+PROC_AMP_Plus_UltraWaveDrainPruneQ();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"UsingSpell((CHARACTER)_Caster, ""Shout_AMP_Plus_UltraWaveLimit"", _, _, _)"		(absent)	"IF
+UsingSpell((CHARACTER)_Caster, ""Shout_AMP_Plus_UltraWaveLimit"", _, _, _)
+AND
+IsPlayer(_Caster, 1)
+AND
+GetHostCharacter(_Caster)
+AND
+NOT DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+DB_AMP_Plus_UltraWaveMenu(_Caster);
+OpenMessageBoxYesNo(_Caster, ""AMP_Plus_UltraWaveLimit_1"");"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_1"", 1)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_1"", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_1"", 0)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_1"", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, ""AMP_Plus_UltraWaveLimit_2"");"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_2"", 1)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_2"", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 2);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_2"", 0)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_2"", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, ""AMP_Plus_UltraWaveLimit_3"");"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_3"", 1)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_3"", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 3);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_3"", 0)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_3"", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, ""AMP_Plus_UltraWaveLimit_4"");"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_4"", 1)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_4"", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 4);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_4"", 0)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_4"", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, ""AMP_Plus_UltraWaveLimit_5"");"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_5"", 1)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_5"", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 5);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_5"", 0)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_5"", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, ""AMP_Plus_UltraWaveLimit_Unlimited"");"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_Unlimited"", 1)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_Unlimited"", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 0);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_Unlimited"", 0)"		(absent)	"IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, ""AMP_Plus_UltraWaveLimit_Unlimited"", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, ""AMP_Plus_UltraWaveLimit_1"");"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveSetLimit((CHARACTER)_Caster, (INTEGER)_Limit)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveSetLimit((CHARACTER)_Caster, (INTEGER)_Limit)
+AND
+DB_AMP_Plus_UltraWaveLimit((INTEGER)_Old)
+THEN
+NOT DB_AMP_Plus_UltraWaveLimit(_Old);
+DB_AMP_Plus_UltraWaveLimit(_Limit);
+NOT DB_AMP_Plus_UltraWaveMenu(_Caster);
+PROC_AMP_Plus_UltraWaveAdoptExisting();
+PROC_AMP_Plus_UltraWaveSyncOmen();
+PROC_AMP_PlayModeEffect(_Caster);
+OpenMessageBox(_Caster, ""AMP_Plus_UltraWaveLimit_Done"");"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveAlive((INTEGER)_Wave, (GUIDSTRING)_Combat)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveAlive((INTEGER)_Wave, (GUIDSTRING)_Combat)
+AND
+DB_AMP_Plus_UltraWaveMember((CHARACTER)_Mob, _Wave)
+AND
+IsDead(_Mob, 0)
+AND
+IsInCombat(_Mob, 1)
+AND
+CombatGetGuidFor(_Mob, _Combat)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveAlive((INTEGER)_Wave, (GUIDSTRING)_Combat)
+AND
+DB_AMP_Plus_UltraWaveReserved(_Wave, _)
+AND
+DB_AMP_Plus_UltraWaveCombat(_Wave, _Combat)
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 1)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 1)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 1)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 1)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 2)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 2)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W2, _Combat)
+AND
+_W2 > _W1
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W2, _Combat)
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 2)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 2)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W2, _Anchor)
+AND
+_W2 > _W1
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 3)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 3)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W2, _Combat)
+AND
+_W2 > _W1
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W2, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W3, _Combat)
+AND
+_W3 > _W2
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W3, _Combat)
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 3)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 3)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W2, _Anchor)
+AND
+_W2 > _W1
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W3, _Anchor)
+AND
+_W3 > _W2
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 4)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 4)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W2, _Combat)
+AND
+_W2 > _W1
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W2, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W3, _Combat)
+AND
+_W3 > _W2
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W3, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W4, _Combat)
+AND
+_W4 > _W3
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W4, _Combat)
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 4)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 4)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W2, _Anchor)
+AND
+_W2 > _W1
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W3, _Anchor)
+AND
+_W3 > _W2
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W4, _Anchor)
+AND
+_W4 > _W3
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 5)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 5)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W2, _Combat)
+AND
+_W2 > _W1
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W2, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W3, _Combat)
+AND
+_W3 > _W2
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W3, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W4, _Combat)
+AND
+_W4 > _W3
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W4, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W5, _Combat)
+AND
+_W5 > _W4
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W5, _Combat)
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 5)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 5)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W2, _Anchor)
+AND
+_W2 > _W1
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W3, _Anchor)
+AND
+_W3 > _W2
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W4, _Anchor)
+AND
+_W4 > _W3
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W5, _Anchor)
+AND
+_W5 > _W4
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveLimitReached((CHARACTER)_Anchor)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveLimitReached((CHARACTER)_Anchor)
+AND
+DB_AMP_Plus_UltraWaveLimit((INTEGER)_Limit)
+AND
+_Limit > 0
+AND
+CombatGetGuidFor(_Anchor, (GUIDSTRING)_Combat)
+AND
+QRY_AMP_Plus_UltraWaveCountAtLeast(_Combat, _Limit)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveLimitReached((CHARACTER)_Anchor)
+AND
+DB_AMP_Plus_UltraWaveLimit((INTEGER)_Limit)
+AND
+_Limit > 0
+AND
+QRY_AMP_Plus_UltraWaveReservedAtLeast(_Anchor, _Limit)
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveBegin((CHARACTER)_Anchor)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveBegin((CHARACTER)_Anchor)
+AND
+DB_AMP_Plus_UltraWaveNext((INTEGER)_Wave)
+AND
+IntegerSum(_Wave, 1, (INTEGER)_Next)
+AND
+DB_AMP_Plus_UltraWaveContext((INTEGER)_Parent, (INTEGER)_ParentWave)
+THEN
+NOT DB_AMP_Plus_UltraWaveNext(_Wave);
+DB_AMP_Plus_UltraWaveNext(_Next);
+NOT DB_AMP_Plus_UltraWaveContext(_Parent, _ParentWave);
+DB_AMP_Plus_UltraWaveParent(_Wave, _Parent, _ParentWave);
+DB_AMP_Plus_UltraWaveContext(_Wave, _Wave);
+DB_AMP_Plus_UltraWaveReserved(_Wave, _Anchor);
+PROC_AMP_Plus_UltraWaveSyncCombat(_Anchor, _Wave);
+RealtimeObjectTimerLaunch(_Anchor, ""AMP_Plus_UltraWaveJoin"", 1000);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveEnd()		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveEnd()
+AND
+DB_AMP_Plus_UltraWaveContext((INTEGER)_Frame, (INTEGER)_Wave)
+AND
+DB_AMP_Plus_UltraWaveParent(_Frame, (INTEGER)_Parent, (INTEGER)_ParentWave)
+THEN
+NOT DB_AMP_Plus_UltraWaveContext(_Frame, _Wave);
+NOT DB_AMP_Plus_UltraWaveParent(_Frame, _Parent, _ParentWave);
+DB_AMP_Plus_UltraWaveContext(_Parent, _ParentWave);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	"ObjectTimerFinished((CHARACTER)_Anchor, ""AMP_Plus_UltraWaveJoin"")"		(absent)	"IF
+ObjectTimerFinished((CHARACTER)_Anchor, ""AMP_Plus_UltraWaveJoin"")
+THEN
+PROC_AMP_Plus_UltraWaveRelease(_Anchor);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveRelease((CHARACTER)_Anchor)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveRelease((CHARACTER)_Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_Wave, _Anchor)
+THEN
+NOT DB_AMP_Plus_UltraWaveReserved(_Wave, _Anchor);
+PROC_AMP_Plus_UltraWaveRelease(_Anchor);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	DB_AMP_MirrorSupport_Spawned((CHARACTER)_Mob, _)		(absent)	"IF
+DB_AMP_MirrorSupport_Spawned((CHARACTER)_Mob, _)
+THEN
+PROC_AMP_Plus_UltraWaveRegister(_Mob);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveRegister((CHARACTER)_Mob)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveRegister((CHARACTER)_Mob)
+AND
+NOT DB_AMP_Plus_UltraWaveMember(_Mob, _)
+AND
+DB_AMP_Plus_UltraWaveContext(_, (INTEGER)_Wave)
+AND
+_Wave > 0
+THEN
+DB_AMP_Plus_UltraWaveMember(_Mob, _Wave);
+PROC_AMP_Plus_UltraWaveSyncCombat(_Mob, _Wave);
+
+PROC
+PROC_AMP_Plus_UltraWaveRegister((CHARACTER)_Mob)
+AND
+NOT DB_AMP_Plus_UltraWaveMember(_Mob, _)
+AND
+DB_AMP_Plus_UltraWaveContext(0, 0)
+AND
+DB_AMP_Plus_UltraWaveNext((INTEGER)_Wave)
+AND
+IntegerSum(_Wave, 1, (INTEGER)_Next)
+THEN
+NOT DB_AMP_Plus_UltraWaveNext(_Wave);
+DB_AMP_Plus_UltraWaveNext(_Next);
+DB_AMP_Plus_UltraWaveMember(_Mob, _Wave);
+PROC_AMP_Plus_UltraWaveSyncCombat(_Mob, _Wave);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveSyncCombat((CHARACTER)_Mob, (INTEGER)_Wave)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveSyncCombat((CHARACTER)_Mob, (INTEGER)_Wave)
+AND
+CombatGetGuidFor(_Mob, (GUIDSTRING)_Combat)
+THEN
+DB_AMP_Plus_UltraWaveCombat(_Wave, _Combat);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	EnteredCombat((CHARACTER)_Mob, (GUIDSTRING)_Combat)		(absent)	"IF
+EnteredCombat((CHARACTER)_Mob, (GUIDSTRING)_Combat)
+AND
+DB_AMP_Plus_UltraWaveMember(_Mob, (INTEGER)_Wave)
+THEN
+DB_AMP_Plus_UltraWaveCombat(_Wave, _Combat);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveCopy((CHARACTER)_Old, (CHARACTER)_New)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveCopy((CHARACTER)_Old, (CHARACTER)_New)
+AND
+DB_AMP_Plus_UltraWaveMember(_Old, (INTEGER)_Wave)
+AND
+NOT DB_AMP_Plus_UltraWaveMember(_New, _)
+THEN
+DB_AMP_Plus_UltraWaveMember(_New, _Wave);
+PROC_AMP_Plus_UltraWaveSyncCombat(_New, _Wave);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	DB_AMP_Plus_Undying_Blade((CHARACTER)_Blade)		(absent)	"IF
+DB_AMP_Plus_Undying_Blade((CHARACTER)_Blade)
+THEN
+PROC_AMP_Plus_UltraWaveRegister(_Blade);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	DB_AMP_Plus_Undying_Crab((CHARACTER)_Crab, (CHARACTER)_Blade)		(absent)	"IF
+DB_AMP_Plus_Undying_Crab((CHARACTER)_Crab, (CHARACTER)_Blade)
+THEN
+PROC_AMP_Plus_UltraWaveCopy(_Blade, _Crab);
+PROC_AMP_Plus_UltraWaveRegister(_Crab);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveAdoptExisting()		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveAdoptExisting()
+AND
+DB_AMP_Plus_UltraMob((CHARACTER)_Mob, _)
+AND
+IsDead(_Mob, 0)
+THEN
+PROC_AMP_Plus_UltraWaveRegister(_Mob);
+PROC_AMP_Plus_UltraWaveRefreshMember(_Mob);
+
+PROC
+PROC_AMP_Plus_UltraWaveAdoptExisting()
+AND
+DB_AMP_Plus_Undying_Blade((CHARACTER)_Mob)
+AND
+IsDead(_Mob, 0)
+THEN
+PROC_AMP_Plus_UltraWaveRegister(_Mob);
+PROC_AMP_Plus_UltraWaveRefreshMember(_Mob);
+
+PROC
+PROC_AMP_Plus_UltraWaveAdoptExisting()
+AND
+DB_AMP_Plus_Undying_Crab((CHARACTER)_Mob, (CHARACTER)_Blade)
+AND
+IsDead(_Mob, 0)
+THEN
+PROC_AMP_Plus_UltraWaveCopy(_Blade, _Mob);
+PROC_AMP_Plus_UltraWaveRegister(_Mob);
+PROC_AMP_Plus_UltraWaveRefreshMember(_Mob);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveRefreshMember((CHARACTER)_Mob)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveRefreshMember((CHARACTER)_Mob)
+AND
+DB_AMP_Plus_UltraWaveMember(_Mob, (INTEGER)_Wave)
+THEN
+PROC_AMP_Plus_UltraWaveSyncCombat(_Mob, _Wave);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	CombatEnded((GUIDSTRING)_Combat)		(absent)	"IF
+CombatEnded((GUIDSTRING)_Combat)
+THEN
+PROC_AMP_Plus_UltraWaveClearCombat(_Combat);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveClearCombat((GUIDSTRING)_Combat)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveClearCombat((GUIDSTRING)_Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_Wave, _Combat)
+THEN
+NOT DB_AMP_Plus_UltraWaveCombat(_Wave, _Combat);
+PROC_AMP_Plus_UltraWaveClearCombat(_Combat);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveSyncOmen()		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveSyncOmen()
+AND
+DB_AMP_RareOmen_Odds((INTEGER)_Odds)
+THEN
+NOT DB_AMP_RareOmen_Odds(_Odds);
+DB_AMP_Plus_UltraWaveOmenOdds(_Odds);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_RareOmen_TryConjure((CHARACTER)_Boss)		(absent)	"PROC
+PROC_AMP_RareOmen_TryConjure((CHARACTER)_Boss)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
+AND
+DB_AMP_Plus_UltraWaveOmenOdds((INTEGER)_Odds)
+AND
+Random(_Odds, (INTEGER)_Roll)
+AND
+_Roll == 0
+THEN
+PROC_AMP_Plus_UltraWaveBegin(_Boss);
+PROC_AMP_RareOmen_Spawn(_Boss);
+PROC_AMP_Plus_UltraWaveEnd();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)		(absent)	"PROC
+PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
+THEN
+PROC_AMP_Plus_UltraWaveBegin(_Boss);
+PROC_AMP_Plus_MirrorSpawnAdmitted(_Boss);
+PROC_AMP_Plus_UltraWaveEnd();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)		(absent)	"PROC
+PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Host)
+THEN
+PROC_AMP_Plus_UltraWaveBegin(_Host);
+PROC_AMP_Plus_UltraSpawnAdmitted(_Host, _HX, _HY, _HZ);
+PROC_AMP_Plus_UltraWaveEnd();"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveForget((CHARACTER)_Mob)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveForget((CHARACTER)_Mob)
+AND
+DB_AMP_Plus_UltraWaveMember(_Mob, (INTEGER)_Wave)
+THEN
+NOT DB_AMP_Plus_UltraWaveMember(_Mob, _Wave);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	QRY_AMP_Plus_UltraWaveDue((INTEGER)_Turn, (INTEGER)_Due)		(absent)	"QRY
+QRY_AMP_Plus_UltraWaveDue((INTEGER)_Turn, (INTEGER)_Due)
+AND
+DB_AMP_Plus_UltraWaveLimit(0)
+AND
+_Turn == _Due
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveDue((INTEGER)_Turn, (INTEGER)_Due)
+AND
+DB_AMP_Plus_UltraWaveLimit((INTEGER)_Limit)
+AND
+_Limit > 0
+AND
+_Turn >= _Due
+THEN
+DB_NOOP(1);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_UltraWaveReserveReplacement((CHARACTER)_Old)		(absent)	"PROC
+PROC_AMP_Plus_UltraWaveReserveReplacement((CHARACTER)_Old)
+AND
+DB_AMP_Plus_UltraWaveMember(_Old, (INTEGER)_Wave)
+AND
+GetHostCharacter((CHARACTER)_Host)
+THEN
+DB_AMP_Plus_UltraWaveReserved(_Wave, _Host);
+PROC_AMP_Plus_UltraWaveSyncCombat(_Old, _Wave);
+RealtimeObjectTimerLaunch(_Host, ""AMP_Plus_UltraWaveJoin"", 1000);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris initial state	INITSECTION		(absent)	"DB_AMP_Plus_UltraWaveLimit(0);
+DB_AMP_Plus_UltraWaveNext(1);
+DB_AMP_Plus_UltraWaveContext(0, 0);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_UltraWaveLimit.txt
+Osiris rule	PROC_AMP_Plus_Undying_SwapShell((CHARACTER)_Shell)		"PROC
+PROC_AMP_Plus_Undying_SwapShell((CHARACTER)_Shell)
+AND
+DB_AMP_Plus_Undying_Rising(_Shell)
+AND
+GetPosition(_Shell, (REAL)_X, (REAL)_Y, (REAL)_Z)
+THEN
+NOT DB_AMP_Plus_Undying_Rising(_Shell);
+NOT DB_AMP_Plus_Undying_Shell(_Shell);
+PROC_AMP_Plus_Undying_ClearWait(_Shell);
+NOT DB_AMP_MirrorChase_Mob(_Shell, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
+NOT DB_AMP_Plus_Chase(_Shell, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
+NOT DB_AMP_Plus_ChaseActive(_Shell, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
+LeaveCombat(_Shell);
+SetOnStage(_Shell, 0);
+RemoveStatus((CHARACTER)_Shell, ""AMP_UNDYING_DOWNED"");
+RequestDeleteTemporary(_Shell);
+PROC_AMP_Plus_Undying_RaiseBlade(_X, _Y, _Z, 100.0);"	"PROC
+PROC_AMP_Plus_Undying_SwapShell((CHARACTER)_Shell)
+AND
+DB_AMP_Plus_Undying_Rising(_Shell)
+AND
+GetPosition(_Shell, (REAL)_X, (REAL)_Y, (REAL)_Z)
+THEN
+NOT DB_AMP_Plus_Undying_Rising(_Shell);
+NOT DB_AMP_Plus_Undying_Shell(_Shell);
+PROC_AMP_Plus_Undying_ClearWait(_Shell);
+NOT DB_AMP_MirrorChase_Mob(_Shell, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
+NOT DB_AMP_Plus_Chase(_Shell, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
+NOT DB_AMP_Plus_ChaseActive(_Shell, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
+PROC_AMP_Plus_UltraWaveReserveReplacement(_Shell);
+LeaveCombat(_Shell);
+SetOnStage(_Shell, 0);
+RemoveStatus((CHARACTER)_Shell, ""AMP_UNDYING_DOWNED"");
+RequestDeleteTemporary(_Shell);
+PROC_AMP_Plus_Undying_RaiseBlade(_Shell, _X, _Y, _Z, 100.0);
+PROC_AMP_Plus_UltraWaveForget(_Shell);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_Undying.txt
+Osiris rule	PROC_AMP_Plus_Undying_RaiseBlade((REAL)_X, (REAL)_Y, (REAL)_Z, (REAL)_HP)		"PROC
+PROC_AMP_Plus_Undying_RaiseBlade((REAL)_X, (REAL)_Y, (REAL)_Z, (REAL)_HP)
+AND
+GetHostCharacter((CHARACTER)_Host)
+AND
+CreateAt(AMP_ULTRA_Summon_12_b415c998-a00b-406f-85b8-76c9caa82ed1, _X, _Y, _Z, 0, 1, """", (GUIDSTRING)_Blade)
+THEN
+DB_AMP_Plus_Undying_Blade((CHARACTER)_Blade);
+DB_AMP_Plus_Undying_PendingHP((CHARACTER)_Blade, _HP);
+PROC_AMP_Plus_Undying_EarlyScale((CHARACTER)_Blade);
+PROC_AMP_Plus_ApplyPursuerFaction((CHARACTER)_Blade);
+ApplyStatus((CHARACTER)_Blade, ""AMP_UNDYING_SHIFT_VFX"", 1.0, 1, (CHARACTER)_Blade);
+SetRelationTemporaryHostile((CHARACTER)_Blade, _Host);
+EnterCombat((CHARACTER)_Blade, _Host);
+RealtimeObjectTimerLaunch((CHARACTER)_Blade, ""AMP_Undying_SetHP"", 500);"	"PROC
+PROC_AMP_Plus_Undying_RaiseBlade((REAL)_X, (REAL)_Y, (REAL)_Z, (REAL)_HP)
+THEN
+PROC_AMP_Plus_Undying_RaiseBlade((CHARACTER)NULL_00000000-0000-0000-0000-000000000000, _X, _Y, _Z, _HP);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_Undying.txt
+Osiris rule	PROC_AMP_Plus_Undying_RaiseBlade((CHARACTER)_Shell, (REAL)_X, (REAL)_Y, (REAL)_Z, (REAL)_HP)		(absent)	"PROC
+PROC_AMP_Plus_Undying_RaiseBlade((CHARACTER)_Shell, (REAL)_X, (REAL)_Y, (REAL)_Z, (REAL)_HP)
+AND
+GetHostCharacter((CHARACTER)_Host)
+AND
+CreateAt(AMP_ULTRA_Summon_12_b415c998-a00b-406f-85b8-76c9caa82ed1, _X, _Y, _Z, 0, 1, """", (GUIDSTRING)_Blade)
+THEN
+PROC_AMP_Plus_UltraWaveCopy(_Shell, (CHARACTER)_Blade);
+DB_AMP_Plus_Undying_Blade((CHARACTER)_Blade);
+DB_AMP_Plus_Undying_PendingHP((CHARACTER)_Blade, _HP);
+PROC_AMP_Plus_Undying_EarlyScale((CHARACTER)_Blade);
+PROC_AMP_Plus_ApplyPursuerFaction((CHARACTER)_Blade);
+ApplyStatus((CHARACTER)_Blade, ""AMP_UNDYING_SHIFT_VFX"", 1.0, 1, (CHARACTER)_Blade);
+SetRelationTemporaryHostile((CHARACTER)_Blade, _Host);
+EnterCombat((CHARACTER)_Blade, _Host);
+RealtimeObjectTimerLaunch((CHARACTER)_Blade, ""AMP_Undying_SetHP"", 500);"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Story/RawFiles/Goals/AMP_Plus_Undying.txt
+Message mapping	AMP_Plus_UltraWaveLimit_1		(absent)	"<node id=""TranslatedStringKey"">
+  <attribute id=""Content"" type=""TranslatedString"" handle=""h106d43d2gcc83g4d4fg82b3g92ed1dfe80de"" version=""1"" />
+  <attribute id=""UUID"" type=""FixedString"" value=""AMP_Plus_UltraWaveLimit_1"" />
+  <attribute id=""Speaker"" type=""FixedString"" value="""" />
+  <attribute id=""ExtraData"" type=""LSString"" value="""" />
+  <attribute id=""Stub"" type=""bool"" value=""True"" />
+</node>"	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/generated_books.lsx
+Message mapping	AMP_Plus_UltraWaveLimit_2		(absent)	"<node id=""TranslatedStringKey"">
+  <attribute id=""Content"" type=""TranslatedString"" handle=""h59bdf45fgb714g4644ga2d6ge5c5700030ae"" version=""1"" />
+  <attribute id=""UUID"" type=""FixedString"" value=""AMP_Plus_UltraWaveLimit_2"" />
+  <attribute id=""Speaker"" type=""FixedString"" value="""" />
+  <attribute id=""ExtraData"" type=""LSString"" value="""" />
+  <attribute id=""Stub"" type=""bool"" value=""True"" />
+</node>"	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/generated_books.lsx
+Message mapping	AMP_Plus_UltraWaveLimit_3		(absent)	"<node id=""TranslatedStringKey"">
+  <attribute id=""Content"" type=""TranslatedString"" handle=""h1ce0c0aagea21g461cg9e2ag49869f92a024"" version=""1"" />
+  <attribute id=""UUID"" type=""FixedString"" value=""AMP_Plus_UltraWaveLimit_3"" />
+  <attribute id=""Speaker"" type=""FixedString"" value="""" />
+  <attribute id=""ExtraData"" type=""LSString"" value="""" />
+  <attribute id=""Stub"" type=""bool"" value=""True"" />
+</node>"	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/generated_books.lsx
+Message mapping	AMP_Plus_UltraWaveLimit_4		(absent)	"<node id=""TranslatedStringKey"">
+  <attribute id=""Content"" type=""TranslatedString"" handle=""hb392be61g523bg4602g921dge05696c7f61f"" version=""1"" />
+  <attribute id=""UUID"" type=""FixedString"" value=""AMP_Plus_UltraWaveLimit_4"" />
+  <attribute id=""Speaker"" type=""FixedString"" value="""" />
+  <attribute id=""ExtraData"" type=""LSString"" value="""" />
+  <attribute id=""Stub"" type=""bool"" value=""True"" />
+</node>"	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/generated_books.lsx
+Message mapping	AMP_Plus_UltraWaveLimit_5		(absent)	"<node id=""TranslatedStringKey"">
+  <attribute id=""Content"" type=""TranslatedString"" handle=""ha61402c9g773eg4d14g9fe7g2954eb371acb"" version=""1"" />
+  <attribute id=""UUID"" type=""FixedString"" value=""AMP_Plus_UltraWaveLimit_5"" />
+  <attribute id=""Speaker"" type=""FixedString"" value="""" />
+  <attribute id=""ExtraData"" type=""LSString"" value="""" />
+  <attribute id=""Stub"" type=""bool"" value=""True"" />
+</node>"	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/generated_books.lsx
+Message mapping	AMP_Plus_UltraWaveLimit_Unlimited		(absent)	"<node id=""TranslatedStringKey"">
+  <attribute id=""Content"" type=""TranslatedString"" handle=""h407ca525g365eg474bg9bb5g2819f2249486"" version=""1"" />
+  <attribute id=""UUID"" type=""FixedString"" value=""AMP_Plus_UltraWaveLimit_Unlimited"" />
+  <attribute id=""Speaker"" type=""FixedString"" value="""" />
+  <attribute id=""ExtraData"" type=""LSString"" value="""" />
+  <attribute id=""Stub"" type=""bool"" value=""True"" />
+</node>"	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/generated_books.lsx
+Message mapping	AMP_Plus_UltraWaveLimit_Done		(absent)	"<node id=""TranslatedStringKey"">
+  <attribute id=""Content"" type=""TranslatedString"" handle=""h989c751cg5297g4b63gb7f4g19186ab514a9"" version=""1"" />
+  <attribute id=""UUID"" type=""FixedString"" value=""AMP_Plus_UltraWaveLimit_Done"" />
+  <attribute id=""Speaker"" type=""FixedString"" value="""" />
+  <attribute id=""ExtraData"" type=""LSString"" value="""" />
+  <attribute id=""Stub"" type=""bool"" value=""True"" />
+</node>"	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Localization/generated_books.lsx
+SpellData	Shout_AMP_Plus_Ultra_Container		"new entry ""Shout_AMP_Plus_Ultra_Container""
+type ""SpellData""
+data ""SpellType"" ""Shout""
+using ""Shout_AMP_Test""
+data ""ContainerSpells"" ""Shout_AMP_Plus_Ultra_Unlock;Shout_AMP_Plus_UltraSpawnSettings;Shout_AMP_Plus_UltraBoss_01;Shout_AMP_Plus_UltraBoss_02;Shout_AMP_Plus_UltraBoss_03;Shout_AMP_Plus_UltraBoss_04;Shout_AMP_Plus_UltraBoss_05;Shout_AMP_Plus_UltraBoss_06;Shout_AMP_Plus_UltraBoss_07;Shout_AMP_Plus_UltraBoss_08;Shout_AMP_Plus_UltraBoss_09;Shout_AMP_Plus_UltraBoss_10;Shout_AMP_Plus_UltraBoss_11;Shout_AMP_Plus_UltraBoss_12""
+data ""DisplayName"" ""h6b048153gfa39g4031gbfaegd49348801f37;1""
+data ""Description"" ""h72eabf08g3922g4a85ga1cfgd121f7695885;1""
+data ""Icon"" ""Shout_AMP_ULTRA""
+data ""TooltipStatusApply"" """"
+data ""Cooldown"" """"
+data ""UseCosts"" """"
+data ""TargetConditions"" ""Self()""
+data ""SpellFlags"" ""IsLinkedSpellContainer"""	"new entry ""Shout_AMP_Plus_Ultra_Container""
+type ""SpellData""
+data ""SpellType"" ""Shout""
+using ""Shout_AMP_Test""
+data ""ContainerSpells"" ""Shout_AMP_Plus_Ultra_Unlock;Shout_AMP_Plus_UltraSpawnSettings;Shout_AMP_Plus_UltraWaveLimit;Shout_AMP_Plus_UltraBoss_01;Shout_AMP_Plus_UltraBoss_02;Shout_AMP_Plus_UltraBoss_03;Shout_AMP_Plus_UltraBoss_04;Shout_AMP_Plus_UltraBoss_05;Shout_AMP_Plus_UltraBoss_06;Shout_AMP_Plus_UltraBoss_07;Shout_AMP_Plus_UltraBoss_08;Shout_AMP_Plus_UltraBoss_09;Shout_AMP_Plus_UltraBoss_10;Shout_AMP_Plus_UltraBoss_11;Shout_AMP_Plus_UltraBoss_12""
+data ""DisplayName"" ""h6b048153gfa39g4031gbfaegd49348801f37;1""
+data ""Description"" ""h72eabf08g3922g4a85ga1cfgd121f7695885;1""
+data ""Icon"" ""Shout_AMP_ULTRA""
+data ""TooltipStatusApply"" """"
+data ""Cooldown"" """"
+data ""UseCosts"" """"
+data ""TargetConditions"" ""Self()""
+data ""SpellFlags"" ""IsLinkedSpellContainer"""	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Stats/Generated/Data/AMP_Plus_UltraSettings.txt
+SpellData	Shout_AMP_Plus_UltraWaveLimit		(absent)	"new entry ""Shout_AMP_Plus_UltraWaveLimit""
+type ""SpellData""
+data ""SpellType"" ""Shout""
+using ""Shout_AMP_Plus_Ultra_Container""
+data ""SpellContainerID"" ""Shout_AMP_Plus_Ultra_Container""
+data ""ContainerSpells"" """"
+data ""DisplayName"" ""h7d5891e2gd28ag489bg9179gbafa07ad3c2c;1""
+data ""Description"" ""h285cb17ag0364g425bga414g7707a9c6e779;1""
+data ""Icon"" ""AMP_Plus_UltraWaveLimit"""	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Stats/Generated/Data/AMP_Plus_UltraSettings.txt
+Icon metadata	Assets/ControllerUIIcons/skills_png/AMP_Plus_UltraWaveLimit.png		(absent)	"<node id=""Object"">
+  <attribute id=""MapKey"" type=""FixedString"" value=""Assets/ControllerUIIcons/skills_png/AMP_Plus_UltraWaveLimit.png"" />
+  <children>
+    <node id=""entries"">
+      <attribute id=""h"" type=""int16"" value=""144"" />
+      <attribute id=""mipcount"" type=""int8"" value=""8"" />
+      <attribute id=""w"" type=""int16"" value=""144"" />
+    </node>
+  </children>
+</node>"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/GUI/metadata.lsx
+Icon metadata	Assets/Tooltips/Icons/AMP_Plus_UltraWaveLimit.png		(absent)	"<node id=""Object"">
+  <attribute id=""MapKey"" type=""FixedString"" value=""Assets/Tooltips/Icons/AMP_Plus_UltraWaveLimit.png"" />
+  <children>
+    <node id=""entries"">
+      <attribute id=""h"" type=""int16"" value=""380"" />
+      <attribute id=""mipcount"" type=""int8"" value=""9"" />
+      <attribute id=""w"" type=""int16"" value=""380"" />
+    </node>
+  </children>
+</node>"	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/GUI/metadata.lsx
+Icon atlas	AMP_Plus_UltraWaveLimit		(absent)	"<node id=""IconUV"">
+  <attribute id=""MapKey"" type=""FixedString"" value=""AMP_Plus_UltraWaveLimit"" />
+  <attribute id=""U1"" type=""float"" value=""0.001953125"" />
+  <attribute id=""U2"" type=""float"" value=""0.560546875"" />
+  <attribute id=""V1"" type=""float"" value=""0.001953125"" />
+  <attribute id=""V2"" type=""float"" value=""0.560546875"" />
+</node>"	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/GUI/UltraWaveLimitIcon.lsx
+Icon atlas	TextureAtlasInfo		(absent)	"<region id=""TextureAtlasInfo"">
+  <node id=""root"">
+    <children>
+      <node id=""TextureAtlasIconSize"">
+        <attribute id=""Height"" type=""int32"" value=""144"" />
+        <attribute id=""Width"" type=""int32"" value=""144"" />
+      </node>
+      <node id=""TextureAtlasPath"">
+        <attribute id=""Path"" type=""string"" value=""Assets/Textures/Icons/UltraWaveLimitIcon.dds"" />
+        <attribute id=""UUID"" type=""FixedString"" value=""f6b06035-cdee-456a-9975-c3c78ed318a4"" />
+      </node>
+      <node id=""TextureAtlasTextureSize"">
+        <attribute id=""Height"" type=""int32"" value=""256"" />
+        <attribute id=""Width"" type=""int32"" value=""256"" />
+      </node>
+    </children>
+  </node>
+</region>"	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/GUI/UltraWaveLimitIcon.lsx
+Icon texture	Keyboard/mouse atlas		(absent)	256x256 RGBA, DXT5/BC3; 9 mip levels; 87536 bytes; SHA256 4e2cb7c569ddfb5215accbaaf6d671710258cd15b2108cd482b839b61d70f561.	Public/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/Assets/Textures/Icons/UltraWaveLimitIcon.dds
+Icon texture	Controller icon		(absent)	144x144 RGBA, DXT5/BC3; 8 mip levels; 27936 bytes; SHA256 0f26322671749080dd5b7063a34f45186b4c6ef1b87934fe3bcdc4e4ac2fc98f.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/GUI/Assets/ControllerUIIcons/skills_png/AMP_Plus_UltraWaveLimit.DDS
+Icon texture	Tooltip icon		(absent)	380x380 RGBA, DXT5/BC3; 9 mip levels; 193728 bytes; SHA256 4f35bb6673e267b05f56608d2c5f95bb429a85ad859f67770f7b5536c7c23b81.	Mods/AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42/GUI/Assets/Tooltips/Icons/AMP_Plus_UltraWaveLimit.DDS
+Icon artwork	Editable PNG		(absent)	1254x1254 PNG; cyan stacked waves beneath a limit bar on a blue disc; 1839648 bytes; SHA256 3b92399f42530cb2dd5e2882fa74af978419e4fafe3ab1ac0b018818f27cad67.	Docs/assets/ultra-wave-limit-icon.png
+Icon artwork	Artwork prompt		(absent)	Edit this game settings icon. Preserve the reference's simple visual language: a rough muted blue circular painted disc, pale icy-cyan glowing chalk linework, soft grain, and transparent outer corners. Replace the gear completely with ONE very simple emblem for 'maximum concurrent reinforcement waves': three separate broad stacked chevron-shaped rank marks, with generous spacing, beneath a strong horizontal ceiling/limit bar with short downward end caps. All marks are the same pale cyan as the original gear. The stacked ranks should read as waves of reinforcements being capped. Make it crisp and unmistakable at 64-pixel display size. Flat clean glyph, no tiny decorative details. No skulls, soldiers, weapons, gears, text, numbers, letters, gold, red, realistic metal, frame or scene. Match the original icon's understated rune style and blue background closely. Single square final game icon, no mockup or comparison sheet.	Docs/assets/ultra-wave-limit-icon-prompt.txt

@@ -42,6 +42,8 @@ AND
 DB_AMP_MirrorPool_Size((INTEGER)_PoolSize)
 AND
 _PoolSize > 0
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
 THEN
 DB_AMP_Plus_MirrorFiredCombat(_CombatGuid);
 NOT DB_AMP_TurtleStreak(_Player, _N);
