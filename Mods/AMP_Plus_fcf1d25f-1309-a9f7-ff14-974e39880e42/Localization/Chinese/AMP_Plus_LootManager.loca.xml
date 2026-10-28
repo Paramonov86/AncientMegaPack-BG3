@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="hf769fb1ag4839g46d7g888fg5c1d2b061113" version="1">Loot Manager</content>
-	<content contentuid="h9b0c5018g4d69g48f4gb03bg9f2e3273d85d" version="1">Auto-sorts capsules, runic shards, planar coins, magic artifacts, alchemy ingredients and camp supplies into their own containers.</content>
+	<content contentuid="h9b0c5018g4d69g48f4gb03bg9f2e3273d85d" version="1">自动将胶囊、符文碎片、位面硬币、魔法宝物、炼金材料和营地补给分类放入各自的容器。</content>
 	<content contentuid="h2ee3a584g2646g44e3g9739g7670c079e6d4" version="1">&lt;b&gt;Ancient Mega Pack&lt;/b&gt;&lt;br&gt;&lt;br&gt;The Loot Manager is on. Keep it on? Choose No to turn it off.</content>
 	<content contentuid="h5610ce6eg92acg4f06gb17bg3bab1cfdbe17" version="1">&lt;b&gt;Ancient Mega Pack&lt;/b&gt;&lt;br&gt;&lt;br&gt;The Loot Manager is off. Keep it off? Choose No to turn it on.</content>
 	<content contentuid="hcee8264fg163cg4a21ga030g10e8de7f7019" version="1">Loot Manager</content>
-	<content contentuid="ha5342819g764eg40fdg9318g598f537a0d75" version="1">Automatically files picked-up loot into dedicated containers. The switch is shared by the whole party: turn it off on any character and the filing stops for everyone.</content>
+	<content contentuid="ha5342819g764eg40fdg9318g598f537a0d75" version="1">自动将拾取的战利品整理到专用容器中。全队共用此开关：任意角色将其关闭后，所有角色都会停止自动整理。</content>
 </contentList>

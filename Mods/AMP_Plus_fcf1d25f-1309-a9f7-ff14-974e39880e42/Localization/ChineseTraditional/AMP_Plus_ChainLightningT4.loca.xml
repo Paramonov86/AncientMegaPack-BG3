@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
-	<content contentuid="h1dee2bdcg458ag4a4dg9f8dg9a03b8c98da3" version="1">用閃電打擊一名敵人，閃電會彈跳至&lt;b&gt;[2]&lt;/b&gt;範圍內的至多&lt;b&gt;[1]&lt;/b&gt;個其他敵人。每個敵人都必須通過一次敏捷&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;（&lt;b&gt;[3]&lt;/b&gt;）否則將受到&lt;b&gt;[4]&lt;/b&gt;傷害。豁免成功則&lt;b&gt;傷害減半&lt;/b&gt;。命中&lt;b&gt;兩個&lt;/b&gt;目標，或同一目標&lt;b&gt;兩次&lt;/b&gt;。</content>
+	<content contentuid="h1dee2bdcg458ag4a4dg9f8dg9a03b8c98da3" version="1">用閃電打擊一名敵人，閃電會彈跳至&lt;b&gt;[2]&lt;/b&gt;範圍內的&lt;b&gt;[1]&lt;/b&gt;個其他敵人。每個敵人都必須通過一次對抗你的&lt;LSTag Tooltip="SpellDifficultyClass"&gt;法術豁免難度等級&lt;/LSTag&gt;的敏捷&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則受到&lt;b&gt;[3]&lt;/b&gt;傷害。豁免成功則&lt;b&gt;傷害減半&lt;/b&gt;。命中&lt;b&gt;兩個&lt;/b&gt;目標，或同一目標&lt;b&gt;兩次&lt;/b&gt;。</content>
 </contentList>

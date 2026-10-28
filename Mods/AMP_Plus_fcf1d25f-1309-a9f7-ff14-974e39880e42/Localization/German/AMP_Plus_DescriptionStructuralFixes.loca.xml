@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+  <content contentuid="h6cd5e43cg49b6g41bagb25dg59c4fa77c6f6" version="1">Ka'vir zertrampelt alles unter seinen Füßen. Eis, Schlamm, Ranken und Netze bremsen ihn nicht, und er kann nicht verlangsamt werden.</content>
+  <content contentuid="h6d1223c3ga9b1g4fb8gb23bg6bf3fe4b7b46" version="1">Ka'vir schleudert einen Felsen auf ein entferntes Ziel, verursacht &lt;b&gt;[1]&lt;/b&gt; und lässt dessen Schädel dröhnen. Misslingt dem Ziel ein &lt;LSTag Tooltip="SavingThrow"&gt;Rettungswurf&lt;/LSTag&gt; auf &lt;LSTag Tooltip="Constitution"&gt;Konstitution&lt;/LSTag&gt;, wird es &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;betäubt&lt;/LSTag&gt;.</content>
+  <content contentuid="h8ac1b446g88b9g4a36ga7e7g33cf484f8e05" version="1">Ein Sprung mit Anlauf, der Mauern und Abgründe überwindet. Ka'vir landet, wo es ihm gefällt.</content>
+</contentList>

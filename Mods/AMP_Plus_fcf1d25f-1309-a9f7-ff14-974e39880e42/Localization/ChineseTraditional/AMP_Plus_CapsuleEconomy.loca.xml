@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="h7ec27319g41ffg4ccega3d4gcd00b1489a7b" version="1">Capsule Charges</content>
-	<content contentuid="h4fb99c4fgb7cbg4399gada4g38c60474954e" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [Non-legit while set manually]&lt;br&gt;&lt;br&gt;Set how many charges a Void Capsule holds. Applies to capsules found from now on, ones you already carry keep their charges.</content>
+	<content contentuid="h4fb99c4fgb7cbg4399gada4g38c60474954e" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [手動設定時視為作弊]&lt;br&gt;&lt;br&gt;設定虛空膠囊的充能次數。僅適用於此後找到的膠囊；你已攜帶的膠囊會保留原有充能次數。</content>
 	<content contentuid="h84e5a4d3gda07g4bc6g9cdfg42942a7651ec" version="1">Capsule Reroll Window</content>
-	<content contentuid="hfac0c295gd9f8g4e0eg99e7gbd15e83cea16" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [Non-legit while set manually]&lt;br&gt;&lt;br&gt;Set how long the reroll window on a capsule reward stays open.</content>
+	<content contentuid="hfac0c295gd9f8g4e0eg99e7gbd15e83cea16" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [手動設定時視為作弊]&lt;br&gt;&lt;br&gt;設定膠囊獎勵可進行重擲的時限。</content>
 	<content contentuid="h4f2d3a50ga136g455fg8a36gda0ddda6f7bc" version="1">Capsule Reroll Cost</content>
-	<content contentuid="h9350ba40g078bg4f93gb43fgf377ad246b78" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [Non-legit while set manually]&lt;br&gt;&lt;br&gt;Set how many charges a single reroll spends.</content>
+	<content contentuid="h9350ba40g078bg4f93gb43fgf377ad246b78" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [手動設定時視為作弊]&lt;br&gt;&lt;br&gt;設定每次重擲消耗的充能次數。</content>
 	<content contentuid="h7c27fbacg1c58g437fgbd65g7f9fca430167" version="1">&lt;b&gt;Ancient Mega Pack&lt;/b&gt;&lt;br&gt;&lt;br&gt;Void Capsules hold 6 charges?</content>
 	<content contentuid="hb88877c1g49e9g43f8g95c5gf786932703fa" version="1">&lt;b&gt;Ancient Mega Pack&lt;/b&gt;&lt;br&gt;&lt;br&gt;Void Capsules hold 8 charges?</content>
 	<content contentuid="hd7abc137g46eeg455bgb6c9g53a076b9f1d8" version="1">&lt;b&gt;Ancient Mega Pack&lt;/b&gt;&lt;br&gt;&lt;br&gt;Void Capsules hold 10 charges?</content>
