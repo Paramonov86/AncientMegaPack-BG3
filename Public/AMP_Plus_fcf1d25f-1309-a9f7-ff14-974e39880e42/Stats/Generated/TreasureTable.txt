@@ -9577,6 +9577,7 @@ object category "I_AMP_Winter_Is_Coming",1,0,0,0,0,0,0,0
 
 new treasuretable "REL_Rare_Gloves"
 new subtable "-1"
+object category "I_UNI_ARM_OfGiantHillStrength_Gloves",1,0,0,0,0,0,0,0
 object category "I_MAG_Critical_ArcanicCritical_Gloves",1,0,0,0,0,0,0,0
 object category "I_AMP_Aquamancer_Gloves_2",1,0,0,0,0,0,0,0
 object category "I_AMP_Ergo_Gloves_2",1,0,0,0,0,0,0,0
