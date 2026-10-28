@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h7d5891e2gd28ag489bg9179gbafa07ad3c2c" version="1">Limit gleichzeitiger ULTRA-Wellen</content>
+	<content contentuid="h285cb17ag0364g425bga414g7707a9c6e779" version="1">Legt die maximale Anzahl automatischer ULTRA-Verstärkungswellen fest, die im selben Kampf gleichzeitig aktiv sein können: 1–5 oder Unbegrenzt (Standard). Eine Welle ist eine gemeinsam erschienene Gruppe, keine Anzahl von Bossen. Sie bleibt aktiv, solange mindestens eines ihrer Mitglieder lebt und an diesem Kampf teilnimmt. Die Gesamtzahl aufeinanderfolgender Wellen in einem Kampf wird dadurch nicht begrenzt.</content>
+	<content contentuid="h106d43d2gcc83g4d4fg82b3g92ed1dfe80de" version="1">&lt;b&gt;Limit gleichzeitiger ULTRA-Wellen: 1&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ja wählt dieses Limit. Nein zeigt die nächste Option.</content>
+	<content contentuid="h59bdf45fgb714g4644ga2d6ge5c5700030ae" version="1">&lt;b&gt;Limit gleichzeitiger ULTRA-Wellen: 2&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ja wählt dieses Limit. Nein zeigt die nächste Option.</content>
+	<content contentuid="h1ce0c0aagea21g461cg9e2ag49869f92a024" version="1">&lt;b&gt;Limit gleichzeitiger ULTRA-Wellen: 3&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ja wählt dieses Limit. Nein zeigt die nächste Option.</content>
+	<content contentuid="hb392be61g523bg4602g921dge05696c7f61f" version="1">&lt;b&gt;Limit gleichzeitiger ULTRA-Wellen: 4&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ja wählt dieses Limit. Nein zeigt die nächste Option.</content>
+	<content contentuid="ha61402c9g773eg4d14g9fe7g2954eb371acb" version="1">&lt;b&gt;Limit gleichzeitiger ULTRA-Wellen: 5&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ja wählt dieses Limit. Nein zeigt die nächste Option.</content>
+	<content contentuid="h407ca525g365eg474bg9bb5g2819f2249486" version="1">&lt;b&gt;Limit gleichzeitiger ULTRA-Wellen: Unbegrenzt&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ja wählt Unbegrenzt. Nein kehrt zu 1 zurück.</content>
+	<content contentuid="h989c751cg5297g4b63gb7f4g19186ab514a9" version="1">Limit gleichzeitiger ULTRA-Wellen aktualisiert.</content>
+</contentList>

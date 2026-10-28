@@ -95,20 +95,29 @@ PROC_AMP_Plus_Undying_ClearWait(_Shell);
 NOT DB_AMP_MirrorChase_Mob(_Shell, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
 NOT DB_AMP_Plus_Chase(_Shell, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
 NOT DB_AMP_Plus_ChaseActive(_Shell, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
+PROC_AMP_Plus_UltraWaveReserveReplacement(_Shell);
 LeaveCombat(_Shell);
 SetOnStage(_Shell, 0);
 RemoveStatus((CHARACTER)_Shell, "AMP_UNDYING_DOWNED");
 RequestDeleteTemporary(_Shell);
-PROC_AMP_Plus_Undying_RaiseBlade(_X, _Y, _Z, 100.0);
+PROC_AMP_Plus_Undying_RaiseBlade(_Shell, _X, _Y, _Z, 100.0);
+PROC_AMP_Plus_UltraWaveForget(_Shell);
+
+// Existing debug callers create a fresh blade without a previous form to inherit.
+PROC
+PROC_AMP_Plus_Undying_RaiseBlade((REAL)_X, (REAL)_Y, (REAL)_Z, (REAL)_HP)
+THEN
+PROC_AMP_Plus_Undying_RaiseBlade((CHARACTER)NULL_00000000-0000-0000-0000-000000000000, _X, _Y, _Z, _HP);
 
 // kept off the chase tables, his death is a step and must not reach the loot roll
 PROC
-PROC_AMP_Plus_Undying_RaiseBlade((REAL)_X, (REAL)_Y, (REAL)_Z, (REAL)_HP)
+PROC_AMP_Plus_Undying_RaiseBlade((CHARACTER)_Shell, (REAL)_X, (REAL)_Y, (REAL)_Z, (REAL)_HP)
 AND
 GetHostCharacter((CHARACTER)_Host)
 AND
 CreateAt(AMP_ULTRA_Summon_12_b415c998-a00b-406f-85b8-76c9caa82ed1, _X, _Y, _Z, 0, 1, "", (GUIDSTRING)_Blade)
 THEN
+PROC_AMP_Plus_UltraWaveCopy(_Shell, (CHARACTER)_Blade);
 DB_AMP_Plus_Undying_Blade((CHARACTER)_Blade);
 DB_AMP_Plus_Undying_PendingHP((CHARACTER)_Blade, _HP);
 PROC_AMP_Plus_Undying_EarlyScale((CHARACTER)_Blade);

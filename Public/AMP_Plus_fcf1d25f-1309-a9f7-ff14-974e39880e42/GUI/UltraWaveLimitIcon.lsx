@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="500" />
+    <region id="IconUVList">
+        <node id="root">
+            <children>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="AMP_Plus_UltraWaveLimit" />
+                    <attribute id="U1" type="float" value="0.001953125" />
+                    <attribute id="U2" type="float" value="0.560546875" />
+                    <attribute id="V1" type="float" value="0.001953125" />
+                    <attribute id="V2" type="float" value="0.560546875" />
+                </node>
+            </children>
+        </node>
+    </region>
+    <region id="TextureAtlasInfo">
+        <node id="root">
+            <children>
+                <node id="TextureAtlasIconSize">
+                    <attribute id="Height" type="int32" value="144" />
+                    <attribute id="Width" type="int32" value="144" />
+                </node>
+                <node id="TextureAtlasPath">
+                    <attribute id="Path" type="string" value="Assets/Textures/Icons/UltraWaveLimitIcon.dds" />
+                    <attribute id="UUID" type="FixedString" value="f6b06035-cdee-456a-9975-c3c78ed318a4" />
+                </node>
+                <node id="TextureAtlasTextureSize">
+                    <attribute id="Height" type="int32" value="256" />
+                    <attribute id="Width" type="int32" value="256" />
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
