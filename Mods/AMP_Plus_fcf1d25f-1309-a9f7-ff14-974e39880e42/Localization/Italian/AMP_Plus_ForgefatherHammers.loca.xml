@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">Mano del padre della forgia</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">Forgiato nel Cuore delle Montagne, questo martello servì un tempo Moradin in persona per lavorare le prime vene di minerale primordiale. Si dice che il dio fabbro vi abbia infuso non solo il peso delle profondità, ma l'idea stessa della forgia.&lt;br&gt;&lt;br&gt;Nelle mani di un mortale l'arma conserva la sua natura divina: ogni colpo fa piombare sul nemico il peso implacabile delle montagne e lo atterra. Per Moradin, la terra intera è un'incudine eterna. Chi cade sotto il colpo vi resta schiacciato, e la sua carne, le sue ossa o la sua armatura diventano fragili come metallo scadente. Il colpo di grazia contro un nemico simile è come il martello che batte il ferro rovente sull'incudine: frantuma e stritola senza pietà.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">Martello</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">Una creatura che subisce danni da questo martello deve superare un &lt;LSTag Tooltip="SavingThrow"&gt;Tiro salvezza&lt;/LSTag&gt; su Forza contro la tua &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;CD manovra&lt;/LSTag&gt;, altrimenti è &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prona&lt;/LSTag&gt; per &lt;b&gt;[1]&lt;/b&gt; turno.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">Incudine</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">I nemici che rendi &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Proni&lt;/LSTag&gt; diventano &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;Fragili&lt;/LSTag&gt; per &lt;b&gt;[1]&lt;/b&gt; turni.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">Tra l'incudine e il martello</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">Quando colpisci un bersaglio &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prono&lt;/LSTag&gt; con questo martello, infliggi &lt;b&gt;[1]&lt;/b&gt; aggiuntivi.</content>
+</contentList>

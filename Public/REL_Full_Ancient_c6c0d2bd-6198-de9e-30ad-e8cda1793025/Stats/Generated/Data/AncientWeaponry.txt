@@ -969,9 +969,9 @@ data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical)"
 data "BoostsOnEquipMainHand" "Ability(Dexterity, 2, 16);UnlockSpell(Target_PiercingThrust)"
 data "BoostsOnEquipOffHand" "Skill(SleightOfHand, 1);UnlockSpell(Target_PiercingThrust)"
 
-// Fang of the Tempest
+// ================ Fang of the Tempest ================
 
-// Rare (base)
+// ================ Rare (base) ================
 new entry "MAG_Weapon14"
 type "Weapon"
 using "WPN_Dagger_2"
@@ -1009,7 +1009,7 @@ data "Boosts" "IF(IsMeleeWeaponAttack()):CharacterWeaponDamage(1d4,Lightning)"
 data "StatusPropertyFlags" "ForceOverhead"
 data "StatusGroups" "SG_Condition"
 
-// Uncommon
+// ================ Uncommon ================
 new entry "MAG_Weapon14_1"
 type "Weapon"
 using "MAG_Weapon14"
@@ -1019,7 +1019,7 @@ data "ComboCategory" "d1"
 data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);WeaponDamage(1d4,Lightning)"
 data "PassivesOnEquip" ""
 
-// VeryRare
+// ================ VeryRare ================
 new entry "MAG_Weapon14_3"
 type "Weapon"
 using "MAG_Weapon14"
@@ -1057,7 +1057,7 @@ using "MAG_Weapon14_conc_passive"
 data "DescriptionParams" "DealDamage(,Lightning);DealDamage(3d4,Lightning)"
 data "Boosts" "IF(IsConcentrating(context.Source) and IsSpell() and SpellDamageTypeIs(DamageType.Lightning)):DamageBonus(3d4,Lightning,Magical)"
 
-// Legendary
+// ================ Legendary ================
 new entry "MAG_Weapon14_4"
 type "Weapon"
 using "MAG_Weapon14"
@@ -1961,9 +1961,9 @@ type "PassiveData"
 using "MAG_Weapon29_bonus_haste"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and IsHasted(context.Source) and not RollDieAgainstDC(DiceType.d100,60)"
 
-// FLAIL OF INSPIRATION
+// ================ FLAIL OF INSPIRATION ================
 
-// VERYRARE (BASE) BLOCK
+// ================ VERYRARE (BASE) BLOCK ================
 new entry "MAG_Weapon30"
 type "Weapon"
 using "WPN_Flail_2"
@@ -2008,7 +2008,7 @@ data "StatsFunctorContext" "OnStatusApplied"
 data "Conditions" "StatusHasStatusGroup(context.StatusId, 'SG_Rage') and Combat()"
 data "StatsFunctors" "RestoreResource(ChannelDivinity,100%,0);RestoreResource(ChannelOath,100%,0)"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 new entry "MAG_Weapon30_1"
 type "Weapon"
 using "MAG_Weapon30"
@@ -2032,7 +2032,7 @@ data "DescriptionParams" "1;4"
 data "StackId" "WEAPON30_1"
 data "Boosts" "RollBonus(Attack, 1d4)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon30_2"
 type "Weapon"
 using "MAG_Weapon30"
@@ -2056,7 +2056,7 @@ data "DescriptionParams" "1;6"
 data "StackId" "WEAPON30_2"
 data "Boosts" "RollBonus(Attack, 1d6)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Weapon30_4"
 type "Weapon"
 using "MAG_Weapon30"
@@ -2080,9 +2080,9 @@ data "DescriptionParams" "4;16"
 data "StackId" "WEAPON30_4"
 data "Boosts" "RollBonus(Attack, 4d4)"
 
-// Flail of the Cursed Innocents
+// ================ Flail of the Cursed Innocents ================
 
-// RARE (BASE) BLOCK
+// ================ RARE (BASE) BLOCK ================
 new entry "MAG_Weapon31"
 type "Weapon"
 using "WPN_Flail_2"
@@ -2155,7 +2155,7 @@ data "Boosts" "DamageTakenBonus(1d6)"
 data "StatusGroups" "SG_Condition;SG_Cursed"
 data "StatusEffect" "690fe99a-37db-4cc9-b99c-6a1d9cdd12d8"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 new entry "MAG_Weapon31_1"
 type "Weapon"
 using "MAG_Weapon31"
@@ -2171,7 +2171,7 @@ using "MAG_Weapon31_Heritage_bonus"
 data "DescriptionParams" ""
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom, ManeuverSaveDC()-2)):ApplyStatus(WEAPON31, 100, 1)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon31_3"
 type "Weapon"
 using "MAG_Weapon31"
@@ -2187,7 +2187,7 @@ using "MAG_Weapon31_Heritage_bonus"
 data "DescriptionParams" ""
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom, ManeuverSaveDC()+2)):ApplyStatus(WEAPON31, 100, 1)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Weapon31_4"
 type "Weapon"
 using "MAG_Weapon31"
@@ -2322,9 +2322,9 @@ data "StatsFunctors" "ApplyStatus(SWAP,FRIGHTENED,100,2,,,,not SavingThrow(Abili
 
 // Sickles
 
-// SICKLE OF BLOODLETTING
+// ================ SICKLE OF BLOODLETTING ================
 
-// UNCOMMON (BASE) BLOCK
+// ================ UNCOMMON (BASE) BLOCK ================
 new entry "MAG_Weapon34"
 type "Weapon"
 using "WPN_Sickle_1"
@@ -2366,7 +2366,7 @@ data "RemoveEvents" "OnStatusApplied;OnTurn"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition)):DealDamage(2d4,Slashing,Magical)"
 data "StatusGroups" "SG_Condition"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon34_2"
 type "Weapon"
 using "MAG_Weapon34"
@@ -2394,7 +2394,7 @@ data "TickFunctors" "DealDamage(1, Slashing,Magical)"
 data "RemoveConditions" "StatusDurationEqualOrMoreThan(context.Target,'WEAPON34_2',5)"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition)):DealDamage(3d4,Slashing,Magical)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon34_3"
 type "Weapon"
 using "MAG_Weapon34"
@@ -2422,7 +2422,7 @@ data "TickFunctors" "DealDamage(2, Slashing,Magical)"
 data "RemoveConditions" "StatusDurationEqualOrMoreThan(context.Target,'WEAPON34_3',5)"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition)):DealDamage(4d4,Slashing,Magical)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Weapon34_4"
 type "Weapon"
 using "MAG_Weapon34"
@@ -2452,9 +2452,9 @@ data "RemoveConditions" "StatusDurationEqualOrMoreThan(context.Target,'WEAPON34_
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition)):DealDamage(5d4,Slashing,Magical)"
 data "Boosts" "Resistance(Slashing,Vulnerable)"
 
-// Sickle of the Whisperwind Clan
+// ================ Sickle of the Whisperwind Clan ================
 
-// UNCOMMON (BASE) BLOCK
+// ================ UNCOMMON (BASE) BLOCK ================
 new entry "MAG_Weapon35"
 type "Weapon"
 using "WPN_Sickle_1"
@@ -2502,7 +2502,7 @@ data "StatsFunctorContext" "OnAttack"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and Enemy() and not (IsMiss() or IsCriticalMiss())"
 data "StatsFunctors" "IF(Tagged('REALLY_ELF',context.Source) and not RollDieAgainstDC(DiceType.d100,10)):RestoreResource(SELF,SpellSlot,100%,1);IF(not Tagged('REALLY_ELF',context.Source) and not RollDieAgainstDC(DiceType.d100,5)):RestoreResource(SELF,SpellSlot,100%,1)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon35_2"
 type "Weapon"
 using "MAG_Weapon35"
@@ -2534,7 +2534,7 @@ using "MAG_Weapon35_OffHand_bonus"
 data "DescriptionParams" "5;10;2"
 data "StatsFunctors" "IF(Tagged('REALLY_ELF',context.Source) and not RollDieAgainstDC(DiceType.d100,10)):RestoreResource(SELF,SpellSlot,100%,2);IF(not Tagged('REALLY_ELF',context.Source) and not RollDieAgainstDC(DiceType.d100,5)):RestoreResource(SELF,SpellSlot,100%,2)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon35_3"
 type "Weapon"
 using "MAG_Weapon35"
@@ -2566,7 +2566,7 @@ using "MAG_Weapon35_OffHand_bonus"
 data "DescriptionParams" "5;10;3"
 data "StatsFunctors" "IF(Tagged('REALLY_ELF',context.Source) and not RollDieAgainstDC(DiceType.d100,10)):RestoreResource(SELF,SpellSlot,100%,3);IF(not Tagged('REALLY_ELF',context.Source) and not RollDieAgainstDC(DiceType.d100,5)):RestoreResource(SELF,SpellSlot,100%,3)"
 
-// UNCOMMON (BASE) BLOCK
+// ================ UNCOMMON (BASE) BLOCK ================
 // Selûne's Crescent / Серп Селунэ
 new entry "MAG_Weapon36"
 type "Weapon"
@@ -2600,7 +2600,7 @@ data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnDamaged"
 data "StatsFunctors" "IF((Tagged('SELUNE') or Tagged('PALADIN_SELUNE') or Tagged('CLERIC_SELUNE')) and not RollDieAgainstDC(DiceType.d100,20)):ApplyStatus(SANCTUARY,100,1);IF(not (Tagged('SELUNE') or Tagged('PALADIN_SELUNE') or Tagged('CLERIC_SELUNE')) and not RollDieAgainstDC(DiceType.d100,10)):ApplyStatus(SANCTUARY,100,1)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon36_2"
 type "Weapon"
 using "MAG_Weapon36"
@@ -2622,7 +2622,7 @@ using "MAG_Weapon36_Sanctuary_bonus"
 data "DescriptionParams" "10;2"
 data "StatsFunctors" "IF((Tagged('SELUNE') or Tagged('PALADIN_SELUNE') or Tagged('CLERIC_SELUNE')) and not RollDieAgainstDC(DiceType.d100,20)):ApplyStatus(SANCTUARY,100,2);IF(not (Tagged('SELUNE') or Tagged('PALADIN_SELUNE') or Tagged('CLERIC_SELUNE')) and not RollDieAgainstDC(DiceType.d100,10)):ApplyStatus(SANCTUARY,100,2)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon36_3"
 type "Weapon"
 using "MAG_Weapon36"
@@ -2644,7 +2644,7 @@ using "MAG_Weapon36_Sanctuary_bonus"
 data "DescriptionParams" "10;3"
 data "StatsFunctors" "IF((Tagged('SELUNE') or Tagged('PALADIN_SELUNE') or Tagged('CLERIC_SELUNE')) and not RollDieAgainstDC(DiceType.d100,20)):ApplyStatus(SANCTUARY,100,3);IF(not (Tagged('SELUNE') or Tagged('PALADIN_SELUNE') or Tagged('CLERIC_SELUNE')) and not RollDieAgainstDC(DiceType.d100,10)):ApplyStatus(SANCTUARY,100,3)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Weapon36_4"
 type "Weapon"
 using "MAG_Weapon36"
@@ -2666,7 +2666,7 @@ using "MAG_Weapon36_Sanctuary_bonus"
 data "DescriptionParams" "10;4"
 data "StatsFunctors" "IF((Tagged('SELUNE') or Tagged('PALADIN_SELUNE') or Tagged('CLERIC_SELUNE')) and not RollDieAgainstDC(DiceType.d100,20)):ApplyStatus(SANCTUARY,100,4);IF(not (Tagged('SELUNE') or Tagged('PALADIN_SELUNE') or Tagged('CLERIC_SELUNE')) and not RollDieAgainstDC(DiceType.d100,10)):ApplyStatus(SANCTUARY,100,4)"
 
-// UNCOMMON (BASE) BLOCK
+// ================ UNCOMMON (BASE) BLOCK ================
 // Tribal Hunting Sickle / Племенной охотничий серп
 new entry "MAG_Weapon37"
 type "Weapon"
@@ -2703,7 +2703,7 @@ data "StackId" "WEAPON37"
 data "Boosts" "AC(-1)"
 data "StatusGroups" "SG_Condition"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon37_2"
 type "Weapon"
 using "MAG_Weapon37"
@@ -2734,7 +2734,7 @@ data "DescriptionParams" "1"
 data "Properties" "Highlighted"
 data "Boosts" "IF(Tagged('BEAST',context.Target) or Tagged('ABERRATION',context.Target) or Tagged('DRAGON',context.Target) or Tagged('GIANT',context.Target) or Tagged('MONSTROSITY',context.Target)):ReduceCriticalAttackThreshold(1)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon37_3"
 type "Weapon"
 using "MAG_Weapon37"
@@ -2763,7 +2763,7 @@ using "MAG_Weapon37_Hunter_bonus_2"
 data "DescriptionParams" "2"
 data "Boosts" "IF(Tagged('BEAST',context.Target) or Tagged('ABERRATION',context.Target) or Tagged('DRAGON',context.Target) or Tagged('GIANT',context.Target) or Tagged('MONSTROSITY',context.Target)):ReduceCriticalAttackThreshold(2)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Weapon37_4"
 type "Weapon"
 using "MAG_Weapon37"
@@ -2792,7 +2792,7 @@ using "MAG_Weapon37_Hunter_bonus_2"
 data "DescriptionParams" "3"
 data "Boosts" "IF(Tagged('BEAST',context.Target) or Tagged('ABERRATION',context.Target) or Tagged('DRAGON',context.Target) or Tagged('GIANT',context.Target) or Tagged('MONSTROSITY',context.Target)):ReduceCriticalAttackThreshold(3)"
 
-// RARE (BASE) BLOCK
+// ================ RARE (BASE) BLOCK ================
 // Sickle of the Dark Bargain / Серп тёмной сделки
 new entry "MAG_Weapon38"
 type "Weapon"
@@ -2856,7 +2856,7 @@ data "StackType" "Additive"
 data "StatusPropertyFlags" "MultiplyEffectsByDuration;FreezeDuration"
 data "StatusGroups" "SG_Condition"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon38_3"
 type "Weapon"
 using "MAG_Weapon38"
@@ -2885,7 +2885,7 @@ using "WEAPON38_REAP"
 data "DescriptionParams" "2"
 data "Boosts" "IncreaseMaxHP(2%)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Weapon38_4"
 type "Weapon"
 using "MAG_Weapon38"
@@ -3123,7 +3123,7 @@ data "StatusGroups" "SG_Condition"
 
 // Shortbows
 
-// UNCOMMON (BASE) BLOCK
+// ================ UNCOMMON (BASE) BLOCK ================
 // Enchanted Shortbow / Зачарованный короткий лук
 new entry "MAG_Weapon42"
 type "Weapon"
@@ -3155,7 +3155,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and Character()"
 data "StatsFunctors" "ApplyStatus(MAG_ATTACK_DEBUFF,100,1)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon42_2"
 type "Weapon"
 using "MAG_Weapon42"
@@ -3177,7 +3177,7 @@ using "MAG_Weapon42_Stagger_bonus"
 data "DescriptionParams" "2"
 data "StatsFunctors" "ApplyStatus(MAG_ATTACK_DEBUFF,100,2)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon42_3"
 type "Weapon"
 using "MAG_Weapon42"
@@ -3199,7 +3199,7 @@ using "MAG_Weapon42_Stagger_bonus"
 data "DescriptionParams" "3"
 data "StatsFunctors" "ApplyStatus(MAG_ATTACK_DEBUFF,100,3)"
 
-// UNCOMMON (BASE) BLOCK
+// ================ UNCOMMON (BASE) BLOCK ================
 // Shortbow of War / Короткий лук войны
 new entry "MAG_Weapon43"
 type "Weapon"
@@ -3221,7 +3221,7 @@ data "DescriptionParams" "DealDamage(1d4,Piercing)"
 data "Properties" "Highlighted"
 data "Boosts" "IF(Tagged('HUMANOID',context.Target) or Tagged('GIANT',context.Target) or Tagged('UNDEAD',context.Target) or Tagged('CONSTRUCT',context.Target) or Tagged('CELESTIAL',context.Target) or Tagged('FIEND',context.Target)):CharacterWeaponDamage(1d4)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon43_2"
 type "Weapon"
 using "MAG_Weapon43"
@@ -3237,7 +3237,7 @@ using "MAG_Weapon43_bonus"
 data "DescriptionParams" "DealDamage(1d6,Piercing)"
 data "Boosts" "IF(Tagged('HUMANOID',context.Target) or Tagged('GIANT',context.Target) or Tagged('UNDEAD',context.Target) or Tagged('CONSTRUCT',context.Target) or Tagged('CELESTIAL',context.Target) or Tagged('FIEND',context.Target)):CharacterWeaponDamage(1d6)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon43_3"
 type "Weapon"
 using "MAG_Weapon43"
@@ -3253,7 +3253,7 @@ using "MAG_Weapon43_bonus"
 data "DescriptionParams" "DealDamage(1d8,Piercing)"
 data "Boosts" "IF(Tagged('HUMANOID',context.Target) or Tagged('GIANT',context.Target) or Tagged('UNDEAD',context.Target) or Tagged('CONSTRUCT',context.Target) or Tagged('CELESTIAL',context.Target) or Tagged('FIEND',context.Target)):CharacterWeaponDamage(1d8)"
 
-// UNCOMMON (BASE) BLOCK
+// ================ UNCOMMON (BASE) BLOCK ================
 // Elven Shortbow / Эльфийский короткий лук
 new entry "MAG_Weapon44"
 type "Weapon"
@@ -3275,7 +3275,7 @@ data "DescriptionParams" "18;15"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsRangedWeaponAttack() and Tagged('REALLY_ELF',context.Source)):Reroll(Attack,15,false);IF(IsRangedWeaponAttack() and not Tagged('REALLY_ELF',context.Source)):Reroll(Attack,18,true)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon44_2"
 type "Weapon"
 using "MAG_Weapon44"
@@ -3291,7 +3291,7 @@ using "MAG_Weapon44_bonus"
 data "DescriptionParams" "16;13"
 data "Boosts" "IF(IsRangedWeaponAttack() and Tagged('REALLY_ELF',context.Source)):Reroll(Attack,13,false);IF(IsRangedWeaponAttack() and not Tagged('REALLY_ELF',context.Source)):Reroll(Attack,16,true)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon44_3"
 type "Weapon"
 using "MAG_Weapon44"
@@ -3307,7 +3307,7 @@ using "MAG_Weapon44_bonus"
 data "DescriptionParams" "14;10"
 data "Boosts" "IF(IsRangedWeaponAttack() and Tagged('REALLY_ELF',context.Source)):Reroll(Attack,10,false);IF(IsRangedWeaponAttack() and not Tagged('REALLY_ELF',context.Source)):Reroll(Attack,14,true)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Weapon44_4"
 type "Weapon"
 using "MAG_Weapon44"
@@ -3332,7 +3332,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and Character() and Tagged('REALLY_ELF',context.Source)"
 data "StatsFunctors" "RemoveStatus(SG_Condition)"
 
-// UNCOMMON (BASE) BLOCK
+// ================ UNCOMMON (BASE) BLOCK ================
 // Chase Shortbow / Лук погони
 new entry "MAG_Weapon45"
 type "Weapon"
@@ -3356,7 +3356,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsRangedWeaponAttack() and Character()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, ManeuverSaveDC()-2)):ApplyStatus(BARBED_ARROW,100,3)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon45_2"
 type "Weapon"
 using "MAG_Weapon45"
@@ -3373,7 +3373,7 @@ data "Description" "h9d1c5e30ga47bg4c82gb6e1g3f8a2d4c5b90;1"
 data "DescriptionParams" "3;1"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, ManeuverSaveDC())):ApplyStatus(BARBED_ARROW,100,3);ApplyStatus(RAY_OF_FROST,100,1)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon45_3"
 type "Weapon"
 using "MAG_Weapon45"
@@ -3390,7 +3390,7 @@ data "Description" "h9d1c5e30ga47bg4c82gb6e1g3f8a2d4c5b90;1"
 data "DescriptionParams" "3;2"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, ManeuverSaveDC()+2)):ApplyStatus(BARBED_ARROW,100,3);ApplyStatus(RAY_OF_FROST,100,2)"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 // Shortbow of Levitation
 new entry "MAG_Weapon46"
 type "Weapon"
@@ -3412,7 +3412,7 @@ data "DescriptionParams" "Distance(1)"
 data "Properties" "Highlighted"
 data "Boosts" "FallDamageMultiplier(0.5);JumpMaxDistanceBonus(1)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon46_2"
 type "Weapon"
 using "MAG_Weapon46"
@@ -3428,7 +3428,7 @@ using "MAG_Weapon46_bonus"
 data "DescriptionParams" "Distance(2)"
 data "Boosts" "FallDamageMultiplier(0.5);JumpMaxDistanceBonus(2)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon46_3"
 type "Weapon"
 using "MAG_Weapon46"
@@ -3491,7 +3491,7 @@ data "ValueLevel" "5"
 data "Boosts" "Ability(Dexterity, 1, 20)"
 data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical)"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 // Poacher's Shortbow
 new entry "MAG_Weapon48_1"
 type "Weapon"
@@ -3523,7 +3523,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsRangedWeaponAttack() and Tagged('BEAST',context.Target)"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom,ManeuverSaveDC()-2)):ApplyStatus(FRIGHTENED,100,1)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon48"
 type "Weapon"
 using "MAG_Weapon48_1"
@@ -3545,7 +3545,7 @@ using "MAG_Weapon48_Fear_1"
 data "DescriptionParams" "1"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom,ManeuverSaveDC())):ApplyStatus(FRIGHTENED,100,1)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon48_3"
 type "Weapon"
 using "MAG_Weapon48_1"
@@ -3607,7 +3607,7 @@ data "RemoveConditions" "HasDamageEffectFlag(DamageFlags.Hit) and IsRangedWeapon
 data "StatusGroups" "SG_Condition"
 data "StatusEffect" "dd719bfd-d2b9-4f34-b580-6a74c470ed36"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 // Shortbow of the Lazy Adventurer
 new entry "MAG_Weapon50_1"
 type "Weapon"
@@ -3628,7 +3628,7 @@ data "DescriptionParams" "2"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsRangedWeaponAttack()):MinimumRollResult(Damage,2)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon50_2"
 type "Weapon"
 using "MAG_Weapon50_1"
@@ -3644,7 +3644,7 @@ using "MAG_Weapon50_bonus_1"
 data "DescriptionParams" "4"
 data "Boosts" "IF(IsRangedWeaponAttack()):MinimumRollResult(Damage,4)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon50"
 type "Weapon"
 using "MAG_Weapon50_1"
@@ -3660,7 +3660,7 @@ using "MAG_Weapon50_bonus_1"
 data "DescriptionParams" "6"
 data "Boosts" "IF(IsRangedWeaponAttack()):MinimumRollResult(Damage,6)"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 // Thunderwave Shortbow
 new entry "MAG_Weapon51_1"
 type "Weapon"
@@ -3684,7 +3684,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "Character() and IsRangedWeaponAttack()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Strength, ManeuverSaveDC()-2)):Force(1);ApplyStatus(WEAPON51_VFX,100,0)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon51"
 type "Weapon"
 using "MAG_Weapon51_1"
@@ -3700,7 +3700,7 @@ using "MAG_Weapon51_bonus_1"
 data "DescriptionParams" "Distance(1.5)"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Strength, ManeuverSaveDC())):Force(1.5);ApplyStatus(WEAPON51_VFX,100,0)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon51_3"
 type "Weapon"
 using "MAG_Weapon51_1"
@@ -3723,7 +3723,7 @@ data "StackId" "WEAPON51_VFX"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 data "ApplyEffect" "70a638f6-d74f-48f3-975e-de26543b92a3"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 // Snake Shortbow
 new entry "MAG_Weapon52_1"
 type "Weapon"
@@ -3736,7 +3736,7 @@ data "ComboCategory" "d1"
 data "ValueLevel" "5"
 data "DefaultBoosts" "WeaponProperty(Magical);WeaponDamage(1d4, Poison)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon52"
 type "Weapon"
 using "MAG_Weapon52_1"
@@ -3745,7 +3745,7 @@ data "Rarity" "Rare"
 data "ComboCategory" "d2"
 data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);WeaponDamage(1d6, Poison)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon52_3"
 type "Weapon"
 using "MAG_Weapon52_1"
@@ -3765,7 +3765,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsRangedWeaponAttack() and Character()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution,ManeuverSaveDC())):ApplyStatus(POISONED,100,2)"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 // Shortbow of the Land Champion
 new entry "MAG_Weapon53"
 type "Weapon"
@@ -3788,7 +3788,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "Character() and AttackedWithPassiveSourceWeapon()"
 data "StatsFunctors" "RestoreResource(SELF,SuperiorityDie,1,0);RestoreResource(SELF,ArcaneShot,1,0)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon53_3"
 type "Weapon"
 using "MAG_Weapon53"
@@ -3804,7 +3804,7 @@ using "MAG_Weapon53_bonus"
 data "Description" "h28b795b3gb7d0g4e76g98e2g897602f5796c;1"
 data "Properties" "Highlighted;OncePerTurn"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 // Igniter
 new entry "MAG_Weapon54"
 type "Weapon"
@@ -3826,7 +3826,7 @@ data "DescriptionParams" "1"
 data "Properties" "Highlighted"
 data "Boosts" "IF(HasBurningStatus(context.Target)):ReduceCriticalAttackThreshold(1)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon54_2"
 type "Weapon"
 using "MAG_Weapon54"
@@ -3851,7 +3851,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsRangedWeaponAttack() and HasBurningStatus(context.Source)"
 data "StatsFunctors" "ApplyStatus(BURNING,100,1)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon54_3"
 type "Weapon"
 using "MAG_Weapon54"
@@ -3876,7 +3876,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsRangedWeaponAttack() and HasBurningStatus(context.Source)"
 data "StatsFunctors" "ApplyStatus(BURNING,100,2)"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 // Northern Bow
 new entry "MAG_Weapon55_1"
 type "Weapon"
@@ -3910,7 +3910,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsRangedWeaponAttack() and IsMageArmored(context.Source) and Character()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution,ManeuverSaveDC()-2)):ApplyStatus(CHILLED,100,2)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon55"
 type "Weapon"
 using "MAG_Weapon55_1"
@@ -3933,7 +3933,7 @@ using "MAG_Weapon55_Chill_1"
 data "DescriptionParams" "2"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution,ManeuverSaveDC())):ApplyStatus(CHILLED,100,2)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon55_3"
 type "Weapon"
 using "MAG_Weapon55_1"
@@ -3956,7 +3956,7 @@ using "MAG_Weapon55_Chill_1"
 data "DescriptionParams" "2"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution,ManeuverSaveDC()+2)):ApplyStatus(CHILLED,100,2)"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 // Grove Defender's Shortbow
 new entry "MAG_Weapon56_1"
 type "Weapon"
@@ -3979,7 +3979,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "Character() and IsRangedWeaponAttack()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Dexterity, ManeuverSaveDC()-2)):ApplyStatus(ENSNARED,100,1)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon56"
 type "Weapon"
 using "MAG_Weapon56_1"
@@ -3994,7 +3994,7 @@ type "PassiveData"
 using "MAG_Weapon56_bonus_1"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Dexterity, ManeuverSaveDC())):ApplyStatus(ENSNARED,100,1)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon56_3"
 type "Weapon"
 using "MAG_Weapon56_1"
@@ -4009,7 +4009,7 @@ type "PassiveData"
 using "MAG_Weapon56_bonus_1"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Dexterity, ManeuverSaveDC()+2)):ApplyStatus(ENSNARED,100,1)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 // Zhalimkhaner
 new entry "MAG_Weapon57_2"
 type "Weapon"
@@ -4057,7 +4057,7 @@ data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableComb
 data "OnApplyFunctors" "RegainHitPoints(1)"
 data "ApplyEffect" "f40e4c72-3971-4f14-9c43-9a44c0251a5d"
 
-// VERYRARE (BASE) BLOCK
+// ================ VERYRARE (BASE) BLOCK ================
 new entry "MAG_Weapon57"
 type "Weapon"
 using "MAG_Weapon57_2"
@@ -4093,7 +4093,7 @@ data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableComb
 data "OnApplyFunctors" "RegainHitPoints(1d4)"
 data "ApplyEffect" "f40e4c72-3971-4f14-9c43-9a44c0251a5d"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Weapon57_4"
 type "Weapon"
 using "MAG_Weapon57_2"
@@ -4142,9 +4142,9 @@ data "ValueLevel" "8"
 data "Boosts" "Ability(Dexterity, 2, 21)"
 data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical)"
 
-// Talos's Wrath
+// ================ Talos's Wrath ================
 
-// VERYRARE (BASE) BLOCK
+// ================ VERYRARE (BASE) BLOCK ================
 new entry "MAG_Weapon59"
 type "Weapon"
 using "WPN_Shortbow_1"
@@ -4167,7 +4167,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsRangedWeaponAttack() and (Tagged('CLERIC_TALOS',context.Source) or Tagged('TALOS',context.Source))"
 data "StatsFunctors" "CreateSurface(3,10,WaterCloudElectrified)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon59_2"
 type "Weapon"
 using "MAG_Weapon59"
@@ -4183,7 +4183,7 @@ using "MAG_Weapon59_StormSummoner"
 data "DescriptionParams" "Distance(2)"
 data "StatsFunctors" "CreateSurface(2,10,WaterCloudElectrified)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Weapon59_4"
 type "Weapon"
 using "MAG_Weapon59"
@@ -4339,11 +4339,13 @@ data "StatusGroups" "SG_Condition"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.TimeOut)):ApplyStatus(WEAPON62_2,100,1)"
 data "StatusEffect" "9cdd3667-fe11-4f26-b6a2-d459c6da1cd1"
 
-// SHIELDS
+// ================ SHIELDS ================
 
-// Buckler of Fidelity, MAG_Weapon63
+// ================ BUCKLER OF FIDELITY (MAG_Weapon63) ================
+// Rare (BASE) → Uncommon → VeryRare
+// DR Slashing: 1/2/3, Constitution Save: 0/1/2
 
-// RARE (BASE) BLOCK
+// ================ RARE (BASE) BLOCK ================
 new entry "MAG_Weapon63"
 type "Armor"
 using "_Shield_Magic"
@@ -4358,7 +4360,7 @@ data "ArmorClass" "2"
 data "Boosts" "RollBonus(SavingThrow, 1, Constitution)"
 data "PassivesOnEquip" "ARM_SuperiorMaterial_2_Passive"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 new entry "MAG_Weapon63_1"
 type "Armor"
 using "MAG_Weapon63"
@@ -4368,7 +4370,7 @@ data "ComboCategory" "d1"
 data "Boosts" "RollBonus(SavingThrow, 1, Constitution)"
 data "PassivesOnEquip" "ARM_SuperiorMaterial_1_Passive"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon63_3"
 type "Armor"
 using "MAG_Weapon63"
@@ -4384,9 +4386,12 @@ using "ARM_SuperiorMaterial_2_Passive"
 data "DescriptionParams" "6"
 data "Boosts" "DamageReduction(Slashing, Flat, 6)"
 
-// Elven Shield, MAG_Weapon64
+// ================ ELVEN SHIELD (MAG_Weapon64) ================
+// Rare (BASE) → Uncommon → VeryRare
+// Protection from Evil on damage (elves: also on dodge)
+// Mirror Image on heal (rare+)
 
-// RARE (BASE) BLOCK
+// ================ RARE (BASE) BLOCK ================
 new entry "MAG_Weapon64"
 type "Armor"
 using "MAG_Weapon63"
@@ -4397,7 +4402,7 @@ data "ComboCategory" "d2"
 data "ValueLevel" ""
 data "PassivesOnEquip" "MAG_Weapon64_Protection;MAG_Weapon64_Protection_Elf;MAG_Weapon64_MirrorImage"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 new entry "MAG_Weapon64_1"
 type "Armor"
 using "MAG_Weapon64"
@@ -4406,7 +4411,7 @@ data "Rarity" "Uncommon"
 data "ComboCategory" "d1"
 data "PassivesOnEquip" "MAG_Weapon64_Protection;MAG_Weapon64_Protection_Elf"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon64_3"
 type "Armor"
 using "MAG_Weapon64"
@@ -4445,7 +4450,7 @@ data "StatsFunctorContext" "OnHealed"
 data "Conditions" "Combat() and not Self(context.Source)"
 data "StatsFunctors" "ApplyStatus(AMP_MIRROR_IMAGE_1,100,-1);ApplyStatus(AMP_MIRROR_IMAGE_2,100,-1);IF(Tagged('REALLY_ELF',context.Target) or Tagged('REALLY_HALFELF',context.Target)):ApplyStatus(AMP_MIRROR_IMAGE_3,100,-1)"
 
-// Deep Sea Shield
+// ================ Deep Sea Shield ================
 new entry "MAG_Weapon65"
 type "Armor"
 using "MAG_Weapon63"
@@ -4458,7 +4463,7 @@ data "ComboCategory" "d1"
 data "ValueLevel" ""
 data "PassivesOnEquip" "MAG_Weapon65_UmberFury;MAG_Weapon65_SeaToll"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon65_2"
 type "Armor"
 using "MAG_Weapon65"
@@ -4467,7 +4472,7 @@ data "Rarity" "Rare"
 data "ComboCategory" "d2"
 data "Boosts" ""
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon65_3"
 type "Armor"
 using "MAG_Weapon65"
@@ -4496,7 +4501,7 @@ data "StatsFunctorContext" "OnDamaged"
 data "Conditions" "not Self() and not IsRedirectedDamage()"
 data "StatsFunctors" "ApplyStatus(SWAP,MAG_FROST,100,2);ApplyStatus(MAG_FROST_DURATION_TECHNICAL,100,1)"
 
-// ORKISH SHIELD (MAG_Weapon66)
+// ================ ORKISH SHIELD (MAG_Weapon66) ================
 new entry "MAG_Weapon66"
 type "Armor"
 using "MAG_Weapon63"
@@ -4509,7 +4514,7 @@ data "ComboCategory" "d1"
 data "ValueLevel" ""
 data "PassivesOnEquip" "MAG_Weapon66_OrcFury"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon66_2"
 type "Armor"
 using "MAG_Weapon66"
@@ -4519,7 +4524,7 @@ data "ComboCategory" "d2"
 data "Boosts" "Ability(Strength, 2, 20)"
 data "PassivesOnEquip" "MAG_Weapon66_OrcFury_2"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon66_3"
 type "Armor"
 using "MAG_Weapon66"
@@ -4552,7 +4557,7 @@ using "MAG_Weapon66_OrcFury"
 data "DescriptionParams" "30;2"
 data "Conditions" "Tagged('REALLY_HALFORC') and not RollDieAgainstDC(DiceType.d100,30)"
 
-// Dwarven Shield
+// ================ Dwarven Shield ================
 new entry "MAG_Weapon67"
 type "Armor"
 using "MAG_Weapon63"
@@ -4565,7 +4570,7 @@ data "ComboCategory" "d1"
 data "ValueLevel" ""
 data "PassivesOnEquip" "MAG_Weapon67_Shadowveil"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Weapon67_2"
 type "Armor"
 using "MAG_Weapon67"
@@ -4574,7 +4579,7 @@ data "Rarity" "Rare"
 data "ComboCategory" "d2"
 data "PassivesOnEquip" "MAG_Weapon67_Shadowveil;MAG_Weapon67_DuergarEndurance"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Weapon67_3"
 type "Armor"
 using "MAG_Weapon67"
@@ -4610,7 +4615,7 @@ data "BoostContext" "OnEquip;OnCreate"
 data "BoostConditions" "Tagged('REALLY_DUERGARDWARF',context.Source)"
 data "Boosts" "DamageReduction(All, Flat, 1)"
 
-// WIZARD'S BARRIER (MAG_Weapon68)
+// ================ WIZARD'S BARRIER (MAG_Weapon68) ================
 // UNCOMMON
 new entry "MAG_Weapon68"
 type "Armor"
@@ -4665,7 +4670,7 @@ using "MAG_Weapon68_bonus"
 data "DescriptionParams" "2"
 data "Boosts" "RollBonus(SavingThrow,IntelligenceModifier*2)"
 
-// Ancient Bulwark
+// ================ Ancient Bulwark ================
 // UNCOMMON
 new entry "MAG_Weapon69"
 type "Armor"
@@ -4738,7 +4743,7 @@ data "StackId" "MAG_WEAPON69_BLUR_TECHNICAL"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 data "OnRemoveFunctors" "RemoveStatus(BLUR)"
 
-// BUCKLER OF THE SCOURGE HUNTER (MAG_Weapon70)
+// ================ BUCKLER OF THE SCOURGE HUNTER (MAG_Weapon70) ================
 // UNCOMMON
 new entry "MAG_Weapon70"
 type "Armor"
@@ -4862,7 +4867,7 @@ data "ApplyEffect" "0b353e7c-1230-4ef3-8dbb-855b0d581cbf"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "StatusGroups" ""
 
-// BUCKLER OF FORTITUDE (MAG_Weapon71)
+// ================ BUCKLER OF FORTITUDE (MAG_Weapon71) ================
 // UNCOMMON
 new entry "MAG_Weapon71"
 type "Armor"
@@ -4918,7 +4923,7 @@ data "DescriptionParams" "70;4;24"
 data "BoostConditions" "HasHPPercentageLessThan(70, context.Target)"
 data "Boosts" "Ability(Constitution, 4, 24, true)"
 
-// Aegis of the Knight Healer (MAG_Weapon72)
+// ================ Aegis of the Knight Healer (MAG_Weapon72) ================
 // RARE (base)
 new entry "MAG_Weapon72"
 type "Armor"
@@ -4979,7 +4984,7 @@ data "Description" "h48fdd336g17e8g4852g8c1bgf8a5e9b85610;1"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockSpellVariant(IsHealingSupportSpell(),ModifyUseCosts(Replace,SpellSlot,0,-1,SpellSlot),ModifyUseCosts(Replace,WarlockSpellSlot,0,-1,WarlockSpellSlot),ModifyUseCosts(Replace,SpellSlotsGroup,0,-1,SpellSlotsGroup),ModifyIconGlow(),ModifyTooltipDescription())"
 
-// CULTIST'S SHIELD (MAG_Weapon73)
+// ================ CULTIST'S SHIELD (MAG_Weapon73) ================
 // UNCOMMON
 new entry "MAG_Weapon73_1"
 type "Armor"
@@ -5031,7 +5036,7 @@ using "MAG_Weapon73_bonus"
 data "DescriptionParams" "10;3"
 data "Boosts" "Reroll(SavingThrow,10,false);Reroll(SavingThrow,10,false);Reroll(SavingThrow,10,false)"
 
-// The Green Fury (MAG_Weapon74)
+// ================ The Green Fury (MAG_Weapon74) ================
 // UNCOMMON
 new entry "MAG_Weapon74_1"
 type "Armor"
@@ -5116,7 +5121,7 @@ data "DescriptionParams" "2"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(DIFFICULT_TERRAIN_VINES);StatusImmunity(ENSNARED_VINES);IF(InSurface('SurfaceVines',context.Source)):ReduceCriticalAttackThreshold(2);IF(InSurface('SurfaceVines',context.Source) and (Tagged('CLERIC_MIELIKKI',context.Source) or Tagged('MIELIKKI',context.Source))):ReduceCriticalAttackThreshold(2)"
 
-// SPIKED SHIELD (MAG_Weapon75)
+// ================ SPIKED SHIELD (MAG_Weapon75) ================
 // UNCOMMON
 new entry "MAG_Weapon75"
 type "Armor"
@@ -5171,7 +5176,7 @@ data "Description" "h3ef06386gd720g4596g99cag442316a111ec;1"
 data "DescriptionParams" "4;DealDamage(1d4,Slashing)"
 data "StatsFunctors" "DealDamage(SWAP,1d4,Slashing);ApplyStatus(SWAP,BLEEDING,100,4,,,,not SavingThrow(Ability.Constitution,ManeuverSaveDC()+2))"
 
-// HALO OF SALVATION (MAG_Weapon76)
+// ================ HALO OF SALVATION (MAG_Weapon76) ================
 // UNCOMMON
 new entry "MAG_Weapon76"
 type "Armor"
@@ -5283,7 +5288,7 @@ data "DescriptionParams" "1;20"
 data "StackId" "WEAPON76_VR_2"
 data "Boosts" "RollBonus(SavingThrow, 1d20)"
 
-// Bulwark of the Guardian
+// ================ Bulwark of the Guardian ================
 // UNCOMMON
 new entry "MAG_Weapon77"
 type "Armor"
@@ -5481,7 +5486,7 @@ data "DisplayName" "h2a49a04ag7b1fg46e2gb8fbg769e7e1855f9;1"
 data "Conditions" "IsAbleToReact(context.Observer) and not Self() and not Item() and IsMeleeAttack() and not SpellId('Target_Weapon79') and Self(context.Source,context.Observer) and HasDamageEffectFlag(DamageFlags.Hit) and IsWeaponAttack() and IsCritical() and not IsKillingBlow() and not AnyEntityIsItem();"
 data "InterruptDefaultValue" "Enabled"
 
-// THE BLACK WALL (MAG_Weapon80)
+// ================ THE BLACK WALL (MAG_Weapon80) ================
 // RARE
 new entry "MAG_Weapon80_2"
 type "Armor"
@@ -5536,7 +5541,7 @@ using "MAG_Weapon80_bonus"
 data "DescriptionParams" "3"
 data "Boosts" "IF(IsMeleeWeaponAttack() or IsUnarmedAttack() or IsRangedWeaponAttack()):DamageReduction(All, Flat, 3)"
 
-// Magic Oceanshell (MAG_Weapon81)
+// ================ Magic Oceanshell (MAG_Weapon81) ================
 // UNCOMMON
 new entry "MAG_Weapon81"
 type "Armor"
@@ -5637,7 +5642,7 @@ data "Description" "h7c69f93cgcbc1g4331ga3a6gb5de02e7a9b0;1"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockSpellVariant(SpellId('Target_TidalWave'),ModifyUseCosts(Replace,SpellSlot,0,-1,SpellSlot),ModifyUseCosts(Replace,WarlockSpellSlot,0,-1,WarlockSpellSlot),ModifyUseCosts(Replace,SpellSlotsGroup,0,-1,SpellSlotsGroup),ModifyTooltipDescription())"
 
-// KATRENA'S SHIELD (MAG_Weapon82)
+// ================ KATRENA'S SHIELD (MAG_Weapon82) ================
 // UNCOMMON
 new entry "MAG_Weapon82_1"
 type "Armor"
@@ -5722,7 +5727,7 @@ data "DescriptionParams" "1"
 data "Properties" "Highlighted"
 data "Boosts" "IF(HasStatus('MAG_THUNDER_REVERBERATION',context.Target)):ReduceCriticalAttackThreshold(1)"
 
-// Halo of Hope (MAG_Weapon83)
+// ================ Halo of Hope (MAG_Weapon83) ================
 // UNCOMMON
 new entry "MAG_Weapon83_1"
 type "Armor"
@@ -5919,7 +5924,7 @@ data "Boosts" "IF(not Tagged('CLERIC',context.Source)):Ability(Charisma,2);IF(Ta
 data "StatusPropertyFlags" "MultiplyEffectsByDuration"
 data "StatusGroups" "SG_Condition"
 
-// Kolento's Shield
+// ================ Kolento's Shield ================
 // UNCOMMON
 new entry "MAG_Weapon85"
 type "Armor"
@@ -5970,7 +5975,7 @@ using "MAG_Weapon85_bonus"
 data "DescriptionParams" "2"
 data "Boosts" "Skill(Persuasion,WisdomModifier*2)"
 
-// Shileyla's Shield (MAG_Weapon86)
+// ================ Shileyla's Shield (MAG_Weapon86) ================
 // UNCOMMON
 new entry "MAG_Weapon86_1"
 type "Armor"
@@ -6167,7 +6172,7 @@ data "Description" "h6a97f973gbe5dg4b16g95ccgf328e68b875a;1"
 data "Properties" "Highlighted"
 data "Boosts" "IF(Tagged('REALLY_DWARF') and IsWeaponAttack()):CriticalHit(AttackTarget,Success,Never)"
 
-// SHIELD OF CELESTIAL JUSTICE (MAG_Weapon89)
+// ================ SHIELD OF CELESTIAL JUSTICE (MAG_Weapon89) ================
 // UNCOMMON
 new entry "MAG_Weapon89_1"
 type "Armor"
@@ -6263,6 +6268,7 @@ data "StatsFunctorContext" "OnAttacked"
 data "Conditions" "Combat() and Enemy() and IsLastConditionRollSuccess(ConditionRollType.ConditionSavingThrow) and IsSavingThrow()"
 data "StatsFunctors" "ApplyStatus(NECK32,100,1);ApplyStatus(NECK32_DURATION_TECHNICAL,100,1);IF(Tagged('PALADIN', context.Target)):ApplyStatus(NECK32,100,1)"
 
+// Kill status — celestial retribution VFX (CLOAK94 lightning) + instant death
 new entry "MAG_WEAPON89_CELESTIAL_KILL"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -6273,7 +6279,7 @@ data "ApplyEffect" "0b353e7c-1230-4ef3-8dbb-855b0d581cbf"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 data "StatusGroups" "SG_Condition"
 
-// SHIELD OF THE CHOSEN (MAG_Weapon90)
+// ================ SHIELD OF THE CHOSEN (MAG_Weapon90) ================
 // UNCOMMON
 new entry "MAG_Weapon90_1"
 type "Armor"
@@ -6520,7 +6526,7 @@ data "StatusGroups" "SG_Condition"
 
 // Handaxe of the Sea Phantom
 
-// UNCOMMON VERSION (BASE)
+// ================ UNCOMMON VERSION (BASE) ================
 new entry "MAG_Weapon93"
 type "Weapon"
 using "WPN_Handaxe_1"
@@ -6543,7 +6549,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "InSurface('SurfaceWater',context.Source) or InSurface('SurfaceWaterElectrified',context.Source) or InSurface('SurfaceDeepWater',context.Source) or InSurface('SurfaceDeepWaterRunning',context.Source)"
 data "StatsFunctors" "ApplyStatus(WET, 100, 1)"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Weapon93_2"
 type "Weapon"
 using "MAG_Weapon93"
@@ -6558,7 +6564,7 @@ using "MAG_Weapon93_bonus"
 data "DescriptionParams" "2"
 data "StatsFunctors" "ApplyStatus(WET, 100, 2)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon93_3"
 type "Weapon"
 using "MAG_Weapon93"
@@ -6581,7 +6587,7 @@ data "DescriptionParams" "1"
 data "Properties" "Highlighted"
 data "Boosts" "IF(HasStatus('WET',context.Target)):ReduceCriticalAttackThreshold(1)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "MAG_Weapon93_4"
 type "Weapon"
 using "MAG_Weapon93"
@@ -6604,7 +6610,7 @@ data "Boosts" "IF(HasStatus('WET',context.Target)):ReduceCriticalAttackThreshold
 
 // Handaxe of the Gleam
 
-// UNCOMMON VERSION (BASE)
+// ================ UNCOMMON VERSION (BASE) ================
 new entry "MAG_Weapon94"
 type "Weapon"
 using "MAG_Weapon93"
@@ -6626,7 +6632,7 @@ data "StatsFunctorContext" "OnAttack"
 data "Conditions" "HasObscuredState(ObscuredState.Clear, context.Target) and Enemy() and AttackedWithPassiveSourceWeapon()"
 data "StatsFunctors" "DealDamage(SELF,1,Radiant,Magical);DealDamage(1d4,Radiant,Magical)"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Weapon94_2"
 type "Weapon"
 using "MAG_Weapon94"
@@ -6641,7 +6647,7 @@ using "MAG_Weapon94_bonus"
 data "DescriptionParams" "DealDamage(1d6,Radiant);DealDamage(2,Radiant)"
 data "StatsFunctors" "DealDamage(SELF,2,Radiant,Magical);DealDamage(1d6,Radiant,Magical)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon94_3"
 type "Weapon"
 using "MAG_Weapon94"
@@ -6697,7 +6703,7 @@ data "StatusGroups" "SG_Condition"
 
 // Handaxe of Eternal Frost
 
-// UNCOMMON VERSION (BASE)
+// ================ UNCOMMON VERSION (BASE) ================
 new entry "MAG_Weapon96"
 type "Weapon"
 using "MAG_Weapon93"
@@ -6719,7 +6725,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, SourceSpellDC()-2)):ApplyStatus(WEAPON96, 100, 1)"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Weapon96_2"
 type "Weapon"
 using "MAG_Weapon96"
@@ -6734,7 +6740,7 @@ using "MAG_Weapon96_bonus"
 data "DescriptionParams" "2"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(WEAPON96, 100, 2)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon96_3"
 type "Weapon"
 using "MAG_Weapon96"
@@ -6771,7 +6777,7 @@ data "StatusEffect" "95a0bbb1-b4e6-472b-ace6-b6c97739812f"
 
 // The Dawn Herald
 
-// UNCOMMON VERSION (BASE)
+// ================ UNCOMMON VERSION (BASE) ================
 new entry "MAG_Weapon97"
 type "Weapon"
 using "MAG_Weapon93"
@@ -6792,7 +6798,7 @@ data "DescriptionParams" "2"
 data "Properties" "Highlighted"
 data "Boosts" "Initiative(2)"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Weapon97_2"
 type "Weapon"
 using "MAG_Weapon97"
@@ -6807,7 +6813,7 @@ using "MAG_Weapon97_bonus"
 data "DescriptionParams" "3"
 data "Boosts" "Initiative(3)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon97_3"
 type "Weapon"
 using "MAG_Weapon97"
@@ -6824,7 +6830,7 @@ data "Boosts" "Initiative(4)"
 
 // Handaxe of Ancestral Light
 
-// UNCOMMON VERSION
+// ================ UNCOMMON VERSION ================
 new entry "MAG_Weapon98_1"
 type "Weapon"
 using "MAG_Weapon93"
@@ -6846,7 +6852,7 @@ data "Properties" "Highlighted"
 data "BoostContext" "OnDamage"
 data "Boosts" "IF(IsMeleeWeaponAttack() and Tagged('UNDEAD', context.Target)):DamageBonus(1d4, Radiant)"
 
-// RARE VERSION BLOCK (BASE)
+// ================ RARE VERSION BLOCK (BASE) ================
 new entry "MAG_Weapon98"
 type "Weapon"
 using "MAG_Weapon98_1"
@@ -6855,7 +6861,7 @@ data "Rarity" "Rare"
 data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical)"
 data "BoostsOnEquipMainHand" "UnlockSpell(Target_Slash_New);UnlockSpell(Target_MAG_WeaponAction_UndyingSubjugation)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon98_3"
 type "Weapon"
 using "MAG_Weapon98_1"
@@ -7007,7 +7013,7 @@ data "RemoveEvents" "OnCombatEnded"
 
 // The Scorching Whirlwind
 
-// UNCOMMON VERSION
+// ================ UNCOMMON VERSION ================
 new entry "MAG_Weapon103_1"
 type "Weapon"
 using "MAG_Weapon93"
@@ -7045,7 +7051,7 @@ data "TargetEffect" "0444f9b9-f4a9-4c0e-8671-3bfc3e883447"
 data "DamageType" "Fire"
 data "TooltipStatusApply" "ApplyStatus(BURNING,100,4)"
 
-// RARE VERSION BLOCK (BASE)
+// ================ RARE VERSION BLOCK (BASE) ================
 new entry "MAG_Weapon103"
 type "Weapon"
 using "MAG_Weapon103_1"
@@ -7064,7 +7070,7 @@ data "DescriptionParams" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType)
 data "TooltipDamageList" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(1d4, Fire)"
 data "TooltipStatusApply" "ApplyStatus(BURNING,100,3)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon103_3"
 type "Weapon"
 using "MAG_Weapon103_1"
@@ -7083,7 +7089,7 @@ data "DescriptionParams" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType)
 data "TooltipDamageList" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(1d6, Fire)"
 data "TooltipStatusApply" "ApplyStatus(BURNING,100,2)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "MAG_Weapon103_4"
 type "Weapon"
 using "MAG_Weapon103_1"
@@ -7204,7 +7210,7 @@ data "StatsFunctors" "DealDamage(10d10, Necrotic,Magical);RemoveStatus(WEAPON104
 
 // Axemaster's Edge
 
-// UNCOMMON VERSION (BASE)
+// ================ UNCOMMON VERSION (BASE) ================
 new entry "MAG_Weapon105"
 type "Weapon"
 using "WPN_Greataxe_1"
@@ -7223,7 +7229,7 @@ data "Description" "h16e1683cgb95dg431cga739g8735a74fb2ef;1"
 data "DescriptionParams" "DealDamage(1d6,Slashing)"
 data "Properties" "Highlighted"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Weapon105_2"
 type "Weapon"
 using "MAG_Weapon105"
@@ -7237,7 +7243,7 @@ type "PassiveData"
 using "MAG_Weapon105_bonus"
 data "DescriptionParams" "DealDamage(1d8,Slashing)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon105_3"
 type "Weapon"
 using "MAG_Weapon105"
@@ -7263,7 +7269,7 @@ data "StatsFunctors" "DealDamage(1d10,Slashing,Magical);RestoreResource(SELF,Sup
 
 // Phoenix Trident
 
-// UNCOMMON VERSION (BASE)
+// ================ UNCOMMON VERSION (BASE) ================
 new entry "MAG_Weapon106"
 type "Weapon"
 using "WPN_Trident"
@@ -7303,7 +7309,7 @@ data "RemoveConditions" "IsBurningStatus()"
 data "RemoveEvents" "OnStatusRemoved"
 data "StatusEffect" "6aeecabe-67b4-4d2a-a648-9902f53d3d45"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Weapon106_2"
 type "Weapon"
 using "MAG_Weapon106"
@@ -7325,7 +7331,7 @@ using "WEAPON106"
 data "StackId" "WEAPON106_R"
 data "Boosts" "Ability(Strength, 4);Ability(Constitution, 4)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon106_3"
 type "Weapon"
 using "MAG_Weapon106"
@@ -7347,7 +7353,7 @@ using "WEAPON106"
 data "StackId" "WEAPON106_VR"
 data "Boosts" "Ability(Strength, 5);Ability(Constitution, 5)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "MAG_Weapon106_4"
 type "Weapon"
 using "MAG_Weapon106"
@@ -7396,7 +7402,7 @@ data "StatusEffect" "87189e7d-cb47-404f-8d31-212221b9f5b8"
 
 // Staff of the Beast Whisperer
 
-// UNCOMMON VERSION (BASE)
+// ================ UNCOMMON VERSION (BASE) ================
 new entry "MAG_Weapon107"
 type "Weapon"
 using "WPN_Quarterstaff_1"
@@ -7426,7 +7432,7 @@ using "Target_AnimalFriendship"
 data "Cooldown" "OncePerShortRestPerItem"
 data "UseCosts" "ActionPoint:1"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Weapon107_2"
 type "Weapon"
 using "MAG_Weapon107"
@@ -7442,7 +7448,7 @@ using "MAG_Weapon107_RadiantOrbs"
 data "DescriptionParams" "2"
 data "StatsFunctors" "ApplyStatus(MAG_RADIANT_RADIATING_ORB,100,2);ApplyStatus(MAG_RADIANT_RADIATING_ORB_DURATION_TECHNICAL,100,2);IF(Tagged('BEAST',context.Target) or Tagged('MONSTROSITY',context.Target)):ApplyStatus(MAG_RADIANT_RADIATING_ORB,100,2);ApplyStatus(MAG_RADIANT_RADIATING_ORB_DURATION_TECHNICAL,100,2)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon107_3"
 type "Weapon"
 using "MAG_Weapon107"
@@ -7704,7 +7710,7 @@ data "Boosts" "DamageBonus(3)"
 data "StatusPropertyFlags" "MultiplyEffectsByDuration"
 data "StatusGroups" "SG_Condition"
 
-// EPIC VERSION BLOCK
+// ================ EPIC VERSION BLOCK ================
 // Epic weapon - inherits from rare base
 new entry "MAG_Weapon110_1"
 type "Weapon"
@@ -7749,7 +7755,7 @@ using "SHEEP_POWER"
 data "DescriptionParams" "4"
 data "Boosts" "DamageBonus(4)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 // Legendary weapon - inherits from rare base
 new entry "MAG_Weapon110_2"
 type "Weapon"
@@ -8169,7 +8175,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsKillingBlow() and Enemy() and not Item() and AttackedWithPassiveSourceWeapon()"
 data "StatsFunctors" "RestoreResource(SELF,SpellSlot,1,1)"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Weapon115_2"
 type "Weapon"
 using "MAG_Weapon115"
@@ -8186,7 +8192,7 @@ using "MAG_Weapon115_bonus"
 data "DescriptionParams" "1;2"
 data "StatsFunctors" "RestoreResource(SELF,SpellSlot,1,2)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon115_3"
 type "Weapon"
 using "MAG_Weapon115"
@@ -8203,7 +8209,7 @@ using "MAG_Weapon115_bonus"
 data "DescriptionParams" "1;3"
 data "StatsFunctors" "RestoreResource(SELF,SpellSlot,1,3)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "MAG_Weapon115_4"
 type "Weapon"
 using "MAG_Weapon115"
@@ -8476,7 +8482,7 @@ data "OnApplyFunctors" "DealDamage(1d8,Thunder,Magical)"
 data "ApplyEffect" "70a638f6-d74f-48f3-975e-de26543b92a3"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 new entry "MAG_Weapon120_1"
 type "Weapon"
 using "MAG_Weapon120"
@@ -8509,7 +8515,7 @@ using "WEAPON120"
 data "StackId" "WEAPON120_1"
 data "OnApplyFunctors" "DealDamage(1d6,Thunder,Magical)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon120_3"
 type "Weapon"
 using "MAG_Weapon120"
@@ -8657,7 +8663,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "InSurface('SurfaceDarknessCloud',context.Source) and Character()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom,ManeuverSaveDC())):ApplyStatus(WEAPON40_2,100,2)"
 
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 new entry "MAG_Weapon123_1"
 type "Weapon"
 using "MAG_Weapon123"
@@ -8673,7 +8679,7 @@ using "MAG_Weapon123_bonus"
 data "DescriptionParams" ""
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom,ManeuverSaveDC()-2)):ApplyStatus(WEAPON40_2,100,2)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Weapon123_3"
 type "Weapon"
 using "MAG_Weapon123"
@@ -8689,7 +8695,7 @@ using "MAG_Weapon123_bonus"
 data "DescriptionParams" ""
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom,ManeuverSaveDC()+2)):ApplyStatus(WEAPON40_2,100,2)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "MAG_Weapon123_4"
 type "Weapon"
 using "MAG_Weapon123"

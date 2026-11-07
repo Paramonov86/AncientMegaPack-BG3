@@ -2,7 +2,9 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 
-// anti-turtle trigger. first boss is cached so the gate is a plain db lookup, no output query
+// anti-turtle: ends 2 turns taking no damage in an ultra boss fight -> summon
+// mirror support. punishes sanctuary/globe/invis camping. own once-per-fight
+// cooldown. first boss cached so the gate uses plain db lookups (no output qry).
 
 // turns without damage before it fires
 DB_AMP_TurtleThreshold(2);

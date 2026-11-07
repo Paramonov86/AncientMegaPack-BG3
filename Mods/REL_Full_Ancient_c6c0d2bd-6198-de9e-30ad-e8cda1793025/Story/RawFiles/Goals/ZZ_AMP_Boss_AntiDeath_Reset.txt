@@ -7,8 +7,9 @@ DB_AMP_AntiDeath_Excluded((CHARACTER)S_GLO_Orin_bf24e0ec-a3a6-4905-bd2d-45dc8edf
 
 KBSECTION
 
-// scripted multi-phase bosses skip the revive charge or the downed override hijacks their death
-// ketheric keeps one guid across forms. Inserted lazily, init does not rerun on updated saves
+// scripted multi-phase bosses must not get the revive charge or our downed override
+// hijacks their scripted death (ketheric -> apostle is the same guid across forms).
+// lazy-insert so the exclusion is present on updated saves where init doesn't re-run.
 IF
 LevelGameplayStarted(_, _)
 AND

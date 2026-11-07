@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="he9f32d68g0b86g493eg880dgad8d06bc29d7" version="1">Marca infernal</content>
+	<content contentuid="hc7f0d3dcg8f9ag4b8fg983egf778ffb2db10" version="1">Quando você causa&lt;b&gt;[2]&lt;/b&gt; a um alvo afetado por &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;fogo infernal&lt;/LSTag&gt;, ele também recebe &lt;LSTag Type="Status" Tooltip="MAG_Ring43_Status_1"&gt;fogo diabólico&lt;/LSTag&gt; por &lt;b&gt;[1]&lt;/b&gt; turnos.</content>
+	<content contentuid="h54e8320ag9e57g4053gaca3g5cf956562df2" version="1">Quando você causa&lt;b&gt;[2]&lt;/b&gt; a um alvo afetado por &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;fogo infernal&lt;/LSTag&gt;, ele também recebe &lt;LSTag Type="Status" Tooltip="MAG_Ring43_4_Status_1"&gt;fogo diabólico&lt;/LSTag&gt; por &lt;b&gt;[1]&lt;/b&gt; turnos.</content>
+	<content contentuid="h6498381bg068ag4b87g91a8g4bca525ca940" version="1">Forja infernal</content>
+	<content contentuid="h31b4c4e6g39e6g49a1ga9a8ge0d6fd14f69f" version="1">Forjado em metal infernal, este anel permite conjurar &lt;LSTag Type="Spell" Tooltip="MAG_Ring43_4_scorchingVolley"&gt;Salva abrasadora&lt;/LSTag&gt; e reduz em &lt;b&gt;[2]&lt;/b&gt; todo o&lt;b&gt;[1]&lt;/b&gt; recebido.</content>
+	<content contentuid="hea2c2781geea0g4fd9gae16g7cdcb44ce7b7" version="1">Fogo diabólico</content>
+	<content contentuid="hc48051c4g9c9fg4df8g9cbcg760563dc63d0" version="1">A criatura afetada fica &lt;LSTag Tooltip="Vulnerable"&gt;vulnerável&lt;/LSTag&gt; a&lt;b&gt;[1]&lt;/b&gt;.</content>
+	<content contentuid="hc6b64c20g9931g4259g9b6bg07aab2222a6a" version="1">Salva abrasadora</content>
+</contentList>

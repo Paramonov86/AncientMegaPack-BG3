@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">锻炉之父之手</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">这把战锤锻造于群山之心，曾为摩拉丁亲手所用，锤炼最初的太古矿脉。据说这位锻造之神注入其中的，不仅有地底深处的沉重，更有“锻炉”这一理念本身。&lt;br&gt;&lt;br&gt;在凡人手中，它依旧保有神性：每一击都将群山无情的重压砸向敌人，将其击倒在地。对摩拉丁而言，整片大地就是永恒的铁砧。倒在锤下之人会被压在其上，血肉、骨骼或铠甲都会变得如劣质金属般脆弱。对这样的敌人补上最后一击，就如同铁锤砸在砧上烧红的铁块：无情地将其碾碎、击裂。</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">铁锤</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">受到这把战锤伤害的生物必须通过一次对抗你&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;战技豁免难度等级&lt;/LSTag&gt;的力量&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;，否则会&lt;LSTag Type="Status" Tooltip="PRONE"&gt;倒伏&lt;/LSTag&gt;&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">铁砧</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">被你击至&lt;LSTag Type="Status" Tooltip="PRONE"&gt;倒伏&lt;/LSTag&gt;的敌人会&lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;脆裂&lt;/LSTag&gt;&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">锤砧之间</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">用这把战锤命中&lt;LSTag Type="Status" Tooltip="PRONE"&gt;倒伏&lt;/LSTag&gt;的目标时，额外造成&lt;b&gt;[1]&lt;/b&gt;。</content>
+</contentList>

@@ -63,5 +63,35 @@ _Roll < 60
 THEN
 DB_AMP_PlanarDrop_Done(_CombatGuid);
 
+// base ejects cube contents only to a player, so tesseracts stocked into a trader open into the trader's own stock
+
+IF
+ObjectTimerFinished((ITEM)_Item, "AMP_VoidCapsule_Eject")
+AND
+GetDirectInventoryOwner(_Item, (GUIDSTRING)_Cube)
+AND
+GetTemplate(_Cube, (ITEMROOT)_Template)
+AND
+DB_AMP_VoidCapsule_Reward(_, _, _Template)
+AND
+GetDirectInventoryOwner(_Cube, (CHARACTER)_Trader)
+AND
+DB_AMP_TraderAct(_Trader, _)
+AND
+GetStackAmount(_Item, (INTEGER)_Count, _)
+THEN
+ToInventory(_Item, _Trader, _Count, 0, 0);
+
+IF
+AddedTo((ITEM)_Cube, (CHARACTER)_Trader, _)
+AND
+DB_AMP_TraderAct(_Trader, _)
+AND
+GetTemplate(_Cube, (ITEMROOT)_Template)
+AND
+DB_AMP_VoidCapsule_Reward(_, _, _Template)
+THEN
+ObjectTimerLaunch(_Cube, "AMP_Plus_CubeSweep", 4000, 0);
+
 EXITSECTION
 ENDEXITSECTION

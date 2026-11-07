@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="h02b6169fge5dbg41bcgb6d1g100fd33adcd2" version="1">Mystras Schritte</content>
+	<content contentuid="h830b6361gc763g475bg80a3g27f46986b496" version="1">Das Leder an den Zehen ist hell abgetragen. Wer diese Stiefel trug, ging selten auf dem Boden.</content>
+	<content contentuid="ha7ddec64g8666g4fe7g9408g235c0bcba5a8" version="1">Mystras Segen</content>
+	<content contentuid="h4f2441d1g5fbfg4f52g9a17gbaa3008a1854" version="1">Der Träger kann fliegen, erleidet keinen Sturzschaden und ist gegen &lt;b&gt;allen Schaden&lt;/b&gt; &lt;LSTag Tooltip="Resistant"&gt;resistent&lt;/LSTag&gt;.</content>
 </contentList>

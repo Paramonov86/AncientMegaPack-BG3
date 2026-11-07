@@ -4,7 +4,12 @@ INITSECTION
 
 KBSECTION
 
-// auto-extract only ejects to a player owner, so cubes stay sellable containers in a merchant
+// generous loot: stock extra reward cubes into merchants by act.
+// gated by db_amp_generousloot_enabled. fires on every level load, once per trader
+// via the db_amp_genmerchantstocked guard. iterates the roster via db_amp_traderact.
+// cubes are container templates that auto-fill from their treasuretable; auto-extract
+// only ejects to a player owner, so in a merchant they stay sellable loot containers.
+// act 1 = 5..10 tier-1, act 2 = 5..10 tier-2, act 3 = 2..4 tier-3.
 
 // act 1 -> tier-1 cubes
 IF

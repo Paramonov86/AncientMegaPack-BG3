@@ -1,4 +1,6 @@
+// ================================================================
 // CURSED ARTIFACTS - Shared Info Status
+// ================================================================
 
 new entry "AMP_CURSED_ARTIFACT_INFO"
 type "StatusData"
@@ -9,7 +11,9 @@ data "Icon" "PassiveFeature_Generic_Death"
 data "StackId" "AMP_CURSED_ARTIFACT_INFO"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
+// ================================================================
 // ARTIFACT 1: LICH'S GRASP
+// ================================================================
 
 new entry "AMP_Cursed_LichHand"
 type "Armor"
@@ -75,7 +79,9 @@ data "Boosts" "IncreaseMaxHP(-25%)"
 data "StatusPropertyFlags" "MultiplyEffectsByDuration;FreezeDuration;IgnoreResting;ApplyToDead"
 data "StatusGroups" ""
 
+// ================================================================
 // ARTIFACT 2: ELIXIR OF ETERNITY
+// ================================================================
 
 new entry "AMP_Cursed_Elixir"
 type "Armor"
@@ -288,7 +294,9 @@ data "StatusType" "BOOST"
 using "AMP_ELIXIR_HEAL_1"
 data "OnApplyFunctors" "RegainHitPoints(10)"
 
+// ================================================================
 // ARTIFACT 3: PRIMEMOTHER'S SPORE
+// ================================================================
 
 new entry "AMP_Cursed_Spore"
 type "Armor"
@@ -329,7 +337,9 @@ data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableComb
 data "OnApplyFunctors" "RegainHitPoints(1)"
 data "ApplyEffect" ""
 
+// ================================================================
 // ARTIFACT 4: TWO-FACED SOVEREIGN
+// ================================================================
 
 new entry "AMP_Cursed_Sovereign"
 type "Armor"
@@ -370,7 +380,7 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_SOVEREIGN_TECHNICAL"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEADS (Blessing)
+// ================ HEADS (Blessing) ================
 
 new entry "AMP_SOVEREIGN_HEADS_IMMUNE"
 type "StatusData"
@@ -484,7 +494,7 @@ data "StatusPropertyFlags" "ForceOverhead;ApplyToDead"
 data "StatusGroups" "SG_Condition"
 data "OnApplyFunctors" "RestoreResource(SpellSlot,100%,1);RestoreResource(SpellSlot,100%,2);RestoreResource(SpellSlot,100%,3);RestoreResource(SpellSlot,100%,4);RestoreResource(SpellSlot,100%,5);RestoreResource(SpellSlot,100%,6);RestoreResource(WarlockSpellSlot,100%,1);RestoreResource(WarlockSpellSlot,100%,2);RestoreResource(WarlockSpellSlot,100%,3);RestoreResource(WarlockSpellSlot,100%,4);RestoreResource(WarlockSpellSlot,100%,5)"
 
-// TAILS (Curse)
+// ================ TAILS (Curse) ================
 
 new entry "AMP_SOVEREIGN_TAILS_AC"
 type "StatusData"
@@ -616,7 +626,9 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_SOVEREIGN_SCATTER_ITEM_TIMER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
+// ================================================================
 // ARTIFACT 5: HUBRIS OF KRONETH
+// ================================================================
 
 new entry "AMP_Cursed_Kroneth"
 type "Armor"
@@ -693,7 +705,9 @@ data "RemoveEvents" "OnCombatEnded"
 data "RemoveConditions" "not Combat()"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
-// Kroneth trial, judgement spell and endings
+// ================================================================
+// KRONETH TRIAL — judgement spell + endings
+// ================================================================
 
 // Visible status: grants Trial ability, persists through unequip and death
 new entry "AMP_KRONETH_JUDGEMENT"
@@ -802,7 +816,7 @@ data "StackId" "AMP_DAMNED_KRONETH"
 data "RemoveEvents" ""
 data "StatusPropertyFlags" "IgnoreResting;ApplyToDead;FreezeDuration;ForceOverhead"
 
-// Obligation pool, one picked at random at combat start while HUMBLED
+// Phase 2: eternal servitude obligation pool — random one applies at combat start when HUMBLED
 new entry "AMP_KRONETH_OBLIGATION_DEVOTION"
 type "StatusData"
 data "StatusType" "BOOST"

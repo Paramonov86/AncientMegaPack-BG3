@@ -2,7 +2,10 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 
-// weighted shard tier rows for saves that ran the flat init, duplicate inserts are no-ops
+// TOT SHOP MIGRATION - v2 weighted shard tiers
+// For existing saves: core init already ran with old flat system.
+// This batch creates all new DB entries that the updated rules expect.
+// Duplicate inserts are no-ops in Osiris - safe for new saves too.
 
 // Fix category weights (old: COINS=5, CAPSULES=5, SHARDS=1)
 NOT DB_ToT_CatWeight("GENERAL", "COINS", 5);
@@ -10,7 +13,8 @@ DB_ToT_CatWeight("GENERAL", "COINS", 10);
 NOT DB_ToT_CatWeight("GENERAL", "CAPSULES", 5);
 DB_ToT_CatWeight("GENERAL", "CAPSULES", 3);
 
-// Recovery_1 must sit in one tier only, stale SHARDS_6 and SHARDS_1 rows made dust match both and spawn two coins
+// 2026-05-15: Recovery_1 moved Rare->Uncommon. old saves kept stale SHARDS_6 + SHARDS_1
+// tiers -> shard dust matched both and spawned two coins. clean both, SHARDS_20 re-added below.
 NOT DB_ToT_ShardReg((ITEMROOT)AMP_Arcanizer_Shard_Recovery_1_6d07a9e3-b288-4ec3-86f9-b3360973b879, "SHARDS_6");
 NOT DB_ToT_ShardReg((ITEMROOT)AMP_Arcanizer_Shard_Recovery_1_6d07a9e3-b288-4ec3-86f9-b3360973b879, "SHARDS_1");
 DB_ToT_CatWeight("GENERAL", "SHARDS_20", 20);

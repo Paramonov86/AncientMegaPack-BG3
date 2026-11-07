@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">Você recebe +[1] na &lt;LSTag Tooltip="SpellDifficultyClass"&gt;CD para resistir magia&lt;/LSTag&gt; e +[2] nas &lt;LSTag Tooltip="AttackRoll"&gt;Rolagens de Ataque&lt;/LSTag&gt; com magias.</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">Calor absoluto</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">Ao causar dano com esta rapieira em combate, você cria &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Fogo Infernal&lt;/LSTag&gt; com raio de &lt;b&gt;[1]&lt;/b&gt; por &lt;b&gt;[2]&lt;/b&gt; turnos. O &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Fogo Infernal&lt;/LSTag&gt; não afeta você.&lt;br&gt;&lt;br&gt;Você ignora a &lt;LSTag Tooltip="Resistant"&gt;Resistência&lt;/LSTag&gt; e a &lt;LSTag Tooltip="Immune"&gt;Imunidade&lt;/LSTag&gt; dos alvos a dano de fogo.</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">Calor de Avernus</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">Uma estocada veloz que despeja uma onda de fogo infernal da arma.</content>
+</contentList>

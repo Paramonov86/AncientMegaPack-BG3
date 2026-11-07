@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd0973c38g6dcfg4710gb6e4g5637d0b48f61" version="1">작열하는 강타</content>
+	<content contentuid="h3c004c12g1fefg4c43g8a88g3babf71eaca0" version="1">대상을 공격하며 작열하는 불꽃을 방출합니다. &lt;b&gt;추가로&lt;/b&gt; &lt;b&gt;[2]&lt;/b&gt;를 입히고, 대상이 민첩성 &lt;LSTag Tooltip="SavingThrow"&gt;내성 굴림&lt;/LSTag&gt;에 실패하면 &lt;b&gt;[1]&lt;/b&gt;턴 동안 &lt;LSTag Type="Status" Tooltip="BURNING"&gt;불타오릅니다&lt;/LSTag&gt;.</content>
+	<content contentuid="he7519926g138ag4334g9e2ag391bc47c18f8" version="1">대상을 공격하며 지옥불을 방출합니다. &lt;b&gt;추가로&lt;/b&gt; &lt;b&gt;[2]&lt;/b&gt;를 입히고, 대상이 민첩성 &lt;LSTag Tooltip="SavingThrow"&gt;내성 굴림&lt;/LSTag&gt;에 실패하면 &lt;b&gt;[1]&lt;/b&gt;턴 동안 &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;불타오릅니다&lt;/LSTag&gt;.</content>
+	<content contentuid="hcdc3b046gce6dg42beg89e3g82366651e815" version="1">작열하는 회오리</content>
+	<content contentuid="h691d0a1dg508dg4022ga4b3g50408610e592" version="1">양손으로 주변의 모든 적을 휩쓸어 공격합니다. 각 대상에게 개별 &lt;LSTag Tooltip="AttackRoll"&gt;공격 굴림&lt;/LSTag&gt;을 하고 두 무기의 피해를 입힙니다. 명중 시 각 대상은 민첩성 &lt;LSTag Tooltip="SavingThrow"&gt;내성 굴림&lt;/LSTag&gt;에 성공하지 못하면 &lt;b&gt;[1]&lt;/b&gt;턴 동안 &lt;LSTag Type="Status" Tooltip="BURNING"&gt;불타오릅니다&lt;/LSTag&gt;.</content>
+	<content contentuid="hdcc98bf4g9f7eg43a4gb707gbe5bba48a937" version="1">양손으로 주변의 모든 적을 휩쓸어 공격합니다. 각 대상에게 개별 &lt;LSTag Tooltip="AttackRoll"&gt;공격 굴림&lt;/LSTag&gt;을 하고 두 무기의 피해를 입힙니다. 명중 시 각 대상은 민첩성 &lt;LSTag Tooltip="SavingThrow"&gt;내성 굴림&lt;/LSTag&gt;에 성공하지 못하면 &lt;b&gt;[1]&lt;/b&gt;턴 동안 &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;불타오릅니다&lt;/LSTag&gt;.</content>
+</contentList>

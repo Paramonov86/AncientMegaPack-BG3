@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">Mão do pai da forja</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">Forjado no Coração das Montanhas, este martelo já serviu ao próprio Moradin para trabalhar os primeiros veios de minério primordial. Dizem que o deus ferreiro pôs nele não só o peso das profundezas, mas a própria ideia da forja.&lt;br&gt;&lt;br&gt;Nas mãos de um mortal, a arma mantém sua essência divina: cada golpe despeja sobre o inimigo o peso implacável das montanhas e o lança ao chão. Para Moradin, toda a terra é uma bigorna eterna. Quem cai sob o golpe fica preso a ela, e sua carne, ossos ou armadura ficam tão frágeis quanto metal de má qualidade. O golpe final contra um inimigo assim é como o martelo batendo no ferro em brasa sobre a bigorna: esmaga e despedaça sem piedade.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">Martelo</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">Uma criatura que sofre dano deste martelo deve passar em um &lt;LSTag Tooltip="SavingThrow"&gt;teste de resistência&lt;/LSTag&gt; de Força contra sua &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;CD de Manobra&lt;/LSTag&gt; ou ficará &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prostrada&lt;/LSTag&gt; por &lt;b&gt;[1]&lt;/b&gt; turno.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">Bigorna</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">Inimigos que você deixa &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prostrados&lt;/LSTag&gt; ficam &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;Frágeis&lt;/LSTag&gt; por &lt;b&gt;[1]&lt;/b&gt; turnos.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">Entre o martelo e a bigorna</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">Ao acertar um alvo &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prostrado&lt;/LSTag&gt; com este martelo, você causa &lt;b&gt;[1]&lt;/b&gt; adicional.</content>
+</contentList>

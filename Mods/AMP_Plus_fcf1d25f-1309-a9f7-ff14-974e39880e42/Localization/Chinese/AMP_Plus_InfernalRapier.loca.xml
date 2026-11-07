@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">你的&lt;LSTag Tooltip="SpellDifficultyClass"&gt;法术豁免等级&lt;/LSTag&gt;+[1]，法术&lt;LSTag Tooltip="AttackRoll"&gt;攻击掷骰&lt;/LSTag&gt;+[2]。</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">绝对炽热</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">在战斗中用这把刺剑造成伤害时，你会制造半径&lt;b&gt;[1]&lt;/b&gt;的&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;地狱火&lt;/LSTag&gt;，持续&lt;b&gt;[2]&lt;/b&gt;回合。&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;地狱火&lt;/LSTag&gt;对你无效。&lt;br&gt;&lt;br&gt;你无视目标对火焰伤害的&lt;LSTag Tooltip="Resistant"&gt;抗性&lt;/LSTag&gt;与&lt;LSTag Tooltip="Immune"&gt;免疫&lt;/LSTag&gt;。</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">阿弗纳斯之焰</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">迅猛突刺，从武器中喷涌出一道地狱烈焰之浪。</content>
+</contentList>

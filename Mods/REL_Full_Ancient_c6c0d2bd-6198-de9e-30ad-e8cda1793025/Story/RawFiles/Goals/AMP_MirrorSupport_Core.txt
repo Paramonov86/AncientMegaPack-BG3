@@ -1,7 +1,10 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// ultra-only mirror support, a stats watcher applies AMP_MIRROR_TRIGGER once the boss is cc'd and under 80% hp
+// amp mirror support: ultra-only divine-intervention spawn.
+// trigger = stats watcher applies AMP_MIRROR_TRIGGER (boss cc'd + hp<80%).
+// spawns 1 solo elite or N horde from the pool into the boss faction, once per fight.
+// active only with ultra opt-in + normal/hard mode.
 
 // pool: DB_AMP_MirrorPool(index, template, count). count 1 = solo, >1 = horde ring.
 // weight by duplicating index entries with the same template.
@@ -618,7 +621,9 @@ ApplyStatus(_Mob, "AMP_MIRROR_DIVINE_SUPPORT", -1.0, 1, _Boss);
 ApplyStatus(_Mob, "AMP_MIRROR_WRATH", -1.0, 1, _Boss);
 ApplyStatus(_Mob, "AMP_ULTRA_SPAWN_VFX", 6.0, 1, _Boss);
 SetFaction(_Mob, _BossFaction);
-// CreateAt mobs are non-temporary, a normal death leaves a lootable corpse. unlootable from spawn
+// economy guard: corpse drops nothing. these mobs are CreateAt non-temporary, so a
+// normal death leaves a lootable corpse (potions/elixirs/ammo from the RootTemplate).
+// mark the whole character unlootable at spawn so nothing drops on death.
 SetCharacterLootable(_Mob, 0);
 RealtimeObjectTimerLaunch(_Mob, "AMP_MirrorStripDelay", 1500);
 
@@ -914,7 +919,9 @@ DB_AMP_MirrorSupport_Fired(_Boss)
 THEN
 NOT DB_AMP_MirrorSupport_Fired(_Boss);
 
-// permanent FactionOverride force_hostile, or the pursuers drift neutral once the boss faction is gone
+// boss died: surviving mobs become standalone relentless pursuers.
+// permanent FactionOverride (force_hostile) so they never drift neutral once
+// the boss faction is gone. InitiateCombat;BringIntoCombat flags re-engage them.
 
 IF
 Died((CHARACTER)_Boss)
@@ -989,8 +996,11 @@ HasActiveStatus(_Mob, "AMP_MIRROR_SUPPORT_FLAG", 1)
 THEN
 RealtimeObjectTimerLaunch(_Mob, "AMP_MirrorOffstage", 3000);
 
-// strip loot while the mob is alive, dead or deleted ones respawn items on the floor
-// corpse inventory is not reliably iterable. IsEquipped(_,0) spares equipped gear
+// economy guard: strip the carried inventory while the mob is ALIVE (shortly after
+// spawn). a deleted/dead mob respawns its items onto the floor (engine behaviour, like
+// toolkit-deleted chests) and a corpse inventory is not reliably iterable - so we delete
+// the loot BEFORE it can ever die. IsEquipped(_,0) spares equipped weapon/armor so the
+// mob still fights; only loose potions/elixirs/ammo are removed.
 IF
 ObjectTimerFinished((CHARACTER)_Mob, "AMP_MirrorStripDelay")
 THEN
@@ -1008,7 +1018,9 @@ ObjectTimerFinished((CHARACTER)_Mob, "AMP_MirrorOffstage")
 THEN
 SetOnStage(_Mob, 0);
 
-// level change recreates the pursuer at the host, cross-level teleport of CreateAt mobs is flaky
+// persistent chase: on level change, kill the stale pursuer and recreate a fresh
+// one at the host, then re-engage (cross-level teleport of CreateAt mobs is flaky).
+// chase ends only when the player kills it.
 
 // generic pursuer (non-vasht) - arcane gate vfx
 IF

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h4991785aga322g4ddeg9e17gd1d6c13397a7" version="1">Ein Feind, der durch diesen Krummsäbel Schaden erleidet, muss einen Konstitutions-&lt;LSTag Tooltip="SavingThrow"&gt;Rettungswurf&lt;/LSTag&gt; gegen euren &lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;Wirkungs-SG&lt;/LSTag&gt; bestehen, sonst wird er &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;geblendet&lt;/LSTag&gt;.</content>
+</contentList>

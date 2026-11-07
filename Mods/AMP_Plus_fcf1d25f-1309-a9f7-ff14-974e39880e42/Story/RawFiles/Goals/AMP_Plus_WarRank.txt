@@ -627,12 +627,57 @@ THEN
 DB_AMP_WarRank_ChoiceTaken(_P, _T);
 ObjectTimerLaunch(_P, "AMP_WarRank_CloseDoctrine", 3000);
 
+// only the steps already taken close, an open step of another rank stays on the bar
+
 IF
 ObjectTimerFinished((CHARACTER)_P, "AMP_WarRank_CloseDoctrine")
+AND
+DB_AMP_WarRank_ChoiceTaken(_P, 1)
 THEN
 RemoveSpell(_P, "Shout_AMP_WarRank_DoctrineChoice", 1);
+
+IF
+ObjectTimerFinished((CHARACTER)_P, "AMP_WarRank_CloseDoctrine")
+AND
+DB_AMP_WarRank_ChoiceTaken(_P, 2)
+THEN
 RemoveSpell(_P, "Shout_AMP_WarRank_DoctrineChoice_T2", 1);
+
+IF
+ObjectTimerFinished((CHARACTER)_P, "AMP_WarRank_CloseDoctrine")
+AND
+DB_AMP_WarRank_ChoiceTaken(_P, 3)
+THEN
 RemoveSpell(_P, "Shout_AMP_WarRank_DoctrineChoice_T3", 1);
+
+// a step closed together with another one comes back: retracting the open mark re-runs the offer
+
+IF
+SavegameLoaded()
+AND
+DB_AMP_WarRank_ChoiceOpen((CHARACTER)_P, "D1")
+AND
+NOT DB_AMP_WarRank_ChoiceTaken(_P, 1)
+THEN
+NOT DB_AMP_WarRank_ChoiceOpen(_P, "D1");
+
+IF
+SavegameLoaded()
+AND
+DB_AMP_WarRank_ChoiceOpen((CHARACTER)_P, "D2")
+AND
+NOT DB_AMP_WarRank_ChoiceTaken(_P, 2)
+THEN
+NOT DB_AMP_WarRank_ChoiceOpen(_P, "D2");
+
+IF
+SavegameLoaded()
+AND
+DB_AMP_WarRank_ChoiceOpen((CHARACTER)_P, "D3")
+AND
+NOT DB_AMP_WarRank_ChoiceTaken(_P, 3)
+THEN
+NOT DB_AMP_WarRank_ChoiceOpen(_P, "D3");
 
 PROC
 PROC_AMP_WarRank_SetTier((CHARACTER)_P, (STRING)_D, (INTEGER)_T)

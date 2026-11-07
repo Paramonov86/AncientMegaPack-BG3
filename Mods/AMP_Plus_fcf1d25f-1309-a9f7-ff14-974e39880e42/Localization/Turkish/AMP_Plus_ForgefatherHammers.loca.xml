@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">Demirci Baba'nın Eli</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">Dağların Kalbi'nde dövülen bu çekiç, bir zamanlar ilk kadim cevher damarlarını işlerken bizzat Moradin'e hizmet etti. Demirci tanrının ona yalnızca derinliklerin ağırlığını değil, demirhane fikrinin kendisini de kattığı söylenir.&lt;br&gt;&lt;br&gt;Ölümlü ellerde silah tanrısal özünü korur: her darbe dağların amansız ağırlığını düşmanın üzerine indirir ve onu yere serer. Moradin için tüm toprak sonsuz bir örstür. Darbenin altında düşen kişi ona çivilenir; eti, kemikleri ya da zırhı kalitesiz metal kadar kırılganlaşır. Böyle bir düşmana indirilen son darbe, örsteki kızgın demire inen çekiç gibidir: acımadan ezer ve parçalar.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">Çekiç</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">Bu çekiçten hasar alan yaratık, senin &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;Manevra ZS&lt;/LSTag&gt; değerine karşı bir Güç &lt;LSTag Tooltip="SavingThrow"&gt;Kurtarma Atışı&lt;/LSTag&gt; geçmelidir, aksi halde &lt;b&gt;[1]&lt;/b&gt; tur boyunca &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Yere Serilmiş&lt;/LSTag&gt; olur.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">Örs</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">&lt;LSTag Type="Status" Tooltip="PRONE"&gt;Yere serdiğin&lt;/LSTag&gt; düşmanlar &lt;b&gt;[1]&lt;/b&gt; tur boyunca &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;Kırılgan&lt;/LSTag&gt; olur.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">Çekiçle Örs Arasında</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">Bu çekiçle &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Yere Serilmiş&lt;/LSTag&gt; bir hedefi vurduğunda ek olarak &lt;b&gt;[1]&lt;/b&gt; verirsin.</content>
+</contentList>

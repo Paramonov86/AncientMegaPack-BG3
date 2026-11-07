@@ -1,3 +1,8 @@
+// U'kra the Enduring -- support-first healer/tank, melee-capable.
+// Base = healer_melee: prioritises healing/buffing allies over damage, stabilises the
+// downed, stays in melee. On top of that DNA we add: open with Pokrov, hold the front
+// line and welcome hits (martyr bait), and care even less about kills. Tune vs .ailog.
+
 USING healer_melee
 
 // smart target selection

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hdfb23537g30b2g4368ga1f0g57122f603403" version="1">Correção da Lâmina das Sombras</content>
+	<content contentuid="hbc08212ag28b2g4842gaddeg9646bb7f264d" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [Legítimo no padrão deste modo]&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;Lâmina das Sombras&lt;/LSTag&gt; sempre causa [1], independentemente do nível do espaço de magia.</content>
+	<content contentuid="hc5d36564g77d3g4a38g9afag7a7ffbed6283" version="1">&lt;b&gt;Correção da Lâmina das Sombras&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;Lâmina das Sombras&lt;/LSTag&gt; sempre causa 2d8 de dano, independentemente do nível do espaço de magia.&lt;br&gt;&lt;br&gt;Ativar?</content>
+</contentList>

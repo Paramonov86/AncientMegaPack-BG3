@@ -635,6 +635,23 @@ THEN
 NOT DB_AMP_Plus_PChest_Presence(_Char, _N);
 DB_AMP_Plus_PChest_Presence(_Char, _N2);
 
+// a body smashed before the first touch has nothing to spill, so the roll is taken shortly after spawn
+// the template carries the lootbox vfx status from creation; the delay keeps the work off the load frame
+
+IF
+StatusApplied((ITEM)_Chest, "AMP_LOOTBOX_VFX", _, _)
+AND
+QRY_AMP_Plus_PChest_Is(_Chest)
+THEN
+RealtimeObjectTimerLaunch(_Chest, "AMP_Plus_PChest_SpawnRoll", 1500);
+
+IF
+ObjectTimerFinished((ITEM)_Chest, "AMP_Plus_PChest_SpawnRoll")
+AND
+QRY_AMP_Plus_PChest_Is(_Chest)
+THEN
+PROC_AMP_Plus_PChest_Roll(_Chest);
+
 // Casual opens these chests by script on spawn, so Opened rolls too
 
 IF

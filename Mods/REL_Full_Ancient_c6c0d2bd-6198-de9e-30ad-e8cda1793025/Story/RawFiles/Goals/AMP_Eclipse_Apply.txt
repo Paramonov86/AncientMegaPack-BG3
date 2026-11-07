@@ -4,8 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// base AMP_ECLIPSE_INFO is radiant, mapped bosses get a typed carrier
-// balthazar is necrotic: radiant self-kills him via justiciar retaliation
+// per-boss eclipse damage type. base AMP_ECLIPSE_INFO = radiant.
+// mapped bosses get a typed *_INFO_<T> carrier, keyed by vanilla instance guid.
+// balthazar is necrotic, not radiant - radiant self-kills him via justiciar retaliation.
 
 // classifier: boss -> typed info carrier, written to a scratch db
 PROC

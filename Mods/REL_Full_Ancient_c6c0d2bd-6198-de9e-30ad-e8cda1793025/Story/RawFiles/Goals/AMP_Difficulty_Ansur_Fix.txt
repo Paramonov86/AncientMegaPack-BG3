@@ -5,8 +5,11 @@ INITSECTION
 
 KBSECTION
 
-// AMP_BOSS_ANTIDEATH_SPENT parks early at prio 20, above antideath 10, and vanilla downed wins on the first KO
-// resurrect then polymorph wipes it, so it is re-applied on later events
+// ansur revive guard. skeletal dragon starts dead, resurrects, then polymorphs
+// to dragon form - that combo wiped the SPENT marker, so undying will kept
+// reviving him at ~800 hp forever. park SPENT early (prio 20 > antideath 10)
+// so vanilla downed wins and he dies on the first KO. re-applied on a couple
+// later events in case polymorph/scene swap strips it.
 
 // right after vanilla resurrects him
 IF

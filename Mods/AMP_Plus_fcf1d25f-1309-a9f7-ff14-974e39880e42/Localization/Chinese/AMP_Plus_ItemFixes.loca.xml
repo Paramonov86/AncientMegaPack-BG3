@@ -21,4 +21,6 @@
 	<content contentuid="he50a07a0gca80g42fegbfecga6fb257377ce" version="1">跨位面开锁</content>
 	<content contentuid="h64bd171fg3bc5g40f1gb681gfa5aa11c3144" version="1">装备开锁器并攻击&lt;b&gt;跨位面宝箱&lt;/b&gt;即可将其打开。</content>
 	<content contentuid="h0935d89fgc7d8g46f0ga0e1gfe0661547650" version="1">战斗中，施展此戒指赋予的&lt;LSTag Type="Spell" Tooltip="Throw_Telekinesis_Skilthiryx"&gt;心灵遥控&lt;/LSTag&gt;后，你可以每回合一次以&lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;附赠动作&lt;/LSTag&gt;再次施展。</content>
+	<content contentuid="hd6d0aae1ge6aeg4d1ag81f6gd25225df880c" version="1">当你即将受到伤害时，将该次伤害减半。&lt;br&gt;&lt;br&gt;若你为&lt;b&gt;纯血精灵&lt;/b&gt;，此效果自动触发且不消耗&lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;反应&lt;/LSTag&gt;。否则，将消耗你的&lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;反应&lt;/LSTag&gt;。</content>
+	<content contentuid="hadcb02b6g819cg4b92g860eg33c48154e91c" version="1">若你拥有&lt;b&gt;野兽之心&lt;/b&gt;，触发&lt;LSTag Tooltip="CriticalHit"&gt;重击&lt;/LSTag&gt;所需点数减少&lt;b&gt;[1]&lt;/b&gt;。处于&lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;野性变形&lt;/LSTag&gt;时，即使没有&lt;b&gt;野兽之心&lt;/b&gt;，所需点数也会减少&lt;b&gt;[2]&lt;/b&gt;。</content>
 </contentList>

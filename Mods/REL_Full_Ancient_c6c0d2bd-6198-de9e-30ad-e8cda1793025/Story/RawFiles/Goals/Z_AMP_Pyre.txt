@@ -5,7 +5,9 @@ DB_AMP_Pyre_Disabled(1);
 DB_AMP_Pyre_DecayScheduled(0);
 
 KBSECTION
-// per-fight points, graded into 10 statuses on every live hostile
+// pyre: escalating bonfire keyed to combat tempo. points accrue per boss-fight
+// from damage taken/kills/cc, decay each round, doused by acid/radiant. hidden
+// points map to 10 gradation statuses on every live hostile.
 
 // active for current difficulty + toggle
 QRY
@@ -205,7 +207,9 @@ IsBoss(_Dead, 1)
 THEN
 PROC_AMP_Pyre_AddPoints(_CombatID, 65);
 
-// recompute on death so a fast kill flares at once, ordered after the accrual above
+// on death recompute grade now on raw points, so a fast kill flares instantly
+// instead of waiting for the round-start halving. runs after the accrual above
+// so it sees this kill's points. round tick still settles afterward.
 IF
 Died((CHARACTER)_Dead)
 AND
@@ -234,7 +238,9 @@ DB_AMP_Pyre_DeathRecomputed(_CombatID)
 THEN
 NOT DB_AMP_Pyre_DeathRecomputed(_CombatID);
 
-// keeps 60% of points then grades once, grade moves only here so the fire steps once per round
+// round tick: keep 60% of points then grade once. grade only moves here, so the
+// fire steps once per round. slow down and the decay outruns accrual -> it cools,
+// but slower now (was halve/50%) so the hell lingers longer between turns.
 IF
 CombatRoundStarted((GUIDSTRING)_CombatID, (INTEGER)_Round)
 AND
@@ -316,7 +322,9 @@ NOT DB_AMP_Pyre_Points(_CombatID, _)
 THEN
 DB_AMP_Pyre_Points(_CombatID, _N);
 
-// level ramp first, then the hard multiplier, then thresholds. stored points stay raw
+// effective points for grading: party-level ramp first (slower at low levels,
+// full by ~10), then the hard multiplier, then thresholds 8/18/30/42/54/66/78/100/135/180.
+// stored points untouched, this only picks the gradation.
 PROC
 PROC_AMP_Pyre_Recompute((GUIDSTRING)_CombatID, (INTEGER)_N)
 AND

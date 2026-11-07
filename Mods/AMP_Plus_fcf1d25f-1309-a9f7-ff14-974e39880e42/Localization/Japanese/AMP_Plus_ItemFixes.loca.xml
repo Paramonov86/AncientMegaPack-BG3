@@ -14,4 +14,6 @@
 	<content contentuid="he50a07a0gca80g42fegbfecga6fb257377ce" version="1">異界の開錠</content>
 	<content contentuid="h64bd171fg3bc5g40f1gb681gfa5aa11c3144" version="1">ロックピックを装備し、&lt;b&gt;異界の宝箱&lt;/b&gt;を攻撃すると開きます。</content>
 	<content contentuid="h0935d89fgc7d8g46f0ga0e1gfe0661547650" version="1">戦闘中、この指輪で得た&lt;LSTag Type="Spell" Tooltip="Throw_Telekinesis_Skilthiryx"&gt;念動力&lt;/LSTag&gt;を発動した後、ターンごとに1回&lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;ボーナスアクション&lt;/LSTag&gt;で再び発動できる。</content>
+	<content contentuid="hd6d0aae1ge6aeg4d1ag81f6gd25225df880c" version="1">ダメージを受けるとき、そのダメージを半減する。&lt;br&gt;&lt;br&gt;あなたが&lt;b&gt;純血のエルフ&lt;/b&gt;であれば、この効果は自動的に発動し、&lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;リアクション&lt;/LSTag&gt;を消費しない。そうでなければ&lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;リアクション&lt;/LSTag&gt;を消費する。</content>
+	<content contentuid="hadcb02b6g819cg4b92g860eg33c48154e91c" version="1">&lt;b&gt;獣の心&lt;/b&gt;を持つ場合&lt;LSTag Tooltip="CriticalHit"&gt;クリティカル・ヒット&lt;/LSTag&gt;発生に必要な出目が&lt;b&gt;[1]&lt;/b&gt;低下する&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;自然の化身&lt;/LSTag&gt;中は&lt;b&gt;獣の心&lt;/b&gt;がなくても、代わりに&lt;b&gt;[2]&lt;/b&gt;低下する</content>
 </contentList>

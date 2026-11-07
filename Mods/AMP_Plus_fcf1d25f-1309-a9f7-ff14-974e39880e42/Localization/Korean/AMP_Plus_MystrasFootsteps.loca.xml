@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="h02b6169fge5dbg41bcgb6d1g100fd33adcd2" version="1">미스트라의 발자취</content>
+	<content contentuid="h830b6361gc763g475bg80a3g27f46986b496" version="1">발끝 가죽은 하얗게 닳아 있다. 이 장화를 신은 이는 좀처럼 땅을 딛지 않았다.</content>
+	<content contentuid="ha7ddec64g8666g4fe7g9408g235c0bcba5a8" version="1">미스트라의 축복</content>
+	<content contentuid="h4f2441d1g5fbfg4f52g9a17gbaa3008a1854" version="1">신는 이는 비행할 수 있고 낙하 피해를 받지 않으며, &lt;b&gt;모든 피해&lt;/b&gt;에 &lt;LSTag Tooltip="Resistant"&gt;저항&lt;/LSTag&gt;을 가집니다.</content>
 </contentList>

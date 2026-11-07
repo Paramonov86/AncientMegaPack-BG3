@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="h02b6169fge5dbg41bcgb6d1g100fd33adcd2" version="1">ミストラの足跡</content>
+	<content contentuid="h830b6361gc763g475bg80a3g27f46986b496" version="1">つま先の革は白く擦り切れている。このブーツを履いていた者は、めったに地に足をつけなかった。</content>
+	<content contentuid="ha7ddec64g8666g4fe7g9408g235c0bcba5a8" version="1">ミストラの祝福</content>
+	<content contentuid="h4f2441d1g5fbfg4f52g9a17gbaa3008a1854" version="1">履く者は飛行でき、落下ダメージを受けず、&lt;b&gt;すべてのダメージ&lt;/b&gt;に&lt;LSTag Tooltip="Resistant"&gt;抵抗&lt;/LSTag&gt;を持つ。</content>
 </contentList>

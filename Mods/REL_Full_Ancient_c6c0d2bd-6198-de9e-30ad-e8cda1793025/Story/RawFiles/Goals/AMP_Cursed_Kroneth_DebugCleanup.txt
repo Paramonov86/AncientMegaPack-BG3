@@ -4,7 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// debug wipe of kroneth state, also sweeps the tracking dbs to catch ex-party members
+// debug textevent: wipe all kroneth state off the party (statuses, obligations,
+// tracking dbs, damnation death-lock). own goal file so it works on existing saves.
+// sweeps db_players plus each tracking db to catch ex-party members.
 IF
 TextEvent("amp_kroneth_cleanup")
 THEN

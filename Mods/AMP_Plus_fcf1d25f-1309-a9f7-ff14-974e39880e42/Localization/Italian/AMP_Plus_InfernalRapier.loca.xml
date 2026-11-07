@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">Ottieni un bonus di +[1] alla &lt;LSTag Tooltip="SpellDifficultyClass"&gt;CD del tiro salvezza degli incantesimi&lt;/LSTag&gt; e di +[2] ai &lt;LSTag Tooltip="AttackRoll"&gt;Tiri per colpire&lt;/LSTag&gt; con gli incantesimi.</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">Calore assoluto</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">Quando infliggi danni con questo stocco in combattimento, crei &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Fuoco Infernale&lt;/LSTag&gt; in un raggio di &lt;b&gt;[1]&lt;/b&gt; per &lt;b&gt;[2]&lt;/b&gt; turni. Il &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Fuoco Infernale&lt;/LSTag&gt; non ha effetto su di te.&lt;br&gt;&lt;br&gt;Ignori la &lt;LSTag Tooltip="Resistant"&gt;Resistenza&lt;/LSTag&gt; e l'&lt;LSTag Tooltip="Immune"&gt;Immunità&lt;/LSTag&gt; dei bersagli ai danni da fuoco.</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">Calore di Avernus</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">Un affondo fulmineo che scatena un'ondata di fuoco infernale dall'arma.</content>
+</contentList>

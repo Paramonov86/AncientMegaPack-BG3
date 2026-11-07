@@ -1,0 +1,22 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+// the wild shape crit is open to every wearer, totem spirit or not
+
+IF
+DB_AMP_ShamanRobe_Equipped(_Char, _Tier)
+THEN
+DB_AMP_ShamanRobe_HasTotem((CHARACTER)_Char);
+
+IF
+SavegameLoaded()
+AND
+DB_AMP_ShamanRobe_Equipped(_Char, _Tier)
+THEN
+DB_AMP_ShamanRobe_HasTotem((CHARACTER)_Char);
+
+EXITSECTION
+ENDEXITSECTION

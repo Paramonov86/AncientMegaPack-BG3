@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">Obtienes un bonificador de +[1] a la &lt;LSTag Tooltip="SpellDifficultyClass"&gt;CD de salvación de conjuros&lt;/LSTag&gt; y de +[2] a las &lt;LSTag Tooltip="AttackRoll"&gt;tiradas de ataque&lt;/LSTag&gt; de conjuros.</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">Calor absoluto</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">Al infligir daño con este estoque en combate, creas &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Fuego Infernal&lt;/LSTag&gt; con un radio de &lt;b&gt;[1]&lt;/b&gt; durante &lt;b&gt;[2]&lt;/b&gt; turnos. El &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Fuego Infernal&lt;/LSTag&gt; no te afecta.&lt;br&gt;&lt;br&gt;Ignoras la &lt;LSTag Tooltip="Resistant"&gt;Resistencia&lt;/LSTag&gt; y la &lt;LSTag Tooltip="Immune"&gt;Inmunidad&lt;/LSTag&gt; de tus objetivos al daño de fuego.</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">Calor de Avernus</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">Una estocada veloz que desata una ola de fuego infernal desde el arma.</content>
+</contentList>

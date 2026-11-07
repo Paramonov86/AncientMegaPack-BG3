@@ -1,7 +1,9 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// no turn skip, AMP_VALDRYN_CHARGING blocks his action via ActionResourceBlock(ActionPoint)
+// DISABLED: Valdryn no longer skips his turn. He now stalks the player (amp_valdryn
+// archetype) and his proactive ACTION is blocked while AMP_VALDRYN_CHARGING via
+// ActionResourceBlock(ActionPoint). Turn-skip rule removed per design (close-distance boss).
 
 KBSECTION
 

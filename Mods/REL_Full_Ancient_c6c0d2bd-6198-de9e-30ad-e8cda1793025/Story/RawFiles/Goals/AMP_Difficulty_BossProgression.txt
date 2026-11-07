@@ -1,7 +1,9 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// boss progression, stack tier = player tier at kill, kept in DB_AMP_BossProgression_KillTier(Key, Tier)
+// boss progression v5 - tier-dependent stacks.
+// boss kill grants a stack matching the player's tier at kill time
+// (lower tier = weaker), recorded as DB_AMP_BossProgression_KillTier(Key, Tier).
 
 // boss registry - keys from DB_OnlyOnce (AMP_BossRewards)
 DB_AMP_BossProgression_BossKey("HIDDEN_WLD_Boosters_AMP_Boss_Ethel");
@@ -57,36 +59,37 @@ NOT DB_AMP_BossProgression_Applied(_Key)
 THEN
 DB_AMP_BossProgression_Applied(_Key);
 
-// dead, Z_AMP_Difficulty_ProgV6.txt recasts on level load
-// PROC
-// PROC_AMP_BossProgression_Scan()
-// AND
-// DB_AMP_Difficulty_Mode((STRING)_Mode)
-// AND
-// _Mode != "NONE"
-// THEN
-// PROC_AMP_BossProgression_ReapplyPlayers(_Mode);
+// disabled v6: Z_AMP_Difficulty_ProgV6.txt recasts on level load now
+//PROC
+//PROC_AMP_BossProgression_Scan()
+//AND
+//DB_AMP_Difficulty_Mode((STRING)_Mode)
+//AND
+//_Mode != "NONE"
+//THEN
+//PROC_AMP_BossProgression_ReapplyPlayers(_Mode);
 
-// dead, Z_AMP_Difficulty_ProgV6.txt takes the insert and recast
-// IF
-// DB_OnlyOnce((STRING)_Key)
-// AND
-// DB_AMP_BossProgression_BossKey(_Key)
-// AND
-// NOT DB_AMP_BossProgression_Applied(_Key)
-// AND
-// DB_AMP_Difficulty_Mode((STRING)_Mode)
-// AND
-// _Mode != "NONE"
-// AND
-// DB_AMP_CurrentTier((INTEGER)_Tier)
-// AND
-// DB_AMP_BossProgression_PlayerStatus(_Mode, (STRING)_StatusName)
-// THEN
-// DB_AMP_BossProgression_Applied(_Key);
-// DB_AMP_BossProgression_KillTier(_Key, _Tier);
-// PROC_AMP_BossProgression_ApplyPlayerStatusToAll(_StatusName);
-// PROC_AMP_BossProgression_BuffAllTrackedWithTier(_Mode, _Tier);
+// block 2: react to DB_OnlyOnce insert (boss killed), record killtier + buff tracked.
+// disabled v6: Z_AMP_Difficulty_ProgV6.txt handles the insert + recast
+//IF
+//DB_OnlyOnce((STRING)_Key)
+//AND
+//DB_AMP_BossProgression_BossKey(_Key)
+//AND
+//NOT DB_AMP_BossProgression_Applied(_Key)
+//AND
+//DB_AMP_Difficulty_Mode((STRING)_Mode)
+//AND
+//_Mode != "NONE"
+//AND
+//DB_AMP_CurrentTier((INTEGER)_Tier)
+//AND
+//DB_AMP_BossProgression_PlayerStatus(_Mode, (STRING)_StatusName)
+//THEN
+//DB_AMP_BossProgression_Applied(_Key);
+//DB_AMP_BossProgression_KillTier(_Key, _Tier);
+//PROC_AMP_BossProgression_ApplyPlayerStatusToAll(_StatusName);
+//PROC_AMP_BossProgression_BuffAllTrackedWithTier(_Mode, _Tier);
 
 // block 3: apply player statuses
 
@@ -109,7 +112,9 @@ DB_AMP_BossProgression_Applied((STRING)_Key)
 THEN
 ApplyStatus(_Player, _StatusName, -1.0, 1, _Player);
 
-// stub procs, ApplyByEffLevel still calls them
+// block 4: lazy apply - buff one npc/boss on detection.
+// disabled v6: Z_AMP_Difficulty_ProgV6.txt recasts per-creature on EnteredCombat.
+// stub procs kept so v3 ApplyByEffLevel calls still compile.
 PROC
 PROC_AMP_BossProgression_BuffNPC((CHARACTER)_Creature)
 THEN
@@ -122,12 +127,13 @@ DB_NOOP(1);
 
 // block 4b: dead code, was called from the now-disabled block 2
 
-// dead, Z_AMP_Difficulty_ProgV6.txt strips and applies per boss on DB_Players insert
-// IF
-// DB_Players((CHARACTER)_Player)
-// THEN
-// // cleanup + reapply
-// DB_NOOP(1);
+// block 5a: new party member - strip enemy buffs + apply player markers.
+// disabled v6: Z_AMP_Difficulty_ProgV6.txt does strip + per-boss apply on DB_Players insert.
+//IF
+//DB_Players((CHARACTER)_Player)
+//THEN
+//// cleanup + reapply (V6 does both now)
+//DB_NOOP(1);
 
 //IF
 //DB_Players((CHARACTER)_Player)
@@ -142,11 +148,12 @@ DB_NOOP(1);
 //THEN
 //ApplyStatus(_Player, _StatusName, -1.0, 1, _Player);
 
-// dead, Z_AMP_Difficulty_ProgV6.txt recasts on DB_AMP_Difficulty_Mode insert
-// IF
-// DB_AMP_Difficulty_Mode((STRING)_NewMode)
-// THEN
-// PROC_AMP_BossProgression_RemoveAllPlayerStatuses();
+// block 5b: difficulty change - swap player statuses.
+// disabled v6: Z_AMP_Difficulty_ProgV6.txt recasts on DB_AMP_Difficulty_Mode insert
+//IF
+//DB_AMP_Difficulty_Mode((STRING)_NewMode)
+//THEN
+//PROC_AMP_BossProgression_RemoveAllPlayerStatuses();
 
 //IF
 //DB_AMP_Difficulty_Mode((STRING)_NewMode)

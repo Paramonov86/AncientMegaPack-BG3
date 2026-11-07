@@ -149,8 +149,10 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 data "StatusEffect" "0eea63f6-16cf-4bec-bdd0-9cfdd66cd778"
 
 
-// Ring-slot knuckles, override the unarmed attack
-// T1 Jaguar's Bite
+// ============================================================
+// AMP KNUCKLES — ring-slot knuckles T1-T4 (override unarmed attack)
+// ============================================================
+// ============ T1 — Jaguar's Bite (Uncommon) ============
 new entry "AMP_Knuckle_1"
 type "Armor"
 using "_Ring_Magic"
@@ -245,7 +247,7 @@ using "KiEmpoweredStrikes"
 data "DisplayName" "h937bc99ag8408g4b49gafbag0362b9f662a4;1"
 data "Icon" "Spell_Transmutation_MagicWeapon"
 
-// T2 Seal of Savras
+// ============ T2 — Seal of Savras (Rare) ============
 new entry "AMP_Knuckle_2"
 type "Armor"
 using "_Ring_Magic"
@@ -310,7 +312,7 @@ data "StackId" "AMP_KNUCKLE2_WS"
 data "Boosts" "IF(IsUnarmedAttack()):DamageBonus(1d8,Bludgeoning);Reroll(MeleeUnarmedAttack,10,false)"
 data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog"
 
-// T3 The Sarrukh Sigil
+// ============ T3 — The Sarrukh Sigil (VeryRare) ============
 new entry "AMP_Knuckle_3"
 type "Armor"
 using "_Ring_Magic"
@@ -393,7 +395,7 @@ data "StackId" "AMP_KNUCKLE3_WS"
 data "Boosts" "IF(IsUnarmedAttack()):DamageBonus(1d10,Bludgeoning);IF(IsUnarmedAttack()):DamageBonus(1d4,Psychic)"
 data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog"
 
-// T4 Horus-Re's Verdict
+// ============ T4 — Horus-Re's Verdict (Legendary) ============
 new entry "AMP_Knuckle_4"
 type "Armor"
 using "_Ring_Magic"

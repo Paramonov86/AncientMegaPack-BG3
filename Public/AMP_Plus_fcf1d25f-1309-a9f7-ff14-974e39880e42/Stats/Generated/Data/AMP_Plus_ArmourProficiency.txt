@@ -29,6 +29,7 @@ new entry "MAG_Armour_H_124"
 type "Armor"
 using "MAG_Armour_H_124"
 data "Proficiency Group" ""
+data "Boosts" "RollBonus(SavingThrow, 2, Constitution)"
 
 new entry "MAG_Armour_H_126"
 type "Armor"

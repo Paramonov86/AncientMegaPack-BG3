@@ -3,7 +3,9 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
-// voss anti-exploit at the mountain pass: cliff pushes, forced disarm of his silver sword, free xp off the parked dragon
+// hard: voss anti-exploit at mountain pass. stops cliff-push kills, force-disarm of his
+// silver sword, and free xp off the parked dragon.
+// (1) attacked -> force vanilla teleport-out. (2) disarmed -> reclaim weapon and re-equip.
 
 IF
 AttackedBy(S_GLO_GithKnight_2adce2df-0799-49dc-b867-ba7ca21e9aea, (CHARACTER)_AttackerOwner, _, _, _, _, _)

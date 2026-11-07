@@ -2,4 +2,8 @@
 <contentList>
 	<content contentuid="hd91e2cffge5abg4394g86eagca08cbd5f721" version="1">Escroc</content>
 	<content contentuid="hd8e9ceb4g7e47g40fdga8a0g27acc30c40fa" version="1">Vous obtenez un bonus de +[1] aux jets d'initiative. Quand vous entrez en combat, vous devenez &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Invisible&lt;/LSTag&gt; pendant votre tour pour &lt;b&gt;[2]&lt;/b&gt; tours.</content>
+	<content contentuid="h9c3d3c45gf0ccg48fcg8b1cg642d4cabb345" version="1">Derrière la serrure</content>
+	<content contentuid="h6c3d6c67g43eag4f53gabb1g10178324a0b2" version="3">En crochetant une serrure, vous avez &lt;b&gt;[1] %&lt;/b&gt; de chances d'obtenir un &lt;LSTag Type="Status" Tooltip="AMP_RUNIC_SHARD_INFO"&gt;Éclat runique&lt;/LSTag&gt; aléatoire. Chaque serrure ne compte qu'une fois. Pas plus de &lt;b&gt;[2]&lt;/b&gt; éclats par &lt;LSTag Tooltip="LongRest"&gt;repos long&lt;/LSTag&gt;.</content>
+	<content contentuid="h86e3d9bbg624cg4760g8648gc352bdd22f93" version="1">Chance du voleur</content>
+	<content contentuid="h8419c8bcg2cd7g4510gb87ag8bf801513c8e" version="3">En crochetant une serrure, vous avez &lt;b&gt;[1] %&lt;/b&gt; de chances d'obtenir une &lt;LSTag Type="Status" Tooltip="AMP_VOID_CAPSULE_CHARGES"&gt;Capsule du Vide&lt;/LSTag&gt;. Chaque serrure ne compte qu'une fois. Pas plus de &lt;b&gt;[2]&lt;/b&gt; capsules par &lt;LSTag Tooltip="LongRest"&gt;repos long&lt;/LSTag&gt;.</content>
 </contentList>

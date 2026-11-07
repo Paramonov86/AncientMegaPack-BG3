@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+  <content contentuid="h1c55d917gfb1bg42cdgb13cgf6a90148e9ae" version="1">일반 원거리 공격 사거리가 [1]% 증가합니다. 무기의 일반 사거리를 넘는 사격에는 여전히 &lt;LSTag Tooltip="Disadvantage"&gt;불리&lt;/LSTag&gt;가 적용됩니다.</content>
+  <content contentuid="hcf7ffaf2g2d8dg409dgbf2fgc2412a60b6dc" version="1">일반 원거리 공격 사거리가 [1]% 증가하며, 대상이 [2]보다 멀리 있다면 원거리 무기 &lt;LSTag Tooltip="AttackRoll"&gt;명중 굴림&lt;/LSTag&gt;에 &lt;LSTag Tooltip="Advantage"&gt;유리 보정&lt;/LSTag&gt;을 받습니다. 무기의 일반 사거리를 넘는 사격에는 여전히 &lt;LSTag Tooltip="Disadvantage"&gt;불리&lt;/LSTag&gt;가 적용됩니다.</content>
+</contentList>

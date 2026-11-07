@@ -26,8 +26,11 @@ AND
 DB_AMP_Plus_LockGloves_Check(_LockGUID, (CHARACTER)_Char)
 AND
 IsLocked((ITEM)_LockGUID, 0)
+AND
+NOT DB_AMP_Plus_LockGloves_Rolled(_LockGUID)
 THEN
 NOT DB_AMP_Plus_LockGloves_Check(_LockGUID, _Char);
+DB_AMP_Plus_LockGloves_Rolled(_LockGUID);
 PROC_AMP_Plus_LockGloves_Opened(_Char);
 
 IF
@@ -39,7 +42,16 @@ IsLocked((ITEM)_LockGUID, 1)
 THEN
 NOT DB_AMP_Plus_LockGloves_Check(_LockGUID, _Char);
 
-// a lever can shut a door again, so the payout needs a per-rest ceiling
+IF
+ObjectTimerFinished(_LockGUID, "AMP_Plus_LockGloves_Check")
+AND
+DB_AMP_Plus_LockGloves_Check(_LockGUID, (CHARACTER)_Char)
+AND
+DB_AMP_Plus_LockGloves_Rolled((ITEM)_LockGUID)
+THEN
+NOT DB_AMP_Plus_LockGloves_Check(_LockGUID, _Char);
+
+// a lever can shut a door again, so each lock rolls once and the payout has a per-rest ceiling
 // ordered rules, the tally is seeded before it is read
 
 PROC

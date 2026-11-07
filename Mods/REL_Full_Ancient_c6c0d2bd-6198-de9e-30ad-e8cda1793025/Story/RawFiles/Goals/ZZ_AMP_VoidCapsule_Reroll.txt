@@ -3,6 +3,11 @@ SubGoalCombiner SGC_AND
 INITSECTION
 KBSECTION
 
+// reroll
+// item with amp_reroll_window status into capsule -> reroll reward.
+// also handles reward-container ux (arming, ejecting player items,
+// applying reroll status to items taken from the container).
+
 // entry from dispatch
 PROC
 PROC_AMP_VoidCapsule_RerollStart((ITEM)_Item, (ITEM)_Capsule, (CHARACTER)_Owner)
@@ -29,9 +34,14 @@ PROC_AMP_VoidCapsule_ReleaseBusy(_Capsule);
 
 // mark every reward cube so removedfrom can apply amp_reroll_window
 // seedreset_done (core) sets pendingreward(owner, context, template, capsule)
-// capstype/cointype use a reverse lookup on the cube template, _capsule may already be invalid
-// a reroll that depletes the capsule fires its 500ms destroy timer before the seedreset decoy chain finishes
-// the registry is 1:1 on reward(_,_,_template), the reverse bind is unambiguous
+// for coin / salvage / reroll / pity spawns. we catch the addedto here
+// regardless of context, so a player who took anything out of any reward cube
+// gets the reroll status on the extracted items.
+// capstype/cointype resolve via reverse lookup on the cube template, not via
+// _capsule: when a reroll depletes the capsule, its destroy timer (500ms) can
+// fire before the seedreset decoy chain finishes, leaving _capsule's handle
+// invalid by the time this rule runs. reward(_,_,_template) is 1:1 in the
+// registry, so the reverse bind is unambiguous.
 IF
 AddedTo((ITEM)_Container, (CHARACTER)_Owner, _)
 AND
@@ -74,8 +84,10 @@ ObjectTimerLaunch(_Item, "AMP_VoidCapsule_Eject", 100, 0);
 
 // removedfrom: apply amp_reroll_window to legitimate items
 // not isshard guard: shards from salvage/pity contexts must not be flagged
-// as rerollable. A flagged shard matches IsRerollItem and dispatch fires the reroll proc on insertion
-// the reward lookup has no shards capsule type, so the shard sits broken in the capsule
+// as rerollable. without this guard, shard extracted from a reward cube
+// gets reroll_window + iteminfo, then isrerollitem qry matches it, then
+// dispatch rule 2 fires reroll proc on shard insertion -> reward lookup
+// fails (no "shards" capsule type) -> shard sits broken in capsule.
 IF
 RemovedFrom((ITEM)_Item, (ITEM)_Container)
 AND

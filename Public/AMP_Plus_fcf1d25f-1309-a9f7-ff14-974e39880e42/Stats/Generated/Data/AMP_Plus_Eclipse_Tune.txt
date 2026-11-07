@@ -184,8 +184,10 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_ECLIPSE_DUR3"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
+// one eclipse per fight; leaving combat and re-engaging starts a new fight
 new entry "AMP_PLUS_ECLIPSE_SPENT"
 type "StatusData"
 data "StatusType" "BOOST"
 data "StackId" "AMP_PLUS_ECLIPSE_SPENT"
+data "RemoveEvents" "OnCombatEnded"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"

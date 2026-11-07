@@ -1,7 +1,9 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// empty stub, the ZZ_AMP_VoidCapsule_* goals cover it
+// replaced by zz_amp_voidcapsule_v2 modular architecture (2026-04-24).
+// see zz_amp_voidcapsule_*.txt files.
+// backup: _mod_backups/voidcapsule_v2_refactor_2026-04-24/
 KBSECTION
 EXITSECTION
 ENDEXITSECTION

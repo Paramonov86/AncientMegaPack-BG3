@@ -4,8 +4,10 @@ INITSECTION
 
 KBSECTION
 
-// covers amulet and ring2 too, v2's rules stay frozen in existing saves
-// 7s timer overwrites the incomplete reapply of the 5s one
+// shard transfer fix v3.
+// v2 missed amulet and ring2 (and its rules are frozen on old saves). v3 does the
+// full clean + reapply across all slots including amulet/ring2.
+// 7s timer runs after v2's 5s and overwrites its incomplete reapply.
 
 IF
 LevelGameplayStarted(_Level, _)

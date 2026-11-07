@@ -108,121 +108,15 @@ NOT DB_AMP_Plus_UltraWavePruneQ(_Mob, _Wave);
 NOT DB_AMP_Plus_UltraWaveMember(_Mob, _Wave);
 PROC_AMP_Plus_UltraWaveDrainPruneQ();
 
-IF
-UsingSpell((CHARACTER)_Caster, "Shout_AMP_Plus_UltraWaveLimit", _, _, _)
-AND
-IsPlayer(_Caster, 1)
-AND
-GetHostCharacter(_Caster)
-AND
-NOT DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-DB_AMP_Plus_UltraWaveMenu(_Caster);
-OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_1");
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_1", 1)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 1);
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_1", 0)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_2");
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_2", 1)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 2);
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_2", 0)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_3");
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_3", 1)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 3);
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_3", 0)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_4");
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_4", 1)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 4);
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_4", 0)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_5");
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_5", 1)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 5);
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_5", 0)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_Unlimited");
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_Unlimited", 1)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 0);
-
-IF
-MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_Unlimited", 0)
-AND
-DB_AMP_Plus_UltraWaveMenu(_Caster)
-THEN
-OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_1");
-
 PROC
-PROC_AMP_Plus_UltraWaveSetLimit((CHARACTER)_Caster, (INTEGER)_Limit)
+PROC_AMP_Plus_UltraWaveSetLimit((INTEGER)_Limit)
 AND
 DB_AMP_Plus_UltraWaveLimit((INTEGER)_Old)
 THEN
 NOT DB_AMP_Plus_UltraWaveLimit(_Old);
 DB_AMP_Plus_UltraWaveLimit(_Limit);
-NOT DB_AMP_Plus_UltraWaveMenu(_Caster);
 PROC_AMP_Plus_UltraWaveAdoptExisting();
 PROC_AMP_Plus_UltraWaveSyncOmen();
-PROC_AMP_PlayModeEffect(_Caster);
-OpenMessageBox(_Caster, "AMP_Plus_UltraWaveLimit_Done");
-
-IF
-SavegameLoaded()
-AND
-DB_AMP_Plus_UltraWaveMenu((CHARACTER)_Caster)
-THEN
-NOT DB_AMP_Plus_UltraWaveMenu(_Caster);
 
 QRY
 QRY_AMP_Plus_UltraWaveAlive((INTEGER)_Wave, (GUIDSTRING)_Combat)

@@ -394,9 +394,9 @@ data "StatusType" "BOOST"
 using "ARMOURC2"
 data "StackId" "ARMOURC2_4"
 
-// Robes of the False Prophet
+// ================ Robes of the False Prophet ================
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 new entry "MAG_Armour_C_3"
 type "Armor"
 using "MAG_Armour_C_1"
@@ -441,7 +441,7 @@ data "StackId" "ARMOURC3_HEAL"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "OnApplyFunctors" "RegainHitPoints(1d4)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Armour_C_3_2"
 type "Armor"
 using "MAG_Armour_C_3"
@@ -477,7 +477,7 @@ using "ARMOURC3_HEAL"
 data "StackId" "ARMOURC3_HEAL_2"
 data "OnApplyFunctors" "RegainHitPoints(1d6)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Armour_C_3_3"
 type "Armor"
 using "MAG_Armour_C_3"
@@ -504,7 +504,7 @@ using "ARMOURC3_HEAL"
 data "StackId" "ARMOURC3_HEAL_3"
 data "OnApplyFunctors" "RegainHitPoints(1d8)"
 
-// COMMON (empty)
+// ================ COMMON (empty) ================
 new entry "MAG_Armour_C_3_4"
 type "Armor"
 using "MAG_Armour_C_3"
@@ -512,9 +512,9 @@ data "Rarity" "Common"
 data "ValueOverride" "1"
 data "PassivesOnEquip" ""
 
-// Zinghi's Tunic, Necro Nuke
+// ================ Zinghi's Tunic — Necro Nuke ================
 
-// Uncommon
+// ================ Uncommon ================
 new entry "MAG_Armour_C_4"
 type "Armor"
 using "MAG_Armour_C_1"
@@ -541,7 +541,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsNecroNuke() and not Self()"
 data "StatsFunctors" "ApplyStatus(AMP_DEATHCLERIC_FETID_ROT, 100, 2)"
 
-// Rare
+// ================ Rare ================
 new entry "MAG_Armour_C_4_2"
 type "Armor"
 using "MAG_Armour_C_4"
@@ -557,7 +557,7 @@ using "MAG_Armour_C_4_bonus"
 data "DescriptionParams" "3"
 data "StatsFunctors" "ApplyStatus(AMP_DEATHCLERIC_FETID_ROT, 100, 3)"
 
-// Very Rare
+// ================ Very Rare ================
 new entry "MAG_Armour_C_4_3"
 type "Armor"
 using "MAG_Armour_C_4"
@@ -588,7 +588,7 @@ data "DescriptionParams" "50"
 data "Properties" "Highlighted"
 data "Boosts" "IF(HasHPPercentageLessThan(51, context.Target) and IsNecroNuke()):CriticalHit(AttackRoll,Success,ForcedAlways)"
 
-// Legendary
+// ================ Legendary ================
 new entry "MAG_Armour_C_4_4"
 type "Armor"
 using "MAG_Armour_C_4"
@@ -614,7 +614,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsNecroNuke()"
 data "StatsFunctors" "RegainHitPoints(SELF,(DamageDone)/2,Living);IF(Tagged('UNDEAD',context.Source)):RegainHitPoints(SELF,(DamageDone)/2,Guaranteed)"
 
-// AMP Inflict Wounds
+// ================ AMP Inflict Wounds ================
 new entry "AMP_Target_InflictWounds"
 type "SpellData"
 data "SpellType" "Target"
@@ -1078,6 +1078,7 @@ using "MAG_Armour_C_10_bonus"
 data "DescriptionParams" "5"
 data "Boosts" "Skill(Perception, 5)"
 
+// Clothes of the Superior Assassin — Invisibility on surprised (T2+), stealth, shadow crit dice
 new entry "MAG_Armour_C_11"
 type "Armor"
 using "MAG_Armour_C_1"
@@ -1278,6 +1279,7 @@ data "DescriptionParams" "Level/3+1;3"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsCantrip()):RollBonus(Attack,Level/3+1)"
 
+// Ytsuken's Robe — Evoker's Robe (auto-crit, fireball toggle, arcane recovery, chain lightning AP)
 new entry "MAG_Armour_C_14"
 type "Armor"
 using "MAG_Armour_C_1"
@@ -1459,7 +1461,7 @@ data "Boosts" "DamageReduction(All,Flat,2*IntelligenceModifier)"
 data "RemoveConditions" ""
 data "RemoveEvents" "OnDamage"
 
-// UNCOMMON: The Still Mantle
+// ================ UNCOMMON: The Still Mantle ================
 
 new entry "AMP_AbjurationWard_T1"
 type "SpellData"
@@ -1495,7 +1497,7 @@ data "RootTemplate" "c8d92a1a-c162-4296-8eff-af62fcca357f"
 data "PassivesOnEquip" "MAG_Armour_C_16_bonus"
 data "Boosts" "UnlockSpell(AMP_AbjurationWard_T1)"
 
-// RARE
+// ================ RARE ================
 
 new entry "AMP_AbjurationWard_T2"
 type "SpellData"
@@ -1525,7 +1527,7 @@ data "ComboCategory" "d2"
 data "PassivesOnEquip" "MAG_Armour_C_16_bonus;MAG_Armour_C_16_2_Stoic"
 data "Boosts" "UnlockSpell(AMP_AbjurationWard_T2)"
 
-// EPIC
+// ================ EPIC ================
 
 new entry "AMP_AbjurationWard_T3"
 type "SpellData"
@@ -1546,7 +1548,7 @@ data "ComboCategory" "d3"
 data "PassivesOnEquip" "MAG_Armour_C_16_bonus;MAG_Armour_C_16_2_Stoic;Sentinel_Attack"
 data "Boosts" "UnlockSpell(AMP_AbjurationWard_T3)"
 
-// LEGENDARY
+// ================ LEGENDARY ================
 
 new entry "AMP_AbjurationWard_T4"
 type "SpellData"
@@ -2528,7 +2530,7 @@ data "Boosts" ""
 
 // Shaman's Garb
 
-// SHARED
+// ================ SHARED ================
 
 new entry "MAG_Armour_C_28_toggle"
 type "PassiveData"
@@ -2543,7 +2545,7 @@ data "StatusType" "BOOST"
 data "StackId" "ARMOURC28_WS_MARKER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// RARE (BASE)
+// ================ RARE (BASE) ================
 
 new entry "MAG_Armour_C_28"
 type "Armor"
@@ -2612,7 +2614,7 @@ data "StackId" "ARMOURC28_WS_CRIT"
 data "Boosts" "ReduceCriticalAttackThreshold(4)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// UNCOMMON
+// ================ UNCOMMON ================
 
 new entry "MAG_Armour_C_28_1"
 type "Armor"
@@ -2669,7 +2671,7 @@ data "StackId" "ARMOURC28_WS_CRIT"
 data "Boosts" "ReduceCriticalAttackThreshold(2)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// VERYRARE
+// ================ VERYRARE ================
 
 new entry "MAG_Armour_C_28_3"
 type "Armor"
@@ -2726,7 +2728,7 @@ data "StackId" "ARMOURC28_WS_CRIT"
 data "Boosts" "ReduceCriticalAttackThreshold(6)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// LEGENDARY
+// ================ LEGENDARY ================
 
 new entry "MAG_Armour_C_28_4"
 type "Armor"
@@ -3344,9 +3346,9 @@ using "MAG_ARMOURA35"
 data "StackId" "MAG_ARMOURA35_4"
 data "Boosts" "Ability(Dexterity,10)"
 
-// Armour of the Sage Revenant
+// ================ Armour of the Sage Revenant ================
 
-// RARE BLOCK (BASE)
+// ================ RARE BLOCK (BASE) ================
 new entry "MAG_Armour_A_36"
 type "Armor"
 using "MAG_Armour_A_31"
@@ -3394,7 +3396,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsChillTouch() and HasStatus('ARMOURA36_MARKER', context.Source)"
 data "StatsFunctors" "RemoveStatus(SELF,AMP_ANCIENTCHAOS)"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 new entry "MAG_Armour_A_36_1"
 type "Armor"
 using "MAG_Armour_A_36"
@@ -3411,7 +3413,7 @@ using "MAG_Armour_A_36_bonus"
 data "DescriptionParams" "2"
 data "StatsFunctors" "ApplyStatus(AMP_DEATHCLERIC_FETID_ROT,100,2)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Armour_A_36_3"
 type "Armor"
 using "MAG_Armour_A_36"
@@ -3436,7 +3438,7 @@ data "DescriptionParams" "DealDamage(,Necrotic);4"
 data "Properties" "Highlighted"
 data "Boosts" "IF(HasStatus('CHILL_TOUCH',context.Target) and IsDamageTypeNecrotic()):MinimumRollResult(Damage,4)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Armour_A_36_4"
 type "Armor"
 using "MAG_Armour_A_36"
@@ -4028,9 +4030,9 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "HasStatus('SURPRISED',context.Target) or HasStatus('PARALYZED',context.Target)"
 data "StatsFunctors" "RestoreResource(SELF,BonusActionPoint,1,0)"
 
-// Emissary's Attire
+// ================ Emissary's Attire ================
 
-// RARE BLOCK (base)
+// ================ RARE BLOCK (base) ================
 new entry "MAG_Armour_A_44"
 type "Armor"
 using "MAG_Armour_A_31"
@@ -4079,7 +4081,7 @@ data "StackId" "ARMOURA44_BLESS_ADVANTAGE"
 data "Boosts" "Advantage(AttackRoll)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 new entry "MAG_Armour_A_44_1"
 type "Armor"
 using "MAG_Armour_A_44"
@@ -4108,7 +4110,7 @@ using "ARMOURA44_BLESS_AURA"
 data "StackId" "ARMOURA44_BLESS_AURA_1"
 data "AuraRadius" "4"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "MAG_Armour_A_44_3"
 type "Armor"
 using "MAG_Armour_A_44"
@@ -4144,7 +4146,7 @@ using "ARMOURA44_BLESS_AURA"
 data "StackId" "ARMOURA44_BLESS_AURA_3"
 data "AuraRadius" "8"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Armour_A_44_4"
 type "Armor"
 using "MAG_Armour_A_44"
@@ -4488,7 +4490,7 @@ using "MAG_Armour_A_48_bonus"
 data "DescriptionParams" "Distance(20);10"
 data "StatsFunctors" "CreateSurface(20,10,FogCloud)"
 
-// PIRATE DEMOLITIONIST LEATHER ARMOUR
+// ================ PIRATE DEMOLITIONIST LEATHER ARMOUR ================
 
 // --- Sneak Attack → Spell Save DC passive (base + tiers) ---
 
@@ -5447,6 +5449,7 @@ data "Description" "hf97b213dg6513g4931g9dc5gbed93e1f0864;1"
 data "DescriptionParams" "22;DealDamage(1d6,Force);DealDamage(,Force)"
 data "Boosts" "IF(AMP_CharismaGreaterThan(22,context.Source)):CharacterWeaponDamage(1d6,Force);IF(AMP_CharismaGreaterThan(22,context.Source) and Tagged('REALLY_DRAGONBORN',context.Source)):CharacterWeaponDamage(max(1,CharismaModifier*2),Force)"
 
+// Dragon Breath — passive + interrupt
 new entry "MAG_Armour_G_53_DragonBreath"
 type "PassiveData"
 data "DisplayName" "hab17a71aga3a7g49e9g9477g4b29a0be76fa;1"
@@ -5455,6 +5458,7 @@ data "DescriptionParams" "Distance(3)"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockInterrupt(Interrupt_MAG_Armour_G_53_DragonBreath)"
 
+// Dragon Breath — interrupt: enemy enters 3m range → breath weapon reaction
 new entry "Interrupt_MAG_Armour_G_53_DragonBreath"
 type "InterruptData"
 data "DisplayName" "hab17a71aga3a7g49e9g9477g4b29a0be76fa;1"
@@ -6176,7 +6180,9 @@ data "RemoveConditions" "(IsMeleeWeaponAttack() or IsUnarmedAttack()) and HasDam
 data "RemoveEvents" "OnAttack"
 data "StatusEffect" "19109fc0-ce29-4f04-9ac6-5e6400fa5e05"
 
-// Gloves of Eternal Frost, MAG_Armour_G_64, shared passives
+// Gloves of Eternal Frost (MAG_Armour_G_64)
+// --- SHARED PASSIVES ---
+// Passive 1: Frost Encrustation (all tiers)
 new entry "MAG_Armour_G_64_FrostEnc"
 type "PassiveData"
 data "DisplayName" "ha144b82ag08abg471eg9616g7c83c88da4c6;1"
@@ -6256,6 +6262,7 @@ data "Rarity" "Legendary"
 data "ComboCategory" "d4"
 data "PassivesOnEquip" "MAG_Armour_G_64_FrostEnc;MAG_Armour_G_64_IceMastery;MAG_Armour_G_64_VoidCapsule;MAG_Armour_G_64_4_FrozenCrit"
 
+// Passive 4: Auto-crit vs Frozen (Legendary only) — WITHOUT CHANGES
 new entry "MAG_Armour_G_64_4_FrozenCrit"
 type "PassiveData"
 data "DisplayName" "hb93bcb66ga263g4c4dgbba8g371d2304e96b;1"
@@ -7656,7 +7663,7 @@ using "MAG_Armour_H_86_bonus"
 data "DescriptionParams" "6"
 data "Boosts" "Initiative(6)"
 
-// Tidequeen's Diadem - RARE BLOCK (BASE)
+// ================ Tidequeen's Diadem - RARE BLOCK (BASE) ================
 new entry "MAG_Armour_H_87"
 type "Armor"
 using "_Head"
@@ -7689,7 +7696,7 @@ data "Range" "6"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand"
 data "RootSpellID" ""
 
-// Tidequeen's Diadem - UNCOMMON BLOCK
+// ================ Tidequeen's Diadem - UNCOMMON BLOCK ================
 new entry "MAG_Armour_H_87_1"
 type "Armor"
 using "MAG_Armour_H_87"
@@ -7712,7 +7719,7 @@ data "UseCosts" "BonusActionPoint:1"
 data "Base" "2"
 data "Range" "4"
 
-// Tidequeen's Diadem - VERYRARE BLOCK
+// ================ Tidequeen's Diadem - VERYRARE BLOCK ================
 new entry "MAG_Armour_H_87_3"
 type "Armor"
 using "MAG_Armour_H_87"
@@ -7735,7 +7742,7 @@ data "UseCosts" "BonusActionPoint:1"
 data "Base" "4"
 data "Range" "8"
 
-// Tidequeen's Diadem - LEGENDARY BLOCK
+// ================ Tidequeen's Diadem - LEGENDARY BLOCK ================
 new entry "MAG_Armour_H_87_4"
 type "Armor"
 using "MAG_Armour_H_87"
@@ -8165,6 +8172,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "HasStatus('MAG_PSYCHIC_MIND_FOCUS_DR_TECHNICAL') and not StatusDurationEqualOrMoreThan(context.Source,'MAG_PSYCHIC_MIND_FOCUS',3)"
 data "StatsFunctors" "RemoveStatus(SELF,MAG_PSYCHIC_MIND_FOCUS_DR_TECHNICAL)"
 
+// VFX statuses — psychic damage to victim via OnApplyFunctors
 new entry "MAG_ARMOUR_H_93_VFX"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -9354,7 +9362,7 @@ data "Weight" "1"
 data "PassivesOnEquip" "MAG_Armour_H_111_Focus_Passive"
 data "Boosts" "AC(1);UnlockSpell(Target_AMP_H111_WaterSummon_2)"
 
-// Aquamancer's Fluid Helm - RARE BLOCK
+// ================ Aquamancer's Fluid Helm - RARE BLOCK ================
 new entry "MAG_Armour_H_111_1"
 type "Armor"
 using "MAG_Armour_H_111"
@@ -10999,7 +11007,7 @@ data "StackId" "MAG_ARMOUR_B_136_VFX"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 data "StatusEffect" "0ac412d3-0058-40ff-8cb6-00002d65b533"
 
-// Chronomancer's Stride
+// ================ Chronomancer's Stride ================
 // VeryRare (base)
 new entry "MAG_Armour_B_136"
 type "Armor"
@@ -11126,7 +11134,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "(HasStatus('SG_Prone',context.Target) or HasStatus('PRONE_ICE',context.Target)) and not HasStatus('STUNNED',context.Target)"
 data "StatsFunctors" "ApplyStatus(STUNNED,100,1)"
 
-// Uncommon Block
+// ================ Uncommon Block ================
 new entry "MAG_Armour_B_136_1"
 type "Armor"
 using "MAG_Armour_B_136"
@@ -11136,7 +11144,7 @@ data "ComboCategory" "d1"
 data "PassivesOnEquip" "MAG_Armour_B_136_bonus"
 data "StatusOnEquip" "ARMOURB136_TECHNICAL"
 
-// Rare Block
+// ================ Rare Block ================
 new entry "MAG_Armour_B_136_2"
 type "Armor"
 using "MAG_Armour_B_136"
@@ -11146,7 +11154,7 @@ data "ComboCategory" "d2"
 data "PassivesOnEquip" "MAG_Armour_B_136_bonus;MAG_Armour_B_136_TimeFlow"
 data "StatusOnEquip" "ARMOURB136_TECHNICAL"
 
-// Legendary Block
+// ================ Legendary Block ================
 new entry "MAG_Armour_B_136_4"
 type "Armor"
 using "MAG_Armour_B_136"
@@ -11326,7 +11334,7 @@ data "TickFunctors" "IF(IsMageArmored() and Combat()):CreateSurface(2,1,Fire);GR
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "ApplyEffect" "c1b68b9c-4423-4cbb-a687-63d63bcb0c59"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "MAG_Armour_B_138_2"
 type "Armor"
 using "MAG_Armour_B_138"
@@ -11360,7 +11368,7 @@ using "AMP_MAGIC_FLAME_1"
 data "TickFunctors" "IF(IsMageArmored() and Combat()):CreateSurface(2,2,Fire);GROUND:IF(IsMageArmored() and Combat()):CreateSurface(2,2,Fire)"
 data "ApplyEffect" "c1b68b9c-4423-4cbb-a687-63d63bcb0c59"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "MAG_Armour_B_138_4"
 type "Armor"
 using "MAG_Armour_B_138"
@@ -11446,7 +11454,9 @@ data "RemoveConditions" "not HasMaxHP()"
 data "RemoveEvents" "OnCombatEnded;OnDamage;OnTurn"
 data "StatusEffect" "9557116c-aa28-464d-856b-fea287a2fc5d"
 
-// Aquamancer set, Tidequeen's Diadem
+// ================================================================================
+// AQUAMANCER SET — Tidequeen's Diadem (H_87)
+// ================================================================================
 
 // --- Visible passive (base T1) ---
 new entry "MAG_Armour_H_87_Tidequeen_Passive"
@@ -11467,6 +11477,8 @@ new entry "MAG_Armour_H_87_Tidequeen_Passive_T4"
 type "PassiveData"
 using "MAG_Armour_H_87_Tidequeen_Passive"
 
+// --- Cooldown status (shared) ---
+// --- Hidden passive — OnStatusApplied check (base T1, SpellSaveDC) ---
 new entry "ARMOURH87_Tidequeen_Check"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -11548,7 +11560,9 @@ using "ARMOURH87_TIDEQUEEN_AURA"
 data "StackId" "ARMOURH87_TIDEQUEEN_AURA_T4"
 data "AuraStatuses" "TARGET:IF(Character() and not Dead()):ApplyStatus(ARMOURH87_TIDEQUEEN_MARK_T4)"
 
-// Aquamancer set, Aquamancer's Fluid Helm
+// ================================================================================
+// AQUAMANCER SET — Aquamancer's Fluid Helm (H_111)
+// ================================================================================
 
 // --- Depthward Focus (VeryRare only) ---
 new entry "MAG_Armour_H_111_Focus_Passive"

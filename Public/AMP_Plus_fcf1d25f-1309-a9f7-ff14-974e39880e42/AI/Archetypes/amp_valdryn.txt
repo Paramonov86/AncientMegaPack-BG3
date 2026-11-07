@@ -1,4 +1,6 @@
-// closes to point-blank for the dread aura. No proactive ACTION while AMP_VALDRYN_CHARGING
+// Valdryn - stalker. Closes to point-blank every turn so the dread aura reaches and
+// AoO deters fleeing. Proactive ACTION is blocked while CHARGING (see AMP_VALDRYN_CHARGING);
+// he stalks, pulls foes back (bonus action), and reacts (Parry/Counter). No turn-skip.
 
 USING melee_smart
 

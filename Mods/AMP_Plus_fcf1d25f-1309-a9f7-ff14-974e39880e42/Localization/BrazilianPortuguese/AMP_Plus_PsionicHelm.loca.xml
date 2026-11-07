@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h3ad726bfg6185g4d0egbf76ge6b4e51199b4" version="1">Gelo astral</content>
+	<content contentuid="hbec12d5cg9df0g404egb8e4g03fb1d2bf926" version="1">Você recebe &lt;LSTag Tooltip="Resistant"&gt;resistência&lt;/LSTag&gt; a&lt;b&gt;[1]&lt;/b&gt; e&lt;b&gt;[2]&lt;/b&gt;.</content>
+	<content contentuid="h98587373gd4a8g4b33g9402g6bb6c2796641" version="1">Teia mental</content>
+	<content contentuid="h1c4b9247gaeb9g47aagbc48g9ee9d104497c" version="1">Você tem &lt;b&gt;vantagem&lt;/b&gt; nos &lt;LSTag Tooltip="SavingThrow"&gt;testes de resistência&lt;/LSTag&gt; de &lt;b&gt;Inteligência&lt;/b&gt;, &lt;b&gt;Sabedoria&lt;/b&gt; e &lt;b&gt;Carisma&lt;/b&gt;.</content>
+	<content contentuid="hd7ca0265g642fg4f8dg99b1g0d848caeaf51" version="1">Quando você causa&lt;b&gt;[1]&lt;/b&gt;, também inflige &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Fadiga Mental&lt;/LSTag&gt; por &lt;b&gt;[2]&lt;/b&gt; turnos.</content>
+</contentList>

@@ -1,3 +1,7 @@
+// Vasht - gith berserker-hunter. Permanent Rage.
+// Goes for weakened and concentrating prey; ignores summons-vs-real distinction;
+// hunts illithids, summons and Shielded foes with extra weight.
+
 USING melee
 
 MODIFIER_HIT_CHANCE_STUPIDITY                    0.85

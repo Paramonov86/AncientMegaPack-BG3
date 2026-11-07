@@ -4,11 +4,11 @@ INITSECTION
 // game mode core: casual / normal / hard / stock select.
 // replaces the old difficulty dialog chain.
 
-// disabled scaled flow
-// NOT DB_AMP_Difficulty_Chosen(0);
-// DB_AMP_Difficulty_Chosen(1);
-// NOT DB_AMP_Difficulty_Asked(0);
-// DB_AMP_Difficulty_Asked(1);
+// old scaled flow, left here dead for reference
+//NOT DB_AMP_Difficulty_Chosen(0);
+//DB_AMP_Difficulty_Chosen(1);
+//NOT DB_AMP_Difficulty_Asked(0);
+//DB_AMP_Difficulty_Asked(1);
 
 // standard tier maps - npc/boss split, 6 tiers
 DB_AMP_DiffV3_TierMap("STANDARD", 0, "AMP_NPC_STANDARD_T0_V4");

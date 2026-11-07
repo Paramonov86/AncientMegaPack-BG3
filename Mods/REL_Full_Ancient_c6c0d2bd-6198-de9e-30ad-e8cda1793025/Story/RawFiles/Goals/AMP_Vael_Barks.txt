@@ -3,7 +3,9 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
-// the doppelganger copies a player on combat enter so its template stops matching, gate on the chase marker
+// vael combat barks (mirror doppelganger). it copies a player on combat enter so
+// the template stops matching - gate on the chase marker and tag it after it takes
+// a form so the bark dialog can route to it.
 
 IF
 StatusApplied((CHARACTER)_Mob, "AMP_MIRROR_INFORM", _, _)

@@ -4,7 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// permanent death on the bad ending, kill delayed so the closing messagebox stays readable
+// kroneth damnation: permanent death on the bad ending.
+// delayed kill so the closing messagebox is readable, blocks resurrection,
+// drops from party. re-kill listeners below catch mod content that bypasses the block.
 
 // trigger: blacklist + delayed death
 IF

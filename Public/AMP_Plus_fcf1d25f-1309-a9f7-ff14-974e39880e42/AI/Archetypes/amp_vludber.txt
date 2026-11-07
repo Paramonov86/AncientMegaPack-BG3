@@ -1,3 +1,7 @@
+// Vludber - control-bard. Battlefield-control specialist built on the tactical mage base:
+// craves control, debuffs dangerous foes, and guards its own concentration (its lockdown
+// spells - Hypnotic Pattern, Confusion, Hold - are concentration effects).
+
 USING humanoid_mage_tactical
 
 // Land control on the weakest save, not just any target

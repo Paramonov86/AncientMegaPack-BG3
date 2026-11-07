@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">&lt;LSTag Tooltip="SpellDifficultyClass"&gt;呪文セーヴ難易度&lt;/LSTag&gt;に+[1]、呪文の&lt;LSTag Tooltip="AttackRoll"&gt;攻撃ロール&lt;/LSTag&gt;に+[2]のボーナスを得る。</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">絶対の灼熱</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">戦闘中にこのレイピアでダメージを与えると、半径&lt;b&gt;[1]&lt;/b&gt;の&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;地獄の炎&lt;/LSTag&gt;を&lt;b&gt;[2]&lt;/b&gt;ターンの間生み出す。&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;地獄の炎&lt;/LSTag&gt;はあなたに影響しない。&lt;br&gt;&lt;br&gt;目標の火ダメージへの&lt;LSTag Tooltip="Resistant"&gt;抵抗&lt;/LSTag&gt;と&lt;LSTag Tooltip="Immune"&gt;完全耐性&lt;/LSTag&gt;を無視する。</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">アヴェルヌスの灼熱</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">素早く踏み込み、武器から地獄の炎の波を放つ。</content>
+</contentList>

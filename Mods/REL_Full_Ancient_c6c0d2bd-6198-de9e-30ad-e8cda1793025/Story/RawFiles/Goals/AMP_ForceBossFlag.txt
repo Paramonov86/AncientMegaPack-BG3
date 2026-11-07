@@ -1,8 +1,21 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// roster bosses missing IsBoss get it forced at combat start
-// must init before Z_AMP_Pyre and AMP_Difficulty*, they read IsBoss on the same EnteredCombat tick
+//=============================================================================
+// AMP FORCE BOSS FLAG
+// Some canonical bosses ship without IsBoss=1, or lose it (transform/clone/etc).
+// AMP gates Eclipse, Pyre and the difficulty/Ultra systems on IsBoss(_,1), so those
+// bosses get skipped. This re-asserts the flag at combat start for the quest-reward
+// boss roster (see AMP_BossRewards.txt).
+//
+// Gated on hostility: IsEnemy(_,host,1) + IsPartyMember(_,1,0). This skips recruited
+// Minthara and the freed Nightsong/Aylin ally — they would otherwise be treated as
+// enemy bosses by Eclipse/difficulty (those gate IsBoss + IsPlayer(_,0), which does
+// NOT exclude non-player allies). Allegiance is read at combat start, so it is correct.
+//
+// LOAD ORDER: init this goal BEFORE the IsBoss-gated goals (Z_AMP_Pyre, AMP_Difficulty*)
+// so SetIsBoss runs before they read IsBoss on the same EnteredCombat tick.
+//=============================================================================
 
 DB_AMP_ForceBoss(S_HAG_Hag_c457d064-83fb-4ec6-b74d-1f30dfafd12d);
 DB_AMP_ForceBoss(S_GOB_GoblinKing_11337af0-6a57-426b-a820-c4b00923dd54);
@@ -35,7 +48,9 @@ DB_AMP_ForceBoss(S_WYR_SkeletalDragon_67770922-5e0a-40c5-b3f0-67e8eb50493a);
 
 KBSECTION
 
-// IsEnemy and non-party gate: recruited Minthara and the freed Nightsong ally must not become bosses
+// At combat start, force IsBoss on any roster boss that is hostile, not a party member,
+// and currently missing the flag. Hostility/party are read now, so recruited Minthara and
+// the freed Nightsong ally are correctly skipped.
 IF
 EnteredCombat((CHARACTER)_C, _)
 AND

@@ -4,8 +4,10 @@ INITSECTION
 
 KBSECTION
 
-// core batch timer is object-bound and freezes in turn-based, a parallel global timer finalizes the batch
-// idempotent, whichever fires first finalizes and the other only drops the flag
+// the core batch timer is object-bound to the host, which freezes in turn-based,
+// so players could drain the shop for free and consume rewards before it finalized.
+// run a parallel global timer (ticks in TB) so the batch always finalizes in 500ms.
+// idempotent: whichever timer fires first finalizes, the other just drops the flag.
 
 // arm global backup on first item pulled from a batch
 IF

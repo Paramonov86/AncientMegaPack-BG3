@@ -2,8 +2,13 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 
-// nonstack rows add a final status as the last column
-// transfer(markeronitem, effectoncharacter), externalstatus(charstatus, vanillastatustoremove)
+// shard enchant system. db column layouts:
+//   weapon_stackable(itemroot, meleestatus, rangedstatus)
+//   weapon_nonstack(itemroot, meleestatus, rangedstatus, finalstatus)
+//   equip_stackable(itemroot, category, techstatus, slot)
+//   equip_nonstack(itemroot, category, techstatus, slot, finalstatus)
+//   transfer(markeronitem, effectoncharacter)
+//   externalstatus(charstatus, vanillastatustoremove)
 
 // weapon shards, stackable - elemental
 DB_AMP_Shard_Weapon_Stackable((ITEMROOT)AMP_Arcanizer_Shard_Fire_b093e9fc-6197-49d0-b70a-601b36753cf3, "AMP_SHARD_APPLY_MELEE_FIRE", "AMP_SHARD_APPLY_RANGED_FIRE");
@@ -766,7 +771,9 @@ THEN
 DB_AMP_Shard_Count(_Item, _ItemStatus, 1);
 ApplyStatus(_Char, _CharStatus, -1.0, 1, _Char);
 
-// DB_AMP_Shard_Count is matched first so a non-shard equip exits before the full DB_AMP_Shard_Transfer join
+// equipped - apply n times based on count
+// item-keyed db_amp_shard_count is matched first so a non-shard equip exits
+// before joining the full db_amp_shard_transfer table (avoids per-equip cross-join).
 IF
 Equipped((ITEM)_Item, (CHARACTER)_Char)
 AND

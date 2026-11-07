@@ -11,10 +11,12 @@ data "StatusType" "BOOST"
 using "MAG_WEAPON77_DIVINE_PROTECTION_AURA"
 data "AuraStatuses" "TARGET:IF(Ally() and not Self() and Character() and (Tagged('LATHANDER',context.Target) or Tagged('CLERIC_LATHANDER',context.Target) or Tagged('PALADIN_LATHANDER',context.Target) or Tagged('SELUNE',context.Target) or Tagged('CLERIC_SELUNE',context.Target) or Tagged('PALADIN_SELUNE',context.Target))):ApplyStatus(MAG_WEAPON77_DIVINE_PROTECTION_EFFECT)"
 
+// allied undead must not trigger the halo; Lathander's clergy take the higher die
 new entry "MAG_Weapon83_bonus_1"
 type "PassiveData"
 using "MAG_Weapon83_bonus_1"
 data "StatsFunctors" "IF(not Tagged('LATHANDER') and not Tagged('CLERIC_LATHANDER') and not Tagged('PALADIN_LATHANDER')):DealDamage(SWAP,1, Radiant,Magical);IF(Tagged('LATHANDER') or Tagged('CLERIC_LATHANDER') or Tagged('PALADIN_LATHANDER')):DealDamage(SWAP,2, Radiant,Magical)"
+data "Conditions" "Tagged('UNDEAD', context.Source) and not Ally(context.Source)"
 
 new entry "MAG_Weapon83_bonus"
 type "PassiveData"

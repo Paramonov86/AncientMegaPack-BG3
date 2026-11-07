@@ -4,7 +4,10 @@ INITSECTION
 
 KBSECTION
 
-// a shard carrying reroll_window has no reward map and dead-ends, so it is stripped from registered shards
+// reroll.txt used to slap reroll_window on any item pulled from a reward cube,
+// including salvage/pity shards. shard then has no reward map -> dead state.
+// system fix landed in reroll.txt; this handles existing saves where shards
+// already carry the status, plus a live guard if someone's on an older build.
 
 // level load cleanup: strip reroll_window from every registered shard
 IF

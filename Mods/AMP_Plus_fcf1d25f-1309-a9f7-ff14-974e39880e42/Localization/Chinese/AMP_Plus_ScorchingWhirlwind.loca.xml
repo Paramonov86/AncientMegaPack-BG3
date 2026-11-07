@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd0973c38g6dcfg4710gb6e4g5637d0b48f61" version="1">灼热打击</content>
+	<content contentuid="h3c004c12g1fefg4c43g8a88g3babf71eaca0" version="1">挥出灼热火焰击中目标。你&lt;b&gt;额外&lt;/b&gt;造成&lt;b&gt;[2]&lt;/b&gt;，目标必须通过敏捷&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;，否则&lt;LSTag Type="Status" Tooltip="BURNING"&gt;燃烧&lt;/LSTag&gt;&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="he7519926g138ag4334g9e2ag391bc47c18f8" version="1">挥出地狱火击中目标。你&lt;b&gt;额外&lt;/b&gt;造成&lt;b&gt;[2]&lt;/b&gt;，目标必须通过敏捷&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;，否则&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;燃烧&lt;/LSTag&gt;&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="hcdc3b046gce6dg42beg89e3g82366651e815" version="1">灼热旋风</content>
+	<content contentuid="h691d0a1dg508dg4022ga4b3g50408610e592" version="1">以双手挥击附近所有敌人。你对每个目标分别进行&lt;LSTag Tooltip="AttackRoll"&gt;攻击检定&lt;/LSTag&gt;，并造成两把武器的伤害。命中时，每个目标必须通过敏捷&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;，否则&lt;LSTag Type="Status" Tooltip="BURNING"&gt;燃烧&lt;/LSTag&gt;&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="hdcc98bf4g9f7eg43a4gb707gbe5bba48a937" version="1">以双手挥击附近所有敌人。你对每个目标分别进行&lt;LSTag Tooltip="AttackRoll"&gt;攻击检定&lt;/LSTag&gt;，并造成两把武器的伤害。命中时，每个目标必须通过敏捷&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;，否则&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;燃烧&lt;/LSTag&gt;&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+</contentList>

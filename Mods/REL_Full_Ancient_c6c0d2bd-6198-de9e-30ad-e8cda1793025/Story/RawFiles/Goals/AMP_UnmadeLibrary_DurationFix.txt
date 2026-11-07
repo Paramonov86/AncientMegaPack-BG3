@@ -4,7 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// school markers applied at 6.0 expire before the turn-tick cleanup, re-applied at infinite duration while DB_AMP_UL_FixV2 is unset
+// existing-save hotfix: old main goal applied school markers at 6.0 duration
+// (1 combat turn) so they expired before the turn-tick cleanup. re-apply the
+// same school at infinite duration while the old version is loaded (no FixV2 marker).
 
 IF
 StatusApplied((CHARACTER)_Char, (STRING)_Status, _, _)

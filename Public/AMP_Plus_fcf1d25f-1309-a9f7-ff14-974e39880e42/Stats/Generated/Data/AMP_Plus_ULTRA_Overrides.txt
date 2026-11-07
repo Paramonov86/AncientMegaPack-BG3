@@ -700,3 +700,11 @@ type "SpellData"
 data "SpellType" "Target"
 using "Target_AMP_Kavir_FreeJump"
 data "Level" "5"
+
+// ULTRA: удвоенный урон Finger of Death (base 7d8+5*PB -> 14d8+10*PB), как Gaze_Apostle
+new entry "Projectile_FingerOfDeath_Apostle"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_FingerOfDeath_Apostle"
+data "SpellSuccess" "IF(HasStatus('AMP_ULTRA_PLAYER_DEBUFF',context.Target) or HasStatus('AMP_ULTRA_BOSS_OVERLAY',context.Source) or HasStatus('AMP_ULTRA_NPC_OVERLAY',context.Source)):DealDamage(14d8+10*ProficiencyBonus,Necrotic,Magical);IF(not HasStatus('AMP_ULTRA_PLAYER_DEBUFF',context.Target) and not HasStatus('AMP_ULTRA_BOSS_OVERLAY',context.Source) and not HasStatus('AMP_ULTRA_NPC_OVERLAY',context.Source)):DealDamage(7d8+5*ProficiencyBonus,Necrotic,Magical)"
+data "SpellFail" "IF(HasStatus('AMP_ULTRA_PLAYER_DEBUFF',context.Target) or HasStatus('AMP_ULTRA_BOSS_OVERLAY',context.Source) or HasStatus('AMP_ULTRA_NPC_OVERLAY',context.Source)):DealDamage((14d8+10*ProficiencyBonus)/2,Necrotic,Magical);IF(not HasStatus('AMP_ULTRA_PLAYER_DEBUFF',context.Target) and not HasStatus('AMP_ULTRA_BOSS_OVERLAY',context.Source) and not HasStatus('AMP_ULTRA_NPC_OVERLAY',context.Source)):DealDamage((7d8+5*ProficiencyBonus)/2,Necrotic,Magical)"

@@ -170,9 +170,10 @@ PROC_AMP_RemoveDifficultyAurasFromAllPlayers();
 // update mode
 NOT DB_AMP_Difficulty_Mode(_OldMode);
 DB_AMP_Difficulty_Mode(_Mode);
-// chosen flag is handled by the game mode
-// NOT DB_AMP_Difficulty_Chosen(0);
-// DB_AMP_Difficulty_Chosen(1);
+// chosen flag dropped, gamemode handles it now
+//NOT DB_AMP_Difficulty_Chosen(0);
+//DB_AMP_Difficulty_Chosen(1);
+// visual confirm
 PROC_AMP_PlayModeEffect(_Host);
 
 // stub, real definition commented out below
@@ -181,7 +182,9 @@ PROC_AMP_RemoveDifficultyAurasFromAllPlayers()
 THEN
 DB_NOOP(1);
 
-// everything below is off, AMP_Difficulty_V3.txt replaces it
+// v3: everything below is disabled. old aura/marker/tier system replaced by
+// AMP_Difficulty_V3.txt (event-driven), statuses renamed with _V3 suffix.
+// baked rules on old saves still run but are harmless no-ops.
 
 //IF
 //CombatStarted(_CombatID)

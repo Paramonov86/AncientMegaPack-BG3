@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">Dłoń ojca kuźni</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">Wykuty w Sercu Gór młot służył niegdyś samemu Moradinowi do obróbki pierwszych żył pradawnej rudy. Mówi się, że bóg kowali tchnął w niego nie tylko ciężar głębin, lecz samą ideę kuźni.&lt;br&gt;&lt;br&gt;W rękach śmiertelnika broń zachowała boską naturę: każdy cios zrzuca na wroga nieubłagany ciężar gór i powala go na ziemię. Dla Moradina cała ziemia jest wiecznym kowadłem. Kto padnie pod ciosem, zostaje do niej przygnieciony, a jego ciało, kości czy pancerz stają się kruche jak lichy metal. Cios dobijający takiego wroga jest jak uderzenie młota w rozżarzone żelazo na kowadle: miażdży i kruszy bez litości.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">Młot</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">Stworzenie, które otrzyma obrażenia od tego młota, musi wykonać udany &lt;LSTag Tooltip="SavingThrow"&gt;rzut obronny&lt;/LSTag&gt; na Siłę przeciw twojemu &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;ST Manewru&lt;/LSTag&gt;, inaczej zostanie &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Powalone&lt;/LSTag&gt; na &lt;b&gt;[1]&lt;/b&gt; turę.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">Kowadło</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">Wrogowie, których &lt;LSTag Type="Status" Tooltip="PRONE"&gt;powalisz&lt;/LSTag&gt;, otrzymują stan &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;Kruchy&lt;/LSTag&gt; na &lt;b&gt;[1]&lt;/b&gt; tury.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">Między młotem a kowadłem</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">Trafiając tym młotem &lt;LSTag Type="Status" Tooltip="PRONE"&gt;powalony&lt;/LSTag&gt; cel, zadajesz dodatkowo &lt;b&gt;[1]&lt;/b&gt;.</content>
+</contentList>

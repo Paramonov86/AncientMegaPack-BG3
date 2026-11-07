@@ -2,8 +2,9 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 KBSECTION
-// level up strips the stacks and the v3 buff procs are stubs, so nothing restores them until next combat
-// this goal sorts last and re-applies after the strip
+// prog v6 leveled-up fix. v3 strips the v5 stacks on levelup then calls stub
+// buff procs that never restore v6, so stacks vanish until next combat. separate
+// goal (new for save compat) runs last alphabetically and re-applies after the strip.
 
 IF
 LeveledUp((CHARACTER)_Player)

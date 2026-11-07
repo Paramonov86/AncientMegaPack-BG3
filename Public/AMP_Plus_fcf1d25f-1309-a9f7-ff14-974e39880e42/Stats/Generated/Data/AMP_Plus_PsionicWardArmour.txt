@@ -27,3 +27,18 @@ data "ComboCategory" "d3"
 data "ValueOverride" "1000"
 data "ArmorClass" "16"
 data "PassivesOnEquip" "MAG_Githborn_MagicEating_HalfPlate_Passive;MAG_Githborn_MagicEating_HalfPlate_parry"
+
+// children of the Psionic Ward passive keep the vanilla spell-save heal
+new entry "MAG_Monk_SoulRejunevation_Passive"
+type "PassiveData"
+using "MAG_Monk_SoulRejunevation_Passive"
+data "DescriptionParams" "RegainHitPoints(1d4)"
+data "StatsFunctorContext" "OnAttacked"
+data "Conditions" "IsSpell() and IsLastConditionRollSuccess(ConditionRollType.ConditionSavingThrow) and not Self() and IsSavingThrow()"
+data "StatsFunctors" "RegainHitPoints(1d4)"
+
+new entry "MAG_MagicEating_Robe_Passive"
+type "PassiveData"
+using "MAG_MagicEating_Robe_Passive"
+data "StatsFunctorContext" "OnAttacked"
+data "Conditions" "IsSpell() and IsLastConditionRollSuccess(ConditionRollType.ConditionSavingThrow) and not Self() and IsSavingThrow()"

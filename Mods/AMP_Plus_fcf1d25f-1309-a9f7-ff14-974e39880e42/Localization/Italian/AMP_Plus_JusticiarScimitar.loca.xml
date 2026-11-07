@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h4991785aga322g4ddeg9e17gd1d6c13397a7" version="1">Un nemico che subisce danni da questa scimitarra deve superare un &lt;LSTag Tooltip="SavingThrow"&gt;Tiro salvezza&lt;/LSTag&gt; su Costituzione contro la tua &lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;CD di Potenza&lt;/LSTag&gt;, altrimenti è &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;accecato&lt;/LSTag&gt;.</content>
+</contentList>

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="h02b6169fge5dbg41bcgb6d1g100fd33adcd2" version="1">Поступь Мистры</content>
+	<content contentuid="h830b6361gc763g475bg80a3g27f46986b496" version="1">Кожа на носках вытерта добела. Хозяйка этих сапог редко ступала по земле.</content>
+	<content contentuid="ha7ddec64g8666g4fe7g9408g235c0bcba5a8" version="1">Благословение Мистры</content>
+	<content contentuid="h4f2441d1g5fbfg4f52g9a17gbaa3008a1854" version="1">Носитель может летать, не получает урона от падения и обладает &lt;LSTag Tooltip="Resistant"&gt;устойчивостью&lt;/LSTag&gt; ко &lt;b&gt;всему урону&lt;/b&gt;.</content>
 </contentList>

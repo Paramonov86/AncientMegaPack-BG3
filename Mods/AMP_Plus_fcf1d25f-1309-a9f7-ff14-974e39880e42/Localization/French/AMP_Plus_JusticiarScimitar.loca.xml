@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h4991785aga322g4ddeg9e17gd1d6c13397a7" version="1">Un ennemi qui subit des dégâts de ce cimeterre doit réussir un &lt;LSTag Tooltip="SavingThrow"&gt;jet de sauvegarde&lt;/LSTag&gt; de Constitution contre votre &lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;DD de Puissance&lt;/LSTag&gt;, sinon il est &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;aveuglé&lt;/LSTag&gt;.</content>
+</contentList>

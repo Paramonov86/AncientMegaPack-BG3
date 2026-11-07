@@ -2,4 +2,8 @@
 <contentList>
 	<content contentuid="hd91e2cffge5abg4394g86eagca08cbd5f721" version="1">Swindler</content>
 	<content contentuid="hd8e9ceb4g7e47g40fdga8a0g27acc30c40fa" version="1">You gain a +[1] bonus to Initiative rolls. When you enter combat, you become &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Invisible&lt;/LSTag&gt; on your turn for &lt;b&gt;[2]&lt;/b&gt; turns.</content>
+	<content contentuid="h9c3d3c45gf0ccg48fcg8b1cg642d4cabb345" version="1">Behind the Lock</content>
+	<content contentuid="h6c3d6c67g43eag4f53gabb1g10178324a0b2" version="3">When you pick a lock, you have a &lt;b&gt;[1]%&lt;/b&gt; chance to get a random &lt;LSTag Type="Status" Tooltip="AMP_RUNIC_SHARD_INFO"&gt;Runic Shard&lt;/LSTag&gt;. Each lock counts once. No more than &lt;b&gt;[2]&lt;/b&gt; shards per &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
+	<content contentuid="h86e3d9bbg624cg4760g8648gc352bdd22f93" version="1">Thief's Luck</content>
+	<content contentuid="h8419c8bcg2cd7g4510gb87ag8bf801513c8e" version="3">When you pick a lock, you have a &lt;b&gt;[1]%&lt;/b&gt; chance to get a &lt;LSTag Type="Status" Tooltip="AMP_VOID_CAPSULE_CHARGES"&gt;Void Capsule&lt;/LSTag&gt;. Each lock counts once. No more than &lt;b&gt;[2]&lt;/b&gt; capsules per &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
 </contentList>

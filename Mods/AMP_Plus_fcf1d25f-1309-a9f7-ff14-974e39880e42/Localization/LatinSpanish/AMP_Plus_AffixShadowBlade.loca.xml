@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hdfb23537g30b2g4368ga1f0g57122f603403" version="1">Corrección de Espada de las Sombras</content>
+	<content contentuid="hbc08212ag28b2g4842gaddeg9646bb7f264d" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [Legítimo mientras coincida con el valor predeterminado de este modo]&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;Espada de las Sombras&lt;/LSTag&gt; siempre inflige [1], sin importar el nivel del espacio de conjuro.</content>
+	<content contentuid="hc5d36564g77d3g4a38g9afag7a7ffbed6283" version="1">&lt;b&gt;Corrección de Espada de las Sombras&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;Espada de las Sombras&lt;/LSTag&gt; siempre inflige 2d8 de daño, sin importar el nivel del espacio de conjuro.&lt;br&gt;&lt;br&gt;¿Activar?</content>
+</contentList>

@@ -3,7 +3,10 @@ SubGoalCombiner SGC_AND
 INITSECTION
 KBSECTION
 
-// brute-force sweep, hirelings get buffed before DB_Players/DB_PartOfTheTeam fires and tracked cleanup misses re-applies
+// hotfix: hirelings can get difficulty buffs before DB_Players/DB_PartOfTheTeam
+// fires, and the tracked-entry cleanup misses edge cases (untracked buff, or
+// re-applied via EnteredCombat after cleanup). this brute-force strips every
+// difficulty status off any player char. new goal so it runs on existing saves.
 
 // 1. level load sweep: strip any difficulty npc/boss status from players
 IF

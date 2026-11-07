@@ -366,7 +366,9 @@ AddGoldToMagicPockets(_Player, 1);
 ObjectTimerLaunch(_Item, "AMP_AS_DeferDelete", 100, 0);
 PlaySound(_Player, "UI_Gen_Coins_01");
 
-// deleting in the AddedTo frame null-derefs Wwise for some templates like the milk bottle and barrel, so delete one tick later
+// deferred delete: deleting a just-picked-up item in the AddedTo frame
+// null-derefs Wwise for certain templates (milk bottle, barrel). delete one
+// tick later so the engine has finished the item's pickup audio setup.
 IF
 ObjectTimerFinished((ITEM)_Item, "AMP_AS_DeferDelete")
 THEN

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h3ad726bfg6185g4d0egbf76ge6b4e51199b4" version="1">Gel astral</content>
+	<content contentuid="hbec12d5cg9df0g404egb8e4g03fb1d2bf926" version="1">Vous obtenez une &lt;LSTag Tooltip="Resistant"&gt;résistance&lt;/LSTag&gt; contre&lt;b&gt;[1]&lt;/b&gt; et&lt;b&gt;[2]&lt;/b&gt;.</content>
+	<content contentuid="h98587373gd4a8g4b33g9402g6bb6c2796641" version="1">Toile mentale</content>
+	<content contentuid="h1c4b9247gaeb9g47aagbc48g9ee9d104497c" version="1">Vous avez &lt;b&gt;l'avantage&lt;/b&gt; aux &lt;LSTag Tooltip="SavingThrow"&gt;jets de sauvegarde&lt;/LSTag&gt; d'&lt;b&gt;Intelligence&lt;/b&gt;, de &lt;b&gt;Sagesse&lt;/b&gt; et de &lt;b&gt;Charisme&lt;/b&gt;.</content>
+	<content contentuid="hd7ca0265g642fg4f8dg99b1g0d848caeaf51" version="1">Quand vous infligez&lt;b&gt;[1]&lt;/b&gt;, vous infligez aussi &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Fatigue mentale&lt;/LSTag&gt; pendant &lt;b&gt;[2]&lt;/b&gt; tours.</content>
+</contentList>

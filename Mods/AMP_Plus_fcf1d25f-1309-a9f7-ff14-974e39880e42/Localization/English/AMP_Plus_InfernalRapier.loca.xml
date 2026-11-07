@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">You gain a +[1] bonus to &lt;LSTag Tooltip="SpellDifficultyClass"&gt;Spell Save DC&lt;/LSTag&gt; and a +[2] bonus to spell &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">Absolute Heat</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">When you deal damage with this rapier in combat, you create &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Hellfire&lt;/LSTag&gt; with a radius of &lt;b&gt;[1]&lt;/b&gt; for &lt;b&gt;[2]&lt;/b&gt; turns. &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Hellfire&lt;/LSTag&gt; does not affect you.&lt;br&gt;&lt;br&gt;You ignore your targets' &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; and &lt;LSTag Tooltip="Immune"&gt;Immunity&lt;/LSTag&gt; to Fire damage.</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">Heat of Avernus</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">Lunge forward and unleash a wave of hellfire from your weapon.</content>
+</contentList>

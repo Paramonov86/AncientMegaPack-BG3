@@ -692,8 +692,12 @@ NOT IsInventoryEmpty(_Container, 1)
 THEN
 NOT DB_AMP_VoidCapsule_Deleting(_Container);
 
-// auto-extract covers coin rewards, salvage cubes and reroll respawns, RemovedFrom still fires per item for reroll marking
-// decoy cubes are excluded, their treasuretable loot must not eject to the player
+// 22. reward ux - auto-extract from any voidcapsule reward container
+// applies to coin rewards, salvage shard cubes, and reroll respawns.
+// removedfrom fires per item, so reroll-marking (status apply on removedfrom)
+// still runs for reroll-context cubes. empty cube then auto-deletes.
+// decoy cubes (seedreset) are excluded so their treasuretable loot is not
+// ejected to the player - decoys must disappear silently.
 IF
 AddedTo((ITEM)_Item, (ITEM)_Container, _)
 AND

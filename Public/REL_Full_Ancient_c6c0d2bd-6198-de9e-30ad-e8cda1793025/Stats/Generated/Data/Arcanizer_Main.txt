@@ -2652,7 +2652,7 @@ data "UseCosts" "BonusActionPoint:1"
 
 // Scimitars
 
-// T1 Uncommon Block
+// ================ T1 Uncommon Block ================
 new entry "WPN_Scimitar_u"
 type "Weapon"
 using "WPN_Scimitar"
@@ -2724,7 +2724,7 @@ data "SpellSuccess" "DealDamage(MainMeleeWeapon+1d6, MainWeaponDamageType);GROUN
 data "RequirementConditions" "CanUseWeaponActions() and IsProficientWithEquippedWeapon()"
 data "RootSpellID" ""
 
-// T2 Rare Block
+// ================ T2 Rare Block ================
 new entry "WPN_Scimitar_r"
 type "Weapon"
 using "WPN_Scimitar_u"
@@ -2778,7 +2778,7 @@ data "VocalComponentSound" ""
 data "SpellFlags" "HasSomaticComponent;IsSpell;AddFallDamageOnLand"
 data "RootSpellID" ""
 
-// T3 VeryRare Block
+// ================ T3 VeryRare Block ================
 new entry "WPN_Scimitar_e"
 type "Weapon"
 using "WPN_Scimitar_u"
@@ -2864,7 +2864,7 @@ data "DescriptionParams" "4"
 data "StackId" "AMP_SCIMITAR_SWAYING_E"
 data "Boosts" "AC(4)"
 
-// T4 Legendary Block
+// ================ T4 Legendary Block ================
 new entry "WPN_Scimitar_l"
 type "Weapon"
 using "WPN_Scimitar_u"
@@ -2972,7 +2972,7 @@ data "Cooldown" "OncePerCombat"
 data "DescriptionParams" "Distance(8)"
 data "UseCosts" "Movement:8"
 
-// RARE PIKE BLOCK
+// ================ RARE PIKE BLOCK ================
 
 new entry "WPN_Pike_r"
 type "Weapon"
@@ -3008,7 +3008,7 @@ data "DescriptionParams" "Distance(6)"
 data "UseCosts" "Movement:6"
 
 
-// VERYRARE PIKE BLOCK
+// ================ VERYRARE PIKE BLOCK ================
 
 new entry "WPN_Pike_e"
 type "Weapon"
@@ -3044,7 +3044,7 @@ data "DescriptionParams" "Distance(4)"
 data "UseCosts" "Movement:4"
 
 
-// LEGENDARY PIKE BLOCK
+// ================ LEGENDARY PIKE BLOCK ================
 
 new entry "WPN_Pike_l"
 type "Weapon"
@@ -3109,7 +3109,7 @@ data "Boosts" "IF(HasStatus('GAPING_WOUND',context.Target)):ReduceCriticalAttack
 
 // Shortswords
 
-// UNCOMMON SHORTSWORD BLOCK
+// ================ UNCOMMON SHORTSWORD BLOCK ================
 
 new entry "WPN_Shortsword_u"
 type "Weapon"
@@ -3208,7 +3208,7 @@ data "Cooldown" "OncePerTurn"
 data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC()-5, AdvantageOnCharmed())"
 data "SpellSuccess" "ApplyStatus(DOMINATE_PERSON,100,5);"
 
-// RARE SHORTSWORD BLOCK
+// ================ RARE SHORTSWORD BLOCK ================
 
 new entry "WPN_Shortsword_r"
 type "Weapon"
@@ -3283,7 +3283,7 @@ data "SpellType" "Target"
 using "Target_WPN_Shortsword_Dominate_u"
 data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC()-3, AdvantageOnCharmed())"
 
-// VERYRARE SHORTSWORD BLOCK
+// ================ VERYRARE SHORTSWORD BLOCK ================
 
 new entry "WPN_Shortsword_e"
 type "Weapon"
@@ -3354,7 +3354,7 @@ data "SpellType" "Target"
 using "Target_WPN_Shortsword_Dominate_u"
 data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC()-1, AdvantageOnCharmed())"
 
-// LEGENDARY SHORTSWORD BLOCK
+// ================ LEGENDARY SHORTSWORD BLOCK ================
 
 new entry "WPN_Shortsword_l"
 type "Weapon"
@@ -3728,9 +3728,9 @@ data "Cooldown" ""
 data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution, ManeuverSaveDC()+2)):ApplyStatus(STUNNED,100,2); DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType); ExecuteWeaponFunctors(MainHand)"
 data "TooltipStatusApply" "ApplyStatus(STUNNED,100,2)"
 
-// Daggers, Rogue's Tool
+// Daggers — Rogue's Tool
 
-// T1 Uncommon Block
+// ================ T1 Uncommon Block ================
 new entry "WPN_Dagger_u"
 type "Weapon"
 using "WPN_Dagger"
@@ -3755,7 +3755,7 @@ data "BoostContext" "OnCreate;OnEquip"
 data "BoostConditions" "Tagged('ROGUE',context.Source) or Tagged('REALLY_HALFLING',context.Source)"
 data "Boosts" "Skill(SleightOfHand, 1)"
 
-// T2 Rare Block
+// ================ T2 Rare Block ================
 new entry "WPN_Dagger_r"
 type "Weapon"
 using "WPN_Dagger_u"
@@ -3777,7 +3777,7 @@ data "Description" "h9ed00cb6g96ecg4b06g9299gc4629ccbaedf;1"
 data "DescriptionParams" "2"
 data "Properties" "Highlighted"
 
-// T3 VeryRare Block
+// ================ T3 VeryRare Block ================
 new entry "WPN_Dagger_e"
 type "Weapon"
 using "WPN_Dagger_u"
@@ -3807,7 +3807,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and Enemy() and HasStatus('AMP_TOXEMIA', context.Target) and StatusDurationEqualOrMoreThan(context.Target, 'AMP_TOXEMIA', 2)"
 data "StatsFunctors" "SetStatusDuration(context.Target, 'AMP_TOXEMIA', -2, Add);ApplyStatus(SELF,AMP_DAGGER_TOXDRAIN_HEAL,100,0)"
 
-// T4 Legendary Block
+// ================ T4 Legendary Block ================
 new entry "WPN_Dagger_l"
 type "Weapon"
 using "WPN_Dagger_u"
@@ -3835,7 +3835,7 @@ data "Icon" "Action_Hide_Regular"
 data "Properties" "Highlighted;IsToggled;ToggledDefaultOn;ToggledDefaultAddToHotbar"
 data "Boosts" "UnlockSpellVariant(IsMeleeAttackSpell(),ModifySpellFlags(Stealth,1),ModifyIconGlow(),ModifyTooltipDescription())"
 
-// Shared Statuses
+// ================ Shared Statuses ================
 new entry "AMP_DAGGER_U_USE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -5582,7 +5582,7 @@ data "StatsFunctorContext" "OnDamaged"
 data "Conditions" "not IsSelfDamage() and not Dead() and not HasHPPercentageWithoutTemporaryHPEqualOrLessThan(1) and not Ally(context.Source)"
 data "StatsFunctors" "DealDamage(SWAP,4d8,Radiant,Magical)"
 
-// Force necklace
+// ================ FORCE NECKLACE — UNCOMMON ================
 new entry "arc_N_Force1"
 type "Armor"
 using "ARM_Amulet"
@@ -5633,6 +5633,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "HasDamageDoneForType(DamageType.Force) and IsSpell() and Enemy()"
 data "StatsFunctors" "ApplyStatus(SLOW,100,2);IF(not IsResistantToForceDamage(context.Source) and not IsImmuneToForceDamage(context.Source)):ApplyStatus(SELF,SLOW,100,2)"
 
+// ================ FORCE NECKLACE — RARE ================
 new entry "arc_N_Force2"
 type "Armor"
 using "ARM_Amulet"
@@ -5666,6 +5667,7 @@ data "DescriptionParams" "1"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsSlow(context.Source)):ReduceCriticalAttackThreshold(1)"
 
+// ================ FORCE NECKLACE — VERYRARE ================
 new entry "arc_N_Force3"
 type "Armor"
 using "ARM_Amulet"
@@ -5709,6 +5711,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsCritical() and HasDamageDoneForType(DamageType.Force) and IsSpell() and Enemy()"
 data "StatsFunctors" "RestoreResource(SELF,ActionPoint,1,0)"
 
+// ================ FORCE NECKLACE — LEGENDARY ================
 new entry "arc_N_Force4"
 type "Armor"
 using "ARM_Amulet"
@@ -6221,7 +6224,12 @@ data "DescriptionParams" "2"
 data "Icon" "Spell_Abjuration_GlyphOfWarding_ExplosiveRunes_Cold"
 data "Boosts" "CriticalHitExtraDice(2,RangedSpellAttack)"
 
-// Necrotic amulets, arc_N_Necrotic
+// ================ NECROTIC AMULETS (arc_N_Necrotic) ================
+// Death-amulet vibe: phylactery channeling souls of slain foes into wandering wraiths.
+// P1 (T1+): On killing a soul-bearing enemy, spend reaction → Tortured Soul spawns at corpse, hostile to all. Wizard wearer → soul invulnerable for 1 turn.
+// P2 (T2+): Took necrotic damage this turn → +1/2/3 reaction points until next turn.
+// P3 (T3+): Spawned souls turn friendly to you and your allies (Osiris-driven via tier marker).
+// P4 (T4):  Triggering the reaction spawns 2 souls instead of 1.
 
 // UNCOMMON
 new entry "arc_N_Necrotic1"
@@ -6238,6 +6246,7 @@ data "PassivesOnEquip" "MAG_NNecrotic_Tether_Passive"
 data "StatusOnEquip" "MAG_NNECROTIC_TETHER_OWNER"
 data "Boosts" ""
 
+// RARE — adds Necromantic Surge (necrotic damage → +1 reaction)
 new entry "arc_N_Necrotic2"
 type "Armor"
 using "ARM_Amulet"
@@ -6252,6 +6261,7 @@ data "PassivesOnEquip" "MAG_NNecrotic_Tether_Passive;MAG_NNecrotic_Surge_T2_Pass
 data "StatusOnEquip" "MAG_NNECROTIC_TETHER_OWNER"
 data "Boosts" ""
 
+// VERYRARE — adds Pact (souls become friendly to wearer and allies via Osiris)
 new entry "arc_N_Necrotic3"
 type "Armor"
 using "ARM_Amulet"
@@ -6266,6 +6276,7 @@ data "PassivesOnEquip" "MAG_NNecrotic_Tether_Passive;MAG_NNecrotic_Surge_T3_Pass
 data "StatusOnEquip" "MAG_NNECROTIC_TETHER_OWNER;MAG_NNECROTIC_PACT_MARKER"
 data "Boosts" ""
 
+// LEGENDARY — adds Twin Reaping (reaction spawns 2 souls)
 new entry "arc_N_Necrotic4"
 type "Armor"
 using "ARM_Amulet"
@@ -6280,6 +6291,7 @@ data "PassivesOnEquip" "MAG_NNecrotic_Tether_Passive;MAG_NNecrotic_Surge_T4_Pass
 data "StatusOnEquip" "MAG_NNECROTIC_TETHER_OWNER;MAG_NNECROTIC_PACT_MARKER;MAG_NNECROTIC_TWIN_MARKER"
 data "Boosts" ""
 
+// ---- Tether (P1, all tiers — flavor passive that unlocks the reaction) ----
 new entry "MAG_NNecrotic_Tether_Passive"
 type "PassiveData"
 data "DisplayName" "h9e879cccgeebeg453egb6e1g10dbaae19adf;1"
@@ -6288,6 +6300,7 @@ data "Icon" "N_Necrotic_Reaction"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockInterrupt(Interrupt_NNecrotic_SoulTether)"
 
+// ---- Surge (P2, T2+ — necrotic damage taken → temporary extra reactions) ----
 new entry "MAG_NNecrotic_Surge_T2_Passive"
 type "PassiveData"
 data "DisplayName" "hb184d3ecg0afag4419g9ad0g87f43f5df180;1"
@@ -6333,7 +6346,7 @@ using "MAG_NNECROTIC_REACTION_BUFF_T2"
 data "StackPriority" "3"
 data "Boosts" "ActionResource(ReactionActionPoint,3,0)"
 
-// Pact. Osiris switches faction off the wearer marker
+// ---- Pact (P3, T3+ — flavor passive, drives Osiris friendly-faction switch via wearer marker) ----
 new entry "MAG_NNecrotic_Pact_Passive"
 type "PassiveData"
 data "DisplayName" "h50ee2db8g3f92g46b6gb575g7cfe43828c7d;1"
@@ -6346,7 +6359,7 @@ data "StatusType" "BOOST"
 data "StackId" "MAG_NNECROTIC_PACT_MARKER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// Twin Reaping, Osiris spawns the second soul off the wearer marker
+// ---- Twin Reaping (P4, T4 — flavor passive, drives Twin Spawn via wearer marker) ----
 new entry "MAG_NNecrotic_TwinReaping_Passive"
 type "PassiveData"
 data "DisplayName" "h81dc6e79g4fbbg4491gab41g03402b4b9161;1"
@@ -6359,6 +6372,7 @@ data "StatusType" "BOOST"
 data "StackId" "MAG_NNECROTIC_TWIN_MARKER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
+// ---- Reaction Interrupt — fires when wearer kills a soul-bearing foe ----
 new entry "Interrupt_NNecrotic_SoulTether"
 type "InterruptData"
 data "DisplayName" "he7f4972fgd54ag4ddegb542gf7c3360e58df;1"
@@ -6375,15 +6389,25 @@ data "EnableCondition" "not HasStatus('SG_Polymorph')"
 data "EnableContext" "OnStatusApplied;OnStatusRemoved"
 data "InterruptFlags" "InterruptWhileInvisible"
 
-// Wizard flag, 1 turn. Osiris reads it to protect the spawned soul
+// Wizard-flag marker (1-turn) — Osiris reads to apply Защита Темнейшего to spawned soul
 new entry "MAG_NNECROTIC_WIZ_MARKER"
 type "StatusData"
 data "StatusType" "BOOST"
 data "StackId" "MAG_NNECROTIC_WIZ_MARKER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// Spawn without GROUND: prefix, not Summon. Independent NPC, no shared vision, not player-controlled
-// Spawn() args silently skip status apply on the creature, faction setup is in Osiris after EnteredLevel
+// ---- Spawn-trigger statuses applied to the dying foe (ApplyToDead) ----
+// Pattern: AMP Strange_Jewelry SJ03_05 (line 402) — `Spawn` (NOT Summon) without GROUND: prefix
+//   in OnApplyFunctors. Spawn = independent NPC (not engine-level pet) → no shared vision,
+//   not player-controllable. AMP_FORCE_HOSTILE as one of the applied statuses → hostile-to-all.
+// Interrupt → ApplyStatus on OBSERVER_TARGET (corpse) → OnApplyFunctors fires Spawn.
+// ApplyStatus is a synchronous functor (NOT a cast operation) so no race-condition with
+//   the wearer's interrupted attack.
+// Note: Spawn() args silently no-op for status apply on the spawned creature, so faction setup
+//   happens in Osiris post-EnteredLevel:
+//   T1/T2 (no PACT) → ApplyStatus AMP_FORCE_HOSTILE + Sees-loop with SetHostileAndEnterCombat.
+//   T3 (PACT, no TWIN) → ApplyStatus PARTY_ALLY (FactionOverride(Source) = caster's faction).
+//   T4 (PACT + TWIN) → 2× Spawn, both friendly through PARTY_ALLY.
 
 // T1/T2: 1× spawn, hostile-to-all via AMP_FORCE_HOSTILE
 new entry "MAG_NNECROTIC_SPAWN_TRIGGER_T1"
@@ -6409,7 +6433,8 @@ using "MAG_NNECROTIC_SPAWN_TRIGGER_T1"
 data "StackId" "MAG_NNECROTIC_SPAWN_TRIGGER_T4"
 data "OnApplyFunctors" "Spawn(7811ecf3-2657-4820-99e8-8c6844e147e1,Projectile_AiHelper_Summon_Weak,MAG_NNECROTIC_SOUL_FLAG);Spawn(7811ecf3-2657-4820-99e8-8c6844e147e1,Projectile_AiHelper_Summon_Weak,MAG_NNECROTIC_SOUL_FLAG)"
 
-// Flag on the spawned soul, Osiris tracks owner and faction off its StatusApplied
+// Flag status applied to spawned soul — Osiris listens StatusApplied for owner-tracking, faction switch, cleanup.
+// ApplyEffect from AccursedSpecter — wraith manifestation VFX at the spirit.
 new entry "MAG_NNECROTIC_SOUL_FLAG"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -6425,7 +6450,9 @@ data "StackId" "MAG_NNECROTIC_PARTY_ALLY"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 data "Boosts" "FactionOverride(Source)"
 
-// On removal Osiris strips PACT and TWIN markers, no stale T4 on a re-equipped T2
+// Owner marker — applied to wearer via item StatusOnEquip; Osiris reads this to identify the spawn owner.
+// Anti-abuse: when TETHER_OWNER removed (item unequipped), strip PACT/TWIN tier markers to
+//   prevent stale T4 markers leaking into a re-equipped T2 amulet's reaction.
 new entry "MAG_NNECROTIC_TETHER_OWNER"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -6433,7 +6460,7 @@ data "StackId" "MAG_NNECROTIC_TETHER_OWNER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 data "OnRemoveFunctors" "RemoveStatus(MAG_NNECROTIC_PACT_MARKER);RemoveStatus(MAG_NNECROTIC_TWIN_MARKER)"
 
-// Permanent VFX on tethered souls (custom effect, replaces vanilla SHADOW_VFX in template StatusList)
+// ---- Permanent VFX on tethered souls (custom effect, replaces vanilla SHADOW_VFX in template StatusList) ----
 new entry "MAG_NNECROTIC_SHADOW_VFX"
 type "StatusData"
 data "StatusType" "EFFECT"
@@ -6441,14 +6468,14 @@ data "DisplayName" "hf637dfe4ga912g423cga2aeg6e7b96ee3bc6;1"
 data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;IgnoreResting;ApplyToDead"
 data "StatusEffect" "0945ffda-938f-46b5-951f-6b6e0d6f6e25"
 
-// Custom shadow-step teleport for tethered souls (50m, inherits from vanilla Target_Teleport_Shadow)
+// ---- Custom shadow-step teleport for tethered souls (50m, inherits from vanilla Target_Teleport_Shadow) ----
 new entry "Target_NNecrotic_ShadowStep"
 type "SpellData"
 data "SpellType" "Target"
 using "Target_Teleport_Shadow"
 data "TargetRadius" "50"
 
-// Spirit creature templates (kept)
+// ---- Spirit creature templates (kept) ----
 new entry "Spirit_Weak"
 type "Character"
 using "Shadow"
@@ -7966,7 +7993,7 @@ data "StackType" "Ignore"
 data "Boosts" "StatusImmunity(SG_Prone);StatusImmunity(SG_Disease)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// RARE BLOCK (12m)
+// ================ RARE BLOCK (12m) ================
 new entry "arc_N_Poison2"
 type "Armor"
 using "ARM_Amulet"
@@ -8018,7 +8045,7 @@ data "StackType" "Ignore"
 data "Boosts" "StatusImmunity(SG_Prone);StatusImmunity(SG_Disease);StatusImmunity(SG_Blinded)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// VERYRARE BLOCK (15m)
+// ================ VERYRARE BLOCK (15m) ================
 new entry "arc_N_Poison3"
 type "Armor"
 using "ARM_Amulet"
@@ -8070,7 +8097,7 @@ data "StackType" "Ignore"
 data "Boosts" "StatusImmunity(SG_Prone);StatusImmunity(SG_Disease);StatusImmunity(SG_Blinded);StatusImmunity(SG_Cursed)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// LEGENDARY BLOCK (18m)
+// ================ LEGENDARY BLOCK (18m) ================
 new entry "arc_N_Poison4"
 type "Armor"
 using "ARM_Amulet"
@@ -8122,6 +8149,7 @@ data "StackType" "Ignore"
 data "Boosts" "StatusImmunity(SG_Prone);StatusImmunity(PRONE_ICE);StatusImmunity(SG_Blinded);StatusImmunity(SG_Charmed);StatusImmunity(SG_Cursed);StatusImmunity(SG_Disease);StatusImmunity(SG_Exhausted);StatusImmunity(SG_Frightened);StatusImmunity(SG_Poisoned);StatusImmunity(SG_Restrained);StatusImmunity(SG_Stunned);StatusImmunity(SG_Surface);StatusImmunity(SG_Polymorph);StatusImmunity(SG_Paralyzed);StatusImmunity(SG_Possessed);StatusImmunity(SG_Petrified);StatusImmunity(SG_Helpable_Condition);StatusImmunity(SG_Taunted);StatusImmunity(SG_Dominated);StatusImmunity(SG_Fleeing);StatusImmunity(SG_Confused);StatusImmunity(SG_Mad);StatusImmunity(SG_DifficultTerrain);StatusImmunity(SG_Drunk);StatusImmunity(SG_Sleeping)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
+// Venom Surge — DamageBonus on Toxemia apply/receive
 new entry "N_Poison_VenomSurge_T1"
 type "PassiveData"
 data "DisplayName" "h1eb918a0g7a8fg4133ga22dg134ccb4882c8;1"
@@ -8451,7 +8479,7 @@ data "Boosts" "IF(IsAttack()):DamageBonus(3,Radiant)"
 
 // Force Rings
 
-// UNCOMMON (T1)
+// ================ UNCOMMON (T1) ================
 new entry "arc_R_Force1"
 type "Armor"
 using "ARM_Ring"
@@ -8466,7 +8494,7 @@ data "StatusOnEquip" "R_FORCE_AURA"
 data "PassivesOnEquip" "R_Force_Moleculation"
 data "Boosts" ""
 
-// RARE (T2)
+// ================ RARE (T2) ================
 new entry "arc_R_Force2"
 type "Armor"
 using "ARM_Ring"
@@ -8480,7 +8508,7 @@ data "ValueLevel" "5"
 data "StatusOnEquip" "R_FORCE_AURA"
 data "PassivesOnEquip" "R_Force_Moleculation;R_Force_ChronalPulse"
 
-// VERY RARE (T3)
+// ================ VERY RARE (T3) ================
 new entry "arc_R_Force3"
 type "Armor"
 using "ARM_Ring"
@@ -8494,7 +8522,7 @@ data "ValueLevel" "7"
 data "StatusOnEquip" "R_FORCE_AURA"
 data "PassivesOnEquip" "R_Force_Moleculation;R_Force_ChronalPulse;R_Force_Catalyst"
 
-// LEGENDARY (T4)
+// ================ LEGENDARY (T4) ================
 new entry "arc_R_Force4"
 type "Armor"
 using "ARM_Ring"
@@ -8508,7 +8536,7 @@ data "ValueLevel" "10"
 data "StatusOnEquip" "R_FORCE_AURA"
 data "PassivesOnEquip" "R_Force_Moleculation;R_Force_ChronalPulse;R_Force_Catalyst;R_Force_GravAttunement"
 
-// SHARED MECHANICS
+// ================ SHARED MECHANICS ================
 
 // --- Passive 1: Moleculation ---
 new entry "R_Force_Moleculation"
@@ -9525,7 +9553,7 @@ data "OnRemoveFunctors" "RemoveStatus(ARC_ACID_AURA4)"
 
 // Thunder Rings (Reverberation theme)
 
-// T1: Toggle Reverberation
+// ================ T1: Toggle Reverberation ================
 new entry "arc_R_Thunder1"
 type "Armor"
 using "ARM_Ring"
@@ -9576,7 +9604,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "Enemy() and HasStatus('ARC_THUNDER_TOGGLE_ACTIVE',context.Source) and HasStatus('MAG_THUNDER_REVERBERATION',context.Source)"
 data "StatsFunctors" "SetStatusDuration(SELF,MAG_THUNDER_REVERBERATION,-1,Add);ApplyStatus(MAG_THUNDER_REVERBERATION,100,1);ApplyStatus(MAG_THUNDER_REVERBERATION_DURATION_TECHNICAL,100,1);ApplyStatus(RING27_REVERB_TRIGGER,100,0)"
 
-// T2: Disarm on physical hit vs Reverberation
+// ================ T2: Disarm on physical hit vs Reverberation ================
 new entry "arc_R_Thunder2"
 type "Armor"
 using "ARM_Ring"
@@ -9601,7 +9629,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "(HasDamageDoneForType(DamageType.Slashing) or HasDamageDoneForType(DamageType.Piercing) or HasDamageDoneForType(DamageType.Bludgeoning)) and HasStatus('MAG_THUNDER_REVERBERATION',context.Target) and Enemy() and HasWeaponInMainHand(context.Target)"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Strength,ManeuverSaveDC())):ApplyStatus(DISARM,100,0)"
 
-// T3: Liquid surface aura
+// ================ T3: Liquid surface aura ================
 new entry "arc_R_Thunder3"
 type "Armor"
 using "ARM_Ring"
@@ -9647,7 +9675,7 @@ data "TickType" "StartTurn"
 data "TickFunctors" "IF(IsLiquidSurface()):ApplyStatus(MAG_THUNDER_REVERBERATION,100,2);IF(IsLiquidSurface()):ApplyStatus(MAG_THUNDER_REVERBERATION_DURATION_TECHNICAL,100,1);IF(IsLiquidSurface()):ApplyStatus(RING27_REVERB_TRIGGER,100,0)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// T4: Prone Thunder bonus
+// ================ T4: Prone Thunder bonus ================
 new entry "arc_R_Thunder4"
 type "Armor"
 using "ARM_Ring"
@@ -9753,10 +9781,10 @@ data "Conditions" "IsAttack()"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100, 25)):ApplyStatus(STUNNED,100,1)"
 
 
-// ARC_R_BLOOD - BLOOD MAGIC MISSILE SYSTEM
+// ================ ARC_R_BLOOD - BLOOD MAGIC MISSILE SYSTEM ================
 // Magic Missile gains +1/2/3/4 projectiles while you are bleeding OR someone within 3m is bleeding
 
-// SHARED COMPONENTS (all tiers)
+// ===== SHARED COMPONENTS (all tiers) =====
 
 // Primary aura - scans for BLEEDING in 3m radius
 new entry "ARC_R_BLOOD_AURA"
@@ -9785,7 +9813,7 @@ data "StackType" "Ignore"
 data "StackId" "ARC_R_BLOOD_TRACKER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// TIER 1: UNCOMMON (+1 projectile)
+// ===== TIER 1: UNCOMMON (+1 projectile) =====
 
 new entry "arc_R_Blood1"
 type "Armor"
@@ -9836,7 +9864,7 @@ data "RemoveConditions" "not HasStatus('ARC_R_BLOOD_WATCHER_1') or (not HasStatu
 data "RemoveEvents" "OnStatusRemoved"
 data "StatusEffect" "d6b74ab3-2e77-4940-af2b-3ba2003756cc"
 
-// TIER 2: RARE (+2 projectiles)
+// ===== TIER 2: RARE (+2 projectiles) =====
 
 new entry "arc_R_Blood2"
 type "Armor"
@@ -9887,7 +9915,7 @@ data "RemoveConditions" "not HasStatus('ARC_R_BLOOD_WATCHER_2') or (not HasStatu
 data "RemoveEvents" "OnStatusRemoved"
 data "StatusEffect" "d6b74ab3-2e77-4940-af2b-3ba2003756cc"
 
-// TIER 3: VERY RARE (+3 projectiles)
+// ===== TIER 3: VERY RARE (+3 projectiles) =====
 
 new entry "arc_R_Blood3"
 type "Armor"
@@ -9938,7 +9966,7 @@ data "RemoveConditions" "not HasStatus('ARC_R_BLOOD_WATCHER_3') or (not HasStatu
 data "RemoveEvents" "OnStatusRemoved"
 data "StatusEffect" "d6b74ab3-2e77-4940-af2b-3ba2003756cc"
 
-// TIER 4: LEGENDARY (+4 projectiles)
+// ===== TIER 4: LEGENDARY (+4 projectiles) =====
 
 new entry "arc_R_Blood4"
 type "Armor"
@@ -10108,7 +10136,8 @@ data "StackId" "UNDERDARK4_TECHNICAL"
 data "OnRemoveFunctors" "RemoveStatus(UNDERDARK_SHADOW_AURA)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// Poison rings, Toxemia synergy
+// Poison Rings — Toxemia Synergy
+// ================ UNCOMMON ================
 new entry "arc_R_Poison1"
 type "Armor"
 using "ARM_Ring"
@@ -10122,6 +10151,7 @@ data "ValueLevel" "4"
 data "PassivesOnEquip" "R_Poison_Erode;R_Poison_Volatile_T1"
 data "Boosts" ""
 
+// P1a: Corroded Defenses — ignore Poison Resistance while target has Toxemia (T1 only)
 new entry "R_Poison_Erode"
 type "PassiveData"
 data "DisplayName" "h228cdbb7g6743g4a5bgb847g37574e0d1f38;1"
@@ -10130,6 +10160,7 @@ data "DescriptionParams" "DealDamage(,Poison)"
 data "Properties" "Highlighted"
 data "Boosts" "IF(HasStatus('AMP_TOXEMIA',context.Target)):IgnoreResistance(Poison,Resistant)"
 
+// P1b: Volatile Venom — random Toxemia on attacks/spells
 new entry "R_Poison_Volatile_T1"
 type "PassiveData"
 data "DisplayName" "h25d7271cga7b6g4e93gb89cg2224be33e4ce;1"
@@ -10161,7 +10192,7 @@ data "DescriptionParams" "4"
 data "Conditions" "(IsAttack() or IsSpell()) and Enemy() and Character() and not Dead() and not HasStatus('AMP_TOXEMIA') and not HasStatus('PARALYZED',context.Target)"
 data "StatsFunctors" "ApplyStatus(AMP_TOXEMIA, 100, 4)"
 
-// RARE
+// ================ RARE ================
 new entry "arc_R_Poison2"
 type "Armor"
 using "ARM_Ring"
@@ -10175,6 +10206,7 @@ data "ValueLevel" "5"
 data "PassivesOnEquip" "R_Poison_Corrode;R_Poison_Volatile_T2"
 data "Boosts" ""
 
+// P2: Inexorable Toxin — ignore Poison Resistance + Immunity while target has Toxemia
 new entry "R_Poison_Corrode"
 type "PassiveData"
 data "DisplayName" "hee5aa160g492eg4e05g828cg30fcafb2d3ca;1"
@@ -10183,7 +10215,7 @@ data "DescriptionParams" "DealDamage(,Poison)"
 data "Properties" "Highlighted"
 data "Boosts" "IF(HasStatus('AMP_TOXEMIA',context.Target)):IgnoreResistance(Poison,Resistant);IF(HasStatus('AMP_TOXEMIA',context.Target)):IgnoreResistance(Poison,Immune)"
 
-// VERYRARE
+// ================ VERYRARE ================
 new entry "arc_R_Poison3"
 type "Armor"
 using "ARM_Ring"
@@ -10197,6 +10229,7 @@ data "ValueLevel" "7"
 data "PassivesOnEquip" "R_Poison_Corrode;R_Poison_Volatile_T3;R_Poison_Siphon"
 data "Boosts" ""
 
+// P3: Venomous Siphon — bonus poison damage from non-attack/spell sources + heal if poisoned
 new entry "R_Poison_Siphon"
 type "PassiveData"
 data "DisplayName" "hee077eccg4b76g4017g8061g204595a3658a;1"
@@ -10215,7 +10248,7 @@ data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableComb
 data "OnApplyFunctors" "RegainHitPoints(1d4)"
 data "ApplyEffect" "f40e4c72-3971-4f14-9c43-9a44c0251a5d"
 
-// LEGENDARY
+// ================ LEGENDARY ================
 new entry "arc_R_Poison4"
 type "Armor"
 using "ARM_Ring"
@@ -10230,6 +10263,7 @@ data "PassivesOnEquip" "R_Poison_Corrode;R_Poison_Volatile_T4;R_Poison_Siphon;R_
 data "StatusOnEquip" "ARC_POISON4_PANDEMIC_TECH"
 data "Boosts" ""
 
+// P4: Pandemic Burst — death under Toxemia spreads 3 turns to nearby enemies
 new entry "R_Poison_Pandemic"
 type "PassiveData"
 data "DisplayName" "h2a97a118g75b2g4a5agb4d7gf040760f7321;1"
@@ -10353,7 +10387,7 @@ data "Boosts" "StatusImmunity(SG_Frightened);StatusImmunity(SG_Charmed)"
 
 // Monk Gloves
 
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 new entry "arc_G_Monk1"
 type "Armor"
 using "_Hand_Magic"
@@ -10439,7 +10473,7 @@ data "StatusPropertyFlags" ""
 data "StatusGroups" "SG_Condition"
 data "StatusEffect" ""
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "arc_G_Monk2"
 type "Armor"
 using "arc_G_Monk1"
@@ -10466,7 +10500,7 @@ data "SpellType" "Target"
 using "Target_G_Monk1"
 data "Cooldown" "OncePerTurn"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "arc_G_Monk3"
 type "Armor"
 using "arc_G_Monk1"
@@ -10496,7 +10530,7 @@ data "SpellSuccess" "DealDamage(1d10+(Target.G_MONK1.Duration),Psychic,Magical);
 data "DescriptionParams" "DealDamage(1d10,Psychic)"
 data "TooltipDamageList" "DealDamage(1d10,Psychic)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "arc_G_Monk4"
 type "Armor"
 using "arc_G_Monk1"
@@ -10943,7 +10977,7 @@ using "AMP_Swamp_VoidCapsule"
 data "RootTemplate" "d75c3820-2d6b-4355-8e0d-70af3570399c"
 data "PassivesOnEquip" "AMP_Primal_VoidCapsule_Passive;AMP_VoidCapsule_Salvage_Info;AMP_VoidCapsule_HowTo_Info"
 
-// ARCANIZER 3.0 PASSIVES
+// ================ ARCANIZER 3.0 PASSIVES ================
 
 // Coin Passive (shared by all coins)
 new entry "AMP_FeyCoin_Passive"
@@ -10976,7 +11010,7 @@ data "Description" "h8c1d4e7ag2f59g4b83ga672g9e3f5a8b4c17;1"
 data "Icon" "PassiveFeature_MagicalAmbush"
 data "Properties" "Highlighted"
 
-// SLOT CAPSULE PASSIVES
+// ================ SLOT CAPSULE PASSIVES ================
 
 // Base for slot capsules
 new entry "AMP_Hat_VoidCapsule_Passive"
@@ -11036,7 +11070,7 @@ type "PassiveData"
 using "AMP_Hat_VoidCapsule_Passive"
 data "Description" "ha0c0abf8g7713g4e68g979egebab8c174a7c;1"
 
-// SYNERGY CAPSULE PASSIVES
+// ================ SYNERGY CAPSULE PASSIVES ================
 
 // Base for synergy capsules
 new entry "AMP_Swamp_VoidCapsule_Passive"
@@ -11091,7 +11125,7 @@ type "PassiveData"
 using "AMP_Swamp_VoidCapsule_Passive"
 data "Description" "h6e30812bg14d9g4cdega42dg7922626bed4f;1"
 
-// HOW TO USE CAPSULE
+// ================ HOW TO USE CAPSULE ================
 
 new entry "AMP_VoidCapsule_HowTo_Info"
 type "PassiveData"
@@ -11100,7 +11134,7 @@ data "Description" "hf7cec362gaf15g4cc7ga9f5gb1b9181ff554;1"
 data "Icon" "PassiveFeature_Generic_Tactical"
 data "Properties" "Highlighted"
 
-// SALVAGE INFO PASSIVE
+// ================ SALVAGE INFO PASSIVE ================
 
 new entry "AMP_VoidCapsule_Salvage_Info"
 type "PassiveData"
@@ -11146,7 +11180,9 @@ data "StackId" "COIN_VFX"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 data "StatusEffect" "c895ac19-3467-46da-8643-268f59495ca7"
 
-// Shard system lives in Arcanizer_Shards.txt
+// ================================================================================
+// SHARD SYSTEM — moved to Arcanizer_Shards.txt
+// ================================================================================
 
 new entry "AMP_REROLL_WINDOW"
 type "StatusData"
@@ -11311,8 +11347,9 @@ new entry "AMP_Primal_VoidCapsule_Shop"
 type "Object"
 using "AMP_Primal_VoidCapsule"
 data "ValueOverride" "3000"
-// Helper projectile spells
+// ================ BATCH 09 — HELPER PROJECTILE SPELLS ================
 
+// G21 Halo burst — radiant AoE 2m, invoked by weapon shard on crit
 new entry "Projectile_AMP_Shard_Halo_Burst"
 type "SpellData"
 data "SpellType" "Projectile"

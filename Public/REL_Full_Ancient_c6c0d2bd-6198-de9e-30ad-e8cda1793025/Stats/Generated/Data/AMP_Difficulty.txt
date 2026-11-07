@@ -1,6 +1,10 @@
-// Difficulty statuses by host level tier
+//=============================================================================
+// AMP DIFFICULTY SYSTEM v5.0 — Player-Level Tiering, Boss/NPC Split
+// Tier by HOST level: T0(1-2) T1(3-4) T2(5-8) T3(9-11) T4(12+)
+// CASUAL=NONE | NORMAL=STANDARD | HARD=IMPOSSIBLE
+//=============================================================================
 
-// PLAYER DEBUFFS
+// ====================== PLAYER DEBUFFS ======================
 
 new entry "AMP_DIFFICULTY_PLAYER_STANDARD"
 type "StatusData"
@@ -18,7 +22,7 @@ data "StackId" "AMP_DIFFICULTY_PLAYER_DEBUFF"
 data "Boosts" ""
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// NPC BASE: STANDARD (T0/T1/T2/T3/T4)
+// ====================== NPC BASE: STANDARD (T0/T1/T2/T3/T4) ======================
 
 new entry "AMP_NPC_STANDARD_T0_V4"
 type "StatusData"
@@ -70,7 +74,8 @@ data "Boosts" "ProficiencyBonusIncrease(3);AC(5);RollBonus(SavingThrow,2);Increa
 data "Passives" ""
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Boss base, STANDARD. Not layered over NPC base
+// ====================== BOSS BASE: STANDARD (T0/T1/T2/T3/T4) ======================
+// Standalone — NOT added on top of NPC Base
 
 new entry "AMP_BOSS_STANDARD_T0_V4"
 type "StatusData"
@@ -122,7 +127,7 @@ data "Boosts" "ProficiencyBonusIncrease(3);AC(5);RollBonus(SavingThrow,3);Increa
 data "Passives" ""
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// NPC BASE: IMPOSSIBLE (T0/T1/T2/T3/T4)
+// ====================== NPC BASE: IMPOSSIBLE (T0/T1/T2/T3/T4) ======================
 
 new entry "AMP_NPC_IMPOSSIBLE_T0_V4"
 type "StatusData"
@@ -174,7 +179,8 @@ data "Boosts" "ProficiencyBonusIncrease(3);AC(5);RollBonus(SavingThrow,2);Increa
 data "Passives" "AMP_Diff_LastStand_NPC_T4"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Boss base, IMPOSSIBLE. Standalone too
+// ====================== BOSS BASE: IMPOSSIBLE (T0/T1/T2/T3/T4) ======================
+// Standalone — NOT added on top of NPC Base
 
 new entry "AMP_BOSS_IMPOSSIBLE_T0_V4"
 type "StatusData"
@@ -225,6 +231,10 @@ data "StackType" "Ignore"
 data "Boosts" "ProficiencyBonusIncrease(4);AC(4);RollBonus(SavingThrow,3);IncreaseMaxHP(175%);ActionResource(Movement,6,0);JumpMaxDistanceBonus(6);IF(IsAttack() or IsSpell()):DamageBonus(1d4);ScaleMultiplier(1.24);ReduceCriticalAttackThreshold(4);CriticalHitExtraDice(3,MeleeWeaponAttack);CriticalHitExtraDice(3,MeleeOffHandWeaponAttack);CriticalHitExtraDice(3,MeleeSpellAttack);CriticalHitExtraDice(3,RangedSpellAttack);CriticalHitExtraDice(3,MeleeUnarmedAttack);CriticalHitExtraDice(3,RangedUnarmedAttack);CriticalHitExtraDice(3,RangedWeaponAttack);CriticalHitExtraDice(3,RangedOffHandWeaponAttack);MinimumRollResult(Damage,3);IgnoreFallDamage();StatusImmunity(PRONE_ICE);StatusImmunity(SG_Prone);Tag(CHASM_IMMUNE);ActionResource(BonusActionPoint,1,0);ActionResource(ActionPoint,2,0);ActionResource(ReactionActionPoint,2,0);Initiative(20)"
 data "Passives" "AMP_Diff_LastStand_Boss_T4"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
+
+// ====================== BOSS PROGRESSION ======================
+// Per boss kill: 1 player marker + 1 enemy stack (tier of kill determines strength)
+// Osiris: AMP_Difficulty_BossProgression.txt
 
 // --- Player markers (no boosts, just visible stack counter) ---
 
@@ -391,7 +401,7 @@ data "DisplayName" "hd857a58dg0cc3g4f68gaedbge92966dba3a7;1"
 data "Boosts" "IncreaseMaxHP(18%);ActionResource(Movement,3,0);IF(IsAttack() or IsSpell()):DamageBonus(1d10)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// LAST STAND (Hard mode T3+)
+// ====================== LAST STAND (Hard mode T3+) ======================
 // When enemy drops to ≤30% HP, one-time temp HP burst
 
 new entry "AMP_LAST_STAND_FIRED"
@@ -400,7 +410,7 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_LAST_STAND_FIRED"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Base temp HP status, others inherit via using
+// Base temp HP status — others inherit via using
 
 new entry "AMP_LAST_STAND_NPC_T3"
 type "StatusData"
@@ -460,7 +470,9 @@ type "PassiveData"
 using "AMP_Diff_LastStand_NPC_T3"
 data "StatsFunctors" "ApplyStatus(AMP_LAST_STAND_FIRED,100,-1);ApplyStatus(AMP_LAST_STAND_BOSS_T4,100,-1)"
 
-// Ultra overlay, stacks on any difficulty
+// ====================== ULTRA OVERLAY ======================
+// Secret mode — stacks ON TOP of any difficulty (Casual/Normal/Hard)
+// Offered once at level 8+ and once at level 12+ on first enemy kill
 
 new entry "AMP_ULTRA_NPC_OVERLAY"
 type "StatusData"
@@ -489,7 +501,10 @@ data "StackId" "AMP_ULTRA_PLAYER_DEBUFF"
 data "Boosts" ""
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Mirror support. AMP_MIRROR_TRIGGER feeds PROC_AMP_MirrorSupport_Spawn
+// ====================== MIRROR SUPPORT (Ultra-only spawn-on-CC system) ======================
+// Watcher passives attach to AMP_ULTRA_BOSS_OVERLAY (Passives field).
+// Trigger flow: boss receives CC + HP<80% → watcher applies AMP_MIRROR_TRIGGER
+//   → Osiris StatusApplied listener fires PROC_AMP_MirrorSupport_Spawn (AMP_MirrorSupport_Core.txt).
 
 new entry "AMP_MIRROR_TRIGGER"
 type "StatusData"
@@ -537,7 +552,9 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "(HasStatus('SG_Charmed',context.Target) or HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Mad',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Frightened',context.Target) or HasStatus('SG_Prone',context.Target) or HasStatus('SG_Restrained',context.Target) or HasStatus('WET',context.Target) or HasStatus('SURPRISED',context.Target) or HasStatus('SLOW',context.Target)) and HasHPPercentageLessThan(70,context.Target)"
 data "StatsFunctors" "ApplyStatus(AMP_MIRROR_TRIGGER,100,1)"
 
-// Mirror wrath. NPC-applied CC and taunt stripped in AMP_MirrorSupport_Core
+// ====================== MIRROR WRATH (pursuer empowerment vs NPCs) ======================
+// Always-on visible status on the chase pursuer. Bonus damage only vs non-player non-summon
+// targets. NPC-applied CC/taunt is stripped via Osiris (AMP_MirrorSupport_Core BLOCK 5d).
 
 new entry "AMP_MIRROR_WRATH"
 type "StatusData"
@@ -550,7 +567,7 @@ data "StackId" "AMP_MIRROR_WRATH"
 data "Boosts" "IF(not Player(context.Target) and not Summon(context.Target)):DamageBonus(75)"
 data "StatusPropertyFlags" "ForceOverhead;IgnoreResting;ApplyToDead"
 
-// MIRROR ENDGAME (final-tier scaling boost)
+// ====================== MIRROR ENDGAME (final-tier scaling boost) ======================
 // Applied via Osiris when the host is at the final scaling tier (level 12+, T4).
 
 new entry "AMP_MIRROR_ENDGAME"
@@ -564,6 +581,10 @@ data "StackId" "AMP_MIRROR_ENDGAME"
 data "Boosts" "ActionResource(ActionPoint,1,0);DamageBonus(1d8)"
 data "StatusPropertyFlags" "ForceOverhead;IgnoreResting;ApplyToDead"
 
+// ====================== BATTLE INSTINCT ======================
+// First-round protection: Resistance(All) for 1 turn on combat start
+// Applied via Osiris (AMP_BattleInstinct_Toggle.txt), toggleable in Normal mode
+
 new entry "AMP_BATTLE_INSTINCT"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -576,6 +597,11 @@ data "StackId" "AMP_BATTLE_INSTINCT"
 data "Boosts" "Resistance(All, Resistant);RollBonus(SavingThrow, 1d8);CriticalHit(AttackTarget,Success,Never)"
 data "StatusPropertyFlags" "IgnoreResting;DisableCombatlog"
 data "StatusGroups" "SG_Condition"
+
+// ====================== ACTION SURGE (Ultra T4 only) ======================
+// Info status (visible to player) carries 3 passives via data "Passives".
+// On OnTurn with no damage taken last turn, fires vanilla ACTION_SURGE on the creature.
+// HIT_MARKER tracks damage; cleared on next turn check if marker present; surge fires if absent.
 
 new entry "AMP_ACTION_SURGE_INFO"
 type "StatusData"
@@ -614,7 +640,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "HasStatus('AMP_ACTION_SURGE_HIT_MARKER',context.Source)"
 data "StatsFunctors" "RemoveStatus(SELF,AMP_ACTION_SURGE_HIT_MARKER)"
 
-// ITEM MOVE COST
+// ====================== ITEM MOVE COST ======================
 
 new entry "AMP_ITEM_MOVE_BA_COST"
 type "StatusData"
@@ -648,7 +674,7 @@ data "FormatColor" "Red"
 data "StackId" "AMP_ITEM_MOVE_ENDTURN"
 data "StackType" "Overwrite"
 
-// Eclipse, Hard boss comeback
+// ========== ECLIPSE — Hard mode boss comeback ==========
 
 new entry "AMP_ECLIPSE_RESOURCE_USER"
 type "StatusData"
@@ -694,8 +720,10 @@ data "ApplyEffect" "a93c97ac-db27-4e9a-95c8-eb293c19d110"
 data "StatusEffect" "1881d44f-4690-4524-a379-7ca1c0429e06"
 data "StatusGroups" "SG_Condition"
 
-// Blast fired without SELF, centres on the bearer. Targets Player() by type, Enemy() can flip with caster scope
-// Vanilla STUNNED, so stun immunity gear resists
+// Eclipse mass-stun: on activation the boss erupts, stunning every player in range for 1 turn so the
+// comeback survives. Fired via CreateExplosion WITHOUT SELF, so it centres on the bearer (boss), and
+// targets Player() BY TYPE (not Enemy()) so the explosion's caster/source scope can never flip it onto
+// the wrong side. Vanilla STUNNED, so stun-immunity gear still resists (intended).
 new entry "Projectile_AMP_Eclipse_Stun"
 type "SpellData"
 data "SpellType" "Projectile"
@@ -713,7 +741,12 @@ data "VerbalIntent" "Debuff"
 data "HitAnimationType" "MagicalNonDamage"
 data "SpellFlags" "ImmediateCast"
 
-// Eclipse damage-type variants, picked per boss in AMP_Eclipse_Apply
+// ============================================================
+// ECLIPSE per-boss damage-type variants (lore). Inherit AMP_ECLIPSE;
+// only DamageBonus type + tooltip change. Osiris (AMP_Eclipse_Apply)
+// applies the *_INFO_<T> carrier per boss GUID; unmapped bosses keep
+// the base Radiant AMP_ECLIPSE_INFO. Balthazar = Necrotic (never Radiant).
+// ============================================================
 
 new entry "AMP_ECLIPSE_NECROTIC"
 type "StatusData"
@@ -841,6 +874,11 @@ data "StatusType" "BOOST"
 using "AMP_ECLIPSE_INFO"
 data "Passives" "AMP_Eclipse_DetectResourceUser;AMP_Eclipse_Trigger_PSYCHIC"
 
+// ============================================================
+// T5 (Divine, EffLvl 16+) — for level-20 player mods + custom god-tier bosses
+// Numbers extrapolate aggressively from T4 (Prof+15 Boss IMPOSSIBLE = effective +21)
+// ============================================================
+
 new entry "AMP_NPC_STANDARD_T5_V4"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -939,9 +977,18 @@ type "PassiveData"
 using "AMP_Diff_LastStand_NPC_T3"
 data "StatsFunctors" "ApplyStatus(AMP_LAST_STAND_FIRED,100,-1);ApplyStatus(AMP_LAST_STAND_BOSS_T5,100,-1)"
 
-// Undying Will. SPENT marker applies vanilla DOWNED_DISABLED, next lethal hit kills outright
+// ============================================================
+// Boss Anti-Death (Hard T3+) - Undying Will
+// Boss drops to a custom DOWNED status instead of dying, rises at
+// half HP with Action Surge. The SPENT marker then applies the
+// vanilla DOWNED_DISABLED tag until combat ends, so the boss dies
+// outright on the next lethal hit (no death saving throws) and the
+// revive fires only once per fight. Re-armed on LeftCombat.
+// ============================================================
 
-// Removable charge, armed per combat in ZZ_AMP_Boss_AntiDeath_Reset.txt, consumed by the downed status on revive
+// Removable charge carrying the revive override. Armed by Osiris (ZZ_AMP_Boss_AntiDeath_Reset.txt) when a
+// Hard boss (T3+) enters combat; consumed by the custom downed on revive (vanilla canon: the downed status
+// removes its source). Re-armed each combat, so the boss rises once per fight.
 new entry "AMP_BOSS_ANTIDEATH_CHARGE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -966,6 +1013,10 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_BOSS_ANTIDEATH_SPENT"
 data "Boosts" "Tag(DOWNED_DISABLED)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
+
+// ====================== THE RETURNED (Death Defying second form) ======================
+// Applied on revival (AMP_BOSS_ANTIDEATH_DOWNED). Hard-only via AntiDeath gating.
+// An entity seizes the body: shadow shroud, +1 Action Point, life-feast on hit, per-turn regen.
 
 new entry "AMP_BOSS_POSSESSED"
 type "StatusData"
@@ -997,10 +1048,15 @@ data "StatsFunctors" "ApplyStatus(SELF,AMP_BLOOD_SUMMON3_HEAL,100,0)"
 
 
 
-// Pyre. Ten grades share StackId AMP_PYRE with Overwrite
-// Points engine in Z_AMP_Pyre.txt
+// =============================================================================
+// PYRE v2 - escalating "bonfire" difficulty affix
+// Points engine lives in Z_AMP_Pyre.txt. These are the display/boost vehicles.
+// 10 gradation statuses share StackId "AMP_PYRE" + Overwrite -> one active grade,
+// swapped as Osiris point thresholds are crossed (up or down).
+// Trackers ride hostile combatants only and pulse 0-turn markers that Osiris reads.
+// =============================================================================
 
-// 0-turn marker statuses (Osiris StatusApplied bridge)
+// --- 0-turn marker statuses (Osiris StatusApplied bridge) --------------------
 new entry "AMP_PYRE_MARK_DMG"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1022,7 +1078,7 @@ data "StackId" "AMP_PYRE_MARK_CC"
 data "StackType" "Overwrite"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// Tracker carrier (hostiles only, applied/removed by Osiris)
+// --- Tracker carrier (hostiles only, applied/removed by Osiris) ---------------
 new entry "AMP_PYRE_TRACKER"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1030,7 +1086,9 @@ data "StackId" "AMP_PYRE_TRACKER"
 data "Passives" "AMP_Pyre_Track_Damage;AMP_Pyre_Track_CC;AMP_Pyre_Track_Heal;AMP_Pyre_Track_CONFail"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// OnDamaged bearer is the hit enemy, SELF is the attacker. Markers go without SELF
+// --- Tracking passives --------------------------------------------------------
+// OnDamaged: bearer is the damaged enemy (context.Target); SELF would be attacker.
+// Apply markers WITHOUT SELF so they land on the bearer (the enemy that was hit).
 new entry "AMP_Pyre_Track_Damage"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -1044,7 +1102,7 @@ data "StatsFunctorContext" "OnStatusApplied"
 data "Conditions" "(StatusHasStatusGroup(context.StatusId,'SG_Charmed') or StatusHasStatusGroup(context.StatusId,'SG_Incapacitated') or StatusHasStatusGroup(context.StatusId,'SG_Mad') or StatusHasStatusGroup(context.StatusId,'SG_Polymorph') or StatusHasStatusGroup(context.StatusId,'SG_Frightened') or StatusHasStatusGroup(context.StatusId,'SG_Prone') or StatusHasStatusGroup(context.StatusId,'SG_Restrained') or StatusHasStatusGroup(context.StatusId,'SG_Stunned') or StatusId('MAG_RADIANT_RADIATING_ORB') or StatusId('RING27_REVERB_TRIGGER') or StatusId('BURNING') or StatusId('SLOW') or StatusId('SHOCKED'))"
 data "StatsFunctors" "ApplyStatus(AMP_PYRE_MARK_CC,100,0)"
 
-// 10 gradation statuses (Ember -> Inferno)
+// --- 10 gradation statuses (Ember -> Inferno) -------------------------------
 new entry "AMP_PYRE_G1"
 type "StatusData"
 data "StatusType" "BOOST"

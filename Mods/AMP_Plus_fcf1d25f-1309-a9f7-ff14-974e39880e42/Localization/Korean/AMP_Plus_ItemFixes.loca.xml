@@ -18,4 +18,6 @@
 	<content contentuid="he50a07a0gca80g42fegbfecga6fb257377ce" version="1">차원 도약 자물쇠 따기</content>
 	<content contentuid="h64bd171fg3bc5g40f1gb681gfa5aa11c3144" version="1">자물쇠 따개를 장착하고 &lt;b&gt;차원 도약 상자&lt;/b&gt;를 공격하면 열립니다.</content>
 	<content contentuid="h0935d89fgc7d8g46f0ga0e1gfe0661547650" version="1">전투 중 이 반지로 얻은 &lt;LSTag Type="Spell" Tooltip="Throw_Telekinesis_Skilthiryx"&gt;염력&lt;/LSTag&gt;을 시전한 후에는 매 턴 &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;보조 행동&lt;/LSTag&gt;으로 한 번 다시 시전할 수 있습니다.</content>
+	<content contentuid="hd6d0aae1ge6aeg4d1ag81f6gd25225df880c" version="1">피해를 입을 때, 받는 피해를 절반으로 줄입니다.&lt;br&gt;&lt;br&gt;&lt;b&gt;순혈 엘프&lt;/b&gt;라면 이 효과는 자동으로 발동하며 &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;대응&lt;/LSTag&gt;을 소모하지 않습니다. 그 외의 경우에는 &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;대응&lt;/LSTag&gt;을 소모합니다.</content>
+	<content contentuid="hadcb02b6g819cg4b92g860eg33c48154e91c" version="1">야수의 심장을 보유한 경우, &lt;LSTag Tooltip="CriticalHit"&gt;치명타&lt;/LSTag&gt; 굴림 필요치가 &lt;b&gt;[1]&lt;/b&gt;만큼 감소합니다. &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;야생 형상&lt;/LSTag&gt; 상태에서는 야수의 심장이 없어도 대신 &lt;b&gt;[2]&lt;/b&gt;만큼 감소합니다.</content>
 </contentList>

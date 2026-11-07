@@ -58,17 +58,19 @@ new entry "MAG_Armour_H_89"
 type "Armor"
 using "MAG_Armour_H_89"
 data "PassivesOnEquip" "MAG_Armour_H_89_bonus;AMP_Plus_Jester_Titled"
+data "Boosts" "Skill(Performance,3);UnlockSpell(Target_ViciousMockery);UnlockSpell(MAG_Armour_H_89_1_JestersCharm)"
 
 new entry "MAG_Armour_H_89_3"
 type "Armor"
 using "MAG_Armour_H_89_3"
 data "PassivesOnEquip" "MAG_Armour_H_89_3_bonus;AMP_Plus_Jester_Titled_2"
+data "Boosts" "Skill(Performance,4);UnlockSpell(Target_ViciousMockery);UnlockSpell(MAG_Armour_H_89_1_JestersCharm)"
 
 new entry "MAG_Armour_H_89_4"
 type "Armor"
 using "MAG_Armour_H_89_4"
 data "PassivesOnEquip" "MAG_Armour_H_89_4_bonus;AMP_Plus_Jester_Titled_2"
-data "Boosts" "Skill(Performance,6);UnlockSpell(MAG_Armour_H_89_4_FoolsBall)"
+data "Boosts" "Skill(Performance,6);UnlockSpell(Target_ViciousMockery);UnlockSpell(MAG_Armour_H_89_1_JestersCharm);UnlockSpell(MAG_Armour_H_89_4_FoolsBall)"
 
 
 // blindness is a status group, slow and reverberation have none so they are named

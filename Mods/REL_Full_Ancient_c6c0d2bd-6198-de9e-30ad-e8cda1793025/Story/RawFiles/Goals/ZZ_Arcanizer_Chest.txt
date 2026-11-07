@@ -2,7 +2,9 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 /*
-// any container with this tag becomes an arcanizer
+// this script is working!!!
+// arcanizer tag definitions
+// the arcanizer tag - any container with this tag becomes an arcanizer
 DB_AMP_Arcanizer_Tag((TAG)ARCANIZER_MAIN_c4302d38-d7a9-4522-8912-e8c3f53766f5);
 
 // ownership tracking

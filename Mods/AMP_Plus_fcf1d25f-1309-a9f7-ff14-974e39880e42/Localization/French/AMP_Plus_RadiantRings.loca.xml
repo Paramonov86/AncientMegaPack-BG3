@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hcff92e02g051eg4530ga4adgb66d58de827c" version="1">Toutes vos sources de dégâts infligent &lt;b&gt;en plus&lt;/b&gt; &lt;b&gt;[1]&lt;/b&gt;. Si la cible est un &lt;b&gt;mort-vivant&lt;/b&gt;, un &lt;b&gt;fiélon&lt;/b&gt; ou une &lt;b&gt;fée&lt;/b&gt;, ces dégâts passent à &lt;b&gt;[2]&lt;/b&gt;.</content>
+	<content contentuid="h9474bd81g1505g469ag9512gcd5e1238950e" version="1">Étoile d'Élysée</content>
+	<content contentuid="h511b74bdg0f3bg4588g96efg337ae22fb7e5" version="1">Tant que vous portez cet anneau, vous bénéficiez de &lt;LSTag Type="Status" Tooltip="PROTECTION_FROM_EVIL_AND_GOOD"&gt;Protection contre le Mal et le Bien&lt;/LSTag&gt;.</content>
+	<content contentuid="h09729888g9719g42b3ga21eg634f4d08d0f7" version="1">Garde de l'aube</content>
+</contentList>

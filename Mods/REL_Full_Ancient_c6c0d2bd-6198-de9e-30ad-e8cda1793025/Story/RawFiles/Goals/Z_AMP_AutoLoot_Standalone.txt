@@ -401,8 +401,9 @@ DB_AMP_AL_IteratingContainer(1);
 DB_AMP_AL_ContainerDone(_Container);
 IterateInventory(_Container, "AMP_AL_GrabItem", "AMP_AL_IterDone");
 
-// two triggers feed one proc: 2s after combat end, and a marker on the corpse
-// MoveAllLootableItemsTo already respects npc owner protection
+// corpse loot via movealllootableitemsto. two triggers, one proc:
+// post-combat (died -> queued -> combatended+2s) and environmental (marker on corpse).
+// engine handles npc-owner protection.
 
 // corpse loot proc. vfx deferred to removedfrom so it only fires if something moves.
 PROC

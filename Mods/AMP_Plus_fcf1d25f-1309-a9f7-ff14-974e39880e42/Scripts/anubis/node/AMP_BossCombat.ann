@@ -1,6 +1,13 @@
--- turn timeout measures silence, not wall time: reaction animations eat the engine timer
--- held while the fight is paused and restarted after each reaction, both signalled from story code
--- never removed outside a hold, it is the only guard against an AI that stops deciding
+-- DefaultCombat with a turn timeout that measures silence instead of wall time.
+--
+-- The engine force-ends a turn when its timer runs out, and that timer keeps running while
+-- the party plays reaction animations. A creature with a long route can therefore spend its
+-- entire turn being interrupted and lose it, every round. So the timeout is suspended while
+-- the fight is paused and started over after each reaction; both are signalled from story
+-- code, because the timer can only be touched from here.
+--
+-- Outside of such a hold the timer is never removed: it is the engine's only guard against a
+-- combat AI that stops deciding.
 game.states.AMP_BossCombat = State{function ()
     description = [[DefaultCombat with a turn timeout that is held while the party reacts.]]
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hcf3ecd02gd758g42cdgb0a6gf482b7c652ee" version="1">Enchanted Weave</content>
+	<content contentuid="hdb9a934bga0f8g4597gb7ccg06b18b87c83b" version="1">You gain &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to&lt;b&gt;[1]&lt;/b&gt;.</content>
+	<content contentuid="hfe8ebf4bg4856g4fcdg8045gc1b28016f5a0" version="1">When a creature leaves your melee range, you can use your reaction to cast &lt;LSTag Type="Spell" Tooltip="Target_ShockingGrasp"&gt;Shocking Grasp&lt;/LSTag&gt;.</content>
+</contentList>

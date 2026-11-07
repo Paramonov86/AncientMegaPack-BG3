@@ -1,7 +1,9 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// spawns every AMP_Para chest into the player inventory, deleted when dropped
+// amp para chests spawn system
+// spawns all 22 amp_para loot chests to player inventory
+// auto-deletes when dropped from inventory
 
 // register all para chest templates for tracking
 DB_AMP_Para_Template((ITEMROOT)AMP_Para_1_154bf227-60ce-4241-8071-b1308dc61d62);

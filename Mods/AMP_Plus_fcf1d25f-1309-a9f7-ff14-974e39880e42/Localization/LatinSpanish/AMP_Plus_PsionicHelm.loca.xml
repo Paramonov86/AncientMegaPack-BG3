@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h3ad726bfg6185g4d0egbf76ge6b4e51199b4" version="1">Gel astral</content>
+	<content contentuid="hbec12d5cg9df0g404egb8e4g03fb1d2bf926" version="1">Obtienes &lt;LSTag Tooltip="Resistant"&gt;resistencia&lt;/LSTag&gt; a&lt;b&gt;[1]&lt;/b&gt; y&lt;b&gt;[2]&lt;/b&gt;.</content>
+	<content contentuid="h98587373gd4a8g4b33g9402g6bb6c2796641" version="1">Tejido mental</content>
+	<content contentuid="h1c4b9247gaeb9g47aagbc48g9ee9d104497c" version="1">Tienes &lt;b&gt;ventaja&lt;/b&gt; en las &lt;LSTag Tooltip="SavingThrow"&gt;tiradas de salvación&lt;/LSTag&gt; de &lt;b&gt;Inteligencia&lt;/b&gt;, &lt;b&gt;Sabiduría&lt;/b&gt; y &lt;b&gt;Carisma&lt;/b&gt;.</content>
+	<content contentuid="hd7ca0265g642fg4f8dg99b1g0d848caeaf51" version="1">Cuando infliges&lt;b&gt;[1]&lt;/b&gt;, también infliges &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Fatiga mental&lt;/LSTag&gt; durante &lt;b&gt;[2]&lt;/b&gt; turnos.</content>
+</contentList>

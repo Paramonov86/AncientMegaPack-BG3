@@ -1,5 +1,10 @@
-// no action points and nothing to attack, so only the end position scores
-// radius covers one turn of movement, past it every position ties and it stops running halfway
+// tesshin, crab form: pure flight. it has no action points and nothing to attack with, so the
+// only thing left to score is where it ends the turn.
+//
+// peel pressure at the documented floor, and an awareness radius matched to the reach of one
+// turn: past the radius every position scores the same and it stops running halfway. anything
+// past -0.50 already reads as strong avoidance, and with nothing to attack there is no
+// competing score to pull it back in.
 
 USING ranged
 MULTIPLIER_ENDPOS_ENEMIES_NEARBY                -1.00

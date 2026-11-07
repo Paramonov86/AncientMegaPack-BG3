@@ -23,5 +23,43 @@ EntityEvent((ITEM)_Item, "AMP_Plus_DuplicityStripItem")
 THEN
 RequestDelete(_Item);
 
+// a caster carrying every race tag summons one clone per race; keep the first, drop the rest
+
+IF
+StatusApplied((CHARACTER)_Duplicity, "INVOKE_DUPLICITY_TECHNICAL", (CHARACTER)_Player, _)
+AND
+DB_Players(_Player)
+THEN
+ObjectTimerLaunch((GUIDSTRING)_Duplicity, "AMP_Plus_DuplicityOne", 800, 0);
+
+IF
+ObjectTimerFinished((CHARACTER)_Duplicity, "AMP_Plus_DuplicityOne")
+AND
+DB_AMP_Plus_DuplicityKeeper((CHARACTER)_Player, (CHARACTER)_Keeper)
+AND
+_Keeper != _Duplicity
+AND
+Exists(_Duplicity, 1)
+THEN
+Die(_Duplicity, DEATHTYPE.Lifetime, _Duplicity, 0, 0);
+
+IF
+ObjectTimerFinished((CHARACTER)_Duplicity, "AMP_Plus_DuplicityOne")
+AND
+DB_Players((CHARACTER)_Player)
+AND
+NOT DB_AMP_Plus_DuplicityKeeper((CHARACTER)_Player, _)
+AND
+Exists(_Duplicity, 1)
+THEN
+DB_AMP_Plus_DuplicityKeeper(_Player, _Duplicity);
+
+IF
+Died((CHARACTER)_Duplicity)
+AND
+DB_AMP_Plus_DuplicityKeeper((CHARACTER)_Player, (CHARACTER)_Duplicity)
+THEN
+NOT DB_AMP_Plus_DuplicityKeeper(_Player, _Duplicity);
+
 EXITSECTION
 ENDEXITSECTION

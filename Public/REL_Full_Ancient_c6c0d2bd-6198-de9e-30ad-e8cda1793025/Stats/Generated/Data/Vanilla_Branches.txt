@@ -1,4 +1,4 @@
-// MONK SOUL REJUVENATION ARMOR BRANCH
+// ================ MONK SOUL REJUVENATION ARMOR BRANCH ================
 
 // REBALANCE OVERRIDE (adds to Arcanizer_Tags rebalance - removes AC(2) boost)
 new entry "MAG_Monk_SoulRejunevation_Armor"
@@ -25,7 +25,7 @@ data "Rarity" "Rare"
 data "ComboCategory" "d2"
 data "Boosts" "AC(1)"
 
-// CHARGED LIGHTNING ELECTROCUTE ARMOR BRANCH
+// ================ CHARGED LIGHTNING ELECTROCUTE ARMOR BRANCH ================
 
 // UNCOMMON VERSION - AC 13, no damage reduction
 new entry "MAG_ChargedLightning_Electrocute_Armor_1"
@@ -37,7 +37,7 @@ data "Rarity" "Uncommon"
 data "ComboCategory" "d1"
 data "PassivesOnEquip" "MAG_ChargedLightning_Electrocute_Armor_Passive"
 
-// CHARGED LIGHTNING QUARTERSTAFF BRANCH
+// ================ CHARGED LIGHTNING QUARTERSTAFF BRANCH ================
 
 // UNCOMMON VERSION - 1 charge per hit, no enchantment
 new entry "MAG_ChargedLightning_Quarterstaff_1"
@@ -70,7 +70,7 @@ data "ComboCategory" "d4"
 data "DefaultBoosts" "WeaponEnchantment(3);WeaponProperty(Magical)"
 data "PassivesOnEquip" "MAG_ChargedLightning_Charge_OnSpellDamage_Passive_4;MAG_ChargedLightning_LightningPiercing_Passive"
 
-// PASSIVES
+// ================ PASSIVES ================
 
 // UNCOMMON - 1 charge per spell hit
 new entry "MAG_ChargedLightning_Charge_OnSpellDamage_Passive_1"
@@ -102,7 +102,7 @@ data "DescriptionParams" "DealDamage(,Lightning)"
 data "Properties" "Highlighted"
 data "Boosts" "IgnoreResistance(Lightning,Resistant);IgnoreResistance(Lightning,Immune)"
 
-// HELLDUSK PLATE ARMOR BRANCH
+// ================ HELLDUSK PLATE ARMOR BRANCH ================
 
 // REBALANCE (moved from Vanilla_Rebalance.txt - must be before dupe)
 new entry "MAG_EndGame_Plate_Armor"
@@ -124,7 +124,7 @@ data "Rarity" "VeryRare"
 data "ComboCategory" "d3"
 data "PassivesOnEquip" "MAG_MAG_EndGame_Plate_Armor_Passive"
 
-// HELLDUSK HALFPLATE BRANCH
+// ================ HELLDUSK HALFPLATE BRANCH ================
 
 // REBALANCE (moved from Vanilla_Rebalance.txt - must be before dupe)
 new entry "MAG_EndGame_HalfPlate"
@@ -175,7 +175,7 @@ data "Rarity" "VeryRare"
 data "ComboCategory" "d3"
 data "Boosts" ""
 
-// FLAME ENAMELLED ARMOUR BRANCH
+// ================ FLAME ENAMELLED ARMOUR BRANCH ================
 
 // VERYRARE = VANILLA (MAG_FlamingFist_Flame_Armor)
 
@@ -200,7 +200,7 @@ data "Rarity" "Rare"
 data "ComboCategory" "d2"
 data "PassivesOnEquip" "MAG_LesserFlamingDispersion_Passive"
 
-// SERPENT SCALE ARMOR BRANCH
+// ================ SERPENT SCALE ARMOR BRANCH ================
 
 // REBALANCE (moved from Vanilla_Rebalance.txt - reverted to Rare)
 new entry "MAG_CKM_SerpenScale_Armor"
@@ -222,7 +222,7 @@ data "ValueOverride" "200"
 data "Rarity" "Uncommon"
 data "ComboCategory" "d1"
 
-// DEVILS BLACKSMITH SCALEMAIL BRANCH
+// ================ DEVILS BLACKSMITH SCALEMAIL BRANCH ================
 
 // REBALANCE (moved from Vanilla_Rebalance.txt - reverted to Rare)
 new entry "MAG_DevilsBlackmith_ScaleMail"
@@ -243,7 +243,7 @@ data "ValueOverride" "200"
 data "Rarity" "Uncommon"
 data "ComboCategory" "d1"
 
-// ELVEN CHAIN ARMOR BRANCH
+// ================ ELVEN CHAIN ARMOR BRANCH ================
 
 // REBALANCE (moved from Vanilla_Rebalance.txt - must be before dupe)
 new entry "MAG_PHB_ElvenChain_Armor"
@@ -275,7 +275,7 @@ data "ValueOverride" "500"
 data "Rarity" "Rare"
 data "ComboCategory" "d2"
 
-// DWARVEN SPLINTMAIL BRANCH
+// ================ DWARVEN SPLINTMAIL BRANCH ================
 
 // REBALANCE (moved from Vanilla_Rebalance.txt - must be before dupe)
 new entry "ARM_Splint_Body_Dwarven"
@@ -287,7 +287,7 @@ data "ComboCategory" "d2"
 data "Boosts" "Disadvantage(Skill,Stealth);Ability(Constitution, 2, 18, true)"
 data "Unique" ""
 
-// SAREVOK'S SWORD OF CHAOS BRANCH
+// ================ SAREVOK'S SWORD OF CHAOS BRANCH ================
 
 // REBALANCE (moved from Vanilla_Rebalance.txt - must be before dupe)
 new entry "MAG_BG_Sarevok_OfChaos_Greatsword"
@@ -348,7 +348,7 @@ data "StatusType" "BOOST"
 using "MAG_SAREVOK_HEAL"
 data "OnApplyFunctors" "RegainHitPoints(1)"
 
-// DWARVEN SPLINT ARMOR BRANCH
+// ================ DWARVEN SPLINT ARMOR BRANCH ================
 
 // UNCOMMON VERSION - no Constitution bonus, AC 17
 new entry "ARM_Splint_Body_Dwarven_1"
@@ -360,7 +360,7 @@ data "Rarity" "Uncommon"
 data "ComboCategory" "d1"
 data "Boosts" "Disadvantage(Skill,Stealth)"
 
-// HatulExpansion: Sarevok's Sword of Chaos (Legendary tier)
+// === HatulExpansion: Sarevok's Sword of Chaos (Legendary tier) ===
 
 new entry "MAG_BG_Sarevok_OfChaos_Greatsword_3"
 type "Weapon"

@@ -3,8 +3,10 @@ SubGoalCombiner SGC_AND
 INITSECTION
 KBSECTION
 
-// rarity comes from the DB_ToT_ShardReg tier, not gold value, some shards cost 1g
-// unregistered shards fall back to the fey coin, a failed roll destroys the shard
+// shard into capsule -> chance to convert to a coin.
+// rarity comes from db_tot_shardreg tier, not gold value (some shards cost 1g).
+// registered shard -> tiertocoin; unregistered -> fallbackcoin (fey).
+// fail destroys the shard. entry from dispatch rule 3.
 
 // entry: registered shard -> chance by tot tier
 PROC

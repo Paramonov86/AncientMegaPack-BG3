@@ -148,7 +148,7 @@ THEN
 NOT DB_AMP_Plus_ChaseQueueByTier(_T, _A);
 PROC_AMP_Plus_TierTableDrainChaseQueue();
 
-// yes/no breadcrumb: Size, Freq, Chase. a No on a last tier loops that knob
+// yes/no breadcrumb: Size, Freq, Chase, WaveLimit. a No on a last tier loops that knob
 
 IF
 UsingSpell((CHARACTER)_Caster, "Shout_AMP_Plus_UltraSpawnSettings", _, _, _)
@@ -272,7 +272,7 @@ DB_AMP_Plus_USpawnPending(_C)
 THEN
 OpenMessageBoxYesNo(_C, "AMP_Plus_USpawn_Freq_C");
 
-// Chase knob, last: a pick clears the latch
+// Chase knob, then the wave limit closes the walk
 IF
 MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_USpawn_Chase_C", 1)
 AND
@@ -282,9 +282,7 @@ DB_AMP_Plus_SpawnIntensity_Chase((INTEGER)_Old)
 THEN
 NOT DB_AMP_Plus_SpawnIntensity_Chase(_Old);
 DB_AMP_Plus_SpawnIntensity_Chase(1);
-NOT DB_AMP_Plus_USpawnPending(_C);
-PROC_AMP_PlayModeEffect(_C);
-OpenMessageBox(_C, "AMP_Plus_USpawn_Done");
+OpenMessageBoxYesNo(_C, "AMP_Plus_UltraWaveLimit_1");
 
 IF
 MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_USpawn_Chase_C", 0)
@@ -302,9 +300,7 @@ DB_AMP_Plus_SpawnIntensity_Chase((INTEGER)_Old)
 THEN
 NOT DB_AMP_Plus_SpawnIntensity_Chase(_Old);
 DB_AMP_Plus_SpawnIntensity_Chase(2);
-NOT DB_AMP_Plus_USpawnPending(_C);
-PROC_AMP_PlayModeEffect(_C);
-OpenMessageBox(_C, "AMP_Plus_USpawn_Done");
+OpenMessageBoxYesNo(_C, "AMP_Plus_UltraWaveLimit_1");
 
 IF
 MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_USpawn_Chase_N", 0)
@@ -322,9 +318,7 @@ DB_AMP_Plus_SpawnIntensity_Chase((INTEGER)_Old)
 THEN
 NOT DB_AMP_Plus_SpawnIntensity_Chase(_Old);
 DB_AMP_Plus_SpawnIntensity_Chase(3);
-NOT DB_AMP_Plus_USpawnPending(_C);
-PROC_AMP_PlayModeEffect(_C);
-OpenMessageBox(_C, "AMP_Plus_USpawn_Done");
+OpenMessageBoxYesNo(_C, "AMP_Plus_UltraWaveLimit_1");
 
 IF
 MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_USpawn_Chase_H", 0)
@@ -332,6 +326,109 @@ AND
 DB_AMP_Plus_USpawnPending(_C)
 THEN
 OpenMessageBoxYesNo(_C, "AMP_Plus_USpawn_Chase_C");
+
+// Wave limit knob, last: a pick clears the latch
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_1", 1)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(1);
+NOT DB_AMP_Plus_USpawnPending(_C);
+PROC_AMP_PlayModeEffect(_C);
+OpenMessageBox(_C, "AMP_Plus_USpawn_Done");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_1", 0)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+OpenMessageBoxYesNo(_C, "AMP_Plus_UltraWaveLimit_2");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_2", 1)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(2);
+NOT DB_AMP_Plus_USpawnPending(_C);
+PROC_AMP_PlayModeEffect(_C);
+OpenMessageBox(_C, "AMP_Plus_USpawn_Done");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_2", 0)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+OpenMessageBoxYesNo(_C, "AMP_Plus_UltraWaveLimit_3");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_3", 1)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(3);
+NOT DB_AMP_Plus_USpawnPending(_C);
+PROC_AMP_PlayModeEffect(_C);
+OpenMessageBox(_C, "AMP_Plus_USpawn_Done");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_3", 0)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+OpenMessageBoxYesNo(_C, "AMP_Plus_UltraWaveLimit_4");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_4", 1)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(4);
+NOT DB_AMP_Plus_USpawnPending(_C);
+PROC_AMP_PlayModeEffect(_C);
+OpenMessageBox(_C, "AMP_Plus_USpawn_Done");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_4", 0)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+OpenMessageBoxYesNo(_C, "AMP_Plus_UltraWaveLimit_5");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_5", 1)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(5);
+NOT DB_AMP_Plus_USpawnPending(_C);
+PROC_AMP_PlayModeEffect(_C);
+OpenMessageBox(_C, "AMP_Plus_USpawn_Done");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_5", 0)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+OpenMessageBoxYesNo(_C, "AMP_Plus_UltraWaveLimit_Unlimited");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_Unlimited", 1)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(0);
+NOT DB_AMP_Plus_USpawnPending(_C);
+PROC_AMP_PlayModeEffect(_C);
+OpenMessageBox(_C, "AMP_Plus_USpawn_Done");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_C, "AMP_Plus_UltraWaveLimit_Unlimited", 0)
+AND
+DB_AMP_Plus_USpawnPending(_C)
+THEN
+OpenMessageBoxYesNo(_C, "AMP_Plus_UltraWaveLimit_1");
 
 // interrupted walk would wedge the spell, so clear the latch on load
 IF

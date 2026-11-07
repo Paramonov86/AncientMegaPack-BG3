@@ -343,9 +343,32 @@ DB_NOOP(1);
 QRY
 QRY_AMP_Plus_LM_JunkRefused((ITEM)_Item)
 AND
-GetBookID(_Item, _)
+GetBookID(_Item, (STRING)_BookID)
 AND
 NOT DB_AMP_Plus_LM_BookRead(_Item)
+AND
+NOT DB_AMP_Plus_LM_BookIdRead(_BookID)
+THEN
+DB_NOOP(1);
+
+// summoned tutorial chest is refused by template: AddedTo fires before TemplateAddedTo tracks it
+QRY
+QRY_AMP_Plus_LM_JunkRefused((ITEM)_Item)
+AND
+GetTemplate(_Item, (ITEMROOT)_T)
+AND
+DB_AMP_TutorialChest_Template(_T)
+THEN
+DB_NOOP(1);
+
+// shovels are tools, not junk
+
+QRY
+QRY_AMP_Plus_LM_JunkRefused((ITEM)_Item)
+AND
+GetStatString(_Item, (STRING)_Stat)
+AND
+IsSubstring(_Stat, "OBJ_Tool_Shovel", 1)
 THEN
 DB_NOOP(1);
 
@@ -550,6 +573,22 @@ AND
 NOT DB_AMP_Plus_LM_BookRead(_Item)
 THEN
 DB_AMP_Plus_LM_BookRead(_Item);
+
+IF
+GameBookInterfaceClosed((ITEM)_Item, _)
+AND
+GetBookID(_Item, (STRING)_BookID)
+AND
+NOT DB_AMP_Plus_LM_BookIdRead(_BookID)
+THEN
+DB_AMP_Plus_LM_BookIdRead(_BookID);
+
+QRY
+QRY_AMP_Plus_LM_IsBook((ITEM)_Item)
+AND
+GetBookID(_Item, _)
+THEN
+DB_NOOP(1);
 
 IF
 GameBookInterfaceClosed((ITEM)_Item, _)

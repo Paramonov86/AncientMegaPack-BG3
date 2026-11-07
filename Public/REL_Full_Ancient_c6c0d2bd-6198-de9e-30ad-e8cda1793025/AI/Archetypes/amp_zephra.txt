@@ -1,3 +1,7 @@
+// Zephra, the Windborne - evasive arcane-trickster gish-rogue (ULTRA pool).
+// Glass cannon: opens with illusion/invisibility setup, kites with daggers + wind control,
+// breaks caster concentration, never provokes, finishes the weakened from stealth.
+
 USING rogue_smart
 
 // --- Open with setup (Mirror Image / Invisibility) before committing ---

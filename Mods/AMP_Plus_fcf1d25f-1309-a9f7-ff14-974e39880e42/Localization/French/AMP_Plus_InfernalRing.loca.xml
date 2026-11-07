@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="he9f32d68g0b86g493eg880dgad8d06bc29d7" version="1">Marque infernale</content>
+	<content contentuid="hc7f0d3dcg8f9ag4b8fg983egf778ffb2db10" version="1">Quand vous infligez&lt;b&gt;[2]&lt;/b&gt; à une cible sous l'emprise du &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;feu infernal&lt;/LSTag&gt;, elle subit aussi le &lt;LSTag Type="Status" Tooltip="MAG_Ring43_Status_1"&gt;feu du diable&lt;/LSTag&gt; pendant &lt;b&gt;[1]&lt;/b&gt; tours.</content>
+	<content contentuid="h54e8320ag9e57g4053gaca3g5cf956562df2" version="1">Quand vous infligez&lt;b&gt;[2]&lt;/b&gt; à une cible sous l'emprise du &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;feu infernal&lt;/LSTag&gt;, elle subit aussi le &lt;LSTag Type="Status" Tooltip="MAG_Ring43_4_Status_1"&gt;feu du diable&lt;/LSTag&gt; pendant &lt;b&gt;[1]&lt;/b&gt; tours.</content>
+	<content contentuid="h6498381bg068ag4b87g91a8g4bca525ca940" version="1">Forge infernale</content>
+	<content contentuid="h31b4c4e6g39e6g49a1ga9a8ge0d6fd14f69f" version="1">Forgée dans le métal infernal, cette bague permet de lancer &lt;LSTag Type="Spell" Tooltip="MAG_Ring43_4_scorchingVolley"&gt;Salve incendiaire&lt;/LSTag&gt; et réduit de &lt;b&gt;[2]&lt;/b&gt; tous les&lt;b&gt;[1]&lt;/b&gt; subis.</content>
+	<content contentuid="hea2c2781geea0g4fd9gae16g7cdcb44ce7b7" version="1">Feu du diable</content>
+	<content contentuid="hc48051c4g9c9fg4df8g9cbcg760563dc63d0" version="1">La créature affectée devient &lt;LSTag Tooltip="Vulnerable"&gt;vulnérable&lt;/LSTag&gt; à&lt;b&gt;[1]&lt;/b&gt;.</content>
+	<content contentuid="hc6b64c20g9931g4259g9b6bg07aab2222a6a" version="1">Salve incendiaire</content>
+</contentList>

@@ -3,7 +3,7 @@ USING madness
 // SORCERER MADNESS - Caster-oriented chaos
 // Inherits base madness (attacks everyone equally) but uses spells at range
 
-// POSITIONING (from mage_smart)
+//---------- POSITIONING (from mage_smart) ----------
 
 // Strong distance preference - stay away from enemies
 MULTIPLIER_ENDPOS_ENEMIES_NEARBY               -1.00
@@ -18,13 +18,13 @@ MULTIPLIER_ENEMY_HEIGHT_DIFFERENCE             0.04
 MULTIPLIER_ENDPOS_NOT_IN_SMOKE                 0.25
 MULTIPLIER_ENDPOS_NOT_IN_DANGEROUS_SURFACE     0.20
 
-// NO INVENTORY ITEMS
+//---------- NO INVENTORY ITEMS ----------
 
 USE_INVENTORY_ITEMS_ENABLED                    0
 USE_ITEM_MODIFIER                              0.0
 MULTIPLIER_USABLE_ITEM                         0.0
 
-// SPELL PRIORITIZATION
+//---------- SPELL PRIORITIZATION ----------
 
 // Prioritize damage and debuffs (warlock style)
 MULTIPLIER_DAMAGE_ENEMY_POS                    1.50
@@ -34,7 +34,7 @@ MULTIPLIER_BOOST_SELF_POS                      1.20
 // Prefer DoTs
 MULTIPLIER_DOT_ENEMY_NEG                       1.15
 
-// TARGETING (slightly smarter)
+//---------- TARGETING (slightly smarter) ----------
 
 // Moderate hit chance reasoning
 MODIFIER_HIT_CHANCE_STUPIDITY                  0.70

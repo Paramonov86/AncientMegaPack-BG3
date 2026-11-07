@@ -1,0 +1,4 @@
+new entry "AMP_RusMage_Shortsword_3"
+type "Weapon"
+using "AMP_RusMage_Shortsword_3"
+data "PassivesOnEquip" "AMP_RusMage_ViperFang_3_Passive;AMP_RusMage_IgnoreImmune_Passive"

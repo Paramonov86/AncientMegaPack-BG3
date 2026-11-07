@@ -1,8 +1,24 @@
-// Arcanizer shards. Weapon shards boost the weapon, equipment shards go through status transfer
+// ================================================================================
+// ARCANIZER SHARDS - UNIVERSAL ENCHANTMENT SYSTEM
+// ================================================================================
+//
+// Two subsystems:
+// 1. WEAPON SHARDS: Direct boosts on weapon (melee priority, ranged fallback)
+// 2. EQUIPMENT SHARDS: Boosts on character via Status Transfer system
+//
+// Pricing & loot frequency (audited 2026-05-15 against real distribution):
+//   Uncommon  → Rarity "Uncommon",  ValueOverride 50   (Shop 400),   pool freq 48
+//   Rare      → Rarity "Rare",      ValueOverride 100  (Shop 1000),  pool freq 24
+//   VeryRare  → Rarity "VeryRare",  ValueOverride 300  (Shop 3000),  pool freq 16
+//   Legendary → Rarity "Legendary", ValueOverride 1000 (Shop 7000),  pool freq 1
+//   Pool = AMP_Shard_DamageType_Pool (main loot pool, 270 entries)
+//   Shop variants (`_Shop` suffix) use `using` non-Shop parent + override ValueOverride.
+//
+// ================================================================================
 
-// SHARD OBJECTS
+// ================ SHARD OBJECTS ================
 
-// GENERIC BASE
+// -------- GENERIC BASE --------
 new entry "AMP_Arcanizer_Shard_Generic"
 type "Object"
 using "OBJ_GoldCoin"
@@ -15,7 +31,7 @@ data "MinAmount" "1"
 data "MaxAmount" "1"
 data "PassivesOnEquip" "AMP_Disenchanter_Passive;AMP_Arcanizer_Shard_Limit_Info"
 
-// SHARED PASSIVES
+// -------- SHARED PASSIVES --------
 new entry "AMP_Arcanizer_Shard_Limit_Info"
 type "PassiveData"
 data "DisplayName" "h443ecd6ege610g44abgad39g2e735bcb28ff;1"
@@ -29,7 +45,7 @@ data "Description" "h276e3026g8b7fg430dg82eagcdb53c3ce6df;1"
 data "DescriptionParams" "25"
 data "Properties" "Highlighted"
 
-// DAMAGE TYPE SHARDS (10 types)
+// -------- DAMAGE TYPE SHARDS (10 types) --------
 new entry "AMP_Arcanizer_Shard_Fire"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -110,7 +126,7 @@ data "Rarity" "VeryRare"
 data "RootTemplate" "a29a0058-2554-4e00-913a-1358eec9b13c"
 data "PassivesOnEquip" "AMP_Arcanizer_Shard_DamageType_Passive;AMP_Arcanizer_Shard_Limit_Info;AMP_Arcanizer_Shard_ReclaimRoll_Info"
 
-// WEAPON PROPERTY SHARDS (4)
+// -------- WEAPON PROPERTY SHARDS (4) --------
 new entry "AMP_Arcanizer_Shard_Weapon_1"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -143,7 +159,7 @@ data "Rarity" "Uncommon"
 data "ValueOverride" "50"
 data "PassivesOnEquip" "AMP_Arcanizer_Shard_Weapon_4_Passive;AMP_Arcanizer_Shard_Limit_Info;AMP_Arcanizer_Shard_ReclaimRoll_Info"
 
-// MAGIC WEAPON SHARD (1)
+// -------- MAGIC WEAPON SHARD (1) --------
 new entry "AMP_Arcanizer_Shard_MWeapon_1"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -160,9 +176,9 @@ data "Rarity" "Rare"
 data "ValueOverride" "100"
 data "PassivesOnEquip" "AMP_Arcanizer_Shard_Weapon_5_Passive;AMP_Arcanizer_Shard_Limit_Info;AMP_Arcanizer_Shard_ReclaimRoll_Info"
 
-// EQUIPMENT SHARDS
+// ================ EQUIPMENT SHARDS ================
 
-// ARMOR SHARDS (5)
+// -------- ARMOR SHARDS (5) --------
 new entry "AMP_Arcanizer_Shard_Armor_1"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -243,7 +259,7 @@ data "Rarity" "Legendary"
 data "ValueOverride" "1000"
 data "PassivesOnEquip" "AMP_Arcanizer_Shard_Armor_10_Passive;AMP_Arcanizer_Shard_Limit_Info;AMP_Arcanizer_Shard_ReclaimRoll_Info"
 
-// RING SHARDS (5)
+// -------- RING SHARDS (5) --------
 new entry "AMP_Arcanizer_Shard_Ring_1"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -284,7 +300,7 @@ data "Rarity" "Legendary"
 data "ValueOverride" "1000"
 data "PassivesOnEquip" "AMP_Arcanizer_Shard_Ring_5_Passive;AMP_Arcanizer_Shard_Limit_Info;AMP_Arcanizer_Shard_ReclaimRoll_Info"
 
-// GLOVES SHARDS (3)
+// -------- GLOVES SHARDS (3) --------
 new entry "AMP_Arcanizer_Shard_Gloves_1"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -341,7 +357,7 @@ data "Rarity" "Rare"
 data "ValueOverride" "100"
 data "PassivesOnEquip" "AMP_Arcanizer_Shard_Gloves_7_Passive;AMP_Arcanizer_Shard_Limit_Info;AMP_Arcanizer_Shard_ReclaimRoll_Info"
 
-// HELMET SHARDS (3)
+// -------- HELMET SHARDS (3) --------
 new entry "AMP_Arcanizer_Shard_Head_1"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -374,7 +390,7 @@ data "Rarity" "Legendary"
 data "ValueOverride" "1000"
 data "PassivesOnEquip" "AMP_Arcanizer_Shard_Head_4_Passive;AMP_Arcanizer_Shard_Limit_Info;AMP_Arcanizer_Shard_ReclaimRoll_Info"
 
-// CLOAK SHARDS (4)
+// -------- CLOAK SHARDS (4) --------
 new entry "AMP_Arcanizer_Shard_Cloak_1"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -423,7 +439,7 @@ data "Rarity" "VeryRare"
 data "ValueOverride" "300"
 data "PassivesOnEquip" "AMP_Arcanizer_Shard_Cloak_6_Passive;AMP_Arcanizer_Shard_Limit_Info;AMP_Arcanizer_Shard_ReclaimRoll_Info"
 
-// BOOTS SHARDS (10)
+// -------- BOOTS SHARDS (10) --------
 new entry "AMP_Arcanizer_Shard_Boots_1"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -504,7 +520,7 @@ data "Rarity" "Rare"
 data "ValueOverride" "100"
 data "PassivesOnEquip" "AMP_Arcanizer_Shard_Boots_10_Passive;AMP_Arcanizer_Shard_Limit_Info;AMP_Arcanizer_Shard_ReclaimRoll_Info"
 
-// TECHNICAL STATUSES - MELEE
+// ================ TECHNICAL STATUSES - MELEE ================
 
 new entry "AMP_SHARD_APPLY_MELEE_FIRE"
 type "StatusData"
@@ -586,7 +602,7 @@ data "StackId" "AMP_SHARD_APPLY_MELEE_FORCE"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "OnApplyFunctors" "ApplyEquipmentStatus(MeleeMainHand,AMP_SHARD_WEAPON_FORCE,100,-1)"
 
-// TECHNICAL STATUSES - RANGED
+// ================ TECHNICAL STATUSES - RANGED ================
 
 new entry "AMP_SHARD_APPLY_RANGED_FIRE"
 type "StatusData"
@@ -668,7 +684,7 @@ data "StackId" "AMP_SHARD_APPLY_RANGED_FORCE"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "OnApplyFunctors" "ApplyEquipmentStatus(RangedMainHand,AMP_SHARD_WEAPON_FORCE,100,-1)"
 
-// VISIBLE STATUSES ON WEAPON
+// ================ VISIBLE STATUSES ON WEAPON ================
 
 new entry "AMP_SHARD_WEAPON_FIRE"
 type "StatusData"
@@ -800,7 +816,7 @@ data "Boosts" "WeaponDamageTypeOverride(Force)"
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusEffect" ""
 
-// NEW WEAPON SHARDS (property modifiers)
+// -------- NEW WEAPON SHARDS (property modifiers) --------
 
 // THROWN shard (Thrown + Return, -1 Enchantment)
 new entry "AMP_SHARD_APPLY_MELEE_THROWN"
@@ -1035,9 +1051,9 @@ data "OnApplyFunctors" "DealDamage(1d8,Thunder,Magical)"
 data "ApplyEffect" "70a638f6-d74f-48f3-975e-de26543b92a3"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// EQUIPMENT SHARDS SYSTEM
+// ================ EQUIPMENT SHARDS SYSTEM ================
 
-// APPLY STATUSES (Tech, hidden, apply marker to slot)
+// -------- APPLY STATUSES (Tech, hidden, apply marker to slot) --------
 
 // ARMOR APPLY (Breast slot)
 new entry "AMP_SHARD_APPLY_ARMOR_1"
@@ -1290,7 +1306,7 @@ data "StackId" "AMP_SHARD_APPLY_CLOAK_6"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "OnApplyFunctors" "ApplyEquipmentStatus(Cloak,AMP_SHARD_CLOAK_WARDFLARE,100,-1)"
 
-// MARKER STATUSES (Visible on equipment, triggers transfer)
+// -------- MARKER STATUSES (Visible on equipment, triggers transfer) --------
 
 // ARMOR MARKERS
 new entry "AMP_SHARD_ARMOR_NOCRIT"
@@ -1626,7 +1642,7 @@ data "StackId" "AMP_SHARD_CLOAK_WARDFLARE"
 data "FormatColor" "Yellow"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// CHARACTER EFFECT STATUSES (Applied via transfer system)
+// -------- CHARACTER EFFECT STATUSES (Applied via transfer system) --------
 
 // ARMOR CHAR EFFECTS
 new entry "AMP_SHARD_CHAR_NOCRIT"
@@ -2243,9 +2259,9 @@ data "TickType" "StartTurn"
 data "TickFunctors" "IF(not HasStatus('FEATHER_FALL')):ApplyStatus(FEATHER_FALL,100,-1)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// SHARD ITEM PASSIVES
+// ================ SHARD ITEM PASSIVES ================
 
-// DAMAGE TYPE SHARDS (shared passive)
+// -------- DAMAGE TYPE SHARDS (shared passive) --------
 new entry "AMP_Arcanizer_Shard_DamageType_Passive"
 type "PassiveData"
 data "DisplayName" "h26808930g71b7g4f62gafa6gff048e1d90e2;1"
@@ -2253,7 +2269,7 @@ data "Description" "h60878e15g2994g4748gb505g67f8d14e9584;1"
 data "Icon" "PassiveFeature_DraconicAncestry_White"
 data "Properties" "Highlighted"
 
-// ARMOR SHARDS (5)
+// -------- ARMOR SHARDS (5) --------
 new entry "AMP_Arcanizer_Shard_Armor_1_Passive"
 type "PassiveData"
 data "DisplayName" "h7c1cb0bbg6621g4126g9542g2488e066140e;1"
@@ -2331,7 +2347,7 @@ data "DescriptionParams" "Level"
 data "Icon" "Spell_Conjuration_SpiritGuardians"
 data "Properties" "Highlighted"
 
-// RING SHARDS (5)
+// -------- RING SHARDS (5) --------
 new entry "AMP_Arcanizer_Shard_Ring_1_Passive"
 type "PassiveData"
 data "DisplayName" "hb2daa509g9199g4779gbd92ga864f56214b3;1"
@@ -2369,7 +2385,7 @@ data "Description" "h9277e963g50b8g4e2bgab1eg87e8baffa184;1"
 data "Icon" "PassiveFeature_SteelWill"
 data "Properties" "Highlighted"
 
-// GLOVES SHARDS (3)
+// -------- GLOVES SHARDS (3) --------
 new entry "AMP_Arcanizer_Shard_Gloves_1_Passive"
 type "PassiveData"
 data "DisplayName" "hf0112b7egde91g415egb1c6g76738bd5564c;1"
@@ -2423,7 +2439,7 @@ data "DescriptionParams" "DealDamage(,Poison)"
 data "Icon" "Spell_Conjuration_GraspingVine"
 data "Properties" "Highlighted"
 
-// HELMET SHARDS (3)
+// -------- HELMET SHARDS (3) --------
 new entry "AMP_Arcanizer_Shard_Head_1_Passive"
 type "PassiveData"
 data "DisplayName" "h56d8c29egeb44g4923gba56g5a001f54f5b4;1"
@@ -2453,7 +2469,7 @@ data "Description" "he3532a86g0e28g40abg8db4g3a226451e47d;1"
 data "Icon" "Action_HypnoticGaze_Maintain"
 data "Properties" "Highlighted"
 
-// CLOAK SHARDS (4)
+// -------- CLOAK SHARDS (4) --------
 new entry "AMP_Arcanizer_Shard_Cloak_1_Passive"
 type "PassiveData"
 data "DisplayName" "hdac8540bg9d85g41dcgad0ag421013b2e84a;1"
@@ -2577,7 +2593,7 @@ data "Description" "h0e86dbc6gb4c5g4f32g8aeega3c65ea5f34a;1"
 data "Icon" "Spell_Transmutation_FeatherFall"
 data "Properties" "Highlighted"
 
-// WEAPON PROPERTY SHARDS (4)
+// -------- WEAPON PROPERTY SHARDS (4) --------
 new entry "AMP_Arcanizer_Shard_Weapon_1_Passive"
 type "PassiveData"
 data "DisplayName" "h178093c3g9ac2g4e69g9d3bg4a76c6fc89e9;1"
@@ -2609,7 +2625,7 @@ data "Description" "hfc1510f6g64f5g4c74g8b5cg97ded8c84d12;1"
 data "Icon" "Spell_Transmutation_MagicWeapon"
 data "Properties" "Highlighted"
 
-// MAGIC WEAPON SHARD (1)
+// -------- MAGIC WEAPON SHARD (1) --------
 new entry "AMP_Arcanizer_Shard_MWeapon_1_Passive"
 type "PassiveData"
 data "DisplayName" "h178093c3g9ac2g4e69g9d3bg4a76c6fc89e9;1"
@@ -2625,7 +2641,7 @@ data "DescriptionParams" "DealDamage(,Thunder)"
 data "Icon" "Spell_Evocation_Thunderwave"
 data "Properties" "Highlighted"
 
-// MWEAPON_2: BLOODSUCKER
+// ================ MWEAPON_2: BLOODSUCKER ================
 
 new entry "AMP_SHARD_APPLY_MELEE_BLOODSUCKER"
 type "StatusData"
@@ -2692,7 +2708,7 @@ data "DescriptionParams" "5"
 data "Icon" "PassiveFeature_Generic_Blood"
 data "Properties" "Highlighted"
 
-// ARMOR_11: ARCANUM (MAGE ARMOR)
+// ================ ARMOR_11: ARCANUM (MAGE ARMOR) ================
 
 new entry "AMP_SHARD_APPLY_ARMOR_11"
 type "StatusData"
@@ -2737,7 +2753,7 @@ data "Description" "h8c23a4e1g318fg4f4ega38agbe8dae45b518;1"
 data "Icon" "Spell_Abjuration_MageArmor"
 data "Properties" "Highlighted"
 
-// HEAD_5: VOIDRITE (ANTIMAGIC AURA)
+// ================ HEAD_5: VOIDRITE (ANTIMAGIC AURA) ================
 
 new entry "AMP_SHARD_APPLY_HELMET_5"
 type "StatusData"
@@ -2798,9 +2814,9 @@ data "DescriptionParams" "Distance(3)"
 data "Icon" "PassiveFeature_Generic_Darkness"
 data "Properties" "Highlighted"
 
-// BATCH 02
+// ================ BATCH 02 ================
 
-// ARMOR_12: TEMPERING
+// ================ ARMOR_12: TEMPERING ================
 
 new entry "AMP_SHARD_APPLY_ARMOR_TEMPERING"
 type "StatusData"
@@ -2842,7 +2858,7 @@ data "DescriptionParams" "1"
 data "Icon" "PassiveFeature_FightingStyle_Protection"
 data "Properties" "Highlighted"
 
-// ARMOR_13: AGATHYS (ARMOR OF AGATHYS)
+// ================ ARMOR_13: AGATHYS (ARMOR OF AGATHYS) ================
 
 new entry "AMP_SHARD_APPLY_ARMOR_13"
 type "StatusData"
@@ -2887,7 +2903,7 @@ data "Description" "h635bf7a1gc985g46c2gabd4g0018c9a1fbf8;1"
 data "Icon" "Spell_Abjuration_ArmorOfAgathys"
 data "Properties" "Highlighted"
 
-// MWEAPON_3: THUNDERCLAP (DISCHARGE)
+// ================ MWEAPON_3: THUNDERCLAP (DISCHARGE) ================
 
 new entry "AMP_SHARD_APPLY_MELEE_DISCHARGE"
 type "StatusData"
@@ -2968,7 +2984,7 @@ data "DescriptionParams" "DealDamage(1d6,Thunder);Distance(3)"
 data "Icon" "Spell_Evocation_ChromaticOrb_Thunder"
 data "Properties" "Highlighted"
 
-// MWEAPON_4: ULTIMATE BARGAIN
+// ================ MWEAPON_4: ULTIMATE BARGAIN ================
 
 new entry "AMP_SHARD_APPLY_MELEE_BARGAIN"
 type "StatusData"
@@ -3017,7 +3033,7 @@ data "DescriptionParams" "1;2"
 data "Icon" "Action_SacrificeToLoviatar"
 data "Properties" "Highlighted"
 
-// MWEAPON_5: LIFE DRAINING
+// ================ MWEAPON_5: LIFE DRAINING ================
 
 new entry "AMP_SHARD_APPLY_MELEE_LIFEDRAIN"
 type "StatusData"
@@ -3074,7 +3090,7 @@ data "DescriptionParams" "1;DealDamage(2d8,Necrotic)"
 data "Icon" "Spell_Necromancy_VampiricTouch"
 data "Properties" "Highlighted"
 
-// WEAPON_6: BLOODLETTER
+// ================ WEAPON_6: BLOODLETTER ================
 
 new entry "AMP_SHARD_APPLY_MELEE_BLOODLETTER"
 type "StatusData"
@@ -3125,7 +3141,7 @@ data "Description" "hc1de90d9g280eg41fag966dg79903699b6fe;2"
 data "Icon" "PassiveFeature_Generic_Blood"
 data "Properties" "Highlighted"
 
-// RING_6: PHLEGETHOS
+// ================ RING_6: PHLEGETHOS ================
 
 new entry "AMP_SHARD_APPLY_RING_PHLEGETHOS"
 type "StatusData"
@@ -3206,7 +3222,7 @@ data "DescriptionParams" "DealDamage(1,Fire);Distance(4);DealDamage(1d4,Fire)"
 data "Icon" "PassiveFeature_Tiefling_HellishResistance"
 data "Properties" "Highlighted"
 
-// GLOVES_8: CONDUCTANCE (SHOCKMASTER)
+// ================ GLOVES_8: CONDUCTANCE (SHOCKMASTER) ================
 
 new entry "AMP_SHARD_APPLY_GLOVES_SHOCKMASTER"
 type "StatusData"
@@ -3251,7 +3267,7 @@ data "DescriptionParams" "5"
 data "Icon" "Spell_Evocation_ShockingGrasp"
 data "Properties" "Highlighted"
 
-// GLOVES_9: BONE CHILL
+// ================ GLOVES_9: BONE CHILL ================
 
 new entry "AMP_SHARD_APPLY_GLOVES_9"
 type "StatusData"
@@ -3303,7 +3319,7 @@ data "DescriptionParams" "DealDamage(,Necrotic);2;DealDamage(1d4,Necrotic)"
 data "Icon" "Spell_Necromancy_ChillTouch"
 data "Properties" "Highlighted"
 
-// HEAD_6: FARSIGHT (FARCAST)
+// ================ HEAD_6: FARSIGHT (FARCAST) ================
 
 new entry "AMP_SHARD_APPLY_HELMET_FARCAST"
 type "StatusData"
@@ -3345,7 +3361,7 @@ data "DescriptionParams" "Distance(1)"
 data "Icon" "Spell_Divination_ArcaneEye"
 data "Properties" "Highlighted"
 
-// BOOTS_11: ELEMENTAL HARMONY
+// ================ BOOTS_11: ELEMENTAL HARMONY ================
 
 new entry "AMP_SHARD_APPLY_BOOTS_HARMONY"
 type "StatusData"
@@ -3435,7 +3451,7 @@ data "Description" "hcb0bb069geff6g4a02g9871g0607be9b148d;1"
 data "Icon" "Spell_HarmonyOfFireAndWater"
 data "Properties" "Highlighted"
 
-// RING_7: DAWN (HOLYFIRE)
+// ================ RING_7: DAWN (HOLYFIRE) ================
 
 new entry "AMP_SHARD_APPLY_RING_HOLYFIRE"
 type "StatusData"
@@ -3485,7 +3501,7 @@ data "Description" "h5e0c6fddg54e6g47f8ga069g633285a23a7b;1"
 data "Icon" "Spell_Evocation_SacredFlame"
 data "Properties" "Highlighted"
 
-// HEAD_7: ARCANE SURGE (ACUITY)
+// ================ HEAD_7: ARCANE SURGE (ACUITY) ================
 
 new entry "AMP_SHARD_APPLY_HELMET_ACUITY"
 type "StatusData"
@@ -3534,7 +3550,7 @@ data "DescriptionParams" "2"
 data "Icon" "Action_AstralKnowledge"
 data "Properties" "Highlighted"
 
-// RING_8: FROSTMIST
+// ================ RING_8: FROSTMIST ================
 
 new entry "AMP_SHARD_APPLY_RING_FROSTMIST"
 type "StatusData"
@@ -3586,7 +3602,7 @@ data "DescriptionParams" "Distance(2);2;DealDamage(,Cold)"
 data "Icon" "Spell_Conjuration_FogCloud"
 data "Properties" "Highlighted"
 
-// HEAD_8: ASTRAL MIND
+// ================ HEAD_8: ASTRAL MIND ================
 
 new entry "AMP_SHARD_APPLY_HELMET_ASTRAL"
 type "StatusData"
@@ -3629,7 +3645,7 @@ data "Description" "h234f7b3eg7f3eg4130g955cg57610a16f57b;1"
 data "Icon" "PassiveFeature_ThoughtShield_PsychicReflection"
 data "Properties" "Highlighted"
 
-// HEAD_9: VIGILANCE
+// ================ HEAD_9: VIGILANCE ================
 
 new entry "AMP_SHARD_APPLY_HELMET_VIGIL"
 type "StatusData"
@@ -3672,7 +3688,7 @@ data "Description" "h53795a5cg72e1g4505gba56g5f4d45fd33fe;1"
 data "Icon" "PassiveFeature_CRE_GithInfirmary_Awakened"
 data "Properties" "Highlighted"
 
-// HEAD_10: MOMENTUM SURGE
+// ================ HEAD_10: MOMENTUM SURGE ================
 
 new entry "AMP_SHARD_APPLY_HEAD_10"
 type "StatusData"
@@ -3722,7 +3738,7 @@ data "Description" "h94a8b721g67f1g41a2g8332g421d130d8a39;1"
 data "Icon" "Action_Monster_GiantEagle_Fly"
 data "Properties" "Highlighted"
 
-// RING_9: SUPPLENESS (STONEGUARD)
+// ================ RING_9: SUPPLENESS (STONEGUARD) ================
 
 new entry "AMP_SHARD_APPLY_RING_STONEGUARD"
 type "StatusData"
@@ -3765,7 +3781,7 @@ data "Description" "h3da31fe3g383ag43dbg9533g1da64c22294b;1"
 data "Icon" "Spell_Abjuration_Stoneskin"
 data "Properties" "Highlighted"
 
-// RING_10: ANCIENT CHAOS
+// ================ RING_10: ANCIENT CHAOS ================
 
 new entry "AMP_SHARD_APPLY_RING_10"
 type "StatusData"
@@ -3806,7 +3822,7 @@ data "Description" "h608ac7f0g59a4g475egaf39g05aca40741ac;1"
 data "Icon" "AMP_ANCIENTCHAOS"
 data "Properties" "Highlighted"
 
-// RING_11: REVERBERATION
+// ================ RING_11: REVERBERATION ================
 
 new entry "AMP_SHARD_APPLY_RING_11"
 type "StatusData"
@@ -3855,9 +3871,9 @@ data "Description" "hf65a564bg923dg43fdg834agb2e3573fb8b0;1"
 data "Icon" "GenericIcon_Intent_Debuff"
 data "Properties" "Highlighted"
 
-// BATCH 05
+// ==================== BATCH 05 ====================
 
-// WEAPON 7 Faerie Fire
+// ============ WEAPON 7 — FAERIE FIRE ============
 
 new entry "AMP_Arcanizer_Shard_Weapon_7"
 type "Object"
@@ -3907,7 +3923,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and not SavingThrow(Ability.Dexterity, ManeuverSaveDC())"
 data "StatsFunctors" "ApplyStatus(FAERIE_FIRE, 100, 2)"
 
-// WEAPON 8 Enchantment
+// ============ WEAPON 8 — ENCHANTMENT ============
 
 new entry "AMP_Arcanizer_Shard_Weapon_8"
 type "Object"
@@ -3948,7 +3964,7 @@ data "FormatColor" "Polymorph"
 data "Boosts" "WeaponEnchantment(1);WeaponProperty(Magical)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// HEAD 11 Reaction
+// ============ HEAD 11 — REACTION ============
 
 new entry "AMP_Arcanizer_Shard_Head_11"
 type "Object"
@@ -3989,7 +4005,7 @@ data "DisplayName" "h4562a7f0g46a8g4fcagb6fdg7f3ffe48ae18;1"
 data "Boosts" "ActionResource(ReactionActionPoint,1,0)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// GLOVES 10 Crit Dice
+// ============ GLOVES 10 — CRIT DICE ============
 
 new entry "AMP_Arcanizer_Shard_Gloves_10"
 type "Object"
@@ -4030,7 +4046,7 @@ data "DisplayName" "h7dff1715gbb4fg46ccg9641ge26317aa61d2;1"
 data "Boosts" "CriticalHitExtraDice(1,MeleeWeaponAttack);CriticalHitExtraDice(1,MeleeOffHandWeaponAttack);CriticalHitExtraDice(1,MeleeSpellAttack);CriticalHitExtraDice(1,RangedSpellAttack);CriticalHitExtraDice(1,MeleeUnarmedAttack);CriticalHitExtraDice(1,RangedUnarmedAttack);CriticalHitExtraDice(1,RangedWeaponAttack);CriticalHitExtraDice(1,RangedOffHandWeaponAttack)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// TOT SHOP PRICING
+// ================ TOT SHOP PRICING ================
 
 new entry "AMP_Arcanizer_Shard_Fire_Shop"
 type "Object"
@@ -4457,7 +4473,11 @@ type "Object"
 using "AMP_Arcanizer_Shard_Boots_11"
 data "ValueOverride" "3000"
 
-// HEAD_12 Primal Flame
+// ================================================================================
+// BATCH 6 — HELMET ELEMENTAL BA / ELEMENTAL WEAPON / AMULET / REACH / RECOVERY
+// ================================================================================
+
+// ======== HEAD_12 — PRIMAL FLAME ========
 
 new entry "AMP_Arcanizer_Shard_Head_12"
 type "Object"
@@ -4509,7 +4529,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsLeveledSpell() and SpellDamageTypeIs(DamageType.Fire)"
 data "StatsFunctors" "RestoreResource(SELF,BonusActionPoint,1,0)"
 
-// HEAD_13 Primal Frost
+// ======== HEAD_13 — PRIMAL FROST ========
 
 new entry "AMP_Arcanizer_Shard_Head_13"
 type "Object"
@@ -4561,7 +4581,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsLeveledSpell() and SpellDamageTypeIs(DamageType.Cold)"
 data "StatsFunctors" "RestoreResource(SELF,BonusActionPoint,1,0)"
 
-// HEAD_14 Primal Storm
+// ======== HEAD_14 — PRIMAL STORM (Lightning) ========
 
 new entry "AMP_Arcanizer_Shard_Head_14"
 type "Object"
@@ -4613,7 +4633,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsLeveledSpell() and SpellDamageTypeIs(DamageType.Lightning)"
 data "StatsFunctors" "RestoreResource(SELF,BonusActionPoint,1,0)"
 
-// HEAD_15 Thunder Spirit
+// ======== HEAD_15 — THUNDER SPIRIT ========
 
 new entry "AMP_Arcanizer_Shard_Head_15"
 type "Object"
@@ -4665,7 +4685,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsLeveledSpell() and SpellDamageTypeIs(DamageType.Thunder)"
 data "StatsFunctors" "RestoreResource(SELF,BonusActionPoint,1,0)"
 
-// WEAPON_9 Corrosive Edge
+// ======== WEAPON_9 — CORROSIVE EDGE (Acid) ========
 
 new entry "AMP_Arcanizer_Shard_Weapon_9"
 type "Object"
@@ -4707,7 +4727,7 @@ data "Boosts" "WeaponDamage(1d6,Acid)"
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusEffect" "3798c69d-e202-4323-b660-2e1778dafafc"
 
-// WEAPON_10 Frozen Edge
+// ======== WEAPON_10 — FROZEN EDGE (Cold) ========
 
 new entry "AMP_Arcanizer_Shard_Weapon_10"
 type "Object"
@@ -4749,7 +4769,7 @@ data "Boosts" "WeaponDamage(1d6,Cold)"
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusEffect" "e92003cd-6622-4a82-a3c7-69d6222f0ba0"
 
-// WEAPON_11 Blazing Edge
+// ======== WEAPON_11 — BLAZING EDGE (Fire) ========
 
 new entry "AMP_Arcanizer_Shard_Weapon_11"
 type "Object"
@@ -4791,7 +4811,7 @@ data "Boosts" "WeaponDamage(1d6,Fire)"
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusEffect" "8a4c7e6e-a629-4765-9c5d-d354838703d8"
 
-// WEAPON_12 Voltaic Edge
+// ======== WEAPON_12 — VOLTAIC EDGE (Lightning) ========
 
 new entry "AMP_Arcanizer_Shard_Weapon_12"
 type "Object"
@@ -4833,7 +4853,7 @@ data "Boosts" "WeaponDamage(1d6,Lightning)"
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusEffect" "7905bb82-0284-46b8-855b-24f17560fe4a"
 
-// WEAPON_13 Thundering Edge
+// ======== WEAPON_13 — THUNDERING EDGE (Thunder) ========
 
 new entry "AMP_Arcanizer_Shard_Weapon_13"
 type "Object"
@@ -4875,7 +4895,7 @@ data "Boosts" "WeaponDamage(1d6,Thunder)"
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusEffect" "ca0b3ab3-dac0-47f7-b313-7ca69c85b5b4"
 
-// AMULET_1 Eloquence
+// ======== AMULET_1 — ELOQUENCE ========
 
 new entry "AMP_Arcanizer_Shard_Amulet_1"
 type "Object"
@@ -4916,7 +4936,7 @@ data "DisplayName" "hf4f5872dga047g415bgb907g0384b731aff2;1"
 data "Boosts" "Skill(Persuasion,1)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// MWEAPON_6 Extended Reach
+// ======== MWEAPON_6 — EXTENDED REACH ========
 
 new entry "AMP_Arcanizer_Shard_MWeapon_6"
 type "Object"
@@ -4963,7 +4983,7 @@ data "DisplayName" "h714b244agf47ag49ebg8d04gdd2aa03318d6;1"
 data "Boosts" "UnlockSpellVariant(AMP_IsMeleeMainHandAttack(),ModifyTargetRadius(AdditiveBase,1),ModifyTooltipDescription())"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// RECOVERY_1 Reclamation
+// ======== RECOVERY_1 — RECLAMATION Reclamation Shard ========
 
 new entry "AMP_Arcanizer_Shard_Recovery_1"
 type "Object"
@@ -4980,7 +5000,7 @@ data "Description" "hbe0c4f67g4196g45c7g8a95g28a43fa007ba;1"
 data "Icon" "Action_WildMagic_Barbarian_VineGrowth"
 data "Properties" "Highlighted"
 
-// Shop versions, triple price
+// ======== BATCH 6 — SHOP VERSIONS (x3 price) ========
 
 new entry "AMP_Arcanizer_Shard_Head_12_Shop"
 type "Object"
@@ -5042,7 +5062,7 @@ type "Object"
 using "AMP_Arcanizer_Shard_Recovery_1"
 data "ValueOverride" "400"
 
-// WEAPON_14 Netherese Seed
+// ======== WEAPON_14 — NETHERESE SEED (Legendary) ========
 
 new entry "AMP_Arcanizer_Shard_Weapon_14"
 type "Object"
@@ -5165,7 +5185,7 @@ type "Object"
 using "AMP_Arcanizer_Shard_Weapon_14"
 data "ValueOverride" "7000"
 
-// Steadfast
+// ================ STEADFAST — Prone Immunity (Boots NonStack, VeryRare) ================
 
 new entry "AMP_Arcanizer_Shard_Boots_12"
 type "Object"
@@ -5212,7 +5232,7 @@ type "Object"
 using "AMP_Arcanizer_Shard_Boots_12"
 data "ValueOverride" "3000"
 
-// Fire Conduction
+// ================ FIRE CONDUCTION — Lightning Charges from Fire (Gloves Stackable, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_11"
 type "Object"
@@ -5271,7 +5291,7 @@ type "Object"
 using "AMP_Arcanizer_Shard_Gloves_11"
 data "ValueOverride" "1000"
 
-// Juggernaut
+// ================ JUGGERNAUT — Strength +1 (Amulet Stackable, VeryRare) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_2"
 type "Object"
@@ -5317,7 +5337,7 @@ type "Object"
 using "AMP_Arcanizer_Shard_Amulet_2"
 data "ValueOverride" "3000"
 
-// Alacrity, Fortitude, Acuity, Sagacity, Splendor
+// ================ ALACRITY — Dexterity +1 ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_3"
 type "Object"
@@ -5363,6 +5383,8 @@ type "Object"
 using "AMP_Arcanizer_Shard_Amulet_3"
 data "ValueOverride" "3000"
 
+// ================ FORTITUDE — Constitution +1 ================
+
 new entry "AMP_Arcanizer_Shard_Amulet_4"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -5406,6 +5428,8 @@ new entry "AMP_Arcanizer_Shard_Amulet_4_Shop"
 type "Object"
 using "AMP_Arcanizer_Shard_Amulet_4"
 data "ValueOverride" "3000"
+
+// ================ ACUITY — Intelligence +1 ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_5"
 type "Object"
@@ -5451,6 +5475,8 @@ type "Object"
 using "AMP_Arcanizer_Shard_Amulet_5"
 data "ValueOverride" "3000"
 
+// ================ SAGACITY — Wisdom +1 ================
+
 new entry "AMP_Arcanizer_Shard_Amulet_6"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -5494,6 +5520,8 @@ new entry "AMP_Arcanizer_Shard_Amulet_6_Shop"
 type "Object"
 using "AMP_Arcanizer_Shard_Amulet_6"
 data "ValueOverride" "3000"
+
+// ================ SPLENDOR — Charisma +1 ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_7"
 type "Object"
@@ -5539,9 +5567,9 @@ type "Object"
 using "AMP_Arcanizer_Shard_Amulet_7"
 data "ValueOverride" "3000"
 
-// BATCH 04
+// ================ BATCH 04 ================
 
-// HEAD_16 Weave Tear
+// ================ HEAD_16: WEAVE TEAR — Wild Magic proc (Head Stackable, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Head_16"
 type "Object"
@@ -5586,7 +5614,7 @@ data "Icon" "Action_WildMagic_TurnMagic"
 data "TickFunctors" "IF(Combat() and not Tagged('SORCERER',context.Source) and not RollDieAgainstDC(DiceType.d100,5)):TriggerRandomCast(1,,WildMagic);IF(Combat() and Tagged('SORCERER',context.Source) and not RollDieAgainstDC(DiceType.d100,10)):TriggerRandomCast(1,,WildMagic)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// WEAPON_15 Honing
+// ================ WEAPON_15: HONING — +1 Enchantment, risk of destruction (Weapon Stackable, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Weapon_15"
 type "Object"
@@ -5627,7 +5655,7 @@ data "FormatColor" "Warrior"
 data "Boosts" "WeaponEnchantment(1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// GLOVES_12 Burning Agony
+// ================ GLOVES_12: BURNING AGONY — Holy fire on Flame Strike/Fireball (Gloves NonStack, VeryRare) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_12"
 type "Object"
@@ -5684,7 +5712,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsBurningAgony()"
 data "StatsFunctors" "ApplyStatus(BURNING_HOLY,100,2)"
 
-// RING_12 Mind Shackle
+// ================ RING_12: MIND SHACKLE — +1 Reaction, Paralyzed without Concentration (Ring NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Ring_12"
 type "Object"
@@ -5742,7 +5770,7 @@ data "StatsFunctorContext" "OnDamaged"
 data "Conditions" "not IsConcentrating(context.Target)"
 data "StatsFunctors" "ApplyStatus(PARALYZED,100,1)"
 
-// GLOVES_13 Zen Fist
+// ================ GLOVES_13: ZEN FIST — Ki/Rage restore on unarmed (Gloves Stackable, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_13"
 type "Object"
@@ -5796,7 +5824,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "(IsUnarmedAttack() or SpellId('Target_BootOfTheGiants'))"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100,5)):RestoreResource(SELF,KiPoint,1,0);IF(not RollDieAgainstDC(DiceType.d100,1)):RestoreResource(SELF,Rage,1,0)"
 
-// Shop versions
+// ================ BATCH 04 — SHOP VERSIONS ================
 
 new entry "AMP_Arcanizer_Shard_Head_16_Shop"
 type "Object"
@@ -5823,9 +5851,9 @@ type "Object"
 using "AMP_Arcanizer_Shard_Gloves_13"
 data "ValueOverride" "400"
 
-// Weapon shards expansion
+// ================ BATCH 09 — WEAPON SHARDS EXPANSION (87 SHARDS) ================
 
-// G1 Weapon_16 CUDGEL (UC, Stackable)
+// ---- G1 Weapon_16 CUDGEL (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_16"
 type "Object"
@@ -5871,7 +5899,7 @@ data "FormatColor" "Warrior"
 data "Boosts" "WeaponDamage(3,Bludgeoning);WeaponAttackRollBonus(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G1 Weapon_17 PRICK (UC, Stackable)
+// ---- G1 Weapon_17 PRICK (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_17"
 type "Object"
@@ -5917,7 +5945,7 @@ data "FormatColor" "Warrior"
 data "Boosts" "WeaponDamage(3,Piercing);WeaponAttackRollBonus(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G1 Weapon_18 GASH (UC, Stackable)
+// ---- G1 Weapon_18 GASH (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_18"
 type "Object"
@@ -5963,7 +5991,7 @@ data "FormatColor" "Warrior"
 data "Boosts" "WeaponDamage(3,Slashing);WeaponAttackRollBonus(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_19 EMBER (UC, Stackable)
+// ---- G2 Weapon_19 EMBER (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_19"
 type "Object"
@@ -6009,7 +6037,7 @@ data "FormatColor" "Fire"
 data "Boosts" "WeaponDamage(1,Fire)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_20 CHILL (UC, Stackable)
+// ---- G2 Weapon_20 CHILL (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_20"
 type "Object"
@@ -6055,7 +6083,7 @@ data "FormatColor" "Water"
 data "Boosts" "WeaponDamage(1,Cold)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_21 JOLT (UC, Stackable)
+// ---- G2 Weapon_21 JOLT (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_21"
 type "Object"
@@ -6101,7 +6129,7 @@ data "FormatColor" "Blue"
 data "Boosts" "WeaponDamage(1,Lightning)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_22 RUMBLE (UC, Stackable)
+// ---- G2 Weapon_22 RUMBLE (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_22"
 type "Object"
@@ -6147,7 +6175,7 @@ data "FormatColor" "LightBlue"
 data "Boosts" "WeaponDamage(1,Thunder)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_23 REEK (UC, Stackable)
+// ---- G2 Weapon_23 REEK (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_23"
 type "Object"
@@ -6193,7 +6221,7 @@ data "FormatColor" "PoisonGreen"
 data "Boosts" "WeaponDamage(1,Acid)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_24 STING (UC, Stackable)
+// ---- G2 Weapon_24 STING (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_24"
 type "Object"
@@ -6239,7 +6267,7 @@ data "FormatColor" "Poison"
 data "Boosts" "WeaponDamage(1,Poison)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_25 ROT (UC, Stackable)
+// ---- G2 Weapon_25 ROT (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_25"
 type "Object"
@@ -6285,7 +6313,7 @@ data "FormatColor" "Rogue"
 data "Boosts" "WeaponDamage(1,Necrotic)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_26 SHINE (UC, Stackable)
+// ---- G2 Weapon_26 SHINE (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_26"
 type "Object"
@@ -6331,7 +6359,7 @@ data "FormatColor" "Yellow"
 data "Boosts" "WeaponDamage(1,Radiant)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_27 TWITCH (UC, Stackable)
+// ---- G2 Weapon_27 TWITCH (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_27"
 type "Object"
@@ -6377,7 +6405,7 @@ data "FormatColor" "Charm"
 data "Boosts" "WeaponDamage(1,Psychic)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G2 Weapon_28 HEAVE (UC, Stackable)
+// ---- G2 Weapon_28 HEAVE (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_28"
 type "Object"
@@ -6423,7 +6451,7 @@ data "FormatColor" "Red"
 data "Boosts" "WeaponDamage(1,Force)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G3 Weapon_29 POUNCE (UC, Stackable)
+// ---- G3 Weapon_29 POUNCE (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_29"
 type "Object"
@@ -6469,7 +6497,7 @@ data "FormatColor" "Warrior"
 data "Boosts" "IF(HasStatus('PRONE',context.Target)):WeaponAttackRollBonus(1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G4 Weapon_30 GLOOM (UC, Stackable)
+// ---- G4 Weapon_30 GLOOM (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_30"
 type "Object"
@@ -6515,7 +6543,7 @@ data "FormatColor" "DarkBlue"
 data "Boosts" "IF(not HasObscuredState(ObscuredState.Clear,context.Target)):DamageBonus(1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G5 Weapon_31 SWIFT (UC, NonStack)
+// ---- G5 Weapon_31 SWIFT (UC, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_31"
 type "Object"
@@ -6562,7 +6590,7 @@ data "StackId" "AMP_SHARD_WEAPON_SWIFT"
 data "Boosts" "WeaponProperty(Light)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G6 Weapon_32 SCAVENGER (UC, Stackable)
+// ---- G6 Weapon_32 SCAVENGER (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_32"
 type "Object"
@@ -6608,7 +6636,7 @@ data "FormatColor" "Rogue"
 data "Boosts" "IF(HasHPPercentageLessThan(50,context.Target)):DamageBonus(1d4,Slashing)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G7 Weapon_33 PELT (UC, Stackable)
+// ---- G7 Weapon_33 PELT (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_33"
 type "Object"
@@ -6654,7 +6682,7 @@ data "FormatColor" "Earth"
 data "Boosts" "IF(Tagged('BEAST',context.Target) or Tagged('PLANT',context.Target) or Tagged('MONSTROSITY',context.Target) or Tagged('FEY',context.Target)):DamageBonus(1d4,Slashing)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G7 Weapon_34 RIFT (UC, Stackable)
+// ---- G7 Weapon_34 RIFT (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_34"
 type "Object"
@@ -6700,7 +6728,7 @@ data "FormatColor" "Source"
 data "Boosts" "IF(Tagged('ABERRATION',context.Target) or Tagged('CONSTRUCT',context.Target) or Tagged('OOZE',context.Target)):DamageBonus(1d4,Slashing)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G7 Weapon_35 RITE (UC, Stackable)
+// ---- G7 Weapon_35 RITE (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_35"
 type "Object"
@@ -6746,7 +6774,7 @@ data "FormatColor" "Decay"
 data "Boosts" "IF(Tagged('UNDEAD',context.Target) or Tagged('FIEND',context.Target) or Tagged('ELEMENTAL',context.Target)):DamageBonus(1d4,Slashing)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G8 Weapon_36 AURA (UC, NonStack)
+// ---- G8 Weapon_36 AURA (UC, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_36"
 type "Object"
@@ -6793,7 +6821,7 @@ data "StackId" "AMP_SHARD_WEAPON_AURA"
 data "Boosts" "WeaponProperty(Magical)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G9 Weapon_37 NICK (UC, NonStack)
+// ---- G9 Weapon_37 NICK (UC, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_37"
 type "Object"
@@ -6842,7 +6870,7 @@ data "StackId" "AMP_SHARD_WEAPON_NICK"
 data "Boosts" "WeaponDamageDieOverride(1d4);WeaponAttackRollBonus(3)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G10 Weapon_38 CLASH (UC, Stackable)
+// ---- G10 Weapon_38 CLASH (UC, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_38"
 type "Object"
@@ -6888,7 +6916,7 @@ data "FormatColor" "Fire"
 data "Boosts" "WeaponDamage(2,Fire);WeaponDamage(2,Cold);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G12 Weapon_39 BELL (UC, NonStack)
+// ---- G12 Weapon_39 BELL (UC, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_39"
 type "Object"
@@ -6937,7 +6965,7 @@ data "StackId" "AMP_SHARD_WEAPON_BELL"
 data "Boosts" "WeaponDamageDieOverride(2d4);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G13 Weapon_40 FLICK (UC, NonStack)
+// ---- G13 Weapon_40 FLICK (UC, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_40"
 type "Object"
@@ -6984,7 +7012,7 @@ data "StackId" "AMP_SHARD_WEAPON_FLICK"
 data "Boosts" "WeaponDamageDieOverride(1d4);WeaponProperty(Light)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G14 Weapon_41 DRIFT (Rare, Stackable)
+// ---- G14 Weapon_41 DRIFT (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_41"
 type "Object"
@@ -7037,7 +7065,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and IsCritical() and not IsCriticalMiss()"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100,100)):ApplyStatus(SLOW,100,2)"
 
-// G15 Weapon_42 NUMB (Rare, Stackable)
+// ---- G15 Weapon_42 NUMB (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_42"
 type "Object"
@@ -7090,7 +7118,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and HasDamageEffectFlag(DamageFlags.Hit)"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100,10)):ApplyStatus(CHILLED,100,1)"
 
-// G16 Weapon_43 SEAR (Rare, Stackable)
+// ---- G16 Weapon_43 SEAR (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_43"
 type "Object"
@@ -7143,7 +7171,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and HasDamageEffectFlag(DamageFlags.Hit)"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100,10)):ApplyStatus(BURNING,100,2)"
 
-// G17 Weapon_44 SWEEP (Rare, NonStack)
+// ---- G17 Weapon_44 SWEEP (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_44"
 type "Object"
@@ -7199,7 +7227,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and IsCritical() and not IsCriticalMiss() and (IsMeleeWeaponAttack() or IsRangedWeaponAttack())"
 data "StatsFunctors" "ApplyStatus(PRONE,100,1)"
 
-// G18 Weapon_45 GRIP (Rare, NonStack)
+// ---- G18 Weapon_45 GRIP (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_45"
 type "Object"
@@ -7246,7 +7274,7 @@ data "StackId" "AMP_SHARD_WEAPON_GRIP"
 data "Boosts" "CannotBeDisarmed()"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G19 Weapon_46 EDGE (Rare, Stackable)
+// ---- G19 Weapon_46 EDGE (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_46"
 type "Object"
@@ -7299,7 +7327,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and HasDamageEffectFlag(DamageFlags.Hit)"
 data "StatsFunctors" "Force(1)"
 
-// G20 Weapon_47 HAWK (Rare, NonStack)
+// ---- G20 Weapon_47 HAWK (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_47"
 type "Object"
@@ -7348,7 +7376,7 @@ data "StackId" "AMP_SHARD_WEAPON_HAWK"
 data "Boosts" "UnlockSpellVariant(AMP_IsRangedWeaponAttack(),ModifyTargetRadius(AdditiveBase,1),ModifyTooltipDescription())"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G21 Weapon_48 HALO (Rare, NonStack)
+// ---- G21 Weapon_48 HALO (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_48"
 type "Object"
@@ -7404,7 +7432,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and IsCritical() and not IsCriticalMiss()"
 data "StatsFunctors" "CreateExplosion(Projectile_AMP_Shard_Halo_Burst)"
 
-// G22 Weapon_49 REPEL (Rare, NonStack)
+// ---- G22 Weapon_49 REPEL (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_49"
 type "Object"
@@ -7460,7 +7488,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and IsCritical() and not IsCriticalMiss()"
 data "StatsFunctors" "Force(2)"
 
-// G23 Weapon_50 CHANNEL (Rare, NonStack)
+// ---- G23 Weapon_50 CHANNEL (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_50"
 type "Object"
@@ -7507,7 +7535,7 @@ data "StackId" "AMP_SHARD_WEAPON_CHANNEL"
 data "Boosts" "WeaponAttackTypeOverride(MeleeSpellAttack)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G24 Weapon_51 FIST (Rare, NonStack)
+// ---- G24 Weapon_51 FIST (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_51"
 type "Object"
@@ -7554,7 +7582,7 @@ data "StackId" "AMP_SHARD_WEAPON_FIST"
 data "Boosts" "WeaponAttackTypeOverride(MeleeUnarmedAttack)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G25 Weapon_52 GAMBLE (Rare, NonStack)
+// ---- G25 Weapon_52 GAMBLE (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_52"
 type "Object"
@@ -7603,7 +7631,7 @@ data "StackId" "AMP_SHARD_WEAPON_GAMBLE"
 data "Boosts" "WeaponDamageDieOverride(1d20);WeaponAttackRollBonus(-5)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G26 Weapon_53 KNELL (Rare, Stackable)
+// ---- G26 Weapon_53 KNELL (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_53"
 type "Object"
@@ -7654,7 +7682,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and HasDamageEffectFlag(DamageFlags.Hit)"
 data "StatsFunctors" "ApplyStatus(MAG_THUNDER_REVERBERATION,100,1);ApplyStatus(MAG_THUNDER_REVERBERATION_DURATION_TECHNICAL,100,1);ApplyStatus(RING27_REVERB_TRIGGER,100,0)"
 
-// G27 Weapon_54 BLAZE (Rare, Stackable)
+// ---- G27 Weapon_54 BLAZE (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_54"
 type "Object"
@@ -7707,7 +7735,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and HasDamageEffectFlag(DamageFlags.Hit)"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100,15)):ApplyStatus(BLINDED,100,1)"
 
-// G28 Weapon_55 CHAR (Rare, Stackable)
+// ---- G28 Weapon_55 CHAR (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_55"
 type "Object"
@@ -7760,7 +7788,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and HasDamageEffectFlag(DamageFlags.Hit)"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100,15)):ApplyStatus(BURNING,100,2)"
 
-// G29 Weapon_56 FANG (Rare, Stackable)
+// ---- G29 Weapon_56 FANG (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_56"
 type "Object"
@@ -7806,7 +7834,7 @@ data "FormatColor" "Fire"
 data "Boosts" "WeaponDamage(1d6,Fire);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G29 Weapon_57 BITE (Rare, Stackable)
+// ---- G29 Weapon_57 BITE (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_57"
 type "Object"
@@ -7852,7 +7880,7 @@ data "FormatColor" "Water"
 data "Boosts" "WeaponDamage(1d6,Cold);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G29 Weapon_58 ARC (Rare, Stackable)
+// ---- G29 Weapon_58 ARC (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_58"
 type "Object"
@@ -7898,7 +7926,7 @@ data "FormatColor" "Blue"
 data "Boosts" "WeaponDamage(1d6,Lightning);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G29 Weapon_59 MAW (Rare, Stackable)
+// ---- G29 Weapon_59 MAW (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_59"
 type "Object"
@@ -7944,7 +7972,7 @@ data "FormatColor" "LightBlue"
 data "Boosts" "WeaponDamage(1d6,Thunder);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G29 Weapon_60 DRIP (Rare, Stackable)
+// ---- G29 Weapon_60 DRIP (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_60"
 type "Object"
@@ -7990,7 +8018,7 @@ data "FormatColor" "PoisonGreen"
 data "Boosts" "WeaponDamage(1d6,Acid);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G29 Weapon_61 BARB (Rare, Stackable)
+// ---- G29 Weapon_61 BARB (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_61"
 type "Object"
@@ -8036,7 +8064,7 @@ data "FormatColor" "Poison"
 data "Boosts" "WeaponDamage(1d6,Poison);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G29 Weapon_62 GNAW (Rare, Stackable)
+// ---- G29 Weapon_62 GNAW (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_62"
 type "Object"
@@ -8082,7 +8110,7 @@ data "FormatColor" "Rogue"
 data "Boosts" "WeaponDamage(1d6,Necrotic);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G29 Weapon_63 CLAW (Rare, Stackable)
+// ---- G29 Weapon_63 CLAW (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_63"
 type "Object"
@@ -8128,7 +8156,7 @@ data "FormatColor" "Yellow"
 data "Boosts" "WeaponDamage(1d6,Radiant);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G29 Weapon_64 NIP (Rare, Stackable)
+// ---- G29 Weapon_64 NIP (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_64"
 type "Object"
@@ -8174,7 +8202,7 @@ data "FormatColor" "Charm"
 data "Boosts" "WeaponDamage(1d6,Psychic);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G29 Weapon_65 JAB (Rare, Stackable)
+// ---- G29 Weapon_65 JAB (Rare, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_65"
 type "Object"
@@ -8220,7 +8248,7 @@ data "FormatColor" "Red"
 data "Boosts" "WeaponDamage(1d6,Force);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G30 Weapon_66 STAB (Rare, NonStack)
+// ---- G30 Weapon_66 STAB (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_66"
 type "Object"
@@ -8269,7 +8297,7 @@ data "StackId" "AMP_SHARD_WEAPON_STAB"
 data "Boosts" "WeaponDamageDieOverride(1d6);WeaponAttackRollBonus(2)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G31 Weapon_67 TWIN (Rare, NonStack)
+// ---- G31 Weapon_67 TWIN (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_67"
 type "Object"
@@ -8316,7 +8344,7 @@ data "StackId" "AMP_SHARD_WEAPON_TWIN"
 data "Boosts" "WeaponDamageDieOverride(2d6)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G32 Weapon_68 MAUL (Rare, NonStack)
+// ---- G32 Weapon_68 MAUL (Rare, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_68"
 type "Object"
@@ -8365,7 +8393,7 @@ data "StackId" "AMP_SHARD_WEAPON_MAUL"
 data "Boosts" "WeaponDamageDieOverride(2d8);WeaponEnchantment(-1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G33 Weapon_69 VECTOR (VR, Stackable)
+// ---- G33 Weapon_69 VECTOR (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_69"
 type "Object"
@@ -8411,7 +8439,7 @@ data "FormatColor" "Red"
 data "Boosts" "WeaponDamage(1d6,Force)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G34 Weapon_70 AWE (VR, Stackable)
+// ---- G34 Weapon_70 AWE (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_70"
 type "Object"
@@ -8464,7 +8492,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and HasDamageEffectFlag(DamageFlags.Hit)"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom,15)):ApplyStatus(FRIGHTENED,100,1)"
 
-// G35 Weapon_71 SEVER (VR, NonStack)
+// ---- G35 Weapon_71 SEVER (VR, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_71"
 type "Object"
@@ -8518,7 +8546,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and IsCritical() and not IsCriticalMiss()"
 data "StatsFunctors" "BreakConcentration()"
 
-// G36 Weapon_72 PIERCE (VR, Stackable)
+// ---- G36 Weapon_72 PIERCE (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_72"
 type "Object"
@@ -8565,7 +8593,7 @@ data "Icon" "GenericIcon_DamageType_Fire"
 data "FormatColor" "Fire"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G36 Weapon_73 LANCE (VR, Stackable)
+// ---- G36 Weapon_73 LANCE (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_73"
 type "Object"
@@ -8612,7 +8640,7 @@ data "Icon" "GenericIcon_DamageType_Cold"
 data "FormatColor" "Water"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G36 Weapon_74 BOLT (VR, Stackable)
+// ---- G36 Weapon_74 BOLT (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_74"
 type "Object"
@@ -8659,7 +8687,7 @@ data "Icon" "GenericIcon_DamageType_Lightning"
 data "FormatColor" "Blue"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G36 Weapon_75 BREAK (VR, Stackable)
+// ---- G36 Weapon_75 BREAK (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_75"
 type "Object"
@@ -8706,7 +8734,7 @@ data "Icon" "GenericIcon_DamageType_Thunder"
 data "FormatColor" "LightBlue"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G36 Weapon_76 ETCH (VR, Stackable)
+// ---- G36 Weapon_76 ETCH (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_76"
 type "Object"
@@ -8753,7 +8781,7 @@ data "Icon" "GenericIcon_DamageType_Acid"
 data "FormatColor" "PoisonGreen"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G36 Weapon_77 NEEDLE (VR, Stackable)
+// ---- G36 Weapon_77 NEEDLE (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_77"
 type "Object"
@@ -8800,7 +8828,7 @@ data "Icon" "GenericIcon_DamageType_Poison"
 data "FormatColor" "Poison"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G36 Weapon_78 CLEAVE (VR, Stackable)
+// ---- G36 Weapon_78 CLEAVE (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_78"
 type "Object"
@@ -8847,7 +8875,7 @@ data "Icon" "GenericIcon_DamageType_Necrotic"
 data "FormatColor" "Rogue"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G36 Weapon_79 RAY (VR, Stackable)
+// ---- G36 Weapon_79 RAY (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_79"
 type "Object"
@@ -8894,7 +8922,7 @@ data "Icon" "GenericIcon_DamageType_Radiant"
 data "FormatColor" "Yellow"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G36 Weapon_80 WEDGE (VR, Stackable)
+// ---- G36 Weapon_80 WEDGE (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_80"
 type "Object"
@@ -8941,7 +8969,7 @@ data "Icon" "GenericIcon_DamageType_Psychic"
 data "FormatColor" "Charm"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G36 Weapon_81 SPIKE (VR, Stackable)
+// ---- G36 Weapon_81 SPIKE (VR, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_81"
 type "Object"
@@ -8988,7 +9016,7 @@ data "Icon" "GenericIcon_DamageType_Force"
 data "FormatColor" "Red"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Weapon_82 PYRELAND (Leg, Stackable)
+// ---- G37 Weapon_82 PYRELAND (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_82"
 type "Object"
@@ -9035,7 +9063,7 @@ data "Boosts" "WeaponDamage(2d6,Fire)"
 data "Passives" "AMP_SHARD_RECOIL_PYRELAND"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Weapon_83 TUNDRA (Leg, Stackable)
+// ---- G37 Weapon_83 TUNDRA (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_83"
 type "Object"
@@ -9082,7 +9110,7 @@ data "Boosts" "WeaponDamage(2d6,Cold)"
 data "Passives" "AMP_SHARD_RECOIL_TUNDRA"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Weapon_84 SKYVAULT (Leg, Stackable)
+// ---- G37 Weapon_84 SKYVAULT (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_84"
 type "Object"
@@ -9129,7 +9157,7 @@ data "Boosts" "WeaponDamage(2d6,Lightning)"
 data "Passives" "AMP_SHARD_RECOIL_SKYVAULT"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Weapon_85 MAELSTROM (Leg, Stackable)
+// ---- G37 Weapon_85 MAELSTROM (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_85"
 type "Object"
@@ -9176,7 +9204,7 @@ data "Boosts" "WeaponDamage(2d6,Thunder)"
 data "Passives" "AMP_SHARD_RECOIL_MAELSTROM"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Weapon_86 MARSH (Leg, Stackable)
+// ---- G37 Weapon_86 MARSH (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_86"
 type "Object"
@@ -9223,7 +9251,7 @@ data "Boosts" "WeaponDamage(2d6,Acid)"
 data "Passives" "AMP_SHARD_RECOIL_MARSH"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Weapon_87 BLIGHT (Leg, Stackable)
+// ---- G37 Weapon_87 BLIGHT (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_87"
 type "Object"
@@ -9270,7 +9298,7 @@ data "Boosts" "WeaponDamage(2d6,Poison)"
 data "Passives" "AMP_SHARD_RECOIL_BLIGHT"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Weapon_88 BARROW (Leg, Stackable)
+// ---- G37 Weapon_88 BARROW (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_88"
 type "Object"
@@ -9317,7 +9345,7 @@ data "Boosts" "WeaponDamage(2d6,Necrotic)"
 data "Passives" "AMP_SHARD_RECOIL_BARROW"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Weapon_89 DAWNFIELD (Leg, Stackable)
+// ---- G37 Weapon_89 DAWNFIELD (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_89"
 type "Object"
@@ -9364,7 +9392,7 @@ data "Boosts" "WeaponDamage(2d6,Radiant)"
 data "Passives" "AMP_SHARD_RECOIL_DAWNFIELD"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Weapon_90 REVERIE (Leg, Stackable)
+// ---- G37 Weapon_90 REVERIE (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_90"
 type "Object"
@@ -9411,7 +9439,7 @@ data "Boosts" "WeaponDamage(2d6,Psychic)"
 data "Passives" "AMP_SHARD_RECOIL_REVERIE"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G37 Recoil Passives (hidden, for Weapon_82-90)
+// ---- G37 Recoil Passives (hidden, for Weapon_82-90) ----
 
 new entry "AMP_SHARD_RECOIL_PYRELAND"
 type "PassiveData"
@@ -9483,7 +9511,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "AttackedWithPassiveSourceWeapon() and Character()"
 data "StatsFunctors" "DealDamage(SWAP,1d4,Force,Magical,,0,,true,true,false,true)"
 
-// G37 Weapon_91 ABYSS (Leg, Stackable)
+// ---- G37 Weapon_91 ABYSS (Leg, Stackable) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_91"
 type "Object"
@@ -9530,7 +9558,7 @@ data "Boosts" "WeaponDamage(2d6,Force)"
 data "Passives" "AMP_SHARD_RECOIL_ABYSS"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G38 Weapon_92 TITAN (Leg, NonStack)
+// ---- G38 Weapon_92 TITAN (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_92"
 type "Object"
@@ -9577,7 +9605,7 @@ data "StackId" "AMP_SHARD_WEAPON_TITAN"
 data "Boosts" "WeaponDamageDieOverride(3d6)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_93 SUNFALL (Leg, NonStack)
+// ---- G39 Weapon_93 SUNFALL (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_93"
 type "Object"
@@ -9626,7 +9654,7 @@ data "StackId" "AMP_SHARD_WEAPON_SUNFALL"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Fire)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_94 FROSTBOUND (Leg, NonStack)
+// ---- G39 Weapon_94 FROSTBOUND (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_94"
 type "Object"
@@ -9675,7 +9703,7 @@ data "StackId" "AMP_SHARD_WEAPON_FROSTBOUND"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Cold)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_95 SKYBOLT (Leg, NonStack)
+// ---- G39 Weapon_95 SKYBOLT (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_95"
 type "Object"
@@ -9724,7 +9752,7 @@ data "StackId" "AMP_SHARD_WEAPON_SKYBOLT"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Lightning)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_96 STORMHEART (Leg, NonStack)
+// ---- G39 Weapon_96 STORMHEART (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_96"
 type "Object"
@@ -9773,7 +9801,7 @@ data "StackId" "AMP_SHARD_WEAPON_STORMHEART"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Thunder)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_97 RUSTVEIL (Leg, NonStack)
+// ---- G39 Weapon_97 RUSTVEIL (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_97"
 type "Object"
@@ -9822,7 +9850,7 @@ data "StackId" "AMP_SHARD_WEAPON_RUSTVEIL"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Acid)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_98 VENOMTIDE (Leg, NonStack)
+// ---- G39 Weapon_98 VENOMTIDE (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_98"
 type "Object"
@@ -9871,7 +9899,7 @@ data "StackId" "AMP_SHARD_WEAPON_VENOMTIDE"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Poison)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_99 GRAVECALL (Leg, NonStack)
+// ---- G39 Weapon_99 GRAVECALL (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_99"
 type "Object"
@@ -9920,7 +9948,7 @@ data "StackId" "AMP_SHARD_WEAPON_GRAVECALL"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Necrotic)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_100 DAYBREAK (Leg, NonStack)
+// ---- G39 Weapon_100 DAYBREAK (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_100"
 type "Object"
@@ -9969,7 +9997,7 @@ data "StackId" "AMP_SHARD_WEAPON_DAYBREAK"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Radiant)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_101 MINDREND (Leg, NonStack)
+// ---- G39 Weapon_101 MINDREND (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_101"
 type "Object"
@@ -10018,7 +10046,7 @@ data "StackId" "AMP_SHARD_WEAPON_MINDREND"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Psychic)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// G39 Weapon_102 NULLFALL (Leg, NonStack)
+// ---- G39 Weapon_102 NULLFALL (Leg, NonStack) ----
 
 new entry "AMP_Arcanizer_Shard_Weapon_102"
 type "Object"
@@ -10067,9 +10095,9 @@ data "StackId" "AMP_SHARD_WEAPON_NULLFALL"
 data "Boosts" "WeaponDamageDieOverride(2d10);WeaponDamageTypeOverride(Force)"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// Caster and universal shards
+// ======== B10 — CASTER/UNIVERSAL SHARDS (70 entries) ========
 
-// CLOAK_7 Lens
+// ================ CLOAK_7: LENS — Abjuration cast → TempHP aura for allies (Cloak Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Cloak_7"
 type "Object"
@@ -10142,7 +10170,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsSpell() and not IsCantrip() and IsSpellSchool(SpellSchool.Abjuration) and Combat()"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_SHARD_LENS_PULSE_AURA,100,1)"
 
-// RING_13 Kostochki
+// ================ RING_13: KOSTOCHKI — Wild Magic cast → +5 spell success on next spell (Ring Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Ring_13"
 type "Object"
@@ -10208,7 +10236,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsWildMagic() and IsSpell() and not IsCantrip()"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_SHARD_BONES_BUFF,100,-1)"
 
-// HEAD_17 Adept
+// ================ HEAD_17: ADEPT — Short Rest → restore L1 spell slot (Helmet Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Head_17"
 type "Object"
@@ -10262,7 +10290,7 @@ data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnShortRest"
 data "StatsFunctors" "RestoreResource(SELF,SpellSlot,1,1)"
 
-// GLOVES_14 Bridge
+// ================ GLOVES_14: BRIDGE — Inflict Wounds range 6m (Gloves NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_14"
 type "Object"
@@ -10312,7 +10340,7 @@ data "StackId" "AMP_SHARD_CHAR_BRIDGE"
 data "Boosts" "UnlockSpellVariant(IsInflictWounds(),ModifyTargetRadius(Override,6),ModifySpellFlags(Melee,0))"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// CLOAK_8 Kobold
+// ================ CLOAK_8: KOBOLD — In shadow +2 spell save DC; sunlight = disadvantage on saves (Cloak Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Cloak_8"
 type "Object"
@@ -10366,7 +10394,7 @@ data "Properties" "IsHidden"
 data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate"
 data "Boosts" "IF(not HasObscuredState(ObscuredState.Clear,context.Source)):SpellSaveDC(2);IF(IsInSunlight(context.Source)):Disadvantage(AllSavingThrows)"
 
-// AMULET_8 Mad
+// ================ AMULET_8: MAD — HP<50% advantage on attack; HP>=50% disadvantage on attack (Amulet NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_8"
 type "Object"
@@ -10416,7 +10444,7 @@ data "StackId" "AMP_SHARD_CHAR_FRENZY"
 data "Boosts" "IF(HasHPPercentageLessThan(50,context.Source)):Advantage(AttackRoll);IF(not HasHPPercentageLessThan(50,context.Source)):Disadvantage(AttackRoll)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_18 Zachin
+// ================ HEAD_18: ZACHIN — Turn 1 in combat: spells +3; subsequent turns: -1 (Helmet Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Head_18"
 type "Object"
@@ -10493,7 +10521,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "Combat()"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_SHARD_OPENING_BONUS,100,1)"
 
-// CLOAK_9 Repel
+// ================ CLOAK_9: REPEL — Melee damage received → Force push attacker 2m (Cloak Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Cloak_9"
 type "Object"
@@ -10555,7 +10583,7 @@ data "StatsFunctorContext" "OnDamaged"
 data "Conditions" "IsMeleeAttack() and Enemy() and TotalDamageDoneGreaterThan(0)"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_SHARD_REPEL_TECH,100,0)"
 
-// AMULET_9 Tribute
+// ================ AMULET_9: TRIBUTE — Enemy fails mental save → 1% chance gain Inspiration (Amulet Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_9"
 type "Object"
@@ -10610,10 +10638,10 @@ data "StatsFunctorContext" "OnAttack"
 data "Conditions" "not IsLastConditionRollSuccess(ConditionRollType.ConditionSavingThrow) and IsSpell() and IsSavingThrow() and (HasSavingThrowWithAbility(Ability.Wisdom) or HasSavingThrowWithAbility(Ability.Intelligence) or HasSavingThrowWithAbility(Ability.Charisma)) and Combat() and Character() and Enemy() and not Self()"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100,2)):ApplyStatus(SELF,INSPIRATION,100,-1)"
 
-// ARMOR_14-23: PLEDGE SERIES (God-Cleric Boosts, Armor NonStack, Uncommon)
-// ARMOR_24-26: ATHEIST SERIES (Non-Cleric Boosts, Armor NonStack, Uncommon)
+// ================ ARMOR_14-23: PLEDGE SERIES (God-Cleric Boosts, Armor NonStack, Uncommon) ================
+// ================ ARMOR_24-26: ATHEIST SERIES (Non-Cleric Boosts, Armor NonStack, Uncommon) ================
 
-// Pledge shards, one per deity
+// ================ ARMOR_14: PLEDGE_MYSTRA — Cleric of Mystra: +1 Spell Save DC ================
 
 new entry "AMP_Arcanizer_Shard_Armor_14"
 type "Object"
@@ -10672,6 +10700,8 @@ data "BoostContext" "OnCreate;OnEquip"
 data "BoostConditions" "Tagged('CLERIC_MYSTRA',context.Source)"
 data "Boosts" "SpellSaveDC(1)"
 
+// ================ ARMOR_15: PLEDGE_SELUNE — Cleric of Selune: +1d4 Radiant vs Undead ================
+
 new entry "AMP_Arcanizer_Shard_Armor_15"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -10721,6 +10751,8 @@ data "StackId" "AMP_SHARD_CHAR_PLEDGE_SELUNE"
 data "StackType" "Overwrite"
 data "Boosts" "IF(Tagged('CLERIC_SELUNE',context.Source) and Tagged('UNDEAD',context.Target)):DamageBonus(1d4,Radiant)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
+
+// ================ ARMOR_16: PLEDGE_SHAR — Cleric of Shar: +Prof to Stealth; +1d4 Necrotic while obscured ================
 
 new entry "AMP_Arcanizer_Shard_Armor_16"
 type "Object"
@@ -10772,6 +10804,8 @@ data "StackType" "Overwrite"
 data "Boosts" "IF(Tagged('CLERIC_SHAR',context.Source)):Skill(Stealth,1);IF(Tagged('CLERIC_SHAR',context.Source) and not HasObscuredState(ObscuredState.Clear)):DamageBonus(1d4,Necrotic)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
+// ================ ARMOR_17: PLEDGE_TYR — Cleric of Tyr: +1 to Saving Throws ================
+
 new entry "AMP_Arcanizer_Shard_Armor_17"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -10821,6 +10855,8 @@ data "StackId" "AMP_SHARD_CHAR_PLEDGE_TYR"
 data "StackType" "Overwrite"
 data "Boosts" "IF(Tagged('CLERIC_TYR',context.Source)):RollBonus(SavingThrow,1)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
+
+// ================ ARMOR_18: PLEDGE_TALOS — Cleric of Talos: Resistant to Lightning ================
 
 new entry "AMP_Arcanizer_Shard_Armor_18"
 type "Object"
@@ -10872,6 +10908,8 @@ data "StackType" "Overwrite"
 data "Boosts" "IF(Tagged('CLERIC_TALOS',context.Source)):Resistance(Lightning,Resistant)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
+// ================ ARMOR_19: PLEDGE_ILMATER — Cleric of Ilmater: Resistant to Bludgeoning ================
+
 new entry "AMP_Arcanizer_Shard_Armor_19"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -10921,6 +10959,8 @@ data "StackId" "AMP_SHARD_CHAR_PLEDGE_ILMATER"
 data "StackType" "Overwrite"
 data "Boosts" "IF(Tagged('CLERIC_ILMATER',context.Source) and HasHPPercentageLessThan(50,context.Source)):DamageBonus(1d4,Bludgeoning)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
+
+// ================ ARMOR_20: PLEDGE_LOLTH — Cleric of Lolth: Immune WEB; +1d4 Poison vs Spiders ================
 
 new entry "AMP_Arcanizer_Shard_Armor_20"
 type "Object"
@@ -10972,6 +11012,8 @@ data "StackType" "Overwrite"
 data "Boosts" "IF(Tagged('CLERIC_LOLTH',context.Source)):StatusImmunity(WEB);IF(Tagged('CLERIC_LOLTH',context.Source)):Resistance(Poison,Resistant)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
+// ================ ARMOR_21: PLEDGE_LOVIATAR — Cleric of Loviatar: Immune to Frightened ================
+
 new entry "AMP_Arcanizer_Shard_Armor_21"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -11018,6 +11060,8 @@ data "StackId" "AMP_SHARD_CHAR_PLEDGE_LOVIATAR"
 data "StackType" "Overwrite"
 data "Boosts" "IF(Tagged('CLERIC_LOVIATAR',context.Source)):StatusImmunity(SG_Frightened)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
+
+// ================ ARMOR_22: PLEDGE_LATHANDER — Cleric of Lathander: +1d4 Radiant in Sunlight ================
 
 new entry "AMP_Arcanizer_Shard_Armor_22"
 type "Object"
@@ -11069,6 +11113,8 @@ data "StackType" "Overwrite"
 data "Boosts" "IF(Tagged('CLERIC_LATHANDER',context.Source) and IsInSunlight()):DamageBonus(1d4,Radiant)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
+// ================ ARMOR_23: PLEDGE_MIELIKKI — Cleric of Mielikki: Immune to Vine-Difficult Terrain; +1d4 Piercing vs Beasts ================
+
 new entry "AMP_Arcanizer_Shard_Armor_23"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -11119,7 +11165,7 @@ data "StackType" "Overwrite"
 data "Boosts" "IF(Tagged('CLERIC_MIELIKKI',context.Source)):StatusImmunity(DIFFICULT_TERRAIN_VINES);IF(Tagged('CLERIC_MIELIKKI',context.Source) and Tagged('BEAST',context.Target)):DamageBonus(1d4,Piercing)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// Atheist shards, no god tag
+// ================ ARMOR_24: ATHEIST_FREEMIND — No god-tag: Advantage on Charisma Saves ================
 
 new entry "AMP_Arcanizer_Shard_Armor_24"
 type "Object"
@@ -11167,6 +11213,8 @@ data "StackId" "AMP_SHARD_CHAR_PLEDGE_FREEMIND"
 data "StackType" "Overwrite"
 data "Boosts" "IF(IsAtheist()):Advantage(SavingThrow,Charisma)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
+
+// ================ ARMOR_25: ATHEIST_SELFMADE — No god-tag: +1 Attack; +1 Saving Throws ================
 
 new entry "AMP_Arcanizer_Shard_Armor_25"
 type "Object"
@@ -11218,6 +11266,8 @@ data "StackType" "Overwrite"
 data "Boosts" "IF(IsAtheist()):RollBonus(Attack,1);IF(IsAtheist()):RollBonus(SavingThrow,1)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
+// ================ ARMOR_26: ATHEIST_RESOLVE — No god-tag: Resistant Psychic; +2 Death Saves ================
+
 new entry "AMP_Arcanizer_Shard_Armor_26"
 type "Object"
 using "AMP_Arcanizer_Shard_Generic"
@@ -11268,7 +11318,7 @@ data "StackType" "Overwrite"
 data "Boosts" "IF(IsAtheist()):Resistance(Psychic,Resistant);IF(IsAtheist()):RollBonus(DeathSavingThrow,2)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// AMULET_10 Leech
+// ================ AMULET_10: LEECH — Spell/cantrip damage → heal self 1 HP (Amulet Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_10"
 type "Object"
@@ -11331,7 +11381,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsSpell() and Enemy()"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_SHARD_LEECH_HEAL,100,0)"
 
-// RING_14 Glass
+// ================ RING_14: GLASS — -1 spell crit threshold; taking damage → stunned (Ring Stack, Legendary) ================
 
 new entry "AMP_Arcanizer_Shard_Ring_14"
 type "Object"
@@ -11386,7 +11436,7 @@ data "Boosts" "IF(IsSpell()):ReduceCriticalAttackThreshold(10)"
 data "StatsFunctorContext" "OnDamaged"
 data "StatsFunctors" "ApplyStatus(STUNNED,100,1)"
 
-// AMULET_11 Pack
+// ================ AMULET_11: PACK — Summoned creatures gain +1 bonus crit damage die (Amulet Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_11"
 type "Object"
@@ -11440,7 +11490,7 @@ data "DisplayName" "h6f9ba745g87d0g45c8g800bg353b32d066d5;1"
 data "Boosts" "CriticalHitExtraDice(1,MeleeWeaponAttack);CriticalHitExtraDice(1,MeleeOffHandWeaponAttack);CriticalHitExtraDice(1,MeleeSpellAttack);CriticalHitExtraDice(1,RangedSpellAttack);CriticalHitExtraDice(1,MeleeUnarmedAttack);CriticalHitExtraDice(1,RangedUnarmedAttack);CriticalHitExtraDice(1,RangedWeaponAttack);CriticalHitExtraDice(1,RangedOffHandWeaponAttack)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// ARMOR_27 Chameleon
+// ================ ARMOR_27: CHAMELEON — Transmutation spell/cantrip → 5 TempHP (Armor NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Armor_27"
 type "Object"
@@ -11509,7 +11559,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "Combat() and IsSpell() and IsSpellSchool(SpellSchool.Transmutation)"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_SHARD_CHAMELEON_BUFF,100,-1)"
 
-// HEAD_19 Executioner
+// ================ HEAD_19: EXECUTIONER — Spell damage to <30% HP enemy → gain Potent Magic charge (Helmet Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Head_19"
 type "Object"
@@ -11564,7 +11614,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsSpell() and Enemy() and HasHPPercentageWithoutTemporaryHPLessThan(30,context.Target) and Character()"
 data "StatsFunctors" "ApplyStatus(SELF,MAG_CQC_ARCANE_CHARGE,100,1)"
 
-// AMULET_12 Pendulum
+// ================ AMULET_12: PENDULUM — Start of turn: random Ambition (phys resist/magic vuln) or Knowledge (magic resist/phys vuln) (Amulet NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_12"
 type "Object"
@@ -11647,7 +11697,7 @@ data "FormatColor" "LightBlue"
 data "StatusPropertyFlags" "IgnoreResting;ApplyToDead"
 data "StatusGroups" "SG_Condition"
 
-// RING_15 Edge
+// ================ RING_15: EDGE — At exactly 1 HP, attacks become critical (Ring NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Ring_15"
 type "Object"
@@ -11727,7 +11777,7 @@ data "Boosts" ""
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
 
-// CLOAK_10 Resonance
+// ================ CLOAK_10: RESONANCE — Under negative status, 25% chance to apply Primordial Chaos to enemies on damage (Cloak Stack, Uncommon) ================
 
 
 new entry "AMP_Arcanizer_Shard_Cloak_10"
@@ -11783,7 +11833,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "Enemy() and Combat() and HasNegativeStatus(context.Source) and not StatusDurationEqualOrMoreThan(context.Source, 'AMP_KOY_PRIMORDIALCHAOS', 7)"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_KOY_PRIMORDIALCHAOS,100,2);IF(StatusDurationEqualOrMoreThan(context.Source,'AMP_KOY_PRIMORDIALCHAOS',8)):SetStatusDuration(SELF,AMP_KOY_PRIMORDIALCHAOS,7,ForceSet)"
 
-// GLOVES_15 Magnet
+// ================ GLOVES_15: MAGNET — Force damage to targets >2m away → pull toward caster (Gloves NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_15"
 type "Object"
@@ -11840,7 +11890,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsDamageTypeForce() and not Item() and Character() and DistanceToTargetGreaterThan(2)"
 data "StatsFunctors" "Force(-3,OriginToEntity,Neutral,false,true)"
 
-// HEAD_20 Stance
+// ================ HEAD_20: STANCE — End turn without attacking → +2 AC until next turn (Helmet Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Head_20"
 type "Object"
@@ -11913,7 +11963,7 @@ data "TickType" "StartTurn"
 data "TickFunctors" "RemoveStatus(SELF,AMP_SHARD_STANCE_AC_BUFF)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// GLOVES_16 Juggler
+// ================ GLOVES_16: JUGGLER — Bonus action spells now cost action; action spells cost bonus action (Gloves NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_16"
 type "Object"
@@ -11976,7 +12026,7 @@ data "StackId" "AMP_SHARD_JUGGLER_ACTIVE"
 data "Boosts" "UnlockSpellVariant(IsBonusActionSpell(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint),ModifyIconGlow(),ModifyTooltipDescription())"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_21 Sunrise
+// ================ HEAD_21: SUNRISE — Healing spell cast → target gets Sunlight aura 2 turns (Helmet Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Head_21"
 type "Object"
@@ -12031,7 +12081,7 @@ data "StatsFunctorContext" "OnHeal"
 data "Conditions" "IsSpell()"
 data "StatsFunctors" "ApplyStatus(DAYLIGHT,100,2)"
 
-// RING_16 Bolt
+// ================ RING_16: BOLT — Arcane Lock free (no spell slot) (Ring NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Ring_16"
 type "Object"
@@ -12093,7 +12143,7 @@ data "Boosts" "UnlockSpellVariant(IsArcaneLock(),ModifyUseCosts(Replace,SpellSlo
 data "RemoveEvents" "OnCombatEnded"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_22 Disciple Ilmater, Stoic
+// ================ HEAD_22: DISCIPLE_ILMATER (Stoic) — Tag CLERIC_ILMATER + Vulnerable Slashing (Helmet NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Head_22"
 type "Object"
@@ -12146,7 +12196,7 @@ data "StackType" "Overwrite"
 data "Boosts" "Tag(CLERIC_ILMATER)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_23 Disciple Lolth, Spider
+// ================ HEAD_23: DISCIPLE_LOLTH (Spider) — Tag CLERIC_LOLTH + never crit Drow/Driders/Spiders ================
 
 new entry "AMP_Arcanizer_Shard_Head_23"
 type "Object"
@@ -12191,11 +12241,12 @@ data "DisplayName" "h19602ef8g645cg4659g971ag3274e5122367;1"
 data "Description" "h4e1d2e11g9832g4f4cg94b0ge0bb9a2045c8;1"
 data "StackId" "AMP_SHARD_DISCIPLE"
 data "StackType" "Overwrite"
+// disciple penalty removed:
 // data "Boosts" "Tag(CLERIC_LOLTH);IF(Tagged('DROW',context.Target) or Tagged('DRIDER',context.Target) or Tagged('SPIDER',context.Target)):CriticalHit(AttackRoll,Success,Never)"
 data "Boosts" "Tag(CLERIC_LOLTH)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_24 Disciple Loviatar, Whip
+// ================ HEAD_24: DISCIPLE_LOVIATAR (Whip) — Tag CLERIC_LOVIATAR + 100 Slashing dmg at full HP ================
 
 new entry "AMP_Arcanizer_Shard_Head_24"
 type "Object"
@@ -12244,11 +12295,12 @@ data "DescriptionParams" "DealDamage(100,Slashing)"
 data "StackId" "AMP_SHARD_DISCIPLE"
 data "StackType" "Overwrite"
 data "Boosts" "Tag(CLERIC_LOVIATAR)"
+// disciple penalty removed:
 // data "TickType" "StartTurn"
 // data "TickFunctors" "IF(HasMaxHP(context.Source)):DealDamage(100,Slashing)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_25 Disciple Mystra, Weave
+// ================ HEAD_25: DISCIPLE_MYSTRA (Weave) — Tag CLERIC_MYSTRA + lose all L1 slots start of turn ================
 
 new entry "AMP_Arcanizer_Shard_Head_25"
 type "Object"
@@ -12298,7 +12350,7 @@ data "StackType" "Overwrite"
 data "Boosts" "Tag(CLERIC_MYSTRA)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_26 Disciple Selune, Fullmoon
+// ================ HEAD_26: DISCIPLE_SELUNE (Fullmoon) — Tag CLERIC_SELUNE + -1 attack/DC each turn ================
 
 new entry "AMP_Arcanizer_Shard_Head_26"
 type "Object"
@@ -12370,7 +12422,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "Combat()"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_SHARD_SELUNE_DRAIN,100,1)"
 
-// HEAD_27 Disciple Shar, Dusk
+// ================ HEAD_27: DISCIPLE_SHAR (Dusk) — Tag CLERIC_SHAR + stunned in sunlight ================
 
 new entry "AMP_Arcanizer_Shard_Head_27"
 type "Object"
@@ -12433,7 +12485,7 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_SHARD_DUSK_SUNLIGHT_MARKER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_28 Disciple Tyr, Tablet
+// ================ HEAD_28: DISCIPLE_TYR (Tablet) — Tag CLERIC_TYR + die if you kill a non-enemy ================
 
 new entry "AMP_Arcanizer_Shard_Head_28"
 type "Object"
@@ -12490,7 +12542,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsKillingBlow() and not Enemy(context.Target)"
 data "StatsFunctors" "Kill(SELF)"
 
-// HEAD_29 Disciple Talos, Storm
+// ================ HEAD_29: DISCIPLE_TALOS (Storm) — Tag CLERIC_TALOS + Vulnerable Lightning ================
 
 new entry "AMP_Arcanizer_Shard_Head_29"
 type "Object"
@@ -12544,7 +12596,7 @@ data "Boosts" "Tag(CLERIC_TALOS)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
 
-// HEAD_35 Disciple Lathander, Dawn
+// ================ HEAD_35: DISCIPLE_LATHANDER (Dawn) — Tag CLERIC_LATHANDER + Vulnerable Necrotic (Helmet NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Head_35"
 type "Object"
@@ -12595,7 +12647,7 @@ data "StackType" "Overwrite"
 data "Boosts" "Tag(CLERIC_LATHANDER)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_36 Disciple Mielikki, Wilds
+// ================ HEAD_36: DISCIPLE_MIELIKKI (Wilds) — Tag CLERIC_MIELIKKI + Vulnerable Fire (Helmet NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Head_36"
 type "Object"
@@ -12648,7 +12700,7 @@ data "StackType" "Overwrite"
 // data "Boosts" "Tag(CLERIC_MIELIKKI);Resistance(Fire,Vulnerable)"
 data "Boosts" "Tag(CLERIC_MIELIKKI)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
-// HEAD_30 Blindman
+// ================ HEAD_30: BLINDMAN — Always blinded; restore L1 spell slot start of each turn (Helmet Stack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Head_30"
 type "Object"
@@ -12699,7 +12751,7 @@ data "TickType" "StartTurn"
 data "TickFunctors" "IF(not HasStatus('BLINDED')):ApplyStatus(SELF,BLINDED,100,-1);IF(Combat() and HasStatus('BLINDED')):RestoreResource(SELF,SpellSlot,1,1)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// BOOTS_13 Root
+// ================ BOOTS_13: ROOT — Movement blocked in combat; spell/cantrip range doubled (Boots NonStack, Uncommon) ================
 
 new entry "AMP_Arcanizer_Shard_Boots_13"
 type "Object"
@@ -12753,7 +12805,7 @@ data "Boosts" "ActionResourceBlock(Movement);UnlockSpellVariant(DistantSpellChec
 data "RemoveEvents" "OnCombatEnded"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// AMULET_13 Improvise
+// ================ AMULET_13: IMPROVISE — Toggle: cantrips (except Booming Blade) cost Bardic Inspiration instead of Action (Amulet NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_13"
 type "Object"
@@ -12833,7 +12885,7 @@ data "StackId" "AMP_SHARD_CHAR_IMPROVISE"
 data "Passives" "AMP_Shard_Amulet_Improvise_Toggle"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// HEAD_31 Magister
+// ================ HEAD_31: MAGISTER — Short Rest → restore L2 spell slot (Helmet Stack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Head_31"
 type "Object"
@@ -12887,7 +12939,7 @@ data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnShortRest"
 data "StatsFunctors" "RestoreResource(SELF,SpellSlot,1,2)"
 
-// GLOVES_17 Backup
+// ================ GLOVES_17: BACKUP — Miss leveled spell → free cantrip this turn (Gloves NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_17"
 type "Object"
@@ -12951,7 +13003,7 @@ data "StatsFunctorContext" "OnAttack"
 data "Conditions" "IsSpell() and not IsCantrip() and (IsMiss() or IsCriticalMiss()) and Combat()"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_SHARD_BACKUP_FREE_CANTRIP,100,1)"
 
-// CLOAK_11 Bonfire
+// ================ CLOAK_11: BONFIRE — While burning, advantage on attack rolls (Cloak NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Cloak_11"
 type "Object"
@@ -12998,7 +13050,7 @@ data "StackId" "AMP_SHARD_CHAR_BONFIRE"
 data "Boosts" "IF(HasStatus('BURNING',context.Source)):Advantage(AttackRoll)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// ARMOR_28 Metamorph
+// ================ ARMOR_28: METAMORPH — On damage deal: -2 Dex, +1 all other stats (Additive cap 6) (Armor Stack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Armor_28"
 type "Object"
@@ -13070,7 +13122,7 @@ data "StatsFunctorContext" "OnTurn;OnDamage"
 data "Conditions" "StatusDurationEqualOrMoreThan(context.Source,'AMP_METAMORPH_STACK',7)"
 data "StatsFunctors" "SetStatusDuration(SELF,AMP_METAMORPH_STACK,6,ForceSet)"
 
-// CLOAK_12 Shutter
+// ================ CLOAK_12: SHUTTER — Enemy fails mental save → Blade Ward on self 2 turns (Cloak Stack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Cloak_12"
 type "Object"
@@ -13125,7 +13177,7 @@ data "StatsFunctorContext" "OnAttack"
 data "Conditions" "not IsLastConditionRollSuccess(ConditionRollType.ConditionSavingThrow) and IsSpell() and IsSavingThrow() and (HasSavingThrowWithAbility(Ability.Wisdom) or HasSavingThrowWithAbility(Ability.Intelligence) or HasSavingThrowWithAbility(Ability.Charisma)) and Combat() and Character() and Enemy() and not Self()"
 data "StatsFunctors" "ApplyStatus(SELF,BLADE_WARD,100,2)"
 
-// HEAD_32 Axis
+// ================ HEAD_32: AXIS — While concentrating, +1 spell success (Helmet Stack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Head_32"
 type "Object"
@@ -13181,7 +13233,7 @@ data "BoostContext" "OnCreate;OnEquip;OnStatusApplied;OnStatusRemoved;OnTurn"
 data "BoostConditions" "IsConcentrating(context.Source)"
 data "Boosts" "SpellSaveDC(1)"
 
-// BOOTS_14 Dodge
+// ================ BOOTS_14: DODGE — While Mage Armor active, no opportunity attacks (Boots NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Boots_14"
 type "Object"
@@ -13228,7 +13280,7 @@ data "StackId" "AMP_SHARD_CHAR_DODGE"
 data "Boosts" "IF(IsMageArmored(context.Source)):IgnoreLeaveAttackRange()"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// CLOAK_13 Voice
+// ================ CLOAK_13: VOICE — Immune to Silenced; Vulnerable Thunder (Cloak NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Cloak_13"
 type "Object"
@@ -13278,7 +13330,7 @@ data "StackId" "AMP_SHARD_CHAR_VOICE"
 data "Boosts" "StatusImmunity(SILENCED);Resistance(Thunder,Vulnerable)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// RING_17 Precision
+// ================ RING_17: PRECISION — -1 spell attack crit threshold (Ring Stack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Ring_17"
 type "Object"
@@ -13326,7 +13378,7 @@ data "DescriptionParams" "19"
 data "Boosts" "IF(IsSpell()):ReduceCriticalAttackThreshold(1)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// ARMOR_29 Evoker
+// ================ ARMOR_29: EVOKER — Evocation spell/cantrip cast → 5 TempHP (Armor NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Armor_29"
 type "Object"
@@ -13395,7 +13447,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "Combat() and IsSpell() and IsSpellSchool(SpellSchool.Evocation)"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_SHARD_EVOCATOR_BUFF,100,-1)"
 
-// CLOAK_14 Liar
+// ================ CLOAK_14: LIAR — Illusion spell cast → become Invisible 1 turn (Cloak NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Cloak_14"
 type "Object"
@@ -13452,7 +13504,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsSpell() and not IsCantrip() and IsSpellSchool(SpellSchool.Illusion)"
 data "StatsFunctors" "ApplyStatus(SELF,INVISIBLE,100,1)"
 
-// HEAD_33 Decay
+// ================ HEAD_33: DECAY — Necromancy spells/cantrips deal +1 Necrotic damage (Helmet Stack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Head_33"
 type "Object"
@@ -13500,7 +13552,7 @@ data "DescriptionParams" "DealDamage(1,Necrotic)"
 data "Boosts" "IF(IsSpell() and IsSpellSchool(SpellSchool.Necromancy)):DamageBonus(1,Necrotic)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// AMULET_14 Witblade
+// ================ AMULET_14: WITBLADE — Unlock Cutting Words interrupt (Amulet NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_14"
 type "Object"
@@ -13556,7 +13608,7 @@ data "StackId" "AMP_SHARD_CHAR_QUIP"
 data "Boosts" "UnlockInterrupt(AMP_SHARD_Interrupt_QUIP)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// RING_18 Singularity
+// ================ RING_18: SINGULARITY — End of turn: all enemies in 30m pulled slightly toward caster (Ring NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Ring_18"
 type "Object"
@@ -13614,7 +13666,7 @@ data "TickType" "EndTurn"
 data "TickFunctors" "Force(-1,OriginToEntity,Neutral,false,true)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// GLOVES_18 Minimizer
+// ================ GLOVES_18: MINIMIZER — Healing spell targeting enemy → apply Reduce 2 turns (Gloves NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_18"
 type "Object"
@@ -13668,7 +13720,7 @@ data "StatsFunctorContext" "OnHeal"
 data "Conditions" "IsSpell() and Enemy()"
 data "StatsFunctors" "ApplyStatus(REDUCE,100,2)"
 
-// GLOVES_19 Blazer
+// ================ GLOVES_19: BLAZER — Fire spell damage → self gains MAG_FIRE_HEAT 2 turns (once/turn) (Gloves NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_19"
 type "Object"
@@ -13725,7 +13777,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsSpell() and HasDamageDoneForType(DamageType.Fire) and Enemy() and Combat()"
 data "StatsFunctors" "ApplyStatus(SELF,MAG_FIRE_HEAT,100,2)"
 
-// RING_19 Ice and Flame
+// ================ RING_19: ICE_AND_FLAME — Fire dmg → apply MAG_FROST to target; Cold dmg → apply BURNING + fire surface (Ring NonStack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Ring_19"
 type "Object"
@@ -13782,7 +13834,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsSpell() and Enemy() and Combat()"
 data "StatsFunctors" "IF(SpellDamageTypeIs(DamageType.Fire)):ApplyStatus(MAG_FROST,100,1);IF(SpellDamageTypeIs(DamageType.Fire)):RemoveStatus(BURNING);IF(SpellDamageTypeIs(DamageType.Cold)):ApplyStatus(BURNING,100,1);GROUND:IF(SpellDamageTypeIs(DamageType.Cold)):CreateSurface(2,2,Fire)"
 
-// AMULET_15 Janus
+// ================ AMULET_15: JANUS — Necrotic dmg → BURNING_HOLY on target; Radiant dmg → AMP_DEATHCLERIC_FETID_ROT on target (Amulet Stack, Rare) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_15"
 type "Object"
@@ -13837,7 +13889,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsSpell() and Enemy() and Combat()"
 data "StatsFunctors" "IF(SpellDamageTypeIs(DamageType.Necrotic)):ApplyStatus(BURNING_HOLY,100,1);IF(SpellDamageTypeIs(DamageType.Radiant)):ApplyStatus(AMP_DEATHCLERIC_FETID_ROT,100,1)"
 
-// HEAD_34 Archmage
+// ================ HEAD_34: ARCHMAGE — Short Rest → restore L3 spell slot (Helmet Stack, VeryRare) ================
 
 new entry "AMP_Arcanizer_Shard_Head_34"
 type "Object"
@@ -13891,7 +13943,7 @@ data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnShortRest"
 data "StatsFunctors" "RestoreResource(SELF,SpellSlot,1,3)"
 
-// CLOAK_15 Yoke
+// ================ CLOAK_15: YOKE — Enemies in 3m take +1d4 bonus damage (Cloak Stack, VeryRare) ================
 
 new entry "AMP_Arcanizer_Shard_Cloak_15"
 type "Object"
@@ -13947,7 +13999,7 @@ data "DisplayName" "h03fbdf2ag5488g46a2ga881g779c12ee978b;1"
 data "Boosts" "DamageTakenBonus(1d4)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// CLOAK_16 Shadow
+// ================ CLOAK_16: SHADOW — In shadow: resistance to all damage except Radiant+Force (Cloak NonStack, VeryRare) ================
 
 new entry "AMP_Arcanizer_Shard_Cloak_16"
 type "Object"
@@ -14012,7 +14064,7 @@ data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnObscurityChanged;OnCombatStarted;OnTurn"
 data "StatsFunctors" "IF(not HasObscuredState(ObscuredState.Clear)):ApplyStatus(SELF,AMP_SHARD_SHADOW_RESIST,100,-1);IF(HasObscuredState(ObscuredState.Clear)):RemoveStatus(SELF,AMP_SHARD_SHADOW_RESIST)"
 
-// AMULET_16 Split
+// ================ AMULET_16: SPLIT — Casting cantrip (not Booming Blade) with Action → restore 1 Action (once/turn) (Amulet NonStack, Legendary) ================
 
 new entry "AMP_Arcanizer_Shard_Amulet_16"
 type "Object"
@@ -14066,7 +14118,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsTrueCantrip() and Combat()"
 data "StatsFunctors" "RestoreResource(SELF,ActionPoint,1,0)"
 
-// WEAPON_103 Architect
+// ================ WEAPON_103: ARCHITECT — Increases enchantment slot limit by 1 (Weapon Stack, Legendary) ================
 
 new entry "AMP_Arcanizer_Shard_Weapon_103"
 type "Object"
@@ -14111,7 +14163,7 @@ data "Icon" "Skill_Wizard_LearnSpell"
 data "FormatColor" "Warrior"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// GLOVES_20 Slinger
+// ================ GLOVES_20: SLINGER — Throw action costs Bonus Action instead of Action (Gloves NonStack, Legendary) ================
 
 new entry "AMP_Arcanizer_Shard_Gloves_20"
 type "Object"
@@ -14159,7 +14211,7 @@ data "Boosts" "UnlockSpellVariant(SpellId('Throw_Throw'),ModifyUseCosts(Replace,
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
 
-// B12: 57 Uncommon equipment shards
+// ===== B12: 57 Uncommon equipment shards =====
 
 new entry "AMP_Arcanizer_Shard_Armor_30"
 type "Object"

@@ -35,6 +35,32 @@ NOT DB_AMP_Plus_Undying_Rising(_Shell)
 THEN
 DB_AMP_Plus_Undying_Rising(_Shell);
 
+// fallback clock for a dropped fight, the shell going down can close it and turn events stop
+IF
+StatusApplied((CHARACTER)_Shell, "AMP_UNDYING_DOWNED", _, _)
+AND
+DB_AMP_Plus_Undying_Shell(_Shell)
+THEN
+RealtimeObjectTimerLaunch(_Shell, "AMP_Undying_ShellRise", 6000);
+
+IF
+ObjectTimerFinished((CHARACTER)_Shell, "AMP_Undying_ShellRise")
+AND
+DB_AMP_Plus_Undying_Rising(_Shell)
+AND
+IsInCombat(_Shell, 1)
+THEN
+RealtimeObjectTimerLaunch(_Shell, "AMP_Undying_ShellRise", 6000);
+
+IF
+ObjectTimerFinished((CHARACTER)_Shell, "AMP_Undying_ShellRise")
+AND
+DB_AMP_Plus_Undying_Rising(_Shell)
+AND
+IsInCombat(_Shell, 0)
+THEN
+PROC_AMP_Plus_Undying_SwapShell(_Shell);
+
 IF
 TurnEnded((CHARACTER)_Shell)
 AND
@@ -553,6 +579,13 @@ AND
 DB_AMP_Plus_Undying_BladeDown((CHARACTER)_Blade)
 THEN
 RealtimeObjectTimerLaunch(_Blade, "AMP_Undying_BladeRise", 20000);
+
+IF
+LevelGameplayStarted(_, _)
+AND
+DB_AMP_Plus_Undying_Rising((CHARACTER)_Shell)
+THEN
+RealtimeObjectTimerLaunch(_Shell, "AMP_Undying_ShellRise", 6000);
 
 IF
 LevelGameplayStarted(_, _)

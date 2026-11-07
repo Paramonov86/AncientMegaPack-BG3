@@ -7,7 +7,9 @@ DB_AMP_NoGoldBonus((CHARACTER)S_GLO_Volo_2af25a85-5b9a-4794-85d3-0bd4c4d262fa);
 
 KBSECTION
 
-// a pickpocketed trader, success or fail, never gets the 20k back. hub flag is set in AMP_PickpocketPenalty.txt
+// hub traders get a flat 20k on every trade gen, vanilla traders keep their gold.
+// once the npc has been pickpocketed (success or fail), the respawn is blocked for good -
+// he hid his stash after the theft. hub flag lives in AMP_PickpocketPenalty.txt.
 
 PROC
 PROC_DoGenTradeItems((CHARACTER)_Player, (CHARACTER)_Npc)

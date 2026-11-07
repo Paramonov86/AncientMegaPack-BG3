@@ -1,7 +1,9 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// flat reclamation chance per dusted shard, separate from the coin roll, hooked on shardstart beside core
+// every shard dusted in a capsule also has a flat chance to drop a reclamation
+// shard, independent of the coin roll. rate cached per mode. parallel hook on
+// shardstart, fires alongside core, doesn't touch core files.
 
 // per-mode rate
 DB_AMP_VoidCapsule_ReclamationChanceByMode("NONE",       25);

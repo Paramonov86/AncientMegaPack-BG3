@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">鍛冶の父の手</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">山々の心臓で鍛えられたこの槌は、かつてモラディン自らが太古の鉱脈を初めて打ち鍛える際に用いたものだ。鍛冶の神はそこに地の底の重みだけでなく、「鍛冶場」という概念そのものを込めたという。&lt;br&gt;&lt;br&gt;定命の者の手にあっても、この武器は神性を失っていない。一撃ごとに山々の容赦ない重みを敵に叩きつけ、地に倒す。モラディンにとって大地そのものが永遠の金床なのだ。打たれて倒れた者はそこに押さえつけられ、その肉も骨も鎧も粗悪な金属のように脆くなる。そうした敵への止めの一撃は、金床の上の赤熱した鉄を打つ槌に等しい。容赦なく砕き、粉々にする。</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">槌</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">この槌でダメージを受けたクリーチャーは、あなたの&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戦技セーヴ難易度&lt;/LSTag&gt;に対する筋力&lt;LSTag Tooltip="SavingThrow"&gt;セーヴィング・スロー&lt;/LSTag&gt;に成功しなければ、&lt;b&gt;[1]&lt;/b&gt;ターンの間&lt;LSTag Type="Status" Tooltip="PRONE"&gt;伏せ&lt;/LSTag&gt;状態になる。</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">金床</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">あなたが&lt;LSTag Type="Status" Tooltip="PRONE"&gt;伏せ&lt;/LSTag&gt;状態にした敵は&lt;b&gt;[1]&lt;/b&gt;ターンの間&lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;脆弱&lt;/LSTag&gt;になる。</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">槌と金床の間</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">この槌で&lt;LSTag Type="Status" Tooltip="PRONE"&gt;伏せ&lt;/LSTag&gt;状態の目標に命中すると、追加で&lt;b&gt;[1]&lt;/b&gt;を与える。</content>
+</contentList>

@@ -1,6 +1,11 @@
-// Autonomous _ToT bases plus duplicates for Trial of Tides loot
+// ================================================================
+// ToT Drop Duplicates
+// Autonomous _ToT bases + duplicates for Trial of Tides loot
+// FeyCoin x100, ShadowfellCoin x15, AstralCoin x15, CelestialCoin x5
+// All capsules x5
+// ================================================================
 
-// ToT COIN BASES + DUPLICATES
+// ================ ToT COIN BASES + DUPLICATES ================
 
 new entry "AMP_FeyCoin_ToT"
 type "Object"
@@ -574,7 +579,8 @@ new entry "AMP_CelestialCoin_ToT_5"
 type "Object"
 using "AMP_CelestialCoin_ToT"
 
-// Generic VoidCapsule left out, no Magical InventoryTab and not in the ToT loot pool
+// ================ ToT CAPSULE BASES + DUPLICATES ================
+// Generic VoidCapsule intentionally excluded — no InventoryTab "Magical", not in ToT loot pool
 
 new entry "AMP_Hat_VoidCapsule_ToT"
 type "Object"

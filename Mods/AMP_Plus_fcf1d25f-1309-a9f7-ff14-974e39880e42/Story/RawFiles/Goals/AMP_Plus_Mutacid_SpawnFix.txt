@@ -4,11 +4,13 @@ INITSECTION
 
 KBSECTION
 
-// base seed spawn needs the ACID causee to be the player owner, surface acid has none
-// owner comes from the player registry and active mutacid marker. spawned guard: one seed per combat
-// slime fights the enemy that took the acid, combat with its owner leaves it hostile to the party
+// base seed spawn binds the ACID causee to the player owner, surface acid carries no causee
+// this rule covers only that gap: acid whose causee is not a player
+// a caused ACID is the base rule's, running both spawns two bodies per combat
 IF
-StatusApplied((CHARACTER)_Enemy, "ACID", _, _)
+StatusApplied((CHARACTER)_Enemy, "ACID", (GUIDSTRING)_Causee, _)
+AND
+NOT DB_Players((CHARACTER)_Causee)
 AND
 DB_Players(_Owner)
 AND
@@ -30,7 +32,7 @@ DB_AMP_Mutacid_Spawned(_Owner);
 DB_AMP_Mutacid_SlimeOwner((CHARACTER)_Slime, _Owner);
 ApplyStatus(_Slime, "AMP_ACIDSLIME_PARTY_ALLY", -1.0, 1, _Owner);
 ApplyStatus(_Slime, "AMP_AcidSlime_Control", -1.0, 1, _Owner);
-EnterCombat(_Slime, _Enemy);
+EnterCombat(_Slime, _Owner);
 PROC_AMP_Mutacid_ScaleSlime((CHARACTER)_Slime, _Owner);
 PROC_AMP_Mutacid_SyncQToSlime(_Owner, (CHARACTER)_Slime);
 DB_AMP_Mutacid_DraftTarget(_Owner, (CHARACTER)_Slime);

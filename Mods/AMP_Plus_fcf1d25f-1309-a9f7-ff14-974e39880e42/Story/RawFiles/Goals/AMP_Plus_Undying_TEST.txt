@@ -1,0 +1,256 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+// debug helper for Tesshin, driven by TextEvents from the SE console
+
+KBSECTION
+
+IF
+EnteredLevel((CHARACTER)_Mob, AMP_ULTRA_Summon_12_b415c998-a00b-406f-85b8-76c9caa82ed1, _)
+THEN
+DB_AMP_Undying_TestBody(_Mob, "blade");
+
+IF
+EnteredLevel((CHARACTER)_Mob, AMP_ULTRA_Summon_12_Crab_b2829dff-1e45-4a02-8b2a-8694d544f4dc, _)
+THEN
+DB_AMP_Undying_TestBody(_Mob, "crab");
+
+IF
+EnteredLevel((CHARACTER)_Mob, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939, _)
+THEN
+DB_AMP_Undying_TestBody(_Mob, "ronin");
+
+IF
+TextEvent("AMP_TestSpawnUndying")
+AND
+NOT DB_AMP_Plus_Undying_Shell(_)
+AND
+NOT DB_AMP_Plus_Undying_Blade(_)
+AND
+NOT DB_AMP_Plus_Undying_Crab(_, _)
+AND
+GetHostCharacter(_Host)
+AND
+GetPosition(_Host, _X, _Y, _Z)
+AND
+RealSum(_Z, 3.0, _SZ)
+AND
+CreateAt((GUIDSTRING)AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939, _X, _Y, _SZ, 0, 1, "", (GUIDSTRING)_Mob)
+THEN
+DB_AMP_Undying_TestSpawn((CHARACTER)_Mob);
+DB_AMP_MirrorChase_Mob((CHARACTER)_Mob, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
+ApplyStatus(_Mob, "AMP_MIRROR_SUPPORT_FLAG", -1.0, 1, _Mob);
+ApplyStatus(_Mob, "AMP_MIRROR_DIVINE_SUPPORT", -1.0, 1, _Mob);
+ApplyStatus(_Mob, "AMP_MIRROR_WRATH", -1.0, 1, _Mob);
+ApplyStatus(_Mob, "AMP_ULTRA_NPC_OVERLAY", -1.0, 1, _Mob);
+ApplyStatus(_Mob, "AMP_ULTRA_SPAWN_VFX", 6.0, 1, _Mob);
+SetCharacterLootable(_Mob, 0);
+SetRelationTemporaryHostile((CHARACTER)_Mob, _Host);
+EnterCombat(_Mob, _Host);
+
+IF
+TextEvent("AMP_TestSpawnUndyingBlade")
+AND
+GetHostCharacter(_Host)
+AND
+GetPosition(_Host, _X, _Y, _Z)
+AND
+RealSum(_Z, 3.0, _SZ)
+THEN
+PROC_AMP_Plus_Undying_RaiseBlade(_X, _Y, _SZ, 100.0);
+
+IF
+TextEvent("AMP_TestSpawnUndyingCrab")
+AND
+DB_AMP_Plus_Undying_Blade((CHARACTER)_Blade)
+AND
+IsDead(_Blade, 0)
+THEN
+ApplyStatus(_Blade, "AMP_UNDYING_DOWNED", -1.0, 1, _Blade);
+
+IF
+TextEvent("AMP_TestKillUndying")
+THEN
+PROC_AMP_Plus_UndyingTestDrainShellSpawn();
+
+IF
+TextEvent("AMP_TestKillUndying")
+THEN
+PROC_AMP_Plus_UndyingTestDrainLooseSpawn();
+
+IF
+TextEvent("AMP_TestKillUndying")
+THEN
+PROC_AMP_Plus_UndyingTestDrainBlade();
+
+IF
+TextEvent("AMP_TestKillUndying")
+THEN
+PROC_AMP_Plus_UndyingTestDrainCrab();
+
+IF
+TextEvent("AMP_TestKillUndying")
+THEN
+PROC_AMP_Plus_UndyingTestDrainBody();
+
+IF
+TextEvent("AMP_TestKillUndying")
+THEN
+PROC_AMP_Plus_UndyingTestDrainRising();
+
+IF
+TextEvent("AMP_TestKillUndying")
+THEN
+PROC_AMP_Plus_UndyingTestDrainPendingHP();
+
+PROC
+PROC_AMP_Plus_UndyingTestDrainShellSpawn()
+AND
+DB_AMP_Undying_TestSpawn((CHARACTER)_Mob)
+AND
+DB_AMP_Plus_Undying_Shell(_Mob)
+THEN
+NOT DB_AMP_Undying_TestSpawn(_Mob);
+NOT DB_AMP_Plus_Undying_Shell(_Mob);
+NOT DB_AMP_MirrorChase_Mob(_Mob, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939);
+RemoveStatus((CHARACTER)_Mob, "AMP_UNDYING_DOWNED");
+RequestDeleteTemporary(_Mob);
+PROC_AMP_Plus_UndyingTestDrainShellSpawn();
+
+PROC
+PROC_AMP_Plus_UndyingTestDrainLooseSpawn()
+AND
+DB_AMP_Undying_TestSpawn((CHARACTER)_Mob)
+AND
+NOT DB_AMP_Plus_Undying_Shell(_Mob)
+THEN
+NOT DB_AMP_Undying_TestSpawn(_Mob);
+PROC_AMP_Plus_UndyingTestDrainLooseSpawn();
+
+PROC
+PROC_AMP_Plus_UndyingTestDrainBlade()
+AND
+DB_AMP_Plus_Undying_Blade((CHARACTER)_Blade)
+THEN
+NOT DB_AMP_Plus_Undying_Blade(_Blade);
+RequestDeleteTemporary(_Blade);
+PROC_AMP_Plus_UndyingTestDrainBlade();
+
+PROC
+PROC_AMP_Plus_UndyingTestDrainCrab()
+AND
+DB_AMP_Plus_Undying_Crab((CHARACTER)_Crab, (CHARACTER)_Blade)
+THEN
+NOT DB_AMP_Plus_Undying_Crab(_Crab, _Blade);
+NOT DB_AMP_Plus_Chase(_Crab, AMP_ULTRA_Summon_12_Crab_b2829dff-1e45-4a02-8b2a-8694d544f4dc);
+RequestDeleteTemporary(_Crab);
+PROC_AMP_Plus_UndyingTestDrainCrab();
+
+PROC
+PROC_AMP_Plus_UndyingTestDrainBody()
+AND
+DB_AMP_Undying_TestBody((CHARACTER)_Mob, (STRING)_Kind)
+THEN
+NOT DB_AMP_Undying_TestBody(_Mob, _Kind);
+LeaveCombat(_Mob);
+SetOnStage(_Mob, 0);
+RequestDeleteTemporary(_Mob);
+PROC_AMP_Plus_UndyingTestDrainBody();
+
+PROC
+PROC_AMP_Plus_UndyingTestDrainRising()
+AND
+DB_AMP_Plus_Undying_Rising((CHARACTER)_Mob)
+THEN
+NOT DB_AMP_Plus_Undying_Rising(_Mob);
+PROC_AMP_Plus_UndyingTestDrainRising();
+
+PROC
+PROC_AMP_Plus_UndyingTestDrainPendingHP()
+AND
+DB_AMP_Plus_Undying_PendingHP((CHARACTER)_Mob, (REAL)_HP)
+THEN
+NOT DB_AMP_Plus_Undying_PendingHP(_Mob, _HP);
+PROC_AMP_Plus_UndyingTestDrainPendingHP();
+
+IF
+TextEvent("AMP_TestUndyingDrop")
+AND
+DB_AMP_Plus_Undying_Shell((CHARACTER)_Shell)
+THEN
+ApplyStatus(_Shell, "AMP_UNDYING_DOWNED", -1.0, 1, _Shell);
+
+IF
+TextEvent("AMP_TestUndyingDrop")
+AND
+DB_AMP_Undying_TestBody((CHARACTER)_Mob, "blade")
+AND
+IsDead(_Mob, 0)
+THEN
+SetHitpointsPercentage(_Mob, 1.0, "");
+RealtimeObjectTimerLaunch(_Mob, "AMP_Undying_TestDrop", 300);
+
+IF
+TextEvent("AMP_TestUndyingDrop")
+AND
+DB_AMP_Undying_TestBody((CHARACTER)_Mob, "ronin")
+AND
+IsDead(_Mob, 0)
+THEN
+SetHitpointsPercentage(_Mob, 1.0, "");
+RealtimeObjectTimerLaunch(_Mob, "AMP_Undying_TestDrop", 300);
+
+IF
+ObjectTimerFinished((CHARACTER)_Mob, "AMP_Undying_TestDrop")
+AND
+GetHostCharacter((CHARACTER)_Host)
+THEN
+ApplyDamage(_Mob, 5, "Physical", _Host);
+
+IF
+TextEvent("AMP_TestUndyingSwap")
+AND
+DB_AMP_Plus_Undying_Shell((CHARACTER)_Shell)
+THEN
+DB_AMP_Plus_Undying_Rising(_Shell);
+PROC_AMP_Plus_Undying_SwapShell(_Shell);
+
+IF
+TextEvent("AMP_TestUndyingCorpse")
+AND
+DB_AMP_Plus_Undying_Crab((CHARACTER)_Crab, _)
+AND
+GetHostCharacter((CHARACTER)_Host)
+THEN
+Die(_Crab, DEATHTYPE.DoT, _Host, 1, 1);
+
+IF
+TextEvent("AMP_TestUndyingBlades")
+AND
+GetHostCharacter(_Host)
+THEN
+TemplateAddTo(AMP_Undying_Katana_d0409494-91b8-4dab-addb-4087a0a2d322, _Host, 1, 1);
+TemplateAddTo(AMP_Undying_Wakizashi_eb845552-d2fd-4c5c-83ca-64f3ff822699, _Host, 1, 1);
+
+IF
+TextEvent("AMP_TestUndyingPoison")
+AND
+GetHostCharacter(_Host)
+THEN
+ApplyStatus(_Host, "AMP_UNDYING_LACQUER", 10.0, 1, _Host);
+ApplyStatus(_Host, "AMP_UNDYING_MERCY", 10.0, 1, _Host);
+
+IF
+TextEvent("AMP_TestUndyingRegister")
+AND
+NOT DB_AMP_MirrorPool(11, _, _)
+AND
+DB_AMP_MirrorPool_Size((INTEGER)_OldSize)
+THEN
+DB_AMP_MirrorPool(11, AMP_ULTRA_Summon_12_Ronin_7b08f7b1-414b-4c8e-a593-13fb7f1c9939, 1);
+NOT DB_AMP_MirrorPool_Size(_OldSize);
+DB_AMP_MirrorPool_Size(12);
+
+EXITSECTION
+
+ENDEXITSECTION

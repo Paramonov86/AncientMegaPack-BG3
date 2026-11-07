@@ -181,7 +181,9 @@ TemplateAddTo(_Template, _Char, 1, 1);
 RemoveStatus(_Item, _MarkerStatus, _Char);
 PROC_AMP_RecoverTransferCleanup(_Char, _MarkerStatus);
 
-// one row per pass, recurse until empty. a bulk retract mid-iteration leaves the later shards behind
+// stackable recovery: drain the shard-count table one row per pass.
+// retracting while iterating truncated after the first row, so 2nd/3rd shards got left behind.
+// now: handle one row, retract, recurse until empty.
 PROC
 PROC_AMP_RecoverFromSlot((CHARACTER)_Char, (STRING)_Slot)
 AND

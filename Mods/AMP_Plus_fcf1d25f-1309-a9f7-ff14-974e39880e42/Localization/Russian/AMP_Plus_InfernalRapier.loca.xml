@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">Вы получаете бонус +[1] к &lt;LSTag Tooltip="SpellDifficultyClass"&gt;КС испытаний против заклинаний&lt;/LSTag&gt; и +[2] к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; заклинаниями.</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">Абсолютный жар</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">Нанося урон в бою этой рапирой, вы создаёте &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Адское пламя&lt;/LSTag&gt; радиусом &lt;b&gt;[1]&lt;/b&gt; на &lt;b&gt;[2]&lt;/b&gt; хода. &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Адское пламя&lt;/LSTag&gt; не действует на вас.&lt;br&gt;&lt;br&gt;Вы игнорируете &lt;LSTag Tooltip="Resistant"&gt;устойчивость&lt;/LSTag&gt; и &lt;LSTag Tooltip="Immune"&gt;иммунитет&lt;/LSTag&gt; целей к урону огнём.</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">Жар Аверно</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">Персонаж совершает стремительный выпад, извергая из своего оружия волну адского пламени.</content>
+</contentList>

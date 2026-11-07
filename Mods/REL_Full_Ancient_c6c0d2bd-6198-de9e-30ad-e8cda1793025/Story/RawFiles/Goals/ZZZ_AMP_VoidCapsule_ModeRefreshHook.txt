@@ -1,7 +1,10 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// mode change rebuilds the _active cache, deferred 100ms so the parallel SetGameMode bodies finish their db writes first
+// hook on mode change: rebuild the capsule _active cache so capsule init reads
+// the new chargesmax/coinchance/salvage/pity. before this a mid-run settings
+// change needed a reload to refresh. 100ms defer so the parallel setgamemode
+// bodies finish their db writes before refreshcache reads the new mode.
 
 KBSECTION
 

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+  <content contentuid="h1c55d917gfb1bg42cdgb13cgf6a90148e9ae" version="1">La portée de votre &lt;b&gt;attaque à distance normale&lt;/b&gt; est augmentée de &lt;b&gt;[1]%&lt;/b&gt;. Les tirs au-delà de la portée normale de votre arme se font toujours avec un &lt;LSTag Tooltip="Disadvantage"&gt;désavantage&lt;/LSTag&gt;.</content>
+  <content contentuid="hcf7ffaf2g2d8dg409dgbf2fgc2412a60b6dc" version="1">La portée de votre &lt;b&gt;attaque à distance normale&lt;/b&gt; est augmentée de &lt;b&gt;[1]%&lt;/b&gt;, et vous avez l’&lt;LSTag Tooltip="Advantage"&gt;avantage&lt;/LSTag&gt; aux &lt;LSTag Tooltip="AttackRoll"&gt;jets d’attaque&lt;/LSTag&gt; avec des &lt;b&gt;armes à distance&lt;/b&gt; si la cible se trouve à plus de &lt;b&gt;[2]&lt;/b&gt;. Les tirs au-delà de la portée normale de votre arme se font toujours avec un &lt;LSTag Tooltip="Disadvantage"&gt;désavantage&lt;/LSTag&gt;.</content>
+</contentList>

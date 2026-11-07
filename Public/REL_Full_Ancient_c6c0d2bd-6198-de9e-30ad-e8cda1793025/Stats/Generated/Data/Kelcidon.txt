@@ -230,7 +230,7 @@ data "StatusType" "BOOST"
 data "StackId" "KELCIDON_PLAYER_DAMAGED"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// NEW: Osiris-driven entries
+// ========== NEW: Osiris-driven entries ==========
 
 new entry "KELCIDON_NIGHTMARE_ENGINE"
 type "StatusData"

@@ -10,8 +10,9 @@ DB_AMP_ToTShop_CDDuration(1800000);
 
 KBSECTION
 
-// timers do not survive save or transition, so no cross-level cooldown restore
-// refresh gate lives in ZZZZ_AMP_ToT_Shop_RefreshHotfix.txt
+// cross-level cooldown restore disabled. the old per-level 30-min timer died on
+// save/transition and stuck players in permanent cooldown -> shop never refreshed.
+// cooldown now clears on level change; refresh gate lives in ZZZZ_AMP_ToT_Shop_RefreshFix.txt.
 
 // stub rule so the section isn't empty
 IF

@@ -4,7 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// ApplyEquipmentStatus marker is slot-bound and drops when the ring leaves the ring slot, plain ApplyStatus on re-equip sticks
+// ring2 fix: applyequipmentstatus marker is slot-bound and drops when the ring
+// leaves the ring slot. save shard data on unequip, re-apply via plain
+// applystatus on equip. one re-apply makes the marker stick (non-slot-bound).
 
 // save shard data on unequip (update existing)
 IF

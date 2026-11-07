@@ -1,0 +1,29 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+// rooftop Ketheric is invulnerable and teleports away after a few rounds, so the watchers fire late or not at all
+// the wave opens the fight instead and stays when he leaves
+IF
+FlagSet((FLAG)MOO_Assault_State_KethericNarrativeCombatActive_d4b7534c-5bce-48c5-8aa7-5acc62d0c36a, _, _)
+AND
+DB_AMP_Ultra_Active(1)
+THEN
+RealtimeObjectTimerLaunch(S_MOO_Ketheric_e9918f3e-5b87-40a3-a9bd-61545151573f, "AMP_Plus_RoofWave", 2000);
+
+IF
+ObjectTimerFinished((CHARACTER)_Ketheric, "AMP_Plus_RoofWave")
+AND
+DB_AMP_Ultra_Active(1)
+AND
+IsInCombat(_Ketheric, 1)
+AND
+IsDead(_Ketheric, 0)
+THEN
+ApplyStatus(_Ketheric, "AMP_PLUS_MIRROR_TRIGGER", 6.0, 1, _Ketheric);
+
+EXITSECTION
+
+ENDEXITSECTION

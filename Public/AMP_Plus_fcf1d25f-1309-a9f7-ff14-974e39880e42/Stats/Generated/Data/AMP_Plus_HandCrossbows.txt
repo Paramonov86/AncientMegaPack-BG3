@@ -1,0 +1,50 @@
+// one unlock per weapon: the separate main/off-hand entries put two dead buttons in the tooltip
+// and the arrow-based spell is not a usable weapon action until it carries IsDefaultWeaponAction
+
+new entry "WPN_HandCrossbow_u"
+type "Weapon"
+using "WPN_HandCrossbow_u"
+data "BoostsOnEquipMainHand" ""
+data "BoostsOnEquipOffHand" ""
+data "Boosts" "UnlockSpell(Projectile_Handcrossbow_u)"
+
+new entry "Projectile_Handcrossbow_u"
+type "SpellData"
+using "Projectile_Handcrossbow_u"
+data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;IsDefaultWeaponAction;NoCooldownOnMiss"
+
+new entry "WPN_HandCrossbow_r"
+type "Weapon"
+using "WPN_HandCrossbow_r"
+data "BoostsOnEquipMainHand" ""
+data "BoostsOnEquipOffHand" ""
+data "Boosts" "UnlockSpell(Projectile_Handcrossbow_r)"
+
+new entry "Projectile_Handcrossbow_r"
+type "SpellData"
+using "Projectile_Handcrossbow_r"
+data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;IsDefaultWeaponAction;NoCooldownOnMiss"
+
+new entry "WPN_HandCrossbow_e"
+type "Weapon"
+using "WPN_HandCrossbow_e"
+data "BoostsOnEquipMainHand" ""
+data "BoostsOnEquipOffHand" ""
+data "Boosts" "UnlockSpell(Projectile_Handcrossbow_e)"
+
+new entry "Projectile_Handcrossbow_e"
+type "SpellData"
+using "Projectile_Handcrossbow_e"
+data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;IsDefaultWeaponAction;NoCooldownOnMiss"
+
+new entry "WPN_HandCrossbow_l"
+type "Weapon"
+using "WPN_HandCrossbow_l"
+data "BoostsOnEquipMainHand" ""
+data "BoostsOnEquipOffHand" ""
+data "Boosts" "UnlockSpell(Projectile_Handcrossbow_l)"
+
+new entry "Projectile_Handcrossbow_l"
+type "SpellData"
+using "Projectile_Handcrossbow_l"
+data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;IsDefaultWeaponAction;NoCooldownOnMiss"

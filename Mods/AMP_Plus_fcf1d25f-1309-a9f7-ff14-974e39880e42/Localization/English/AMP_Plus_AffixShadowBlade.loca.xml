@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hdfb23537g30b2g4368ga1f0g57122f603403" version="1">Shadow Blade Fix</content>
+	<content contentuid="hbc08212ag28b2g4842gaddeg9646bb7f264d" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [Legit at this mode's default]&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;Shadow Blade&lt;/LSTag&gt; always deals [1], regardless of the spell slot level.</content>
+	<content contentuid="hc5d36564g77d3g4a38g9afag7a7ffbed6283" version="1">&lt;b&gt;Shadow Blade Fix&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;Shadow Blade&lt;/LSTag&gt; always deals 2d8 damage, regardless of the spell slot level.&lt;br&gt;&lt;br&gt;Enable?</content>
+</contentList>

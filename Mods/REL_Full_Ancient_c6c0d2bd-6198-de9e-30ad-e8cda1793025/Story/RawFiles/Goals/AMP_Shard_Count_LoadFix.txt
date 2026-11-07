@@ -6,8 +6,14 @@ DB_AMP_Shard_CountFix_Enabled(1);
 
 KBSECTION
 
-// StatusApplied refires on worn items at save load, the core counter would count each as a new shard
-// real applications carry a player causee, so the increment is taken back for any other causee
+// engine refires statusapplied for statuses on worn items when a save loads.
+// the core transfer counter treats every refire as a fresh shard application,
+// so the per-marker count inflates by one on every load and the reclamation
+// shard then returns that many copies. a real shard application always arrives
+// with a player causee (templateusestarted handlers apply the tech status with
+// the character as causee and the chain keeps it); a load refire does not.
+// compensate: take the increment back whenever the causee is not a player.
+// order-safe vs the core rules: net result is identical whichever fires first.
 
 IF
 StatusApplied((ITEM)_Item, (STRING)_ItemStatus, (CHARACTER)_Causee, _)

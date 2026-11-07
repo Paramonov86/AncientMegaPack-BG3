@@ -1,8 +1,16 @@
 -- AMP_Plus custom Khonsu conditions
 
--- vanilla ManeuverAndWeaponActionCheck greps ManeuverSaveDC and misses saveless maneuvers
--- the die is a HitCost, so HasUseCosts only sees sweeping attack, and riposte pays on its reaction
--- no HitCost reader in Khonsu: vanilla ones listed by id, cost and save legs cover modded
+-- Battle master maneuver detector that works from an OnDamage functor.
+-- The vanilla ManeuverAndWeaponActionCheck() only greps for the 'ManeuverSaveDC'
+-- string, which misses every maneuver without a saving throw (riposte, distracting
+-- strike, feinting, lunging). The obvious fix, detecting the superiority die cost,
+-- does not work either: maneuvers pay the die as a HitCost, not a UseCost, so
+-- HasUseCosts('SuperiorityDie') only catches sweeping attack, and riposte spends
+-- its die on the reaction so it carries no cost string at all (@zensho1112's
+-- autopsy). Khonsu exposes no HitCost reader and cannot string-search a functor
+-- body, so the only reliable signal is the spell id. Whitelist every vanilla
+-- maneuver by id, and keep the cost / save-string legs so modded maneuvers that
+-- follow either vanilla pattern are still covered.
 function AMP_Plus_IsManeuver()
     return (
         SpellId('Target_MenacingAttack') | SpellId('Target_PushingAttack') |
@@ -20,10 +28,26 @@ function AMP_Plus_IsManeuver()
     )
 end
 
--- +2 on top of the max, unlike vanilla HybridCasterWeaponActionDC
--- -10 fallback on SourceSpellDC: a phantom default spell DC of 10 must not beat a real maneuver DC
--- both halves guard a missing source, vanilla ManeuverSaveDC indexes Source.ProficiencyBonus bare
--- a status tick or apply roll can have a dead or unloaded causee, and indexing it throws
+-- Potency DC — AMP's combined offensive save DC, usable as a stats token inside
+-- SavingThrow(Ability.X, AMP_Plus_PotencyDC()). The greater of the source's spell
+-- save DC or maneuver save DC, plus 2. Non-casters fall back to the maneuver branch:
+-- the -10 fallback to SourceSpellDC keeps a phantom default spell DC (10) from
+-- winning the max over a real ManeuverSaveDC. Distinct from the vanilla
+-- HybridCasterWeaponActionDC(), which puts the +2 inside the maneuver branch only;
+-- here the +2 sits on top of the max, i.e. max(SpellDC, ManeuverDC) + 2.
+--
+-- Both branches have to survive a missing source. The vanilla ManeuverSaveDC()
+-- indexes context.Source.ProficiencyBonus with no validity check, because vanilla
+-- only ever reads it from SpellSuccess and SpellRoll, where the caster exists by
+-- construction. Read from a status tick, a RemoveConditions or an apply roll, the
+-- causee can be dead, unloaded or never resolved at all, and indexing an invalid
+-- entity throws inside condition evaluation. SourceSpellDC() carries Larian's own
+-- guard for exactly this; the maneuver half is rebuilt here with the same one.
+--
+-- fallbackDC is what the token answers when neither branch has a source to read.
+-- Callers state their own where the number matters; the tier offsets already sit
+-- at the call sites, so a rarity ladder written as PotencyDC()-2 / +4 keeps its
+-- shape against the fallback too.
 function AMP_Plus_ManeuverDC(entity)
     local entity = entity or context.Source
     local dc = nil
@@ -56,8 +80,11 @@ function AMP_Plus_PotencyDC(fallbackDC)
     return math.max(spellDC, maneuverDC) + 2
 end
 
--- Scarlet Warlock declares its own root per damage type, so those roots are listed
--- its variants inherit from them and the child leg catches those
+-- Eldritch Blast detector that also sees third-party overhauls. The base check follows
+-- the vanilla spell and its children, which is enough only while a blast descends from
+-- Projectile_EldritchBlast. Scarlet Warlock's overhaul instead declares its own root per
+-- damage type, so those roots are listed below; its ring, warcaster, melee, chain and
+-- container variants each inherit from one of them and are caught by the child leg.
 function AMP_Plus_IsEldritchBlast()
     local blastRoots = {
           'Projectile_EldritchBlast'
@@ -93,7 +120,11 @@ function AMP_Plus_IsEldritchBlast()
     return ConditionResult(false)
 end
 
--- the clothes' own steps inherit via using, not RootSpellID, so the child leg misses them
+-- Shadow Step detector for the Clothes of the Superior Assassin. The base check lists the
+-- shadow teleports by id and follows each one's children, which covers the monk step and
+-- the vanilla boots. The steps the clothes grant themselves descend from the boots spell
+-- through using, not through RootSpellID, so the child leg never sees them; they are
+-- listed here by id alongside the shadow teleports the base check already knows.
 function AMP_Plus_IsShadowStep()
     local shadowSteps = {
           'Target_ShadowStep'
@@ -118,7 +149,11 @@ function AMP_Plus_IsShadowStep()
     return ConditionResult(false)
 end
 
--- stats have no IsBoss(), so read the difficulty overlay: tier V4 status, its V5 twin, ULTRA champion
+-- Boss detector for stats conditions. Osiris knows IsBoss(), stats do not, so the
+-- signal has to be the difficulty overlay a boss carries: the per-tier V4 status,
+-- its V5 progression twin, and the ULTRA champion overlay. Entity defaults to
+-- context.Target, which is the affected creature both in an OnDamage functor and
+-- in the TickFunctors of a status sitting on that creature.
 function AMP_Plus_IsAmpBoss(entity)
     local entity = entity or context.Target
     return HasAnyStatus({
@@ -134,8 +169,12 @@ function AMP_Plus_IsAmpBoss(entity)
     }, {}, {}, entity)
 end
 
--- Litany prayers only, base IsAMPIlmaterPrayer() covers all ten
--- Vessel and Wound prayers cast once per rest and stay out of the Unbroken discount
+-- Litany prayers only: Preaching (Cloak), Thread (Gloves), Prophet (Boots). The Unbroken
+-- discount now belongs to the whole Litany branch, and the base IsAMPIlmaterPrayer() answers
+-- for all ten prayers of the collection, so a wearer who also carries a Vessel or Wound piece
+-- would get that prayer discounted too. Those cast once per rest and were never meant to be
+-- part of the trade. IsSpellIdOrChild is kept from the base check so the forms produced by
+-- UnlockSpellVariant still register.
 function AMP_Plus_IsLitanyPrayer()
     return IsSpellIdOrChild('AMP_Ilmater_Prayer_Preaching_1')
          | IsSpellIdOrChild('AMP_Ilmater_Prayer_Preaching_2')
@@ -151,8 +190,15 @@ function AMP_Plus_IsLitanyPrayer()
          | IsSpellIdOrChild('AMP_Ilmater_Prayer_Prophet_4')
 end
 
--- how far up the Moleculation ladder a source feeds, read from the causer so a tick on the victim can ask
--- ring tiers grade it, other and unrecognised sources stop at the first degree, top tier answers five
+-- Moleculation presence, for any of the five degrees. The degrees are separate statuses
+-- with no shared parent, so every condition that only asks "is this creature moleculated"
+-- would otherwise carry five HasStatus legs and drift out of sync when a degree is added.
+-- Entity defaults to context.Target, the affected creature in an OnDamage functor and in
+-- the TickFunctors of a status sitting on that creature.
+-- How far up the ladder a Moleculation source feeds. Read from the causer, so an effect
+-- ticking on the affected creature can still ask what put it there. The ring tiers grade
+-- their feed; anything else that seeds Moleculation stops at the first degree, and so does
+-- an unrecognised source. The top tier feeds the whole ladder and answers five.
 function AMP_Plus_ForceSourceCapIs(cap, entity)
     entity = entity or context.Source
     local t4 = HasPassive('AMP_Plus_Force_Grip_T4', entity).Result
@@ -177,6 +223,10 @@ function AMP_Plus_HasMoleculation(entity)
     }, {}, {}, entity)
 end
 
+-- Telekinesis detector. The ring rider has to reach every telekinesis in play without
+-- overriding the vanilla spell entry, which overhaul mods also claim. Roots are the family
+-- the base already enumerates (Extra_Items.txt:3477); the child leg follows recast and
+-- variant forms produced through using or UnlockSpellVariant.
 function AMP_Plus_IsTelekinesis()
     local roots = {
           'Throw_Telekinesis'
@@ -197,8 +247,16 @@ function AMP_Plus_IsTelekinesis()
     return ConditionResult(false)
 end
 
--- Khonsu cannot list an entity's statuses, so every shard status with an item icon on a weapon is named
--- stacks read as one status, so this counts variety on purpose
+-- How many different shards a weapon carries. Khonsu cannot enumerate the statuses on an
+-- entity, only answer for a named one, so the roster is spelled out here; it is every
+-- shard status that sits on a weapon and shows the player an icon on the item. Stacks do
+-- not count - the engine sees ten Architects as one status - so this reads variety, which
+-- is the point: slots are what the Architect hands out, and variety is what fills them.
+-- The entity to read is resolved by AMP_Plus_ShardHosts: an IF inside a weapon status'
+-- Boosts is evaluated in the attack context, where the source is the wielder, while the
+-- same list is also read from item scope. The calling shard passes its own status as the
+-- anchor, so the hand that carries it is the one read; pass an entity explicitly to pin it.
+-- The count stops at the threshold, so a loaded weapon exits after a few checks.
 local SHARD_ROSTER = {
       'AMP_SHARD_WEAPON_ABYSS', 'AMP_SHARD_WEAPON_ACCURACY', 'AMP_SHARD_WEAPON_ACID'
     , 'AMP_SHARD_WEAPON_ARC', 'AMP_SHARD_WEAPON_ARCHITECT', 'AMP_SHARD_WEAPON_AURA'
@@ -246,9 +304,12 @@ function AMP_Plus_ShardRoster()
     return SHARD_ROSTER
 end
 
--- a weapon status' IF runs with the wielder as source, so ask the wielder about one weapon it holds
--- shards apply main hand but travel with the weapon, which can sit off-hand beside another
--- anchor is the calling shard's status: its hand is read, no anchor or both hands means main hand
+-- An IF inside a weapon status' Boosts is evaluated with the wielder as the source, not the
+-- weapon the status rides on, and the same helper is also reached from item scope. Both are
+-- answered by asking the source itself and one weapon it holds. Shards are applied in the
+-- main hand but travel with the weapon, so a shard weapon can sit in the off hand next to
+-- another shard weapon. The anchor is the calling shard's own status: the hand carrying it
+-- is the one read. With no anchor, or the anchor in both hands, the main hand answers.
 function AMP_Plus_ShardHand(source, mainHand)
     local hand = nil
     try
@@ -410,12 +471,17 @@ function AMP_Plus_FromBehind(target, source)
     return ~FacingMe(target, source)
 end
 
+-- The target has not taken a turn in this fight yet - vanilla reads the same signal for
+-- advantage against the unready (Passive.txt:411).
 function AMP_Plus_TargetUnmoved(target)
     target = target or context.Target
     return ~HadTurnInCombat(target)
 end
 
--- reach boost sits on the wearer, not the weapon status, so each hand checks its own weapon for the shard
+-- A target-radius boost cannot be read off a weapon status, so the reach shard keeps its
+-- boost on the wearer, where nothing says which hand paid for it. Each hand asks its own
+-- weapon: the main-hand swing reaches further only while the shard rides the main-hand
+-- weapon, and the same for the off-hand.
 function AMP_Plus_ReachMainHand()
     return IsSpellIdOrChild('Target_MainHandAttack')
         & HasStatus('AMP_SHARD_WEAPON_REACH', GetActiveWeapon(context.Source, true))
@@ -426,8 +492,11 @@ function AMP_Plus_ReachOffHand()
         & HasStatus('AMP_SHARD_WEAPON_REACH', GetActiveWeapon(context.Source, false))
 end
 
--- melee spells read the main-hand weapon, a spell is cast from it
--- Booming Blade rolls as a weapon attack, so it is named in all three forms
+-- Spells that strike in melee do not answer to the two checks above: the hand attacks are
+-- matched by id, and a spell carries its own. They read the main-hand weapon, which is where
+-- the shard has to sit for the reach to apply - a spell is cast from it, not from the off-hand.
+-- Booming Blade rolls as a weapon attack rather than a spell attack, so it is named directly,
+-- in all three forms the game ships it in.
 function AMP_Plus_ReachMeleeSpell()
     return (HasStringInSpellRoll('MeleeSpellAttack')
         | IsSpellIdOrChild('Target_BoomingBlade')
@@ -436,6 +505,9 @@ function AMP_Plus_ReachMeleeSpell()
         & HasStatus('AMP_SHARD_WEAPON_REACH', GetActiveWeapon(context.Source, true))
 end
 
+-- Every Booming Blade in play. Beyond the three the game ships, an item can hand out its
+-- own blade through using with the root spell cleared, and no lineage check follows that
+-- edge, so those forms are named here as well.
 function AMP_Plus_IsBoomingBlade()
     return SpellId('Target_BoomingBlade')
          | SpellId('Target_BoomingBladeEx')
@@ -444,7 +516,9 @@ function AMP_Plus_IsBoomingBlade()
          | SpellId('AMP_Kyzr_Booming_Blade_4')
 end
 
--- Booming Blade is a weapon attack as well, so cantrip riders land twice. Gates use this, not IsCantrip()
+-- A cantrip that carries no Booming Blade behind it. Booming Blade resolves as a weapon
+-- attack, so a rider written for cantrips lands on it twice over; every cantrip gate in
+-- the submod reads this rather than IsCantrip().
 function AMP_Plus_IsTrueCantrip()
     return IsCantrip()
          & ~SpellId('Target_BoomingBlade')
@@ -459,7 +533,10 @@ function AMP_Plus_IsImprovCantrip()
     return AMP_Plus_IsTrueCantrip() & ~HasStatus('AMP_SHARD_IMPROVISE_CD', context.Source)
 end
 
--- FightingStyle_GreatWeapon also matches mauls, battleaxes and pikes, so weapon groups are asked directly
+-- The guardsman's arms: a greatsword, glaive or halberd, or a longsword taken in both hands.
+-- FightingStyle_GreatWeapon answers for any Twohanded or Versatile melee weapon, which is every
+-- maul, battleaxe and pike as well, so the weapon groups are asked directly and the free off hand
+-- is checked alongside them.
 function AMP_Plus_IsPalatineWeapon()
     local weapon = GetActiveWeapon(context.Source, true)
     local isGuardArm = IsWeaponOfProficiencyGroup('Greatswords', weapon)
@@ -472,8 +549,11 @@ function AMP_Plus_IsPalatineWeapon()
          & ~HasShieldEquipped(context.Source)
 end
 
--- wearer is context.Source in a turn-start passive and context.Target in OnDamage, so both are tried
--- a tie counts as not highest, the bonus is for wielders Charisma does not already pay
+-- Charisma is not the entity's single highest score. The base IsDexterityHighest reads
+-- context.Target, which is the affected creature in an OnDamage functor; asked from a
+-- turn-start passive the wearer arrives as context.Source instead, so both are tried
+-- before the check gives up. A tie counts as "not highest": the compensation is meant
+-- for a wielder Charisma does not already pay.
 function AMP_Plus_CharismaNotHighest(entity)
     entity = entity or context.Source
     if entity == nil or not entity.IsValid then
@@ -492,8 +572,13 @@ function AMP_Plus_CharismaNotHighest(entity)
     ))
 end
 
--- one of these seats at a time, so HasStatus('BLESS') answers no on a creature already blessed
--- Khonsu cannot read a StackId. Inheritors with their own StackId stack beside Bless and stay out
+-- Every status that shares the vanilla BLESS StackId. The engine seats one of them at a
+-- time, so a creature already carrying the circus statue's blessing or an illithid one
+-- cannot take BLESS on top of it: HasStatus('BLESS') answers no while the creature is
+-- visibly blessed, and the branch behind that check goes dead. Khonsu cannot read a
+-- StackId, so the family is enumerated. Statuses that merely inherit BLESS through using
+-- but declare their own StackId (Mystra's staff, the enforcer, the singing sword) stack
+-- alongside a real Bless and are not part of it.
 local BLESS_FAMILY = {
       'BLESS'
     , 'WYR_CIRCUS_STATUEBLESS'
@@ -532,8 +617,10 @@ function AMP_Plus_IsIllusionTargetSpell()
     return IsSpellOfSchool(SpellSchool.Illusion) & ~SpellTypeIs(SpellType.Shout)
 end
 
--- scrolls and items skip the caster's spell list, so read the status the spell lands
--- upcast tiers have no shared parent
+-- False Life, read from an OnStatusApply context. Asking which spell was cast misses the
+-- scroll and the item, which reach the spell through the use action rather than through the
+-- caster's spell list; the status the spell lands is the same one whatever cast it. The
+-- upcast tiers are separate statuses with no shared parent, so the ladder is enumerated.
 function AMP_Plus_IsFalseLifeStatus()
     return StatusId('FALSE_LIFE')
          | StatusId('FALSE_LIFE_2')
@@ -543,9 +630,12 @@ function AMP_Plus_IsFalseLifeStatus()
          | StatusId('FALSE_LIFE_6')
 end
 
--- every follower carries one ALIGN_* tag in Gods.lsx, so the alignment legs cover all 21 deities
--- Dead Three have no alignment and Loviatar no vanilla tag, so both are named
--- CLERIC_* legs stay for Disciple shards that grant the tag alone, Gale for the Mystra pledge
+-- Worships no god at all, which is what the Freemind, Selfmade and Resolve shards promise in
+-- their own description. Gods.lsx puts a theonym and one ALIGN_* tag on every follower, so the
+-- three alignment legs cover all 21 deities by any route. The Dead Three are absent from
+-- Gods.lsx and carry no alignment, and Loviatar has no vanilla tag at all, so both are named.
+-- The ten CLERIC_* legs stay because the Disciple shards grant that tag on its own, and Gale
+-- is named because the Mystra pledge counts him as hers.
 function AMP_Plus_IsAtheist(entity)
     entity = entity or context.Source
     return ~Tagged('ALIGN_GOOD', entity) &
@@ -573,14 +663,17 @@ function AMP_Plus_IsAtheist(entity)
            ~Tagged('REALLY_GALE', entity)
 end
 
--- Faithful's Helm reads this plain and negated, so every route to Tyr must count
+-- Follows Tyr by any route: the theonym from Gods.lsx, the cleric or paladin subclass, or the
+-- Disciple shard, which grants CLERIC_TYR on its own. The Faithful's Helm reads it twice, as is
+-- and negated, so the two passives can never both hold.
 function AMP_Plus_IsTyrFollower(entity)
     entity = entity or context.Source
     return Tagged('TYR', entity) | Tagged('CLERIC_TYR', entity) | Tagged('PALADIN_TYR', entity)
 end
 
--- own bonus is subtracted once AMP_TAG_RAVEN_ACCURACY_ON is on, it shares the boost list
--- a capped score is taken as it stands, the bonus may have added less
+-- Copper Crow Amulet: Dexterity is measured with every effect on it, except the amulet's own
+-- bonus once it is on (AMP_TAG_RAVEN_ACCURACY_ON rides in the same boost list). At the cap the
+-- bonus may have added less than its full value, so a capped score is taken as it stands.
 function AMP_Plus_IsDexterityHighestRaven(entity, bonus, cap)
     entity = entity or context.Source
     local dex = entity.Dexterity
@@ -596,7 +689,9 @@ function AMP_Plus_IsDexterityHighestRaven(entity, bonus, cap)
     )
 end
 
--- outside a cast the casting ability defaults to Charisma, so SourceSpellDC() undercounts Int and Wis casters
+-- Spell save DC outside a cast. A passive or status reads context.PreferredCastingAbility as
+-- its default Charisma there, so SourceSpellDC() gives a Wisdom or Intelligence caster the DC of
+-- their weakest stat. Take the best of the three casting abilities instead.
 function AMP_Plus_BestSpellDC(fallbackDC, entity)
     entity = entity or context.Source
     local best = nil
@@ -617,6 +712,9 @@ function AMP_Plus_BestSpellDC(fallbackDC, entity)
     return best
 end
 
+-- Hydromancer powers: the base list plus the spells items grant as their own copies. A copy
+-- descends from its vanilla spell through using, not through RootSpellID, so the child leg of
+-- the base check never sees it.
 function AMP_Plus_IsAquamancerPower()
     return IsAquamancerPower()
          | SpellId('AMP_RusMage_RayOfFrost')

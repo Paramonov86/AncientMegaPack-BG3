@@ -1,7 +1,9 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// original trade tables stay clean so other mods add there, that is off mode
+// trading fix table routing:
+// original tables stay clean so other mods add there (off mode).
+// on mode swaps trader to _amp (first visit) or _none / consumables-only (repeat).
 
 // 1 = on (default), 0 = off for compat with other mods
 DB_AMP_TradingFix_Enabled(1);

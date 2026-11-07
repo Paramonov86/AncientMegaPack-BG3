@@ -83,10 +83,18 @@ DB_AMP_Feral_Toggles(0);
 IF
 LevelGameplayStarted(_HibLvl, _HibEditor)
 AND
-DB_AMP_Feral_Active((INTEGER)_HibA)
+NOT DB_AMP_Feral_Disabled(1)
 THEN
 DB_AMP_Feral_Disabled(1);
-NOT DB_AMP_Feral_Active(_HibA);
+
+// re-grading strips and re-applies every tier, which refills enemy hp mid-fight,
+// so it runs only when there is a push to revert
+IF
+LevelGameplayStarted(_HibLvl, _HibEditor)
+AND
+DB_AMP_Feral_Active(1)
+THEN
+NOT DB_AMP_Feral_Active(1);
 DB_AMP_Feral_Active(0);
 PROC_AMP_Plus_Feral_Regrade();
 
@@ -385,11 +393,11 @@ PROC_AMP_Plus_Feral_Regrade();
 PROC
 PROC_AMP_Plus_Feral_Regrade()
 THEN
-PROC_AMP_Plus_Feral_ClearBumpMarkers();
 PROC_AMP_UpdateAvgPartyLevel();
 PROC_AMP_UpdateCurrentTier();
 PROC_AMP_DiffV3_RetierAll_Collect();
 PROC_AMP_DiffV3_RetierAll_Strip();
+PROC_AMP_Plus_Feral_ClearBumpMarkers();
 PROC_AMP_DiffV3_RetierAll_Reapply();
 
 PROC

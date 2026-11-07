@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h4991785aga322g4ddeg9e17gd1d6c13397a7" version="1">Противник, получивший урон от этого скимитара, должен пройти &lt;LSTag Tooltip="SavingThrow"&gt;испытание&lt;/LSTag&gt; Выносливости против вашего &lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;КС могущества&lt;/LSTag&gt;, иначе он &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;ослепнет&lt;/LSTag&gt;.</content>
+</contentList>

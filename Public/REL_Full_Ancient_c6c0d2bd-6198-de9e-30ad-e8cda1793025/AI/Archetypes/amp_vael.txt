@@ -1,3 +1,7 @@
+// Vael - Mirror Doppelganger. Transforms into a random party member on spawn.
+// Adaptable baseline: light kill focus, no role-specific lean, so the archetype
+// fits caster/melee/ranged copies equally.
+
 USING melee_smart
 
 MODIFIER_HIT_CHANCE_STUPIDITY                    0.85

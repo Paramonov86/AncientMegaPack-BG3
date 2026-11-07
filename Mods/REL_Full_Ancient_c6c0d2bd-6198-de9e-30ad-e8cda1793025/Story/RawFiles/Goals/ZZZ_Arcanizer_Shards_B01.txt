@@ -7,6 +7,19 @@ INITSECTION
 // handlers in zzz_arcanizer_shards.txt pick up these db entries automatically.
 // db format reference
 // weapon stackable (3 params):
+//   db_amp_shard_weapon_stackable((itemroot)template_guid, "melee_status", "ranged_status");
+// weapon nonstack (4 params):
+//   db_amp_shard_weapon_nonstack((itemroot)template_guid, "melee_status", "ranged_status", "final_status");
+// equipment stackable (4 params) + transfer:
+//   db_amp_shard_equip_stackable((itemroot)template_guid, "category", "tech_status", "slot");
+//   db_amp_shard_transfer("marker_status", "char_status");
+// equipment nonstack (5 params) + transfer:
+//   db_amp_shard_equip_nonstack((itemroot)template_guid, "category", "tech_status", "slot", "marker_status");
+//   db_amp_shard_transfer("marker_status", "char_status");
+// external status cleanup (for vanilla statuses):
+//   db_amp_shard_externalstatus("char_status", "vanilla_status");
+// add new entries below
+
 
 KBSECTION
 

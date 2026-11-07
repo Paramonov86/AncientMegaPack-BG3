@@ -2,8 +2,19 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 
-// DB_ToT_ItemFreq(ShopID, Category, Template, Weight), weight is relative within the category
-// global category ratio, DB_ToT_CatWeight, lives in the AMP_ToT_Shop.txt init block
+// TOT SHOP - PER-ITEM FREQUENCY MATRIX (B04)
+// Replaces B01/B02/B03 pool-duplication approach with declarative matrix.
+// Each row: one item with its weight. Engine expands to Pool entries on load.
+//
+// Schema: DB_ToT_ItemFreq(ShopID, Category, Template, Weight)
+// Weight = relative frequency within category (e.g. 100 vs 1 = 100x difference)
+// Category = "COINS" | "CAPSULES" | "SHARDS_20" | "SHARDS_6" | "SHARDS_2" | "SHARDS_1"
+//
+// Legacy DB_ToT_ShardReg(Template, Tier) still works = ItemFreq with weight 1.
+// Use ShardReg for weight=1 shards (shorter), ItemFreq for anything else.
+//
+// Global ratio (CatWeight) lives in the AMP_ToT_Shop.txt init block.
+// Default: COINS:CAPSULES:SHARDS = 39:70:(50+15+5+1) = 1:2:3-ish
 
 // COINS (ratio 100:30:10:1)
 DB_ToT_ItemFreq("GENERAL", "COINS", (ITEMROOT)AMP_FeyCoin_c304469f-6132-4304-a5a2-882a2820be3b, 100);
@@ -37,7 +48,9 @@ DB_ToT_ItemFreq("GENERAL", "CAPSULES", (ITEMROOT)AMP_Ring_VoidCapsule_8ee480e7-b
 DB_ToT_ItemFreq("GENERAL", "CAPSULES", (ITEMROOT)AMP_1H_VoidCapsule_0dc57310-fb72-43e5-a61b-caf1a3a8bbd3, 1);
 DB_ToT_ItemFreq("GENERAL", "CAPSULES", (ITEMROOT)AMP_2H_VoidCapsule_dd892a12-a733-49a0-bec5-cac418bafe79, 1);
 
-// weight 1 shards come from DB_ToT_ShardReg in the AMP_ToT_Shop.txt core, rows here only for other weights
+// SHARDS: all weight=1 shards remain via DB_ToT_ShardReg in AMP_ToT_Shop.txt core.
+// Add rows here only for shards with weight != 1.
+// Example: DB_ToT_ItemFreq("GENERAL", "SHARDS_1", (ITEMROOT)AMP_Arcanizer_Shard_Xxx_UUID, 5);
 
 KBSECTION
 EXITSECTION

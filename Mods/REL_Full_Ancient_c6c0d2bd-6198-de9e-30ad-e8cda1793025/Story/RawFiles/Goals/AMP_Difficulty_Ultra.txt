@@ -178,8 +178,11 @@ IsBoss(_Creature, 0)
 THEN
 ApplyStatus(_Creature, "AMP_ULTRA_NPC_OVERLAY", -1.0, 1, NULL_00000000-0000-0000-0000-000000000000);
 
-// Apostle polymorph strips the ultra overlay and mirror watchers, the reactive apply only fires on first tracking
-// delay lets the polymorph's own strip pass finish before the re-apply
+// Ketheric -> Apostle of Myrkul is a mid-combat polymorph (MOO_KETHERIC_APOSTLEFORM)
+// that strips the ultra boss overlay + its mirror watchers. the reactive apply above
+// only fires on first tracking, never on transform. re-assert boss flag + re-apply the
+// overlay so the spawn-on-CC trigger lives on the Apostle form. delayed 1s so the
+// polymorph finishes (and its own strip pass runs) before we re-apply, avoiding a race.
 
 IF
 StatusApplied((CHARACTER)_Creature, "MOO_KETHERIC_APOSTLEFORM", _, _)

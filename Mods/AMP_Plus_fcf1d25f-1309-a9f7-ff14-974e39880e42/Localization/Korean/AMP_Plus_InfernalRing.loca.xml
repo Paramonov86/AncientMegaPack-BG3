@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="he9f32d68g0b86g493eg880dgad8d06bc29d7" version="1">지옥의 낙인</content>
+	<content contentuid="hc7f0d3dcg8f9ag4b8fg983egf778ffb2db10" version="1">&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;지옥불&lt;/LSTag&gt;의 영향을 받는 대상에게 &lt;b&gt;[2]&lt;/b&gt;를 입히면 &lt;b&gt;[1]&lt;/b&gt;턴 동안 &lt;LSTag Type="Status" Tooltip="MAG_Ring43_Status_1"&gt;악마의 불꽃&lt;/LSTag&gt;도 부여합니다.</content>
+	<content contentuid="h54e8320ag9e57g4053gaca3g5cf956562df2" version="1">&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;지옥불&lt;/LSTag&gt;의 영향을 받는 대상에게 &lt;b&gt;[2]&lt;/b&gt;를 입히면 &lt;b&gt;[1]&lt;/b&gt;턴 동안 &lt;LSTag Type="Status" Tooltip="MAG_Ring43_4_Status_1"&gt;악마의 불꽃&lt;/LSTag&gt;도 부여합니다.</content>
+	<content contentuid="h6498381bg068ag4b87g91a8g4bca525ca940" version="1">지옥의 용광로</content>
+	<content contentuid="h31b4c4e6g39e6g49a1ga9a8ge0d6fd14f69f" version="1">지옥 금속으로 단조된 이 반지는 &lt;LSTag Type="Spell" Tooltip="MAG_Ring43_4_scorchingVolley"&gt;작열하는 일제 사격&lt;/LSTag&gt;을 사용할 수 있게 하며, 받는 모든 &lt;b&gt;[1]&lt;/b&gt;을 &lt;b&gt;[2]&lt;/b&gt;만큼 감소시킵니다.</content>
+	<content contentuid="hea2c2781geea0g4fd9gae16g7cdcb44ce7b7" version="1">악마의 불꽃</content>
+	<content contentuid="hc48051c4g9c9fg4df8g9cbcg760563dc63d0" version="1">영향을 받은 대상은 &lt;b&gt;[1]&lt;/b&gt;에 &lt;LSTag Tooltip="Vulnerable"&gt;취약&lt;/LSTag&gt;해집니다.</content>
+	<content contentuid="hc6b64c20g9931g4259g9b6bg07aab2222a6a" version="1">작열하는 일제 사격</content>
+</contentList>

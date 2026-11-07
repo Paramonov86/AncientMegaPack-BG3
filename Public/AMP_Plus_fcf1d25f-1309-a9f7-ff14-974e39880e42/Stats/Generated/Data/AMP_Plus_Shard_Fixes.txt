@@ -19,10 +19,13 @@ type "PassiveData"
 using "AMP_Shard_Dyn_GLOVES_28"
 data "Boosts" "AC(1)"
 
-// SetStatusDuration leaves the overflowed boost size, so re-apply at the cap
+// SetStatusDuration leaves the overflowed boost size, so re-apply at the cap.
+// A multi-target hit passes the stack gate once per target before any stack lands,
+// so the cap also runs as each stack is applied
 new entry "AMP_Shard_Armor_Metamorph_Cap_Passive"
 type "PassiveData"
 using "AMP_Shard_Armor_Metamorph_Cap_Passive"
+data "StatsFunctorContext" "OnTurn;OnDamage;OnStatusApplied"
 data "StatsFunctors" "RemoveStatus(SELF,AMP_METAMORPH_STACK);ApplyStatus(SELF,AMP_METAMORPH_STACK,100,6)"
 
 new entry "AMP_SHARD_AMULET_LEECH"
@@ -215,7 +218,7 @@ data "Conditions" "AttackedWithPassiveSourceWeapon() and HasDamageEffectFlag(Dam
 new entry "AMP_Arcanizer_Shard_ReclaimRoll_Info"
 type "PassiveData"
 using "AMP_Arcanizer_Shard_ReclaimRoll_Info"
-data "DescriptionParams" "20"
+data "DescriptionParams" "15"
 
 new entry "AMP_SHARD_LENS_TEMPHP"
 type "StatusData"
@@ -245,6 +248,18 @@ using "AMP_SHARD_CHAR_IMPROVISE"
 data "StackType" "Ignore"
 data "OnRemoveFunctors" "RemoveStatus(AMP_SHARD_IMPROVISE_ACTIVE)"
 
+new entry "AMP_SHARD_CHAR_HUNTERSMARK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "AMP_SHARD_CHAR_HUNTERSMARK"
+data "StackType" "Ignore"
+
+new entry "AMP_SHARD_CHAR_LAYONHANDS"
+type "StatusData"
+data "StatusType" "BOOST"
+using "AMP_SHARD_CHAR_LAYONHANDS"
+data "StackType" "Ignore"
+
 // no status ticks, or the two statuses re-apply each other every turn
 new entry "AMP_Shard_Amulet_TwoFaced_Passive"
 type "PassiveData"
@@ -257,3 +272,22 @@ type "PassiveData"
 using "AMP_Shard_Ring_IceFire_Passive"
 data "Conditions" "(IsSpell() or IsAttack()) and Enemy() and Combat()"
 data "StatsFunctors" "IF(HasDamageDoneForType(DamageType.Fire)):ApplyStatus(MAG_FROST,100,1);IF(HasDamageDoneForType(DamageType.Fire)):RemoveStatus(BURNING);IF(HasDamageDoneForType(DamageType.Cold)):ApplyStatus(BURNING,100,1);GROUND:IF(HasDamageDoneForType(DamageType.Cold)):CreateSurface(2,2,Fire)"
+
+new entry "AMP_Shard_Armor_Shadow_Passive"
+type "PassiveData"
+using "AMP_Shard_Armor_Shadow_Passive"
+data "StatsFunctorContext" "OnCombatStarted"
+data "Conditions" ""
+
+new entry "AMP_Shard_Armor_Shadow_Greater_Passive"
+type "PassiveData"
+using "AMP_Shard_Armor_Shadow_Greater_Passive"
+data "StatsFunctorContext" "OnCombatStarted"
+data "Conditions" ""
+
+// a damage rider is not doubled by a critical hit, so both dice live here
+new entry "AMP_SHARD_CHAR_GLOVES_25"
+type "StatusData"
+data "StatusType" "BOOST"
+using "AMP_SHARD_CHAR_GLOVES_25"
+data "Boosts" "IF((IsWeaponAttack() or IsUnarmedAttack()) and IsCritical()):DamageBonus(2d4)"

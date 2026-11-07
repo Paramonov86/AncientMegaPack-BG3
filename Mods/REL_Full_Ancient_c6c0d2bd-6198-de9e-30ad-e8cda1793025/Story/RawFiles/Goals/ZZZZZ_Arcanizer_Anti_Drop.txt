@@ -7,7 +7,9 @@ DB_AMP_Arcanizer_DropBlocked(0);
 */
 KBSECTION
 /*
-// keys on the ARCANIZER_MAIN tag, not every dropper is in DB_AMP_Arcanizer_Owner
+// main drop prevention - simpler and more reliable
+// the core issue was likely with the db_amp_arcanizer_owner check
+// not every character dropping the arcanizer would be in this db
 IF
 DroppedBy((ITEM)_Item, (CHARACTER)_Character) 
 AND

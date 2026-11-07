@@ -137,7 +137,7 @@ type "PassiveData"
 using "MAG_BardicInspiration_Heal_Hat_Passive"
 data "Conditions" "SpellId('Target_BardicInspiration') or SpellId('Target_BardicInspiration_Combat') or SpellId('Target_MantleOfInspiration') or SpellId('Target_MantleOfInspiration_2') or SpellId('Target_MantleOfInspiration_3') or SpellId('Target_SCE_TieflingFollowup_BardicInspiration') "
 
-// SUMMON WEAPON ANTIABUSE
+// ================ SUMMON WEAPON ANTIABUSE ================
 new entry "AMP_SUMMON_WEAPON_ANTIABUSE"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -5515,7 +5515,7 @@ using "BURNING"
 data "StackType" "Ignore"
 data "TickFunctors" "IF(not Tagged('TORCH') and not IsImmuneToDamageType(DamageType.Fire,context.Target)):DealDamage(1d4,Fire)"
 
-// Darkness AI fix. Applied by Osiris in AMP_Darkness_V3.txt, no auras
+// Darkness dumb AI fix V3 (applied via Osiris: AMP_Darkness_V3.txt — no auras)
 
 new entry "AMP_DARKNESS_FIX"
 type "StatusData"
@@ -5767,7 +5767,14 @@ data "ValueLevel" "12"
 data "ValueScale" "4"
 data "Rarity" "VeryRare"
 
-// Sahuagin base lifts shared traits, variants override only what differs
+// =============================================================================
+// Sahuagin rebalance — coastal apex predator overhaul
+// Base Sahuagin lifts shared traits (HP, perception, cold resist, swim speed,
+// charm immunity). Variants only override what differs from the new base.
+// Role-specific stat boosts (DR, attack rolls, SpellSaveDC) live in hidden
+// passives so DefaultBoosts isn't restated in every variant.
+// Stays D&D 5e flavored — only vanilla passives + 4 thin role passives.
+// =============================================================================
 
 new entry "Sahuagin"
 type "Character"
@@ -5820,7 +5827,7 @@ data "Vitality" "55"
 data "SpellCastingAbility" "Dexterity"
 data "Passives" "BloodFrenzy_Sahuagin;ExtraAttack;AttackOfOpportunity;DarknessRules;FeyAncestry;AMP_SahuaginRanged_Steady"
 
-// Role boosts in hidden passives so DefaultBoosts isn't repeated per variant
+// Hidden role passives — boost-only carriers, no tooltip clutter.
 new entry "AMP_SahuaginChampion_Scales"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -5841,7 +5848,10 @@ type "PassiveData"
 data "Properties" "IsHidden"
 data "Boosts" "RollBonus(RangedWeaponAttack,2)"
 
-// Hag spells: save DC from SourceSpellDC() or ManeuverSaveDC() plus 2
+// ============================================================
+// HAG enemy DC migration — fixed → SourceSpellDC()/ManeuverSaveDC() + 2
+// Stage 1: Auntie Ethel + Hag Survivor active spells
+// ============================================================
 
 new entry "Target_HAG_MaskOfTerror"
 type "SpellData"
@@ -5861,8 +5871,21 @@ data "SpellType" "Target"
 using "Target_LOW_HagSurvivor_Claw"
 data "SpellRoll" "not SavingThrow(Ability.Dexterity, ManeuverSaveDC()+2)"
 
-// Ketheric and Myrkul DC migration. HowlOfTheDead and GhoulTouch sit on lootable gear, so they scale with the wearer
-// FireWave has no caster, DC is fixed at 20. DeathBloom resolves Source through the summon chain
+// ============================================================
+// KETHERIC + MYRKUL DC migration — Stage 2
+// HowlOfTheDead: на броне MOO_Ketheric_Armor (VeryRare loot).
+//   Двойная польза: NPC-Кетерик буст, игрок-носитель скейлится.
+// DeathBloom: цепочка SpawnDeathBloom → Summon plant → Explosion.
+//   Source resolves через summon-chain. Verify в игре.
+// GhoulTouch: на MAG_Myrkulites_Circlet/Ring (player loot).
+//   Скейлится с носителем; Apostle T/H DC 13 → 21.
+// FireWave: гаргулья-турель в коридоре Reaper of Myrkul.
+//   Без caster — фикс 20 (политика "до 20+").
+// FingerOfDeath_Apostle: 7d8+30 Necrotic, уже SourceSpellDC().
+//   Накидываем +2 → T/H 19→21.
+// Gaze_Apostle: 4d8 Necrotic + Frightened, уже SourceSpellDC()
+//   с AdvantageOnFrightened. Накидываем +2.
+// ============================================================
 
 new entry "Shout_MOO_MAG_Ketheric_HowlOfTheDead"
 type "SpellData"
@@ -5902,7 +5925,11 @@ data "SpellType" "Target"
 using "Target_Gaze_Apostle"
 data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC()+2,AdvantageOnFrightened(), DisadvantageOnFrightened())"
 
-// Skips GOB_Torturer_Spear_Passive and Target_GOB_CureWounds_SeluneAmulet, player loot
+// ============================================================
+// LOW-DC migration — Stage 3
+// Fixed bump for traps/mines (no caster context); scale+2 for creature abilities.
+// Skipped: GOB_Torturer_Spear_Passive, Target_GOB_CureWounds_SeluneAmulet (player loot items).
+// ============================================================
 
 // --- Mines/objects: fixed bump to 18 (no caster) ---
 
@@ -5999,7 +6026,12 @@ data "SpellType" "Shout"
 using "Shout_Shapechanger_Doppelganger_Dismiss_Urgent"
 data "SpellRoll" "not SavingThrow(Ability.Wisdom,ManeuverSaveDC()+2)"
 
-// Scroll values. Item value is also the sell value, keep early scrolls cheap
+//================================================================
+//  SCROLL VALUE OVERRIDES
+//  Price = VL band (spell circle = rarity / acquisition time) with a
+//  power-tier shift WITHIN the band. Kept loot-safe: item value doubles
+//  as sell value, so no early scroll exceeds a few hundred gold.
+//================================================================
 
 // --- Base fallback ---
 new entry "_MagicScroll"
@@ -6582,7 +6614,10 @@ data "SoundVocalStart" ""
 data "SoundLoop" ""
 data "SoundStop" ""
 
-// Raphael endgame hooks, gated by AMP_RAPHAEL_OVERLAY_HARD from AMP_Raphael.txt
+// ============================================================
+// Raphael endgame mechanics (rev 6) — Hard mode overlay hooks
+// All gating через AMP_RAPHAEL_OVERLAY_HARD статус (см. AMP_Raphael.txt)
+// ============================================================
 
 new entry "GLO_Raphael"
 type "Character"
@@ -6631,7 +6666,8 @@ using "Projectile_MAG_LightningArrow_Shot"
 data "Cooldown" "OncePerCombat"
 data "UseCosts" "BonusActionPoint:1"
 
-// Spells only. Their item boost grants live in the Arcanizer_Tags and EA_Rebalance overrides
+// Release-feedback spells (item-boost grants live in the existing Arcanizer_Tags/EA_Rebalance overrides)
+// Frost Prince — Permafrost Shard (Ice Knife reskin)
 new entry "Projectile_AMP_FrostPrince_Permafrost"
 type "SpellData"
 data "SpellType" "Projectile"
@@ -6647,6 +6683,7 @@ data "DescriptionParams" "DealDamage(1d6,Cold);1"
 data "TooltipDamageList" "DealDamage(1d6,Cold)"
 data "TooltipStatusApply" "ApplyStatus(SLOW,100,1)"
 
+// Circlet of Blasting — Smouldering Rays (Scorching Ray reskin)
 new entry "Projectile_AMP_Circlet_SmolderRays"
 type "SpellData"
 data "SpellType" "Projectile"
@@ -6661,14 +6698,14 @@ data "DescriptionParams" "DealDamage(1d4,Fire)"
 data "TooltipDamageList" "DealDamage(1d4,Fire)"
 data "TooltipStatusApply" "ApplyStatus(BURNING,100,2)"
 
-// HALSIN ACT 2 LAKESIDE RITUAL PORTAL
+// ================ HALSIN ACT 2 LAKESIDE RITUAL PORTAL ================
 // Vitality x3 (vanilla 142 -> 426) to make the defend-the-portal ritual survivable
 new entry "HAV_ShadowPortal"
 type "Object"
 using "HAV_ShadowPortal"
 data "Vitality" "426"
 
-// ALLY HP BUMPS
+// ================ ALLY HP BUMPS ================
 // The Emperor: +20% HP (vanilla 140 -> 168)
 new entry "INT_Emperor"
 type "Character"

@@ -4,7 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// IsShard checks four registries, the reclamation shard has its own, so this fifth overload covers it
+// reclamation shard lives in its own registry, not the four main ones isshard checks,
+// so an extracted reclamation gets the reroll window and bricks inside a capsule.
+// fifth isshard overload covering the reclamation registry fixes it.
 
 QRY
 QRY_AMP_VoidCapsule_IsShard((ITEM)_Item)

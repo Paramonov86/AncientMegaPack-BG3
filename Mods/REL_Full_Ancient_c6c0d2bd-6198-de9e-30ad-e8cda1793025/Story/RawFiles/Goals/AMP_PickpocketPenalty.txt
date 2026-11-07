@@ -332,7 +332,9 @@ CrimeGetNewID((INTEGER)_CrimeID)
 THEN
 PROC_CharacterRegisterCrime(_Host, "Murder", NULL_00000000-0000-0000-0000-000000000000, _NPC, _CrimeID);
 
-// the realtime timer can die on level unload or npc despawn, so pending entries are also applied on load
+// perma hostility on timer fire, with a level-load backup. the realtime timer can
+// die on level unload / npc despawn, so the backup applies pending entries on load
+// and porting away can't dodge it.
 
 IF
 ObjectTimerFinished((GUIDSTRING)_NPC, "AMP_HubPerma")

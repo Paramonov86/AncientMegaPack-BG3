@@ -4,8 +4,12 @@ INITSECTION
 
 KBSECTION
 
-// LevelChangeCooldownFix still relaunches a 30-min cooldown on level load on saves where its rules run
-// cancels the pending cdrestore, clears the cooldown on long rest, resets the reroll counter
+// tot shop refresh hotfix. lccfix relaunches a fresh 30-min cooldown on
+// every level load and the timer dies on save+load, so frequent travelers
+// end up permanently cooled down and the shop never refreshes after a long rest.
+// lccfix's relaunch is disabled for new games; this targets existing saves
+// where its rules still run: cancel pending cdrestore, clear cooldown on lr,
+// reset stuck reroll counter. every long rest = one guaranteed refresh.
 
 // cancel lccfix cdrestore on level load. 1500ms so we run after its 500ms cdrestore + 30min setup
 IF

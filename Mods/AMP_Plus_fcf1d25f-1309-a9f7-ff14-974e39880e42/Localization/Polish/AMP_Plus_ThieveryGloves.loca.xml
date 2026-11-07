@@ -2,4 +2,8 @@
 <contentList>
 	<content contentuid="hd91e2cffge5abg4394g86eagca08cbd5f721" version="1">Oszust</content>
 	<content contentuid="hd8e9ceb4g7e47g40fdga8a0g27acc30c40fa" version="1">Otrzymujesz premię +[1] do rzutów na inicjatywę. Gdy wchodzisz do walki, w swojej turze stajesz się &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Niewidzialny&lt;/LSTag&gt; na &lt;b&gt;[2]&lt;/b&gt; tury.</content>
+	<content contentuid="h9c3d3c45gf0ccg48fcg8b1cg642d4cabb345" version="1">Za zamkiem</content>
+	<content contentuid="h6c3d6c67g43eag4f53gabb1g10178324a0b2" version="3">Otwierając zamek wytrychem, z szansą &lt;b&gt;[1]%&lt;/b&gt; otrzymujesz losowy &lt;LSTag Type="Status" Tooltip="AMP_RUNIC_SHARD_INFO"&gt;Runiczny Odłamek&lt;/LSTag&gt;. Każdy zamek liczy się raz. Nie więcej niż &lt;b&gt;[2]&lt;/b&gt; odłamki na &lt;LSTag Tooltip="LongRest"&gt;długi odpoczynek&lt;/LSTag&gt;.</content>
+	<content contentuid="h86e3d9bbg624cg4760g8648gc352bdd22f93" version="1">Złodziejskie szczęście</content>
+	<content contentuid="h8419c8bcg2cd7g4510gb87ag8bf801513c8e" version="3">Otwierając zamek wytrychem, z szansą &lt;b&gt;[1]%&lt;/b&gt; otrzymujesz &lt;LSTag Type="Status" Tooltip="AMP_VOID_CAPSULE_CHARGES"&gt;Kapsułę Pustki&lt;/LSTag&gt;. Każdy zamek liczy się raz. Nie więcej niż &lt;b&gt;[2]&lt;/b&gt; kapsuły na &lt;LSTag Tooltip="LongRest"&gt;długi odpoczynek&lt;/LSTag&gt;.</content>
 </contentList>

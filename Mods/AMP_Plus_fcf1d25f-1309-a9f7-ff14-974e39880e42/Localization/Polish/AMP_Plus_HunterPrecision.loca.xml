@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+  <content contentuid="h1c55d917gfb1bg42cdgb13cgf6a90148e9ae" version="1">Zasięg twoich &lt;b&gt;zwykłych ataków dystansowych&lt;/b&gt; jest zwiększony o &lt;b&gt;[1]%&lt;/b&gt;. Strzały poza zwykłym zasięgiem broni nadal wykonywane są z &lt;LSTag Tooltip="Disadvantage"&gt;utrudnieniem&lt;/LSTag&gt;.</content>
+  <content contentuid="hcf7ffaf2g2d8dg409dgbf2fgc2412a60b6dc" version="1">Zasięg twoich &lt;b&gt;zwykłych ataków dystansowych&lt;/b&gt; jest zwiększony o &lt;b&gt;[1]%&lt;/b&gt;, a ty zyskujesz &lt;LSTag Tooltip="Advantage"&gt;ułatwienie&lt;/LSTag&gt; na &lt;LSTag Tooltip="AttackRoll"&gt;rzuty ataku&lt;/LSTag&gt; &lt;b&gt;bronią dystansową&lt;/b&gt;, jeśli cel jest dalej niż &lt;b&gt;[2]&lt;/b&gt;. Strzały poza zwykłym zasięgiem broni nadal wykonywane są z &lt;LSTag Tooltip="Disadvantage"&gt;utrudnieniem&lt;/LSTag&gt;.</content>
+</contentList>

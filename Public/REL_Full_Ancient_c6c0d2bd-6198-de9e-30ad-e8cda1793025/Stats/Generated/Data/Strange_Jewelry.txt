@@ -264,7 +264,7 @@ data "VocalComponentSound" ""
 data "UseCosts" "BonusActionPoint:1"
 
 // Prism of Realities
-// RARE VERSION BLOCK (BASE)
+// ================ RARE VERSION BLOCK (BASE) ================
 new entry "SJ03"
 type "Armor"
 using "ARM_Amulet"
@@ -471,7 +471,7 @@ data "TickType" "EndTurn"
 data "ApplyEffect" "9b943c3a-c0f1-4dfb-9eb1-2d28a050ef2e"
 data "StatusGroups" "SG_Condition"
 
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 new entry "SJ03_1"
 type "Armor"
 using "SJ03"
@@ -499,7 +499,7 @@ data "StatusType" "BOOST"
 using "SJ03_STATUS"
 data "StackId" "SJ03_1_STATUS"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "SJ03_3"
 type "Armor"
 using "SJ03"
@@ -527,7 +527,7 @@ data "StatusType" "BOOST"
 using "SJ03_STATUS"
 data "StackId" "SJ03_3_STATUS"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "SJ03_4"
 type "Armor"
 using "SJ03"

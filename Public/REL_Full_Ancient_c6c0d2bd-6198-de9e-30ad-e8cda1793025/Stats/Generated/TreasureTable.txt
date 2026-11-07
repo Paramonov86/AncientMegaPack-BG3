@@ -2583,7 +2583,9 @@ object category "I_MAG_ChargedLightning_Quarterstaff_4",1,0,0,0,0,0,0,0
 object category "I_AMP_Kyzr_Longsword_Vines_4",1,0,0,0,0,0,0,0
 object category "I_MAG_BG_Sarevok_OfChaos_Greatsword_3",1,0,0,0,0,0,0,0
 
+// ============================================
 // ONE-HANDED AND TWO-HANDED WEAPON TABLES
+// ============================================
 
 // Uncommon 1H weapons
 new treasuretable "REL_Uncommon_Weapons_1H"
@@ -5676,7 +5678,7 @@ object category "I_AMP_Crown_Of_The_Bhaalspawn_Heir",1,0,0,0,0,0,0,0
 object category "I_MAG_BG_Sarevok_OfChaos_Greatsword_3",1,0,0,0,0,0,0,0
 object category "I_AMP_Bards_Birthright",1,0,0,0,0,0,0,0
 
-// SYNERGY POOLS
+// ================ SYNERGY POOLS ================
 
 // Swamp Synergy
 new treasuretable "REL_Uncommon_Swamp"
@@ -11085,7 +11087,7 @@ object category "I_AMP_AstralCoin",1,0,0,0,0,0,0,0
 
 // mod.io version Traders
 
-// ACT 1 - DRUID'S GROVE
+// ==================== ACT 1 — DRUID'S GROVE ====================
 new treasuretable "DEN_Entrance_Trade"
 new subtable "1,1"
 object category "T_Gold_Trader_Normal",1,0,0,0,0,0,0,0
@@ -11395,7 +11397,7 @@ new subtable "-5"
 object category "I_OBJ_Dye_Remover",1,0,0,0,0,0,0,0
 
 
-// ACT 1 - FOREST / HAG
+// ==================== ACT 1 — FOREST / HAG ====================
 // mod.io version Traders
 
 new treasuretable "FOR_SchoolOgre_Smart"
@@ -11421,7 +11423,7 @@ new subtable "7,1"
 object category "T_Scroll",1,0,0,0,0,0,0,0
 
 
-// ACT 1 - GOBLIN CAMP
+// ==================== ACT 1 — GOBLIN CAMP ====================
 new treasuretable "GOB_Festivities_Trader_GoblinWeapons"
 new subtable "4,1;5,1;6,1"
 object category "I_WPN_Goblin_Quarterstaff",2,0,0,0,0,0,0,0
@@ -11640,7 +11642,7 @@ new subtable "1,1"
 object category "T_GOB_Quartermaster_Armor",1,0,0,0,0,0,0,0
 
 
-// ACT 1 - ZHENTARIM / MOONRISE
+// ==================== ACT 1 — ZHENTARIM / MOONRISE ====================
 new treasuretable "MOO_BugBearvendor_Trade"
 new subtable "1,1"
 object category "T_Gold_Trader_Wealthy",1,0,0,0,0,0,0,0
@@ -12448,7 +12450,7 @@ new subtable "2,1"
 object category "T_ST_MusicInstrument",1,0,0,0,0,0,0,0
 
 
-// ACT 1 - UNDERDARK / CRECHE
+// ==================== ACT 1 — UNDERDARK / CRECHE ====================
 new treasuretable "CRE_Expeditioner_Magic_Trade"
 new subtable "-1"
 object category "T_Empty",1,0,0,0,0,0,0,0
@@ -12976,7 +12978,7 @@ new subtable "2,1;3,1;1,1"
 object category "T_Supply_Alchemy_Loot_Rare",1,0,0,0,0,0,0,0
 
 
-// ACT 2 - SHADOW-CURSED LANDS
+// ==================== ACT 2 — SHADOW-CURSED LANDS ====================
 new treasuretable "Florrick_Trader"
 new subtable "1,1"
 object category "T_Gold_Trader_Modest",1,0,0,0,0,0,0,0
@@ -13435,7 +13437,7 @@ StartLevel "7"
 object category "T_ST_Generic_Magic_HeavyArmor_ACT2_A",1,0,0,0,0,0,0,0
 
 
-// ACT 3 - WYRM'S ROCK / RIVINGTON
+// ==================== ACT 3 — WYRM'S ROCK / RIVINGTON ====================
 new treasuretable "END_CircusTrader"
 CanMerge 1
 new subtable "1,1"
@@ -14072,7 +14074,7 @@ new subtable "-5"
 object category "I_OBJ_Dye_Remover",1,0,0,0,0,0,0,0
 
 
-// ACT 3 - LOWER CITY
+// ==================== ACT 3 — LOWER CITY ====================
 // Derryth Act 3 special tables - consumables only, no unique items
 new treasuretable "LOW_Apothecary_Bonecloak_NoNobleStalk_None"
 new subtable "10,1"
@@ -14973,9 +14975,11 @@ new treasuretable "Gold_Pocket_Poor"
 new subtable "1,6;2,1;10,1"
 object category "T_Gold_Meager",1,0,0,0,0,0,0,0
 
+// ============================================
 // Special Tables with Magic Subtable Pattern
+// ============================================
 
-// LOW_Apothecary_Bonecloak_NoNobleStalk
+// ================== LOW_Apothecary_Bonecloak_NoNobleStalk ==================
 // Original (OFF mode): NO Magic subtable
 new treasuretable "LOW_Apothecary_Bonecloak_NoNobleStalk"
 new subtable "10,1"
@@ -15000,7 +15004,7 @@ object category "T_Gold_Pocket_Modest",1,0,0,0,0,0,0,0
 new subtable "15,1"
 object category "T_Alchemy_Potion",1,0,0,0,0,0,0,0
 
-// LOW_Apothecary_Bonecloak_HasNobleStalk
+// ================== LOW_Apothecary_Bonecloak_HasNobleStalk ==================
 // Original (OFF mode): references clean NoNobleStalk
 new treasuretable "LOW_Apothecary_Bonecloak_HasNobleStalk"
 new subtable "1,1"
@@ -15027,7 +15031,7 @@ object category "T_Alchemy_Potion_Elixir",1,0,0,0,0,0,0,0
 new subtable "7,1"
 object category "T_Alchemy_Coating",1,0,0,0,0,0,0,0
 
-// SUBTABLES for Bonecloak
+// ================== SUBTABLES for Bonecloak ==================
 // T_LOW_Apothecary_Bonecloak_NoNobleStalk - clean version
 new treasuretable "T_LOW_Apothecary_Bonecloak_NoNobleStalk"
 new subtable "10,1"
@@ -15053,7 +15057,7 @@ new subtable "15,1"
 object category "T_Alchemy_Potion",1,0,0,0,0,0,0,0
 
 
-// ToT ARCANIZER COINS
+// ================ ToT ARCANIZER COINS ================
 // Dummy table for CombatMod TreasureCategory check
 
 new treasuretable "REL_AMP_ArcanizerCoins_ToT"
@@ -15195,7 +15199,7 @@ object category "I_AMP_CelestialCoin_ToT_4",1,0,0,0,0,0,0,0
 object category "I_AMP_CelestialCoin_ToT_5",1,0,0,0,0,0,0,0
 
 
-// ToT ARCANIZER CAPSULES
+// ================ ToT ARCANIZER CAPSULES ================
 // Dummy table for CombatMod TreasureCategory check
 
 new treasuretable "REL_AMP_ArcanizerCapsules_ToT"
@@ -15307,8 +15311,11 @@ object category "I_AMP_Primal_VoidCapsule_ToT_4",1,0,0,0,0,0,0,0
 object category "I_AMP_Primal_VoidCapsule_ToT_5",1,0,0,0,0,0,0,0
 
 
+// ================================================
+// ================================================
 // AMP MERGED LOOT TABLES (all rarities combined)
 // Each item in separate subtable = guaranteed spawn
+// ================================================
 
 // Clothes (merged from 4 tables, 118 items)
 new treasuretable "AMP_Para_1"
@@ -26990,11 +26997,11 @@ object category "I_AMP_Pleasant_Ring_Of_Geniality",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Crown_Of_The_Bhaalspawn_Heir",1,0,0,0,0,0,0,0
 
-// EMERGENT BOSS POOLS
+// ================ EMERGENT BOSS POOLS ================
 // Roguelike reward UI: 8 choices, player picks 1
 // No coins/capsules - those stay in existing boss loot tables
 
-// ACT 1 (Rare)
+// ======== ACT 1 (Rare) ========
 
 new treasuretable "REL_Emergent_Hag"
 new subtable "-1"
@@ -27381,7 +27388,7 @@ new subtable "-1"
 object category "T_REL_Rare_Destructive",10,0,0,0,0,0,0,0
 object category "T_REL_Rare_Primal",10,0,0,0,0,0,0,0
 
-// ACT 2 (Epic)
+// ======== ACT 2 (Epic) ========
 
 new treasuretable "REL_Emergent_Gerringothe"
 new subtable "-1"
@@ -27683,7 +27690,7 @@ object category "T_REL_Epic_Shadowfell",5,0,0,0,0,0,0,0
 object category "T_REL_Epic_War",3,0,0,0,0,0,0,0
 object category "T_REL_Epic_Celestial",2,0,0,0,0,0,0,0
 
-// ACT 3 (Legendary)
+// ======== ACT 3 (Legendary) ========
 
 new treasuretable "REL_Emergent_Viconia"
 new subtable "-1"
@@ -28489,8 +28496,10 @@ new subtable "1,1;2,1"
 object category "T_Supply_Scrolls_Illusion_Single",4,0,0,0,0,0,0,0
 object category "T_Supply_Scroll_Utility_Single",1,0,0,0,0,0,0,0
 
-// xFED_AIO kill switch: every FED table goes to T_Empty, FED gear drops only via REL pools
-// SHA_HiddenRoom_Magic_Chest excluded, vanilla table
+// === xFED_AIO -> AMP static-loot kill switch ===
+// Redefines every xFED_AIO treasure table to T_Empty so no FED item
+// is statically placed. FED gear reaches loot only via REL pools.
+// 391 FED tables neutralized. SHA_HiddenRoom_Magic_Chest excluded (vanilla table).
 
 new treasuretable "FED_Tut_CartChst_StrtRoom"
 new subtable "1,1"
@@ -30056,7 +30065,7 @@ new treasuretable "WW_ONE_BACKPACK_TT"
 new subtable "1,1"
 object category "T_Empty",1,0,0,0,0,0,0,0
 
-// AMP GENEROUS LOOT (Boss reward +1 tier, x1.5 choices)
+// ============ AMP GENEROUS LOOT (Boss reward +1 tier, x1.5 choices) ============
 new treasuretable "REL_Emergent_Hag_Generous"
 new subtable "-1"
 object category "T_REL_Rare_Swamp",63,0,0,0,0,0,0,0

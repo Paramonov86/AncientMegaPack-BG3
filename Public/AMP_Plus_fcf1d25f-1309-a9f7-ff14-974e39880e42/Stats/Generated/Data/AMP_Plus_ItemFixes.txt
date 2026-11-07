@@ -888,6 +888,28 @@ using "MAG_Armour_G_74"
 data "ValueOverride" "3000"
 data "Rarity" "Legendary"
 data "ComboCategory" "d4"
+data "StatusOnEquip" ""
+
+new entry "MAG_Armour_G_74_bonus_Elf"
+type "PassiveData"
+using "MAG_Armour_G_74_bonus_Elf"
+data "Properties" "IsHidden"
+data "Boosts" "DamageReduction(All,Half)"
+
+new entry "MAG_Armour_G_74_bonus"
+type "PassiveData"
+using "MAG_Armour_G_74_bonus"
+data "Description" "hd6d0aae1ge6aeg4d1ag81f6gd25225df880c;1"
+data "TooltipUseCosts" "ReactionActionPoint:1"
+data "Properties" "ToggledDefaultOn;ToggledDefaultAddToHotbar;IsToggled"
+data "EnabledConditions" "not Tagged('REALLY_ELF',context.Source) and HasActionResource('ReactionActionPoint', 1, 0, false, false, context.Source) and not HasStatus('SG_Incapacitated');"
+data "EnabledContext" "OnDamaged;OnTurn;OnStatusApplied"
+data "Boosts" "DamageReduction(All,Half,)"
+data "StatsFunctorContext" "OnDamaged"
+data "Conditions" "not Tagged('REALLY_ELF',context.Source) and HasActionResource('ReactionActionPoint', 1, 0, false, false, context.Source) and not HasStatus('SG_Incapacitated');"
+data "BoostContext" ""
+data "BoostConditions" ""
+data "StatsFunctors" "UseActionResource(SELF,ReactionActionPoint,1,0);ApplyStatus(UNCANNYDODGE_HELPER,100,1)"
 
 new entry "AMP_KNUCKLE1_OVERRIDE"
 type "StatusData"
@@ -906,3 +928,127 @@ type "StatusData"
 data "StatusType" "BOOST"
 using "AMP_KNUCKLE4_OVERRIDE"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
+
+new entry "MAG_Armour_C_28_crit"
+type "PassiveData"
+using "MAG_Armour_C_28_crit"
+data "Description" "hadcb02b6g819cg4b92g860eg33c48154e91c;1"
+data "DescriptionParams" "2;3"
+
+new entry "MAG_Armour_C_28_1_crit"
+type "PassiveData"
+using "MAG_Armour_C_28_1_crit"
+data "Description" "hadcb02b6g819cg4b92g860eg33c48154e91c;1"
+data "DescriptionParams" "1;2"
+
+new entry "MAG_Armour_C_28_3_crit"
+type "PassiveData"
+using "MAG_Armour_C_28_3_crit"
+data "Description" "hadcb02b6g819cg4b92g860eg33c48154e91c;1"
+data "DescriptionParams" "3;4"
+
+new entry "MAG_Armour_C_28_4_crit"
+type "PassiveData"
+using "MAG_Armour_C_28_4_crit"
+data "Description" "hadcb02b6g819cg4b92g860eg33c48154e91c;1"
+data "DescriptionParams" "4;5"
+
+new entry "ARMOURC28_WS_CRIT_2"
+type "StatusData"
+data "StatusType" "BOOST"
+using "ARMOURC28_WS_CRIT_2"
+data "Boosts" "ReduceCriticalAttackThreshold(3)"
+
+new entry "ARMOURC28_WS_CRIT_3"
+type "StatusData"
+data "StatusType" "BOOST"
+using "ARMOURC28_WS_CRIT_3"
+data "Boosts" "ReduceCriticalAttackThreshold(4)"
+
+new entry "ARMOURC28_WS_CRIT_4"
+type "StatusData"
+data "StatusType" "BOOST"
+using "ARMOURC28_WS_CRIT_4"
+data "Boosts" "ReduceCriticalAttackThreshold(5)"
+
+// Hexblade's Curse is not in SG_Cursed
+new entry "MAG_Weapon25_2_bonus"
+type "PassiveData"
+using "MAG_Weapon25_2_bonus"
+data "Conditions" "Enemy() and IsKillingBlow() and (HasStatus('SG_Cursed', context.Target) or HasStatus('HEXBLADES_CURSE', context.Target))"
+
+// obscurity alone never fires when the fight starts in sunlight
+new entry "MAG_Armour_H_92_bonus"
+type "PassiveData"
+using "MAG_Armour_H_92_bonus"
+data "StatsFunctorContext" "OnObscurityChanged;OnCombatStarted;OnTurn"
+
+new entry "MAG_Armour_H_92_2_bonus"
+type "PassiveData"
+using "MAG_Armour_H_92_2_bonus"
+data "StatsFunctorContext" "OnObscurityChanged;OnCombatStarted;OnTurn"
+
+new entry "MAG_Armour_H_92_3_bonus"
+type "PassiveData"
+using "MAG_Armour_H_92_3_bonus"
+data "StatsFunctorContext" "OnObscurityChanged;OnCombatStarted;OnTurn"
+
+// on OnMovedDistance the default target is not the mover, both sides are named
+new entry "MAG_Cloak75_bonus"
+type "PassiveData"
+using "MAG_Cloak75_bonus"
+data "Conditions" "InSurface('SurfaceFogCloud',context.Source)"
+data "StatsFunctors" "ApplyStatus(SELF,CLOAK75,100,2)"
+
+new entry "MAG_Cloak75_2_bonus"
+type "PassiveData"
+using "MAG_Cloak75_2_bonus"
+data "Conditions" "InSurface('SurfaceFogCloud',context.Source)"
+data "StatsFunctors" "ApplyStatus(SELF,CLOAK75_2,100,3)"
+
+new entry "MAG_Cloak75_3_bonus"
+type "PassiveData"
+using "MAG_Cloak75_3_bonus"
+data "Conditions" "InSurface('SurfaceFogCloud',context.Source)"
+data "StatsFunctors" "ApplyStatus(SELF,CLOAK75_3,100,4)"
+
+new entry "MAG_Cloak75_4_bonus"
+type "PassiveData"
+using "MAG_Cloak75_4_bonus"
+data "Conditions" "InSurface('SurfaceFogCloud',context.Source)"
+data "StatsFunctors" "ApplyStatus(SELF,CLOAK75_4,100,8)"
+
+// RangedWeaponAttack alone is the main hand, the off-hand roll type is separate
+new entry "MAG_DoubleProficiencyBonusToRangedAttack_Passive"
+type "PassiveData"
+using "MAG_DoubleProficiencyBonusToRangedAttack_Passive"
+data "Boosts" "IF(not HasDisadvantage() and AttackedWithPassiveSourceWeapon()):RollBonus(RangedWeaponAttack, ProficiencyBonus);IF(not HasDisadvantage() and AttackedWithPassiveSourceWeapon()):RollBonus(RangedOffHandWeaponAttack, ProficiencyBonus)"
+
+// the robe starts only on damage from a hostile creature; fall damage has no attacker and slipped through
+new entry "AMP_Meme_Robe_Emergency"
+type "PassiveData"
+using "AMP_Meme_Robe_Emergency"
+data "Conditions" "HasHPPercentageLessThan(51) and not HasStatus('AMP_MEME_ROBE_EMERGENCY_USED') and Combat() and Character(context.Source) and Enemy(context.Source)"
+
+// wild shape also ends in dialogue, and dialogue can be restarted; the farewell heal belongs to combat
+new entry "AMP_ChaunteanFarewell_Passive"
+type "PassiveData"
+using "AMP_ChaunteanFarewell_Passive"
+data "Conditions" "StatusId('WILDSHAPE_ACTIVE') and Combat()"
+
+new entry "AMP_ChaunteanFarewell_Passive_3"
+type "PassiveData"
+using "AMP_ChaunteanFarewell_Passive_3"
+data "Conditions" "StatusId('WILDSHAPE_ACTIVE') and Combat()"
+
+new entry "AMP_ChaunteanFarewell_Passive_4"
+type "PassiveData"
+using "AMP_ChaunteanFarewell_Passive_4"
+data "Conditions" "StatusId('WILDSHAPE_ACTIVE') and Combat()"
+
+// the passive text promises a Wisdom save (DC 16) that the projectile never rolled; tooltip also said Constitution
+new entry "Projectile_AMP_Meme_Paralysis"
+type "SpellData"
+using "Projectile_AMP_Meme_Paralysis"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom,16)"
+data "TooltipAttackSave" "Wisdom"

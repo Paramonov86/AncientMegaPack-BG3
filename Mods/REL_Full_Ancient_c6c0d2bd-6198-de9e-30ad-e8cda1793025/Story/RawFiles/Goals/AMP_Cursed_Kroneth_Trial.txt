@@ -4,9 +4,13 @@ INITSECTION
 
 KBSECTION
 
-// kroneth trial labyrinth. endings: demand=bad, stepin=chaos, stepaway=good
+// kroneth's trial - messagebox labyrinth.
+// pivots: sign (advance/release), cling (greed), release (humility/chaos).
+// endings: demand=bad, stepin=chaos, stepaway=good.
 
-// judgement stays up until an ending is committed, esc/cancel can re-cast the trial
+// trial trigger.
+// judgement stays up through the box chain so esc/cancel can re-cast trial
+// without getting stuck. only cleared when an ending is committed.
 
 IF
 UsingSpell((CHARACTER)_Caster, "Shout_AMP_KronethTrial", _, _, _)

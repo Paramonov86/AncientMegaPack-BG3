@@ -5,7 +5,8 @@ INITSECTION
 
 KBSECTION
 
-// stale carrier links survive act transitions, save load and console deletes and cause phantom infections on rest
+// drop stale spore-carrier links where the item is gone or no longer the spore template.
+// act transitions / save-load / console deletes leave these behind -> phantom infections on rest.
 
 // at rest start, before the main script reads links on finish
 IF

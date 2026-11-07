@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h4991785aga322g4ddeg9e17gd1d6c13397a7" version="1">このシミターでダメージを受けた敵は、あなたの&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威力セーヴ難易度&lt;/LSTag&gt;に対する耐久力&lt;LSTag Tooltip="SavingThrow"&gt;セーヴィング・スロー&lt;/LSTag&gt;に成功しなければ&lt;LSTag Type="Status" Tooltip="BLINDED"&gt;盲目&lt;/LSTag&gt;になる。</content>
+</contentList>

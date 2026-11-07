@@ -234,7 +234,9 @@ THEN
 PlaySound(_Char, "UI_HUD_Combine_Error");
 OpenMessageBox(_Char, "AMP_Shard_Limit_Error");
 
-// rows with no total count bypass the limit, so the total locks to the rarity limit and the item counts as full
+// legacy migration: old arcanized items have per-shard rows but no total count,
+// so they bypass the limit. on next shard attempt lock total to the rarity limit
+// (treat as full). player reclaims via a recovery shard.
 
 IF
 TemplateUseStarted((CHARACTER)_Char, (ITEMROOT)_Template, (ITEM)_Instance)

@@ -2,7 +2,7 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 
-// ARCANIZER SHARDS - BATCH 14
+// ======== ARCANIZER SHARDS - BATCH 14 ========
 // fist ring shards tier 1 (Ring_29..39): stackable -> nonstack, one copy per ring
 
 NOT DB_AMP_Shard_Equip_Stackable((ITEMROOT)AMP_Arcanizer_Shard_Ring_29_7a21ceba-6a39-4aed-afe7-a3e26c1df06d, "Ring", "AMP_SHARD_APPLY_RING_FIST_FIRE_R", "Ring");

@@ -4,8 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// spawn status args no-op, the flag is applied on EnteredLevel
-// OurSpirit tracks spawns by template, EnteredCombat fires before the flag
+// n_necrotic soul tether. t1/t2 = hostile spirits, t3+ (pact) = ally spirits.
+// spawn status args no-op, so we apply the flag via osiris on EnteredLevel.
+// OurSpirit tracks spawns by template since EnteredCombat fires before the flag.
 IF
 EnteredLevel((CHARACTER)_Spirit, Spirit_Weak_7811ecf3-2657-4820-99e8-8c6844e147e1, _)
 AND
@@ -28,7 +29,8 @@ DB_AMP_NNecrotic_RecentSpawn(_Spirit)
 THEN
 NOT DB_AMP_NNecrotic_RecentSpawn(_Spirit);
 
-// EnteredCombat can beat EnteredLevel and register the spirit as a real enemy, so un-register it here
+// race fix: EnteredCombat can fire before EnteredLevel and register the spirit as a
+// real enemy. retroactively un-register it here. gated so other Spirit_Weak spawns are safe.
 IF
 EnteredLevel((CHARACTER)_Spirit, Spirit_Weak_7811ecf3-2657-4820-99e8-8c6844e147e1, _)
 AND
@@ -108,7 +110,9 @@ GetFaction(_Other, _OtherFaction)
 THEN
 SetHostileAndEnterCombat(_SpiritFaction, _OtherFaction, _Spirit, _Other);
 
-// hostile spirits keep combat open forever, poof them when only spirits and players are left
+// stuck-combat cleanup: hostile spirits hold the player in combat forever. on any death,
+// if only spirits + players are left, poof the spirits so combat can end.
+// track real enemies via EnteredCombat in a character-typed db.
 
 IF
 EnteredCombat((CHARACTER)_Char, (GUIDSTRING)_CombatID)

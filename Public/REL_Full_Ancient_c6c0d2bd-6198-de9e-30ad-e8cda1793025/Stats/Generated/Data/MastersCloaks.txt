@@ -1036,7 +1036,7 @@ data "Rarity" "Common"
 data "ComboCategory" "d4"
 data "PassivesOnEquip" ""
 
-// Master's Cloak of the Frog
+// ================ Master's Cloak of the Frog — UNCOMMON ================
 new entry "MAG_Cloak21"
 type "Armor"
 using "_Back_Magic"
@@ -1070,6 +1070,7 @@ data "StatsFunctorContext" "OnDamaged"
 data "Conditions" "IsMeleeAttack() and not Self() and not IsRedirectedDamage() and not SizeEqualOrGreater(Size.Huge, context.Source)"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100, 50)):ApplyStatus(SWAP,FROG_BUFOTOXIN,100,2)"
 
+// ================ Master's Cloak of the Frog — RARE ================
 new entry "MAG_Cloak21_2"
 type "Armor"
 using "MAG_Cloak21"
@@ -1090,6 +1091,7 @@ using "MAG_Cloak21_Bufotoxin"
 data "DescriptionParams" "65;2"
 data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100, 65)):ApplyStatus(SWAP,FROG_BUFOTOXIN,100,2)"
 
+// ================ Master's Cloak of the Frog — VERYRARE ================
 new entry "MAG_Cloak21_3"
 type "Armor"
 using "MAG_Cloak21"
@@ -1119,7 +1121,7 @@ data "Rarity" "Common"
 data "ComboCategory" "d4"
 data "PassivesOnEquip" ""
 
-// Master's Cloak of Beauty - RARE (BASE)
+// ================ Master's Cloak of Beauty - RARE (BASE) ================
 new entry "MAG_Cloak22"
 type "Armor"
 using "_Back_Magic"
@@ -1196,7 +1198,7 @@ data "CastEffect" ""
 data "TargetEffect" ""
 data "BeamEffect" ""
 
-// UNCOMMON
+// ================ UNCOMMON ================
 new entry "MAG_Cloak22_1"
 type "Armor"
 using "MAG_Cloak22"
@@ -1233,7 +1235,7 @@ data "SpellFlags" "ImmediateCast"
 data "AreaRadius" "6"
 data "ExplodeRadius" "6"
 
-// VERY RARE
+// ================ VERY RARE ================
 new entry "MAG_Cloak22_3"
 type "Armor"
 using "MAG_Cloak22"
@@ -1572,7 +1574,7 @@ data "DescriptionParams" "4;16"
 data "Boosts" "Disadvantage(AttackTarget,CONSTRUCT);IF(Tagged('CONSTRUCT', context.Target)):DamageBonus(2d6)"
 
 // Mantle of the Imperial Guard
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 new entry "MAG_Cloak27"
 type "Armor"
 using "_Back_Magic"
@@ -1596,7 +1598,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsCritical() and (Tagged('WPN_GREATSWORD',GetAttackWeapon(context.Source)) or Tagged('WPN_LONGSWORD',GetAttackWeapon(context.Source))) and IsWeaponAttack() and not Self()"
 data "StatsFunctors" "ApplyStatus(MAG_ATTACK_DEBUFF,100,3)"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Cloak27_2"
 type "Armor"
 using "MAG_Cloak27"
@@ -1619,7 +1621,7 @@ data "DescriptionParams" "1"
 data "Properties" "Highlighted"
 data "Boosts" "CriticalHitExtraDice(1,MeleeWeaponAttack)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Cloak27_3"
 type "Armor"
 using "MAG_Cloak27"
@@ -1640,7 +1642,7 @@ using "MAG_Cloak27_CritDice_bonus"
 data "DescriptionParams" "2"
 data "Boosts" "CriticalHitExtraDice(2,MeleeWeaponAttack)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "MAG_Cloak27_4"
 type "Armor"
 using "MAG_Cloak27"
@@ -1671,7 +1673,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsCritical() and (Tagged('WPN_GREATSWORD',GetAttackWeapon(context.Source)) or Tagged('WPN_LONGSWORD',GetAttackWeapon(context.Source)))"
 data "StatsFunctors" "IF(not HasPassive('RemarkableAthlete_Jump',context.Source)):ApplyStatus(SELF,MAG_TEMPORARY_HP_20,100,-1);IF(HasPassive('RemarkableAthlete_Jump',context.Source)):ApplyStatus(SELF,MAG_TEMPORARY_HP_50,100,-1)"
 
-// SHARED
+// ================ SHARED ================
 new entry "MAG_Cloak27_Oathkeeper_bonus"
 type "PassiveData"
 data "DisplayName" "hf62d901eg1264g49efg99cfgdbbb307d1cd5;1"
@@ -2466,6 +2468,7 @@ using "MAG_Cloak36_bonus"
 data "DescriptionParams" "4;RegainHitPoints(3)"
 data "StatsFunctors" "ApplyStatus(CLOAK36_2, 100, 4)"
 
+// Healing Wind T2 — heal + Freedom of Movement tick
 new entry "CLOAK36_2"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -2490,6 +2493,7 @@ using "MAG_Cloak36_bonus"
 data "DescriptionParams" "4;RegainHitPoints(4)"
 data "StatsFunctors" "ApplyStatus(CLOAK36_3, 100, 4)"
 
+// Healing Wind T3+T4 — heal + FoM tick + cleanse all negative statuses on apply
 new entry "CLOAK36_3"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -2622,9 +2626,9 @@ data "StackId" "CLOAK38"
 data "Boosts" "RollBonus(DeathSavingThrow,10)"
 data "StatusGroups" "SG_Condition"
 
-// Cloak of the Jaguar
+// ================ Cloak of the Jaguar ================
 
-// UNCOMMON
+// ---- UNCOMMON ----
 new entry "MAG_Cloak39"
 type "Armor"
 using "_Back_Magic"
@@ -2666,7 +2670,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "(IsWeaponAttack() or IsUnarmedAttack()) and Enemy()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Dexterity, ManeuverSaveDC())):ApplyStatus(BURNING,100,3)"
 
-// RARE
+// ---- RARE ----
 new entry "MAG_Cloak39_1"
 type "Armor"
 using "MAG_Cloak39"
@@ -2687,7 +2691,7 @@ data "StatsFunctorContext" "OnHeal"
 data "Conditions" "Character()"
 data "StatsFunctors" "ApplyStatus(MAG_CHARGED_LIGHTNING,100,1);ApplyStatus(MAG_CHARGED_LIGHTNING_DURATION_TECHNICAL,100,0);IF(HasBurningStatus()):ApplyStatus(MAG_CHARGED_LIGHTNING,100,1);IF(HasBurningStatus()):ApplyStatus(MAG_CHARGED_LIGHTNING_DURATION_TECHNICAL,100,0)"
 
-// VERYRARE
+// ---- VERYRARE ----
 new entry "MAG_Cloak39_2"
 type "Armor"
 using "MAG_Cloak39"
@@ -2708,7 +2712,7 @@ data "StatsFunctorContext" "OnStatusApply"
 data "Conditions" "StatusId('BLESS')"
 data "StatsFunctors" "IF(not Tagged('REALLY_HIGHELF',context.Source)):ApplyStatus(SELF,RING64_2,100,5);IF(Tagged('REALLY_HIGHELF',context.Source)):ApplyStatus(SELF,RING64_2,100,10)"
 
-// LEGENDARY
+// ---- LEGENDARY ----
 new entry "MAG_Cloak39_3"
 type "Armor"
 using "MAG_Cloak39"
@@ -2914,7 +2918,7 @@ data "DescriptionParams" "DealDamage(,Cold);DealDamage(2d4,Cold);2"
 data "StatsFunctors" "DealDamage(2d4,Cold,Magical,,0,,true,false);IF(not SavingThrow(Ability.Constitution, SourceSpellDC()+2)):ApplyStatus(FROZEN,100,2)"
 
 // Master's Cloak of the Grey Hare
-// UNCOMMON
+// ================ UNCOMMON ================
 new entry "MAG_Cloak42"
 type "Armor"
 using "_Back_Magic"
@@ -2951,7 +2955,7 @@ data "StackType" "Additive"
 data "StatusPropertyFlags" "MultiplyEffectsByDuration"
 data "StatusGroups" "SG_Condition"
 
-// RARE
+// ================ RARE ================
 new entry "MAG_Cloak42_2"
 type "Armor"
 using "MAG_Cloak42"
@@ -2984,7 +2988,7 @@ data "Boosts" "Resistance(All, Resistant)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "TickType" "StartTurn"
 
-// VERYRARE
+// ================ VERYRARE ================
 new entry "MAG_Cloak42_3"
 type "Armor"
 using "MAG_Cloak42"
@@ -3012,7 +3016,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "(IsWeaponAttack() or IsUnarmedAttack()) and HasStatus('CLOAK42', context.Source) and Combat()"
 data "StatsFunctors" "SetStatusDuration(SELF, CLOAK42, -1, Add);IF(HasStatus('BLEEDING')):ApplyStatus(CHEST_TRAUMA, 100, 2);ApplyStatus(BLEEDING, 100, 2)"
 
-// LEGENDARY
+// ================ LEGENDARY ================
 new entry "MAG_Cloak42_4"
 type "Armor"
 using "MAG_Cloak42"
@@ -4511,7 +4515,7 @@ data "DescriptionParams" "8"
 data "Boosts" "AC(8)"
 
 // Master's Cloak of the Hydra
-// RARE VERSION BLOCK (base)
+// ================ RARE VERSION BLOCK (base) ================
 new entry "MAG_Cloak76"
 type "Armor"
 using "_Back_Magic"
@@ -4556,7 +4560,7 @@ data "Boosts" "RollBonus(SavingThrow,2)"
 data "StatusPropertyFlags" ""
 data "StatusGroups" "SG_Condition"
 
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 new entry "MAG_Cloak76_1"
 type "Armor"
 using "MAG_Cloak76"
@@ -4566,7 +4570,7 @@ data "ComboCategory" "d1"
 data "PassivesOnEquip" "MAG_Cloak76_bonus;AMP_Mutacid_AcidBrood;AMP_Mutacid_Info_Bath_T1"
 data "StatusOnEquip" "AMP_MUTACID_ACTIVE;AMP_MUTACID_TIER1;AMP_MUTACID_Q_BATH_T1"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Cloak76_3"
 type "Armor"
 using "MAG_Cloak76"
@@ -4587,7 +4591,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "HasStatus('ACID',context.Target) and IsCritical()"
 data "StatsFunctors" "DealDamage(SWAP,MaxHP/20,Acid,Magical,,0,,true,false)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "MAG_Cloak76_4"
 type "Armor"
 using "MAG_Cloak76"
@@ -5034,7 +5038,7 @@ data "Icon" "Cloak83_bonus"
 data "Properties" "Highlighted"
 data "Boosts" "IF(Tagged('BEAST', context.Source)):Disadvantage(AttackTarget)"
 
-// VERYRARE VERSION BLOCK (BASE)
+// ================ VERYRARE VERSION BLOCK (BASE) ================
 // Master's Cloak of the Polar Bear - VeryRare
 new entry "MAG_Cloak84"
 type "Armor"
@@ -5098,7 +5102,7 @@ data "StatsFunctorContext" "OnStatusRemoved"
 data "Conditions" "(StatusHasStatusGroup(context.StatusId,'SG_Polymorph_BeastShape') or StatusId('WILDSHAPE_STARRY_ARCHER_PLAYER') or StatusId('WILDSHAPE_STARRY_CHALICE_PLAYER') or StatusId('WILDSHAPE_STARRY_DRAGON_PLAYER')) and not HasStatus('MAG_CLOAK84_EQUIPPED_MARKER')"
 data "StatsFunctors" "RemoveStatus(MAG_CLOAK84_POLARBEAR_STATUS)"
 
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 // Master's Cloak of the Polar Bear - Uncommon
 new entry "MAG_Cloak84_1"
 type "Armor"
@@ -5142,7 +5146,7 @@ using "MAG_Cloak84_WildShape_Cleanup"
 data "Conditions" "(StatusHasStatusGroup(context.StatusId,'SG_Polymorph_BeastShape') or StatusId('WILDSHAPE_STARRY_ARCHER_PLAYER') or StatusId('WILDSHAPE_STARRY_CHALICE_PLAYER') or StatusId('WILDSHAPE_STARRY_DRAGON_PLAYER')) and not HasStatus('MAG_CLOAK84_EQUIPPED_MARKER_1')"
 data "StatsFunctors" "RemoveStatus(MAG_CLOAK84_POLARBEAR_STATUS_1)"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 // Master's Cloak of the Polar Bear - Rare
 new entry "MAG_Cloak84_2"
 type "Armor"
@@ -5186,7 +5190,7 @@ using "MAG_Cloak84_WildShape_Cleanup"
 data "Conditions" "(StatusHasStatusGroup(context.StatusId,'SG_Polymorph_BeastShape') or StatusId('WILDSHAPE_STARRY_ARCHER_PLAYER') or StatusId('WILDSHAPE_STARRY_CHALICE_PLAYER') or StatusId('WILDSHAPE_STARRY_DRAGON_PLAYER')) and not HasStatus('MAG_CLOAK84_EQUIPPED_MARKER_2')"
 data "StatsFunctors" "RemoveStatus(MAG_CLOAK84_POLARBEAR_STATUS_2)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 // Master's Cloak of the Polar Bear - Legendary
 new entry "MAG_Cloak84_4"
 type "Armor"
@@ -5679,7 +5683,7 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 data "StatusEffect" "485333bf-014a-4e67-9eb9-d557de4fda71"
 
 // Master's Cloak of the Vampire Lord
-// VERYRARE (BASE)
+// ================ VERYRARE (BASE) ================
 new entry "MAG_Cloak96"
 type "Armor"
 using "_Back_Magic"
@@ -5758,7 +5762,7 @@ data "StatsFunctorContext" "OnDamaged"
 data "Conditions" "HasDamageDoneForType(DamageType.Radiant) and Combat()"
 data "StatsFunctors" "IF(not HasStatus('MAG_BLOODFEEDER_SCARLET_REMITTANCE_3')):ApplyStatus(MAG_SCARLET_REMITTANCE_APPLIED_VFX,100,0);IF(HasStatus('MAG_BLOODFEEDER_SCARLET_REMITTANCE_2')):ApplyStatus(MAG_BLOODFEEDER_SCARLET_REMITTANCE_3,100,10);IF(HasStatus('MAG_BLOODFEEDER_SCARLET_REMITTANCE_1')):ApplyStatus(MAG_BLOODFEEDER_SCARLET_REMITTANCE_2,100,10);IF(not HasStatus('MAG_BLOODFEEDER_SCARLET_REMITTANCE_2') and not HasStatus('MAG_BLOODFEEDER_SCARLET_REMITTANCE_3')):ApplyStatus(MAG_BLOODFEEDER_SCARLET_REMITTANCE_1,100,10)"
 
-// UNCOMMON
+// ================ UNCOMMON ================
 new entry "MAG_Cloak96_1"
 type "Armor"
 using "MAG_Cloak96"
@@ -5780,7 +5784,7 @@ data "StatusType" "BOOST"
 using "MAG_CLOAK96_HEAL"
 data "OnApplyFunctors" "ApplyStatus(MAG_CLOAK96_HEAL_TECHNICAL,100,0);RegainHitPoints(1,Living);IF(Tagged('UNDEAD',context.Target)):RegainHitPoints(1d4,Guaranteed)"
 
-// RARE
+// ================ RARE ================
 new entry "MAG_Cloak96_2"
 type "Armor"
 using "MAG_Cloak96"
@@ -5831,8 +5835,8 @@ data "Rarity" "Common"
 data "ComboCategory" "d4"
 data "PassivesOnEquip" ""
 
-// Master's Cloak of the Mercenary
-// UNCOMMON (2 dice, DC-4)
+// ==================== Master's Cloak of the Mercenary ====================
+// ================ UNCOMMON (2 dice, DC-4) ================
 
 new entry "MAG_Cloak97_1"
 type "Armor"
@@ -5947,7 +5951,7 @@ data "StatsFunctorContext" "OnActionResourcesChanged"
 data "Conditions" "not HasActionResource('SuperiorityDie',100,0,true,false,context.Source)"
 data "StatsFunctors" "IF(HasStatus('MERCENARY_TRACKER_1_1',context.Source) and not HasStatus('MERCENARY_TRACKER_1_2',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_1_2,100,-1);IF(not HasStatus('MERCENARY_TRACKER_1_1',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_1_1,100,-1)"
 
-// RARE (3 dice, DC-2)
+// ================ RARE (3 dice, DC-2) ================
 
 new entry "MAG_Cloak97_2"
 type "Armor"
@@ -6061,7 +6065,7 @@ data "StatsFunctorContext" "OnActionResourcesChanged"
 data "Conditions" "not HasActionResource('SuperiorityDie',100,0,true,false,context.Source)"
 data "StatsFunctors" "IF(HasStatus('MERCENARY_TRACKER_2_2',context.Source) and not HasStatus('MERCENARY_TRACKER_2_3',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_2_3,100,-1);IF(HasStatus('MERCENARY_TRACKER_2_1',context.Source) and not HasStatus('MERCENARY_TRACKER_2_2',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_2_2,100,-1);IF(not HasStatus('MERCENARY_TRACKER_2_1',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_2_1,100,-1)"
 
-// VERYRARE (4 dice, DC+0)
+// ================ VERYRARE (4 dice, DC+0) ================
 
 new entry "MAG_Cloak97_3"
 type "Armor"
@@ -6240,7 +6244,7 @@ data "StatsFunctorContext" "OnActionResourcesChanged"
 data "Conditions" "not HasActionResource('SuperiorityDie',100,0,true,false,context.Source)"
 data "StatsFunctors" "IF(HasStatus('MERCENARY_TRACKER_3_3',context.Source) and not HasStatus('MERCENARY_TRACKER_3_4',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_3_4,100,-1);IF(HasStatus('MERCENARY_TRACKER_3_2',context.Source) and not HasStatus('MERCENARY_TRACKER_3_3',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_3_3,100,-1);IF(HasStatus('MERCENARY_TRACKER_3_1',context.Source) and not HasStatus('MERCENARY_TRACKER_3_2',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_3_2,100,-1);IF(not HasStatus('MERCENARY_TRACKER_3_1',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_3_1,100,-1)"
 
-// LEGENDARY (8 dice, DC+1)
+// ================ LEGENDARY (8 dice, DC+1) ================
 
 new entry "MAG_Cloak97"
 type "Armor"
@@ -6490,7 +6494,8 @@ data "StatsFunctorContext" "OnActionResourcesChanged"
 data "Conditions" "not HasActionResource('SuperiorityDie',100,0,true,false,context.Source)"
 data "StatsFunctors" "IF(HasStatus('MERCENARY_TRACKER_7',context.Source) and not HasStatus('MERCENARY_TRACKER_8',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_8,100,-1);IF(HasStatus('MERCENARY_TRACKER_6',context.Source) and not HasStatus('MERCENARY_TRACKER_7',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_7,100,-1);IF(HasStatus('MERCENARY_TRACKER_5',context.Source) and not HasStatus('MERCENARY_TRACKER_6',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_6,100,-1);IF(HasStatus('MERCENARY_TRACKER_4',context.Source) and not HasStatus('MERCENARY_TRACKER_5',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_5,100,-1);IF(HasStatus('MERCENARY_TRACKER_3',context.Source) and not HasStatus('MERCENARY_TRACKER_4',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_4,100,-1);IF(HasStatus('MERCENARY_TRACKER_2',context.Source) and not HasStatus('MERCENARY_TRACKER_3',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_3,100,-1);IF(HasStatus('MERCENARY_TRACKER_1',context.Source) and not HasStatus('MERCENARY_TRACKER_2',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_2,100,-1);IF(not HasStatus('MERCENARY_TRACKER_1',context.Source)):ApplyStatus(SELF,MERCENARY_TRACKER_1,100,-1)"
 
-// Eye of the Storm, Master's Cloak of Air
+// Eye of the Storm (Master's Cloak of Air rework)
+// T1 Uncommon — Aura 3m: Thunder Resist | Personal: +1.5m Movement
 new entry "MAG_Cloak98"
 type "Armor"
 using "_Back_Magic"
@@ -6528,6 +6533,7 @@ data "StackId" "MAG_CLOAK98_BUFF"
 data "Boosts" "Resistance(Thunder,Resistant)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
+// T2 Rare — Aura 3m: Thunder+Lightning Resist | Personal: +3m Movement
 new entry "MAG_Cloak98_2"
 type "Armor"
 using "MAG_Cloak98"
@@ -6560,6 +6566,7 @@ data "StackId" "MAG_CLOAK98_BUFF"
 data "Boosts" "Resistance(Thunder,Resistant);Resistance(Lightning,Resistant)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
+// T3 VeryRare — Aura 4.5m: Thunder+Lightning Resist + AC(1) | Personal: +3m Movement, IgnoreFallDamage
 new entry "MAG_Cloak98_3"
 type "Armor"
 using "MAG_Cloak98"
@@ -6592,6 +6599,7 @@ data "StackId" "MAG_CLOAK98_BUFF"
 data "Boosts" "Resistance(Thunder,Resistant);Resistance(Lightning,Resistant);AC(1)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
+// T4 Legendary — Aura 6m: Full protection | Personal: +4.5m Movement, IgnoreFallDamage, Thunder Immune
 new entry "MAG_Cloak98_4"
 type "Armor"
 using "MAG_Cloak98"
@@ -6659,7 +6667,7 @@ using "MAG_Cloak99_bonus"
 data "DescriptionParams" "4"
 data "Boosts" "IgnoreDamageThreshold(All,4)"
 
-// Master's Cloak of Wonders
+// Master's Cloak of Wonders (rework — arcane marvels: charmed saves, ward vs mind-magic, sharper spells that fray reality)
 new entry "MAG_Cloak100"
 type "Armor"
 using "_Back_Magic"

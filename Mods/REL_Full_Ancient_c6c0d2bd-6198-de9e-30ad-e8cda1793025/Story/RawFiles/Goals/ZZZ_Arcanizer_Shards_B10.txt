@@ -102,7 +102,7 @@ DB_AMP_Shard_Transfer("AMP_SHARD_RING_EDGE", "AMP_SHARD_CHAR_EDGE");
 DB_AMP_Shard_RecoveryMap("AMP_SHARD_RING_EDGE", (ITEMROOT)AMP_Arcanizer_Shard_Ring_15_8f9df3fd-f739-4808-90c0-b9c0425afc90);
 DB_ToT_ShardReg((ITEMROOT)AMP_Arcanizer_Shard_Ring_15_8f9df3fd-f739-4808-90c0-b9c0425afc90, "SHARDS_20");
 
-// 30 Resonance (Cloak UC, Stackable)
+// 30 Resonance (Cloak UC, Stackable) - Under negative status, 25% chance to apply Primordial Chaos to enemies on damage
 DB_AMP_Shard_Equip_Stackable((ITEMROOT)AMP_Arcanizer_Shard_Cloak_10_258584e3-b714-4e29-85de-5626c4db46e7, "Cloak", "AMP_SHARD_APPLY_CLOAK_10", "Cloak");
 DB_AMP_Shard_Transfer("AMP_SHARD_CLOAK_RESONANCE", "AMP_SHARD_CHAR_RESONANCE");
 DB_AMP_Shard_RecoveryMap("AMP_SHARD_CLOAK_RESONANCE", (ITEMROOT)AMP_Arcanizer_Shard_Cloak_10_258584e3-b714-4e29-85de-5626c4db46e7);
@@ -305,13 +305,13 @@ DB_AMP_Shard_Transfer("AMP_SHARD_GLOVES_SCORCHER", "AMP_SHARD_CHAR_SCORCHER");
 DB_AMP_Shard_RecoveryMap("AMP_SHARD_GLOVES_SCORCHER", (ITEMROOT)AMP_Arcanizer_Shard_Gloves_19_5d4dfea3-86ad-45b0-baba-a150f05287b9);
 DB_ToT_ShardReg((ITEMROOT)AMP_Arcanizer_Shard_Gloves_19_5d4dfea3-86ad-45b0-baba-a150f05287b9, "SHARDS_6");
 
-// 63 Ice and Fire (Ring Rare, NonStack)
+// 63 Ice and Fire (Ring Rare, NonStack) - Fire damage -> apply MAG_FROST to target; Cold damage -> apply Burning + fire surface
 DB_AMP_Shard_Equip_NonStack((ITEMROOT)AMP_Arcanizer_Shard_Ring_19_8a9632be-510c-425b-ab73-63bf5cf84fdd, "Ring", "AMP_SHARD_APPLY_RING_19", "Ring", "AMP_SHARD_RING_ICEFIRE");
 DB_AMP_Shard_Transfer("AMP_SHARD_RING_ICEFIRE", "AMP_SHARD_CHAR_ICEFIRE");
 DB_AMP_Shard_RecoveryMap("AMP_SHARD_RING_ICEFIRE", (ITEMROOT)AMP_Arcanizer_Shard_Ring_19_8a9632be-510c-425b-ab73-63bf5cf84fdd);
 DB_ToT_ShardReg((ITEMROOT)AMP_Arcanizer_Shard_Ring_19_8a9632be-510c-425b-ab73-63bf5cf84fdd, "SHARDS_6");
 
-// 64 Janus (Amulet Rare, Stackable)
+// 64 Janus (Amulet Rare, Stackable) - Necrotic damage -> BURNING_HOLY on target; Radiant damage -> Fetid Rot on target
 DB_AMP_Shard_Equip_Stackable((ITEMROOT)AMP_Arcanizer_Shard_Amulet_15_f8785f10-19c5-4a65-8d17-5922c9097b9b, "Amulet", "AMP_SHARD_APPLY_AMULET_15", "Amulet");
 DB_AMP_Shard_Transfer("AMP_SHARD_AMULET_TWOFACED", "AMP_SHARD_CHAR_TWOFACED");
 DB_AMP_Shard_RecoveryMap("AMP_SHARD_AMULET_TWOFACED", (ITEMROOT)AMP_Arcanizer_Shard_Amulet_15_f8785f10-19c5-4a65-8d17-5922c9097b9b);

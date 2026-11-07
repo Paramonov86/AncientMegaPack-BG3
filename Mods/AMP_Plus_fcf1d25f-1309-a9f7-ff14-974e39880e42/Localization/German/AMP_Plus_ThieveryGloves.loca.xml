@@ -2,4 +2,8 @@
 <contentList>
 	<content contentuid="hd91e2cffge5abg4394g86eagca08cbd5f721" version="1">Hochstapler</content>
 	<content contentuid="hd8e9ceb4g7e47g40fdga8a0g27acc30c40fa" version="1">Du erhältst einen Bonus von +[1] auf Initiativewürfe. Trittst du in einen Kampf ein, wirst du in deinem Zug für &lt;b&gt;[2]&lt;/b&gt; Züge &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;unsichtbar&lt;/LSTag&gt;.</content>
+	<content contentuid="h9c3d3c45gf0ccg48fcg8b1cg642d4cabb345" version="1">Hinter dem Schloss</content>
+	<content contentuid="h6c3d6c67g43eag4f53gabb1g10178324a0b2" version="3">Wenn du ein Schloss knackst, erhältst du mit &lt;b&gt;[1] %&lt;/b&gt; Wahrscheinlichkeit einen zufälligen &lt;LSTag Type="Status" Tooltip="AMP_RUNIC_SHARD_INFO"&gt;Runensplitter&lt;/LSTag&gt;. Jedes Schloss zählt einmal. Höchstens &lt;b&gt;[2]&lt;/b&gt; Splitter pro &lt;LSTag Tooltip="LongRest"&gt;langer Rast&lt;/LSTag&gt;.</content>
+	<content contentuid="h86e3d9bbg624cg4760g8648gc352bdd22f93" version="1">Diebesglück</content>
+	<content contentuid="h8419c8bcg2cd7g4510gb87ag8bf801513c8e" version="3">Wenn du ein Schloss knackst, erhältst du mit &lt;b&gt;[1] %&lt;/b&gt; Wahrscheinlichkeit eine &lt;LSTag Type="Status" Tooltip="AMP_VOID_CAPSULE_CHARGES"&gt;Leerkapsel&lt;/LSTag&gt;. Jedes Schloss zählt einmal. Höchstens &lt;b&gt;[2]&lt;/b&gt; Kapseln pro &lt;LSTag Tooltip="LongRest"&gt;langer Rast&lt;/LSTag&gt;.</content>
 </contentList>

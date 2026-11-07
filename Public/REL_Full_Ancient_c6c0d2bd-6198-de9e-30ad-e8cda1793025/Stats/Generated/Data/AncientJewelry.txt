@@ -508,7 +508,7 @@ data "StatsFunctors" "IF(not HasStatus('HASTE')):ApplyStatus(SELF,HASTE, 100, 15
 
 // Copper Crow Amulet
 
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 new entry "MAG_Neck12"
 type "Armor"
 using "ARM_Amulet"
@@ -528,7 +528,7 @@ data "DescriptionParams" "1;4"
 data "Properties" "Highlighted"
 data "Boosts" "IF(Tagged('WPN_SCIMITAR', GetAttackWeapon(context.Source)) or Tagged('WPN_RAPIER', GetAttackWeapon(context.Source)) or Tagged('WPN_SHORTSWORD', GetAttackWeapon(context.Source)) or Tagged('WPN_SICKLE', GetAttackWeapon(context.Source))):CharacterWeaponDamage(1d4)"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "MAG_Neck12_2"
 type "Armor"
 using "MAG_Neck12"
@@ -566,7 +566,7 @@ data "StackType" "Additive"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 data "RemoveEvents" "OnTurn"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Neck12_3"
 type "Armor"
 using "MAG_Neck12"
@@ -591,7 +591,7 @@ data "BoostContext" "OnEquip;OnCreate;OnStatusApply;OnStatusRemove"
 data "BoostConditions" "IsDexterityHighest(context.Source)"
 data "Boosts" "Ability(Dexterity,4);ReduceCriticalAttackThreshold(1)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "MAG_Neck12_4"
 type "Armor"
 using "MAG_Neck12"
@@ -614,7 +614,7 @@ data "Conditions" "IsCritical() and IsWeaponAttack()"
 data "StatsFunctors" "RestoreResource(SELF,BardicInspiration,1,0);RestoreResource(SELF,SuperiorityDie,1,0)"
 
 // Capricious Princeling's Medallion
-// RARE VERSION BLOCK (BASE)
+// ================ RARE VERSION BLOCK (BASE) ================
 new entry "MAG_Neck13"
 type "Armor"
 using "ARM_Amulet"
@@ -636,7 +636,7 @@ data "BoostContext" "OnEquip;OnCreate;OnStatusApplied;OnStatusRemoved"
 data "BoostConditions" "IsMageArmored(context.Source)"
 data "Boosts" "StatusImmunity(SG_Paralyzed);StatusImmunity(SG_Sleeping)"
 
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 new entry "MAG_Neck13_1"
 type "Armor"
 using "MAG_Neck13"
@@ -652,7 +652,7 @@ using "MAG_Neck13_bonus"
 data "Description" "h6a113aefg7efag4815g8cb1g0e26e42446e6;1"
 data "Boosts" "StatusImmunity(SG_Paralyzed)"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "MAG_Neck13_3"
 type "Armor"
 using "MAG_Neck13"
@@ -667,7 +667,7 @@ using "MAG_Neck13_bonus"
 data "Description" "h8dc9bcbdg99d4g40e4ga2e8g51cd85203782;1"
 data "Boosts" "StatusImmunity(SG_Paralyzed);StatusImmunity(SG_Sleeping);StatusImmunity(SG_Blinded)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "MAG_Neck13_4"
 type "Armor"
 using "MAG_Neck13"
@@ -694,7 +694,7 @@ data "Conditions" "not Item() and not Self() and Enemy() and not StatusDoesNotIn
 data "StatsFunctors" "ApplyStatus(SELF, MAG_ZOC_FORCE_CONDUIT, 100, 1);ApplyStatus(SELF, MAG_ZOC_FORCE_CONDUIT_DURATION_TECHNICAL, 100, 0)"
 
 // Pendant of Glacial Destruction
-// LEGENDARY BLOCK (T4 - PENDANT OF GLACIAL DESTRUCTION)
+// ================ LEGENDARY BLOCK (T4 - PENDANT OF GLACIAL DESTRUCTION) ================
 new entry "MAG_Neck14"
 type "Armor"
 using "ARM_Amulet"
@@ -795,7 +795,7 @@ data "SpellFlags" "IsHarmful;ImmediateCast"
 data "HitAnimationType" "MagicalDamage_External"
 data "DamageType" "Cold"
 
-// VERYRARE BLOCK (T3)
+// ================ VERYRARE BLOCK (T3) ================
 
 new entry "MAG_Neck14_3"
 type "Armor"
@@ -832,7 +832,7 @@ using "AMP_Frost_Destruction_Explosion_4"
 data "SpellFlags" "ImmediateCast"
 data "SpellProperties" "ApplyStatus(AMP_FROST_DESTRUCTION_3,100,3)"
 
-// RARE BLOCK (T2)
+// ================ RARE BLOCK (T2) ================
 
 new entry "MAG_Neck14_2"
 type "Armor"
@@ -869,7 +869,7 @@ using "AMP_Frost_Destruction_Explosion_4"
 data "SpellFlags" "ImmediateCast"
 data "SpellProperties" "ApplyStatus(AMP_FROST_DESTRUCTION_2,100,2)"
 
-// UNCOMMON BLOCK (T1)
+// ================ UNCOMMON BLOCK (T1) ================
 
 new entry "MAG_Neck14_1"
 type "Armor"
@@ -1291,7 +1291,7 @@ using "MAG_Neck21_bonus"
 data "DescriptionParams" "1"
 data "Boosts" "IF(IsAttackType(AttackType.RangedSpellAttack)):DamageReduction(All,Flat,2*StrengthModifier);IF(IsAttackType(AttackType.RangedWeaponAttack)):DamageReduction(All,Flat,2*StrengthModifier);IF(IsAttackType(AttackType.RangedUnarmedAttack)):DamageReduction(All,Flat,2*StrengthModifier);IF(IsSpell()):DamageReduction(All,Flat,2*StrengthModifier);RollBonus(SavingThrow, -1)"
 
-// Twilight Knight's Pin
+// ================ Twilight Knight's Pin — Uncommon ================
 new entry "MAG_Neck22"
 type "Armor"
 using "ARM_Amulet"
@@ -1303,6 +1303,7 @@ data "ValueLevel" "2"
 data "Rarity" "Uncommon"
 data "PassivesOnEquip" "MAG_Neck22_bonus;MAG_Neck22_Darkness_Tech"
 
+// P1 — Full Twilight (visible, shadow damage)
 new entry "MAG_Neck22_bonus"
 type "PassiveData"
 data "DisplayName" "h45f02a60g2eb6g4335g971bg5f381ba77a99;1"
@@ -1314,6 +1315,7 @@ data "BoostContext" "OnObscurityChanged"
 data "BoostConditions" "not HasObscuredState(ObscuredState.Clear)"
 data "Boosts" "IF(IsMeleeWeaponAttack()):CharacterWeaponDamage(1,Psychic)"
 
+// P1 tech — DarknessCloud crit detection (hidden)
 new entry "MAG_Neck22_Darkness_Tech"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -1329,6 +1331,7 @@ data "StackId" "NECK22_DARKNESS_CRIT"
 data "Boosts" "CriticalHitExtraDice(1,MeleeWeaponAttack);CriticalHitExtraDice(1,MeleeOffHandWeaponAttack)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
+// ================ Twilight Knight's Pin — Rare ================
 new entry "MAG_Neck22_2"
 type "Armor"
 using "MAG_Neck22"
@@ -1337,6 +1340,7 @@ data "Rarity" "Rare"
 data "ComboCategory" "d2"
 data "PassivesOnEquip" "MAG_Neck22_bonus;MAG_Neck22_Darkness_Tech;MAG_Neck22_Fatigue"
 
+// P2 — Psychic Erosion (visible, mental fatigue)
 new entry "MAG_Neck22_Fatigue"
 type "PassiveData"
 data "DisplayName" "h20a83299gd41dg4edcga1a2g8a79ea13d346;1"
@@ -1347,6 +1351,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "HasDamageDoneForType(DamageType.Psychic) and (IsWeaponAttack() or IsRangedUnarmedAttack())"
 data "StatsFunctors" "ApplyStatus(MAG_PSYCHIC_MENTAL_FATIGUE,100,1);ApplyStatus(MAG_PSYCHIC_MENTAL_FATIGUE_DURATION_TECHNICAL,100,1)"
 
+// ================ Twilight Knight's Pin — VeryRare ================
 new entry "MAG_Neck22_3"
 type "Armor"
 using "MAG_Neck22"
@@ -1356,12 +1361,14 @@ data "ComboCategory" "d3"
 data "PassivesOnEquip" "MAG_Neck22_3_bonus;MAG_Neck22_Darkness_Tech;MAG_Neck22_Fatigue;MAG_Neck22_Sanity"
 data "StatusOnEquip" "NECK22_SANITY_TECH"
 
+// P1 T3 — shadow damage 2
 new entry "MAG_Neck22_3_bonus"
 type "PassiveData"
 using "MAG_Neck22_bonus"
 data "DescriptionParams" "DealDamage(2,Psychic);1"
 data "Boosts" "IF(IsMeleeWeaponAttack()):CharacterWeaponDamage(2,Psychic)"
 
+// P3 — Twilight Resolve (visible, info-only)
 new entry "MAG_Neck22_Sanity"
 type "PassiveData"
 data "DisplayName" "he93dd996g9786g4303g8ac6g2664d0198872;1"
@@ -1377,7 +1384,7 @@ data "StackId" "NECK22_SANITY_TECH"
 data "Passives" "MAG_Neck22_Sanity_CHA;MAG_Neck22_Sanity_WIS"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// CHA twin, applies when CHA >= WIS
+// P3 hidden — CHA save (when CHA >= WIS)
 new entry "MAG_Neck22_Sanity_CHA"
 type "PassiveData"
 data "DisplayName" "he93dd996g9786g4303g8ac6g2664d0198872;1"
@@ -1386,7 +1393,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "HasStatus('SG_Mad') and Combat() and IsCharismaGEWisdom()"
 data "StatsFunctors" "IF(SavingThrow(Ability.Charisma,15)):RemoveStatus(SG_Mad)"
 
-// WIS twin, applies when WIS > CHA
+// P3 hidden — WIS save (when WIS > CHA)
 new entry "MAG_Neck22_Sanity_WIS"
 type "PassiveData"
 data "DisplayName" "he93dd996g9786g4303g8ac6g2664d0198872;1"
@@ -1395,6 +1402,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "HasStatus('SG_Mad') and Combat() and not IsCharismaGEWisdom()"
 data "StatsFunctors" "IF(SavingThrow(Ability.Wisdom,15)):RemoveStatus(SG_Mad)"
 
+// ================ Twilight Knight's Pin — Legendary ================
 new entry "MAG_Neck22_4"
 type "Armor"
 using "MAG_Neck22"
@@ -1404,12 +1412,14 @@ data "ComboCategory" "d4"
 data "PassivesOnEquip" "MAG_Neck22_4_bonus;MAG_Neck22_4_Darkness_Tech;MAG_Neck22_Fatigue;MAG_Neck22_Sanity;MAG_Neck22_Concentrate"
 data "StatusOnEquip" "NECK22_SANITY_TECH"
 
+// P1 T4 — shadow damage 1d4
 new entry "MAG_Neck22_4_bonus"
 type "PassiveData"
 using "MAG_Neck22_bonus"
 data "DescriptionParams" "DealDamage(1d4,Psychic);2"
 data "Boosts" "IF(IsMeleeWeaponAttack()):CharacterWeaponDamage(1d4,Psychic)"
 
+// P1 T4 tech — DarknessCloud crit detection (2 dice)
 new entry "MAG_Neck22_4_Darkness_Tech"
 type "PassiveData"
 using "MAG_Neck22_Darkness_Tech"
@@ -1423,6 +1433,7 @@ using "NECK22_DARKNESS_CRIT"
 data "StackId" "NECK22_DARKNESS_CRIT_4"
 data "Boosts" "CriticalHitExtraDice(2,MeleeWeaponAttack);CriticalHitExtraDice(2,MeleeOffHandWeaponAttack)"
 
+// P4 — Mind's Eye (visible, concentration bonus)
 new entry "MAG_Neck22_Concentrate"
 type "PassiveData"
 data "DisplayName" "hf59db7bfge2ccg46d4gaddfg83276ebf0dc5;1"
@@ -1813,9 +1824,9 @@ data "ComboCategory" "d4"
 data "PassivesOnEquip" "MAG_Neck27_DrowningTide_Passive_T3;MAG_Neck27_4_Waterlogged_Passive"
 data "StatusOnEquip" "NECK27_DRENCH_AURA_T4"
 
-// Gnomish Temporal Mechanism
+// ================ Gnomish Temporal Mechanism ================
 
-// Uncommon
+// ---- Uncommon ----
 new entry "MAG_Neck28"
 type "Armor"
 using "ARM_Amulet"
@@ -1836,7 +1847,7 @@ data "Icon" "Neck28_bonus"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsAffectedByTime(context.Source) and not IsAttack() and not IsSpell()):DamageBonus(1,,Magical)"
 
-// Rare
+// ---- Rare ----
 new entry "MAG_Neck28_2"
 type "Armor"
 using "MAG_Neck28"
@@ -1861,7 +1872,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "not IsAttack() and not IsSpell() and Enemy()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Strength, SourceSpellDC())):ApplyStatus(PRONE,100,1)"
 
-// VeryRare
+// ---- VeryRare ----
 new entry "MAG_Neck28_3"
 type "Armor"
 using "MAG_Neck28"
@@ -1887,7 +1898,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "Combat() and not IsHasted(context.Source)"
 data "StatsFunctors" "IF(not (HasStatus('AMP_ANCIENTCHAOS',context.Source) and HasStatus('MAG_THUNDER_REVERBERATION',context.Source)) and not RollDieAgainstDC(DiceType.d100,5)):ApplyStatus(SELF,HASTE,100,4);IF(HasStatus('AMP_ANCIENTCHAOS',context.Source) and HasStatus('MAG_THUNDER_REVERBERATION',context.Source) and not RollDieAgainstDC(DiceType.d100,20)):ApplyStatus(SELF,HASTE,100,4)"
 
-// Legendary
+// ---- Legendary ----
 new entry "MAG_Neck28_4"
 type "Armor"
 using "MAG_Neck28"
@@ -2237,7 +2248,7 @@ data "Icon" "Neck33_bonus"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(DIFFICULT_TERRAIN_VINES);StatusImmunity(DIFFICULT_TERRAIN_OVERGROWTH);StatusImmunity(ENSNARED_VINES);StatusImmunity(WEB);StatusImmunity(ENSNARED);StatusImmunity(SHADOW_CURSED_VINES);StatusImmunity(SPIKE_GROWTH);StatusImmunity(BLIGHT_ENTANGLE);StatusImmunity(PLANT_GROWTH)"
 
-// AMBER STONE OF MANY SOULS (MAG_Neck34)
+// ================ AMBER STONE OF MANY SOULS (MAG_Neck34) ================
 // UNCOMMON
 new entry "MAG_Neck34"
 type "Armor"
@@ -2250,6 +2261,7 @@ data "ValueLevel" "3"
 data "Rarity" "Uncommon"
 data "PassivesOnEquip" "MAG_Neck34_SoulsWarmth_Passive"
 
+// Souls' Warmth — heal at start of combat turn while obscured (works on undead via Living+Guaranteed)
 new entry "MAG_Neck34_SoulsWarmth_Passive"
 type "PassiveData"
 data "DisplayName" "h922d5934gf1b5g4f8eg84d6g18a0d173d8f4;1"
@@ -2260,7 +2272,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "Combat() and not HasObscuredState(ObscuredState.Clear) and not Dead()"
 data "StatsFunctors" "ApplyStatus(MAG_NECK34_HEAL,100,0)"
 
-// Undead-safe: Living heal with a Guaranteed fallback
+// Heal carrier — base 1 HP (T1+T2 share), undead-safe via Living+Guaranteed fallback
 new entry "MAG_NECK34_HEAL"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -2281,6 +2293,7 @@ data "StatusType" "BOOST"
 using "MAG_NECK34_HEAL"
 data "OnApplyFunctors" "RegainHitPoints(1d8,Living);IF(Tagged('UNDEAD',context.Target)):RegainHitPoints(1d8,Guaranteed)"
 
+// RARE — adds Souls' Vigil (temp HP each turn while no weapon held)
 new entry "MAG_Neck34_2"
 type "Armor"
 using "MAG_Neck34"
@@ -2289,6 +2302,7 @@ data "Rarity" "Rare"
 data "ComboCategory" "d2"
 data "PassivesOnEquip" "MAG_Neck34_SoulsWarmth_Passive;MAG_Neck34_SoulsVigil_Passive"
 
+// Souls' Vigil — gain temp HP each combat turn while not holding a weapon
 new entry "MAG_Neck34_SoulsVigil_Passive"
 type "PassiveData"
 data "DisplayName" "hc1ea28abgf695g4c7fga094ga497f5dc9025;1"
@@ -2299,7 +2313,9 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "Combat() and not HasWeaponInMainHand() and not Dead()"
 data "StatsFunctors" "ApplyStatus(MAG_NECK34_TEMP_HP,100,-1)"
 
-// Agathys pattern: shared StackId TEMPORARY_HP, StackPriority = HP
+// Temp HP carrier — vanilla ARMOR_OF_AGATHYS architecture: shared StackId TEMPORARY_HP
+// (only one temp HP source active at a time), StackPriority = HP value (higher overrides
+// lower), removed when temp HP depleted on damage
 new entry "MAG_NECK34_TEMP_HP"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -2324,6 +2340,7 @@ using "MAG_NECK34_TEMP_HP"
 data "StackPriority" "30"
 data "Boosts" "TemporaryHP(30)"
 
+// VERYRARE — Souls' Warmth scales to 2, Souls' Vigil to 20 temp HP
 new entry "MAG_Neck34_3"
 type "Armor"
 using "MAG_Neck34"
@@ -2344,6 +2361,7 @@ using "MAG_Neck34_SoulsVigil_Passive"
 data "DescriptionParams" "GainTemporaryHitPoints(20)"
 data "StatsFunctors" "ApplyStatus(MAG_NECK34_TEMP_HP_3,100,-1)"
 
+// LEGENDARY — Souls' Warmth scales to 1d8, Souls' Vigil to 30 temp HP, adds Many Voices (reverb-gated immunity)
 new entry "MAG_Neck34_4"
 type "Armor"
 using "MAG_Neck34"
@@ -2364,6 +2382,7 @@ using "MAG_Neck34_SoulsVigil_Passive"
 data "DescriptionParams" "GainTemporaryHitPoints(30)"
 data "StatsFunctors" "ApplyStatus(MAG_NECK34_TEMP_HP_4,100,-1)"
 
+// Many Voices — while you bear Reverberation, the souls drown out blindness, madness and magical darkness
 new entry "MAG_Neck34_ManyVoices_Passive"
 type "PassiveData"
 data "DisplayName" "h96dafd8bg6da9g441eg86e2g73bd7510177d;1"
@@ -2589,7 +2608,7 @@ data "PassivesOnEquip" ""
 data "Boosts" ""
 
 // The Lazurite Eye
-// UNCOMMON
+// ================ UNCOMMON ================
 new entry "MAG_Neck39"
 type "Armor"
 using "ARM_Amulet"
@@ -2620,7 +2639,9 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 data "RemoveConditions" "not Combat()"
 data "RemoveEvents" "OnCombatEnded"
 
-// Vanilla MIRROR_IMAGE_* has no TickType and ignores duration. These tick down and clear on combat end
+// Mirror Image variants that actually tick down and clean up on combat end.
+// Vanilla MIRROR_IMAGE_* has no TickType so duration is ignored, status sticks
+// until OnAttacked+IsMiss or Long Rest. Used by Lazurite Eye and Elven Shield.
 new entry "AMP_MIRROR_IMAGE_1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -2656,7 +2677,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsSpellSchool(SpellSchool.Evocation) and not IsCantrip()"
 data "StatsFunctors" "IF(not IsMageArmored(context.Source) and not RollDieAgainstDC(DiceType.d100,5)):RestoreResource(SELF,SpellSlot,1,1);IF(IsMageArmored(context.Source) and not RollDieAgainstDC(DiceType.d100,10)):RestoreResource(SELF,SpellSlot,1,1)"
 
-// RARE
+// ================ RARE ================
 new entry "MAG_Neck39_2"
 type "Armor"
 using "MAG_Neck39"
@@ -2676,7 +2697,7 @@ data "StatsFunctorContext" "OnDamaged"
 data "Conditions" "HasDamageDoneForType(DamageType.Psychic) or HasDamageDoneForType(DamageType.Force)"
 data "StatsFunctors" "ApplyStatus(MAG_GISH_ARCANE_ACUITY, 100, 2)"
 
-// VERYRARE
+// ================ VERYRARE ================
 new entry "MAG_Neck39_3"
 type "Armor"
 using "MAG_Neck39"
@@ -2700,7 +2721,7 @@ data "Icon" "Neck39_bonus"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsSpell() and not ((Tagged('WIZARD') or Tagged('SORCERER')) and (HasStatus('MIRROR_IMAGE_1') or HasStatus('MIRROR_IMAGE_2') or HasStatus('MIRROR_IMAGE_3')))):DamageReduction(All,Flat,2);IF(IsSpell() and (Tagged('WIZARD') or Tagged('SORCERER')) and (HasStatus('MIRROR_IMAGE_1') or HasStatus('MIRROR_IMAGE_2') or HasStatus('MIRROR_IMAGE_3'))):DamageReduction(All,Half)"
 
-// LEGENDARY
+// ================ LEGENDARY ================
 new entry "MAG_Neck39_4"
 type "Armor"
 using "MAG_Neck39"
@@ -4142,7 +4163,8 @@ data "StackId" "RING22_4"
 data "TooltipDamage" "DealDamage(6d4, Acid)"
 data "TickFunctors" "DealDamage(6d4, Acid)"
 
-// Quartz Ring, shared passives
+// ================ Quartz Ring — Shared ================
+// Passive 1: Marrowblight (all tiers)
 new entry "MAG_Ring23_Marrowblight"
 type "PassiveData"
 data "DisplayName" "hfc270530g252eg4fc2g9bc1g61883966bd59;1"
@@ -4161,6 +4183,7 @@ data "RemoveConditions" "not HasStatus('RAY_OF_ENFEEBLEMENT')"
 data "RemoveEvents" "OnStatusRemoved"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
+// Passive 1b: Crystalline Hemorrhage — base display passive
 new entry "MAG_Ring23_Hemorrhage_Passive"
 type "PassiveData"
 data "DisplayName" "h27bbba71gec4ag448dg8008g71ff1693431c;1"
@@ -4168,6 +4191,7 @@ data "Description" "hf30774d3g8a28g44degbc73g2c143001c724;1"
 data "DescriptionParams" "DealDamage(1d6,Necrotic)"
 data "Properties" "Highlighted"
 
+// Passive 1b: Crystalline Hemorrhage — base tick status
 new entry "MAG_RING23_HEMORRHAGE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -4176,6 +4200,7 @@ data "TickType" "StartTurn"
 data "TickFunctors" "IF(not Tagged('WIZARD') and Combat()):DealDamage(1d6,Necrotic,Magical)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
+// Passive 2: Graveborn Acumen — base (Rare+)
 new entry "MAG_Ring23_GravebornAcumen"
 type "PassiveData"
 data "DisplayName" "h86cbb9bdg5199g4acfgbba3gc204a14d8878;1"
@@ -4196,7 +4221,7 @@ data "BoostContext" "OnStatusApplied;OnStatusRemoved;OnCreate;OnEquip"
 data "BoostConditions" "IsMageArmored(context.Source)"
 data "Boosts" "StatusImmunity(SG_Prone);StatusImmunity(PRONE_ICE);Attribute(Grounded)"
 
-// Rare Block (base)
+// ================ Rare Block (base) ================
 new entry "MAG_Ring23"
 type "Armor"
 using "_Ring_Magic"
@@ -4209,7 +4234,7 @@ data "Rarity" "Rare"
 data "PassivesOnEquip" "MAG_Ring23_Marrowblight;MAG_Ring23_Hemorrhage_Passive_2;MAG_Ring23_GravebornAcumen"
 data "StatusOnEquip" "MAG_RING23_HEMORRHAGE_2"
 
-// Uncommon Block
+// ================ Uncommon Block ================
 new entry "MAG_Ring23_1"
 type "Armor"
 using "MAG_Ring23"
@@ -4231,7 +4256,7 @@ using "MAG_RING23_HEMORRHAGE"
 data "StackId" "MAG_RING23_HEMORRHAGE_2"
 data "TickFunctors" "IF(not Tagged('WIZARD') and Combat()):DealDamage(2d6,Necrotic,Magical)"
 
-// VeryRare Block
+// ================ VeryRare Block ================
 new entry "MAG_Ring23_3"
 type "Armor"
 using "MAG_Ring23"
@@ -4253,7 +4278,7 @@ using "MAG_RING23_HEMORRHAGE"
 data "StackId" "MAG_RING23_HEMORRHAGE_3"
 data "TickFunctors" "IF(not Tagged('WIZARD') and Combat()):DealDamage(3d6,Necrotic,Magical)"
 
-// Legendary Block
+// ================ Legendary Block ================
 new entry "MAG_Ring23_4"
 type "Armor"
 using "MAG_Ring23"
@@ -4484,7 +4509,7 @@ using "MAG_Ring26_bonus"
 data "DescriptionParams" "0;1;80"
 data "Conditions" "Enemy() and Character() and not RollDieAgainstDC(DiceType.d100,80) and not HasStatus('FAERIE_FIRE',context.Target) and not IsImmuneToStatus('SG_Invisible',context.Target)"
 
-// Duergar Torture Ring
+// ================ Duergar Torture Ring — EPIC (BASE) ================
 new entry "MAG_Ring27"
 type "Armor"
 using "_Ring_Magic"
@@ -4555,7 +4580,7 @@ data "SpellType" "Projectile"
 using "Projectile_RING27_Reverb_1"
 data "SpellProperties" "ApplyStatus(MAG_THUNDER_REVERBERATION,100,2);ApplyStatus(MAG_THUNDER_REVERBERATION_DURATION_TECHNICAL,100,1);ApplyStatus(RING27_REVERB_TRIGGER,100,0)"
 
-// UNCOMMON (MAG_Ring27_1)
+// ================ UNCOMMON (MAG_Ring27_1) ================
 new entry "MAG_Ring27_1"
 type "Armor"
 using "MAG_Ring27"
@@ -4564,7 +4589,7 @@ data "Rarity" "Uncommon"
 data "ComboCategory" "d1"
 data "PassivesOnEquip" "MAG_Ring27_P1"
 
-// RARE (MAG_Ring27_2)
+// ================ RARE (MAG_Ring27_2) ================
 new entry "MAG_Ring27_2"
 type "Armor"
 using "MAG_Ring27"
@@ -4573,7 +4598,7 @@ data "Rarity" "Rare"
 data "ComboCategory" "d2"
 data "PassivesOnEquip" "MAG_Ring27_P1;MAG_Ring27_P2"
 
-// LEGENDARY (MAG_Ring27_4)
+// ================ LEGENDARY (MAG_Ring27_4) ================
 new entry "MAG_Ring27_4"
 type "Armor"
 using "MAG_Ring27"
@@ -4764,7 +4789,7 @@ using "_PASSIVES"
 data "StatusEffect" "06f6b27e-8598-4b0e-8436-f437b71385c2"
 
 // Astral Dream Ring
-// RARE (BASE)
+// ================ RARE (BASE) ================
 new entry "MAG_Ring29"
 type "Armor"
 using "_Ring_Magic"
@@ -4802,7 +4827,7 @@ data "OnApplyFunctors" "ApplyStatus(SELF,FLY,100,-1)"
 data "OnRemoveFunctors" "RemoveStatus(FLY)"
 data "RemoveEvents" "OnCombatEnded"
 
-// UNCOMMON
+// ================ UNCOMMON ================
 new entry "MAG_Ring29_1"
 type "Armor"
 using "MAG_Ring29"
@@ -4833,7 +4858,7 @@ data "OnApplyFunctors" "ApplyStatus(SELF,FLY,100,-1)"
 data "OnRemoveFunctors" "RemoveStatus(FLY)"
 data "RemoveEvents" "OnCombatEnded"
 
-// VERY RARE
+// ================ VERY RARE ================
 new entry "MAG_Ring29_3"
 type "Armor"
 using "MAG_Ring29"
@@ -5228,7 +5253,7 @@ data "ValueLevel" "7"
 data "Rarity" "Rare"
 data "PassivesOnEquip" "MAG_Ring35_HealingWaters_Passive_T2"
 
-// Ring of Long Life - UNCOMMON BLOCK
+// ================ Ring of Long Life - UNCOMMON BLOCK ================
 new entry "MAG_Ring35_1"
 type "Armor"
 using "MAG_Ring35"
@@ -5237,7 +5262,7 @@ data "Rarity" "Uncommon"
 data "ComboCategory" "d1"
 data "PassivesOnEquip" "MAG_Ring35_HealingWaters_Passive"
 
-// Ring of Long Life - VERYRARE BLOCK
+// ================ Ring of Long Life - VERYRARE BLOCK ================
 new entry "MAG_Ring35_3"
 type "Armor"
 using "MAG_Ring35"
@@ -5246,7 +5271,7 @@ data "Rarity" "VeryRare"
 data "ComboCategory" "d3"
 data "PassivesOnEquip" "MAG_Ring35_HealingWaters_Passive_T3;MAG_Ring35_LeviathanVitality_Passive"
 
-// Ring of Long Life - LEGENDARY BLOCK
+// ================ Ring of Long Life - LEGENDARY BLOCK ================
 new entry "MAG_Ring35_4"
 type "Armor"
 using "MAG_Ring35"
@@ -5380,7 +5405,7 @@ data "StatsFunctors" "GROUND:SurfaceChange(Clear);GROUND:CreateSurface(2,-1,None
 data "Boosts" "ActiveCharacterLight(e278f6a0-26d7-49be-b11a-9b84bc313c3c)"
 
 // Ring of Omnipotence
-// BASE (Rare)
+// ================ BASE (Rare) ================
 new entry "MAG_Ring40"
 type "Armor"
 using "_Ring_Magic"
@@ -5428,7 +5453,7 @@ data "TickType" "StartTurn"
 data "TickFunctors" "IF(IsMageArmored() and Combat()):ApplyStatus(MAG_CQC_ARCANE_CHARGE,100,2);IF(IsMageArmored() and Combat() and StatusDurationEqualOrMoreThan(context.Target,'MAG_CQC_ARCANE_CHARGE',5)):SetStatusDuration(MAG_CQC_ARCANE_CHARGE,4,ForceSet)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 
-// UNCOMMON
+// ================ UNCOMMON ================
 new entry "MAG_Ring40_1"
 type "Armor"
 using "MAG_Ring40"
@@ -5442,7 +5467,7 @@ new entry "MAG_Ring40_1_bonus"
 type "PassiveData"
 using "MAG_Ring40_bonus"
 
-// VERY RARE
+// ================ VERY RARE ================
 new entry "MAG_Ring40_3"
 type "Armor"
 using "MAG_Ring40"
@@ -5487,7 +5512,7 @@ data "StatusType" "BOOST"
 using "MAG_RING40_TICK"
 data "TickFunctors" "IF(IsMageArmored() and Combat()):ApplyStatus(MAG_CQC_ARCANE_CHARGE,100,2);IF(IsMageArmored() and Combat() and StatusDurationEqualOrMoreThan(context.Target,'MAG_CQC_ARCANE_CHARGE',7)):SetStatusDuration(MAG_CQC_ARCANE_CHARGE,6,ForceSet)"
 
-// LEGENDARY
+// ================ LEGENDARY ================
 new entry "MAG_Ring40_4"
 type "Armor"
 using "MAG_Ring40"
@@ -5567,7 +5592,12 @@ data "Properties" "Highlighted;ToggledDefaultOn;IsToggled;ToggledDefaultAddToHot
 data "ToggleOnFunctors" "IF(IntelligenceGreaterThan(19)):ApplyStatus(RING41AURA, 100, -1);IF(IntelligenceGreaterThan(19)):ApplyStatus(RING41, 100, -1)"
 data "ToggleOffFunctors" "RemoveStatus(RING41AURA);RemoveStatus(RING41)"
 
-// Garnet Ring of the Artisan, Fateweaver's Ring
+// Garnet Ring of the Artisan
+// ══════════════════════════════════════════════════════════════════════════════
+// Fateweaver's Ring / Перстень судьбоплёта
+// The garnet reveals threads of fate — pull them to alter fortune,
+// but such power always demands a price.
+// ══════════════════════════════════════════════════════════════════════════════
 
 // --- Debuff statuses (stacking, clear on long rest) ---
 
@@ -5659,7 +5689,7 @@ data "DescriptionParams" "15;1"
 data "Icon" "Ring42_Giant"
 data "Boosts" "UnlockInterrupt(Interrupt_Ring42_Giant)"
 
-// Rare (base)
+// ─────────────── Rare (base) ───────────────
 
 new entry "MAG_Ring42"
 type "Armor"
@@ -5672,7 +5702,7 @@ data "ValueLevel" "4"
 data "Rarity" "Rare"
 data "PassivesOnEquip" "MAG_Ring42_Fatal_Passive;MAG_Ring42_Balanced_Passive"
 
-// Uncommon
+// ─────────────── Uncommon ───────────────
 
 new entry "MAG_Ring42_1"
 type "Armor"
@@ -5682,7 +5712,7 @@ data "Rarity" "Uncommon"
 data "ComboCategory" "d1"
 data "PassivesOnEquip" "MAG_Ring42_Fatal_Passive"
 
-// VeryRare
+// ─────────────── VeryRare ───────────────
 
 new entry "MAG_Ring42_3"
 type "Armor"
@@ -5692,7 +5722,7 @@ data "Rarity" "VeryRare"
 data "ComboCategory" "d3"
 data "PassivesOnEquip" "MAG_Ring42_Fatal_Passive;MAG_Ring42_Balanced_Passive;MAG_Ring42_Giant_Passive"
 
-// deleted
+// ─────────────── deleted ───────────────
 
 new entry "MAG_Ring42_4"
 type "Armor"
@@ -6137,7 +6167,7 @@ data "DescriptionParams" "DealDamage(6d4,Force);DealDamage(12d4,Force)"
 data "Properties" "IF(HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Prone',context.Target) or HasStatus('SG_Paralyzed',context.Target)):DealDamage(12d4,Force,Magical);IF(not HasStatus('SG_Incapacitated',context.Target) and not HasStatus('SG_Stunned',context.Target) and not HasStatus('SG_Prone',context.Target) and not HasStatus('SG_Paralyzed',context.Target)):DealDamage(6d4,Force,Magical)"
 
 // Evil Ring
-// MAG_Ring49 T1 UNCOMMON
+// ======== MAG_Ring49 T1 UNCOMMON ========
 new entry "MAG_Ring49"
 type "Armor"
 using "_Ring_Magic"
@@ -6279,7 +6309,7 @@ data "StackId" "RING49_DARKNESS_IMMUNITY"
 data "Boosts" "StatusImmunity(BLINDED_DARKNESS);IgnoreSurfaceCover(SurfaceDarknessCloud)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;ApplyToDead;IgnoreResting"
 
-// MAG_Ring49 T2 RARE
+// ======== MAG_Ring49 T2 RARE ========
 new entry "MAG_Ring49_2"
 type "Armor"
 using "MAG_Ring49"
@@ -6334,7 +6364,7 @@ data "RemoveEvents" "OnTurn"
 data "RemoveConditions" "not HasStatus('AURA_OF_HATE_BUFF')"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
 
-// MAG_Ring49 T3 VERYRARE
+// ======== MAG_Ring49 T3 VERYRARE ========
 new entry "MAG_Ring49_3"
 type "Armor"
 using "MAG_Ring49"
@@ -6750,7 +6780,7 @@ type "PassiveData"
 using "MAG_Ring57_bonus"
 data "Description" "h9cad179dg95afg438ag879dg185958d0620f;1"
 
-// Stub, the Ring57_Bag template needs OBJ_Bag57 stats
+// Ring57 bag stub — fixes missing OBJ_Bag57 stats for Ring57_Bag template
 new entry "OBJ_Bag57"
 type "Object"
 using "OBJ_Bag"
@@ -7650,7 +7680,9 @@ data "StackId" "MY_BHAAL_SLASHING_ARMOR_DEADREVIVAL_TECHNICAL"
 data "RemoveEvents" "OnHeal"
 data "OnRemoveFunctors" "ApplyStatus(MY_BHAAL_SLASHING_AURA_OF_MURDER_AURA, 100, -1)"
 
-// Aquamancer set: Neck27, Aquamancer's Amulet
+// ================================================================================
+// AQUAMANCER SET — Neck27: Aquamancer's Amulet
+// ================================================================================
 
 // --- Drowning Tide visible passive (base T1, WET 2 turns) ---
 new entry "MAG_Neck27_DrowningTide_Passive"
@@ -7790,7 +7822,9 @@ data "StatusPropertyFlags" "DisableCombatlog"
 data "StatusGroups" "SG_Condition"
 
 
-// Aquamancer set: Ring07, Heart of the Boiling Ocean
+// ================================================================================
+// AQUAMANCER SET — Ring07: Heart of the Boiling Ocean
+// ================================================================================
 
 // --- Thawing Step visible passive (shared) ---
 new entry "MAG_Ring07_ThawingStep_Passive"
@@ -7849,7 +7883,9 @@ using "MAG_Ring07_ScaldingSurge_Passive"
 data "DescriptionParams" "DealDamage(1d20,Fire);2"
 data "StatsFunctors" "DealDamage(1d20,Fire,Magical,,0,,true,false);ApplyStatus(SELF,WET,100,2)"
 
-// Aquamancer set: Ring35, Ring of Long Life
+// ================================================================================
+// AQUAMANCER SET — Ring35: Ring of Long Life
+// ================================================================================
 
 // --- Healing Waters (base T1, 1d4) ---
 new entry "MAG_Ring35_HealingWaters_Passive"

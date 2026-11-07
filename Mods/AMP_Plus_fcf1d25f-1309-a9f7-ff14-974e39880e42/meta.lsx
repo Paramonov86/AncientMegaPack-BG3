@@ -112,7 +112,7 @@
                     <attribute id="FileSize" type="uint64" value="0"/>
                     <attribute id="Folder" type="LSString" value="AMP_Plus_fcf1d25f-1309-a9f7-ff14-974e39880e42"/>
                     <attribute id="LobbyLevelName" type="FixedString" value=""/>
-                    <attribute id="MD5" type="LSString" value="f6dacd38f417fe79244e2f8be819b4b1"/>
+                    <attribute id="MD5" type="LSString" value="41f93f303f6f5d81bfd89e03c6934235"/>
                     <attribute id="MenuLevelName" type="FixedString" value=""/>
                     <attribute id="Name" type="LSString" value="Ancient Mega Pack Plus"/>
                     <attribute id="NumPlayers" type="uint8" value="4"/>
@@ -120,7 +120,7 @@
                     <attribute id="PublishHandle" type="uint64" value="6163496"/>
                     <attribute id="StartupLevelName" type="FixedString" value=""/>
                     <attribute id="UUID" type="FixedString" value="fcf1d25f-1309-a9f7-ff14-974e39880e42"/>
-                    <attribute id="Version64" type="int64" value="37999124003422272"/>
+                    <attribute id="Version64" type="int64" value="37999128298389570"/>
                     <children>
                         <node id="PublishVersion">
                             <attribute id="Version64" type="int64" value="144255927718626661"/>

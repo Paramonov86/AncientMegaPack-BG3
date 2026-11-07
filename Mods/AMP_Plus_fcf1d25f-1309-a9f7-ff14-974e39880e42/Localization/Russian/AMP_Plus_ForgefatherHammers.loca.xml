@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">Длань отца кузни</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">Выкованный в Сердце Гор, этот молот некогда служил самому Морадину для обработки первых залежей первородной руды. Говорят, бог-кузнец вложил в него не только тяжесть подземных недр, но и само понятие «кузни».&lt;br&gt;&lt;br&gt;В руках смертного оружие сохранило свою божественную суть: каждый удар этим молотом обрушивает на врага неумолимую гравитацию гор, сбивая с ног. Для Морадина вся земля служит вечной наковальней. Любой, кто падает под ударом, оказывается прижат к ней, и его плоть, кости или броня становятся такими же хрупкими, как некачественный металл. А добивающий удар по такому врагу подобен удару молота по раскалённому железу на наковальне: он безжалостно крошит и дробит цель.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">Молот</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">При получении урона от этого молота существо должно пройти &lt;LSTag Tooltip="SavingThrow"&gt;испытание&lt;/LSTag&gt; Силы против вашего &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;КС маневров&lt;/LSTag&gt;, иначе оно будет &lt;LSTag Type="Status" Tooltip="PRONE"&gt;сбито с ног&lt;/LSTag&gt; на &lt;b&gt;[1]&lt;/b&gt; ход.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">Наковальня</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">&lt;LSTag Type="Status" Tooltip="PRONE"&gt;Сбитые вами с ног&lt;/LSTag&gt; враги становятся &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;«Хрупкими»&lt;/LSTag&gt; на &lt;b&gt;[1]&lt;/b&gt; хода.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">Между молотом и наковальней</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">При ударе этим молотом по &lt;LSTag Type="Status" Tooltip="PRONE"&gt;сбитым с ног&lt;/LSTag&gt; целям вы дополнительно наносите &lt;b&gt;[1]&lt;/b&gt;.</content>
+</contentList>

@@ -358,6 +358,68 @@ DB_AMP_TutorialChest_Summoned(_Chest, _)
 THEN
 DB_AMP_LM_NoSort(_Item);
 
+// summoned item chests are never sorted, junked or autolooted
+IF
+DB_AMP_Para_Spawned((ITEM)_Chest)
+THEN
+DB_AMP_LM_NoSort(_Chest);
+DB_AMP_AL_ContainerDone(_Chest);
+
+IF
+DB_AMP_TutorialChest_Summoned((ITEM)_Chest, _)
+THEN
+DB_AMP_LM_NoSort(_Chest);
+DB_AMP_AL_ContainerDone(_Chest);
+
+// anything the player takes out of their own bags stays where they put it
+IF
+RemovedFrom((ITEM)_Item, (ITEM)_Bag)
+AND
+GetInventoryOwner(_Bag, (CHARACTER)_P)
+AND
+DB_Players(_P)
+AND
+GetTemplate(_Bag, (ITEMROOT)_T)
+AND
+NOT DB_AMP_VoidCapsule_Reward(_, _, _T)
+AND
+NOT DB_AMP_VoidCapsule_Container(_T, _)
+AND
+NOT DB_AMP_LM_NoSort(_Item)
+THEN
+DB_AMP_LM_NoSort(_Item);
+
+// event order is not guaranteed, cancel a route queued before the mark
+IF
+DB_AMP_LM_NoSort((ITEM)_Item)
+AND
+DB_AMP_LM_Pending(_Item, (INTEGER)_Type)
+THEN
+NOT DB_AMP_LM_Pending(_Item, _Type);
+ObjectTimerCancel(_Item, "AMP_LM_Route");
+
+// autoloot clears its done list on every level start
+IF
+LevelGameplayStarted(_, _)
+THEN
+TimerLaunch("AMP_Plus_LM_ChestGuard", 1000);
+
+IF
+TimerFinished("AMP_Plus_LM_ChestGuard")
+AND
+DB_AMP_Para_Spawned((ITEM)_Chest)
+THEN
+DB_AMP_LM_NoSort(_Chest);
+DB_AMP_AL_ContainerDone(_Chest);
+
+IF
+TimerFinished("AMP_Plus_LM_ChestGuard")
+AND
+DB_AMP_TutorialChest_Summoned((ITEM)_Chest, _)
+THEN
+DB_AMP_LM_NoSort(_Chest);
+DB_AMP_AL_ContainerDone(_Chest);
+
 QRY
 QRY_AMP_LM_IsCoin((ITEM)_Item)
 AND

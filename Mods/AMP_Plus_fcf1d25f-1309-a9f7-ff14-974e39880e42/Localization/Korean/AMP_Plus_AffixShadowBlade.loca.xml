@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hdfb23537g30b2g4368ga1f0g57122f603403" version="1">그림자 검 수정</content>
+	<content contentuid="hbc08212ag28b2g4842gaddeg9646bb7f264d" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [이 모드의 기본값과 일치하면 정당함]&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;그림자 검&lt;/LSTag&gt;은 주문 슬롯 레벨과 관계없이 항상 [1]를 입힙니다.</content>
+	<content contentuid="hc5d36564g77d3g4a38g9afag7a7ffbed6283" version="1">&lt;b&gt;그림자 검 수정&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;그림자 검&lt;/LSTag&gt;은 주문 슬롯 레벨과 관계없이 항상 2d8 피해를 입힙니다.&lt;br&gt;&lt;br&gt;활성화할까요?</content>
+</contentList>

@@ -1,6 +1,10 @@
-// Mutacid slimes. Inheritance: _Ooze, AMP_AcidSlime_Base, archetype, tier
+// ================================================================================
+// AMP MUTACID — slimes (CharacterData + custom spells + scale/control). Phase 1.
+// Inheritance tree: _Ooze -> AMP_AcidSlime_Base -> archetype -> tier. Plan §5.5.
+// Names/Title live in RootTemplates (DisplayName), not here. Visuals: Max in toolkit.
+// ================================================================================
 
-// custom attack spells (own loca; +acid-coated bonus)
+// ---- custom attack spells (own loca; +acid-coated bonus) ----
 new entry "Target_AMP_AcidSlime_Pseudopod"
 type "SpellData"
 data "SpellType" "Target"
@@ -24,7 +28,7 @@ data "SpellSuccess" "DealDamage(1d6,Acid);IF(HasStatus('ACID',context.Target)):D
 data "TooltipDamageList" "DealDamage(1d6,Acid);DealDamage(1d6,Acid)"
 data "Icon" "Action_Monster_Dilophosaurus_CorrosiveSpit"
 
-// party-scale (Osiris applies on spawn; common StackId -> High overwrites Mid)
+// ---- party-scale (Osiris applies on spawn; common StackId -> High overwrites Mid) ----
 new entry "AMP_AcidSlime_LevelScale_Mid"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -41,7 +45,7 @@ data "StackId" "AMP_AcidSlime_LevelScale"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 data "Boosts" "IncreaseMaxHP(90%);AC(2);RollBonus(Attack,2)"
 
-// ally faction via status (ref MAG_NNECROTIC_PARTY_ALLY; SetFaction reverts on round transition)
+// ---- ally faction via status (ref MAG_NNECROTIC_PARTY_ALLY; SetFaction reverts on round transition) ----
 new entry "AMP_ACIDSLIME_PARTY_ALLY"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -49,7 +53,7 @@ data "StackId" "AMP_ACIDSLIME_PARTY_ALLY"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 data "Boosts" "FactionOverride(Source)"
 
-// autonomy (LoseControl = StatusPropertyFlags, NOT Boosts; ref AMP_BEHOLDER_CONTROL)
+// ---- autonomy (LoseControl = StatusPropertyFlags, NOT Boosts; ref AMP_BEHOLDER_CONTROL) ----
 new entry "AMP_AcidSlime_Control"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -58,7 +62,7 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 data "StatusEffect" "d3379af8-b2d2-cb80-2bd9-53ad0cad9f15"
 data "Passives" "AMP_AcidSlime_Trail"
 
-// Acid trail: OnMovedDistance marker, Osiris creates SurfaceAcid
+// ---- acid trail: OnMovedDistance -> marker -> Osiris CreateSurface(SurfaceAcid). Vanilla ref Act1_UND_DuergarCamp_Misc:868 ----
 new entry "AMP_AcidSlime_Trail"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -79,7 +83,9 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_MUTACID_TRAIL_CD"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
+// ================================================================================
 // BASE CHASSIS (abstract; never spawned directly)
+// ================================================================================
 new entry "AMP_AcidSlime_Base"
 type "Character"
 using "_Ooze"
@@ -94,7 +100,7 @@ data "ColdResistance" "Resistant"
 data "FireResistance" "Resistant"
 data "XPReward" ""
 
-// T1 seed: Amoeba
+// ---- T1 seed: Amoeba ----
 new entry "AMP_AcidSlime_Amoeba"
 type "Character"
 using "AMP_AcidSlime_Base"
@@ -106,7 +112,7 @@ data "Armor" "10"
 data "Level" "1"
 data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:4.5;ReactionActionPoint:1"
 
-// TANK (2+ DEF): high HP/AC, slow, +resists
+// ---- TANK (2+ DEF): high HP/AC, slow, +resists ----
 new entry "AMP_AcidSlime_Tank_T2"
 type "Character"
 using "AMP_AcidSlime_Base"
@@ -130,7 +136,7 @@ data "Armor" "16"
 data "Level" "6"
 data "ProficiencyBonus" "3"
 
-// BRUISER (2+ OFF): high Str/damage, mid HP, melee+spit
+// ---- BRUISER (2+ OFF): high Str/damage, mid HP, melee+spit ----
 new entry "AMP_AcidSlime_Bruiser_T2"
 type "Character"
 using "AMP_AcidSlime_Base"
@@ -151,7 +157,7 @@ data "Armor" "13"
 data "Level" "6"
 data "ProficiencyBonus" "3"
 
-// SKIRMISHER (MOB): high Dex/speed, fragile
+// ---- SKIRMISHER (MOB): high Dex/speed, fragile ----
 new entry "AMP_AcidSlime_Skirmisher_T2"
 type "Character"
 using "AMP_AcidSlime_Base"
@@ -174,7 +180,7 @@ data "Level" "6"
 data "ProficiencyBonus" "3"
 data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:10.5;ReactionActionPoint:1"
 
-// HYBRID (no dominant): balanced
+// ---- HYBRID (no dominant): balanced ----
 new entry "AMP_AcidSlime_Hybrid_T2"
 type "Character"
 using "AMP_AcidSlime_Base"
@@ -197,7 +203,7 @@ data "Armor" "14"
 data "Level" "6"
 data "ProficiencyBonus" "3"
 
-// SPITTER (OFF+MOB): ranged artillery, stays back, primary=spit
+// ---- SPITTER (OFF+MOB): ranged artillery, stays back, primary=spit ----
 new entry "AMP_AcidSlime_Spitter_T2"
 type "Character"
 using "AMP_AcidSlime_Base"

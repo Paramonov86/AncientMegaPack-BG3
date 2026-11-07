@@ -4,8 +4,11 @@ INITSECTION
 
 KBSECTION
 
-// IsEquipped/GetInventoryOwner do not match the db item refs, so GetEquippedItem per slot
-// 5s timer runs after the 3s timer of v1 on saves that still have it
+// shard transfer fix v2.
+// on save load Equipped/StatusApplied re-fire and the transfer handler restacks
+// CHAR statuses (no StackId). v1's phase 2 was broken - IsEquipped/GetInventoryOwner
+// didn't match the db item refs. v2 uses GetEquippedItem per slot like the core handlers.
+// 5s timer so it runs after v1's 3s timer on saves that still have the old script.
 
 IF
 LevelGameplayStarted(_Level, _)

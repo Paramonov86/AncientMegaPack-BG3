@@ -4,7 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// servitude obligation pool, after the good ending
+// servitude phase 2 obligation pool (after good ending).
+// combat start picks one of 5; tracker counts qualifying actions;
+// combat end: pass keeps HUMBLED, fail restores curse + judgement.
 
 // assignment: random pick from pool
 
@@ -79,8 +81,9 @@ NOT DB_AMP_Kroneth_VowBroken(_Char)
 THEN
 DB_AMP_Kroneth_VowBroken(_Char);
 
-// slaughter: last attacker, counted on victim death
-// split in two so THEN keeps explicit bindings, no wildcards
+// slaughter: track last attacker, count on victim death.
+// two rules so the THEN bindings stay explicit (no unbound wildcards):
+// replace existing attacker if a different one hits, else fresh entry.
 
 IF
 AttackedBy((CHARACTER)_Defender, _, (CHARACTER)_Attacker, _, _, _, _)
@@ -263,7 +266,9 @@ _Count < 2
 THEN
 PROC_AMP_Kroneth_VowBroken_Resolve(_Char);
 
-// LeftCombat never fires for the dead, the obligation would stick and block the next combat
+// dead character cleanup.
+// LeftCombat doesn't fire for the dead in vanilla, so the obligation db
+// would stick forever and block the next combat. death mid-combat = vow broken.
 
 IF
 Died((CHARACTER)_Char)

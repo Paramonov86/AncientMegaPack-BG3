@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h4991785aga322g4ddeg9e17gd1d6c13397a7" version="1">Um inimigo que sofre dano desta cimitarra deve passar em um &lt;LSTag Tooltip="SavingThrow"&gt;teste de resistência&lt;/LSTag&gt; de Constituição contra sua &lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;CD de Potência&lt;/LSTag&gt; ou ficará &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Cego&lt;/LSTag&gt;.</content>
+</contentList>

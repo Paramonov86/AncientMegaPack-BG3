@@ -3,7 +3,9 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
-// force-recast: every trigger strips all prog statuses and re-applies from the applied + killtier lists
+// boss progression v6, force-recast. source of truth = applied + killtier lists,
+// one applied entry per killed boss. every trigger strips all prog statuses then
+// re-applies from the list. legacy bossprogression.txt left alone for save compat.
 
 // triggers
 

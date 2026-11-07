@@ -602,6 +602,7 @@ THEN
 NOT DB_AMP_RandomProcessing((ITEM)_Container);
 RequestDelete((ITEM)_Container);
 
+// no longer empty -> cancel deletion
 IF
 ObjectTimerFinished(_Container, "AMP_DeleteEmptyRewardContainer")
 AND

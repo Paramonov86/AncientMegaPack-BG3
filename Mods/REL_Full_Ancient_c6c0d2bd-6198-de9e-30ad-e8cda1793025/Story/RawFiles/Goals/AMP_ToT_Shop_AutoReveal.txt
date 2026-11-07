@@ -4,7 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// containers respawn INVISIBLE on level change, strip it if the shop is already on
+// shop containers respawn INVISIBLE on level change, so the shop vanished even after
+// the player turned it on. on level start, if already activated, strip INVISIBLE.
+// no stock changes, restock handles first use.
 
 IF
 LevelGameplayStarted(_, _)

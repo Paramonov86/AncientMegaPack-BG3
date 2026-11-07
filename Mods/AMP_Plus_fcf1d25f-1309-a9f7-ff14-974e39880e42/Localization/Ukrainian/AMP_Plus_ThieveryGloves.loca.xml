@@ -2,4 +2,8 @@
 <contentList>
 	<content contentuid="hd91e2cffge5abg4394g86eagca08cbd5f721" version="1">Аферист</content>
 	<content contentuid="hd8e9ceb4g7e47g40fdga8a0g27acc30c40fa" version="1">Ви отримуєте бонус +[1] до кидків ініціативи. Вступаючи в бій, ви стаєте &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Невидимим&lt;/LSTag&gt; на своєму ході на &lt;b&gt;[2]&lt;/b&gt; ходи.</content>
+	<content contentuid="h9c3d3c45gf0ccg48fcg8b1cg642d4cabb345" version="1">За замком</content>
+	<content contentuid="h6c3d6c67g43eag4f53gabb1g10178324a0b2" version="3">Зламавши замок відмичками, ви з шансом &lt;b&gt;[1]%&lt;/b&gt; отримуєте випадковий &lt;LSTag Type="Status" Tooltip="AMP_RUNIC_SHARD_INFO"&gt;Рунічний уламок&lt;/LSTag&gt;. Кожен замок спрацьовує один раз. Не більше &lt;b&gt;[2]&lt;/b&gt; уламків за &lt;LSTag Tooltip="LongRest"&gt;довгий відпочинок&lt;/LSTag&gt;.</content>
+	<content contentuid="h86e3d9bbg624cg4760g8648gc352bdd22f93" version="1">Злодійська вдача</content>
+	<content contentuid="h8419c8bcg2cd7g4510gb87ag8bf801513c8e" version="3">Зламавши замок відмичками, ви з шансом &lt;b&gt;[1]%&lt;/b&gt; отримуєте &lt;LSTag Type="Status" Tooltip="AMP_VOID_CAPSULE_CHARGES"&gt;Капсулу Порожнечі&lt;/LSTag&gt;. Кожен замок спрацьовує один раз. Не більше &lt;b&gt;[2]&lt;/b&gt; капсул за &lt;LSTag Tooltip="LongRest"&gt;довгий відпочинок&lt;/LSTag&gt;.</content>
 </contentList>

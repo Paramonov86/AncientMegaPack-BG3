@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">Ви отримуєте бонус +[1] до &lt;LSTag Tooltip="SpellDifficultyClass"&gt;СК рятівних кидків проти заклять&lt;/LSTag&gt; і +[2] до &lt;LSTag Tooltip="AttackRoll"&gt;кидків атаки&lt;/LSTag&gt; закляттями.</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">Абсолютний жар</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">Завдаючи шкоди цією рапірою в бою, ви створюєте &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Пекельний вогонь&lt;/LSTag&gt; радіусом &lt;b&gt;[1]&lt;/b&gt; на &lt;b&gt;[2]&lt;/b&gt; ходи. &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Пекельний вогонь&lt;/LSTag&gt; не діє на вас.&lt;br&gt;&lt;br&gt;Ви ігноруєте &lt;LSTag Tooltip="Resistant"&gt;опір&lt;/LSTag&gt; і &lt;LSTag Tooltip="Immune"&gt;несприйнятливість&lt;/LSTag&gt; цілей до шкоди вогнем.</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">Жар Аверно</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">Стрімкий випад, під час якого зі зброї виривається хвиля пекельного полум'я.</content>
+</contentList>

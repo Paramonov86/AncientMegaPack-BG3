@@ -75,8 +75,30 @@ AND
 DB_AMP_Plus_UltraMob(_Mob, (CHARACTER)_Boss)
 AND
 IsDead(_Boss, 1)
+AND
+DB_AMP_Ultra_Active(1)
 THEN
 DB_AMP_Plus_ChasePending(_Template);
+NOT DB_AMP_Plus_Chase(_Mob, _Template);
+SetOnStage(_Mob, 0);
+RequestDeleteTemporary(_Mob);
+
+// ULTRA switched off: the stray leaves without a debt
+IF
+ObjectTimerFinished((CHARACTER)_Mob, "AMP_Plus_ChaseQueue")
+AND
+DB_AMP_Plus_Chase(_Mob, (GUIDSTRING)_Template)
+AND
+IsDead(_Mob, 0)
+AND
+IsInCombat(_Mob, 0)
+AND
+DB_AMP_Plus_UltraMob(_Mob, (CHARACTER)_Boss)
+AND
+IsDead(_Boss, 1)
+AND
+NOT DB_AMP_Ultra_Active(1)
+THEN
 NOT DB_AMP_Plus_Chase(_Mob, _Template);
 SetOnStage(_Mob, 0);
 RequestDeleteTemporary(_Mob);
@@ -248,8 +270,25 @@ AND
 IsDead(_Mob, 0)
 AND
 IsInCombat(_Mob, 0)
+AND
+DB_AMP_Ultra_Active(1)
 THEN
 DB_AMP_Plus_ChasePending(_Template);
+NOT DB_AMP_Plus_ChaseActive(_Mob, _Template);
+SetOnStage(_Mob, 0);
+RequestDeleteTemporary(_Mob);
+
+IF
+ObjectTimerFinished((CHARACTER)_Mob, "AMP_Plus_ChaseQueue")
+AND
+DB_AMP_Plus_ChaseActive(_Mob, (GUIDSTRING)_Template)
+AND
+IsDead(_Mob, 0)
+AND
+IsInCombat(_Mob, 0)
+AND
+NOT DB_AMP_Ultra_Active(1)
+THEN
 NOT DB_AMP_Plus_ChaseActive(_Mob, _Template);
 SetOnStage(_Mob, 0);
 RequestDeleteTemporary(_Mob);

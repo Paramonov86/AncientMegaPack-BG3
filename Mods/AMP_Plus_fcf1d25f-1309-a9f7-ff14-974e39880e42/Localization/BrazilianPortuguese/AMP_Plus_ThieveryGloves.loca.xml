@@ -2,4 +2,8 @@
 <contentList>
 	<content contentuid="hd91e2cffge5abg4394g86eagca08cbd5f721" version="1">Vigarista</content>
 	<content contentuid="hd8e9ceb4g7e47g40fdga8a0g27acc30c40fa" version="1">Você recebe um bônus de +[1] nas rolagens de iniciativa. Ao entrar em combate, você fica &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Invisível&lt;/LSTag&gt; no seu turno por &lt;b&gt;[2]&lt;/b&gt; turnos.</content>
+	<content contentuid="h9c3d3c45gf0ccg48fcg8b1cg642d4cabb345" version="1">Atrás da fechadura</content>
+	<content contentuid="h6c3d6c67g43eag4f53gabb1g10178324a0b2" version="3">Ao arrombar uma fechadura, você tem &lt;b&gt;[1]%&lt;/b&gt; de chance de obter um &lt;LSTag Type="Status" Tooltip="AMP_RUNIC_SHARD_INFO"&gt;Fragmento Rúnico&lt;/LSTag&gt; aleatório. Cada fechadura conta uma vez. No máximo &lt;b&gt;[2]&lt;/b&gt; fragmentos por &lt;LSTag Tooltip="LongRest"&gt;descanso longo&lt;/LSTag&gt;.</content>
+	<content contentuid="h86e3d9bbg624cg4760g8648gc352bdd22f93" version="1">Sorte de ladrão</content>
+	<content contentuid="h8419c8bcg2cd7g4510gb87ag8bf801513c8e" version="3">Ao arrombar uma fechadura, você tem &lt;b&gt;[1]%&lt;/b&gt; de chance de obter uma &lt;LSTag Type="Status" Tooltip="AMP_VOID_CAPSULE_CHARGES"&gt;Cápsula do Vazio&lt;/LSTag&gt;. Cada fechadura conta uma vez. No máximo &lt;b&gt;[2]&lt;/b&gt; cápsulas por &lt;LSTag Tooltip="LongRest"&gt;descanso longo&lt;/LSTag&gt;.</content>
 </contentList>

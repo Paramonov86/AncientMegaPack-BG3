@@ -84,7 +84,9 @@ DB_AMP_Beach_WaveComposition(4, 3);  // Fourth wave: 4 crabs
 DB_AMP_Beach_WaveComposition(5, 3);  // Fifth wave: 3 crabs
 DB_AMP_Beach_WaveComposition(6, 8);  // Final wave: 2 crabs
 KBSECTION
-// CrabRage is a default passive of the AMP_RiverCrab template, AddPassive would duplicate it, so only the faction swaps
+// initialize trigger crab as hostile.
+// crabrage is already in amp_rivercrab template's default passives (miscstuff.txt),
+// so addpassive() would fail with a duplicate. faction swap is the only dynamic part.
 IF
 DB_AMP_Beach_TriggerCrab(_TriggerCrab)
 AND

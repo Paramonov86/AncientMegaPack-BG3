@@ -1,9 +1,11 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// "your stigma" = any stigma cast by the wearer, whichever artifact it came from
+// maps caster equip-tier marker -> ally marker applied when the wearer puts any ilmater
+// stigma on that ally. "your stigma" = any stigma cast by the wearer, not the one from this
+// specific artifact (so diadem providence fires on an ally carrying the wearer's amulet stigma too).
 
-// diadem providence
+// diadem providence: ally under any stigma you cast regens on turn start while wounded in combat. scales by diadem tier.
 DB_AMP_Ilmater_PassiveMarker("AMP_ILMATER_DIADEM_T2_EQUIPPED", "AMP_ILMATER_PROVIDENCE_REGEN_T2");
 DB_AMP_Ilmater_PassiveMarker("AMP_ILMATER_DIADEM_T3_EQUIPPED", "AMP_ILMATER_PROVIDENCE_REGEN_T3");
 DB_AMP_Ilmater_PassiveMarker("AMP_ILMATER_DIADEM_T4_EQUIPPED", "AMP_ILMATER_PROVIDENCE_REGEN_T4");
@@ -11,7 +13,7 @@ DB_AMP_Ilmater_PassiveMarker("AMP_ILMATER_DIADEM_T4_EQUIPPED", "AMP_ILMATER_PROV
 // diadem retribution (t4 only): ally under any stigma you cast retaliates with a divine smite when hit in melee.
 DB_AMP_Ilmater_PassiveMarker("AMP_ILMATER_DIADEM_T4_EQUIPPED", "AMP_ILMATER_RETRIBUTION_MARKER_T4");
 
-// boots prophet
+// boots prophet: ally under any stigma you cast rolls for an inspiration point when hit with a status in combat. chance scales by tier.
 DB_AMP_Ilmater_PassiveMarker("AMP_ILMATER_BOOTS_T1_EQUIPPED", "AMP_ILMATER_PROPHET_MARKER_T1");
 DB_AMP_Ilmater_PassiveMarker("AMP_ILMATER_BOOTS_T2_EQUIPPED", "AMP_ILMATER_PROPHET_MARKER_T2");
 DB_AMP_Ilmater_PassiveMarker("AMP_ILMATER_BOOTS_T3_EQUIPPED", "AMP_ILMATER_PROPHET_MARKER_T3");

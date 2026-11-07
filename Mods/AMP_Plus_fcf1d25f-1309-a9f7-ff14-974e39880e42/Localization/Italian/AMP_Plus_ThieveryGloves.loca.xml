@@ -2,4 +2,8 @@
 <contentList>
 	<content contentuid="hd91e2cffge5abg4394g86eagca08cbd5f721" version="1">Truffatore</content>
 	<content contentuid="hd8e9ceb4g7e47g40fdga8a0g27acc30c40fa" version="1">Ottieni un bonus di +[1] ai tiri di iniziativa. Quando entri in combattimento, diventi &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Invisibile&lt;/LSTag&gt; durante il tuo turno per &lt;b&gt;[2]&lt;/b&gt; turni.</content>
+	<content contentuid="h9c3d3c45gf0ccg48fcg8b1cg642d4cabb345" version="1">Dietro la serratura</content>
+	<content contentuid="h6c3d6c67g43eag4f53gabb1g10178324a0b2" version="3">Scassinando una serratura, hai il &lt;b&gt;[1]%&lt;/b&gt; di probabilità di ottenere una &lt;LSTag Type="Status" Tooltip="AMP_RUNIC_SHARD_INFO"&gt;Scheggia Runica&lt;/LSTag&gt; casuale. Ogni serratura conta una volta. Non più di &lt;b&gt;[2]&lt;/b&gt; schegge per &lt;LSTag Tooltip="LongRest"&gt;Riposo Lungo&lt;/LSTag&gt;.</content>
+	<content contentuid="h86e3d9bbg624cg4760g8648gc352bdd22f93" version="1">Fortuna del ladro</content>
+	<content contentuid="h8419c8bcg2cd7g4510gb87ag8bf801513c8e" version="3">Scassinando una serratura, hai il &lt;b&gt;[1]%&lt;/b&gt; di probabilità di ottenere una &lt;LSTag Type="Status" Tooltip="AMP_VOID_CAPSULE_CHARGES"&gt;Capsula del Vuoto&lt;/LSTag&gt;. Ogni serratura conta una volta. Non più di &lt;b&gt;[2]&lt;/b&gt; capsule per &lt;LSTag Tooltip="LongRest"&gt;Riposo Lungo&lt;/LSTag&gt;.</content>
 </contentList>

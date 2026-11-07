@@ -3,6 +3,11 @@ SubGoalCombiner SGC_AND
 INITSECTION
 KBSECTION
 
+// grym (adamantine golem) avarice bonus: when the generous-loot toggle is on,
+// drop one astral-tier reward cube (rolls a random epic on open) into the host
+// inventory with a pickup notice. the forge quest reward is left untouched.
+// once per playthrough.
+
 IF
 Died(S_UND_KethericCity_AdamantineGolem_2a5997fc-5f2a-4a13-b309-bed16da3b255)
 AND

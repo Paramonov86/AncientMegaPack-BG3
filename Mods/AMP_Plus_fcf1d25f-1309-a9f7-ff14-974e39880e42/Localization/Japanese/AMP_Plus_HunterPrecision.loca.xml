@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+  <content contentuid="h1c55d917gfb1bg42cdgb13cgf6a90148e9ae" version="1">あなたの&lt;b&gt;通常の遠距離攻撃&lt;/b&gt;の射程が&lt;b&gt;[1]%&lt;/b&gt;増加する 武器の通常射程を超えた射撃には依然として&lt;LSTag Tooltip="Disadvantage"&gt;不利&lt;/LSTag&gt;が付く。</content>
+  <content contentuid="hcf7ffaf2g2d8dg409dgbf2fgc2412a60b6dc" version="1">あなたの&lt;b&gt;通常の遠距離攻撃&lt;/b&gt;の射程が&lt;b&gt;[1]%&lt;/b&gt;増加する&lt;br&gt;さらに、ターゲットが&lt;b&gt;[2]&lt;/b&gt;以上離れている場合、&lt;b&gt;遠距離武器&lt;/b&gt;での&lt;LSTag Tooltip="AttackRoll"&gt;攻撃ロール&lt;/LSTag&gt;が&lt;LSTag Tooltip="Advantage"&gt;有利&lt;/LSTag&gt;になる 武器の通常射程を超えた射撃には依然として&lt;LSTag Tooltip="Disadvantage"&gt;不利&lt;/LSTag&gt;が付く。</content>
+</contentList>

@@ -3,6 +3,10 @@ SubGoalCombiner SGC_AND
 INITSECTION
 KBSECTION
 
+// salvage + pity
+// artifact-to-shards conversion with gold-value rarity brackets,
+// single-random success/fail, and pity counter for guaranteed rewards.
+
 // entry from dispatch
 PROC
 PROC_AMP_VoidCapsule_SalvageStart((ITEM)_Item, (ITEM)_Capsule, (CHARACTER)_Owner)

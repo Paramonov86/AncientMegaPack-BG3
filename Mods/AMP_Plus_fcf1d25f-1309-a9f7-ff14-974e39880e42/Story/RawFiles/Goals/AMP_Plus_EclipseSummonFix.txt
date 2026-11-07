@@ -66,5 +66,12 @@ DB_AMP_Plus_EclipseCopyRoot((CHARACTERROOT)_Template)
 THEN
 PROC_AMP_Plus_StripEclipse((CHARACTER)_C);
 
+// ethel's doubles are illusions: vanilla gives them her current hit points and removes them
+// on the first hit, so difficulty tiers stay off them
+IF
+DB_HAG_HagLair_Doubles(_Double)
+THEN
+DB_AMP_Difficulty_Excluded((CHARACTER)_Double);
+
 EXITSECTION
 ENDEXITSECTION

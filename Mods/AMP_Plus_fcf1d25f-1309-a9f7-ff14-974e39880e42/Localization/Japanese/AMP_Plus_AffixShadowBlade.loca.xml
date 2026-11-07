@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hdfb23537g30b2g4368ga1f0g57122f603403" version="1">シャドウ・ブレード修正</content>
+	<content contentuid="hbc08212ag28b2g4842gaddeg9646bb7f264d" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [このモードの既定と一致していれば正当]&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;シャドウ・ブレード&lt;/LSTag&gt;は、呪文スロットのレベルに関係なく、常に[1]を与える。</content>
+	<content contentuid="hc5d36564g77d3g4a38g9afag7a7ffbed6283" version="1">&lt;b&gt;シャドウ・ブレード修正&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;シャドウ・ブレード&lt;/LSTag&gt;は、呪文スロットのレベルに関係なく、常に2d8のダメージを与える。&lt;br&gt;&lt;br&gt;有効にしますか？</content>
+</contentList>

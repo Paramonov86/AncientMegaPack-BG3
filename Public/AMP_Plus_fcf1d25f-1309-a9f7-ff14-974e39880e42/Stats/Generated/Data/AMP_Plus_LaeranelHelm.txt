@@ -1,0 +1,33 @@
+new entry "MAG_Armour_H_124_bonus"
+type "PassiveData"
+using "MAG_Armour_H_124_bonus"
+data "DescriptionParams" "Distance(12);RegainHitPoints(1d8)"
+
+new entry "MAG_ARMOUR_H_124_HEAL"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MAG_ARMOUR_H_124_HEAL"
+data "OnApplyFunctors" "RegainHitPoints(1d8)"
+
+new entry "MAG_Armour_H_124_1"
+type "Armor"
+using "MAG_Armour_H_124_1"
+data "Boosts" ""
+
+new entry "Armour_H_124_1_Explosion"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Armour_H_124_1_Explosion"
+data "AreaRadius" "10"
+data "ExplodeRadius" "10"
+
+new entry "MAG_Armour_H_124_2"
+type "Armor"
+using "MAG_Armour_H_124_2"
+data "Boosts" "RollBonus(SavingThrow, 1, Constitution)"
+data "PassivesOnEquip" "MAG_Armour_H_124_2_bonus"
+
+new entry "MAG_Armour_H_124_2_bonus"
+type "PassiveData"
+using "MAG_Armour_H_124_2_bonus"
+data "DescriptionParams" "Distance(12);RegainHitPoints(1d6)"

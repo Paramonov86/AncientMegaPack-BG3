@@ -1,5 +1,12 @@
-// Ultra summon pool mini-bosses
+// ============================================================
+// ULTRA — Random summon pool mini-bosses for endgame (Lv8+)
+// ============================================================
+// 1. Doomflame, Bane of the Fallen King — WoW destrolock parody
+//    RootTemplate: AMP_ULTRA_Summon_01_6b432bff-5bf9-4295-8c54-faba8515b33f
+// ============================================================
 
+
+// ========== 1. DOOMFLAME — Character ==========
 
 new entry "AMP_Doomflame"
 type "Character"
@@ -28,7 +35,7 @@ data "DifficultyStatuses" "STATUS_EASY:HEALTHREDUCTION_EASYMODE;STATUS_HARD:HEAL
 data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 
 
-// 1.1 PASSIVES
+// ========== 1.1 PASSIVES ==========
 
 // --- Visual: persistent magical burning (scorched-gnome look)
 new entry "AMP_Doomflame_BurningVisuals"
@@ -86,7 +93,7 @@ data "Conditions" "(IsKillingBlow() or HasHPPercentageLessThan(25,context.Target
 data "StatsFunctors" "ApplyStatus(AMP_DOOMFLAME_EXPLODED,100,-1);CreateExplosion(Projectile_AMP_Doomflame_Detonation);Kill()"
 
 
-// 1.2 STATUSES
+// ========== 1.2 STATUSES ==========
 
 // --- Visible: magical burning (persistent VFX)
 new entry "AMP_DOOMFLAME_BURNING"
@@ -99,6 +106,7 @@ data "StackId" "AMP_DOOMFLAME_BURNING"
 data "StatusEffect" "3edf96ed-bc34-4e9f-8efd-74808e896e8d"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
 
+// --- Aura carrier (invisible — carries 3m fire aura)
 new entry "AMP_DOOMFLAME_AURA"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -158,8 +166,9 @@ data "StackId" "AMP_DOOMFLAME_EXPLODED"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
 
-// 1.3 SPELLS
+// ========== 1.3 SPELLS ==========
 
+// --- Chaos Fireball: 9 damage types at 1d8 each in single cast (Fire/Cold/Lightning/Acid/Necrotic/Radiant/Psychic/Thunder/Poison)
 new entry "AMP_Doomflame_ChaosFireball"
 type "SpellData"
 data "SpellType" "Projectile"
@@ -207,7 +216,7 @@ data "Sheathing" "DontChange"
 data "DeathType" "Explode"
 
 
-// 1.4 EQUIPMENT (custom plate)
+// ========== 1.4 EQUIPMENT (custom plate) ==========
 
 new entry "AMP_Doomflame_ChestPlate"
 type "Armor"
@@ -228,7 +237,8 @@ data "Boosts" "RollBonus(SavingThrow, 1, Constitution)"
 data "MinAmount" "1"
 data "MaxAmount" "1"
 
-// Vasht is AMP_Ysatiy
+// ====================== VASHT (AMP_Ysatiy) — Mirror Support boss ======================
+// Githyanki barbarian executioner. Spawns via Mirror Support pool (50/50 with Doomflame).
 
 new entry "AMP_Ysatiy"
 type "Character"
@@ -268,7 +278,8 @@ data "Description" "hebfe6e5bg1b4eg451cg8b6fg6210c31b4dc5;1"
 data "Icon" "PassiveFeature_IronMind"
 data "Properties" "Highlighted"
 
-// Endless Fury: permanent Rage applied by Osiris on spawn, no vanilla RAGE remove-logic
+// Endless Fury — permanent visible Rage status. Applied via Osiris on spawn (no vanilla
+// RAGE remove-logic). Carries rage boosts, mind-immunities, and the Frenzy bonus attack.
 new entry "AMP_VASHT_FRENZY"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -342,8 +353,21 @@ data "Conditions" "HasStatus('PARRIED_GITHYANKI', context.Target)"
 data "StatsFunctors" "ApplyStatus(PARRY_GITHYANKI_ANIMSET, 100, 1)"
 
 
-// Spells come from the RT SkillList. No data "Class", it would leak the player Sorcerer auto-spells
+// ====================== ADRIENNE (AMP_Adrienne) — Mirror Support boss ======================
+// High Elf Sorcerous Aristocrat, slot 03 (RT: AMP_ULTRA_Summon_03_3cfb7f5b-8ba4-4e0a-905d-9d19bf84558b).
+// Frostsoul resource: each damaging spell adds 1 stack to AMP_ADRIENNE_FROSTSOUL_CHARGE.
+// Stacking via Additive + MultiplyEffectsByDuration + FreezeDuration: each stack = +1 spell damage,
+// stacks never decay (persist till Adrienne dies). Pattern: ARCANE_WARD / BHAALS_BOON_SLAYER.
+// Ice Cocoon: interrupt at HP<34% fires self-spell that applies cocoon status (clone FROZEN
+// fields, immune to all except Bludgeoning+Thunder = Vulnerable).
+// AI motivation via AI_ONLY:CAST: prefix inside cocoon spell SpellProperties referencing vanilla
+// AI_HELPER_BUFF (real cast never applies it, AI scoring sees the bait).
+// Spells live in RT SkillList (vanilla NPC canon, like Doomflame). NO data "Class" -- would leak
+// the player Sorcerer progression's auto-spells.
+// Full plan: /mnt/f/Github/BG3-Vanilla-Files01/AMP_Adrienne_Boss_Plan.md
 
+
+// ========== 3. ADRIENNE — Character ==========
 
 new entry "AMP_Adrienne"
 type "Character"
@@ -371,7 +395,7 @@ data "DifficultyStatuses" "STATUS_EASY:HEALTHREDUCTION_EASYMODE;STATUS_HARD:HEAL
 data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 
 
-// 3.1 PASSIVES
+// ========== 3.1 PASSIVES ==========
 
 // Lore-intro. No mechanic.
 new entry "AMP_Adrienne_Tooltip"
@@ -381,6 +405,9 @@ data "Description" "h7bd1ec35g9777g4094g87c9g4e9ced3407cb;1"
 data "Icon" "Skill_Sorcerer_Passive_TidesOfChaos"
 data "Properties" "Highlighted"
 
+// Frostsoul tracker. OnDamage with IsSpell() => apply AMP_ADRIENNE_FROSTSOUL_CHARGE with
+// duration 1. The status has StackType Additive, so each apply increments duration by 1.
+// Duration becomes the stack counter (paired with MultiplyEffectsByDuration on the status).
 new entry "AMP_Adrienne_Frostsoul"
 type "PassiveData"
 data "DisplayName" "haace99begd71fg4b81ga7d3gb9a47f9e4354;1"
@@ -401,9 +428,11 @@ data "Icon" "Spell_Evocation_WallOfIce"
 data "Properties" "Highlighted"
 
 
-// 3.2 STATUSES
+// ========== 3.2 STATUSES ==========
 
-// Additive: each apply adds a turn, MultiplyEffectsByDuration scales the bonus by duration. FreezeDuration stops decay
+// Frostsoul charge: Additive stacking via duration. Each apply adds 1 turn to the duration.
+// MultiplyEffectsByDuration multiplies the +1 DamageBonus by the duration count => +N damage.
+// FreezeDuration prevents per-turn decay so stacks persist till Adrienne dies.
 new entry "AMP_ADRIENNE_FROSTSOUL_CHARGE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -449,9 +478,14 @@ data "OnApplyFunctors" "BreakConcentration()"
 data "StatusEffect" "62318bbf-d36a-497c-91a4-bda8f7fb7af7"
 
 
-// 3.3 ICE COCOON SPELL
+// ========== 3.3 ICE COCOON SPELL ==========
 
-// AI_ONLY:CAST clause applies AI_HELPER_BUFF only during AI scoring, never on a real cast. It is bait
+// Self-cast. SpellProperties first clause is AI_ONLY:CAST:ApplyStatus(SELF,AI_HELPER_BUFF,100) --
+// the engine runs this clause only during AI scoring (never on a real cast). Vanilla AI_HELPER_BUFF
+// carries AC(3) + Advantage(AllSavingThrows) + Advantage(AttackRoll) + Advantage(AllAbilities),
+// which the AI weighs heavily and translates into "fire this spell" / "fire the interrupt that
+// calls it". Second clause is the real apply of the cocoon status.
+// Pattern reference: Gustav Spell_Target.txt UND_Spectator_Recover_Charm and similar.
 new entry "Shout_AMP_Adrienne_IceCocoon"
 type "SpellData"
 data "SpellType" "Shout"
@@ -475,7 +509,7 @@ data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;ImmediateCast"
 data "Cooldown" "OncePerCombat"
 
 
-// 3.4 ICE COCOON INTERRUPT
+// ========== 3.4 ICE COCOON INTERRUPT ==========
 
 // Auto-fires OnPreDamage when HP < 34% of max (real HP). No reaction cost. Once per combat.
 // Donor structure: Interrupt_GithyankiParry (OnPreDamage + Self scope) minus the Cost field.
@@ -494,7 +528,16 @@ data "InterruptDefaultValue" "Enabled"
 data "Cooldown" "OncePerCombat"
 
 
-// Valdryn. Flight comes from the RootTemplate
+// ====================== VALDRYN (AMP_Valdryn) — Mirror Support boss, slot 04 ======================
+// RT: AMP_ULTRA_Summon_04_4c553ed6-ee7a-4598-9d66-1bc064c83f50
+// Omni-Man homage: gold-armoured invulnerable conqueror-wanderer who left a son in Faerun.
+// Signature: AURA FARMING — a 3-turn countdown; on expiry he unleashes a single near-oneshot
+//   strike for 75% of the target's max HP. Dealing damage to him OR pushing him adds a turn to
+//   the countdown (knocks off a charge), once per round.
+// ESOTERIC COMBAT (ported from KickMaster): Parry interrupt + kick Counter combos + active
+//   Esoteric Strike. 4 reactions/turn.
+// WEAKENING + FEAR auras. Stoneskin: -1 to ALL incoming damage. Flight = set in RootTemplate.
+// Tiers auto-applied by the AMP difficulty system (Mirror spawn = NPC tier).
 
 new entry "AMP_Valdryn"
 type "Character"
@@ -519,7 +562,7 @@ data "DifficultyStatuses" "STATUS_EASY:HEALTHREDUCTION_EASYMODE;STATUS_HARD:HEAL
 data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 
 
-// PASSIVES
+// ========== PASSIVES ==========
 
 // Lore intro. No mechanic.
 new entry "AMP_Valdryn_Tooltip"
@@ -591,7 +634,7 @@ data "Conditions" "not HasStatus('FLY',context.Source)"
 data "StatsFunctors" "ApplyStatus(FLY,100,-1);ApplyStatus(AMP_VALDRYN_FLOAT,100,-1)"
 
 
-// INTERRUPTS (ported KickMaster)
+// ========== INTERRUPTS (ported KickMaster) ==========
 
 // Parry: spend a Reaction to reduce an incoming hit-roll attack.
 new entry "Interrupt_AMP_Valdryn_Parry"
@@ -628,7 +671,7 @@ data "EnableCondition" "not HasAnyStatus({'SG_Polymorph','SG_Blinded','SG_Incapa
 data "EnableContext" "OnStatusApplied;OnStatusRemoved"
 
 
-// SPELLS
+// ========== SPELLS ==========
 
 // Counter combo T1 (2 strikes). Ported from KickMaster.
 new entry "Target_AMP_Valdryn_Combo_T1"
@@ -708,6 +751,9 @@ data "HitAnimationType" "PhysicalDamage"
 data "DamageType" "Bludgeoning"
 data "Sheathing" "Sheathed"
 
+// AURA RELEASE — the near-oneshot. Unlocked only while Armed. Disintegrate-based Force beam
+// dealing 75% of the target's max HP (half on a successful Dexterity save). SpellProperties
+// expends the charge and restarts the 3-turn countdown. AI_HELPER_BUFF bait nudges the AI.
 new entry "Projectile_AMP_Valdryn_AuraRelease"
 type "SpellData"
 data "SpellType" "Projectile"
@@ -733,7 +779,8 @@ data "VerbalIntent" "Damage"
 data "SpellFlags" "IsHarmful;IsSpell;IgnorePreviouslyPickedEntities"
 data "DamageType" "Force"
 
-// Bonus action so it stays castable while ACTION is blocked during CHARGING
+// PULL (no damage) — ported from KickMaster AirPull, damage stripped. Bonus action so it stays
+// usable while ACTION is blocked during CHARGING. Drags a foe back into the dread aura.
 new entry "Target_AMP_Valdryn_Pull"
 type "SpellData"
 data "SpellType" "Target"
@@ -755,7 +802,7 @@ data "UseCosts" "BonusActionPoint:1"
 data "SpellFlags" "IsHarmful;DisableBlood"
 
 
-// STATUSES
+// ========== STATUSES ==========
 
 // Parry stance animset (ported KickMaster). Cleared on next attack.
 new entry "AMP_VALDRYN_PARRY_ANIMSET"
@@ -768,6 +815,7 @@ data "RemoveEvents" "OnAttacked"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "ApplyEffect" "f1362714-8cb0-4071-ad19-6ef6ed64466c"
 
+// Aura carrier (invisible mechanically) — applies Weakening + Fear to enemies within 18m.
 new entry "AMP_VALDRYN_AURA"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -826,7 +874,8 @@ data "StackId" "AMP_VALDRYN_ARMED"
 data "Boosts" "UnlockSpell(Projectile_AMP_Valdryn_AuraRelease)"
 data "StatusPropertyFlags" "IgnoreResting;ForceOverhead"
 
-// Float idle needs the GaleGod AnimationSet and the HUM_MS_Base VisualBank override
+// Floating idle — god-Gale hover (DynamicAnimationTag, ported from Choose_Your_Animation).
+// Needs the GaleGod AnimationSet + HUM_MS_Base VisualBank override migrated (see AnimationOverrides + Content).
 new entry "AMP_VALDRYN_FLOAT"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -834,7 +883,13 @@ data "StackId" "AMP_VALDRYN_FLOAT"
 data "StatusPropertyFlags" "IgnoreResting;DisableCombatlog;DisableOverhead;DisablePortraitIndicator;ApplyToDead"
 data "DynamicAnimationTag" "f3f80785-28eb-4b0b-8767-eda96951713a"
 
-// Doppelganger base form, Osiris copies a party member on spawn. Base passives apply only between disguises
+// =========================================================================
+// Mirror Doppelganger, slot 05 (RT: AMP_ULTRA_Summon_05_f8560efd-1d3c-4dcc-8b4e-b36f2cc79684).
+// Base doppelganger form. On spawn it Transforms into a random party member and
+// copies their gear + class boost (Osiris: AMP_MirrorSupport_Core.txt BLOCK 5b/5c).
+// Base-form passives apply only between disguise cycles; the copied player's
+// passives/HP drive the actual fight.
+// =========================================================================
 new entry "AMP_ULTRA_Summon_05"
 type "Character"
 using "Doppelganger"
@@ -887,7 +942,11 @@ type "StatusData"
 data "StatusType" "BOOST"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Tickhara, Solar Bridgewarden
+//=============================================================================
+// TICKHARA (AMP_ULTRA_Summon_06) — Solar Bridgewarden, dragonborn sun-priestess
+// Mirror pool boss. Sunlight aura punishes ending turn in light or straying >3m.
+// Spams orbs of daylight (no concentration) + Sanctuary. Counter: shade / hug / AoE.
+//=============================================================================
 
 new entry "AMP_ULTRA_Summon_06"
 type "Character"
@@ -914,7 +973,7 @@ data "Tags" "DRAGONBORN;HUMANOID"
 data "DifficultyStatuses" "STATUS_EASY:HEALTHREDUCTION_EASYMODE;STATUS_HARD:HEALTHBOOST_HARDCORE"
 data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 
-// Info passive (visible): explains the solar aura + applies the 50m carrier
+// ---- Info passive (visible): explains the solar aura + applies the 50m carrier ----
 new entry "AMP_Tickhara_SolarPresence"
 type "PassiveData"
 data "DisplayName" "h4f5221b8g2020g43e8gb24cge471b36cc22a;1"
@@ -925,7 +984,7 @@ data "StatsFunctorContext" "OnCreate"
 data "Conditions" "not HasStatus('AMP_TICKHARA_SUNAURA',context.Source)"
 data "StatsFunctors" "ApplyStatus(AMP_TICKHARA_SUNAURA,100,-1)"
 
-// Visible mechanic info on the boss: sunlight punishment
+// ---- Visible mechanic info on the boss: sunlight punishment ----
 new entry "AMP_Tickhara_SunlightInfo"
 type "PassiveData"
 data "DisplayName" "h94947d31g1a1cg4296gb64cg7e7041eff416;1"
@@ -934,7 +993,7 @@ data "DescriptionParams" "18;DealDamage(,Radiant)"
 data "Icon" "Action_Mag_FlashingDawn"
 data "Properties" "Highlighted"
 
-// Visible mechanic info on the boss: proximity punishment (Eye of Ra)
+// ---- Visible mechanic info on the boss: proximity punishment (Eye of Ra) ----
 new entry "AMP_Tickhara_ShadeInfo"
 type "PassiveData"
 data "DisplayName" "hafdacfaegbaddg4305g8da7g1ff9299b4c9c;1"
@@ -943,7 +1002,7 @@ data "DescriptionParams" "Distance(3);7;DealDamage(,Radiant)"
 data "Icon" "Action_Legendary_EyeBeamNova"
 data "Properties" "Highlighted"
 
-// Hidden init: applies the 3m shelter aura
+// ---- Hidden init: applies the 3m shelter aura ----
 new entry "AMP_Tickhara_ShelterInit"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -951,14 +1010,14 @@ data "StatsFunctorContext" "OnCreate"
 data "Conditions" "not HasStatus('AMP_TICKHARA_SHELTER_AURA',context.Source)"
 data "StatsFunctors" "ApplyStatus(AMP_TICKHARA_SHELTER_AURA,100,-1)"
 
-// Hidden init: body glow visual
+// ---- Hidden init: body glow visual ----
 new entry "AMP_Tickhara_BodyGlow"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnCreate"
 data "StatsFunctors" "ApplyStatus(AMP_TICKHARA_BODYGLOW,100,-1)"
 
-// 50m carrier aura: applies the Solar Curse to enemies
+// ---- 50m carrier aura: applies the Solar Curse to enemies ----
 new entry "AMP_TICKHARA_SUNAURA"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -967,7 +1026,7 @@ data "AuraRadius" "50"
 data "AuraStatuses" "TARGET:IF(Enemy() and not Self() and Character()):ApplyStatus(AMP_TICKHARA_SUNCURSE);TARGET:IF(Enemy() and not Self() and Character()):ApplyStatus(AMP_TICKHARA_FARCURSE)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Solar Curse (visible) on players: end-of-turn radiant tick
+// ---- Solar Curse (visible) on players: end-of-turn radiant tick ----
 new entry "AMP_TICKHARA_SUNCURSE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -982,7 +1041,7 @@ data "TickFunctors" "IF(IsInSunlight(context.Target) or HasStatus('AMP_TICKHARA_
 data "StatusGroups" "SG_Condition"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// Eye of Ra (visible) on players: end-of-turn radiant if farther than 3m
+// ---- Eye of Ra (visible) on players: end-of-turn radiant if farther than 3m ----
 new entry "AMP_TICKHARA_FARCURSE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -997,7 +1056,7 @@ data "TickFunctors" "IF(not HasStatus('AMP_TICKHARA_SHELTER',context.Target)):De
 data "StatusGroups" "SG_Condition"
 data "StatusPropertyFlags" "IgnoreResting"
 
-// 3m shelter aura: marks enemies standing in her shadow
+// ---- 3m shelter aura: marks enemies standing in her shadow ----
 new entry "AMP_TICKHARA_SHELTER_AURA"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1006,14 +1065,14 @@ data "AuraRadius" "3"
 data "AuraStatuses" "TARGET:IF(Enemy() and not Self() and Character()):ApplyStatus(AMP_TICKHARA_SHELTER)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Shelter marker (within 3m): suppresses the proximity tick
+// ---- Shelter marker (within 3m): suppresses the proximity tick ----
 new entry "AMP_TICKHARA_SHELTER"
 type "StatusData"
 data "StatusType" "BOOST"
 data "StackId" "AMP_TICKHARA_SHELTER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// In-light marker (inside an orb's daylight): enables the sunlight tick
+// ---- In-light marker (inside an orb's daylight): enables the sunlight tick ----
 new entry "AMP_TICKHARA_INLIGHT"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1023,7 +1082,7 @@ data "OnApplyFunctors" "AI_ONLY:DealDamage(10d10,Radiant)"
 data "TickFunctors" "AI_ONLY:DealDamage(10d10,Radiant)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Sun pool (on the summoned orb): visible threat tooltip + light + in-light aura
+// ---- Sun pool (on the summoned orb): visible threat tooltip + light + in-light aura ----
 new entry "AMP_TICKHARA_SUNPOOL"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1039,7 +1098,7 @@ data "Boosts" "GameplayLight(15,false,0.1,true)"
 data "StatusEffect" "33b7386f-4737-49ba-a3b7-019d194ea5ad"
 data "StatusPropertyFlags" "IgnoreResting;ApplyToDead"
 
-// Body glow visual on Tickhara
+// ---- Body glow visual on Tickhara ----
 new entry "AMP_TICKHARA_BODYGLOW"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1047,7 +1106,7 @@ data "StackId" "AMP_TICKHARA_BODYGLOW"
 data "StatusEffect" "33b7386f-4737-49ba-a3b7-019d194ea5ad"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Orb of Daylight: spammable summon (no concentration, no slot), high SkillList score
+// ---- Orb of Daylight: spammable summon (no concentration, no slot), high SkillList score ----
 new entry "AMP_Tickhara_Sphere"
 type "SpellData"
 data "SpellType" "Target"
@@ -1070,7 +1129,9 @@ data "TargetRadius" "24"
 data "TargetConditions" "not Character()"
 
 
-// Zephra's gear
+// ============================================================
+// ZEPHRA, THE WINDBORNE — SIGNATURE GEAR
+// ============================================================
 
 // --- Twin shortswords (Orthon oversized model, mechanically Finesse/Light) ---
 new entry "AMP_Zephra_Windblade"
@@ -1100,6 +1161,10 @@ data "ArmorClass" "12"
 data "Proficiency Group" "LightArmor"
 
 
+// ============================================================
+// ZEPHRA, THE WINDBORNE — CHARACTER (RT AMP_ULTRA_Summon_07_07bdf760-ed25-4461-9883-beb4938d4127)
+// Glass-cannon arcane-trickster wind-rogue. Lv9, DEX 24, frail.
+// ============================================================
 new entry "AMP_Zephra"
 type "Character"
 using "Human_Caster"
@@ -1122,13 +1187,17 @@ data "DefaultBoosts" "ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(S
 data "DifficultyStatuses" "STATUS_EASY:HEALTHREDUCTION_EASYMODE;STATUS_HARD:HEALTHBOOST_HARDCORE"
 data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 
-// No SELF here, default target is the wearer
+// OnCreate init: apply permanent visible Windborne + Unimpressed (no SELF — default target = wearer)
 new entry "AMP_Zephra_OnSpawn"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnCreate"
 data "StatsFunctors" "ApplyStatus(AMP_ZEPHRA_WINDBORNE,100,-1);ApplyStatus(AMP_ZEPHRA_UNIMPRESSED,100,-1)"
 
+
+// ============================================================
+// ZEPHRA — BACKEND (statuses / lore passive / spells)
+// ============================================================
 
 // --- Windborne: visible umbrella (feather fall + wind-identity). Evasion = separate vanilla passive. ---
 new entry "AMP_ZEPHRA_WINDBORNE"
@@ -1205,7 +1274,7 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_ZEPHRA_GUST_CD"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// Not a skill, invoked only through UseSpell(SWAP) from WindLash
+// Custom gust — NOT a skill; invoked only via UseSpell(SWAP) from WindLash
 new entry "AMP_Zephra_GustOfWind"
 type "SpellData"
 data "SpellType" "Zone"
@@ -1229,8 +1298,12 @@ data "StatsFunctorContext" "OnAttacked"
 data "Conditions" "Enemy() and HasLastAttackTriggered() and not HasStatus('AMP_ZEPHRA_GUST_CD',context.Target)"
 data "StatsFunctors" "ApplyStatus(AMP_ZEPHRA_GUST_CD,100,1);UseSpell(SWAP,AMP_Zephra_GustOfWind,true,true,true,,true)"
 
-// Zephra's spells are slotless and unconcentrated
+// ============================================================
+// ZEPHRA — CUSTOM CASTABLE SPELLS (no spell slots, no concentration)
+// Slotless so she casts freely; AI-baited where needed.
+// ============================================================
 
+// Mirror Image — slotless (drops SpellSlotsGroup), no concentration in vanilla
 new entry "AMP_Zephra_MirrorImage"
 type "SpellData"
 data "SpellType" "Shout"
@@ -1238,6 +1311,7 @@ using "Shout_MirrorImage"
 data "UseCosts" "ActionPoint:1"
 data "RootSpellID" ""
 
+// Invisibility — slotless + concentration STRIPPED (drops IsConcentration)
 new entry "AMP_Zephra_Invisibility"
 type "SpellData"
 data "SpellType" "Target"
@@ -1247,7 +1321,7 @@ data "Cooldown" "OncePerTurn"
 data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;UnavailableInDialogs;IgnorePreviouslyPickedEntities"
 data "RootSpellID" ""
 
-// AI_ONLY bait so the AI scores the summon
+// Sleet Storm — slotless + concentration stripped + AI_ONLY bait so AI scores the summon (Tickhara pattern)
 new entry "AMP_Zephra_SleetStorm"
 type "SpellData"
 data "SpellType" "Target"
@@ -1259,8 +1333,10 @@ data "SpellProperties" "GROUND:Summon(802b8b51-1bcf-469d-8663-2f1dc9698982, 10,,
 data "RootSpellID" ""
 
 
+// ============================================================
 // KA'VIR THE SILVER (ULTRA pool-boss #8) - moved from AMP_Kavir.txt
-// CHARACTER
+// ============================================================
+// ============================================================ CHARACTER
 new entry "AMP_Kavir"
 type "Character"
 using "Githyanki_Melee"
@@ -1284,7 +1360,7 @@ data "Proficiency Group" "SimpleWeapons;MartialWeapons;LightArmor"
 data "DifficultyStatuses" "STATUS_EASY:HEALTHREDUCTION_EASYMODE;STATUS_HARD:HEALTHBOOST_HARDCORE"
 data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 
-// KURAZH (momentum tiers; hit climbs, no-damage turn decays, crit-miss resets)
+// ============================================================ KURAZH (momentum tiers; hit climbs, no-damage turn decays, crit-miss resets)
 new entry "AMP_KAVIR_KURAZH_G1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1340,7 +1416,7 @@ data "DescriptionParams" "DealDamage(2d8,Bludgeoning);Distance(8)"
 data "Boosts" "IF(IsAttack()):DamageBonus(2d8);ActionResource(Movement,8,0);JumpMaxDistanceBonus(3)"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.TimeOut)):ApplyStatus(AMP_KAVIR_KURAZH_G4,100,2)"
 
-// RATTLED (player chip-debuff; Adrienne pattern, decays)
+// ============================================================ RATTLED (player chip-debuff; Adrienne pattern, decays)
 new entry "AMP_KAVIR_RATTLED"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1355,7 +1431,7 @@ data "TickType" "EndTurn"
 data "Boosts" "RollBonus(Attack,-1);ActionResource(Movement,-1,0)"
 data "StatusPropertyFlags" "MultiplyEffectsByDuration;OverheadOnTurn"
 
-// SELFSTUN ("Stunned by own club" - custom name+desc, NOT SG_Stunned so it works on the stun-immune boss)
+// ============================================================ SELFSTUN ("Stunned by own club" - custom name+desc, NOT SG_Stunned so it works on the stun-immune boss)
 new entry "AMP_KAVIR_SELFSTUN"
 type "StatusData"
 data "StatusType" "INCAPACITATED"
@@ -1370,7 +1446,7 @@ data "StatusPropertyFlags" "OverheadOnTurn;IgnoreResting"
 data "StatusGroups" "SG_Condition;SG_Stunned"
 data "OnApplyFunctors" "BreakConcentration()"
 
-// FRENZY (phase 2 - all-out berserk)
+// ============================================================ FRENZY (phase 2 - all-out berserk)
 new entry "AMP_KAVIR_FRENZY"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1383,7 +1459,7 @@ data "StackId" "AMP_KAVIR_FRENZY"
 data "Boosts" "AC(-3);ActionResource(Movement,6,0);IF(IsAttack()):DamageBonus(1d8);Advantage(AttackTarget)"
 data "StatusPropertyFlags" "ForceOverhead;IgnoreResting"
 
-// WARCRY (battle cry self-buff)
+// ============================================================ WARCRY (battle cry self-buff)
 new entry "AMP_KAVIR_WARCRY"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1396,7 +1472,7 @@ data "StackId" "AMP_KAVIR_WARCRY"
 data "Boosts" "AC(-2);IF(IsAttack()):DamageBonus(1d6);ActionResource(Movement,3,0)"
 data "StatusPropertyFlags" "ForceOverhead;IgnoreResting"
 
-// PASSIVES
+// ============================================================ PASSIVES
 new entry "AMP_Kavir_Relentless"
 type "PassiveData"
 data "Properties" "Highlighted"
@@ -1431,7 +1507,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsMeleeAttack() and not Self() and Character()"
 data "StatsFunctors" "ApplyStatus(AMP_KAVIR_RATTLED,100,1);IF((HasStatus('AMP_KAVIR_KURAZH_G4',context.Source) or HasStatus('AMP_KAVIR_KURAZH_G5',context.Source)) and not SavingThrow(Ability.Constitution,15)):ApplyStatus(STUNNED,100,1);IF(HasStatus('AMP_KAVIR_KURAZH_G5',context.Source)):ApplyStatus(SELF,AMP_KAVIR_KURAZH_G5,100,2);IF(HasStatus('AMP_KAVIR_KURAZH_G4',context.Source)):ApplyStatus(SELF,AMP_KAVIR_KURAZH_G5,100,2);IF(HasStatus('AMP_KAVIR_KURAZH_G3',context.Source)):ApplyStatus(SELF,AMP_KAVIR_KURAZH_G4,100,2);IF(HasStatus('AMP_KAVIR_KURAZH_G2',context.Source)):ApplyStatus(SELF,AMP_KAVIR_KURAZH_G3,100,2);IF(HasStatus('AMP_KAVIR_KURAZH_G1',context.Source)):ApplyStatus(SELF,AMP_KAVIR_KURAZH_G2,100,2);IF(not HasStatus('AMP_KAVIR_KURAZH_G1',context.Source) and not HasStatus('AMP_KAVIR_KURAZH_G2',context.Source) and not HasStatus('AMP_KAVIR_KURAZH_G3',context.Source) and not HasStatus('AMP_KAVIR_KURAZH_G4',context.Source) and not HasStatus('AMP_KAVIR_KURAZH_G5',context.Source)):ApplyStatus(SELF,AMP_KAVIR_KURAZH_G1,100,2)"
 
-// Self-stun only on a critical miss, not farmable via Mirror Image. Resets Kurazh
+// fair, non-abusable self-stun: only a CRITICAL miss (natural 1, ~5% inherent fumble - not farmable by Mirror Image). resets his Kurazh.
 new entry "AMP_Kavir_WildSwing"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -1447,7 +1523,7 @@ data "StatsFunctorContext" "OnDamaged"
 data "Conditions" "HasHPPercentageLessThan(30,context.Target) and not HasStatus('AMP_KAVIR_FRENZY',context.Target)"
 data "StatsFunctors" "ApplyStatus(AMP_KAVIR_FRENZY,100,-1)"
 
-// WEAPON (NPC boss club; not lootable, no custom loca)
+// ============================================================ WEAPON (NPC boss club; not lootable, no custom loca)
 new entry "AMP_Kavir_Club"
 type "Weapon"
 using "WPN_Club_1"
@@ -1456,7 +1532,7 @@ data "Damage" "1d8"
 data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical)"
 data "Weapon Properties" "Melee;Dippable;Magical;Light;Finesse"
 
-// SPELLS
+// ============================================================ SPELLS
 // BONK - thrown rock that stuns; Throws a stone (Projectile_StoneThrow) with our custom bomb-throw animation.
 new entry "Projectile_AMP_Kavir_Bonk"
 type "SpellData"

@@ -251,6 +251,46 @@ ApplyStatus(_Char, _Status, -1.0, 1, _Char);
 PROC_AMP_Plus_ShardRecurrence_Charge(_Char, _Status);
 PROC_AMP_Plus_ShardRecurrence_Rebuild(_Char);
 
+// a region change is a rest without the rest: the buffs are gone before anything can read them,
+// so every watched buff seen on the wearer is remembered and laid back on the next level
+
+IF
+StatusApplied((CHARACTER)_Char, (STRING)_Status, _, _)
+AND
+DB_Players(_Char)
+AND
+HasActiveStatus(_Char, "AMP_SHARD_CHAR_RECURRENCE", 1)
+AND
+DB_AMP_Plus_ShardRecurrence_Watch(_Status)
+THEN
+DB_AMP_Plus_ShardRecurrence_Held(_Char, _Status);
+
+IF
+StatusRemoved((CHARACTER)_Char, "AMP_SHARD_CHAR_RECURRENCE", _, _)
+THEN
+PROC_AMP_Plus_ShardRecurrence_DrainHeld(_Char);
+
+PROC
+PROC_AMP_Plus_ShardRecurrence_DrainHeld((CHARACTER)_Char)
+AND
+DB_AMP_Plus_ShardRecurrence_Held(_Char, (STRING)_Status)
+THEN
+NOT DB_AMP_Plus_ShardRecurrence_Held(_Char, _Status);
+PROC_AMP_Plus_ShardRecurrence_DrainHeld(_Char);
+
+IF
+LevelGameplayStarted(_, _)
+AND
+DB_Players((CHARACTER)_Char)
+AND
+HasActiveStatus(_Char, "AMP_SHARD_CHAR_RECURRENCE", 1)
+AND
+DB_AMP_Plus_ShardRecurrence_Held(_Char, (STRING)_Status)
+AND
+NOT HasActiveStatus(_Char, _Status, 1)
+THEN
+PROC_AMP_Plus_ShardRecurrence_Return(_Char, _Status);
+
 PROC
 PROC_AMP_Plus_ShardRecurrence_Charge((CHARACTER)_Char, (STRING)_Status)
 AND
@@ -456,25 +496,221 @@ IF
 StatusApplied((CHARACTER)_Char, "AMP_SHARD_LAMB_GIFT_UNCOMMON", _, _)
 THEN
 RemoveStatus(_Char, "AMP_SHARD_LAMB_GIFT_UNCOMMON", _Char);
-TemplateAddTo((ITEMROOT)AMP_Capsule_Reward_Shards_Uncommon_ba33bd2b-59ed-4205-bba8-39312df94109, _Char, 1, 0);
+PROC_AMP_Plus_Lamb_Gift(_Char, "AMP_SHARD_WEAPON_SACRAMENT", (ITEMROOT)AMP_Capsule_Reward_Shards_Uncommon_ba33bd2b-59ed-4205-bba8-39312df94109);
 
 IF
 StatusApplied((CHARACTER)_Char, "AMP_SHARD_LAMB_GIFT_RARE", _, _)
 THEN
 RemoveStatus(_Char, "AMP_SHARD_LAMB_GIFT_RARE", _Char);
-TemplateAddTo((ITEMROOT)AMP_Capsule_Reward_Shards_Rare_a165c989-b06a-4271-afb2-790874d5b37b, _Char, 1, 0);
+PROC_AMP_Plus_Lamb_Gift(_Char, "AMP_SHARD_WEAPON_OBLATION", (ITEMROOT)AMP_Capsule_Reward_Shards_Rare_a165c989-b06a-4271-afb2-790874d5b37b);
 
 IF
 StatusApplied((CHARACTER)_Char, "AMP_SHARD_LAMB_GIFT_VERYRARE", _, _)
 THEN
 RemoveStatus(_Char, "AMP_SHARD_LAMB_GIFT_VERYRARE", _Char);
-TemplateAddTo((ITEMROOT)AMP_Capsule_Reward_Shards_VeryRare_76b07b2c-8cf9-46fc-92ab-5d9f31005523, _Char, 1, 0);
+PROC_AMP_Plus_Lamb_Gift(_Char, "AMP_SHARD_WEAPON_HECATOMB", (ITEMROOT)AMP_Capsule_Reward_Shards_VeryRare_76b07b2c-8cf9-46fc-92ab-5d9f31005523);
 
 IF
 StatusApplied((CHARACTER)_Char, "AMP_SHARD_LAMB_GIFT_LEGENDARY", _, _)
 THEN
 RemoveStatus(_Char, "AMP_SHARD_LAMB_GIFT_LEGENDARY", _Char);
-TemplateAddTo((ITEMROOT)AMP_Capsule_Reward_Shards_Legendary_71c048a2-2ec7-4a23-ac59-e080282ebe45, _Char, 1, 0);
+PROC_AMP_Plus_Lamb_Gift(_Char, "AMP_SHARD_WEAPON_CONSUMMATION", (ITEMROOT)AMP_Capsule_Reward_Shards_Legendary_71c048a2-2ec7-4a23-ac59-e080282ebe45);
+
+// gift goes to one weapon only, even if two of them carry the same marker
+PROC
+PROC_AMP_Plus_Lamb_Gift((CHARACTER)_Char, (STRING)_Marker, (ITEMROOT)_Capsule)
+AND
+GetEquippedItem(_Char, "Melee Main Weapon", (ITEM)_W)
+AND
+HasActiveStatus(_W, _Marker, 1)
+AND
+NOT DB_AMP_Plus_Lamb_Picked(_Char)
+THEN
+DB_AMP_Plus_Lamb_Picked(_Char);
+PROC_AMP_Plus_Lamb_Give(_Char, _W, _Marker, _Capsule);
+PROC
+PROC_AMP_Plus_Lamb_Gift((CHARACTER)_Char, (STRING)_Marker, (ITEMROOT)_Capsule)
+AND
+GetEquippedItem(_Char, "Ranged Main Weapon", (ITEM)_W)
+AND
+HasActiveStatus(_W, _Marker, 1)
+AND
+NOT DB_AMP_Plus_Lamb_Picked(_Char)
+THEN
+DB_AMP_Plus_Lamb_Picked(_Char);
+PROC_AMP_Plus_Lamb_Give(_Char, _W, _Marker, _Capsule);
+PROC
+PROC_AMP_Plus_Lamb_Gift((CHARACTER)_Char, (STRING)_Marker, (ITEMROOT)_Capsule)
+AND
+GetEquippedItem(_Char, "Melee Offhand Weapon", (ITEM)_W)
+AND
+HasActiveStatus(_W, _Marker, 1)
+AND
+NOT DB_AMP_Plus_Lamb_Picked(_Char)
+THEN
+DB_AMP_Plus_Lamb_Picked(_Char);
+PROC_AMP_Plus_Lamb_Give(_Char, _W, _Marker, _Capsule);
+PROC
+PROC_AMP_Plus_Lamb_Gift((CHARACTER)_Char, (STRING)_Marker, (ITEMROOT)_Capsule)
+AND
+GetEquippedItem(_Char, "Ranged Offhand Weapon", (ITEM)_W)
+AND
+HasActiveStatus(_W, _Marker, 1)
+AND
+NOT DB_AMP_Plus_Lamb_Picked(_Char)
+THEN
+DB_AMP_Plus_Lamb_Picked(_Char);
+PROC_AMP_Plus_Lamb_Give(_Char, _W, _Marker, _Capsule);
+PROC
+PROC_AMP_Plus_Lamb_Gift((CHARACTER)_Char, (STRING)_Marker, (ITEMROOT)_Capsule)
+AND
+DB_AMP_Plus_Lamb_Picked(_Char)
+THEN
+NOT DB_AMP_Plus_Lamb_Picked(_Char);
+
+PROC
+PROC_AMP_Plus_Lamb_Give((CHARACTER)_Char, (ITEM)_W, (STRING)_Marker, (ITEMROOT)_Capsule)
+THEN
+TemplateAddTo(_Capsule, _Char, 1, 0);
+
+// increment before first insert, otherwise a fresh row is counted twice
+PROC
+PROC_AMP_Plus_Lamb_Give((CHARACTER)_Char, (ITEM)_W, (STRING)_Marker, (ITEMROOT)_Capsule)
+AND
+DB_AMP_Plus_Lamb_Gifts(_W, _Marker, (INTEGER)_Old)
+AND
+IntegerSum(_Old, 1, (INTEGER)_New)
+THEN
+NOT DB_AMP_Plus_Lamb_Gifts(_W, _Marker, _Old);
+DB_AMP_Plus_Lamb_Gifts(_W, _Marker, _New);
+
+PROC
+PROC_AMP_Plus_Lamb_Give((CHARACTER)_Char, (ITEM)_W, (STRING)_Marker, (ITEMROOT)_Capsule)
+AND
+NOT DB_AMP_Plus_Lamb_Gifts(_W, _Marker, _)
+THEN
+DB_AMP_Plus_Lamb_Gifts(_W, _Marker, 1);
+
+// keep in step with DescriptionParams [2] of the Lamb shards
+PROC
+PROC_AMP_Plus_Lamb_Give((CHARACTER)_Char, (ITEM)_W, (STRING)_Marker, (ITEMROOT)_Capsule)
+AND
+DB_AMP_Plus_Lamb_Gifts(_W, _Marker, (INTEGER)_N)
+AND
+_N >= 5
+THEN
+PROC_AMP_Plus_Lamb_Burn(_Char, _W, _Marker);
+
+PROC
+PROC_AMP_Plus_Lamb_Burn((CHARACTER)_Char, (ITEM)_W, (STRING)_Marker)
+AND
+DB_AMP_Plus_Lamb_Gifts(_W, _Marker, (INTEGER)_N)
+THEN
+NOT DB_AMP_Plus_Lamb_Gifts(_W, _Marker, _N);
+
+// counter row goes before the marker, so the removal frees no slot on its own
+PROC
+PROC_AMP_Plus_Lamb_Burn((CHARACTER)_Char, (ITEM)_W, (STRING)_Marker)
+AND
+DB_AMP_Shard_Count(_W, _Marker, (INTEGER)_Count)
+THEN
+NOT DB_AMP_Shard_Count(_W, _Marker, _Count);
+
+// the re-equip backup would otherwise put the marker back
+PROC
+PROC_AMP_Plus_Lamb_Burn((CHARACTER)_Char, (ITEM)_W, (STRING)_Marker)
+AND
+DB_AMP_Shard_Saved(_W, _Marker, (INTEGER)_Count)
+THEN
+NOT DB_AMP_Shard_Saved(_W, _Marker, _Count);
+
+PROC
+PROC_AMP_Plus_Lamb_Burn((CHARACTER)_Char, (ITEM)_W, (STRING)_Marker)
+THEN
+PROC_AMP_Shard_DecTotal(_W);
+RemoveStatus(_W, _Marker, _Char);
+PROC_AMP_RecoverTransferCleanup(_Char, _Marker);
+ObjectTimerLaunch(_Char, "AMP_Plus_Lamb_Resync", 500);
+
+// lamb statuses on the wearer share one StackId, so another lamb weapon may have lost its own
+IF
+ObjectTimerFinished((CHARACTER)_Char, "AMP_Plus_Lamb_Resync")
+AND
+HasActiveStatus(_Char, "AMP_SHARD_CHAR_SACRAMENT", 0)
+AND
+HasActiveStatus(_Char, "AMP_SHARD_CHAR_OBLATION", 0)
+AND
+HasActiveStatus(_Char, "AMP_SHARD_CHAR_HECATOMB", 0)
+AND
+HasActiveStatus(_Char, "AMP_SHARD_CHAR_CONSUMMATION", 0)
+THEN
+PROC_AMP_Plus_Lamb_ResyncSlot(_Char, "Melee Main Weapon");
+PROC_AMP_Plus_Lamb_ResyncSlot(_Char, "Ranged Main Weapon");
+PROC_AMP_Plus_Lamb_ResyncSlot(_Char, "Melee Offhand Weapon");
+PROC_AMP_Plus_Lamb_ResyncSlot(_Char, "Ranged Offhand Weapon");
+PROC_AMP_Plus_Lamb_ResyncDone(_Char);
+
+PROC
+PROC_AMP_Plus_Lamb_ResyncSlot((CHARACTER)_Char, (STRING)_Slot)
+AND
+GetEquippedItem(_Char, _Slot, (ITEM)_W)
+THEN
+PROC_AMP_Plus_Lamb_ResyncItem(_Char, _W, "AMP_SHARD_WEAPON_SACRAMENT");
+PROC_AMP_Plus_Lamb_ResyncItem(_Char, _W, "AMP_SHARD_WEAPON_OBLATION");
+PROC_AMP_Plus_Lamb_ResyncItem(_Char, _W, "AMP_SHARD_WEAPON_HECATOMB");
+PROC_AMP_Plus_Lamb_ResyncItem(_Char, _W, "AMP_SHARD_WEAPON_CONSUMMATION");
+
+PROC
+PROC_AMP_Plus_Lamb_ResyncItem((CHARACTER)_Char, (ITEM)_W, (STRING)_Marker)
+AND
+HasActiveStatus(_W, _Marker, 1)
+AND
+NOT DB_AMP_Plus_Lamb_Resynced(_Char)
+AND
+DB_AMP_Shard_Transfer(_Marker, (STRING)_CharStatus)
+THEN
+DB_AMP_Plus_Lamb_Resynced(_Char);
+ApplyStatus(_Char, _CharStatus, -1.0, 1, _Char);
+
+PROC
+PROC_AMP_Plus_Lamb_ResyncDone((CHARACTER)_Char)
+AND
+DB_AMP_Plus_Lamb_Resynced(_Char)
+THEN
+NOT DB_AMP_Plus_Lamb_Resynced(_Char);
+
+// a row left on a weapon that no longer carries the marker is not the shard being inserted now
+IF
+TemplateUseStarted((CHARACTER)_Char, (ITEMROOT)_Template, (ITEM)_Instance)
+AND
+DB_AMP_Shard_Weapon_NonStack(_Template, _, _, _Marker)
+AND
+HasMeleeWeaponEquipped(_Char, "Mainhand", 1)
+AND
+GetEquippedItem(_Char, "Melee Main Weapon", (ITEM)_W)
+AND
+DB_AMP_Plus_Lamb_Gifts(_W, _Marker, (INTEGER)_N)
+AND
+HasActiveStatus(_W, _Marker, 0)
+THEN
+NOT DB_AMP_Plus_Lamb_Gifts(_W, _Marker, _N);
+
+IF
+TemplateUseStarted((CHARACTER)_Char, (ITEMROOT)_Template, (ITEM)_Instance)
+AND
+DB_AMP_Shard_Weapon_NonStack(_Template, _, _, _Marker)
+AND
+HasMeleeWeaponEquipped(_Char, "Mainhand", 0)
+AND
+HasRangedWeaponEquipped(_Char, "Mainhand", 1)
+AND
+GetEquippedItem(_Char, "Ranged Main Weapon", (ITEM)_W)
+AND
+DB_AMP_Plus_Lamb_Gifts(_W, _Marker, (INTEGER)_N)
+AND
+HasActiveStatus(_W, _Marker, 0)
+THEN
+NOT DB_AMP_Plus_Lamb_Gifts(_W, _Marker, _N);
 
 EXITSECTION
 ENDEXITSECTION

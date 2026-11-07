@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">Hand of the Forgefather</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">Forged in the Heart of the Mountains, this hammer once served Moradin himself as he worked the first veins of primordial ore. It is said the smith-god poured into it not only the weight of the deep earth, but the very idea of the forge.&lt;br&gt;&lt;br&gt;In mortal hands the weapon keeps its divine nature: every blow brings the relentless weight of the mountains down on the foe and knocks them off their feet. To Moradin, the whole earth is an eternal anvil. Whoever falls under the blow is pinned to it, and their flesh, bone or armour turns as brittle as poor metal. A finishing blow against such a foe is like a hammer striking red-hot iron on the anvil: it crushes and shatters without mercy.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">Hammer</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">A creature that takes damage from this hammer must succeed on a Strength &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; against your &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;Maneuver DC&lt;/LSTag&gt; or be knocked &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt; for &lt;b&gt;[1]&lt;/b&gt; turn.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">Anvil</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">Enemies you knock &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt; become &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;Brittle&lt;/LSTag&gt; for &lt;b&gt;[1]&lt;/b&gt; turns.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">Between Hammer and Anvil</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">When you hit a &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt; target with this hammer, you deal an additional &lt;b&gt;[1]&lt;/b&gt;.</content>
+</contentList>

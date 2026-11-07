@@ -1,8 +1,9 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// mode 0 off, 1 all, 2 junk only, 3 cheaper than 100g per unit
-// deferred timer so autosell runs first
+// autoloot -> camp chest delivery.
+// mode: 0 off, 1 all, 2 junk only, 3 cheaper than 100g per unit.
+// deferred timer so autosell runs first and keeps priority.
 DB_AMP_AL_CampSend(0);
 KBSECTION
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">대장간 아버지의 손</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">산의 심장에서 벼려진 이 망치는 한때 모라딘이 태초의 광맥을 처음 다룰 때 직접 쓰던 것이다. 대장장이 신은 이 망치에 땅속 깊은 곳의 무게뿐 아니라 '대장간'이라는 개념 자체를 불어넣었다고 한다.&lt;br&gt;&lt;br&gt;필멸자의 손에서도 이 무기는 신성을 잃지 않았다. 일격마다 산의 무자비한 무게가 적에게 떨어져 적을 쓰러뜨린다. 모라딘에게 대지 전체는 영원한 모루다. 일격에 쓰러진 자는 그 위에 짓눌리고, 살과 뼈와 갑옷은 조악한 금속처럼 연약해진다. 그런 적에게 가하는 마지막 일격은 모루 위 달궈진 쇠를 내려치는 망치와 같다. 무자비하게 부수고 으스러뜨린다.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">망치</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">이 망치에 피해를 입은 생명체는 당신의 &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;전투 기법 내성 난이도&lt;/LSTag&gt;에 대한 근력 &lt;LSTag Tooltip="SavingThrow"&gt;내성 굴림&lt;/LSTag&gt;에 성공하지 못하면 &lt;b&gt;[1]&lt;/b&gt;턴 동안 &lt;LSTag Type="Status" Tooltip="PRONE"&gt;넘어짐&lt;/LSTag&gt; 상태가 됩니다.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">모루</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">당신이 &lt;LSTag Type="Status" Tooltip="PRONE"&gt;넘어뜨린&lt;/LSTag&gt; 적은 &lt;b&gt;[1]&lt;/b&gt;턴 동안 &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;연약함&lt;/LSTag&gt; 상태가 됩니다.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">망치와 모루 사이</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">이 망치로 &lt;LSTag Type="Status" Tooltip="PRONE"&gt;넘어짐&lt;/LSTag&gt; 상태인 대상을 맞히면 추가로 &lt;b&gt;[1]&lt;/b&gt;를 줍니다.</content>
+</contentList>

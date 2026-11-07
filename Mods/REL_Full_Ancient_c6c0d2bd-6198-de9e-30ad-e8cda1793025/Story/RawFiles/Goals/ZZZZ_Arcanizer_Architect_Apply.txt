@@ -4,8 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// architect skips the slot gate and count bump, always inserts even on a full weapon
-// slot-limit bump lives in ZZZ_Arcanizer_Shards_B10.txt
+// architect shard dedicated apply. doesn't count toward slot total, always inserts
+// even on a full weapon. slot-limit bump lives in the batch 10 goal. these replace
+// the generic weapon apply for architect minus the slot gate and count bump.
 
 // melee weapon
 IF

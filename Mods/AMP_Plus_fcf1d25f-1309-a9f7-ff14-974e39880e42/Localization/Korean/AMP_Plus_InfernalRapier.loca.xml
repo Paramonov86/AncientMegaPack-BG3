@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">&lt;LSTag Tooltip="SpellDifficultyClass"&gt;주문 내성 난이도&lt;/LSTag&gt;에 +[1], 주문 &lt;LSTag Tooltip="AttackRoll"&gt;명중 굴림&lt;/LSTag&gt;에 +[2] 보너스를 받습니다.</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">절대 열기</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">전투 중 이 레이피어로 피해를 주면 반경 &lt;b&gt;[1]&lt;/b&gt;의 &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;지옥불&lt;/LSTag&gt;을 &lt;b&gt;[2]&lt;/b&gt;턴 동안 생성합니다. &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;지옥불&lt;/LSTag&gt;은 당신에게 영향을 주지 않습니다.&lt;br&gt;&lt;br&gt;대상의 화염 피해 &lt;LSTag Tooltip="Resistant"&gt;저항&lt;/LSTag&gt;과 &lt;LSTag Tooltip="Immune"&gt;면역&lt;/LSTag&gt;을 무시합니다.</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">아베르누스의 열기</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">재빠르게 찌르며 무기에서 지옥불의 파도를 뿜어냅니다.</content>
+</contentList>

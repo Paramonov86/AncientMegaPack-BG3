@@ -1,5 +1,186 @@
-// tables are declared before anything that draws from them, a T_ used above its definition reads as missing
-// a restated table replaces the base one whole, it is not merged
+// Pool and branch tables are declared before anything that draws from them: the game
+// resolves a T_ category the moment it parses the line, so a table used above its own
+// definition reads as missing.
+// The swamp capsule draws from a short list of strong items, so it is drawn as rarely as the
+// ring capsule rather than as often as the wide themed ones. The pool is restated whole - a
+// table is replaced, not merged - and stands above every line that draws from it.
+// The unburied-soul cloak belongs to the rare tier, so the pools that carry it are restated
+// whole - a table is replaced, not merged - and stand above every line that draws from them.
+// The githyanki half plate, the Hr'a'cknir bracers and the shadow-cloaked ring changed tier, so
+// the pools they leave and the pools they join are restated whole here as well.
+// New tridents, cloaks, the padded armour and the summer robe join pools the submod did not
+// carry yet, so those pools are restated whole here as well.
+// The Staff of Thay and the new tiers of the Helldusk gloves, the Cap of Wrath and the
+// Dreamstalker helm join pools the submod did not carry yet, restated whole the same way.
+
+new treasuretable "REL_Uncommon_Psionic"
+new subtable "-1"
+object category "I_UND_Nere_Sword",1,0,0,0,0,0,0,0
+object category "I_AMP_Boots_ArcaneWarrior",1,0,0,0,0,0,0,0
+object category "I_AMP_Boots_ContagiousFear",1,0,0,0,0,0,0,0
+object category "I_AMP_Boots_Isolation",1,0,0,0,0,0,0,0
+object category "I_AMP_Kyzr_HalfPlate_Soul_1",1,0,0,0,0,0,0,0
+object category "I_AMP_Kyzr_Helmet_Soul_1",1,0,0,0,0,0,0,0
+object category "I_AMP_Kyzr_Longsword_Soul_1",1,0,0,0,0,0,0,0
+object category "I_AMP_Orb_Psychic_Ring_T1",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_CrossbowMain_1",1,0,0,0,0,0,0,0
+object category "I_CRE_MAG_Githborn_Amulet",1,0,0,0,0,0,0,0
+object category "I_CRE_MAG_Psychic_Githborn_Circlet",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_A_50_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_C_5",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_C_6_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_C_9",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_G_51",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_G_54",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_G_61",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_H_102_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_H_93",1,0,0,0,0,0,0,0
+object category "I_MAG_BG_OfCrushing_Gloves",1,0,0,0,0,0,0,0
+object category "I_MAG_BarbMonk_Leather_Circlet",1,0,0,0,0,0,0,0
+object category "I_MAG_ChargedLightning_BonusAC_Robe",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak15_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak35",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak61_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak78_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Combat_Quarterstaff",1,0,0,0,0,0,0,0
+object category "I_MAG_ElementalGish_BaneOnElementalWeaponDamage_Gloves",1,0,0,0,0,0,0,0
+object category "I_MAG_ElementalGish_ElementalInfusion_Ring",1,0,0,0,0,0,0,0
+object category "I_MAG_Gish_PsychicDamageBonusWhileConcentrating_Ring",1,0,0,0,0,0,0,0
+object category "I_MAG_HAV_Sylvan_Scimitar",1,0,0,0,0,0,0,0
+object category "I_MAG_Illithid_CharmPerson_Ring",1,0,0,0,0,0,0,0
+object category "I_MAG_Illithid_MindTax_Amulet",1,0,0,0,0,0,0,0
+object category "I_MAG_LowHP_IncreaseDamagePsychic_GithGreatsword",1,0,0,0,0,0,0,0
+object category "I_MAG_Monk_Magic_Armor",1,0,0,0,0,0,0,0
+object category "I_MAG_Monk_Magic_Hat",1,0,0,0,0,0,0,0
+object category "I_MAG_Neck22",1,0,0,0,0,0,0,0
+object category "I_MAG_Neck45_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Psychic_MentalFatigue_Gloves",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring29_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring48_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring61_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Weapon107",1,0,0,0,0,0,0,0
+object category "I_MAG_Weapon15",1,0,0,0,0,0,0,0
+object category "I_MAG_Weapon21",1,0,0,0,0,0,0,0
+object category "I_SJ01",1,0,0,0,0,0,0,0
+object category "I_TWN_NecklaceOfCharming",1,0,0,0,0,0,0,0
+object category "I_UND_Tower_AmuletDetectThoughts",1,0,0,0,0,0,0,0
+object category "I_arc_G_Monk1",1,0,0,0,0,0,0,0
+object category "I_arc_N_Psychic1",1,0,0,0,0,0,0,0
+object category "I_arc_R_Psychic1",1,0,0,0,0,0,0,0
+object category "I_MAG_Lesser_Infernal_Metal_Gloves",1,0,0,0,0,0,0,0
+object category "I_MAG_Monk_SoulRejunevation_Armor_1",1,0,0,0,0,0,0,0
+
+new treasuretable "REL_Uncommon_Swamp"
+new subtable "-1"
+object category "I_MAG_Acid_AcidDamageOnWeaponAttack_Ring",1,0,0,0,0,0,0,0
+object category "I_MAG_Corrosive_Flail",1,0,0,0,0,0,0,0
+object category "I_AMP_Artificers_Boost01",1,0,0,0,0,0,0,0
+object category "I_AMP_Artificers_Boost15",1,0,0,0,0,0,0,0
+object category "I_AMP_Boots_SpiderWalk",1,0,0,0,0,0,0,0
+object category "I_AMP_Ergo_Gloves_1",1,0,0,0,0,0,0,0
+object category "I_AMP_Orb_Acid_Ring_T1",1,0,0,0,0,0,0,0
+object category "I_AMP_Orb_Poison_Ring_T1",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_CrossbowMain_1",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_CrossbowOff_1",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_Dagger_1",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_Shortsword_1",1,0,0,0,0,0,0,0
+object category "I_ARM_HAG_Phylactery",1,0,0,0,0,0,0,0
+object category "I_ARM_RingOfPoisonResistance",1,0,0,0,0,0,0,0
+object category "I_CRE_Hatchery_AcidPoisonImmunity_Boots",1,0,0,0,0,0,0,0
+object category "I_FOR_SpiderQueen_Robe",1,0,0,0,0,0,0,0
+object category "I_FOR_SpiderstepBoots",1,0,0,0,0,0,0,0
+object category "I_HAG_EyeballNecklace",1,0,0,0,0,0,0,0
+object category "I_HAG_HagsRing",1,0,0,0,0,0,0,0
+object category "I_MAG_Acid_AcidMeleeCounter_Cloak",1,0,0,0,0,0,0,0
+object category "I_MAG_Acid_NoxiousFumes_Gloves",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_A_43_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_G_55",1,0,0,0,0,0,0,0
+object category "I_MAG_BasicEnchanted_Quarterstaff",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak21",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak32",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak76_1",1,0,0,0,0,0,0,0
+object category "I_MAG_HAV_ThornBlade_Scimitar",1,0,0,0,0,0,0,0
+object category "I_MAG_Poison_Greatclub",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring21",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring22",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring28_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Weapon52_1",1,0,0,0,0,0,0,0
+object category "I_UNI_MartyrAmulet",1,0,0,0,0,0,0,0
+object category "I_WPN_Javelin_u",1,0,0,0,0,0,0,0
+object category "I_arc_N_Acid1",1,0,0,0,0,0,0,0
+object category "I_arc_N_Poison1",1,0,0,0,0,0,0,0
+object category "I_arc_R_Acid1",1,0,0,0,0,0,0,0
+object category "I_arc_R_Poison1",1,0,0,0,0,0,0,0
+object category "I_AMP_Kyzr_Longsword_Vines_1",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring19",1,0,0,0,0,0,0,0
+
+new treasuretable "REL_Rare_Swamp"
+new subtable "-1"
+object category "I_AMP_Boots_SpiderWalk_2",1,0,0,0,0,0,0,0
+object category "I_AMP_Ergo_Gloves_2",1,0,0,0,0,0,0,0
+object category "I_AMP_Orb_Acid_Ring_T2",1,0,0,0,0,0,0,0
+object category "I_AMP_Orb_Poison_Ring_T2",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_CrossbowMain_2",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_CrossbowOff_2",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_Dagger_2",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_Shortsword_2",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_A_43_2",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_G_55_2",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_H_119",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_H_121",1,0,0,0,0,0,0,0
+object category "I_MAG_BG_OfAges_Flail",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak21_2",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak32_2",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak76",1,0,0,0,0,0,0,0
+object category "I_MAG_ElementalGish_CantripBooster_Amulet",1,0,0,0,0,0,0,0
+object category "I_MAG_Healer_HealSelfPoisonWeapon_Amulet",1,0,0,0,0,0,0,0
+object category "I_MAG_LC_DrowSpider_Gloves",1,0,0,0,0,0,0,0
+object category "I_MAG_Poison_InflictPoisonHealSelf_Cloak",1,0,0,0,0,0,0,0
+object category "I_MAG_Poison_PoisonExposure_Gloves",1,0,0,0,0,0,0,0
+object category "I_MAG_Poison_PoisonLethality_Ring",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring22_2",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring28",1,0,0,0,0,0,0,0
+object category "I_MAG_Weapon102",1,0,0,0,0,0,0,0
+object category "I_MAG_Weapon4",1,0,0,0,0,0,0,0
+object category "I_MAG_Weapon52",1,0,0,0,0,0,0,0
+object category "I_Quest_HAG_HagLair_Staff",1,0,0,0,0,0,0,0
+object category "I_WPN_Javelin_r",1,0,0,0,0,0,0,0
+object category "I_arc_N_Acid2",1,0,0,0,0,0,0,0
+object category "I_arc_N_Poison2",1,0,0,0,0,0,0,0
+object category "I_arc_R_Acid2",1,0,0,0,0,0,0,0
+object category "I_arc_R_Poison2",1,0,0,0,0,0,0,0
+object category "I_AMP_Kyzr_Longsword_Vines_2",1,0,0,0,0,0,0,0
+object category "I_AMP_Cursed_Spore",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring19_2",1,0,0,0,0,0,0,0
+
+new treasuretable "REL_Epic_Swamp"
+new subtable "-1"
+object category "I_AMP_Boots_SpiderWalk_3",1,0,0,0,0,0,0,0
+object category "I_AMP_Ergo_Gloves",1,0,0,0,0,0,0,0
+object category "I_AMP_Orb_Acid_Ring_T3",1,0,0,0,0,0,0,0
+object category "I_AMP_Orb_Poison_Ring_T3",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_CrossbowMain_3",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_CrossbowOff_3",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_Dagger_3",1,0,0,0,0,0,0,0
+object category "I_AMP_RusMage_Shortsword_3",1,0,0,0,0,0,0,0
+object category "I_FOR_WebStaff",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_A_43",1,0,0,0,0,0,0,0
+object category "I_MAG_Armour_G_55_3",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak21_3",1,0,0,0,0,0,0,0
+object category "I_MAG_Cloak76_3",1,0,0,0,0,0,0,0
+object category "I_MAG_Infernal_Hellbeard_Halberd",1,0,0,0,0,0,0,0
+object category "I_MAG_Neck17",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring22_3",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring28_3",1,0,0,0,0,0,0,0
+object category "I_MAG_Viconia_Mace",1,0,0,0,0,0,0,0
+object category "I_MAG_Weapon52_3",1,0,0,0,0,0,0,0
+object category "I_WPN_Javelin_e",1,0,0,0,0,0,0,0
+object category "I_arc_N_Acid3",1,0,0,0,0,0,0,0
+object category "I_arc_N_Poison3",1,0,0,0,0,0,0,0
+object category "I_arc_R_Acid3",1,0,0,0,0,0,0,0
+object category "I_arc_R_Poison3",1,0,0,0,0,0,0,0
+object category "I_AMP_Kyzr_Longsword_Vines_3",1,0,0,0,0,0,0,0
+object category "I_MAG_Ring19_3",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_3"
 new subtable "1,1"
@@ -480,6 +661,12 @@ new subtable "1,1"
 object category "I_AMP_Orb_Acid_Ring_T4",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Orb_Poison_Ring_T4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Ring19",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Ring19_2",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Ring19_3",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_17"
 new subtable "1,1"
@@ -988,6 +1175,8 @@ new subtable "1,1"
 object category "I_AMP_Orb_Radiant_Ring_T3",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Orb_Radiant_Ring_T4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Knuckle_4",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_19"
 new subtable "1,1"
@@ -1237,8 +1426,6 @@ object category "I_MAG_Ring08",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Ring18",1,0,0,0,0,0,0,0
 new subtable "1,1"
-object category "I_MAG_Ring27_1",1,0,0,0,0,0,0,0
-new subtable "1,1"
 object category "I_MAG_Shove_ACboost_Ring",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Thunder_InflictDazeOnThunderDamage_Ring",1,0,0,0,0,0,0,0
@@ -1256,8 +1443,6 @@ new subtable "1,1"
 object category "I_MAG_Ring08_2",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Ring18_2",1,0,0,0,0,0,0,0
-new subtable "1,1"
-object category "I_MAG_Ring27_2",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_SJ02",1,0,0,0,0,0,0,0
 new subtable "1,1"
@@ -1512,6 +1697,8 @@ new subtable "1,1"
 object category "I_AMP_Orb_Force_Ring_T4",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Orb_Thunder_Ring_T4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Koy_Orb_Soul_T4",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_7"
 new subtable "1,1"
@@ -2414,6 +2601,12 @@ new subtable "1,1"
 object category "I_MAG_Neck43_4",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_SJ03_4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Neck39_2",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Neck39_3",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Neck39_4",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_9"
 new subtable "1,1"
@@ -4271,8 +4464,6 @@ new subtable "1,1"
 object category "I_AMP_Koy_Orb_Soul_T2",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Koy_Orb_Soul_T3",1,0,0,0,0,0,0,0
-new subtable "1,1"
-object category "I_AMP_Koy_Orb_Soul_T4",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_20"
 new subtable "1,1"
@@ -5107,6 +5298,12 @@ new subtable "1,1"
 object category "I_AMP_Orb_Underdark_Ring_T4",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Orb_Warrior_Ring_T4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_BG_Sarevok_OfChaos_Greatsword_3",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Monk_SoulRejunevation_Armor_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Monk_SoulRejunevation_Armor_2",1,0,0,0,0,0,0,0
 
 new treasuretable "REL_Epic_Arcane"
 new subtable "-1"
@@ -5902,6 +6099,10 @@ new subtable "1,1"
 object category "I_AMP_Orb_Necrotic_Ring_T4",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Orb_Underdark_Ring_T4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Artificers_Boost18_4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Ring27_1",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_16"
 new subtable "1,1"
@@ -6752,6 +6953,22 @@ new subtable "1,1"
 object category "I_AMP_Orb_Diamond_Ring_T3",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Orb_Diamond_Ring_T4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Artificers_Boost18",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Artificers_Boost18_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Artificers_Boost18_3",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Artificers_Boost18_4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Knuckle_2",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Neck39_2",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Neck39_3",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Neck39_4",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_4"
 new subtable "1,1"
@@ -9089,6 +9306,8 @@ new subtable "1,1"
 object category "I_MAG_EndGame_Plate_Armor",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Infernal_Plate_Armor",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_TWN_AasimarSurvivor_HazmatSuit",1,0,0,0,0,0,0,0
 
 new treasuretable "REL_Rare_Clothes"
 new subtable "-1"
@@ -9448,6 +9667,7 @@ object category "I_AMP_Tank_Armor_2_1",1,0,0,0,0,0,0,0
 object category "I_AMP_Ilmater_MediumArmor_2",1,0,0,0,0,0,0,0
 object category "I_AMP_Ilmater_HeavyArmor_2",1,0,0,0,0,0,0,0
 object category "I_AMP_Mantle_Of_The_Hungry_Thrall",1,0,0,0,0,0,0,0
+object category "I_TWN_AasimarSurvivor_HazmatSuit",1,0,0,0,0,0,0,0
 
 new treasuretable "REL_Rare_Psionic"
 new subtable "-1"
@@ -9528,6 +9748,7 @@ object category "I_arc_G_Monk2",1,0,0,0,0,0,0,0
 object category "I_arc_N_Psychic2",1,0,0,0,0,0,0,0
 object category "I_arc_R_Psychic2",1,0,0,0,0,0,0,0
 object category "I_AMP_Psychic_Band",1,0,0,0,0,0,0,0
+object category "I_MAG_Monk_SoulRejunevation_Armor_2",1,0,0,0,0,0,0,0
 
 new treasuretable "REL_Epic_Armor"
 new subtable "-1"
@@ -12590,6 +12811,10 @@ new subtable "1,1"
 object category "I_AMP_Koy_Orb_Soul_T4",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Orb_Fire_Ring_T4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Knuckle_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Ring27_2",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_12"
 new subtable "1,1"
@@ -12706,8 +12931,6 @@ new subtable "1,1"
 object category "I_MAG_Weapon116",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Weapon120",1,0,0,0,0,0,0,0
-new subtable "1,1"
-object category "I_PLA_ConflictedFlind_Flail_Broken",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_WPN_Battleaxe_r",1,0,0,0,0,0,0,0
 new subtable "1,1"
@@ -13060,6 +13283,174 @@ new subtable "1,1"
 object category "I_WPN_Longbow_l",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_WPN_Shortbow_l",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Flood_Maker",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Kyzr_Battleaxe_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Kyzr_Battleaxe_2",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Kyzr_Battleaxe_3",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Kyzr_Battleaxe_4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Kyzr_Longsword_Soul_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Kyzr_Longsword_Soul_2",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Kyzr_Longsword_Soul_3",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Kyzr_Longsword_Soul_4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Radiant_Oak",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Rain_Caller",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Staff_Of_Thay",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CHA_CompassSpear",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_Cadence_LongSword_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_DEN_FaithwardenStaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_DEN_HalsinBlade",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_DEN_TunnelStaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_END_Emperor_Staff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_FOR_TrueSoul_Spear",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_FOR_WebStaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_GOB_GoblinKing_Warhammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_GOB_Torturer_Spear",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_LOW_Elfsong_EmperorSword_LongSword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_BasicEnchanted_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Bonded_Lethal_Longsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Bonded_Shocking_Warhammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Bonded_Throwing_Battleaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_CQCaster_GainArcaneChargeOnDamage_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_ChargedLightning_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_ChargedLightning_Quarterstaff_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_ChargedLightning_Quarterstaff_3",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_ChargedLightning_Quarterstaff_4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_ChargedLightning_Trident",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Combat_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Critical_CriticalCombo_BattleAxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Finesse_Longsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Fire_FireDamage_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Fire_HeatOnWeaponDamage_Battleaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_FlamingFist_FlamingBlade",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_FlamingFist_StaffOfFire",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_GreaterNecromancy_Staff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Harpers_OfWeapons_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_HigherNecromancy_Staff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Illithid_MindOverload_Weapon_Longsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Kuotoa_Lightning_Spear",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_LC_CazadorVampiric_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_LC_Counterspell_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_LC_Fleshred_Longsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_LC_Frigid_Trident",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_LC_Lorroakan_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_LC_OfTheRam_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_LC_Wave_Trident",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_OB_Paladin_DeathKnight_Longsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_OfSpellPower_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_PHB_DwarvenThrower_Warhammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_PHB_PactKeeper_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Primeval_Silver_Longsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_SHA_SeluneBlessing_Spear",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_SHA_SharBlessing_Spear",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Shadow_Battleaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Spellbreaker_Battleaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_TheChromatic_Staff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_TheThorns_Trident",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Thunder_ThunderClap_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Tyrrant_Warhammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Vicious_Battleaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_WYRM_Commander_Longsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_Quest_GLO_Moonlantern_Gale",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_Quest_HAG_HagLair_Staff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_TWN_RatCatcher",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_UND_DuergarRaft_GruesomeHammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_UND_DuergarRaft_PestKillerAxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_UND_SocietyOfBrilliance_ResonanceStaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_UND_Tower_StaffBlessMystra",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_UNI_DoomHammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_UNI_RepeatStaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_UNI_StaffOfRain",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_UNI_WYR_Circus_ClownHammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_WPN_Katana_AC",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_WPN_Katana_HITMAN",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_WPN_Katana_MAGICAL",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_WPN_Katana_MASTER",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_WPN_Trident_2",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_WYR_Circus_MumblingStaff",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_14"
 new subtable "1,1"
@@ -15075,7 +15466,10 @@ object category "I_AMP_War_VoidCapsule",8,0,0,0,0,0,0,0
 object category "I_AMP_Psionic_VoidCapsule",8,0,0,0,0,0,0,0
 object category "I_AMP_Primal_VoidCapsule",8,0,0,0,0,0,0,0
 
-// three offers from three families: one shared pool can offer the same capsule twice
+// The capsule reward window rolls its three offers from one pool, and the engine does not
+// check the offers against each other, so the same capsule could be offered twice. The three
+// offers now come from three families instead: worn gear, weapons and jewellery, themes.
+// Same capsules, same odds inside a family, three different answers every time.
 
 new treasuretable "AMP_Capsule_Choice_Worn"
 new subtable "-1"
@@ -15301,6 +15695,10 @@ object category "I_AMP_Arcanizer_Shard_Ring_58",1,0,0,0,0,0,0,0
 object category "I_AMP_Arcanizer_Shard_Ring_59",1,0,0,0,0,0,0,0
 object category "I_AMP_Arcanizer_Shard_Ring_60",1,0,0,0,0,0,0,0
 object category "I_AMP_Arcanizer_Shard_Ring_61",1,0,0,0,0,0,0,0
+
+// The astral lockpick joins the very rare weapon, one-handed and psionic pools; each
+// table is restated whole - a table is replaced, not merged - and stands above every
+// line that draws from it.
 
 new treasuretable "REL_Epic_Weapons_1H"
 new subtable "-1"
@@ -16720,8 +17118,6 @@ object category "I_AMP_Vanelona_Rapier_1",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_DEN_FaithwardenStaff",1,0,0,0,0,0,0,0
 new subtable "1,1"
-object category "I_DEN_HalsinBlade",1,0,0,0,0,0,0,0
-new subtable "1,1"
 object category "I_DEN_TunnelStaff",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_FOR_TrueSoul_Spear",1,0,0,0,0,0,0,0
@@ -16886,13 +17282,9 @@ object category "I_MOO_WulbrenHammer",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_Needle01",1,0,0,0,0,0,0,0
 new subtable "1,1"
-object category "I_TWN_RatCatcher",1,0,0,0,0,0,0,0
-new subtable "1,1"
 object category "I_TWN_ShortswordOfStealth",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_UND_Duergar_ShortswordOfFirstBlood",1,0,0,0,0,0,0,0
-new subtable "1,1"
-object category "I_UND_DuergarRaft_PestKillerAxe",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_UND_KC_Elder_Warpick",1,0,0,0,0,0,0,0
 new subtable "1,1"
@@ -17115,8 +17507,6 @@ new subtable "1,1"
 object category "I_UND_DuergarRaft_GruesomeHammer",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_UND_Tower_StaffBlessMystra",1,0,0,0,0,0,0,0
-new subtable "1,1"
-object category "I_UNI_DoomHammer",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_UNI_RepeatStaff",1,0,0,0,0,0,0,0
 new subtable "1,1"
@@ -17523,6 +17913,8 @@ new subtable "1,1"
 object category "I_MAG_MagicMissile_HandCrossbow",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_WPN_HandCrossbow_l",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_PLA_ConflictedFlind_Flail_Broken",1,0,0,0,0,0,0,0
 
 new treasuretable "AMP_Para_21"
 new subtable "1,1"
@@ -17612,8 +18004,6 @@ object category "I_MAG_ChargedLightning_BonusAC_Robe",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Monk_Magic_Armor",1,0,0,0,0,0,0,0
 new subtable "1,1"
-object category "I_MAG_Monk_SoulRejunevation_Armor_1",1,0,0,0,0,0,0,0
-new subtable "1,1"
 object category "I_AMP_Kyzr_HalfPlate_Soul_2",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Armour_A_50",1,0,0,0,0,0,0,0
@@ -17635,8 +18025,6 @@ new subtable "1,1"
 object category "I_MAG_Drunken_Cloth",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Monk_Magic_Armor_1",1,0,0,0,0,0,0,0
-new subtable "1,1"
-object category "I_MAG_Monk_SoulRejunevation_Armor_2",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Kyzr_HalfPlate_Soul_3",1,0,0,0,0,0,0,0
 new subtable "1,1"
@@ -17766,8 +18154,6 @@ object category "I_AMP_Boots_ContagiousFear_4",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Boots_Isolation_4",1,0,0,0,0,0,0,0
 new subtable "1,1"
-object category "I_AMP_Artificers_Boost18_1",1,0,0,0,0,0,0,0
-new subtable "1,1"
 object category "I_arc_N_Psychic1",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_CRE_MAG_Githborn_Amulet",1,0,0,0,0,0,0,0
@@ -17790,8 +18176,6 @@ object category "I_AMP_Artificers_Boost09",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Artificers_Boost13",1,0,0,0,0,0,0,0
 new subtable "1,1"
-object category "I_AMP_Artificers_Boost18",1,0,0,0,0,0,0,0
-new subtable "1,1"
 object category "I_arc_N_Psychic2",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Neck6_2",1,0,0,0,0,0,0,0
@@ -17810,8 +18194,6 @@ object category "I_MAG_SpectatorEye_Amulet",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Artificers_Boost07",1,0,0,0,0,0,0,0
 new subtable "1,1"
-object category "I_AMP_Artificers_Boost18_3",1,0,0,0,0,0,0,0
-new subtable "1,1"
 object category "I_arc_N_Psychic3",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_MAG_Neck6",1,0,0,0,0,0,0,0
@@ -17823,8 +18205,6 @@ new subtable "1,1"
 object category "I_MAG_Neck45_3",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_WYR_MonkAmulet_Amulet_AfterCombat",1,0,0,0,0,0,0,0
-new subtable "1,1"
-object category "I_AMP_Artificers_Boost18_4",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_arc_N_Psychic4",1,0,0,0,0,0,0,0
 new subtable "1,1"
@@ -17969,6 +18349,14 @@ new subtable "1,1"
 object category "I_AMP_Orb_Psychic_Ring_T3",1,0,0,0,0,0,0,0
 new subtable "1,1"
 object category "I_AMP_Orb_Psychic_Ring_T4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_AMP_Knuckle_3",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Githborn_MageHandSupport_Gloves",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Monk_SoulRejunevation_Armor_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_Monk_SoulRejunevation_Armor_2",1,0,0,0,0,0,0,0
 
 new treasuretable "REL_Legendary_Destructive"
 new subtable "-1"
@@ -22947,7 +23335,7 @@ object category "I_AMP_Sarevoks_Bhaalspawn_Armour",1,0,0,0,0,0,0,0
 object category "I_AMP_Crown_Of_The_Bhaalspawn_Heir",1,0,0,0,0,0,0,0
 object category "I_MAG_BG_Sarevok_OfChaos_Greatsword_3",1,0,0,0,0,0,0,0
 object category "I_AMP_Bards_Birthright",1,0,0,0,0,0,0,0
-// SYNERGY POOLS
+// ================ SYNERGY POOLS ================
 // Swamp Synergy
 object category "I_AMP_Molnestrel_3",1,0,0,0,0,0,0,0
 object category "I_AMP_Ekho_Iskazhennoy_Struny",1,0,0,0,0,0,0,0
@@ -23432,7 +23820,9 @@ object category "I_MAG_Weapon26_4",1,0,0,0,0,0,0,0
 object category "I_MAG_ChargedLightning_Quarterstaff_4",1,0,0,0,0,0,0,0
 object category "I_AMP_Kyzr_Longsword_Vines_4",1,0,0,0,0,0,0,0
 object category "I_MAG_BG_Sarevok_OfChaos_Greatsword_3",1,0,0,0,0,0,0,0
+// ============================================
 // ONE-HANDED AND TWO-HANDED WEAPON TABLES
+// ============================================
 // Uncommon 1H weapons
 object category "I_AMP_Molnestrel_3",1,0,0,0,0,0,0,0
 object category "I_AMP_Ekho_Iskazhennoy_Struny",1,0,0,0,0,0,0,0
@@ -24335,8 +24725,11 @@ object category "I_AMP_Aquatic_VoidCapsule",63,0,0,0,0,0,0,0
 object category "I_AMP_Arcane_VoidCapsule",18,0,0,0,0,0,0,0
 object category "I_AMP_War_VoidCapsule",9,0,0,0,0,0,0,0
 
-// no void capsules in trade tables, trade stock rerolls on level-up and rest
-// capsules come once per trader as personal stock, see AMP_Plus_CapsuleShop
+// Void capsules leave the trade lists: generated trade stock is rerolled on level-up
+// and long rest, so a capsule there was a lottery ticket that kept reshuffling itself.
+// These are the base trader tables restated without their capsule rows; the capsules now
+// arrive once per trader as personal stock (AMP_Plus_CapsuleShop goal), which the trade
+// regeneration never touches.
 
 new treasuretable "CRE_Expeditioner_Trade_AMP"
 new subtable "1,1"
@@ -26646,8 +27039,10 @@ new subtable "-1"
 object category "T_AMP_DarkUrge_Shards_Murder_Rare",9,0,0,0,0,0,0,0
 object category "T_AMP_DarkUrge_Shards_Murder_VeryRare",1,0,0,0,0,0,0,0
 
-// Quest reward windows
-// one list per capsule slot, identical items in a window merge into one stack
+// Quest reward windows. Early windows hand out gear and themed Void Capsules, mid-game windows
+// lean on Runic Shards, late windows on Very Rare gear. Identical capsules or coins in one
+// window merge into a single stack, so every capsule slot draws from its own list.
+// Placed after every pool they draw from.
 
 new treasuretable "AMP_StartQuest_Choice"
 new subtable "-1"

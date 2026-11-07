@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h3ad726bfg6185g4d0egbf76ge6b4e51199b4" version="1">Astral Frost</content>
+	<content contentuid="hbec12d5cg9df0g404egb8e4g03fb1d2bf926" version="1">You gain &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to&lt;b&gt;[1]&lt;/b&gt; and&lt;b&gt;[2]&lt;/b&gt;.</content>
+	<content contentuid="h98587373gd4a8g4b33g9402g6bb6c2796641" version="1">Mind Weave</content>
+	<content contentuid="h1c4b9247gaeb9g47aagbc48g9ee9d104497c" version="1">You gain &lt;b&gt;Advantage&lt;/b&gt; on &lt;b&gt;Intelligence&lt;/b&gt;, &lt;b&gt;Wisdom&lt;/b&gt;, and &lt;b&gt;Charisma&lt;/b&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;.</content>
+	<content contentuid="hd7ca0265g642fg4f8dg99b1g0d848caeaf51" version="1">When you deal&lt;b&gt;[1]&lt;/b&gt;, you also inflict &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mental Fatigue&lt;/LSTag&gt; for &lt;b&gt;[2]&lt;/b&gt; turns.</content>
+</contentList>

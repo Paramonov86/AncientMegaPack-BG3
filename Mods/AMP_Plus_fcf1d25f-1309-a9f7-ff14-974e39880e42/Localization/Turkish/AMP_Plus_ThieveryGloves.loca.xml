@@ -2,4 +2,8 @@
 <contentList>
 	<content contentuid="hd91e2cffge5abg4394g86eagca08cbd5f721" version="1">Dolandırıcı</content>
 	<content contentuid="hd8e9ceb4g7e47g40fdga8a0g27acc30c40fa" version="1">İnisiyatif zarlarına +[1] bonus kazanırsın. Savaşa girdiğinde kendi turunda &lt;b&gt;[2]&lt;/b&gt; tur boyunca &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Görünmez&lt;/LSTag&gt; olursun.</content>
+	<content contentuid="h9c3d3c45gf0ccg48fcg8b1cg642d4cabb345" version="1">Kilidin Ardında</content>
+	<content contentuid="h6c3d6c67g43eag4f53gabb1g10178324a0b2" version="3">Bir kilidi açtığında &lt;b&gt;%[1]&lt;/b&gt; ihtimalle rastgele bir &lt;LSTag Type="Status" Tooltip="AMP_RUNIC_SHARD_INFO"&gt;Runik Parçası&lt;/LSTag&gt; kazanırsın. Her kilit bir kez sayılır. &lt;LSTag Tooltip="LongRest"&gt;Uzun Dinlenme&lt;/LSTag&gt; başına en fazla &lt;b&gt;[2]&lt;/b&gt; parça.</content>
+	<content contentuid="h86e3d9bbg624cg4760g8648gc352bdd22f93" version="1">Hırsız Şansı</content>
+	<content contentuid="h8419c8bcg2cd7g4510gb87ag8bf801513c8e" version="3">Bir kilidi açtığında &lt;b&gt;%[1]&lt;/b&gt; ihtimalle bir &lt;LSTag Type="Status" Tooltip="AMP_VOID_CAPSULE_CHARGES"&gt;Boşluk Kapsülü&lt;/LSTag&gt; kazanırsın. Her kilit bir kez sayılır. &lt;LSTag Tooltip="LongRest"&gt;Uzun Dinlenme&lt;/LSTag&gt; başına en fazla &lt;b&gt;[2]&lt;/b&gt; kapsül.</content>
 </contentList>

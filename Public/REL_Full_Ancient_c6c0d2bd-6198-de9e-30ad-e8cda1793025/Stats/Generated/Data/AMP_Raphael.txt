@@ -1,4 +1,5 @@
-// Raphael endgame statuses, gated by AMP_RAPHAEL_OVERLAY_HARD
+// AMP_Raphael.txt — Raphael endgame mechanics (Hard mode overlay)
+// All statuses gated through AMP_RAPHAEL_OVERLAY_HARD (only on STATUS_HARD)
 
 new entry "AMP_RAPHAEL_OVERLAY_HARD"
 type "StatusData"

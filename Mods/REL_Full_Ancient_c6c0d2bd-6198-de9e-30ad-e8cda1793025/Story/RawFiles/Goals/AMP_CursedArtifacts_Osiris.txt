@@ -422,7 +422,9 @@ THEN
 DB_NOOP(1);
 NOT DB_NOOP(1);
 
-// rot roll: bound to the owner so it fires on their turn only, like the regen gate
+// rot (turn start)
+// owner-bound: roll only on the owner's turn. was unbound _Char so it rolled
+// once per fighter per round, inflating the rot rate. mirrors the regen gate.
 
 IF
 TurnStarted(_Char)
@@ -443,7 +445,8 @@ NOT DB_AMP_Spore_ItemInfections(_Item, _InfCount);
 RequestDelete(_Item);
 
 // fire cleansing
-// StatusAttempt, not StatusApplied: fires even where the engine rejects BURNING
+// statusattempt (not applied) fires even on weapons where engine rejects burning,
+// so this clears spore infection on armor and weapons alike
 IF
 StatusAttempt((ITEM)_Item, "BURNING", _, _)
 AND

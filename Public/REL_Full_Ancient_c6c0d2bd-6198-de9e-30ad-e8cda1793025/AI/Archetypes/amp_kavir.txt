@@ -1,7 +1,17 @@
-USING rogue_smart
+// Ka'vir the Silver - githyanki stunner (ULTRA pool #8).
+// Fragile hyper-mobile brawler: charges in, lands a sneaky stun, peels off with leftover move/jumps,
+// ignores opportunity attacks, never stops moving, reckless with its own skin. Punishes turtle/kite play.
 
-// endpos penalty scores the final tile only, so adjacency during the swing is free
-// radius has to be reachable after the swing: wide and strong never attacks, weak stands glued
+USING rogue_smart
+// inherits: HIT_CHANCE_STUPIDITY ~0.85, +KILL_ENEMY, +CONCENTRATION_REMOVE 0.30, flanking/endpos-neighbour zeroed.
+
+// --- ENGINEERED MELEE HIT-AND-RUN (no vanilla precedent: only ranged use negative endpos) ---
+// endpos penalty is scored on the FINAL tile only, not the momentary approach for the swing
+// (and he ignores AoO), so adjacency-to-attack is free. The trick is the MULTIPLIER x MAX_DISTANCE
+// pairing: a strong peel-pressure (-0.50, ranged-tier) PLUS a SMALL safe radius (7m) that is
+// reachable right after the swing with his huge move pool -> close, hit, dance out to 7m, repeat.
+// Failure modes proven in testing: -1.50 + 22m = safe zone unreachable while attacking -> pure flee,
+// never hits; -0.10 + 6m = penalty too shallow to spend movement -> stands glued, no flex.
 MULTIPLIER_ENDPOS_ENEMIES_NEARBY                -0.35
 ENDPOS_ENEMIES_NEARBY_MIN_DISTANCE               1.90
 ENDPOS_ENEMIES_NEARBY_MAX_DISTANCE               7.00

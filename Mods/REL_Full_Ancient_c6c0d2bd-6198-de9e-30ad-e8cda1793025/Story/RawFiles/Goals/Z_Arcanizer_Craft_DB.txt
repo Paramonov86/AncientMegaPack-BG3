@@ -1,10 +1,32 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// DB_AMP_Recipe(recipeid, type, outputtemplate, minchaos)
-// minchaos is the minimum chaos value, used for difficulty scaling
+// arcanizer crafting system
+// recipe database structure
+// main recipe database
+// recipeid: unique identifier for recipe
+// type: category (resource, weapon, jewelry, etc.)
+// outputtemplate: what item is created
+// minchaos: minimum chaos value required for recipe (used for difficulty scaling)
+// db_amp_recipe((string)_recipeid, (string)_recipetype, (itemroot)_outputtemplate, (integer)_minchaos);
 
-// DB_AMP_Recipe_Ingredient(recipeid, index 1-5, ingredienttemplate)
+// recipe ingredients database
+// recipeid: reference to main recipe
+// index: position in recipe (1-5)
+// ingredienttemplate: required item template
+// db_amp_recipe_ingredient((string)_recipeid, (integer)_index, (itemroot)_ingredienttemplate);
+
+// base weapon identification by weapon tag
+// maps recipe to required weapon tag
+// db_amp_recipe_baseweapon((string)_recipeid, (tag)_weapontag);
+
+// base equipment identification by equipment slot
+// maps recipe to required equipment slot (rings, amulets, etc.)
+// db_amp_recipe_baseequipment((string)_recipeid, (equipmentslot)_slot);
+
+// found ingredients temporary tracking during crafting
+// stores items that have been found as ingredients for current recipe
+// db_amp_recipe_founditem((string)_recipeid, (integer)_index, (item)_founditem);
 
 // crafting state tracking
 // tracks the current recipe being processed
@@ -12,6 +34,9 @@ DB_AMP_Crafting_Processing("");
 DB_AMP_Crafting_FoundItems(0);
 DB_AMP_Crafting_BlockAutoEject(0);
 
+// elemental spheres
+// 14 elemental types as defined in design doc
+// map sphere templates to element types
 DB_AMP_ElementalOrb((ITEMROOT)Orb_Radiant_0425090c-c828-4a76-9482-9f5da87ae100, "Radiant");
 DB_AMP_ElementalOrb((ITEMROOT)Orb_Force_45209c6d-d95b-43ab-971f-d10948ca22bb, "Force");
 DB_AMP_ElementalOrb((ITEMROOT)Orb_Lightning_51cfe65a-f30f-4adb-808b-0d90df8d21e4, "Lightning");

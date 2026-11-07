@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">&lt;LSTag Tooltip="SpellDifficultyClass"&gt;Büyü Kurtarma ZS&lt;/LSTag&gt; değerine +[1], büyü &lt;LSTag Tooltip="AttackRoll"&gt;Saldırı Zarlarına&lt;/LSTag&gt; +[2] bonus kazanırsın.</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">Mutlak Kızgınlık</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">Savaşta bu meçle hasar verdiğinde &lt;b&gt;[1]&lt;/b&gt; yarıçapında, &lt;b&gt;[2]&lt;/b&gt; tur süren &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Cehennem Ateşi&lt;/LSTag&gt; yaratırsın. &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;Cehennem Ateşi&lt;/LSTag&gt; sana etki etmez.&lt;br&gt;&lt;br&gt;Hedeflerin ateş hasarına karşı &lt;LSTag Tooltip="Resistant"&gt;Direnç&lt;/LSTag&gt; ve &lt;LSTag Tooltip="Immune"&gt;bağışıklıklarını&lt;/LSTag&gt; yok sayarsın.</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">Avernus'un Kızgınlığı</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">Silahından bir cehennem ateşi dalgası püskürten hızlı bir hamle.</content>
+</contentList>

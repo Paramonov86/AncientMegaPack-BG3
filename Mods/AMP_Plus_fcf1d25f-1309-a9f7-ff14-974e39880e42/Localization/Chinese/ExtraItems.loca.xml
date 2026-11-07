@@ -473,8 +473,8 @@
 	<content contentuid="h03ad851cgb0b0g4677g8085g3c3f12104f0c" version="1">远距之死</content>
 	<content contentuid="h9a18a3f8gb734g4349g94d8g5b30a72001a8" version="1">如果目标距离超过&lt;b&gt;[1]&lt;/b&gt;，使用&lt;b&gt;远程武器&lt;/b&gt;达成&lt;LSTag Tooltip="CriticalHit"&gt;重击&lt;/LSTag&gt;所需的掷骰点数减少&lt;b&gt;[2]&lt;/b&gt;点。</content>
 	<content contentuid="h250ec94eg1380g4575g88c0gbd62c77648d8" version="1">科米尔精锐</content>
-	<content contentuid="h1c55d917gfb1bg42cdgb13cgf6a90148e9ae" version="1">你的&lt;b&gt;普通远程攻击&lt;/b&gt;范围扩大&lt;b&gt;[1]%&lt;/b&gt;。</content>
-	<content contentuid="hcf7ffaf2g2d8dg409dgbf2fgc2412a60b6dc" version="1">你的&lt;b&gt;普通远程攻击&lt;/b&gt;范围扩大&lt;b&gt;[1]%&lt;/b&gt;，且若目标距你超过&lt;b&gt;[2]&lt;/b&gt;，则以&lt;b&gt;远程武器&lt;/b&gt;发动的&lt;LSTag Tooltip="AttackRoll"&gt;攻击检定&lt;/LSTag&gt;具有&lt;LSTag Tooltip="Advantage"&gt;优势&lt;/LSTag&gt;。</content>
+	<content contentuid="h1c55d917gfb1bg42cdgb13cgf6a90148e9ae" version="1">你的&lt;b&gt;普通远程攻击&lt;/b&gt;范围扩大&lt;b&gt;[1]%&lt;/b&gt;。 超出武器正常射程的射击仍会承受&lt;LSTag Tooltip="Disadvantage"&gt;劣势&lt;/LSTag&gt;。</content>
+	<content contentuid="hcf7ffaf2g2d8dg409dgbf2fgc2412a60b6dc" version="1">你的&lt;b&gt;普通远程攻击&lt;/b&gt;范围扩大&lt;b&gt;[1]%&lt;/b&gt;，且若目标距你超过&lt;b&gt;[2]&lt;/b&gt;，则以&lt;b&gt;远程武器&lt;/b&gt;发动的&lt;LSTag Tooltip="AttackRoll"&gt;攻击掷骰&lt;/LSTag&gt;具有&lt;LSTag Tooltip="Advantage"&gt;优势&lt;/LSTag&gt;。 超出武器正常射程的射击仍会承受&lt;LSTag Tooltip="Disadvantage"&gt;劣势&lt;/LSTag&gt;。</content>
 	<content contentuid="hd6f359abg11a7g48fdg9292gdaa3655d0586" version="1">切换半径</content>
 	<content contentuid="h23589e25g245fg48c3gbbb9gf3faedc4b4ed" version="1">启用以显示你周围&lt;b&gt;[1]&lt;/b&gt;的半径。</content>
 	<content contentuid="h05bb9f80g3df7g250ege283gf35180898534" version="1">诺姆泽达的不灭誓言</content>

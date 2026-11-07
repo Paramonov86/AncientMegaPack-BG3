@@ -4,8 +4,10 @@ INITSECTION
 
 KBSECTION
 
-// restock rides an object timer that freezes in turn-based, global timers still tick
-// backup timer drives PickWeighted when the chain stalled, otherwise it sees nothing and nothing doubles
+// restock spawns ride an object timer that freezes in turn-based, so the shop
+// never refills in TB until you toggle it off/on. global timers still tick in TB,
+// so run a parallel one on shop open and drive PickWeighted itself if the chain stalled.
+// in normal mode the object chain finishes first and this timer sees nothing -> no double spawn.
 
 // arm backup timer on shop open
 IF

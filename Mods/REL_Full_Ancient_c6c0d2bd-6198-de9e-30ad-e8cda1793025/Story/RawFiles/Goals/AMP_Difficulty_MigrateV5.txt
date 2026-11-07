@@ -1,7 +1,9 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// one-time migration, flat progression stacks become t2 tier stacks and killtier backfills to 2
+// difficulty v4->v5 migration, one-time on existing saves.
+// swaps v4 flat progression stacks for v5 tier stacks (all as t2) and
+// backfills killtier=2 for bosses killed before v5.
 
 KBSECTION
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hdfb23537g30b2g4368ga1f0g57122f603403" version="1">Correctif Lame d'Ombre</content>
+	<content contentuid="hbc08212ag28b2g4842gaddeg9646bb7f264d" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [Légitime tant que cela correspond au réglage par défaut de ce mode]&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;Lame d'Ombre&lt;/LSTag&gt; inflige toujours [1], quel que soit le niveau de l'emplacement de sort.</content>
+	<content contentuid="hc5d36564g77d3g4a38g9afag7a7ffbed6283" version="1">&lt;b&gt;Correctif Lame d'Ombre&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;Lame d'Ombre&lt;/LSTag&gt; inflige toujours 2d8 dégâts, quel que soit le niveau de l'emplacement de sort.&lt;br&gt;&lt;br&gt;Activer ?</content>
+</contentList>

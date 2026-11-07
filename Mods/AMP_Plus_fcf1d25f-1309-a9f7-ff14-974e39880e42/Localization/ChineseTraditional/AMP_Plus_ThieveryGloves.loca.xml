@@ -2,4 +2,8 @@
 <contentList>
 	<content contentuid="hd91e2cffge5abg4394g86eagca08cbd5f721" version="1">騙徒</content>
 	<content contentuid="hd8e9ceb4g7e47g40fdga8a0g27acc30c40fa" version="1">你的先攻擲骰獲得+[1]加值。進入戰鬥後，你會在自己的回合中進入&lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;隱形&lt;/LSTag&gt;狀態，持續&lt;b&gt;[2]&lt;/b&gt;回合。</content>
+	<content contentuid="h9c3d3c45gf0ccg48fcg8b1cg642d4cabb345" version="1">鎖後之物</content>
+	<content contentuid="h6c3d6c67g43eag4f53gabb1g10178324a0b2" version="3">撬開一把鎖時，你有&lt;b&gt;[1]%&lt;/b&gt;的機率獲得一枚隨機&lt;LSTag Type="Status" Tooltip="AMP_RUNIC_SHARD_INFO"&gt;符文碎片&lt;/LSTag&gt;。每把鎖只計算一次。每次&lt;LSTag Tooltip="LongRest"&gt;長休&lt;/LSTag&gt;最多&lt;b&gt;[2]&lt;/b&gt;枚。</content>
+	<content contentuid="h86e3d9bbg624cg4760g8648gc352bdd22f93" version="1">盜賊的運氣</content>
+	<content contentuid="h8419c8bcg2cd7g4510gb87ag8bf801513c8e" version="3">撬開一把鎖時，你有&lt;b&gt;[1]%&lt;/b&gt;的機率獲得一個&lt;LSTag Type="Status" Tooltip="AMP_VOID_CAPSULE_CHARGES"&gt;虛空膠囊&lt;/LSTag&gt;。每把鎖只計算一次。每次&lt;LSTag Tooltip="LongRest"&gt;長休&lt;/LSTag&gt;最多&lt;b&gt;[2]&lt;/b&gt;個。</content>
 </contentList>

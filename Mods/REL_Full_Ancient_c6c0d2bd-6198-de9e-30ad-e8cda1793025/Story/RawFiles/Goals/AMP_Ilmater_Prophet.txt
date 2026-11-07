@@ -3,6 +3,7 @@ SubGoalCombiner SGC_AND
 INITSECTION
 KBSECTION
 
+// boots prophet: when the hidden passive rolls success and applies the trigger status, grant the ally an inspiration point
 IF
 StatusApplied((CHARACTER)_Target, "AMP_ILMATER_PROPHET_INSPIRATION_TRIGGER", _, _)
 THEN

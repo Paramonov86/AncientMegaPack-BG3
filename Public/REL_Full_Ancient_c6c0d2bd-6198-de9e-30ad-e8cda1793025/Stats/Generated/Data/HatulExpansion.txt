@@ -1,6 +1,8 @@
-// Expansion items, inheritance goes straight to vanilla bases
+// HatulExpansion.txt
+// 24 items by community contributor Hatul, integrated as AMP expansion.
+// Generated from ParaTool .art profiles. AMP-only inheritance unwound to vanilla bases.
 
-// AMP-only passives, expanded under our names
+// === AMP-only passives, expanded under our names ===
 
 new entry "AMP_Hatul_Bloodseeker_Crit"
 type "PassiveData"
@@ -81,7 +83,7 @@ data "DescriptionParams" "1"
 data "Properties" "Highlighted"
 data "Boosts" "Reroll(MeleeWeaponAttack,1,false)"
 
-// Info-passives (status describers, only for items with StatusOnEquip)
+// === Info-passives (status describers, only for items with StatusOnEquip) ===
 
 new entry "AMP_Hatul_Astral_Boots_Info"
 type "PassiveData"
@@ -155,7 +157,8 @@ data "DisplayName" "h50b66b95gfa58g4f25g9814g3a30be0e39bd;1"
 data "Description" "h44c981a1g0cbbg4634gb263g3e343f96d97b;1"
 data "Properties" "Highlighted"
 
-// Vanilla MAGE_ARMOR self-removes while WearingArmor. This variant survives on equip, used by Robe of Weave Master
+// Item-safe Mage Armor variant — vanilla MAGE_ARMOR self-removes when WearingArmor.
+// Used by Robe of Weave Master so the bonus actually applies on equip.
 new entry "AMP_Hatul_MAGE_ARMOR"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -178,7 +181,7 @@ data "DisplayName" "h8fc7636dgd836g4963g8fbbg22ffcc1c8e62;1"
 data "Description" "h1e4db3e6g7388g4814gb132g87d874f6064e;1"
 data "Properties" "Highlighted"
 
-// 24 Items (alphabetical by statId)
+// === 24 Items (alphabetical by statId) ===
 
 new entry "AMP_Astral_Boots"
 type "Armor"

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha9e44be0g2a9dg485dgb498g5c38e634e65b" version="1">Vous bénéficiez d'un bonus de +[1] au &lt;LSTag Tooltip="SpellDifficultyClass"&gt;DD de sauvegarde des sorts&lt;/LSTag&gt; et de +[2] aux &lt;LSTag Tooltip="AttackRoll"&gt;jets d'attaque&lt;/LSTag&gt; des sorts.</content>
+	<content contentuid="h1c3a1431gfc67g4646g83d1g3f09424f8907" version="1">Chaleur absolue</content>
+	<content contentuid="h31b00fc9ga62bg4904gb760g3b452e67df8e" version="1">Lorsque vous infligez des dégâts avec cette rapière en combat, vous créez du &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;feu infernal&lt;/LSTag&gt; dans un rayon de &lt;b&gt;[1]&lt;/b&gt; pendant &lt;b&gt;[2]&lt;/b&gt; tours. Le &lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;feu infernal&lt;/LSTag&gt; ne vous affecte pas.&lt;br&gt;&lt;br&gt;Vous ignorez la &lt;LSTag Tooltip="Resistant"&gt;résistance&lt;/LSTag&gt; et l'&lt;LSTag Tooltip="Immune"&gt;immunité&lt;/LSTag&gt; de vos cibles aux dégâts de feu.</content>
+	<content contentuid="hf381fe2agcb49g4625g8674ge0305d5bf5fd" version="1">Chaleur d'Avernus</content>
+	<content contentuid="h2d738b71ga702g4ef2ga650g9f06454c92d0" version="1">Une fente fulgurante qui projette une vague de feu infernal depuis l'arme.</content>
+</contentList>

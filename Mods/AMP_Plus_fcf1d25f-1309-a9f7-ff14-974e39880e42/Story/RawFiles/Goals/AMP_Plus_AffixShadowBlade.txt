@@ -1,0 +1,122 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+IF
+LevelGameplayStarted(_, _)
+AND
+NOT DB_AMP_Plus_ShadowBladeDefVer(2)
+THEN
+PROC_AMP_Plus_ShadowBladeDefReseed();
+
+IF
+SavegameLoaded()
+AND
+NOT DB_AMP_Plus_ShadowBladeDefVer(2)
+THEN
+PROC_AMP_Plus_ShadowBladeDefReseed();
+
+PROC
+PROC_AMP_Plus_ShadowBladeDefReseed()
+AND
+DB_AMP_Plus_ShadowBladeDefVer((INTEGER)_Old)
+THEN
+NOT DB_AMP_Plus_ShadowBladeDefVer(_Old);
+
+// index sits past the contiguous run, so the setup wizard never reaches it and the button still works
+
+PROC
+PROC_AMP_Plus_ShadowBladeDefReseed()
+AND
+DB_AMP_Plus_AffixDef((INTEGER)_Idx, "SHADOWBLADEFIX", (STRING)_Ask, (INTEGER)_C, (INTEGER)_N, (INTEGER)_H)
+THEN
+NOT DB_AMP_Plus_AffixDef(_Idx, "SHADOWBLADEFIX", _Ask, _C, _N, _H);
+
+PROC
+PROC_AMP_Plus_ShadowBladeDefReseed()
+THEN
+DB_AMP_Plus_ShadowBladeDefVer(2);
+DB_AMP_Plus_AffixDef(100, "SHADOWBLADEFIX", "AMP_Plus_Affix_ShadowBlade_Ask", 0, 1, 1);
+
+PROC
+PROC_AMP_Plus_ShadowBladeDefReseed()
+AND
+DB_AMP_GameMode((STRING)_Mode)
+THEN
+PROC_AMP_Plus_Affix_ApplyDefaults(_Mode);
+
+IF
+LevelGameplayStarted(_, _)
+AND
+NOT DB_AMP_Plus_AffixBtn("Shout_AMP_Plus_Affix_ShadowBlade", _)
+THEN
+DB_AMP_Plus_AffixBtn("Shout_AMP_Plus_Affix_ShadowBlade", "SHADOWBLADEFIX");
+
+IF
+SavegameLoaded()
+AND
+NOT DB_AMP_Plus_AffixBtn("Shout_AMP_Plus_Affix_ShadowBlade", _)
+THEN
+DB_AMP_Plus_AffixBtn("Shout_AMP_Plus_Affix_ShadowBlade", "SHADOWBLADEFIX");
+
+// upcast die override lives in an item status, the blade keeps its base 2d8 without it
+
+IF
+StatusApplied((ITEM)_Blade, "SHADOWBLADE_TECHNICAL_1", _, _)
+AND
+QRY_AMP_Plus_Affix_On("SHADOWBLADEFIX")
+THEN
+RemoveStatus(_Blade, "SHADOWBLADE_TECHNICAL_1", NULL_00000000-0000-0000-0000-000000000000);
+
+IF
+StatusApplied((ITEM)_Blade, "SHADOWBLADE_TECHNICAL_2", _, _)
+AND
+QRY_AMP_Plus_Affix_On("SHADOWBLADEFIX")
+THEN
+RemoveStatus(_Blade, "SHADOWBLADE_TECHNICAL_2", NULL_00000000-0000-0000-0000-000000000000);
+
+// a status already on a blade raises no StatusApplied after a load or when the affix is switched on
+
+IF
+SavegameLoaded()
+AND
+QRY_AMP_Plus_Affix_On("SHADOWBLADEFIX")
+THEN
+PROC_AMP_Plus_ShadowBlade_Sweep();
+
+PROC
+PROC_AMP_Plus_Affix_OnChanged((STRING)_Id, (INTEGER)_Val)
+AND
+_Id == "SHADOWBLADEFIX"
+AND
+_Val == 1
+THEN
+PROC_AMP_Plus_ShadowBlade_Sweep();
+
+PROC
+PROC_AMP_Plus_ShadowBlade_Sweep()
+AND
+DB_Players((CHARACTER)_P)
+AND
+GetItemByTemplateInInventory((ITEMROOT)UNI_HUM_ShadowBlade_66d6cbd5-c231-4fc4-a3b7-80f781b579f7, _P, (ITEM)_Blade)
+AND
+HasActiveStatus(_Blade, "SHADOWBLADE_TECHNICAL_1", 1)
+THEN
+RemoveStatus(_Blade, "SHADOWBLADE_TECHNICAL_1", NULL_00000000-0000-0000-0000-000000000000);
+
+PROC
+PROC_AMP_Plus_ShadowBlade_Sweep()
+AND
+DB_Players((CHARACTER)_P)
+AND
+GetItemByTemplateInInventory((ITEMROOT)UNI_HUM_ShadowBlade_66d6cbd5-c231-4fc4-a3b7-80f781b579f7, _P, (ITEM)_Blade)
+AND
+HasActiveStatus(_Blade, "SHADOWBLADE_TECHNICAL_2", 1)
+THEN
+RemoveStatus(_Blade, "SHADOWBLADE_TECHNICAL_2", NULL_00000000-0000-0000-0000-000000000000);
+
+EXITSECTION
+
+ENDEXITSECTION

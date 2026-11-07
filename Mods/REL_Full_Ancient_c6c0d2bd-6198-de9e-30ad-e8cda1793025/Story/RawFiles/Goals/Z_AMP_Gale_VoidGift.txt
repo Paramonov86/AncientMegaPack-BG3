@@ -3,6 +3,9 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
+// gale rewards the player with random void capsules after his personal story
+// beats. hard mode only; only while gale is a recruited companion (not the
+// player's avatar) and in the active controllable party.
 
 // shared grant procedures
 

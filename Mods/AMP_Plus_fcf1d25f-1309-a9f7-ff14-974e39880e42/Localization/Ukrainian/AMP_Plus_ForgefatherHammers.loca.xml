@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">Длань отця кузні</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">Викуваний у Серці Гір, цей молот колись служив самому Морадіну для обробки перших жил первісної руди. Кажуть, бог-коваль вклав у нього не лише вагу підземних надр, а й саму ідею кузні.&lt;br&gt;&lt;br&gt;У руках смертного зброя зберегла свою божественну суть: кожен удар обрушує на ворога невблаганну вагу гір і збиває його з ніг. Для Морадіна вся земля є вічним ковадлом. Хто падає під ударом, опиняється притиснутим до неї, і його плоть, кістки чи обладунок стають крихкими, як поганий метал. Добивальний удар по такому ворогу подібний до удару молота по розпеченому залізу на ковадлі: він безжально кришить і трощить ціль.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">Молот</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">Істота, що отримала шкоду від цього молота, має пройти &lt;LSTag Tooltip="SavingThrow"&gt;рятівний кидок&lt;/LSTag&gt; Сили проти вашого &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;СК маневрів&lt;/LSTag&gt;, інакше її буде &lt;LSTag Type="Status" Tooltip="PRONE"&gt;збито з ніг&lt;/LSTag&gt; на &lt;b&gt;[1]&lt;/b&gt; хід.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">Ковадло</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">Вороги, яких ви &lt;LSTag Type="Status" Tooltip="PRONE"&gt;збиваєте з ніг&lt;/LSTag&gt;, стають &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;Крихкими&lt;/LSTag&gt; на &lt;b&gt;[1]&lt;/b&gt; ходи.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">Між молотом і ковадлом</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">Влучаючи цим молотом по &lt;LSTag Type="Status" Tooltip="PRONE"&gt;збитій з ніг&lt;/LSTag&gt; цілі, ви додатково завдаєте &lt;b&gt;[1]&lt;/b&gt;.</content>
+</contentList>

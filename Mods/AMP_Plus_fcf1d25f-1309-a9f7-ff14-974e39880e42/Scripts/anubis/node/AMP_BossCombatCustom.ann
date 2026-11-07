@@ -1,6 +1,9 @@
--- same timeout as AMP_BossCombat, for fights that replace the combat node outright
--- scripted state is proxied unchanged, no fallback beside it
--- if it cannot be entered the node is skipped, as the original would be
+-- Same turn timeout as AMP_BossCombat, over a scripted combat state instead of DefaultCombat.
+--
+-- A handful of fights replace the combat node outright rather than passing customCombat, so the
+-- timer cannot be hung on DefaultCombat for them. The scripted state is proxied unchanged and
+-- there is no fallback beside it: if it cannot be entered, this node is skipped exactly as the
+-- original combat node would have been.
 game.states.AMP_BossCombatCustom = State{function ()
     description = [[A scripted combat state with a turn timeout that is held while the party reacts.]]
 

@@ -47,7 +47,7 @@ PROC_AMP_Plus_ShardRecon_Slot(_Player, "Amulet");
 PROC_AMP_Plus_ShardRecon_Slot(_Player, "Melee Main Weapon");
 PROC_AMP_Plus_ShardRecon_Slot(_Player, "Ranged Main Weapon");
 
-// toggle-only carriers are skipped, stripping one drops the hotbar toggle
+// toggle-only and spell-only carriers are skipped, stripping one drops it from the hotbar
 PROC
 PROC_AMP_Plus_ShardRecon_Strip((CHARACTER)_Char)
 AND
@@ -60,6 +60,10 @@ AND
 _CharStatus != "AMP_SHARD_CHAR_CANNONADE"
 AND
 _CharStatus != "AMP_SHARD_CHAR_COMMUTATION"
+AND
+_CharStatus != "AMP_SHARD_CHAR_HUNTERSMARK"
+AND
+_CharStatus != "AMP_SHARD_CHAR_LAYONHANDS"
 AND
 HasActiveStatus((CHARACTER)_Char, _CharStatus, 1)
 THEN

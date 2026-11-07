@@ -2,16 +2,18 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 
-// both spellings stay, GetSurfaceCloudAt returns the Surface-prefixed runtime name
+// fog/darkness clouds that blind enemy AI - the exploit tool we watch for.
+// natural darkness isn't one of these. GetSurfaceCloudAt returns the runtime
+// name with the Surface prefix, so keep both spellings.
 DB_AMP_StealthAbuse_ExploitSurface("SurfaceDarknessCloud");
 DB_AMP_StealthAbuse_ExploitSurface("SurfaceFogCloud");
 DB_AMP_StealthAbuse_ExploitSurface("DarknessCloud");
 DB_AMP_StealthAbuse_ExploitSurface("FogCloud");
 
-// keep at 0, 1 spams debug text and auto-launches the wizard on level load
+// release: keep at 0. 1 = debug spam in osirislog + auto-wizard on level load.
 DB_AMP_StealthAbuse_Debug(0);
 
-// own turns hidden in an exploit cloud before sanctions
+// own turns spent hidden in an exploit cloud before sanctions. tunable.
 DB_AMP_StealthAbuse_Threshold(3);
 
 // normal-mode opt-out via training ring. 0 = on
@@ -399,6 +401,8 @@ DB_AMP_StealthAbuse_Pending(_Host)
 THEN
 NOT DB_AMP_StealthAbuse_Pending(_Host);
 
+// diagnostics -> osirislog, gated on the debug flag
+
 // log the cloud-surface string under each player at turn start
 // (no line = no cloud found under the player)
 IF
@@ -426,7 +430,9 @@ QRY_AMP_StealthAbuse_Qualifies(_P)
 THEN
 DebugText(_P, "AMP_StealthAbuse: QUALIFYING turn (hidden in exploit cloud)");
 
-// debug only. DB_AMP_Wizard_Done keeps already-configured players, casual included, untouched
+// debug only: difficulty resets to NONE on every recompile and off TUT_Avernus
+// the wizard never auto-fires. re-launch it on load if it was never completed -
+// the wizard-done guard keeps already-configured players (incl. casual) untouched.
 IF
 LevelGameplayStarted(_Level, _)
 AND

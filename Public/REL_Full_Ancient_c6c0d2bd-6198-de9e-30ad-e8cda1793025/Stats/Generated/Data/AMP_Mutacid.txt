@@ -1,12 +1,17 @@
-// Mutacid markers. Rarity sets TIER, Osiris reads the max
+// ================================================================================
+// AMP MUTACID — кислотный выводок (acid-spawn brood). Phase 0.
+// ================================================================================
+// Mechanic #1: marker statuses (invisible). Item rarity → TIER (brood depth, Osiris reads MAX);
+// item quality → Q-flag (tiered). Read by Osiris bridge (Layer 2) + spawn (Phase 1).
+// ================================================================================
 
-// abstract base: technical/invisible flags (never applied directly)
+// ---- abstract base: technical/invisible flags (never applied directly) ----
 new entry "AMP_MUTACID_MARKER_BASE"
 type "StatusData"
 data "StatusType" "BOOST"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
-// ACTIVE marker on every mutacid item, Osiris spawn gate
+// ---- common ACTIVE marker (on ALL mutacid items) — Osiris spawn-gate ----
 new entry "AMP_MUTACID_ACTIVE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -14,7 +19,7 @@ data "DisplayName" "hb42d0cd0g555dg491aga5a7g5c9c96a509e2;1"
 using "AMP_MUTACID_MARKER_BASE"
 data "StackId" "AMP_MUTACID_ACTIVE"
 
-// TIER markers (= item rarity; brood depth = MAX across worn items)
+// ---- TIER markers (= item rarity; brood depth = MAX across worn items) ----
 new entry "AMP_MUTACID_TIER1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -43,7 +48,7 @@ data "DisplayName" "hb42d0cd0g555dg491aga5a7g5c9c96a509e2;1"
 using "AMP_MUTACID_MARKER_BASE"
 data "StackId" "AMP_MUTACID_TIER4"
 
-// Q_CORRODE (ring, tiered)
+// ---- Q_CORRODE (ring, tiered) ----
 new entry "AMP_MUTACID_Q_CORRODE_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -72,7 +77,7 @@ data "DisplayName" "he2544cbfgd0c6g4f52g8d1egf3dde2de6d93;1"
 using "AMP_MUTACID_MARKER_BASE"
 data "StackId" "AMP_MUTACID_Q_CORRODE_T4"
 
-// Q_PIERCE, amulet, no tiers
+// ---- Q_PIERCE (amulet, SINGLE — binary effect, no tiers; Variant A §3.0) ----
 new entry "AMP_MUTACID_Q_PIERCE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -80,7 +85,7 @@ data "DisplayName" "hf8e38740g977bg47d6g9c87g2c03fc34eccc;1"
 using "AMP_MUTACID_MARKER_BASE"
 data "StackId" "AMP_MUTACID_Q_PIERCE"
 
-// Q_BATH (cloak, tiered)
+// ---- Q_BATH (cloak, tiered) ----
 new entry "AMP_MUTACID_Q_BATH_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -109,7 +114,7 @@ data "DisplayName" "hdacb2b73g8076g4168ga43eg9f1b536e298b;1"
 using "AMP_MUTACID_MARKER_BASE"
 data "StackId" "AMP_MUTACID_Q_BATH_T4"
 
-// Q_SURFACE, helmet, no tiers
+// ---- Q_SURFACE (helmet, single Rare — no tiers) ----
 new entry "AMP_MUTACID_Q_SURFACE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -117,7 +122,7 @@ data "DisplayName" "h08a49ac7g874ag45b1g812fgfbe741741a6e;1"
 using "AMP_MUTACID_MARKER_BASE"
 data "StackId" "AMP_MUTACID_Q_SURFACE"
 
-// Q_ORB, orb, draft-gate marker
+// ---- Q_ORB (orb, single — draft-gate marker for Phase 2) ----
 new entry "AMP_MUTACID_Q_ORB"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -125,10 +130,12 @@ data "DisplayName" "h6434d003g92d3g42ffgb217g6420a8c36bd3;1"
 using "AMP_MUTACID_MARKER_BASE"
 data "StackId" "AMP_MUTACID_Q_ORB"
 
+// ================================================================================
 // Mechanic #2a: CORRODE (ring Q). Slime hits on acid-coated foe → armour-corrosion.
 // SLIMEQ_CORRODE_Tn (hidden carrier) → corrode_p_tn (hidden) → CORRODED_Tn (visible debuff).
+// ================================================================================
 
-// enemy debuff «Dermolysis / Дермолиз» (visible), tiered AC
+// ---- enemy debuff «Dermolysis / Дермолиз» (visible), tiered AC ----
 new entry "AMP_MUTACID_CORRODED_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -165,7 +172,7 @@ data "DisplayName" "he2544cbfgd0c6g4f52g8d1egf3dde2de6d93;1"
 using "AMP_MUTACID_CORRODED_T3"
 data "StackPriority" "4"
 
-// applier passives (hidden): slime damages acid-coated enemy → corrode
+// ---- applier passives (hidden): slime damages acid-coated enemy → corrode ----
 new entry "AMP_Mutacid_Corrode_P_T1"
 type "PassiveData"
 data "DisplayName" "he2544cbfgd0c6g4f52g8d1egf3dde2de6d93;1"
@@ -192,7 +199,7 @@ data "DisplayName" "he2544cbfgd0c6g4f52g8d1egf3dde2de6d93;1"
 using "AMP_Mutacid_Corrode_P_T1"
 data "StatsFunctors" "ApplyStatus(AMP_MUTACID_CORRODED_T4,100,2)"
 
-// SLIMEQ carriers (hidden): Osiris bridge maps Q_CORRODE_Tn → this; carries the applier
+// ---- SLIMEQ carriers (hidden): Osiris bridge maps Q_CORRODE_Tn → this; carries the applier ----
 new entry "AMP_MUTACID_SLIMEQ_CORRODE_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -226,7 +233,11 @@ using "AMP_MUTACID_SLIMEQ_CORRODE_T1"
 data "StackPriority" "4"
 data "Passives" "AMP_Mutacid_Corrode_P_T4"
 
-// Info passives. AcidBrood is the LSTag target, tiers share one handle and vary DescriptionParams
+// ================================================================================
+// Mechanic #3: visible info-passives (Highlighted, PassivesOnEquip). Player-facing.
+// AcidBrood = explainer (LSTag target). Tiered (ring/cloak) reuse handle, vary DescParams.
+// Loca: AMP_Mutacid.loca.xml. Names per Mutacid_Loca_APPROVED.md.
+// ================================================================================
 
 new entry "AMP_Mutacid_AcidBrood"
 type "PassiveData"
@@ -244,7 +255,7 @@ data "Icon" "MelfsAcidArrow"
 data "StackId" "AMP_MUTACID_ACIDSPAWN_INFO"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// RING «Vectors of Decay» (4 tiers, AC 1/1/2/2)
+// ---- RING «Vectors of Decay» (4 tiers, AC 1/1/2/2) ----
 new entry "AMP_Mutacid_Info_Corrode_T1"
 type "PassiveData"
 data "DisplayName" "he0c0fb16gd671g44edga410g23de5975a0f5;1"
@@ -270,7 +281,7 @@ data "DisplayName" "he0c0fb16gd671g44edga410g23de5975a0f5;1"
 using "AMP_Mutacid_Info_Corrode_T1"
 data "DescriptionParams" "2"
 
-// AMULET «Solvent Heredity» (single)
+// ---- AMULET «Solvent Heredity» (single) ----
 new entry "AMP_Mutacid_Info_Pierce"
 type "PassiveData"
 data "DisplayName" "hf8e38740g977bg47d6g9c87g2c03fc34eccc;1"
@@ -278,7 +289,7 @@ data "Description" "h5c324e35g630fg4859g9830g26f89074f0f6;1"
 data "DescriptionParams" "DealDamage(,Acid)"
 data "Properties" "Highlighted"
 
-// CLOAK «Symbiotic Confluence» (4 tiers, THP 3/5/8/12)
+// ---- CLOAK «Symbiotic Confluence» (4 tiers, THP 3/5/8/12) ----
 new entry "AMP_Mutacid_Info_Bath_T1"
 type "PassiveData"
 data "DisplayName" "hdacb2b73g8076g4168ga43eg9f1b536e298b;1"
@@ -304,7 +315,7 @@ data "DisplayName" "hdacb2b73g8076g4168ga43eg9f1b536e298b;1"
 using "AMP_Mutacid_Info_Bath_T1"
 data "DescriptionParams" "DealDamage(1d4,Acid);GainTemporaryHitPoints(12)"
 
-// HELMET «Primordial Culture» (single Rare)
+// ---- HELMET «Primordial Culture» (single Rare) ----
 new entry "AMP_Mutacid_Info_Surface"
 type "PassiveData"
 data "DisplayName" "h08a49ac7g874ag45b1g812fgfbe741741a6e;1"
@@ -312,14 +323,16 @@ data "Description" "hf94c4abcg1cacg4a73ga750ga8b562c4ed93;1"
 data "DescriptionParams" "RegainHitPoints(3)"
 data "Properties" "Highlighted"
 
-// ORB «Directed Mutagenesis» (single, all rarities)
+// ---- ORB «Directed Mutagenesis» (single, all rarities) ----
 new entry "AMP_Mutacid_Info_Orb"
 type "PassiveData"
 data "DisplayName" "h6434d003g92d3g42ffgb217g6420a8c36bd3;1"
 data "Description" "h60f9beebgd6bfg4199g8a2ag0eb027c71503;1"
 data "Properties" "Highlighted"
 
+// ================================================================================
 // Mechanic #2b: PIERCE (amulet Q, SINGLE). Slime acid ignores Resist + bite → SOFTENED.
+// ================================================================================
 new entry "AMP_MUTACID_SLIMEQ_PIERCE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -352,7 +365,9 @@ data "StackId" "AMP_MUTACID_SOFTENED"
 data "Boosts" "Resistance(Acid,Vulnerable)"
 data "StatusGroups" "SG_Condition"
 
+// ================================================================================
 // Mechanic #2c: BATH (cloak Q, numeric). DamageBonus 1d4 + THP shield 3/5/8/12.
+// ================================================================================
 new entry "AMP_MUTACID_SLIMEQ_BATH_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -443,7 +458,9 @@ data "DisplayName" "hb42d0cd0g555dg491aga5a7g5c9c96a509e2;1"
 data "Boosts" "TemporaryHP(12)"
 data "DescriptionParams" "12"
 
+// ================================================================================
 // Mechanic #2d: SURFACE (helmet Q, single). Slime heals while in acid surface.
+// ================================================================================
 new entry "AMP_MUTACID_SLIMEQ_SURFACE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -470,7 +487,10 @@ data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableComb
 data "OnApplyFunctors" "RegainHitPoints(3)"
 data "ApplyEffect" "f40e4c72-3971-4f14-9c43-9a44c0251a5d"
 
-// Mutations stack additively, no StackId
+// ================================================================================
+// Mechanic #4: 8 MUTATIONS (draft stacks). Additive (NO StackId — §5.1). Visible (§4.15).
+// Applied to slime by Osiris on draft-cast (Phase 2). Icons §7.0.5, loca §7.5 E.
+// ================================================================================
 new entry "AMP_MUTACID_MUT_SPIKES"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -566,8 +586,10 @@ data "FormatColor" "Acid"
 data "Boosts" "ReduceCriticalAttackThreshold(1)"
 data "StatusPropertyFlags" "IgnoreResting"
 
+// ================================================================================
 // Mechanic #5: DRAFT (Phase 2). 8 unlock-statuses (UnlockSpell) + 8 free Shout draft-spells.
 // Reuse mutation name/desc/icon. Osiris grants the mutation on cast + clears the pair.
+// ================================================================================
 
 new entry "AMP_MUTACID_DRAFTUNLOCK_SPIKES"
 type "StatusData"
@@ -745,7 +767,11 @@ data "Icon" "PassiveFeature_Generic_Death"
 data "DisplayName" "he658aeb0g6e31g4c4dgba99gb1ee8cd77e3f;1"
 data "Description" "h44d03aabg62c1g476fgaa22g1970f5bdcc83;1"
 
-// Evolution point sources: passive, 0-duration marker, Osiris adds points
+// ================================================================================
+// Mechanic #6: evolution-point SOURCES (Phase 2). Hidden passives on player (via
+// PassivesOnEquip of acid items) -> 0-dur marker -> Osiris StatusApplied -> +points.
+// v1 sources = bathe + kill (PT_APPLY/PT_SLIME dropped). §6.2/§6.3.
+// ================================================================================
 new entry "AMP_Mutacid_PT_Bathe"
 type "PassiveData"
 data "Properties" "IsHidden"

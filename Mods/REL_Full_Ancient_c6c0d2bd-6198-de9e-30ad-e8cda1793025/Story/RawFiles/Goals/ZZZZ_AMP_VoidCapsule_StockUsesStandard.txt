@@ -4,8 +4,10 @@ INITSECTION
 
 KBSECTION
 
-// stock maps to difficulty NONE, the same key as casual, so the capsule cache is overridden with standard values
-// 500ms delay lets refreshcache fire first on the same event
+// stock gamemode maps to difficulty NONE, same key as casual, and the capsule
+// cache keys off that. stock should play like standard but casual keeps NONE,
+// so override the active cache to standard values when gamemode is stock.
+// 500ms delay so we run after refreshcache fires on the same event.
 
 IF
 LevelGameplayStarted(_, _)

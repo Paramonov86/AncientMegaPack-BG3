@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hdfb23537g30b2g4368ga1f0g57122f603403" version="1">暗影之刃修正</content>
+	<content contentuid="hbc08212ag28b2g4842gaddeg9646bb7f264d" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [与该模式默认设置一致时为正当]&lt;br&gt;&lt;br&gt;无论法术位环阶如何，&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;暗影之刃&lt;/LSTag&gt;始终造成[1]。</content>
+	<content contentuid="hc5d36564g77d3g4a38g9afag7a7ffbed6283" version="1">&lt;b&gt;暗影之刃修正&lt;/b&gt;&lt;br&gt;&lt;br&gt;无论法术位环阶如何，&lt;LSTag Type="Spell" Tooltip="Shout_ShadowBlade"&gt;暗影之刃&lt;/LSTag&gt;始终造成2d8伤害。&lt;br&gt;&lt;br&gt;是否启用？</content>
+</contentList>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd0973c38g6dcfg4710gb6e4g5637d0b48f61" version="1">灼熱の一撃</content>
+	<content contentuid="h3c004c12g1fefg4c43g8a88g3babf71eaca0" version="1">目標を打ち、灼熱の炎を解き放つ。&lt;b&gt;追加で&lt;/b&gt;&lt;b&gt;[2]&lt;/b&gt;を与え、目標は敏捷力&lt;LSTag Tooltip="SavingThrow"&gt;セーヴィング・スロー&lt;/LSTag&gt;に成功しない限り&lt;b&gt;[1]&lt;/b&gt;ターン&lt;LSTag Type="Status" Tooltip="BURNING"&gt;燃焼&lt;/LSTag&gt;する。</content>
+	<content contentuid="he7519926g138ag4334g9e2ag391bc47c18f8" version="1">目標を打ち、地獄の炎を解き放つ。&lt;b&gt;追加で&lt;/b&gt;&lt;b&gt;[2]&lt;/b&gt;を与え、目標は敏捷力&lt;LSTag Tooltip="SavingThrow"&gt;セーヴィング・スロー&lt;/LSTag&gt;に成功しない限り&lt;b&gt;[1]&lt;/b&gt;ターン&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;燃焼&lt;/LSTag&gt;する。</content>
+	<content contentuid="hcdc3b046gce6dg42beg89e3g82366651e815" version="1">灼熱の旋風</content>
+	<content contentuid="h691d0a1dg508dg4022ga4b3g50408610e592" version="1">両手で近くのすべての敵を薙ぎ払う。各目標に対して個別に&lt;LSTag Tooltip="AttackRoll"&gt;攻撃ロール&lt;/LSTag&gt;を行い、両方の武器のダメージを与える。命中した各目標は敏捷力&lt;LSTag Tooltip="SavingThrow"&gt;セーヴィング・スロー&lt;/LSTag&gt;に成功しない限り&lt;b&gt;[1]&lt;/b&gt;ターン&lt;LSTag Type="Status" Tooltip="BURNING"&gt;燃焼&lt;/LSTag&gt;する。</content>
+	<content contentuid="hdcc98bf4g9f7eg43a4gb707gbe5bba48a937" version="1">両手で近くのすべての敵を薙ぎ払う。各目標に対して個別に&lt;LSTag Tooltip="AttackRoll"&gt;攻撃ロール&lt;/LSTag&gt;を行い、両方の武器のダメージを与える。命中した各目標は敏捷力&lt;LSTag Tooltip="SavingThrow"&gt;セーヴィング・スロー&lt;/LSTag&gt;に成功しない限り&lt;b&gt;[1]&lt;/b&gt;ターン&lt;LSTag Type="Status" Tooltip="BURNING_HELLFIRE"&gt;燃焼&lt;/LSTag&gt;する。</content>
+</contentList>

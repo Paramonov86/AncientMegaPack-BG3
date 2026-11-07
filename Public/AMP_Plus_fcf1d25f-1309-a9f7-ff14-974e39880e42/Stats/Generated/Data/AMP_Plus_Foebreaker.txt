@@ -1,0 +1,17 @@
+new entry "MAG_TheDestroyer_Maul"
+type "Weapon"
+using "MAG_TheDestroyer_Maul"
+data "BoostsOnEquipMainHand" "UnlockSpell(MAG_TheDestroyer_Maul_concussiveSmash);UnlockSpell(MAG_TheDestroyer_Maul_postureBreaker)"
+
+new entry "MAG_TheDestroyer_Maul_concussiveSmash"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ConcussiveSmash"
+
+new entry "MAG_TheDestroyer_Maul_postureBreaker"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_PostureBreaker"
+data "SpellSuccess" "IF(Character() and not SavingThrow(Ability.Strength, ManeuverSaveDC())):ApplyStatus(PRONE,100,2);IF(Enemy() and HasStatus('DAZED',context.Target)):DealDamage(MainMeleeWeapon*2,MainMeleeWeaponDamageType);IF(Enemy() and not HasStatus('DAZED',context.Target)):DealDamage(MainMeleeWeapon,MainMeleeWeaponDamageType)"
+data "Description" "hcc5bee44g6029g4743gad29g3851f62132ad;1"
+data "TooltipDamageList" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType)"

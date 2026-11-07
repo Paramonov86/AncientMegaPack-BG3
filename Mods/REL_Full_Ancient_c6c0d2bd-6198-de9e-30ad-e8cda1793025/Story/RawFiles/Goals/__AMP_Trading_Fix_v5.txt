@@ -1,9 +1,17 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// tracks vanilla table changes through the PROC_SetCustomTradeTreasure intercept
-// original table is clean vanilla for off mode, _amp adds rel_* items for first visits, _none is consumables only for repeats
-// DB_AMP_ToNone maps an _amp table to its _none, DB_AMP_Visited marks traders met on the current table
+// amp trading fix v5.0 - simplified architecture
+// principle: track vanilla table changes via proc_setcustomtradetreasure intercept.
+// on requesttrade/pickpocket: use stored _amp table (first visit) or _none (repeat).
+// tables:
+// - original = clean vanilla (no rel_*) - off mode
+// - _amp     = with rel_* items        - on mode, first visit
+// - _none    = consumables only        - on mode, repeat visits
+// data:
+// - db_amp_currenttable(trader, "table_amp") - current _amp table (updated on intercept)
+// - db_amp_tonone("table_amp", "table_none") - mapping for repeat visits
+// - db_amp_visited(trader) - had interaction with current table
 
 //region starting _amp tables (all tracked traders)
 
@@ -177,7 +185,9 @@ NOT DB_AMP_Visited(_Trader);
 
 //end_region
 
-//REGION intercept PROC_SetCustomTradeTreasure
+//region intercept proc_setcustomtradetreasure (generic)
+// when vanilla changes table, we update our tracking and reset visited
+// skip if specialredirect already handled this trader+table combo
 
 PROC
 PROC_SetCustomTradeTreasure((CHARACTER)_Trader, (STRING)_VanillaTable)
@@ -198,8 +208,10 @@ NOT DB_AMP_Visited(_Trader);
 
 //end_region
 
-//REGION thrumbo special case
-// no trader until the beggar takeover, and vanilla calls SetCustomTradeTreasure directly, bypassing the intercept
+//region thrumbo special case
+// thrumbo is not a trader until beggartakeover event
+// vanilla uses direct setcustomtradetreasure (not proc_setcustomtradetreasure)
+// after event he inherits mystic carrion's table
 
 PROC
 PROC_LOW_PhilgravesMansion_BeggarTakeover()
@@ -270,8 +282,9 @@ SetCustomTradeTreasure(_Trader, _NoneTable);
 
 //end_region
 
-//REGION mark visited
-// marked on window open, the player already sees the items
+//region mark visited
+// mark as visited immediately when player opens trade/pickpocket window
+// player already sees the items - no point waiting for transaction result
 
 // trade opened (first visit)
 IF

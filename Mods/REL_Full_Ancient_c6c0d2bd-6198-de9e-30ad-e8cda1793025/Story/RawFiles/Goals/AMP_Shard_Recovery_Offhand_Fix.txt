@@ -2,7 +2,9 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 
-// registers the off-hand slots PROC_AMP_RecoverAllShards walks, the marker follows the item there
+// recovery shard skipped off-hand weapons: the marker rides the item into the
+// off-hand but the recovery walk never visited that slot. register the off-hand
+// weapon slots so PROC_AMP_RecoverAllShards walks them. own goal so it seeds on old saves.
 DB_AMP_Shard_RecoverySlot("Melee Offhand Weapon");
 DB_AMP_Shard_RecoverySlot("Ranged Offhand Weapon");
 

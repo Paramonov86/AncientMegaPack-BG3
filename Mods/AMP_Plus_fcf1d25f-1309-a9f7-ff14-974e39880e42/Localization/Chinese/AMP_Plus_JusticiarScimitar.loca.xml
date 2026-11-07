@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h4991785aga322g4ddeg9e17gd1d6c13397a7" version="1">受到这把弯刀伤害的敌人必须通过一次对抗你&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等级&lt;/LSTag&gt;的体质&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;，否则会&lt;LSTag Type="Status" Tooltip="BLINDED"&gt;目盲&lt;/LSTag&gt;。</content>
+</contentList>

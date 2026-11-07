@@ -1,7 +1,12 @@
-// Ilmater expansion, Stigma mechanic
+// ============================================================
+// AMP Ilmater Expansion
+// 10 artefacts x 4 rarities, core mechanic — Stigma
+// ============================================================
 
 
+// ============================================================
 // STIGMA: base status + 10 variants
+// ============================================================
 
 new entry "AMP_STIGMA_BASE"
 type "StatusData"
@@ -28,7 +33,14 @@ data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableComb
 data "RemoveEvents" "OnCombatEnded"
 
 
-// Equip markers per slot. Removal makes Osiris clear Stigmas via DB_AMP_Ilmater_StigmaLink
+// Equip markers — one per artifact slot (Amulet, Ring, Diadem, Robe, Cloak,
+// Gloves, Boots, Helmet, MediumArmor, HeavyArmor). Each Ilmater artifact
+// applies its marker to the wearer via StatusOnEquip. When the artifact is
+// unequipped the marker falls off; Osiris observes the StatusRemoved event
+// and clears every Stigma the wearer had cast of that artifact's type using
+// DB_AMP_Ilmater_StigmaLink. This is the anti-abuse layer: a Stigma only
+// persists on its targets while the caster still wears the artifact that
+// granted the prayer.
 
 new entry "AMP_ILMATER_AMULET_EQUIPPED"
 type "StatusData"
@@ -91,7 +103,14 @@ data "StackId" "AMP_ILMATER_HEAVYARMOR_EQUIPPED"
 data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog;IgnoreResting;ApplyToDead"
 
 
-// Tier markers, only Diadem and Boots. Osiris reads caster tier from them
+// Tier-specific equip markers. Paired with the category-level `_EQUIPPED`
+// status via StatusOnEquip "<CATEGORY>_EQUIPPED;<CATEGORY>_T<N>_EQUIPPED".
+// The category marker drives anti-abuse cleanup; the tier marker lets
+// Osiris identify the caster's artifact tier at the moment a Stigma is
+// applied, so it can pick the correct passive-marker to place on the ally.
+// Only categories whose tiered passives scale per tier need these (Diadem
+// for Providence/Retribution, Boots for Prophet). Tiers without a
+// per-tier passive do not add a tier marker.
 
 new entry "AMP_ILMATER_DIADEM_T2_EQUIPPED"
 type "StatusData"
@@ -136,6 +155,14 @@ data "StackId" "AMP_ILMATER_BOOTS_T4_EQUIPPED"
 data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog;IgnoreResting;ApplyToDead"
 
 
+// Providence regen markers (Diadem passive 1). Placed on an ally who carries
+// any of the Diadem wearer's Stigmas. Each start-of-turn tick, while the
+// bearer is wounded and in combat, the marker heals 1d4 / 1d6 / 1d8 HP,
+// scaling with the Diadem's tier (T2 / T3 / T4 respectively). Self-cleanup:
+// the marker's RemoveConditions fires on any StatusRemoved event and checks
+// HasAnyAMPIlmaterStigma on the bearer; once no Ilmater Stigma remains, the
+// marker drops itself without Osiris intervention.
+
 new entry "AMP_ILMATER_PROVIDENCE_REGEN_T2"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -159,6 +186,10 @@ using "AMP_ILMATER_PROVIDENCE_REGEN_T2"
 data "TickFunctors" "IF(Combat() and HasHPPercentageWithoutTemporaryHPLessThan(100,context.Target)):RegainHitPoints(1d8)"
 
 
+// Retribution marker (Diadem passive 3, Legendary only). Placed on an ally
+// who carries any of the Diadem T4 wearer's Stigmas. Carries a hidden
+// passive that, on OnDamaged from a hostile melee attack in combat, makes
+// the bearer unleash a free 3rd-level Divine Smite against the attacker.
 new entry "AMP_ILMATER_RETRIBUTION_MARKER_T4"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -169,6 +200,13 @@ data "RemoveConditions" "not HasAnyAMPIlmaterStigma(context.Target)"
 data "RemoveEvents" "OnStatusRemoved"
 
 
+// Prophet markers (Boots stigma mechanic). Placed on an ally who carries
+// any of the Boots wearer's Stigmas. Each marker carries a hidden passive
+// that rolls on OnStatusApplied for a 1 / 1 / 2 / 3% chance (T1 / T2 / T3 /
+// T4 respectively) to grant the bearer an Inspiration point when they are
+// afflicted with a gameplay condition in combat. On a successful roll the
+// passive applies an instant trigger status that Osiris converts into a
+// GiveInspirationPoints call.
 new entry "AMP_ILMATER_PROPHET_MARKER_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -197,7 +235,9 @@ using "AMP_ILMATER_PROPHET_MARKER_T1"
 data "Passives" "AMP_Ilmater_Prophet_Hidden_Passive_T4"
 
 
-// Prophet trigger, 0-duration. Osiris turns it into GiveInspirationPoints
+// Prophet trigger — instant status (duration 0). The Prophet hidden
+// passives apply it to the bearer on a successful chance roll; Osiris
+// catches the StatusApplied event and calls GiveInspirationPoints.
 new entry "AMP_ILMATER_PROPHET_INSPIRATION_TRIGGER"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -294,7 +334,9 @@ data "Description" "h5de54cc6gcbc1g465dgb655g80b547f166cf;1"
 data "Boosts" "DownedStatus(AMP_STIGMA_DOWNED,10);CriticalHit(AttackTarget,Success,Never)"
 
 
+// ============================================================
 // Stigma Downed (auto-revive) + Surge (Action Surge)
+// ============================================================
 
 new entry "AMP_STIGMA_DOWNED"
 type "StatusData"
@@ -308,7 +350,9 @@ data "StatusGroups" "SG_Incapacitated"
 data "ApplyEffect" "f40e4c72-3971-4f14-9c43-9a44c0251a5d"
 
 
+// ============================================================
 // Veil (inherits Globe of Invulnerability)
+// ============================================================
 
 new entry "AMP_VEIL"
 type "StatusData"
@@ -328,7 +372,9 @@ using "AMP_VEIL"
 data "RemoveEvents" "OnAttack"
 
 
-// Heal statuses, no StackId so procs stay independent
+// ============================================================
+// Heal statuses for passives (universal, no StackId — independent procs)
+// ============================================================
 
 new entry "AMP_ILMATER_HEAL_T2"
 type "StatusData"
@@ -394,7 +440,9 @@ data "StackId" "AMP_ILMATER_LITANY_HEAL_MARKER"
 data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog;IgnoreResting;ApplyToDead"
 
 
+// ============================================================
 // Mysteries of Suffering (common set passive)
+// ============================================================
 
 new entry "AMP_Ilmater_Mysteries_Passive"
 type "PassiveData"
@@ -404,7 +452,9 @@ data "Icon" "PassiveFeature_Generic_Threat"
 data "Properties" "Highlighted"
 
 
+// ============================================================
 // Prayer base template (SpellData)
+// ============================================================
 
 new entry "AMP_Ilmater_Prayer_Base"
 type "SpellData"
@@ -431,7 +481,9 @@ data "TargetEffect" "6d8d4da9-0c0e-473e-b598-19f721be0679"
 data "Cooldown" "OncePerRestPerItem"
 
 
+// ============================================================
 // VESSEL: The Chosen One's Palms (Prayer of Communion)
+// ============================================================
 
 new entry "AMP_ILMATER_COMMUNION_THP_1"
 type "StatusData"
@@ -677,7 +729,9 @@ data "PassivesOnEquip" "AMP_Ilmater_Mysteries_Passive;AMP_Ilmater_Anointing_Pass
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Communion_4)"
 
 
+// ============================================================
 // VESSEL: Ring of the Red Window (Prayer of Anchoring)
+// ============================================================
 
 new entry "AMP_Ilmater_Prayer_Anchoring_1"
 type "SpellData"
@@ -870,7 +924,9 @@ data "PassivesOnEquip" "AMP_Ilmater_Mysteries_Passive;AMP_Ilmater_WatchfulEye_Pa
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Anchoring_4)"
 
 
+// ============================================================
 // VESSEL: Diadem of the Nameless (Prayer of Sealing)
+// ============================================================
 
 new entry "AMP_Ilmater_DiademConcBreak_Hidden_Passive"
 type "PassiveData"
@@ -1007,7 +1063,11 @@ data "Conditions" "IsMeleeAttack() and Enemy() and Combat() and HasLastAttackTri
 data "StatsFunctors" "UseSpell(SWAP,Target_Smite_Divine_3,true,true,true)"
 
 
-// not RollDieAgainstDC(d100, N) = N% trigger
+// Prophet hidden passives — carried inside the Prophet markers above.
+// Each time a gameplay status is applied to the bearer in combat they roll
+// d100; on a fail the Prophet trigger fires, which Osiris converts into an
+// Inspiration point. Chance per tier: 1% (T1/T2), 2% (T3), 3% (T4).
+// Form: not RollDieAgainstDC(d100, N) = N% trigger.
 new entry "AMP_Ilmater_Prophet_Hidden_Passive_T1"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -1071,7 +1131,9 @@ data "StatusOnEquip" "AMP_ILMATER_DIADEM_EQUIPPED;AMP_ILMATER_DIADEM_T4_EQUIPPED
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Sealing_4)"
 
 
+// ============================================================
 // VESSEL: Robe of the Yellow Rose (Prayer of Temperance)
+// ============================================================
 
 new entry "AMP_Ilmater_Prayer_Temperance_1"
 type "SpellData"
@@ -1252,7 +1314,9 @@ data "PassivesOnEquip" "AMP_Ilmater_Mysteries_Passive;AMP_Ilmater_Aegis_Passive_
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Temperance_4)"
 
 
+// ============================================================
 // LITANY: Cloak of the Sixth Pit (Prayer of Preaching)
+// ============================================================
 
 new entry "AMP_Ilmater_Prayer_Preaching_1"
 type "SpellData"
@@ -1312,6 +1376,11 @@ data "DescriptionParams" "RegainHitPoints(1d6)"
 data "StatsFunctors" "ApplyStatus(AMP_ILMATER_LITANY_HEAL_MARKER_T4,100,0)"
 
 
+// Unbroken tracker (Cloak passive 2). Applied to the wearer when they cast
+// their first Ilmater prayer during combat, and cleared when combat ends —
+// modelling the "already placed a Stigma this combat" gate. While active,
+// its StartTurn tick refreshes the Ready status below, so the wearer gets
+// one free prayer per round on every subsequent turn until combat ends.
 new entry "AMP_ILMATER_UNBROKEN_TRACKER"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1322,6 +1391,11 @@ data "TickFunctors" "ApplyStatus(SELF,AMP_ILMATER_UNBROKEN_READY,100,1)"
 data "RemoveEvents" "OnCombatEnded"
 
 
+// Unbroken ready: makes the wearer's next Ilmater prayer cost no Action
+// this turn. UnlockSpellVariant narrows the discount to IsAMPIlmaterPrayer
+// spells only, so other spells pay their normal cost. RemoveConditions
+// then drops the status only when the wearer actually casts one of those
+// prayers — casting anything else leaves the buff intact until end of turn.
 new entry "AMP_ILMATER_UNBROKEN_READY"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -1387,7 +1461,9 @@ data "PassivesOnEquip" "AMP_Ilmater_Mysteries_Passive;AMP_Ilmater_EchoOfLitany_P
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Preaching_4)"
 
 
+// ============================================================
 // LITANY: The Stayed Hands (Prayer of the Thread)
+// ============================================================
 
 new entry "AMP_Ilmater_Prayer_Thread_1"
 type "SpellData"
@@ -1511,7 +1587,9 @@ data "PassivesOnEquip" "AMP_Ilmater_Mysteries_Passive;AMP_Ilmater_RightHand_Pass
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Thread_4)"
 
 
+// ============================================================
 // LITANY: Boots of the Trackless Vigil (Prayer of the Prophet)
+// ============================================================
 
 new entry "AMP_Ilmater_Prayer_Prophet_1"
 type "SpellData"
@@ -1661,7 +1739,9 @@ data "StatusOnEquip" "AMP_ILMATER_BOOTS_EQUIPPED;AMP_ILMATER_BOOTS_T4_EQUIPPED"
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Prophet_4)"
 
 
+// ============================================================
 // WOUND: Helmet of the Third Day (Prayer of Pain)
+// ============================================================
 
 new entry "AMP_Ilmater_PainRetaliate_Passive_1"
 type "PassiveData"
@@ -1847,7 +1927,9 @@ data "PassivesOnEquip" "AMP_Ilmater_Mysteries_Passive;AMP_Ilmater_Bloodflow_Pass
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Pain_4)"
 
 
+// ============================================================
 // WOUND: Deserter's Armour (Prayer of the Bone)
+// ============================================================
 
 new entry "AMP_STIGMA_MEDIUMARMOR_1"
 type "StatusData"
@@ -2058,7 +2140,9 @@ data "PassivesOnEquip" "AMP_Ilmater_Mysteries_Passive;AMP_Ilmater_Recompense_Pas
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Bone_4);Ability(Wisdom,1)"
 
 
+// ============================================================
 // WOUND: Armour of the Noble Heart (Prayer of Martyrdom)
+// ============================================================
 
 new entry "AMP_STIGMA_HEAVYARMOR_1"
 type "StatusData"
@@ -2263,6 +2347,11 @@ data "PassivesOnEquip" "AMP_Ilmater_Mysteries_Passive;AMP_Ilmater_Intercession_P
 data "Boosts" "UnlockSpell(AMP_Ilmater_Prayer_Martyrdom_4);Disadvantage(Skill,Stealth)"
 
 
+// ============================================================
+// BURDEN: applied to the cleric who casts a Prayer (managed by Osiris)
+// Carrier status — hosts the trigger passive and tick check
+// ============================================================
+
 new entry "AMP_ILMATER_BURDEN"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -2277,6 +2366,7 @@ data "OnRemoveFunctors" "RemoveStatus(AMP_ILMATER_BURDEN_ACTIVE)"
 data "StatusGroups" "SG_RemoveOnRespec"
 data "ManagedStatusEffectType" "Negative"
 
+// Hidden trigger passive — re-evaluates the HP threshold on incoming damage and at turn start
 new entry "AMP_Ilmater_Burden_Trigger"
 type "PassiveData"
 data "DisplayName" "h9a5ffd91g5c96g4948g8a94g9518dde0e21c;1"
@@ -2285,6 +2375,7 @@ data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnDamaged;OnTurn"
 data "StatsFunctors" "IF(HasHPPercentageWithoutTemporaryHPMoreThan(50, context.Target)):ApplyStatus(AMP_ILMATER_BURDEN_ACTIVE,100,1);IF(not HasHPPercentageWithoutTemporaryHPMoreThan(50, context.Target)):RemoveStatus(AMP_ILMATER_BURDEN_ACTIVE)"
 
+// Active drawback — actually applies the Vulnerable boost when HP > 50%
 new entry "AMP_ILMATER_BURDEN_ACTIVE"
 type "StatusData"
 data "StatusType" "BOOST"

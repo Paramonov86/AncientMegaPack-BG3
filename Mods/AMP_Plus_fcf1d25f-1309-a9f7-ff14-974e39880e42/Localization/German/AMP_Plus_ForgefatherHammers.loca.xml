@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">Hand des Schmiedevaters</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">Im Herzen der Berge geschmiedet, diente dieser Hammer einst Moradin selbst, als er die ersten Adern urzeitlichen Erzes bearbeitete. Man sagt, der Schmiedegott habe nicht nur das Gewicht der Tiefe in ihn gelegt, sondern die Idee der Schmiede selbst.&lt;br&gt;&lt;br&gt;In sterblichen Händen bewahrt die Waffe ihr göttliches Wesen: Jeder Schlag lässt das unerbittliche Gewicht der Berge auf den Feind niedergehen und reißt ihn von den Füßen. Für Moradin ist die ganze Erde ein ewiger Amboss. Wer unter dem Schlag fällt, wird auf ihn gepresst, und Fleisch, Knochen oder Rüstung werden so spröde wie schlechtes Metall. Ein letzter Schlag gegen einen solchen Feind gleicht dem Hammerschlag auf glühendes Eisen: Er zermalmt und zerschmettert ohne Gnade.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">Hammer</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">Eine Kreatur, die durch diesen Hammer Schaden erleidet, muss einen Stärke-&lt;LSTag Tooltip="SavingThrow"&gt;Rettungswurf&lt;/LSTag&gt; gegen euren &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;Manöver-SG&lt;/LSTag&gt; bestehen, sonst wird sie für &lt;b&gt;[1]&lt;/b&gt; Runde &lt;LSTag Type="Status" Tooltip="PRONE"&gt;zu Boden geworfen&lt;/LSTag&gt;.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">Amboss</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">Feinde, die ihr &lt;LSTag Type="Status" Tooltip="PRONE"&gt;zu Boden werft&lt;/LSTag&gt;, werden für &lt;b&gt;[1]&lt;/b&gt; Runden &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;zerbrechlich&lt;/LSTag&gt;.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">Zwischen Hammer und Amboss</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">Wenn ihr mit diesem Hammer ein Ziel trefft, das &lt;LSTag Type="Status" Tooltip="PRONE"&gt;am Boden liegt&lt;/LSTag&gt;, verursacht ihr zusätzlich &lt;b&gt;[1]&lt;/b&gt;.</content>
+</contentList>

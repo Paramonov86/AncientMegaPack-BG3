@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h3ad726bfg6185g4d0egbf76ge6b4e51199b4" version="1">아스트랄 서리</content>
+	<content contentuid="hbec12d5cg9df0g404egb8e4g03fb1d2bf926" version="1">&lt;b&gt;[1]&lt;/b&gt; 및 &lt;b&gt;[2]&lt;/b&gt;에 대한 &lt;LSTag Tooltip="Resistant"&gt;저항&lt;/LSTag&gt;을 얻습니다.</content>
+	<content contentuid="h98587373gd4a8g4b33g9402g6bb6c2796641" version="1">정신의 그물</content>
+	<content contentuid="h1c4b9247gaeb9g47aagbc48g9ee9d104497c" version="1">&lt;b&gt;지능&lt;/b&gt;, &lt;b&gt;지혜&lt;/b&gt;, &lt;b&gt;매력&lt;/b&gt; &lt;LSTag Tooltip="SavingThrow"&gt;내성 굴림&lt;/LSTag&gt;에 &lt;b&gt;이점&lt;/b&gt;이 있습니다.</content>
+	<content contentuid="hd7ca0265g642fg4f8dg99b1g0d848caeaf51" version="1">&lt;b&gt;[1]&lt;/b&gt;을 입히면 &lt;b&gt;[2]&lt;/b&gt;턴 동안 &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;정신적 피로&lt;/LSTag&gt;도 부여합니다.</content>
+</contentList>

@@ -5,12 +5,14 @@ INITSECTION
 KBSECTION
 
 // watchers raise AMP_PLUS_MIRROR_TRIGGER, so the base spawn never fires
-// guards copied from the base spawn rule
+// guards copied from the base spawn rule, plus the ULTRA flag so a stale overlay cannot raise a wave
 // once per combat: several boss-flagged enemies (creche) each fired a wave
 IF
 StatusApplied((CHARACTER)_Boss, "AMP_PLUS_MIRROR_TRIGGER", _, _)
 AND
 NOT DB_AMP_MirrorSupport_Fired(_Boss)
+AND
+DB_AMP_Ultra_Active(1)
 AND
 NOT DB_AMP_Plus_ChaseActive(_, _)
 AND

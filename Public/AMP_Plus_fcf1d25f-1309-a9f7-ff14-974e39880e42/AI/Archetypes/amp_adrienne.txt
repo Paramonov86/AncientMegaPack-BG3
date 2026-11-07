@@ -1,3 +1,7 @@
+// Adrienne - ice sorcerer. Every damaging spell is also a permanent +1 Frostsoul power stack,
+// so she leans hard into damage. Built on the battle-mage base: AoE damage, control, anti-kite,
+// and protects her own concentration (Sleet Storm / Hunger of Hadar).
+
 USING bandit_mage
 
 // Frostsoul rewards every damaging cast - push damage priority further

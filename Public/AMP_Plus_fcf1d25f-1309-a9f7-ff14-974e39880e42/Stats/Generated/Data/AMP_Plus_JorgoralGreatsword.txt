@@ -1,0 +1,10 @@
+new entry "MAG_Colossal_Greatsword"
+type "Weapon"
+using "MAG_Colossal_Greatsword"
+data "BoostsOnEquipMainHand" "UnlockSpell(Target_PommelStrike);UnlockSpell(Target_Slash_New);UnlockSpell(Zone_Cleave);UnlockSpell(MAG_Colossal_Greatsword_colossalOnslaught)"
+
+new entry "MAG_Colossal_Greatsword_colossalOnslaught"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_Mag_WeaponAction_GiantBlade"
+data "Cooldown" "OncePerTurn"

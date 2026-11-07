@@ -1,7 +1,9 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
-// container item shop for trials of tav, take = pay gold, drop = sell
+// tot shop: container-based item shop for trials of tav.
+// take item = pay gold, drop item = sell at SellPercent.
+// weighted random pick over categories, restocks on long rest when you open it.
 
 // config
 DB_ToT_Shop_Enabled(1);

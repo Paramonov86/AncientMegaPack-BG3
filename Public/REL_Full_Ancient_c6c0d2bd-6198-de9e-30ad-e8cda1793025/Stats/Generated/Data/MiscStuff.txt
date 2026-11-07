@@ -475,7 +475,13 @@ type "Object"
 using "Toy_TeddyBear_Clean"
 data "RootTemplate" "9d266cc0-c3b4-4319-a0ab-e1419ce8d115"
 
-// Tooltip-only statuses, no mechanical effect. Referenced from descriptions through LSTag
+// ============================================================================
+// TOOLTIP-ONLY STATUSES
+// Educational tooltips for game mechanics that Larian forgot to explain.
+// These statuses have NO mechanical effect - they exist purely to provide
+// hover-over explanations via LSTag references in item/spell descriptions.
+// Usage: <LSTag Type="Status" Tooltip="STATUS_NAME">Display Text</LSTag>
+// ============================================================================
 
 // Maneuver Save DC - explains how Battle Master maneuver DC is calculated
 new entry "AMP_MANEUVER_SAVE_DC"
@@ -488,8 +494,10 @@ data "StackId" "AMP_MANEUVER_SAVE_DC"
 data "Boosts" ""
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
+// ============================================================================
 // CLOAK VISIBILITY TOGGLE
 // Allows players to hide/show their cloak appearance via Training Ring
+// ============================================================================
 
 // Visible status on cloak item with VFX
 new entry "AMP_CLOAK_HIDDEN"
@@ -611,10 +619,12 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_BOSS_REWARDS_DISABLED"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 
+// ============================================================================
 // SER COPPERBOTTOM'S CHEST PICKER
 // 2 containers (Slots + Synergy) -> 22 spawn spells
+// ============================================================================
 
-// SER COPPERBOTTOM'S CHEST PICKER (22)
+// ---- SER COPPERBOTTOM'S CHEST PICKER (22) ----
 
 new entry "Shout_AMP_CB_ChestPicker"
 type "SpellData"
@@ -868,7 +878,7 @@ data "DisplayName" "h4fbbc62eg043eg47e4g828fg7ecefff3167a;1"
 data "Description" "hcd0ff590g5bc6g4814gb62bg06616500f9da;1"
 data "Icon" "Shout_AMP_22"
 
-// AUTOLOOT STANDALONE
+// ==================== AUTOLOOT STANDALONE ====================
 
 new entry "AMP_AL_AURA"
 type "StatusData"
@@ -897,7 +907,7 @@ data "Properties" "Highlighted;IsToggled;ToggledDefaultAddToHotbar"
 data "ToggleOnFunctors" "ApplyStatus(AMP_AL_AURA,100,-1)"
 data "ToggleOffFunctors" "RemoveStatus(AMP_AL_AURA)"
 
-// AUTOLOOT SETTINGS CONTAINER
+// ==================== AUTOLOOT SETTINGS CONTAINER ====================
 
 new entry "Shout_AMP_AutoLoot_Container"
 type "SpellData"
@@ -1045,7 +1055,7 @@ data "DisplayName" "h8ed44ee8ga7b9g4415ga9e5gc7d7c7f5497d;1"
 data "Description" "h02a868e8gea12g4ac2g8b6ag5e440c08a2dc;1"
 data "Icon" "Portrait_CONT_PlayerCampChest_C"
 
-// Glamour Bard mini-boss
+// ========== AMP_Vludber — Glamour Bard Mini-Boss ==========
 
 new entry "AMP_Vludber"
 type "Character"
@@ -1190,7 +1200,7 @@ data "DamageType" "Bludgeoning"
 data "SpellSoundMagnitude" "Big"
 data "Sheathing" "Sheathed"
 
-// Grym surveillance construct
+// ========== AMP DRONE — Grym Surveillance Construct ==========
 
 new entry "AMP_Drone_SurveillanceProtocol"
 type "PassiveData"

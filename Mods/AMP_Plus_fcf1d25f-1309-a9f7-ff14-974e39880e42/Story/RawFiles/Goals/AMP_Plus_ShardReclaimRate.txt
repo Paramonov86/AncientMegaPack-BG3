@@ -17,10 +17,10 @@ PROC_AMP_Plus_ShardReclaimRate_DrainByMode()
 AND
 DB_AMP_VoidCapsule_ReclamationChanceByMode((STRING)_Mode, (INTEGER)_V)
 AND
-_V != 20
+_V != 15
 THEN
 NOT DB_AMP_VoidCapsule_ReclamationChanceByMode(_Mode, _V);
-DB_AMP_VoidCapsule_ReclamationChanceByMode(_Mode, 20);
+DB_AMP_VoidCapsule_ReclamationChanceByMode(_Mode, 15);
 PROC_AMP_Plus_ShardReclaimRate_DrainByMode();
 
 IF
@@ -28,18 +28,18 @@ LevelGameplayStarted(_, _)
 AND
 DB_AMP_VoidCapsule_ReclamationChanceActive((INTEGER)_Cur)
 AND
-_Cur != 20
+_Cur != 15
 THEN
 NOT DB_AMP_VoidCapsule_ReclamationChanceActive(_Cur);
-DB_AMP_VoidCapsule_ReclamationChanceActive(20);
+DB_AMP_VoidCapsule_ReclamationChanceActive(15);
 
 IF
 DB_AMP_VoidCapsule_ReclamationChanceActive((INTEGER)_Cur)
 AND
-_Cur != 20
+_Cur != 15
 THEN
 NOT DB_AMP_VoidCapsule_ReclamationChanceActive(_Cur);
-DB_AMP_VoidCapsule_ReclamationChanceActive(20);
+DB_AMP_VoidCapsule_ReclamationChanceActive(15);
 
 EXITSECTION
 

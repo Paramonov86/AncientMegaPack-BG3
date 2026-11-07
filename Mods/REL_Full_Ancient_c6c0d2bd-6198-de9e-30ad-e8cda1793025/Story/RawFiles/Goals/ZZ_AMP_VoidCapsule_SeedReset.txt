@@ -3,8 +3,11 @@ SubGoalCombiner SGC_AND
 INITSECTION
 KBSECTION
 
-// decoy chests before the real reward move the treasuretable shuffle on, against save-scumming
-// DB_AMP_SeedReset_DecoyCube keeps core auto-extract off their loot, else 10x loot
+// anti-seed: spawn a few decoy chests before the real reward so the
+// treasuretable shuffle moves on - save-scum resistance.
+// caller writes deferredspawn+tagpending then calls proc_amp_seedreset.
+// done -> core spawns the real reward.
+// decoycube flag so core auto-extract skips their loot (else 10x loot).
 
 // spawn n decoys
 PROC

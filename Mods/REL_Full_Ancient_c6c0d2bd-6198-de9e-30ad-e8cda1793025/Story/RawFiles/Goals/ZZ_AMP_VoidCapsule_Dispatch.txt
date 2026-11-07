@@ -3,8 +3,13 @@ SubGoalCombiner SGC_AND
 INITSECTION
 KBSECTION
 
-// one cheap player-owned gate runs QRY_AMP_VoidCapsule_IsContainer once per AddedTo, then routes via PROC_AMP_VoidCapsule_OnItemAdded
-// IsContainer calls GetTemplate, per-rule it ran on every AddedTo in the game and cost combat fps
+// dispatch - addedto handler with unified busy serialization
+// routes coin/reroll/shard/artifact to respective start procs.
+// perf: a single cheap gate (player-owned container) runs qry_..._iscontainer
+//   once per addedto, then routes via proc_amp_voidcapsule_onitemadded.
+//   previously 8 rules each ran iscontainer (gettemplate) on every addedto in
+//   the game (loot/equip/combat) -> ~10k gettemplate calls -> combat fps drops.
+//   logic is unchanged; only the shared head (owner+player+iscontainer) is hoisted.
 
 // gate: only items added to a player-owned voidcapsule reach the router
 // cheap filters first: getinventoryowner fails fast on world/npc containers,

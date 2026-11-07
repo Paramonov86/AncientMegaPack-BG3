@@ -1,3 +1,7 @@
+// Zephra, the Windborne - evasive arcane-trickster gish-rogue.
+// Glass cannon built around one lethal opening: she moves first, closes on whoever
+// has not acted yet, and spends the whole round killing that one target.
+
 USING rogue_smart
 
 // The opening is the kill, not the buff. Illusion and invisibility come after.
@@ -5,14 +9,17 @@ MULTIPLIER_FIRST_ACTION_BUFF                    1.00
 MULTIPLIER_FIRST_ACTION_INVISIBILITY            0.10
 MULTIPLIER_INVISIBLE                            0.15
 
-// strike is melee, so the landing has to sit inside reach
-// max distance spans the whole hop: past it spots tie and the teleport lands anywhere
+// Her strike is melee, so the end of the move has to sit inside reach. The max distance is
+// where the gradient stops: past it every spot scores the same, and a teleport picking from
+// a wide ring of equal-scoring spots lands anywhere. It has to span the whole hop.
 MULTIPLIER_ENDPOS_ENEMIES_NEARBY                0.20
 ENDPOS_ENEMIES_NEARBY_MAX_DISTANCE              9.00
 ENABLE_MOVEMENT_AVOID_AOO                       1.00
 
-// Wind Step is an approach, the default 6m floor blocks short hops onto a nearby target
-// landing is chosen for the strike planned behind it, leave penalty stays at vanilla
+// Wind Step is an approach, not an exit. The default 6m floor rules out the short
+// hop onto a target standing nearby, and the strike planned behind the teleport is
+// what the landing spot is chosen for. Leaving a position that already works keeps
+// the full vanilla penalty.
 SPELL_TELEPORT_MINIMUM_DISTANCE                 3.00
 MULTIPLIER_PLANNED_ACTION_WITH_MOVE_SPELL       2.50
 MULTIPLIER_POSITION_LEAVE                      -1.00

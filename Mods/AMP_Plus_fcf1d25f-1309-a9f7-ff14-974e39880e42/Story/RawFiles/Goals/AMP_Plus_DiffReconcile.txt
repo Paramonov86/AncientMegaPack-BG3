@@ -32,9 +32,9 @@ DB_AMP_Plus_DiffReconcilePending(1);
 IF
 DB_AMP_Difficulty_Mode("NONE")
 THEN
-PROC_AMP_Plus_Feral_ClearBumpMarkers();
 PROC_AMP_DiffV3_RetierAll_Collect();
 PROC_AMP_DiffV3_RetierAll_Strip();
+PROC_AMP_Plus_Feral_ClearBumpMarkers();
 
 IF
 CombatEnded((GUIDSTRING)_C)
@@ -54,11 +54,11 @@ NOT DB_AMP_Plus_DiffReconcilePending(1);
 PROC
 PROC_AMP_Plus_DiffReconcile()
 THEN
-PROC_AMP_Plus_Feral_ClearBumpMarkers();
 PROC_AMP_UpdateAvgPartyLevel();
 PROC_AMP_UpdateCurrentTier();
 PROC_AMP_DiffV3_RetierAll_Collect();
 PROC_AMP_DiffV3_RetierAll_Strip();
+PROC_AMP_Plus_Feral_ClearBumpMarkers();
 PROC_AMP_DiffV3_RetierAll_Reapply();
 
 EXITSECTION

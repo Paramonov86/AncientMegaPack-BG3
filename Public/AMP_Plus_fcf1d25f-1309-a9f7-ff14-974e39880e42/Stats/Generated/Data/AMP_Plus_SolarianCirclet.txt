@@ -1,0 +1,4 @@
+new entry "MAG_Gish_ArcaneSynergy_Circlet"
+type "Armor"
+using "MAG_Gish_ArcaneSynergy_Circlet"
+data "Boosts" "Ability(Intelligence,2,23);Ability(Charisma,2,23);Ability(Wisdom,2,23)"

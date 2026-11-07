@@ -1,0 +1,81 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+// the settings switch drops the toggle passive, but the aura status that passive
+// applied is a plain status and survives; a 10m vacuum then keeps running with
+// the setting reported off. the pickup rules themselves never read the flag.
+IF
+StatusApplied((CHARACTER)_C, "AMP_AL_AURA", _, _)
+AND
+DB_AMP_AutoLoot_Disabled(1)
+THEN
+RemoveStatus(_C, "AMP_AL_AURA", NULL_00000000-0000-0000-0000-000000000000);
+
+// the marker is what the pickup rules react to, so a marker already in place has to go too
+IF
+StatusApplied((ITEM)_Item, "AMP_AL_MARKER", _, _)
+AND
+DB_AMP_AutoLoot_Disabled(1)
+THEN
+RemoveStatus(_Item, "AMP_AL_MARKER", NULL_00000000-0000-0000-0000-000000000000);
+
+IF
+StatusApplied((CHARACTER)_C, "AMP_AL_MARKER", _, _)
+AND
+DB_AMP_AutoLoot_Disabled(1)
+THEN
+RemoveStatus(_C, "AMP_AL_MARKER", NULL_00000000-0000-0000-0000-000000000000);
+
+// carriers that left the active party keep the passive and the aura: the switch
+// only walks DB_Players, so they are swept here on load as well
+IF
+LevelGameplayStarted(_, _)
+THEN
+TimerLaunch("AMP_Plus_AuraGuardSweep", 4000);
+
+IF
+TimerFinished("AMP_Plus_AuraGuardSweep")
+AND
+DB_AMP_AutoLoot_Disabled(1)
+AND
+DB_PartyMembers(_C)
+AND
+HasActiveStatus(_C, "AMP_AL_AURA", 1)
+THEN
+RemoveStatus(_C, "AMP_AL_AURA", NULL_00000000-0000-0000-0000-000000000000);
+
+IF
+TimerFinished("AMP_Plus_AuraGuardSweep")
+AND
+DB_AMP_AutoLoot_Disabled(1)
+AND
+DB_Players(_P)
+AND
+HasActiveStatus(_P, "AMP_AL_AURA", 1)
+THEN
+RemoveStatus(_P, "AMP_AL_AURA", NULL_00000000-0000-0000-0000-000000000000);
+
+// chests summoned by the training ring are never picked up or emptied by autoloot
+IF
+StatusApplied((ITEM)_Item, "AMP_AL_MARKER", _, _)
+AND
+GetTemplate(_Item, (ITEMROOT)_Tpl)
+AND
+DB_AMP_TutorialChest_Template(_Tpl)
+THEN
+RemoveStatus(_Item, "AMP_AL_MARKER", NULL_00000000-0000-0000-0000-000000000000);
+
+IF
+StatusApplied((ITEM)_Item, "AMP_AL_MARKER", _, _)
+AND
+GetTemplate(_Item, (ITEMROOT)_Tpl)
+AND
+DB_AMP_Para_Template(_Tpl)
+THEN
+RemoveStatus(_Item, "AMP_AL_MARKER", NULL_00000000-0000-0000-0000-000000000000);
+
+EXITSECTION
+ENDEXITSECTION

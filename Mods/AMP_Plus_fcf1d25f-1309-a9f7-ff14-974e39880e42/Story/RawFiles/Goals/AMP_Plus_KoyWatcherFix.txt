@@ -1,0 +1,90 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+// the watcher form template carries STEEL_WATCHER, and vanilla files every tagged character
+// into the steel watch roster: brain control, hostility spotting and the foundry kill switch
+
+IF
+DB_GLO_SteelWatchers((CHARACTER)_C)
+AND
+DB_Players(_C)
+THEN
+PROC_AMP_Plus_KoyUnwatch(_C);
+
+IF
+SavegameLoaded()
+THEN
+PROC_AMP_Plus_KoyUnwatchAll();
+
+IF
+LevelGameplayStarted(_, _)
+THEN
+PROC_AMP_Plus_KoyUnwatchAll();
+
+PROC
+PROC_AMP_Plus_KoyUnwatchAll()
+AND
+DB_Players(_C)
+AND
+DB_GLO_SteelWatchers(_C)
+THEN
+PROC_AMP_Plus_KoyUnwatch(_C);
+
+PROC
+PROC_AMP_Plus_KoyUnwatch((CHARACTER)_C)
+THEN
+NOT DB_GLO_SteelWatchers(_C);
+NOT DB_GLO_SteelWatchers_CustomDialog((CHARACTER)_C);
+NOT DB_Dialogs(_C, (DIALOGRESOURCE)GLO_SteelWatcher_e1768e5c-37f4-2803-840b-28fd0677cf9e);
+NOT DB_Dialogs(_C, (DIALOGRESOURCE)GLO_SteelWatcher_NetherBrainControlled_27ac32e6-bdac-8bda-1d83-061a0c9a3772);
+NOT DB_SpotPlayers_Continuous(_C, "GLO_BrainEscalation_SteelWatcherHostility");
+
+PROC
+PROC_AMP_Plus_KoyUnwatch((CHARACTER)_C)
+AND
+DB_SpotPlayers(_C, "GLO_BrainEscalation_SteelWatcherHostility", _Start, _Stop)
+THEN
+NOT DB_SpotPlayers(_C, "GLO_BrainEscalation_SteelWatcherHostility", _Start, _Stop);
+
+PROC
+PROC_AMP_Plus_KoyUnwatch((CHARACTER)_C)
+AND
+DB_GLO_BrainEscalation_WatcherHostility(_C, _Player)
+THEN
+NOT DB_GLO_BrainEscalation_WatcherHostility(_C, _Player);
+
+// the lower rarities use their own statuses, so the tag outlives the form
+
+IF
+StatusRemoved(_C, "AMP_KOY_TRANSFORM_2", _, _)
+AND
+DB_Players((CHARACTER)_C)
+THEN
+ObjectTimerLaunch((GUIDSTRING)_C, "AMP_Plus_KoyFormExit", 1000, 0);
+
+IF
+StatusRemoved(_C, "AMP_KOY_TRANSFORM_1", _, _)
+AND
+DB_Players((CHARACTER)_C)
+THEN
+ObjectTimerLaunch((GUIDSTRING)_C, "AMP_Plus_KoyFormExit", 1000, 0);
+
+IF
+ObjectTimerFinished(_C, "AMP_Plus_KoyFormExit")
+AND
+DB_Players((CHARACTER)_C)
+AND
+NOT HasActiveStatus(_C, "AMP_KOY_TRANSFORM", 0)
+AND
+NOT HasActiveStatus(_C, "AMP_KOY_TRANSFORM_2", 0)
+AND
+NOT HasActiveStatus(_C, "AMP_KOY_TRANSFORM_1", 0)
+THEN
+ClearTag((GUIDSTRING)_C, (TAG)STEEL_WATCHER_bc09a589-e076-4b2d-8b86-f8cccbb64449);
+
+EXITSECTION
+
+ENDEXITSECTION

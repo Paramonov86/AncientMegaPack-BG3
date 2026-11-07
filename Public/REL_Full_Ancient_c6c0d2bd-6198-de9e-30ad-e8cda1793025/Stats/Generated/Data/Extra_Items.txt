@@ -229,6 +229,7 @@ data "RemoveEvents" "OnSpellCast"
 data "OnRemoveFunctors" "IF(not HasPassive('SculptSpells')):DealDamage(1d100,Psychic)"
 
 
+// Killing an enemy applies AMP_BLOODFRENZY (SG_Mad) to wearer: +5m speed, Advantage on first attack per turn. Triggers the Madness set.
 new entry "AMP_Artificers_Boost03"
 type "Armor"
 using "ARM_Amulet"
@@ -457,6 +458,7 @@ data "Conditions" "Character()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom, ManeuverSaveDC(), AdvantageOnCharmed())):ApplyStatus(CHARMED,100,2)"
 data "Boosts" ""
 
+// When a foe within 20m takes fire damage, it must succeed Constitution Saving Throw or recieve Radiating Orbs for 2 turns
 new entry "AMP_Artificers_Boost10"
 type "Armor"
 using "ARM_Amulet"
@@ -948,11 +950,15 @@ data "Boosts" "IF(IsRangedUnarmedAttack()):DamageBonus(1d4)"
 
 
 
+//================================================================================
 // Aquamancer Synergy
+//================================================================================
 
 // ══════════════════════════════════════════════════════════════════════════════
 
-// Aquamancer power info status
+// ══════════════════════════════════════════════════════════════════════════════
+// Aquamancer Power Info Status
+// ══════════════════════════════════════════════════════════════════════════════
 
 new entry "AMP_AQUAMANCER_POWER_INFO"
 type "StatusData"
@@ -977,7 +983,7 @@ data "PassivesOnEquip" "AMP_FrostMage_Brineward_Passive;AMP_FrostMage_WetMonitor
 data "StatusOnEquip" "AMP_FROSTMAGE_TECH"
 data "Boosts" "UnlockSpell(Target_AMP_WaterElemental)"
 
-// Robe of the Aquamancer - Rare Block
+//================Robe of the Aquamancer - Rare Block================
 new entry "AMP_FrostMage_Robe_1"
 type "Armor"
 using "AMP_FrostMage_Robe"
@@ -1160,7 +1166,7 @@ data "Conditions" "IsMageArmored(context.Source) and HasDamageDoneForType(Damage
 data "StatsFunctors" "ApplyStatus(WEAPON34,100,2,,,,not SavingThrow(Ability.Constitution,SourceSpellDC()-2))"
 
 // --- Robe of the Grand Aquamancer Branch ---
-// Robe of the Grand Aquamancer - Veryrare Block (base)
+//================Robe of the Grand Aquamancer - Veryrare Block (base)================
 new entry "AMP_FrostMage_Robe_2"
 type "Armor"
 using "MAG_Frost_GenerateFrostOnDamage_Robe"
@@ -1173,7 +1179,7 @@ data "PassivesOnEquip" "AMP_FrostMage2_AbyssalEmbrace_Passive;AMP_FrostMage2_Wet
 data "StatusOnEquip" "AMP_FROSTMAGE2_TECH"
 data "Boosts" "AC(2);UnlockSpell(Target_AMP_WaterElemental2)"
 
-// Robe of the Grand Aquamancer - Legendary Block
+//================Robe of the Grand Aquamancer - Legendary Block================
 new entry "AMP_FrostMage_Robe_3"
 type "Armor"
 using "AMP_FrostMage_Robe_2"
@@ -1320,7 +1326,7 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 data "DynamicAnimationTag" "d559367e-4d27-402a-8898-a72fd5f20c8b"
 
 
-// Aquamancer's Gloves - Rare Block
+//================Aquamancer's Gloves - Rare Block================
 new entry "AMP_Aquamancer_Gloves_2"
 type "Armor"
 using "AMP_Aquamancer_Gloves"
@@ -1330,7 +1336,7 @@ data "ComboCategory" "d2"
 data "PassivesOnEquip" "AMP_Gloves_Drownsurge_Passive_T2;AMP_Gloves_TidalMomentum_Passive_T2"
 data "Boosts" "UnlockSpell(Target_AMP_WaterWhip_T2);Ability(Constitution,1,20,true)"
 
-// Aquamancer's Gloves - Veryrare Block
+//================Aquamancer's Gloves - Veryrare Block================
 new entry "AMP_Aquamancer_Gloves_3"
 type "Armor"
 using "AMP_Aquamancer_Gloves"
@@ -1340,7 +1346,7 @@ data "ComboCategory" "d3"
 data "PassivesOnEquip" "AMP_Gloves_Drownsurge_Passive_T3;AMP_Gloves_TidalMomentum_Passive_T3"
 data "Boosts" "UnlockSpell(Target_AMP_WaterWhip_T3);Ability(Constitution,1,22,true)"
 
-// Aquamancer's Gloves - Legendary Block
+//================Aquamancer's Gloves - Legendary Block================
 new entry "AMP_Aquamancer_Gloves_4"
 type "Armor"
 using "AMP_Aquamancer_Gloves"
@@ -1405,7 +1411,7 @@ data "TooltipStatusApply" "ApplyStatus(PRONE,100,-1)"
 data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0(SPL_Arcane_Damage_01_Prepare),,;,,;ad12e2fa-1b15-4fcd-884f-38ba82d7e50e(SPL_Thornwhip_01_Cast),,;5ee4c893-0149-4d08-a1f7-c4fe633530ba(SPL_Thornwhip_01_Recover),,;d8925ce4-d6d9-400c-92f5-ad772ef7f178(SPL_Arcane_Damage_01_Loop),,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6(SPL_Arcane_Damage_01_Cancel),,;,,;,,"
 data "SpellFlags" "IsHarmful;DisableBlood;IsSpell"
 
-// Water Whip T2 (Rare)
+//================Water Whip T2 (Rare)================
 new entry "Target_AMP_WaterWhip_T2"
 type "SpellData"
 data "SpellType" "Target"
@@ -1434,7 +1440,7 @@ data "TargetRadius" "9"
 data "SpellSuccess" "DealDamage(3d4,Bludgeoning);ApplyStatus(PRONE,100,-1)"
 data "SpellFail" "DealDamage((3d4)/2,Bludgeoning)"
 
-// Water Whip T3 (VeryRare)
+//================Water Whip T3 (VeryRare)================
 new entry "Target_AMP_WaterWhip_T3"
 type "SpellData"
 data "SpellType" "Target"
@@ -1464,7 +1470,7 @@ data "TargetRadius" "11"
 data "SpellSuccess" "DealDamage(4d4,Bludgeoning);ApplyStatus(PRONE,100,-1)"
 data "SpellFail" "DealDamage((4d4)/2,Bludgeoning)"
 
-// Water Whip T4 (Legendary)
+//================Water Whip T4 (Legendary)================
 new entry "Target_AMP_WaterWhip_T4"
 type "SpellData"
 data "SpellType" "Target"
@@ -1568,7 +1574,7 @@ data "ComboCategory" "d3"
 data "PassivesOnEquip" "AMP_Boost11_Drench_Passive;AMP_Boost11_Erosion_Passive"
 data "Boosts" "Resistance(Bludgeoning,Resistant);AC(1)"
 
-// Aged Crab Tincture - Uncommon Block
+//================Aged Crab Tincture - Uncommon Block================
 new entry "AMP_Artificers_Boost11_1"
 type "Armor"
 using "AMP_Artificers_Boost11"
@@ -1578,7 +1584,7 @@ data "ComboCategory" "d1"
 data "PassivesOnEquip" "AMP_Boost11_Drench_Passive"
 data "Boosts" ""
 
-// Aged Crab Tincture - Rare Block
+//================Aged Crab Tincture - Rare Block================
 new entry "AMP_Artificers_Boost11_2"
 type "Armor"
 using "AMP_Artificers_Boost11"
@@ -1588,7 +1594,7 @@ data "ComboCategory" "d2"
 data "PassivesOnEquip" "AMP_Boost11_Drench_Passive;AMP_Boost11_Erosion_Passive"
 data "Boosts" ""
 
-// Aged Crab Tincture - Legendary Block
+//================Aged Crab Tincture - Legendary Block================
 new entry "AMP_Artificers_Boost11_4"
 type "Armor"
 using "AMP_Artificers_Boost11"
@@ -2733,7 +2739,7 @@ data "OnRemoveFunctors" "RemoveStatus(ENLARGE)"
 
 
 
-// Rare Version Block (BASE)
+//================Rare Version Block (BASE)================
 // Boots of Deep Resonance
 new entry "AMP_SelfPetrificator_Boots"
 type "Armor"
@@ -2762,10 +2768,10 @@ data "Description" "h99f41936gc99fg412dg9082gc63539dba2d8;1"
 data "DescriptionParams" "DealDamage(2d4,Thunder);Distance(8)"
 data "Icon" "PassiveFeature_ElementalAdept_Thunder"
 data "Properties" "Highlighted"
-// Passives don't work while Petrified, hence the StatusOnEquip status
-// data "StatsFunctorContext" "OnTurn"
-// data "Conditions" "Combat() and (HasStatus('PETRIFIED', context.Source) or StatusHasStatusGroup(context.StatusId, 'SG_Petrified'))"
-// data "StatsFunctors" "CreateExplosion(Projectile_AMP_PetrificationResonance)"
+// Moved to StatusOnEquip technical status - passives don't work while Petrified
+//data "StatsFunctorContext" "OnTurn"
+//data "Conditions" "Combat() and (HasStatus('PETRIFIED', context.Source) or StatusHasStatusGroup(context.StatusId, 'SG_Petrified'))"
+//data "StatsFunctors" "CreateExplosion(Projectile_AMP_PetrificationResonance)"
 
 new entry "Projectile_AMP_PetrificationResonance"
 type "SpellData"
@@ -2828,7 +2834,7 @@ data "CastEffect" "0340b957-f9eb-45bc-9c6f-d4def37f5249"
 data "TargetEffect" "de333436-aa42-45cc-a3da-14277ca1df60"
 data "Sheathing" "Sheathed"
 
-// Uncommon Version Block
+//================Uncommon Version Block================
 new entry "AMP_SelfPetrificator_Boots_1"
 type "Armor"
 using "AMP_SelfPetrificator_Boots"
@@ -2871,7 +2877,7 @@ data "SpellType" "Target"
 using "Target_AMP_FleshToStone"
 data "Cooldown" "OncePerRestPerItem"
 
-// Veryrare Version Block
+//================Veryrare Version Block================
 new entry "AMP_SelfPetrificator_Boots_3"
 type "Armor"
 using "AMP_SelfPetrificator_Boots"
@@ -2913,7 +2919,7 @@ data "SpellType" "Target"
 using "Target_AMP_FleshToStone"
 data "Cooldown" "OncePerCombat"
 
-// Legendary Version Block
+//================Legendary Version Block================
 new entry "AMP_SelfPetrificator_Boots_4"
 type "Armor"
 using "AMP_SelfPetrificator_Boots"
@@ -2938,10 +2944,10 @@ data "Description" "h88e93dcbg8d6ag4f70g9e65g5038c49cbbd5;1"
 data "DescriptionParams" "DealDamage(4d6,Thunder);Distance(20)"
 data "Icon" "PassiveFeature_ElementalAdept_Thunder"
 data "Properties" "Highlighted"
-// Passives are dead while Petrified, runs from a StatusOnEquip status
-// data "StatsFunctorContext" "OnTurn"
-// data "Conditions" "Combat() and (HasStatus('PETRIFIED', context.Source) or StatusHasStatusGroup(context.StatusId, 'SG_Petrified'))"
-// data "StatsFunctors" "CreateExplosion(Projectile_AMP_PetrificationResonance_4)"
+// Moved to StatusOnEquip technical status - passives don't work while Petrified
+//data "StatsFunctorContext" "OnTurn"
+//data "Conditions" "Combat() and (HasStatus('PETRIFIED', context.Source) or StatusHasStatusGroup(context.StatusId, 'SG_Petrified'))"
+//data "StatsFunctors" "CreateExplosion(Projectile_AMP_PetrificationResonance_4)"
 
 new entry "Projectile_AMP_PetrificationResonance_4"
 type "SpellData"
@@ -3320,7 +3326,7 @@ data "Icon" "PassiveFeature_Generic_Death"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsSpell() and HasDamageDoneForType(DamageType.Necrotic)):DamageBonus(1,Necrotic,Magical)"
 
-// Dark Magician's Ceremonial Helm
+// Dark Magician's Ceremonial Helm — Necromancy crit, fetid rot, madness, shadow necrosis
 new entry "AMP_DeathCleric_Helmet_1"
 type "Armor"
 using "_Head"
@@ -3358,6 +3364,7 @@ data "Rarity" "Legendary"
 data "ComboCategory" "d4"
 data "PassivesOnEquip" "AMP_DeathCleric_Helmet_NecroCrit_T3;AMP_DeathCleric_Helmet_FetidRot_Epic;AMP_DeathCleric_Helmet_MadnessInfo;AMP_DeathCleric_Helmet_ShadowNecrosis"
 
+// Perk 1 — Blind Harvest (Necro crit threshold, T1-T2=1, T3-T4=2)
 new entry "AMP_DeathCleric_Helmet_NecroCrit"
 type "PassiveData"
 data "DisplayName" "hdae9a7dagfea3g4829g821bgc64c0a6a63c6;1"
@@ -3372,6 +3379,7 @@ using "AMP_DeathCleric_Helmet_NecroCrit"
 data "DescriptionParams" "2"
 data "Boosts" "IF(IsSpell() and IsSpellSchool(SpellSchool.Necromancy) and HasStatus('SG_Blinded',context.Target)):ReduceCriticalAttackThreshold(2)"
 
+// Perk 2 — Spreading Decay (apply Fetid Rot on necrotic damage)
 new entry "AMP_DeathCleric_Helmet_FetidRot"
 type "PassiveData"
 data "DisplayName" "h424d4afcg2053g433dgbf55gc2efbe37428c;1"
@@ -3387,12 +3395,14 @@ type "PassiveData"
 using "AMP_DeathCleric_Helmet_FetidRot"
 data "StatsFunctors" "ApplyStatus(AMP_DEATHCLERIC_FETID_ROT_EPIC,100,5)"
 
+// Perk 3 — Maddening Decay (info passive, T3+)
 new entry "AMP_DeathCleric_Helmet_MadnessInfo"
 type "PassiveData"
 data "DisplayName" "h0bee9b6bg1738g4a81g8448g664419ba33c3;1"
 data "Description" "he382c11bgddf4g491fg93b4g62af44348f78;1"
 data "Properties" "Highlighted"
 
+// Perk 4 — Shadow Necrosis (bonus necrotic in darkness, T4)
 new entry "AMP_DeathCleric_Helmet_ShadowNecrosis"
 type "PassiveData"
 data "DisplayName" "hb4c2f47bg17f3g4185g9faagae5d50d992ba;1"
@@ -3401,6 +3411,7 @@ data "DescriptionParams" "DealDamage(,Necrotic);DealDamage(1d20,Necrotic)"
 data "Properties" "Highlighted"
 data "Boosts" "IF(not HasObscuredState(ObscuredState.Clear, context.Source) and HasDamageDoneForType(DamageType.Necrotic)):DamageBonus(1d20,Necrotic,Magical)"
 
+// Status — Fetid Rot (basic, tick necrotic in darkness)
 new entry "AMP_DEATHCLERIC_FETID_ROT"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -3419,6 +3430,7 @@ data "RemoveEvents" "OnObscurityChanged"
 data "TooltipDamage" "DealDamage(1d4,Necrotic)"
 data "TickFunctors" "IF(not HasObscuredState(ObscuredState.Clear)):DealDamage(1d4,Necrotic,Magical)"
 
+// Status — Fetid Rot Epic (adds Wis save → Madness)
 new entry "AMP_DEATHCLERIC_FETID_ROT_EPIC"
 type "StatusData"
 using "AMP_DEATHCLERIC_FETID_ROT"
@@ -3472,7 +3484,7 @@ data "EnableContext" "OnStatusApplied;OnStatusRemoved"
 
 // Cadence
 
-// Cadence Longsword
+//=====Cadence Longsword=====
 // Longsword with rhythm-based combat system
 new entry "Cadence_LongSword_1"
 type "Weapon"
@@ -3739,7 +3751,9 @@ data "StackId" "AMP_MEME_ROBE_EMERGENCY_USED"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 data "RemoveEvents" "OnCombatEnded"
 
+//========================================
 // Ancient Chaos Orbs Musical Instruments
+//========================================
 
 // The Main Dude
 new entry "AMP_ANCIENTCHAOS"
@@ -3844,7 +3858,9 @@ data "Properties" "Highlighted"
 data "BoostContext" "OnStatusApplied;OnStatusRemoved;OnCreate"
 data "Boosts" "IF(not HasStatus('AMP_ANCIENTCHAOS',context.Source)):RollBonus(Attack,-1);IF(not HasStatus('AMP_ANCIENTCHAOS',context.Source)):SpellSaveDC(-1)"
 
+//========================================
 // Radiant Orb Rings & Passives
+//========================================
 
 // Radiant Orb Ring - Tier 1 (Uncommon)
 new entry "AMP_Orb_Radiant_Ring_T1"
@@ -3890,7 +3906,7 @@ data "ComboCategory" "d4"
 data "StatusOnEquip" "AMP_RADIANT_ORB_TRACKER_T4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Radiant_Daylight_Unlock_T4;AMP_Radiant_Orbs_Counter_T4"
 
-// Radiant Orb - Daylight Spells
+//================Radiant Orb - Daylight Spells================
 new entry "AMP_Target_Daylight_T1"
 type "SpellData"
 data "SpellType" "Target"
@@ -3928,7 +3944,7 @@ data "Cooldown" "OncePerTurn"
 data "Requirements" ""
 data "UseCosts" ""
 
-// Radiant Orb - Radiating Orbs Counter
+//================Radiant Orb - Radiating Orbs Counter================
 new entry "AMP_Radiant_Orbs_Counter_T1"
 type "PassiveData"
 data "DisplayName" "h1a3f38b0g4489g46c3ga90bgc49cc32ae072;1"
@@ -3956,7 +3972,7 @@ using "AMP_Radiant_Orbs_Counter_T1"
 data "DescriptionParams" "10"
 data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamaged) and (HasStatus('AMP_ANCIENTCHAOS') or HasStatus('AMP_KOY_PRIMORDIALCHAOS')) and not Dead(context.Source)):ApplyStatus(SWAP,MAG_RADIANT_RADIATING_ORB,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnDamaged) and (HasStatus('AMP_ANCIENTCHAOS') or HasStatus('AMP_KOY_PRIMORDIALCHAOS')) and not Dead(context.Source)):ApplyStatus(SWAP,MAG_RADIANT_RADIATING_ORB_DURATION_TECHNICAL,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and (HasStatus('AMP_ANCIENTCHAOS',context.Source) or HasStatus('AMP_KOY_PRIMORDIALCHAOS',context.Source)) and not Dead()):ApplyStatus(MAG_RADIANT_RADIATING_ORB,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and (HasStatus('AMP_ANCIENTCHAOS',context.Source) or HasStatus('AMP_KOY_PRIMORDIALCHAOS',context.Source)) and not Dead()):ApplyStatus(MAG_RADIANT_RADIATING_ORB_DURATION_TECHNICAL,100,1)"
 
-// Radiant Orb - Daylight Unlock Passives
+//================Radiant Orb - Daylight Unlock Passives================
 new entry "AMP_Radiant_Daylight_Unlock_T1"
 type "PassiveData"
 data "DisplayName" "h7b756ddfgcd24g432bgbde1g1a21da2e11ea;1"
@@ -3984,7 +4000,7 @@ using "AMP_Radiant_Daylight_Unlock_T1"
 data "Description" "hd1189f35g8d4bg405eg8cffg4db7d4203c64;1"
 data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnStatusApplied)):ApplyStatus(AMP_RADIANT_DAYLIGHT_STATUS_T4, 100, -1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusRemoved)):RemoveStatus(AMP_RADIANT_DAYLIGHT_STATUS_T4)"
 
-// Radiant Orb - Daylight Status (UNLOCK)
+//================Radiant Orb - Daylight Status (UNLOCK)================
 new entry "AMP_RADIANT_DAYLIGHT_STATUS_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -4009,7 +4025,7 @@ data "StatusType" "BOOST"
 using "AMP_RADIANT_DAYLIGHT_STATUS_T1"
 data "Boosts" "UnlockSpell(AMP_Target_Daylight_T4)"
 
-// Radiant Orb - Tracker Statuses
+//================Radiant Orb - Tracker Statuses================
 new entry "AMP_RADIANT_ORB_TRACKER_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -4076,7 +4092,7 @@ data "ComboCategory" "d4"
 data "StatusOnEquip" "AMP_FORCE_ORB_TRACKER_T4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Force_Damage_Amplifier_T4;AMP_Force_Warp_Implosion_T4;AMP_Force_Vulnerability_Aura_T4"
 
-// Force Orb - Vulnerability Aura (T4 ONLY)
+//================Force Orb - Vulnerability Aura (T4 ONLY)================
 new entry "AMP_Force_Vulnerability_Aura_T4"
 type "PassiveData"
 data "DisplayName" "hb58905c8g0decg4195g9c50g3ed58660d56f;1"
@@ -4105,7 +4121,7 @@ data "DescriptionParams" "DealDamage(,Force)"
 data "Icon" "GenericIcon_DamageType_Force"
 data "Boosts" "Resistance(Force,Vulnerable)"
 
-// Force Orb - Damage Amplifier
+//================Force Orb - Damage Amplifier================
 new entry "AMP_Force_Damage_Amplifier_T1"
 type "PassiveData"
 data "DisplayName" "h04611596g2e1fg498dg8381g8e1ca5f507d1;1"
@@ -4128,7 +4144,7 @@ type "PassiveData"
 using "AMP_Force_Damage_Amplifier_T1"
 data "DescriptionParams" "4"
 
-// Force Orb - Tracker Statuses
+//================Force Orb - Tracker Statuses================
 new entry "AMP_FORCE_ORB_TRACKER_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -4150,7 +4166,7 @@ data "StatusType" "BOOST"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 data "OnRemoveFunctors" "RemoveStatus(AMP_FORCE_VULNERABILITY_AURA_TECH_T4)"
 
-// Force Orb - Warp Implosion
+//================Force Orb - Warp Implosion================
 new entry "AMP_Force_Warp_Implosion_T1"
 type "PassiveData"
 data "DisplayName" "h23048f85gbcb8g4885gb75cg5be0ad4866be;1"
@@ -4266,7 +4282,7 @@ data "ComboCategory" "d4"
 data "StatusOnEquip" "AMP_LIGHTNING_ORB_TRACKER_T4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Lightning_ChainLightning_Unlock_T4;AMP_Lightning_Warp_Discharge"
 
-// Chain Lightning Spells
+//================Chain Lightning Spells================
 
 new entry "AMP_Projectile_ChainLightning_T1"
 type "SpellData"
@@ -4318,7 +4334,7 @@ data "SpellFail" "DealDamage((4d8)/2,Lightning,Magical);SpawnExtraProjectiles(AM
 data "TooltipDamageList" "DealDamage(4d8,Lightning)"
 data "UseCosts" "BonusActionPoint:1"
 
-// Explosion Projectiles
+//================Explosion Projectiles================
 
 new entry "AMP_Projectile_ChainLightning_T1_Explosion"
 type "SpellData"
@@ -4366,7 +4382,7 @@ data "TooltipDamageList" "DealDamage(4d8,Lightning)"
 data "TargetRadius" "18"
 data "ProjectileCount" "4"
 
-// Unlock Passives
+//================Unlock Passives================
 
 new entry "AMP_Lightning_ChainLightning_Unlock_T1"
 type "PassiveData"
@@ -4395,7 +4411,7 @@ using "AMP_Lightning_ChainLightning_Unlock_T1"
 data "Description" "h9bcd276eg6898g4c5fg9573g76b2d73305da;1"
 data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnStatusApplied)):ApplyStatus(AMP_LIGHTNING_CHAINLIGHTNING_STATUS_T4,100,-1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusRemoved)):RemoveStatus(AMP_LIGHTNING_CHAINLIGHTNING_STATUS_T4)"
 
-// Tech Statuses (UNLOCK)
+//================Tech Statuses (UNLOCK)================
 
 new entry "AMP_LIGHTNING_CHAINLIGHTNING_STATUS_T1"
 type "StatusData"
@@ -4421,7 +4437,7 @@ data "StatusType" "BOOST"
 data "Boosts" "UnlockSpell(AMP_Projectile_ChainLightning_T4)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 
-// Lightning Orb - Tracker Statuses
+//================Lightning Orb - Tracker Statuses================
 new entry "AMP_LIGHTNING_ORB_TRACKER_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -4446,7 +4462,7 @@ data "StatusType" "BOOST"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 data "OnRemoveFunctors" "RemoveStatus(AMP_LIGHTNING_CHAINLIGHTNING_STATUS_T4)"
 
-// Shocked Passive (T4 LEGENDARY)
+//================Shocked Passive (T4 LEGENDARY)================
 
 new entry "AMP_Lightning_Warp_Discharge"
 type "PassiveData"
@@ -4500,7 +4516,7 @@ data "ComboCategory" "d4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Fire_Fireseed_Aura_T4;AMP_Fire_Fireseed_Damage_T4"
 data "StatusOnEquip" "AMP_FIRE_FIRESEED_AURA_TECH_T4"
 
-// Fire Orb Passives & Tech Statuses
+//================Fire Orb Passives & Tech Statuses================
 
 // Info passive - Fireseed Aura (T1 Uncommon)
 new entry "AMP_Fire_Fireseed_Aura_T1"
@@ -4640,7 +4656,7 @@ data "ExplodeRadius" "20"
 data "SpellProperties" "IF(not RollDieAgainstDC(DiceType.d100, 80)):ApplyStatus(ARMOURG77_4,100,3)"
 
 // Cold Orbs
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 new entry "AMP_Orb_Cold_Ring_T1"
 type "Armor"
 using "ARM_Ring"
@@ -4663,7 +4679,7 @@ data "DescriptionParams" "DealDamage(1,Cold)"
 data "Properties" "Highlighted"
 data "Boosts" "IF(HasStatus('AMP_ANCIENTCHAOS',context.Source) or HasStatus('AMP_KOY_PRIMORDIALCHAOS',context.Source)):DamageBonus(1,Cold,Magical)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "AMP_Orb_Cold_Ring_T2"
 type "Armor"
 using "AMP_Orb_Cold_Ring_T1"
@@ -4681,7 +4697,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "(IsAttack() or IsSpell()) and HasStatus('MAG_FROST',context.Target) and (HasStatus('AMP_ANCIENTCHAOS',context.Source) or HasStatus('AMP_KOY_PRIMORDIALCHAOS',context.Source))"
 data "StatsFunctors" "ApplyStatus(CHILLED,100,1)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "AMP_Orb_Cold_Ring_T3"
 type "Armor"
 using "AMP_Orb_Cold_Ring_T2"
@@ -4706,7 +4722,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "(HasStatus('SG_Prone',context.Target) or HasStatus('PRONE_ICE',context.Target)) and (HasStatus('AMP_ANCIENTCHAOS',context.Source) or HasStatus('AMP_KOY_PRIMORDIALCHAOS',context.Source))"
 data "StatsFunctors" "DealDamage(1d4,Cold,Magical,,0,,true,false)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "AMP_Orb_Cold_Ring_T4"
 type "Armor"
 using "AMP_Orb_Cold_Ring_T3"
@@ -4793,7 +4809,7 @@ data "Rarity" "Legendary"
 data "ComboCategory" "d4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Necrotic_ChillTouch_Aura;AMP_Necrotic_CircleOfDeath_Unlock_T4;AMP_Necrotic_Undead_Concentration;AMP_Necrotic_Undead_Concentration_Technical"
 
-// Necrotic Orb Mechanics
+//================Necrotic Orb Mechanics================
 
 // Chill Touch on Necromancy Spells while Concentrating
 new entry "AMP_Necrotic_ChillTouch_Aura"
@@ -4938,7 +4954,7 @@ data "StatusType" "BOOST"
 data "Boosts" "UnlockSpell(AMP_Target_CircleOfDeath_T4)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 
-// Necrotic Orb - Tracker Statuses
+//================Necrotic Orb - Tracker Statuses================
 new entry "AMP_NECROTIC_ORB_TRACKER_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -5040,7 +5056,7 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_FOOTMAN_SUMMON_MARKER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// Warrior Orb - Tracker Statuses
+//================Warrior Orb - Tracker Statuses================
 
 new entry "AMP_WARRIOR_ORB_TRACKER_T1"
 type "StatusData"
@@ -5063,7 +5079,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 using "AMP_WARRIOR_ORB_TRACKER_T1"
 
-// Warrior Orb - Footman Character
+//================Warrior Orb - Footman Character================
 
 new entry "AMP_Footman"
 type "Character"
@@ -5119,7 +5135,7 @@ data "ActionResources" "ActionPoint:2;BonusActionPoint:1;Movement:12;ReactionAct
 data "Passives" "AttackOfOpportunity;DarknessRules;ExtraAttack;SavageAttacker"
 data "DefaultBoosts" "ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);AC(3);ReduceCriticalAttackThreshold(2);Resistance(Slashing,Resistant);Resistance(Piercing,Resistant);Resistance(Bludgeoning,Resistant)"
 
-// Warrior Orb - Autopilot Toggle (T2+)
+//================Warrior Orb - Autopilot Toggle (T2+)================
 
 new entry "AMP_WARRIOR_AUTOPILOT_MARKER"
 type "StatusData"
@@ -5133,7 +5149,7 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_WARRIOR_AUTOPILOT_APPLIED"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;LoseControl;LoseControlFriendly;IgnoreResting"
 
-// Warrior Orb - Master of War Charges
+//================Warrior Orb - Master of War Charges================
 
 new entry "AMP_MASTER_OF_WAR"
 type "StatusData"
@@ -5150,7 +5166,7 @@ data "RemoveEvents" "OnCombatEnded"
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusGroups" "SG_Condition"
 
-// Warrior Orb - Sources (charge generators, cap 10)
+//================Warrior Orb - Sources (charge generators, cap 10)================
 
 new entry "AMP_Warrior_Source_CombatStart"
 type "PassiveData"
@@ -5192,7 +5208,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "not StatusDurationEqualOrMoreThan(context.Source, 'AMP_MASTER_OF_WAR', 10)"
 data "StatsFunctors" "ApplyStatus(SELF, AMP_MASTER_OF_WAR, 100, 1)"
 
-// Warrior Orb - CritBoost (passive while charges >= 1)
+//================Warrior Orb - CritBoost (passive while charges >= 1)================
 
 new entry "AMP_Warrior_CritBoost_T2"
 type "PassiveData"
@@ -5214,7 +5230,7 @@ data "DescriptionParams" "2"
 data "Properties" "Highlighted"
 data "Boosts" "IF(StatusDurationEqualOrMoreThan(context.Source, 'AMP_MASTER_OF_WAR', 1)):ReduceCriticalAttackThreshold(2)"
 
-// Warrior Orb - ActionSurge Chance (hidden, OnDamaged, while charges >= 1)
+//================Warrior Orb - ActionSurge Chance (hidden, OnDamaged, while charges >= 1)================
 
 new entry "AMP_Warrior_ActionSurge_T1"
 type "PassiveData"
@@ -5238,7 +5254,7 @@ type "PassiveData"
 using "AMP_Warrior_ActionSurge_T1"
 data "Conditions" "StatusDurationEqualOrMoreThan(context.Target, 'AMP_MASTER_OF_WAR', 1) and not RollDieAgainstDC(DiceType.d100,20)"
 
-// Warrior Orb - Manual Control Toggle (default off = footman autopilot on)
+//================Warrior Orb - Manual Control Toggle (default off = footman autopilot on)================
 
 new entry "AMP_Warrior_ManualControl_Toggle"
 type "PassiveData"
@@ -5256,7 +5272,7 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_WARRIOR_MANUAL_MARKER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Warrior Orb - CC Immunity Toggle (combat trait, charge/turn upkeep via Osiris)
+//================Warrior Orb - CC Immunity Toggle (combat trait, charge/turn upkeep via Osiris)================
 
 new entry "AMP_Warrior_CCImmunity_Toggle"
 type "PassiveData"
@@ -5317,7 +5333,7 @@ data "Boosts" "StatusImmunity(SG_Stunned);StatusImmunity(SG_Charmed);StatusImmun
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusGroups" "SG_Condition"
 
-// Lower tiers cover fewer groups, hard CC only at T4
+// Tiered CC immunity variants (T4 = AMP_WARRIOR_CC_IMMUNE above, full set). Lower tiers cover fewer groups; hard CC (Stunned/Paralyzed) only at T4.
 new entry "AMP_WARRIOR_CC_IMMUNE_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -5357,7 +5373,7 @@ data "Boosts" "StatusImmunity(SG_Charmed);StatusImmunity(SG_Frightened);StatusIm
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusGroups" "SG_Condition"
 
-// Warrior Orb - Upkeep passives (spend charge or force toggle off)
+//================Warrior Orb - Upkeep passives (spend charge or force toggle off)================
 
 new entry "AMP_Warrior_CCImmune_Upkeep"
 type "PassiveData"
@@ -5366,7 +5382,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "HasStatus('AMP_WARRIOR_CCIMMUNE_MARKER', context.Source)"
 data "StatsFunctors" "IF(StatusDurationEqualOrMoreThan(context.Source, 'AMP_MASTER_OF_WAR', 1)):SetStatusDuration(SELF, AMP_MASTER_OF_WAR, -1, Add);IF(StatusDurationEqualOrMoreThan(context.Source, 'AMP_MASTER_OF_WAR', 1) and HasStatus('AMP_WARRIOR_ORB_TRACKER_T1',context.Source)):ApplyStatus(SELF, AMP_WARRIOR_CC_IMMUNE_T1, 100, 1);IF(StatusDurationEqualOrMoreThan(context.Source, 'AMP_MASTER_OF_WAR', 1) and HasStatus('AMP_WARRIOR_ORB_TRACKER_T2',context.Source)):ApplyStatus(SELF, AMP_WARRIOR_CC_IMMUNE_T2, 100, 1);IF(StatusDurationEqualOrMoreThan(context.Source, 'AMP_MASTER_OF_WAR', 1) and HasStatus('AMP_WARRIOR_ORB_TRACKER_T3',context.Source)):ApplyStatus(SELF, AMP_WARRIOR_CC_IMMUNE_T3, 100, 1);IF(StatusDurationEqualOrMoreThan(context.Source, 'AMP_MASTER_OF_WAR', 1) and HasStatus('AMP_WARRIOR_ORB_TRACKER_T4',context.Source)):ApplyStatus(SELF, AMP_WARRIOR_CC_IMMUNE, 100, 1);IF(not StatusDurationEqualOrMoreThan(context.Source, 'AMP_MASTER_OF_WAR', 1)):RemoveStatus(AMP_WARRIOR_CCIMMUNE_MARKER)"
 
-// Ticked by Osiris applying TICK_TRIGGER at end of turn
+// Manual Control tick (end of turn — triggered via Osiris applying TICK_TRIGGER status)
 new entry "AMP_Warrior_Manual_Upkeep"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -5380,7 +5396,7 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_WARRIOR_MANUAL_TICK_TRIGGER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 
-// Warrior Orb - Command Burden (visible, -2m per footman, independent copies via Osiris)
+//================Warrior Orb - Command Burden (visible, -2m per footman, independent copies via Osiris)================
 
 new entry "AMP_WARRIOR_COMMAND_BURDEN"
 type "StatusData"
@@ -5394,7 +5410,7 @@ data "Boosts" "ActionResource(Movement,-2,0)"
 data "StatusPropertyFlags" "IgnoreResting"
 data "StatusGroups" "SG_Condition"
 
-// Warrior Orb - Footman Formation (proximity buff, Osiris-applied at 6m)
+//================Warrior Orb - Footman Formation (proximity buff, Osiris-applied at 6m)================
 
 new entry "AMP_FOOTMAN_FORMATION"
 type "StatusData"
@@ -5452,7 +5468,7 @@ data "Rarity" "Legendary"
 data "ComboCategory" "d4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Acid_Surface_Generator_T4;AMP_Acid_Spells_Unlock_T4;AMP_Mutacid_AcidBrood;AMP_Mutacid_Info_Orb;AMP_Mutacid_PT_Bathe;AMP_Mutacid_PT_Kill"
 
-// Acid Orb Mechanics
+//================Acid Orb Mechanics================
 
 // Technical VFX Status (copy of MAG_ARMOUR_H_121_VFX)
 new entry "AMP_ACID_POOL_VFX"
@@ -5595,7 +5611,7 @@ data "StatusType" "BOOST"
 data "Boosts" "UnlockSpell(AMP_Projectile_AcidSplash_T4)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 
-// Acid Orb - Tracker Statuses
+//================Acid Orb - Tracker Statuses================
 new entry "AMP_ACID_ORB_TRACKER_T1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -5663,7 +5679,7 @@ data "ComboCategory" "d4"
 data "StatusOnEquip" "AMP_THUNDER_ORB_TRACKER_T4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Thunder_Reverb_Damage_T4;AMP_Thunder_Shatter_Unlock_T4;AMP_Thunder_Reverb_Spread_T4"
 
-// Thunder Orb Mechanics
+//================Thunder Orb Mechanics================
 
 // Thunder Orb Antiabuse Trackers
 new entry "AMP_THUNDER_ORB_TRACKER_T1"
@@ -5890,7 +5906,7 @@ data "ComboCategory" "d4"
 data "StatusOnEquip" "AMP_PSYCHIC_ORB_TRACKER_T4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Psychic_Blessing_T4;AMP_Psychic_ArcaneAcuity_T4;AMP_Psychic_Reaction_T4;AMP_Psychic_MindBlast_Unlock_T4"
 
-// Psychic Orb Mechanics
+//================Psychic Orb Mechanics================
 
 // Psychic Orb Antiabuse Trackers
 new entry "AMP_PSYCHIC_ORB_TRACKER_T1"
@@ -5965,6 +5981,7 @@ using "AMP_Psychic_ArcaneAcuity_T2"
 data "DescriptionParams" "4"
 data "StatsFunctors" "ApplyStatus(MAG_GISH_ARCANE_ACUITY,100,4);ApplyStatus(MAG_GISH_ARCANE_ACUITY_DURATION_TECHNICAL,100,1)"
 
+// Passive 3: Neural Convergence (T3+) — reaction bonus
 new entry "AMP_PSYCHIC_REACTION_BONUS"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -5986,6 +6003,7 @@ new entry "AMP_Psychic_Reaction_T4"
 type "PassiveData"
 using "AMP_Psychic_Reaction_T3"
 
+// Passive 4: Psionic Dominion (T4 only) — Mind Blast unlock
 new entry "AMP_PSYCHIC_MINDBLAST_STATUS"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -6043,7 +6061,7 @@ data "ComboCategory" "d4"
 data "StatusOnEquip" "AMP_BLOOD_ORB_TRACKER_T4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Blood_Healing_Boost_T4;AMP_Blood_Bleeding_T4"
 
-// Blood Orb Mechanics
+//================Blood Orb Mechanics================
 
 // Tracker Statuses (StatusOnEquip)
 new entry "AMP_BLOOD_ORB_TRACKER_T1"
@@ -6199,7 +6217,7 @@ data "ComboCategory" "d4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Shadow_Darkness_Creator_T4;AMP_Shadow_Darkness_Empowerment_T4"
 data "StatusOnEquip" "AMP_SHADOW_AURA_TECH_T4"
 
-// Shadow (UNDERDARK) Orb Mechanics
+//================Shadow (UNDERDARK) Orb Mechanics================
 
 // Creator Passives (create darkness on attack)
 new entry "AMP_Shadow_Darkness_Creator_T1"
@@ -6417,7 +6435,7 @@ data "ComboCategory" "d4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Toxemia_Apply_3;AMP_Toxemia_Escalation;AMP_Toxemia_Detox;AMP_Toxemia_Amplify"
 data "StatusOnEquip" "AMP_TOXEMIA_ESCALATION_TECH;AMP_TOXEMIA_DETOX_TECH"
 
-// TOXEMIA SYNERGY
+// ================ TOXEMIA SYNERGY ================
 
 new entry "AMP_TOXEMIA"
 type "StatusData"
@@ -6438,7 +6456,8 @@ data "Passives" "AMP_Toxemia_Burst_Hidden"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition)):ApplyStatus(PARALYZED, 100, 1)"
 data "StatusGroups" "SG_Condition"
 
-// Filter keeps the burst's own poison tick from re-triggering it
+// Toxemia Burst — hit reduces duration by 1, poison burst spreads to nearby allies
+// Filter excludes own poison tick damage from re-triggering the burst (self-spread loop)
 new entry "AMP_Toxemia_Burst_Hidden"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -6466,6 +6485,7 @@ data "SpellFlags" "ImmediateCast"
 data "HitAnimationType" "MagicalDamage_External"
 data "DamageType" "Poison"
 
+// P1: Chaotic Toxin — apply Toxemia on poison damage (while Ancient Chaos)
 new entry "AMP_Toxemia_Apply"
 type "PassiveData"
 data "DisplayName" "hebb8f39eg9c76g435fgb07dg78f0e799447f;1"
@@ -6483,6 +6503,7 @@ using "AMP_Toxemia_Apply"
 data "DescriptionParams" "DealDamage(,Poison);2"
 data "StatsFunctors" "ApplyStatus(AMP_TOXEMIA, 100, 2)"
 
+// P2: Toxic Escalation — poisoned enemies get Toxemia at end of turn
 new entry "AMP_TOXEMIA_ESCALATION_TECH"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -6506,6 +6527,7 @@ data "Description" "h0887134eg0a7fg4c09g95fcg1ca4c07bcac4;1"
 data "Icon" "AMP_TOXEMIA"
 data "Properties" "Highlighted"
 
+// P3: Detoxification — cleanse Toxemia from self + allies (with SculptSpells)
 new entry "AMP_TOXEMIA_DETOX_TECH"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -6535,6 +6557,7 @@ data "Description" "h1e4a6017ge26eg4c1eg9af1g6e8012756034;1"
 data "Icon" "AMP_TOXEMIA"
 data "Properties" "Highlighted"
 
+// P4: Aggravated Toxemia — applying Toxemia adds +1 extra turn, once per turn
 new entry "AMP_Toxemia_Amplify"
 type "PassiveData"
 data "DisplayName" "ha9069ad2g49d5g45f0gaee0g8798631959e6;1"
@@ -6587,7 +6610,7 @@ data "ComboCategory" "d4"
 data "StatusOnEquip" "AMP_DIAMOND_ORB_TRACKER_T4"
 data "PassivesOnEquip" "AMP_ChaosConverter_Active_Passive;AMP_ChaosConverter_Reactive_Passive;AMP_Diamond_Reactive_Armor_T4;AMP_Diamond_SavingThrow_T4"
 
-// Diamond Orb Mechanics
+//================Diamond Orb Mechanics================
 
 // Adamantine Resolve - Saving Throw Passive (T1-T4)
 new entry "AMP_Diamond_SavingThrow_T1"
@@ -6947,7 +6970,9 @@ using "AMP_DIAMOND_AC_LVL3_T3"
 data "DescriptionParams" "6"
 data "Boosts" "AC(6)"
 
+//========================================
 // Subclass Helmets
+//========================================
 
 
 // Swashbuckler Rogue
@@ -7133,7 +7158,7 @@ data "DescriptionParams" "10"
 data "StatsFunctors" "ApplyStatus(SELF,BLESS,100,10)"
 
 // Shadow Magic Sorcerer Sunset Clan Mask
-// UNCOMMON BLOCK
+// ================ UNCOMMON BLOCK ================
 new entry "AMP_ShadowSorcerer_Helmet_1"
 type "Armor"
 using "_Head"
@@ -7185,7 +7210,7 @@ data "StackId" "AMP_SHADOW_SORC_OBSCURITY_VFX"
 data "ApplyEffect" "5b371ef5-1ac2-46d1-b09d-c4e86dbb3539"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "AMP_ShadowSorcerer_Helmet_2"
 type "Armor"
 using "AMP_ShadowSorcerer_Helmet_1"
@@ -7264,7 +7289,7 @@ data "StackId" "TEMPORARY_HP"
 data "StackPriority" "5"
 data "Boosts" "TemporaryHP(5)"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "AMP_ShadowSorcerer_Helmet_3"
 type "Armor"
 using "AMP_ShadowSorcerer_Helmet_1"
@@ -7332,7 +7357,7 @@ data "StackId" "TEMPORARY_HP"
 data "StackPriority" "7"
 data "Boosts" "TemporaryHP(7)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "AMP_ShadowSorcerer_Helmet_4"
 type "Armor"
 using "AMP_ShadowSorcerer_Helmet_1"
@@ -7692,7 +7717,7 @@ data "OnApplyFunctors" "RestoreResource(ArcaneShot,4,0)"
 data "ApplyEffect" "e278afe6-9d85-4e2d-b6a5-d64e79ce619e"
 
 // Swarmkeeper Ranger
-// UNCOMMON VERSION BLOCK
+// ================ UNCOMMON VERSION BLOCK ================
 new entry "AMP_SwarmkeeperRanger_Helmet_1"
 type "Armor"
 using "_Head"
@@ -7726,7 +7751,7 @@ data "StatsFunctorContext" "OnPush"
 data "Conditions" "Character()"
 data "StatsFunctors" "Force(2)"
 
-// RARE VERSION BLOCK
+// ================ RARE VERSION BLOCK ================
 new entry "AMP_SwarmkeeperRanger_Helmet_2"
 type "Armor"
 using "AMP_SwarmkeeperRanger_Helmet_1"
@@ -7735,7 +7760,7 @@ data "Rarity" "Rare"
 data "ComboCategory" "d2"
 data "PassivesOnEquip" "AMP_SwarmkeeperRanger_Helmet_1_Passive;AMP_SwarmkeeperRanger_Helmet_1_Push"
 
-// VERYRARE VERSION BLOCK
+// ================ VERYRARE VERSION BLOCK ================
 new entry "AMP_SwarmkeeperRanger_Helmet_3"
 type "Armor"
 using "AMP_SwarmkeeperRanger_Helmet_1"
@@ -7760,7 +7785,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "Combat() and SpellCategoryIs(SpellCategory.Jump) and not StatusDurationEqualOrMoreThan(context.Source, 'MAG_GISH_ARCANE_ACUITY', 4)"
 data "StatsFunctors" "ApplyStatus(SELF, MAG_GISH_ARCANE_ACUITY, 100, 1);ApplyStatus(SELF, MAG_GISH_ARCANE_ACUITY_DURATION_TECHNICAL, 100, 0)"
 
-// LEGENDARY VERSION BLOCK
+// ================ LEGENDARY VERSION BLOCK ================
 new entry "AMP_SwarmkeeperRanger_Helmet_4"
 type "Armor"
 using "AMP_SwarmkeeperRanger_Helmet_1"
@@ -7785,9 +7810,9 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "HasDamageDoneForType(DamageType.Piercing) and Enemy()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom, SourceSpellDC())):ApplyStatus(MADNESS,100,1)"
 
-// Circle of Stars Druid, Constellation Scatter
+//================Circle of Stars Druid — Constellation Scatter================
 
-// Items
+// ---- Items ----
 
 new entry "AMP_Stardruid_Helmet_1"
 type "Armor"
@@ -7826,7 +7851,7 @@ data "Rarity" "Legendary"
 data "ComboCategory" "d4"
 data "PassivesOnEquip" "AMP_Stardruid_Helmet_1_Passive;AMP_Stardruid_Helmet_2_Passive;AMP_Stardruid_Helmet_3_Passive;AMP_Stardruid_Helmet_4_Passive"
 
-// Passive 1: Radiant → Bonus Action + Stun Risk
+// ---- Passive 1: Radiant → Bonus Action + Stun Risk ----
 
 new entry "AMP_Stardruid_Helmet_1_Passive"
 type "PassiveData"
@@ -7848,7 +7873,7 @@ data "StackId" "AMP_STARDRUID_STUN_CHECK"
 data "OnApplyFunctors" "IF(not SavingThrow(Ability.Constitution,20)):ApplyStatus(STUNNED,100,1)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// Passive 2: Heal Ally → Wild Shape
+// ---- Passive 2: Heal Ally → Wild Shape ----
 
 new entry "AMP_Stardruid_Helmet_2_Passive"
 type "PassiveData"
@@ -7859,7 +7884,7 @@ data "StatsFunctorContext" "OnHeal"
 data "Conditions" "IsSpell() and Ally() and not Self() and Combat()"
 data "StatsFunctors" "RestoreResource(SELF,WildShape,1,0)"
 
-// Passive 3: Guiding Bolt → Cosmic Omen
+// ---- Passive 3: Guiding Bolt → Cosmic Omen ----
 
 new entry "AMP_Stardruid_Helmet_3_Passive"
 type "PassiveData"
@@ -7871,7 +7896,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsGuidingBolt()"
 data "StatsFunctors" "IF(SavingThrow(Ability.Wisdom,25)):RestoreResource(SELF,CosmicOmen,1,0)"
 
-// Passive 4: Radiant DamageBonus
+// ---- Passive 4: Radiant DamageBonus ----
 
 new entry "AMP_Stardruid_Helmet_4_Passive"
 type "PassiveData"
@@ -7947,6 +7972,7 @@ using "AMP_Bladesinger_Helmet_1_Passive"
 data "DescriptionParams" "2"
 data "StatsFunctors" "DealDamage(IntelligenceModifier*2,Slashing,Magical,,0,,true,false)"
 
+// @GGtsune order
 new entry "AMP_GGtsune_Scimitar"
 type "Weapon"
 using "WPN_Scimitar"
@@ -8409,7 +8435,7 @@ data "StatsFunctors" "IF(not RollDieAgainstDC(DiceType.d100,100)):ApplyStatus(SE
 
 // #5 Crimson Velvet
 
-// Uncommon Version Block
+//================Uncommon Version Block================
 new entry "AMP_Boots_Metamagic"
 type "Armor"
 using "_Foot"
@@ -8449,7 +8475,7 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "IsSpell()"
 data "StatsFunctors" "RestoreResource(SELF,SorceryPoint,1,0)"
 
-// Rare Version Block
+//================Rare Version Block================
 new entry "AMP_Boots_Metamagic_2"
 type "Armor"
 using "AMP_Boots_Metamagic"
@@ -8477,7 +8503,7 @@ type "PassiveData"
 using "AMP_METAMAGIC_TRACKER_PASSIVE"
 data "StatsFunctors" "RestoreResource(SELF,SorceryPoint,1,0)"
 
-// Veryrare Version Block
+//================Veryrare Version Block================
 new entry "AMP_Boots_Metamagic_3"
 type "Armor"
 using "AMP_Boots_Metamagic"
@@ -8530,7 +8556,7 @@ data "RemoveConditions" "not HasTemporaryHP()"
 data "RemoveEvents" "OnDamage"
 data "StatusGroups" "SG_RemoveOnRespec"
 
-// Legendary Version Block
+//================Legendary Version Block================
 new entry "AMP_Boots_Metamagic_4"
 type "Armor"
 using "AMP_Boots_Metamagic"
@@ -9082,7 +9108,7 @@ data "StatsFunctors" "ApplyStatus(SELF,AMP_ARCANE_V_4,100,1);ApplyStatus(SELF,AM
 
 // #9 Mirabar Greaves
 
-// Uncommon Version Block
+//================Uncommon Version Block================
 new entry "AMP_Boots_ReactiveArmor"
 type "Armor"
 using "_Foot"
@@ -9137,7 +9163,7 @@ data "StackId" "AMP_FORCE_DAMAGE_VFX"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 data "ApplyEffect" "feb22f8d-8992-4368-ba0d-3fa9b1df74e3"
 
-// Rare Version Block
+//================Rare Version Block================
 new entry "AMP_Boots_ReactiveArmor_2"
 type "Armor"
 using "AMP_Boots_ReactiveArmor"
@@ -9167,7 +9193,7 @@ type "PassiveData"
 using "AMP_ReactiveArmor_Counter"
 data "StatsFunctors" "DealDamage(SWAP,2d6,Force,Magical);ApplyStatus(SWAP,AMP_FORCE_DAMAGE_BOOTS_VFX,100,0)"
 
-// Very Rare Version Block
+//================Very Rare Version Block================
 new entry "AMP_Boots_ReactiveArmor_3"
 type "Armor"
 using "AMP_Boots_ReactiveArmor"
@@ -9197,7 +9223,7 @@ type "PassiveData"
 using "AMP_ReactiveArmor_Counter"
 data "StatsFunctors" "DealDamage(SWAP,2d8,Force,Magical);ApplyStatus(SWAP,AMP_FORCE_DAMAGE_BOOTS_VFX,100,0)"
 
-// Legendary Version Block
+//================Legendary Version Block================
 new entry "AMP_Boots_ReactiveArmor_4"
 type "Armor"
 using "AMP_Boots_ReactiveArmor"
@@ -9427,7 +9453,7 @@ data "Conditions" "StatusDurationEqualOrMoreThan(context.Source,'MAG_MOMENTUM',7
 data "StatsFunctors" "SetStatusDuration(SELF, MAG_MOMENTUM,-7,Add);ApplyStatus(SLOW,100,2)"
 
 // #12 Weavebender Greaves
-// UNCOMMON
+// ================ UNCOMMON ================
 new entry "AMP_Boots_ArcaneWarrior"
 type "Armor"
 using "_Foot"
@@ -9466,7 +9492,7 @@ data "Boosts" "CharacterWeaponDamage(1d4)"
 data "StatusGroups" "SG_Condition"
 data "StatusPropertyFlags" "DisableCombatlog;ForceOverhead"
 
-// RARE
+// ================ RARE ================
 new entry "AMP_Boots_ArcaneWarrior_2"
 type "Armor"
 using "AMP_Boots_ArcaneWarrior"
@@ -9485,7 +9511,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsWeaponAttack() and (HasDamageDoneForType(DamageType.Force) or HasDamageDoneForType(DamageType.Acid) or HasDamageDoneForType(DamageType.Thunder) or HasDamageDoneForType(DamageType.Psychic))"
 data "StatsFunctors" "ApplyStatus(SELF,MAG_CQC_ARCANE_CHARGE,100,1);IF(StatusDurationEqualOrMoreThan(context.Source,'MAG_CQC_ARCANE_CHARGE',8)):SetStatusDuration(SELF,MAG_CQC_ARCANE_CHARGE,7,ForceSet)"
 
-// VERY RARE
+// ================ VERY RARE ================
 new entry "AMP_Boots_ArcaneWarrior_3"
 type "Armor"
 using "AMP_Boots_ArcaneWarrior"
@@ -9516,7 +9542,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsWeaponAttack() and HasStatus('MAG_CQC_ARCANE_CHARGE',context.Source)"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_ANCIENTCHAOS,100,1);IF(StatusDurationEqualOrMoreThan(context.Source,'AMP_ANCIENTCHAOS',8)):SetStatusDuration(SELF,AMP_ANCIENTCHAOS,7,ForceSet)"
 
-// LEGENDARY
+// ================ LEGENDARY ================
 new entry "AMP_Boots_ArcaneWarrior_4"
 type "Armor"
 using "AMP_Boots_ArcaneWarrior"
@@ -10335,7 +10361,7 @@ data "Boosts" "ActionResource(Movement,8,0);ActionResource(BonusActionPoint,1,0)
 
 // #17 The Gambler's Due
 
-// Shared Mechanics (used by all tiers)
+//================Shared Mechanics (used by all tiers)================
 
 new entry "AMP_GAMBLERS_BET_ACTIVE"
 type "StatusData"
@@ -10387,7 +10413,7 @@ data "StatusType" "BOOST"
 data "StackId" "AMP_GAMBLERS_CRIT_HIT_FLAG"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// Uncommon Version Block
+//================Uncommon Version Block================
 
 new entry "AMP_Boots_FatesGamble"
 type "Armor"
@@ -10423,7 +10449,7 @@ data "UseCosts" "BonusActionPoint:1"
 data "Requirements" "Combat"
 data "SpellFlags" "DisplayInItemTooltip"
 
-// Rare Version Block
+//================Rare Version Block================
 
 new entry "AMP_Boots_FatesGamble_2"
 type "Armor"
@@ -10442,7 +10468,7 @@ data "DescriptionParams" "2"
 data "SpellProperties" "ApplyStatus(SELF,AMP_GAMBLERS_BET_ACTIVE,100,2)"
 data "TooltipStatusApply" "ApplyStatus(AMP_GAMBLERS_BET_ACTIVE,100,2)"
 
-// Veryrare Version Block
+//================Veryrare Version Block================
 
 new entry "AMP_Boots_FatesGamble_3"
 type "Armor"
@@ -10461,7 +10487,7 @@ data "DescriptionParams" "3"
 data "SpellProperties" "ApplyStatus(SELF,AMP_GAMBLERS_BET_ACTIVE,100,3)"
 data "TooltipStatusApply" "ApplyStatus(AMP_GAMBLERS_BET_ACTIVE,100,3)"
 
-// Legendary Version Block
+//================Legendary Version Block================
 
 new entry "AMP_Boots_FatesGamble_4"
 type "Armor"
@@ -10595,8 +10621,10 @@ using "AMP_NecroBalance_Exchange"
 data "DescriptionParams" "RegainHitPoints(ConstitutionModifier*4);DealDamage(ConstitutionModifier*4,Necrotic);DealDamage(,Necrotic)"
 data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and (InReachWeaponRange() or SpellDamageTypeIs(DamageType.Necrotic))):ApplyStatus(SELF,AMP_NECROBALANCE_HEAL_4,100,0);IF(context.HasContextFlag(StatsFunctorContext.OnDamaged) and not IsImmuneToDamageType(DamageType.Necrotic,context.Target)):DealDamage(ConstitutionModifier*4,Necrotic,Magical,,0,,true,false)"
 
-// Phylactery's Refusal: custom DOWNED revives at once, SPENT restores vanilla DOWNED for normal death saves
-// Grip and SPENT clear on long rest via AMP_Dymitri_Phylactery
+// ====== Phylactery's Refusal (second twist) — cheat death once per long rest, at the cost of Max HP ======
+// Mirrors the Stigmata/boss Undying pattern: a passive grants DownedStatus to a custom DOWNED that
+// instantly revives. SPENT then restores vanilla DOWNED (correct for a player — normal death saves
+// afterwards). Grip (-25% Max HP) and SPENT both clear on long rest (Osiris AMP_Dymitri_Phylactery).
 new entry "AMP_NecroBalance_Refusal"
 type "PassiveData"
 data "DisplayName" "hf29750f8gc844g47f4g9360g76c1374fdc7a;1"
@@ -10637,7 +10665,7 @@ data "Boosts" "IncreaseMaxHP(-25%)"
 data "StatusPropertyFlags" "IgnoreResting"
 
 // #19 Adept "Scholars" Slippers
-// Uncommon Version Block
+//================Uncommon Version Block================
 new entry "AMP_Boots_WildSurge"
 type "Armor"
 using "_Foot"
@@ -10663,7 +10691,7 @@ data "StatsFunctorContext" "OnAttack"
 data "Conditions" "IsCriticalMiss()"
 data "StatsFunctors" "DealDamage(SELF,MaxHP/2,Force,Magical,,0,,true,true,false,true)"
 
-// Rare Version Block
+//================Rare Version Block================
 new entry "AMP_Boots_WildSurge_2"
 type "Armor"
 using "AMP_Boots_WildSurge"
@@ -10678,7 +10706,7 @@ using "AMP_WildSurge_Chaos"
 data "DescriptionParams" "2;50"
 data "Boosts" "CriticalHitExtraDice(2,MeleeWeaponAttack);CriticalHitExtraDice(2,MeleeOffHandWeaponAttack);CriticalHitExtraDice(2,MeleeSpellAttack);CriticalHitExtraDice(2,RangedSpellAttack);CriticalHitExtraDice(2,MeleeUnarmedAttack);CriticalHitExtraDice(2,RangedUnarmedAttack);CriticalHitExtraDice(2,RangedWeaponAttack);CriticalHitExtraDice(2,RangedOffHandWeaponAttack)"
 
-// Veryrare Version Block
+//================Veryrare Version Block================
 new entry "AMP_Boots_WildSurge_3"
 type "Armor"
 using "AMP_Boots_WildSurge"
@@ -10716,7 +10744,7 @@ data "FormatColor" "Red"
 data "Icon" "Weapon2_bonus"
 data "Boosts" "ReduceCriticalAttackThreshold(1)"
 
-// Legendary Version Block
+//================Legendary Version Block================
 new entry "AMP_Boots_WildSurge_4"
 type "Armor"
 using "AMP_Boots_WildSurge"
@@ -11198,7 +11226,7 @@ data "StackType" "Ignore"
 data "StatusPropertyFlags" "IgnoreResting"
 data "Boosts" "CharacterWeaponDamage(1d8,Radiant)"
 
-// RARE BLOCK
+// ================ RARE BLOCK ================
 new entry "AMP_Boots_DivineBalance_2"
 type "Armor"
 using "AMP_Boots_DivineBalance"
@@ -11214,7 +11242,7 @@ data "Description" "hbdc7f749g86e9g4ad9g9c0fge9c2ebdd5967;1"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockSpellVariant(IsLayOnHandsSpell(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint),ModifyTooltipDescription())"
 
-// VERYRARE BLOCK
+// ================ VERYRARE BLOCK ================
 new entry "AMP_Boots_DivineBalance_3"
 type "Armor"
 using "AMP_Boots_DivineBalance"
@@ -11233,7 +11261,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsCritical() and IsMeleeWeaponAttack() and HasStatus('SG_Stunned', context.Target)"
 data "StatsFunctors" "RestoreResource(SELF,ChannelOath,1,0)"
 
-// LEGENDARY BLOCK
+// ================ LEGENDARY BLOCK ================
 new entry "AMP_Boots_DivineBalance_4"
 type "Armor"
 using "AMP_Boots_DivineBalance"
@@ -11555,8 +11583,8 @@ type "StatusData"
 data "StatusType" "BOOST"
 using "AMP_PACT_RECLAIM_MARK_1"
 
-// Devouring Pact Bonus Statuses (12 combinations)
-// Chain Status (Blood Bonds: -10% MaxHP to player, +1 damage to fiends in 18m, stacks up to 3/4/5/7)
+//================Devouring Pact Bonus Statuses (12 combinations)================
+//=====Chain Status (Blood Bonds: -10% MaxHP to player, +1 damage to fiends in 18m, stacks up to 3/4/5/7)=====
 new entry "AMP_DEVOURING_PACT_CHAIN_1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -11583,7 +11611,7 @@ data "StatusType" "BOOST"
 using "AMP_DEVOURING_PACT_CHAIN_1"
 data "Passives" "AMP_DevouringPact_Chain_Passive_4;AMP_DevouringPact_Chain_Legendary_Passive"
 
-// Chain Passive (IsKillingBlow → debuff on player + explosion for fiends)
+//=====Chain Passive (IsKillingBlow → debuff on player + explosion for fiends)=====
 new entry "AMP_DevouringPact_Chain_Passive_1"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -11606,7 +11634,7 @@ type "PassiveData"
 using "AMP_DevouringPact_Chain_Passive_1"
 data "Conditions" "IsKillingBlow() and Enemy() and not StatusDurationEqualOrMoreThan(context.Source,'AMP_CHAIN_DEBUFF',7)"
 
-// Chain Debuff (stacking -5% HP on player)
+//=====Chain Debuff (stacking -5% HP on player)=====
 new entry "AMP_CHAIN_DEBUFF"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -11616,7 +11644,7 @@ data "StackType" "Additive"
 data "StatusPropertyFlags" "MultiplyEffectsByDuration;FreezeDuration;DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 data "Boosts" "IncreaseMaxHP(-10%)"
 
-// Chain Explosion (applies buff to fiends in 18m)
+//=====Chain Explosion (applies buff to fiends in 18m)=====
 new entry "AMP_Chain_Fiend_Buff_Explosion"
 type "SpellData"
 data "SpellType" "Projectile"
@@ -11631,7 +11659,7 @@ data "TargetConditions" "Summon() and Ally() and Tagged('FIEND')"
 data "Trajectories" "f346b284-854e-4dd9-b87c-3938f5178265"
 data "HitAnimationType" "MagicalNonDamage"
 
-// Chain Fiend Buff (stacking +1 damage on fiends)
+//=====Chain Fiend Buff (stacking +1 damage on fiends)=====
 new entry "AMP_CHAIN_FIEND_BUFF"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -11641,7 +11669,7 @@ data "StackType" "Additive"
 data "StatusPropertyFlags" "MultiplyEffectsByDuration;FreezeDuration;DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "Boosts" "DamageBonus(1)"
 
-// Chain Legendary Passive (heal fiend to MaxHP when dealing damage)
+//=====Chain Legendary Passive (heal fiend to MaxHP when dealing damage)=====
 new entry "AMP_DevouringPact_Chain_Legendary_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -11658,7 +11686,7 @@ data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableComb
 data "OnApplyFunctors" "RegainHitPoints(MaxHP)"
 data "ApplyEffect" "432f87cb-3aa5-41c9-b526-26a6b5900655"
 
-// Blade status
+//=====Blade Status (Weapon Hungers: -1 damage and -1 Wis saves to player, +2 damage to MainHand, stacks up to 3/4/5/7)=====
 new entry "AMP_DEVOURING_PACT_BLADE_1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -11686,7 +11714,7 @@ using "AMP_DEVOURING_PACT_BLADE_1"
 data "DisplayName" "h4b27199dgc55dg4f98g95b6gb769c1b900bd;1"
 data "Passives" "AMP_DevouringPact_Blade_Passive_4"
 
-// Blade Passive (IsKillingBlow → debuff on player + dice buff on weapon per tier)
+//=====Blade Passive (IsKillingBlow → debuff on player + dice buff on weapon per tier)=====
 new entry "AMP_DevouringPact_Blade_Passive_1"
 type "PassiveData"
 data "Properties" "IsHidden"
@@ -11712,7 +11740,7 @@ using "AMP_DevouringPact_Blade_Passive_1"
 data "Conditions" "IsKillingBlow() and Enemy() and not StatusDurationEqualOrMoreThan(context.Source,'AMP_BLADE_DEBUFF',6)"
 data "StatsFunctors" "ApplyStatus(SELF,AMP_BLADE_DEBUFF,100,1);ApplyEquipmentStatus(SELF,MainHand,AMP_BLADE_WEAPON_BUFF_4,100,1);IF(HasStatusGroup('SG_Cursed',context.Target) and not StatusDurationEqualOrMoreThan(context.Source,'AMP_BLADE_DEBUFF',6)):ApplyStatus(SELF,AMP_BLADE_DEBUFF,100,1);IF(HasStatusGroup('SG_Cursed',context.Target) and not StatusDurationEqualOrMoreThan(context.Source,'AMP_BLADE_DEBUFF',6)):ApplyEquipmentStatus(SELF,MainHand,AMP_BLADE_WEAPON_BUFF_4,100,1)"
 
-// Blade Player Debuff (stacking -1 non-MH damage and -1 Wis saves)
+//=====Blade Player Debuff (stacking -1 non-MH damage and -1 Wis saves)=====
 new entry "AMP_BLADE_DEBUFF"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -11722,7 +11750,7 @@ data "StackType" "Additive"
 data "StatusPropertyFlags" "MultiplyEffectsByDuration;FreezeDuration;DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 data "Boosts" "IF(not IsAttackType(AttackType.MeleeWeaponAttack)):DamageBonus(-1);RollBonus(SavingThrow,-1,Wisdom)"
 
-// Blade Weapon Buff (stacking +1dX Force per tier, applied to MainHand via ApplyEquipmentStatus)
+//=====Blade Weapon Buff (stacking +1dX Force per tier, applied to MainHand via ApplyEquipmentStatus)=====
 new entry "AMP_BLADE_WEAPON_BUFF_1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -11750,7 +11778,7 @@ data "StatusType" "BOOST"
 using "AMP_BLADE_WEAPON_BUFF_1"
 data "Boosts" "WeaponDamage(1d8,Force)"
 
-// Tome Status (Stolen Incantations: restore spell slot on spell kill, different cooldowns and debuffs)
+//=====Tome Status (Stolen Incantations: restore spell slot on spell kill, different cooldowns and debuffs)=====
 new entry "AMP_DEVOURING_PACT_TOME_1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -11777,7 +11805,7 @@ data "StatusType" "BOOST"
 using "AMP_DEVOURING_PACT_TOME_1"
 data "Passives" "AMP_DevouringPact_Tome_Passive_4"
 
-// Tome Passive (different cooldowns per rarity: ShortRest/Combat/Turn/No CD)
+//=====Tome Passive (different cooldowns per rarity: ShortRest/Combat/Turn/No CD)=====
 new entry "AMP_DevouringPact_Tome_Passive_1"
 type "PassiveData"
 data "DisplayName" "h71ed2e4bg6a88g43bag8acdga6adeb4d6780;1"
@@ -11810,7 +11838,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsKillingBlow() and Enemy() and IsSpell() and WarlockSlotNotFull(context.Source)"
 data "StatsFunctors" "RestoreResource(SELF,WarlockSpellSlot,1,1);RestoreResource(SELF,WarlockSpellSlot,1,2);RestoreResource(SELF,WarlockSpellSlot,1,3);RestoreResource(SELF,WarlockSpellSlot,1,4);RestoreResource(SELF,WarlockSpellSlot,1,5);ApplyStatus(SELF,AMP_TOME_DEBUFF_2,100,1);IF(not StatusDurationEqualOrMoreThan(context.Source,'AMP_TOME_SPELLBONUS',5)):ApplyStatus(SELF,AMP_TOME_SPELLBONUS,100,1)"
 
-// Tome Debuffs (different values per rarity)
+//=====Tome Debuffs (different values per rarity)=====
 new entry "AMP_TOME_DEBUFF_1"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -11826,7 +11854,7 @@ data "StatusType" "BOOST"
 using "AMP_TOME_DEBUFF_1"
 data "Boosts" "DamageBonus(-1)"
 
-// Tome Legendary Spell Bonus (stacking +1 spell attack/DC, max 5)
+//=====Tome Legendary Spell Bonus (stacking +1 spell attack/DC, max 5)=====
 new entry "AMP_TOME_SPELLBONUS"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -11836,7 +11864,7 @@ data "StackType" "Additive"
 data "StatusPropertyFlags" "MultiplyEffectsByDuration;FreezeDuration;ApplyToDead;DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "Boosts" "RollBonus(RangedSpellAttack,1);RollBonus(MeleeSpellAttack,1);SpellSaveDC(1)"
 
-// Info Passives
+//=====Info Passives=====
 // Chain Info
 new entry "AMP_DevouringPact_Chain_Info"
 type "PassiveData"
@@ -11934,7 +11962,7 @@ data "DescriptionParams" "1;5"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_PactOfTheTome"
 
-// Medallion OF Shattered Will - Very Rare Version
+//================Medallion OF Shattered Will - Very Rare Version================
 new entry "AMP_Amulet_CaioShin"
 type "Armor"
 using "ARM_Amulet"
@@ -11969,7 +11997,7 @@ data "Icon" "Action_KarsusCompulsion"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockInterrupt(Interrupt_AMP_CaioShin)"
 
-// Medallion of Shattered Will - Legendary Version
+//================Medallion of Shattered Will - Legendary Version================
 new entry "AMP_Amulet_CaioShin_4"
 type "Armor"
 using "AMP_Amulet_CaioShin"
@@ -12000,7 +12028,8 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsCritical() and IsWisdomGreaterThanStrength(context.Source)"
 data "StatsFunctors" "RestoreResource(SELF,ReactionActionPoint,1,0)"
 
-// Ice Cantata Rapier, Very Rare is the base
+// @RusMage order - Ice Cantata Rapier
+//==============Very Rare Version (BASE)==============
 new entry "AMP_RusMage_Rapier"
 type "Weapon"
 using "WPN_Rapier_1"
@@ -12035,7 +12064,7 @@ data "Description" "hdc0c5419gb8cdg4780g80c2gb34ad01e40a2;1"
 data "DescriptionParams" "DealDamage(,Cold);DealDamage(1d4,Cold)"
 data "Boosts" "IF(HasDamageDoneForType(DamageType.Cold)):DamageBonus(1d4, Cold)"
 
-// Rare Version
+//==============Rare Version==============
 new entry "AMP_RusMage_Rapier_1"
 type "Weapon"
 using "AMP_RusMage_Rapier"
@@ -12053,7 +12082,7 @@ data "DisplayName" "h7f2ee740g7208g4039g9711g659d872ac656;1"
 data "Description" "hdc0c5419gb8cdg4780g80c2gb34ad01e40a2;1"
 data "DescriptionParams" "DealDamage(,Cold);DealDamage(1,Cold)"
 
-// Legendary Version
+//==============Legendary Version==============
 new entry "AMP_RusMage_Rapier_2"
 type "Weapon"
 using "AMP_RusMage_Rapier"
@@ -12078,7 +12107,8 @@ data "StackId" "AMP_RUSMAGE_VFX"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 data "StatusEffect" "84770a16-8a88-478a-8965-eec7cdeb057c"
 
-// Legacy of Ergolion Gloves, Very Rare is the base
+// @Ergo order - Legacy of Ergolion Gloves
+//==============Very Rare Version (BASE)==============
 new entry "AMP_Ergo_Gloves"
 type "Armor"
 using "ARM_Gloves_Leather"
@@ -12118,7 +12148,7 @@ data "RemoveEvents" "OnCombatEnded"
 data "FormatColor" "Green"
 data "StatusPropertyFlags" "InitiateCombat;BringIntoCombat"
 
-// Uncommon Version
+//==============Uncommon Version==============
 new entry "AMP_Ergo_Gloves_1"
 type "Armor"
 using "AMP_Ergo_Gloves"
@@ -12141,7 +12171,7 @@ using "AMP_ERGO_CURSE"
 data "DescriptionParams" "DealDamage(1,Poison)"
 data "TickFunctors" "DealDamage(1,Poison,,,0,,true,false);IF(not HasStatus('POISONED')):ApplyStatus(POISONED,100,-1)"
 
-// Rare Version
+//==============Rare Version==============
 new entry "AMP_Ergo_Gloves_2"
 type "Armor"
 using "AMP_Ergo_Gloves"
@@ -12164,7 +12194,7 @@ using "AMP_ERGO_CURSE"
 data "DescriptionParams" "DealDamage(1d4,Poison)"
 data "TickFunctors" "DealDamage(1d4,Poison);IF(not HasStatus('POISONED')):ApplyStatus(POISONED,100,-1)"
 
-// Legendary Version
+//==============Legendary Version==============
 new entry "AMP_Ergo_Gloves_4"
 type "Armor"
 using "AMP_Ergo_Gloves"
@@ -12187,9 +12217,12 @@ using "AMP_ERGO_CURSE"
 data "DescriptionParams" "DealDamage(2d6,Poison)"
 data "TickFunctors" "DealDamage(2d6,Poison);IF(not HasStatus('POISONED')):ApplyStatus(POISONED,100,-1)"
 
-// Dark Urge dagger. Osiris detects the Dark Urge tag, applies the Durge status that unlocks Carnage's Gift
+//==============Koy'S Dagger - Dark Urge Dagger==============
+// Concept: Blood-drinking dagger that rewards kills (Durge synergy) but punishes crits with bleeding
+// Customer: Koy, Paid Order
+// Architecture: Osiris script detects Dark Urge tag → applies Durge status → unlocks Carnage's Gift mechanics
 
-// Uncommon Version
+//==============Uncommon Version==============
 new entry "AMP_Koy_Dagger"
 type "Weapon"
 using "WPN_Dagger"
@@ -12269,7 +12302,7 @@ data "Boosts" "RollBonus(Attack,1)"
 data "RemoveEvents" "OnCombatEnded"
 data "StatusPropertyFlags" "ForceOverhead;MultiplyEffectsByDuration;FreezeDuration"
 
-// Rare Version
+//==============Rare Version==============
 new entry "AMP_Koy_Dagger_2"
 type "Weapon"
 using "AMP_Koy_Dagger"
@@ -12316,7 +12349,7 @@ data "Description" "h803d8fb5g6cceg4bf8gb9fbge2f90dd7762b;1"
 data "DescriptionParams" "1;1"
 data "Boosts" "RollBonus(Attack,1);DamageBonus(1)"
 
-// Veryrare Version
+//==============Veryrare Version==============
 new entry "AMP_Koy_Dagger_3"
 type "Weapon"
 using "AMP_Koy_Dagger"
@@ -12363,7 +12396,7 @@ data "Description" "h60e662bfg8a01g4107g89bbg918734b8c844;1"
 data "DescriptionParams" "2;2"
 data "Boosts" "RollBonus(Attack,2);DamageBonus(2)"
 
-// Legendary Version
+//==============Legendary Version==============
 new entry "AMP_Koy_Dagger_4"
 type "Weapon"
 using "AMP_Koy_Dagger"
@@ -12431,9 +12464,13 @@ data "SpellFlags" "IsHarmful;IsTrap;ImmediateCast"
 data "HitAnimationType" "MagicalDamage_External"
 data "DamageType" "Necrotic"
 
+//===================================================================================================
 // Ring of Skilthiryx - Commissioned by Skilthiryx
+//===================================================================================================
 
+// ---------------------------------------------------------------------------------------------------
 // Legendary Block (Base)
+// ---------------------------------------------------------------------------------------------------
 
 new entry "AMP_Skilthiryx_Ring"
 type "Armor"
@@ -12488,7 +12525,9 @@ data "ExtraDescription" "h11d59857g52e1g4c3ag84c1g2732af6a2ce0;1"
 data "UseCosts" "BonusActionPoint:1"
 data "SpellFlags" "InventorySelection;RangeIgnoreVerticalThreshold;IsHarmful;HasHighGroundRangeExtension;IgnoreVisionBlock;AddFallDamageOnLand;HasVerbalComponent;HasSomaticComponent;AbortOnSpellRollFail;AbortOnSecondarySpellRollFail;Temporary;CombatLogSetSingleLineRoll"
 
+// ---------------------------------------------------------------------------------------------------
 // Very Rare Block (_3)
+// ---------------------------------------------------------------------------------------------------
 
 new entry "AMP_Skilthiryx_Ring_3"
 type "Armor"
@@ -12511,7 +12550,9 @@ data "SpellType" "Throw"
 using "Throw_Telekinesis_Skilthiryx"
 data "Cooldown" "OncePerShortRestPerItem"
 
+// ---------------------------------------------------------------------------------------------------
 // Rare Block (_2)
+// ---------------------------------------------------------------------------------------------------
 
 new entry "AMP_Skilthiryx_Ring_2"
 type "Armor"
@@ -12536,7 +12577,9 @@ using "Throw_Telekinesis_Skilthiryx"
 data "Cooldown" "OncePerRest"
 data "Requirements" ""
 
+// ---------------------------------------------------------------------------------------------------
 // Uncommon Block (_1)
+// ---------------------------------------------------------------------------------------------------
 
 new entry "AMP_Skilthiryx_Ring_1"
 type "Armor"
@@ -12554,7 +12597,9 @@ using "Throw_Telekinesis_Skilthiryx"
 data "Cooldown" "OncePerRest"
 data "Requirements" ""
 
+//===================================================================================================
 // Heart of the Watcher - Commissioned by Koy
+//===================================================================================================
 
 // Character Templates (ordered: Legendary → VeryRare → Rare)
 new entry "AMP_Koy_SteelWatcher"
@@ -12664,7 +12709,7 @@ type "SpellData"
 data "SpellType" "Target"
 using "Target_AMP_SteelWatcher_Biped_Reprimand"
 
-// Legendary Block
+//================Legendary Block================
 
 new entry "AMP_Koy_Amulet"
 type "Armor"
@@ -12741,7 +12786,7 @@ data "SpellActionType" "Dismiss"
 data "PrepareEffect" "46b4d908-056f-441a-812a-12d041b8d1ab"
 data "CastEffect" "dfe6faf9-dbc1-4d21-a932-c4fbfa855be3"
 
-// Veryrare Block
+//================Veryrare Block================
 
 new entry "AMP_Koy_Amulet_2"
 type "Armor"
@@ -12787,7 +12832,7 @@ data "SpellType" "Shout"
 using "Shout_AMP_Koy_Dismiss"
 data "SpellProperties" "RemoveStatus(AMP_KOY_TRANSFORM_2)"
 
-// Rare Block
+//================Rare Block================
 
 new entry "AMP_Koy_Amulet_1"
 type "Armor"
@@ -12832,9 +12877,11 @@ data "SpellType" "Shout"
 using "Shout_AMP_Koy_Dismiss"
 data "SpellProperties" "RemoveStatus(AMP_KOY_TRANSFORM_1)"
 
+//===================================================================================================
 // Dwarven Set - Commissioned by Kyzr
+//===================================================================================================
 
-// Battleaxe - AMP_KYZR_BATTLEAXE
+//================Battleaxe - AMP_KYZR_BATTLEAXE================
 
 new entry "AMP_KYZR_VFX"
 type "StatusData"
@@ -12843,7 +12890,7 @@ data "StackId" "AMP_KYZR_VFX"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
 data "StatusEffect" "f5559bf1-a0f9-466d-b5b5-8c919380ac03"
 
-// Uncommon (T1)
+// ---------- Uncommon (T1) ----------
 
 new entry "AMP_Kyzr_Battleaxe_1"
 type "Weapon"
@@ -12887,7 +12934,7 @@ data "BoostContext" "OnCreate;OnEquip"
 data "BoostConditions" "Tagged('REALLY_DWARF',context.Source)"
 data "Boosts" "Resistance(Poison,Immune);DarkvisionRangeMin(24);ActiveCharacterLight(c46e7ba8-e746-7020-5146-287474d7b9f7);StatusImmunity(BLINDED_DARKNESS);IgnoreSurfaceCover(SurfaceDarknessCloud)"
 
-// Rare (T2)
+// ---------- Rare (T2) ----------
 
 new entry "AMP_Kyzr_Battleaxe_2"
 type "Weapon"
@@ -12910,7 +12957,7 @@ data "SpellFail" "DealDamage(max(1,MainMeleeWeapon), MainMeleeWeaponDamageType);
 data "DescriptionParams" "Distance(2);Distance(3)"
 data "TooltipDamageList" "DealDamage(MainMeleeWeapon,MainMeleeWeaponDamageType);DealDamage(1d4,Thunder)"
 
-// Very Rare (T3)
+// ---------- Very Rare (T3) ----------
 
 new entry "AMP_Kyzr_Battleaxe_3"
 type "Weapon"
@@ -12956,7 +13003,7 @@ data "SpellFlags" "HasHighGroundRangeExtension;IgnoreVisionBlock;DisplayInItemTo
 data "RequirementConditions" "CanUseWeaponActions() and IsProficientWithEquippedWeapon()"
 data "TooltipUpcastDescription" ""
 
-// Legendary (T4)
+// ---------- Legendary (T4) ----------
 
 new entry "AMP_Kyzr_Battleaxe_4"
 type "Weapon"
@@ -12989,9 +13036,9 @@ using "AMP_Kyzr_Travel_Depths_3"
 data "Cooldown" "OncePerTurn"
 data "UseCosts" ""
 
-// War Priest Armour - AMP_KYZR_ARMOUR_1
+//================War Priest Armour - AMP_KYZR_ARMOUR_1================
 
-// Uncommon (T1)
+// ---------- Uncommon (T1) ----------
 
 new entry "AMP_Kyzr_Armour_1_1"
 type "Armor"
@@ -13018,7 +13065,7 @@ data "TooltipUpcastDescriptionParams" ""
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsHarmful;DisplayInItemTooltip"
 data "RootSpellID" ""
 
-// Rare (T2)
+// ---------- Rare (T2) ----------
 
 new entry "AMP_Kyzr_Armour_1_2"
 type "Armor"
@@ -13043,7 +13090,7 @@ data "SpellFlags" "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSom
 data "RootSpellID" ""
 
 
-// Very Rare (T3)
+// ---------- Very Rare (T3) ----------
 
 new entry "AMP_Kyzr_Armour_1_3"
 type "Armor"
@@ -13116,7 +13163,7 @@ data "UseCosts" "BonusActionPoint:1"
 data "RequirementConditions" ""
 data "RootSpellID" ""
 
-// Legendary (T4)
+// ---------- Legendary (T4) ----------
 
 new entry "AMP_Kyzr_Armour_1_4"
 type "Armor"
@@ -13176,9 +13223,9 @@ data "SpellType" "Target"
 using "AMP_Kyzr_Booming_Blade_3"
 data "UseCosts" ""
 
-// Defender Armour - AMP_KYZR_ARMOUR_2
+//================Defender Armour - AMP_KYZR_ARMOUR_2================
 
-// Uncommon (T1)
+// ---------- Uncommon (T1) ----------
 
 new entry "AMP_Kyzr_Armour_2_1"
 type "Armor"
@@ -13230,7 +13277,7 @@ data "FormatColor" "LightGray"
 data "TickType" "EndTurn"
 data "Boosts" "AC(2);ActionResourceConsumeMultiplier(Movement,1.5,0);MovementSpeedLimit(Walk)"
 
-// Rare (T2)
+// ---------- Rare (T2) ----------
 
 new entry "AMP_Kyzr_Armour_2_2"
 type "Armor"
@@ -13258,7 +13305,7 @@ data "StatusType" "BOOST"
 using "AMP_KYZR_DEFENSIVE_STANCE_1"
 data "DescriptionParams" "2"
 
-// Very Rare (T3)
+// ---------- Very Rare (T3) ----------
 
 new entry "AMP_Kyzr_Armour_2_3"
 type "Armor"
@@ -13289,7 +13336,7 @@ using "AMP_KYZR_DEFENSIVE_STANCE_1"
 data "DescriptionParams" "3"
 data "Boosts" "AC(3);ActionResourceConsumeMultiplier(Movement,1.5,0);MovementSpeedLimit(Walk)"
 
-// Legendary (T4)
+// ---------- Legendary (T4) ----------
 
 new entry "AMP_Kyzr_Armour_2_4"
 type "Armor"
@@ -13320,9 +13367,9 @@ data "Description" "h92fcc935g1c02g4132g81e7ga02405a63e76;1"
 data "DescriptionParams" "3"
 data "Boosts" "AC(3);ActionResourceConsumeMultiplier(Movement,1.5,0);MovementSpeedLimit(Walk);StatusImmunity(SG_Prone);Attribute(Grounded)"
 
-// Helmet - AMP_KYZR_HELMET
+//================Helmet - AMP_KYZR_HELMET================
 
-// Uncommon (T1)
+// ---------- Uncommon (T1) ----------
 
 new entry "AMP_Kyzr_Helmet_1"
 type "Armor"
@@ -13354,7 +13401,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsSpell() and (SpellDamageTypeIs(DamageType.Thunder) or SpellDamageTypeIs(DamageType.Radiant)) and HasStatus('MAG_THUNDER_REVERBERATION',context.Source) and Enemy()"
 data "StatsFunctors" "DealDamage(1d6,Thunder,Magical,,0,,true,false)"
 
-// Rare (T2)
+// ---------- Rare (T2) ----------
 
 new entry "AMP_Kyzr_Helmet_2"
 type "Armor"
@@ -13386,7 +13433,7 @@ data "BoostContext" "OnCreate;OnEquip"
 data "BoostConditions" "Tagged('REALLY_DWARF',context.Source)"
 data "Boosts" "RollBonus(SavingThrow,2,Constitution)"
 
-// Very Rare (T3)
+// ---------- Very Rare (T3) ----------
 
 new entry "AMP_Kyzr_Helmet_3"
 type "Armor"
@@ -13415,7 +13462,7 @@ using "AMP_Kyzr_Stout_2"
 data "Description" "hba98a2c3g2e65g4e79g9abbg13296ab4c92f;1"
 data "Boosts" "Advantage(SavingThrow,Constitution)"
 
-// Legendary (T4)
+// ---------- Legendary (T4) ----------
 
 new entry "AMP_Kyzr_Helmet_4"
 type "Armor"
@@ -13442,9 +13489,11 @@ using "AMP_Kyzr_Reverberation_Damage_1"
 data "DescriptionParams" "DealDamage(4d8,Thunder);DealDamage(,Thunder);DealDamage(,Radiant)"
 data "StatsFunctors" "DealDamage(4d8,Thunder,Magical,,0,,true,false)"
 
+//===================================================================================================
 // Cryo Sorcerer - Commissioned by Bloodlupus, Frost Lord Vestments
+//===================================================================================================
 
-// Uncommon Block
+//================Uncommon Block================
 new entry "AMP_Bloodlupus_Robe"
 type "Armor"
 using "ARM_Robe_Body_1"
@@ -13464,7 +13513,7 @@ data "DescriptionParams" "DealDamage(,Cold);DealDamage(SpellCastingAbilityModifi
 data "Properties" "Highlighted"
 data "Boosts" "IF(SpellDamageTypeIs(DamageType.Cold)):DamageBonus(SpellCastingAbilityModifier/2,Cold,Magical)"
 
-// Rare Block
+//================Rare Block================
 new entry "AMP_Bloodlupus_Robe_2"
 type "Armor"
 using "AMP_Bloodlupus_Robe"
@@ -13481,7 +13530,7 @@ data "Description" "h5258462eg5009g48c9gb42eg3816ba6e8a38;1"
 data "DescriptionParams" "DealDamage(,Cold);DealDamage(SpellCastingAbilityModifier,Cold)"
 data "Boosts" "IF(SpellDamageTypeIs(DamageType.Cold)):DamageBonus(SpellCastingAbilityModifier,Cold,Magical)"
 
-// Very Rare Block
+//================Very Rare Block================
 new entry "AMP_Bloodlupus_Robe_3"
 type "Armor"
 using "AMP_Bloodlupus_Robe"
@@ -13509,7 +13558,7 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "Combat()"
 data "StatsFunctors" "IF(not IsResistantToColdDamage(context.Source) and not IsImmuneToColdDamage(context.Source)):DealDamage(2d8,Cold,Magical,,0,,true,false)"
 
-// Legendary Block
+//================Legendary Block================
 new entry "AMP_Bloodlupus_Robe_4"
 type "Armor"
 using "AMP_Bloodlupus_Robe"
@@ -13556,9 +13605,11 @@ data "Trajectories" "f346b284-854e-4dd9-b87c-3938f5178265"
 data "SpellFlags" "IsHarmful;ImmediateCast"
 data "HitAnimationType" "MagicalDamage_External"
 
+//================================================================================
 // Kyzr Dreadlord Collection - Commissioned by Kyzr
+//================================================================================
 
-// Midnight Blade / Blackrazor
+//================Midnight Blade / Blackrazor================
 
 // --- T1 Uncommon ---
 new entry "AMP_Kyzr_Longsword_Soul_1"
@@ -13805,7 +13856,7 @@ data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainWeaponDamageType);DealDamag
 data "DescriptionParams" "DealDamage(4d4,Necrotic)"
 data "TooltipDamageList" "DealDamage(MainMeleeWeapon, MainWeaponDamageType);DealDamage(4d4,Necrotic)"
 
-// Armour of the Dreadlord
+//================Armour of the Dreadlord================
 
 // --- T1 Uncommon ---
 new entry "AMP_Kyzr_HalfPlate_Soul_1"
@@ -14302,7 +14353,7 @@ using "StrengthOfTheGrave"
 data "Properties" "Highlighted;OncePerCombat"
 data "StatsFunctorContext" "OnCreate;OnCombatEnded"
 
-// Helm OF The Dreadlord
+//================Helm OF The Dreadlord================
 
 // --- T1 Uncommon ---
 new entry "AMP_Kyzr_Helmet_Soul_1"
@@ -14409,7 +14460,7 @@ data "SpellType" "Shout"
 using "Shout_AMP_Kyzr_TerrifyingVisage_3"
 data "Cooldown" "OncePerTurn"
 
-// Cape OF The Fallen Conqueror
+//================Cape OF The Fallen Conqueror================
 
 // --- T1 Uncommon ---
 new entry "AMP_Kyzr_Cloak_Soul_1"
@@ -14624,9 +14675,20 @@ using "Target_AMP_Kyzr_SummonEntombed_2"
 data "SpellProperties" "SwitchDeathType(Explode);GROUND:Summon(fc053f48-b878-40ab-9af1-fbe8b306981a,UntilLongRest,,,'AMP_Kyzr_SummonStack',AMP_SUMMON,UNSUMMON_ABLE,CREATEILLUSION_DISPLACERBEAST,AMP_KYZR_SUMMON_HAS_CURSE);RemoveStatus(SELF,AMP_KYZR_CLOAK_KILLS_4)"
 data "TargetConditions" "IsTargetableCorpse() and CanStand('fc053f48-b878-40ab-9af1-fbe8b306981a') and TargetSizeEqualOrSmaller(Size.Medium) and SizeEqualOrGreater(Size.Small)"
 
-// Drow Poisoner collection
+// ╔══════════════════════════════════════════════════════════════════════════════╗
+// ║ Drow Poisoner Collection ║
+// ║ Commissioned by RusMage ║
+// ║ ║
+// ║ A deadly arsenal forged in the depths of Menzoberranzan. ║
+// ║ Each weapon whispers prayers to Lolth, the Spider Queen. ║
+// ║ ║
+// ║ • Viper's Fang (Shortsword) - Poison + Ignore Resist/Immune ║
+// ║ • Spider's Whisper (Dagger) - Constitution Curse + Vulnerability ║
+// ║ • Guardian's Web (Crossbow Main) - Web + Psychic Damage ║
+// ║ • Poisoner's Whisper (Crossbow Off) - Curse Synergy + Aoe Crit ║
+// ╚══════════════════════════════════════════════════════════════════════════════╝
 
-// VFX Statuses (manual integration via RootTemplate)
+//==============VFX Statuses (manual integration via RootTemplate)==============
 
 new entry "AMP_RUSMAGE_SWORD_VFX"
 type "StatusData"
@@ -14649,9 +14711,13 @@ data "StackId" "AMP_RUSMAGE_CROSSBOW_VFX"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 data "StatusEffect" "0d9e14e1-26f2-4d07-81b9-c0f07d366380"
 
-// Viper's Fang, shortsword
+// ══════════════════════════════════════════════════════════════════════════════
+// Viper'S Fang / Клык Гадюки (Shortsword)
+// Forged in the blood rituals of Lolth, this blade delivers venoms
+// harvested from the mandibles of living spiders.
+// ══════════════════════════════════════════════════════════════════════════════
 
-// Uncommon
+// ─────────────── Uncommon ───────────────
 
 new entry "AMP_RusMage_Shortsword_1"
 type "Weapon"
@@ -14675,7 +14741,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "HasDamageDoneForType(DamageType.Poison) and IsWeaponAttack()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, ManeuverSaveDC()-4)):ApplyStatus(POISONED,100,2)"
 
-// Rare
+// ─────────────── Rare ───────────────
 
 new entry "AMP_RusMage_Shortsword_2"
 type "Weapon"
@@ -14699,7 +14765,7 @@ data "DescriptionParams" "DealDamage(,Poison)"
 data "Properties" "Highlighted"
 data "Boosts" "IgnoreResistance(Poison,Resistant)"
 
-// Very Rare
+// ─────────────── Very Rare ───────────────
 
 new entry "AMP_RusMage_Shortsword_3"
 type "Weapon"
@@ -14732,7 +14798,7 @@ using "ALCH_TOXIN_PURPLEWORM_CONDITION"
 data "DisplayName" "h5a000daeg0bcfg491dg9077g50a81f7898a0;1"
 data "StackId" "AMP_RUSMAGE_SPIDER_QUEEN_VENOM"
 
-// Legendary
+// ─────────────── Legendary ───────────────
 
 new entry "AMP_RusMage_Shortsword_4"
 type "Weapon"
@@ -14753,9 +14819,13 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsCritical() and IsWeaponAttack()"
 data "StatsFunctors" "ApplyStatus(PARALYZED,100,1)"
 
-// Spider's Whisper, dagger
+// ══════════════════════════════════════════════════════════════════════════════
+// Spider'S Whisper / Паучий Шёпот (Dagger)
+// Where Viper's Fang poisons the body, this blade poisons the soul.
+// Forged in the same bloody rituals, it carries whispered curses from Lolth.
+// ══════════════════════════════════════════════════════════════════════════════
 
-// Uncommon
+// ─────────────── Uncommon ───────────────
 
 new entry "AMP_RusMage_Dagger_1"
 type "Weapon"
@@ -14785,7 +14855,7 @@ using "CURSE_ABILITY_CONSTITUTION"
 data "DisplayName" "hbf43b233g2264g442cga687g177c2cab7c78;1"
 data "StackId" "AMP_RUSMAGE_CURSE_CONSTITUTION"
 
-// Rare
+// ─────────────── Rare ───────────────
 
 new entry "AMP_RusMage_Dagger_2"
 type "Weapon"
@@ -14796,7 +14866,7 @@ data "ComboCategory" "d2"
 data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);WeaponDamage(1d4,Poison)"
 data "PassivesOnEquip" "AMP_RusMage_SpiderWhisper_1_Passive;FightingStyle_TwoWeaponFighting"
 
-// Very Rare
+// ─────────────── Very Rare ───────────────
 
 new entry "AMP_RusMage_Dagger_3"
 type "Weapon"
@@ -14813,7 +14883,7 @@ type "PassiveData"
 using "AMP_RusMage_SpiderWhisper_1_Passive"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom, ManeuverSaveDC()+2)):ApplyStatus(AMP_RUSMAGE_CURSE_CONSTITUTION,100,2)"
 
-// Legendary
+// ─────────────── Legendary ───────────────
 
 new entry "AMP_RusMage_Dagger_4"
 type "Weapon"
@@ -14835,9 +14905,13 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsWeaponAttack()"
 data "StatsFunctors" "ApplyStatus(MAG_POISON_POISON_LETHALITY,100,2)"
 
-// Guardian's Web, hand crossbow main
+// ══════════════════════════════════════════════════════════════════════════════
+// Guardian'S Web / Паутина Стража (Hand Crossbow - Main)
+// This crossbow was crafted to control — its bolts ensnare victims in invisible
+// webs, making them easy prey for the finishing blow.
+// ══════════════════════════════════════════════════════════════════════════════
 
-// Uncommon
+// ─────────────── Uncommon ───────────────
 
 new entry "AMP_RusMage_CrossbowMain_1"
 type "Weapon"
@@ -14861,7 +14935,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsWeaponAttack()"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Dexterity, ManeuverSaveDC())):ApplyStatus(WEB,100,2)"
 
-// Rare
+// ─────────────── Rare ───────────────
 
 new entry "AMP_RusMage_CrossbowMain_2"
 type "Weapon"
@@ -14872,7 +14946,7 @@ data "ComboCategory" "d2"
 data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical)"
 data "PassivesOnEquip" "AMP_RusMage_GuardianWeb_1_Passive"
 
-// Very Rare
+// ─────────────── Very Rare ───────────────
 
 new entry "AMP_RusMage_CrossbowMain_3"
 type "Weapon"
@@ -14901,7 +14975,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsWeaponAttack()"
 data "StatsFunctors" "GROUND:CreateSurface(3,3,Web)"
 
-// Legendary
+// ─────────────── Legendary ───────────────
 
 new entry "AMP_RusMage_CrossbowMain_4"
 type "Weapon"
@@ -14925,9 +14999,13 @@ using "AMP_RusMage_GuardianWeb_SurfaceToggle"
 data "DescriptionParams" "Distance(6)"
 data "StatsFunctors" "GROUND:CreateSurface(6,3,Web)"
 
-// Poisoner's Whisper, hand crossbow off
+// ══════════════════════════════════════════════════════════════════════════════
+// Poisoner'S Whisper / Шёпот Отравителя (Hand Crossbow - Off)
+// Where Guardian's Web binds the body, this crossbow poisons the mind.
+// Its bolts carry neurotoxins that whisper Lolth's curses to the victim.
+// ══════════════════════════════════════════════════════════════════════════════
 
-// Uncommon
+// ─────────────── Uncommon ───────────────
 
 new entry "AMP_RusMage_CrossbowOff_1"
 type "Weapon"
@@ -14951,7 +15029,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsWeaponAttack() and HasStatus('AMP_RUSMAGE_CURSE_CONSTITUTION')"
 data "StatsFunctors" "SetStatusDuration(AMP_RUSMAGE_CURSE_CONSTITUTION,1,Add)"
 
-// Rare
+// ─────────────── Rare ───────────────
 
 new entry "AMP_RusMage_CrossbowOff_2"
 type "Weapon"
@@ -14992,7 +15070,7 @@ using "Curse_ExtraDamage"
 data "Boosts" "IF(HasStatus('AMP_RUSMAGE_CURSE_EXTRA_DAMAGE', context.Target, context.Source) and IsAttack()):DamageBonus(1d4, Necrotic)"
 data "Conditions" "IsAttack() and HasDamageEffectFlag(DamageFlags.Hit) and TotalAttackDamageDoneGreaterThan(0) and HasStatus('AMP_RUSMAGE_CURSE_EXTRA_DAMAGE', context.Target, context.Source)"
 
-// Very Rare
+// ─────────────── Very Rare ───────────────
 
 new entry "AMP_RusMage_CrossbowOff_3"
 type "Weapon"
@@ -15003,7 +15081,7 @@ data "ComboCategory" "d3"
 data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical);WeaponDamage(1d4,Poison)"
 data "PassivesOnEquip" "AMP_RusMage_PoisonerWhisper_2_Passive"
 
-// Legendary
+// ─────────────── Legendary ───────────────
 
 new entry "AMP_RusMage_CrossbowOff_4"
 type "Weapon"
@@ -15049,9 +15127,16 @@ data "SpellFlags" "ImmediateCast"
 data "HitAnimationType" "MagicalNonDamage"
 data "DamageType" "None"
 
-// Whisperwind and Mindstrike, Titanstring longbows scaling off Wisdom and Intelligence
+// ══════════════════════════════════════════════════════════════════════════════
+// End OF Drow Poisoner Collection
+// ══════════════════════════════════════════════════════════════════════════════
 
-// Whisperwind (Wisdom)
+// ══════════════════════════════════════════════════════════════════════════════
+// Whisperwind & Mindstrike (Longbows) - Commission for Grubbyworm
+// Two longbows based on Titanstring: one scales with Wisdom, the other with Intelligence.
+// ══════════════════════════════════════════════════════════════════════════════
+
+// ─────────────── Whisperwind (Wisdom) ───────────────
 
 new entry "AMP_Grubbyworm_Longbow_Whisperwind"
 type "Weapon"
@@ -15068,7 +15153,7 @@ data "Description" "h5724ed8bg74e1g41feg8c6cg5b89e1f10d47;1"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsRangedWeaponAttack()):DamageBonus(max(1,WisdomModifier))"
 
-// Mindstrike (Intelligence)
+// ─────────────── Mindstrike (Intelligence) ───────────────
 
 new entry "AMP_Grubbyworm_Longbow_Mindstrike"
 type "Weapon"
@@ -15085,8 +15170,14 @@ data "Description" "h17bac607g20dcg4c63ga9e8g49ee2fc9c95a;1"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsRangedWeaponAttack()):DamageBonus(max(1,IntelligenceModifier))"
 
+// ══════════════════════════════════════════════════════════════════════════════
+// End OF Grubbyworm Commission
+// ══════════════════════════════════════════════════════════════════════════════
 
-// New Year collection
+
+// ══════════════════════════════════════════════════════════════════════════════
+// New Year Collection
+// ══════════════════════════════════════════════════════════════════════════════
 
 new entry "AMP_NewYear_Robe"
 type "Armor"
@@ -15187,8 +15278,16 @@ using "ARM_Shoes"
 data "RootTemplate" "17cbe20e-f0df-49e6-817b-53351f0bdcae"
 data "Rarity" "VeryRare"
 
+// ══════════════════════════════════════════════════════════════════════════════
+// End OF New Year Collection
+// ══════════════════════════════════════════════════════════════════════════════
 
-// Vanelona's necrotic rapiers
+
+// ══════════════════════════════════════════════════════════════════════════════
+// Vanelona'S Necrotic Rapier Collection
+// Four rapiers that channel the power of death itself.
+// From simple necrotic strikes to devastating soul-reaping abilities.
+// ══════════════════════════════════════════════════════════════════════════════
 
 new entry "AMP_VANELONA_RAPIER_VFX"
 type "StatusData"
@@ -15197,7 +15296,7 @@ data "StackId" "AMP_VANELONA_RAPIER_VFX"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 data "StatusEffect" "90adb82a-e407-4e24-9689-3112839e4777"
 
-// Uncommon
+// ─────────────── Uncommon ───────────────
 
 new entry "AMP_Vanelona_Rapier_1"
 type "Weapon"
@@ -15210,7 +15309,7 @@ data "ComboCategory" "d1"
 data "DefaultBoosts" "WeaponProperty(Magical);WeaponDamage(1d4,Necrotic)"
 data "PassivesOnEquip" "MAG_MeleeCaster_Passive"
 
-// Rare
+// ─────────────── Rare ───────────────
 
 new entry "AMP_Vanelona_Rapier_2"
 type "Weapon"
@@ -15253,7 +15352,7 @@ data "SpellSuccess" "DealDamage(3d10,Necrotic,Magical);SetStatusDuration(SELF,AM
 data "Description" "h1929283dg0fc6g479bg8733ga0bdeaeaf1e6;1"
 data "DescriptionParams" "DealDamage(3d10,Necrotic)"
 
-// Very Rare
+// ─────────────── Very Rare ───────────────
 
 new entry "AMP_Vanelona_Rapier_3"
 type "Weapon"
@@ -15310,7 +15409,7 @@ data "SpellFail" "IF(not Tagged('PLANT')):DealDamage((8d8)/2,Necrotic,Magical);I
 data "Description" "h4d658ff0g67ebg4f36gae2fg5850d25e4a1a;1"
 data "DescriptionParams" "DealDamage(8d8,Necrotic)"
 
-// Legendary
+// ─────────────── Legendary ───────────────
 
 new entry "AMP_Vanelona_Rapier_4"
 type "Weapon"
@@ -15369,9 +15468,13 @@ data "DescriptionParams" "2;DealDamage(10d6+20,Necrotic)"
 
 
 
-// Orb of the First Soul
+//===================================================================================================
+// Orb of the First Soul - Commissioned by Koy
+// Race tags unlock + Ancient Chaos targeted heal (Soul Infusion)
+// Customer: Koy, Paid Order
+//===================================================================================================
 
-// Primordial Chaos Status
+//================Primordial Chaos Status================
 
 new entry "AMP_KOY_PRIMORDIALCHAOS"
 type "StatusData"
@@ -15403,7 +15506,7 @@ data "Conditions" "Combat() and not HasHPPercentageWithoutTemporaryHPLessThan(50
 data "StatsFunctors" "ApplyStatus(AMP_KOY_PRIMORDIALCHAOS,100,1);IF(StatusDurationEqualOrMoreThan(context.Target,'AMP_KOY_PRIMORDIALCHAOS',8)):SetStatusDuration(AMP_KOY_PRIMORDIALCHAOS,7,ForceSet)"
 
 // Koy Chaotic Hunger (check Primordial Chaos instead of Ancient Chaos)
-// Uncommon Block
+//================Uncommon Block================
 
 new entry "AMP_Koy_Orb_Soul_T1"
 type "Armor"
@@ -15457,7 +15560,7 @@ data "HitEffect" "b3ab814a-d931-4600-83cd-5bcef3008203"
 data "TargetEffect" ""
 data "SpellFlags" "Temporary;IsSpell"
 
-// Rare Block
+//================Rare Block================
 
 new entry "AMP_Koy_Orb_Soul_T2"
 type "Armor"
@@ -15489,7 +15592,7 @@ type "PassiveData"
 using "AMP_Koy_Soul_First_T1"
 data "DescriptionParams" "RegainHitPoints(8)"
 
-// Veryrare Block
+//================Veryrare Block================
 
 new entry "AMP_Koy_Orb_Soul_T3"
 type "Armor"
@@ -15512,7 +15615,7 @@ using "AMP_Koy_Soul_First_T1"
 data "Description" "h0321bd73g91e2g470cg967fg3e7c28ccdefa;1"
 data "DescriptionParams" "RegainHitPoints(8)"
 
-// Legendary Block
+//================Legendary Block================
 
 new entry "AMP_Koy_Orb_Soul_T4"
 type "Armor"
@@ -15535,11 +15638,17 @@ using "AMP_Koy_Soul_First_T1"
 data "Description" "h556141ebg66b4g4c35gad20g637de396e8b7;1"
 data "DescriptionParams" "RegainHitPoints(10)"
 
+//===================================================================================================
 // End OF Orb OF The First Soul - KOY Commission
+//===================================================================================================
 
-// Gwaeron's Edge
+//===================================================================================================
+// Gwaeron's Edge - Commissioned by Kyzr
+// Nature longsword: vine momentum, poison vs restrained, Ensnaring Strike, Larethian's Wrath
+// Customer: Kyzr, Paid Order
+//===================================================================================================
 
-// Shared Spells & Statuses
+//================Shared Spells & Statuses================
 
 new entry "AMP_KYZR_VINES_VFX"
 type "StatusData"
@@ -15591,7 +15700,7 @@ using "Zone_Kyzr_RazorGale_2"
 data "UseCosts" ""
 data "RequirementConditions" "CanUseWeaponActions() and IsProficientWithEquippedWeapon()"
 
-// Uncommon Block
+//================Uncommon Block================
 
 new entry "AMP_Kyzr_Longsword_Vines_1"
 type "Weapon"
@@ -15621,7 +15730,7 @@ data "TickType" "StartTurn"
 data "TickFunctors" "IF(Combat() and (InSurface('SurfaceVines') or InSurface('SurfaceOvergrowth') or InSurface('SurfaceShadowCursedVines') or InSurface('SurfaceSpikeGrowth'))):ApplyStatus(MAG_MOMENTUM,100,2);IF(Combat() and (InSurface('SurfaceVines') or InSurface('SurfaceOvergrowth') or InSurface('SurfaceShadowCursedVines') or InSurface('SurfaceSpikeGrowth'))):ApplyStatus(MAG_MOMENTUM_DURATION_TECHNICAL,100,1)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 
-// Rare Block
+//================Rare Block================
 
 new entry "AMP_Kyzr_Longsword_Vines_2"
 type "Weapon"
@@ -15651,7 +15760,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 using "AMP_KYZR_VINES_TICK_1"
 
-// Veryrare Block
+//================Veryrare Block================
 
 new entry "AMP_Kyzr_Longsword_Vines_3"
 type "Weapon"
@@ -15689,7 +15798,7 @@ data "StatusType" "BOOST"
 using "AMP_KYZR_VINES_TICK_1"
 data "TickFunctors" "IF(Combat() and (InSurface('SurfaceVines') or InSurface('SurfaceOvergrowth') or InSurface('SurfaceShadowCursedVines') or InSurface('SurfaceSpikeGrowth'))):ApplyStatus(MAG_MOMENTUM,100,3);IF(Combat() and (InSurface('SurfaceVines') or InSurface('SurfaceOvergrowth') or InSurface('SurfaceShadowCursedVines') or InSurface('SurfaceSpikeGrowth'))):ApplyStatus(MAG_MOMENTUM_DURATION_TECHNICAL,100,1)"
 
-// Legendary Block
+//================Legendary Block================
 
 new entry "AMP_Kyzr_Longsword_Vines_4"
 type "Weapon"
@@ -15724,4 +15833,6 @@ type "StatusData"
 data "StatusType" "BOOST"
 using "AMP_KYZR_VINES_TICK_3"
 
+//===================================================================================================
 // End OF Gwaeron'S Edge - Kyzr Commission
+//===================================================================================================

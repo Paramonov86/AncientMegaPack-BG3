@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hd4e59cc3g2e52g47c3g80ddg188a6a609b66" version="1">Mano del padre de la forja</content>
+	<content contentuid="hb19794a0g3971g4081ga5edge11381bc96b1" version="1">Forjado en el Corazón de las Montañas, este martillo sirvió una vez al propio Moradin para trabajar las primeras vetas de mineral primigenio. Se dice que el dios herrero le infundió no solo el peso de las profundidades, sino la idea misma de la forja.&lt;br&gt;&lt;br&gt;En manos mortales, el arma conserva su esencia divina: cada golpe descarga sobre el enemigo el peso implacable de las montañas y lo derriba. Para Moradin, toda la tierra es un yunque eterno. Quien cae bajo el golpe queda aplastado contra ella, y su carne, sus huesos o su armadura se vuelven tan quebradizos como un metal de mala calidad. El golpe final contra un enemigo así es como un martillazo sobre hierro al rojo en el yunque: tritura y destroza sin piedad.</content>
+	<content contentuid="h40be2759gce31g4d31g9ddega42644bd6ccf" version="1">Martillo</content>
+	<content contentuid="hf0ba5c77g0ed2g48d1g96acgab3107cc31e7" version="1">Una criatura que recibe daño de este martillo debe superar una &lt;LSTag Tooltip="SavingThrow"&gt;tirada de salvación&lt;/LSTag&gt; de Fuerza contra tu &lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;CD de Maniobra&lt;/LSTag&gt; o quedará &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Derribada&lt;/LSTag&gt; durante &lt;b&gt;[1]&lt;/b&gt; turno.</content>
+	<content contentuid="h1ab0e821g8db3g4efbga2e1gbc71a66c84c7" version="1">Yunque</content>
+	<content contentuid="h61eb6ed5gef49g4691g92b5g51d0ba321e96" version="1">Los enemigos que &lt;LSTag Type="Status" Tooltip="PRONE"&gt;derribas&lt;/LSTag&gt; quedan &lt;LSTag Type="Status" Tooltip="BRITTLE"&gt;Quebradizos&lt;/LSTag&gt; durante &lt;b&gt;[1]&lt;/b&gt; turnos.</content>
+	<content contentuid="h01a613d3g6a9eg45d7g840dg66b5f6d3a208" version="1">Entre el martillo y el yunque</content>
+	<content contentuid="h467497f1g984eg4935g9137gef247f05b2a8" version="1">Al golpear con este martillo a un objetivo &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Derribado&lt;/LSTag&gt;, infliges &lt;b&gt;[1]&lt;/b&gt; adicional.</content>
+</contentList>

@@ -4,7 +4,9 @@ INITSECTION
 
 KBSECTION
 
-// core never clears the opposite DB_ToT_Shop_Activated value, so clear first then write
+// core inserts DB_ToT_Shop_Activated per container without clearing the opposite,
+// so after a few toggles both (1) and (0) sit in the db and the shop never really
+// turns off. sysclear first, then write the single correct value.
 
 IF
 MessageBoxYesNoClosed((CHARACTER)_Player, "AMP_Settings018", 1)
