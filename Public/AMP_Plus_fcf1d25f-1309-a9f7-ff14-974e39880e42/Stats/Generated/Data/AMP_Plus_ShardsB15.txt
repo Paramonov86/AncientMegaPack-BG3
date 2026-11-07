@@ -6786,7 +6786,7 @@ new entry "AMP_Shard_Caldera_Passive"
 type "PassiveData"
 data "Properties" "IsHidden;OncePerAttack"
 data "StatsFunctorContext" "OnDamage"
-data "Conditions" "HasDamageDoneForType(DamageType.Fire)"
+data "Conditions" "Enemy() and HasDamageDoneForType(DamageType.Fire)"
 data "StatsFunctors" "GROUND:CreateSurface(1.5,2,Lava)"
 
 new entry "AMP_Arcanizer_Shard_Ring_74"
