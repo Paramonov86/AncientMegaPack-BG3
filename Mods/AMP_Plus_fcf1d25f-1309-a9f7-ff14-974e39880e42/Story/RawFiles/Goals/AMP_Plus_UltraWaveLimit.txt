@@ -1,0 +1,699 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+DB_AMP_Plus_UltraWaveLimit(0);
+DB_AMP_Plus_UltraWaveNext(1);
+DB_AMP_Plus_UltraWaveContext(0, 0);
+
+KBSECTION
+
+IF
+SavegameLoaded()
+AND
+NOT DB_AMP_Plus_UltraWaveLimit(_)
+THEN
+DB_AMP_Plus_UltraWaveLimit(0);
+
+IF
+SavegameLoaded()
+AND
+NOT DB_AMP_Plus_UltraWaveNext(_)
+THEN
+DB_AMP_Plus_UltraWaveNext(1);
+
+IF
+SavegameLoaded()
+THEN
+PROC_AMP_Plus_UltraWaveResetTransient();
+PROC_AMP_Plus_UltraWaveAdoptExisting();
+PROC_AMP_Plus_UltraWaveSyncOmen();
+
+IF
+LevelGameplayStarted(_, _)
+AND
+NOT DB_AMP_Plus_UltraWaveLimit(_)
+THEN
+DB_AMP_Plus_UltraWaveLimit(0);
+
+IF
+LevelGameplayStarted(_, _)
+AND
+NOT DB_AMP_Plus_UltraWaveNext(_)
+THEN
+DB_AMP_Plus_UltraWaveNext(1);
+
+IF
+LevelGameplayStarted(_, _)
+THEN
+PROC_AMP_Plus_UltraWaveResetTransient();
+PROC_AMP_Plus_UltraWaveAdoptExisting();
+PROC_AMP_Plus_UltraWaveSyncOmen();
+
+// Drain transient tables before restoring the empty build context after load.
+PROC
+PROC_AMP_Plus_UltraWaveResetTransient()
+THEN
+PROC_AMP_Plus_UltraWaveDrainContext();
+PROC_AMP_Plus_UltraWaveDrainParents();
+PROC_AMP_Plus_UltraWaveDrainReservations();
+DB_AMP_Plus_UltraWaveContext(0, 0);
+PROC_AMP_Plus_UltraWavePruneMembers();
+
+PROC
+PROC_AMP_Plus_UltraWaveDrainContext()
+AND
+DB_AMP_Plus_UltraWaveContext((INTEGER)_Frame, (INTEGER)_Wave)
+THEN
+NOT DB_AMP_Plus_UltraWaveContext(_Frame, _Wave);
+PROC_AMP_Plus_UltraWaveDrainContext();
+
+PROC
+PROC_AMP_Plus_UltraWaveDrainParents()
+AND
+DB_AMP_Plus_UltraWaveParent((INTEGER)_Frame, (INTEGER)_Parent, (INTEGER)_Wave)
+THEN
+NOT DB_AMP_Plus_UltraWaveParent(_Frame, _Parent, _Wave);
+PROC_AMP_Plus_UltraWaveDrainParents();
+
+PROC
+PROC_AMP_Plus_UltraWaveDrainReservations()
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_Wave, (CHARACTER)_Anchor)
+THEN
+NOT DB_AMP_Plus_UltraWaveReserved(_Wave, _Anchor);
+PROC_AMP_Plus_UltraWaveDrainReservations();
+
+// Collect first: deleting membership while enumerating it can skip rows.
+PROC
+PROC_AMP_Plus_UltraWavePruneMembers()
+AND
+DB_AMP_Plus_UltraWaveMember((CHARACTER)_Mob, (INTEGER)_Wave)
+AND
+IsDead(_Mob, 1)
+THEN
+DB_AMP_Plus_UltraWavePruneQ(_Mob, _Wave);
+
+PROC
+PROC_AMP_Plus_UltraWavePruneMembers()
+THEN
+PROC_AMP_Plus_UltraWaveDrainPruneQ();
+
+PROC
+PROC_AMP_Plus_UltraWaveDrainPruneQ()
+AND
+DB_AMP_Plus_UltraWavePruneQ((CHARACTER)_Mob, (INTEGER)_Wave)
+THEN
+NOT DB_AMP_Plus_UltraWavePruneQ(_Mob, _Wave);
+NOT DB_AMP_Plus_UltraWaveMember(_Mob, _Wave);
+PROC_AMP_Plus_UltraWaveDrainPruneQ();
+
+IF
+UsingSpell((CHARACTER)_Caster, "Shout_AMP_Plus_UltraWaveLimit", _, _, _)
+AND
+IsPlayer(_Caster, 1)
+AND
+GetHostCharacter(_Caster)
+AND
+NOT DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+DB_AMP_Plus_UltraWaveMenu(_Caster);
+OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_1");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_1", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 1);
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_1", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_2");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_2", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 2);
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_2", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_3");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_3", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 3);
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_3", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_4");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_4", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 4);
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_4", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_5");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_5", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 5);
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_5", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_Unlimited");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_Unlimited", 1)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+PROC_AMP_Plus_UltraWaveSetLimit(_Caster, 0);
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Caster, "AMP_Plus_UltraWaveLimit_Unlimited", 0)
+AND
+DB_AMP_Plus_UltraWaveMenu(_Caster)
+THEN
+OpenMessageBoxYesNo(_Caster, "AMP_Plus_UltraWaveLimit_1");
+
+PROC
+PROC_AMP_Plus_UltraWaveSetLimit((CHARACTER)_Caster, (INTEGER)_Limit)
+AND
+DB_AMP_Plus_UltraWaveLimit((INTEGER)_Old)
+THEN
+NOT DB_AMP_Plus_UltraWaveLimit(_Old);
+DB_AMP_Plus_UltraWaveLimit(_Limit);
+NOT DB_AMP_Plus_UltraWaveMenu(_Caster);
+PROC_AMP_Plus_UltraWaveAdoptExisting();
+PROC_AMP_Plus_UltraWaveSyncOmen();
+PROC_AMP_PlayModeEffect(_Caster);
+OpenMessageBox(_Caster, "AMP_Plus_UltraWaveLimit_Done");
+
+IF
+SavegameLoaded()
+AND
+DB_AMP_Plus_UltraWaveMenu((CHARACTER)_Caster)
+THEN
+NOT DB_AMP_Plus_UltraWaveMenu(_Caster);
+
+QRY
+QRY_AMP_Plus_UltraWaveAlive((INTEGER)_Wave, (GUIDSTRING)_Combat)
+AND
+DB_AMP_Plus_UltraWaveMember((CHARACTER)_Mob, _Wave)
+AND
+IsDead(_Mob, 0)
+AND
+IsInCombat(_Mob, 1)
+AND
+CombatGetGuidFor(_Mob, _Combat)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveAlive((INTEGER)_Wave, (GUIDSTRING)_Combat)
+AND
+DB_AMP_Plus_UltraWaveReserved(_Wave, _)
+AND
+DB_AMP_Plus_UltraWaveCombat(_Wave, _Combat)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 1)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 1)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 2)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W2, _Combat)
+AND
+_W2 > _W1
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W2, _Combat)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 2)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W2, _Anchor)
+AND
+_W2 > _W1
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 3)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W2, _Combat)
+AND
+_W2 > _W1
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W2, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W3, _Combat)
+AND
+_W3 > _W2
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W3, _Combat)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 3)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W2, _Anchor)
+AND
+_W2 > _W1
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W3, _Anchor)
+AND
+_W3 > _W2
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 4)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W2, _Combat)
+AND
+_W2 > _W1
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W2, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W3, _Combat)
+AND
+_W3 > _W2
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W3, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W4, _Combat)
+AND
+_W4 > _W3
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W4, _Combat)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 4)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W2, _Anchor)
+AND
+_W2 > _W1
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W3, _Anchor)
+AND
+_W3 > _W2
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W4, _Anchor)
+AND
+_W4 > _W3
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveCountAtLeast((GUIDSTRING)_Combat, 5)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W1, _Combat)
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W1, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W2, _Combat)
+AND
+_W2 > _W1
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W2, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W3, _Combat)
+AND
+_W3 > _W2
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W3, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W4, _Combat)
+AND
+_W4 > _W3
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W4, _Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_W5, _Combat)
+AND
+_W5 > _W4
+AND
+QRY_AMP_Plus_UltraWaveAlive(_W5, _Combat)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveReservedAtLeast((CHARACTER)_Anchor, 5)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W1, _Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W2, _Anchor)
+AND
+_W2 > _W1
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W3, _Anchor)
+AND
+_W3 > _W2
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W4, _Anchor)
+AND
+_W4 > _W3
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_W5, _Anchor)
+AND
+_W5 > _W4
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveLimitReached((CHARACTER)_Anchor)
+AND
+DB_AMP_Plus_UltraWaveLimit((INTEGER)_Limit)
+AND
+_Limit > 0
+AND
+CombatGetGuidFor(_Anchor, (GUIDSTRING)_Combat)
+AND
+QRY_AMP_Plus_UltraWaveCountAtLeast(_Combat, _Limit)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveLimitReached((CHARACTER)_Anchor)
+AND
+DB_AMP_Plus_UltraWaveLimit((INTEGER)_Limit)
+AND
+_Limit > 0
+AND
+QRY_AMP_Plus_UltraWaveReservedAtLeast(_Anchor, _Limit)
+THEN
+DB_NOOP(1);
+
+PROC
+PROC_AMP_Plus_UltraWaveBegin((CHARACTER)_Anchor)
+AND
+DB_AMP_Plus_UltraWaveNext((INTEGER)_Wave)
+AND
+IntegerSum(_Wave, 1, (INTEGER)_Next)
+AND
+DB_AMP_Plus_UltraWaveContext((INTEGER)_Parent, (INTEGER)_ParentWave)
+THEN
+NOT DB_AMP_Plus_UltraWaveNext(_Wave);
+DB_AMP_Plus_UltraWaveNext(_Next);
+NOT DB_AMP_Plus_UltraWaveContext(_Parent, _ParentWave);
+DB_AMP_Plus_UltraWaveParent(_Wave, _Parent, _ParentWave);
+DB_AMP_Plus_UltraWaveContext(_Wave, _Wave);
+DB_AMP_Plus_UltraWaveReserved(_Wave, _Anchor);
+PROC_AMP_Plus_UltraWaveSyncCombat(_Anchor, _Wave);
+RealtimeObjectTimerLaunch(_Anchor, "AMP_Plus_UltraWaveJoin", 1000);
+
+PROC
+PROC_AMP_Plus_UltraWaveEnd()
+AND
+DB_AMP_Plus_UltraWaveContext((INTEGER)_Frame, (INTEGER)_Wave)
+AND
+DB_AMP_Plus_UltraWaveParent(_Frame, (INTEGER)_Parent, (INTEGER)_ParentWave)
+THEN
+NOT DB_AMP_Plus_UltraWaveContext(_Frame, _Wave);
+NOT DB_AMP_Plus_UltraWaveParent(_Frame, _Parent, _ParentWave);
+DB_AMP_Plus_UltraWaveContext(_Parent, _ParentWave);
+
+IF
+ObjectTimerFinished((CHARACTER)_Anchor, "AMP_Plus_UltraWaveJoin")
+THEN
+PROC_AMP_Plus_UltraWaveRelease(_Anchor);
+
+PROC
+PROC_AMP_Plus_UltraWaveRelease((CHARACTER)_Anchor)
+AND
+DB_AMP_Plus_UltraWaveReserved((INTEGER)_Wave, _Anchor)
+THEN
+NOT DB_AMP_Plus_UltraWaveReserved(_Wave, _Anchor);
+PROC_AMP_Plus_UltraWaveRelease(_Anchor);
+
+IF
+DB_AMP_MirrorSupport_Spawned((CHARACTER)_Mob, _)
+THEN
+PROC_AMP_Plus_UltraWaveRegister(_Mob);
+
+PROC
+PROC_AMP_Plus_UltraWaveRegister((CHARACTER)_Mob)
+AND
+NOT DB_AMP_Plus_UltraWaveMember(_Mob, _)
+AND
+DB_AMP_Plus_UltraWaveContext(_, (INTEGER)_Wave)
+AND
+_Wave > 0
+THEN
+DB_AMP_Plus_UltraWaveMember(_Mob, _Wave);
+PROC_AMP_Plus_UltraWaveSyncCombat(_Mob, _Wave);
+
+// Unknown pre-update batches are counted conservatively, one surviving actor per wave.
+PROC
+PROC_AMP_Plus_UltraWaveRegister((CHARACTER)_Mob)
+AND
+NOT DB_AMP_Plus_UltraWaveMember(_Mob, _)
+AND
+DB_AMP_Plus_UltraWaveContext(0, 0)
+AND
+DB_AMP_Plus_UltraWaveNext((INTEGER)_Wave)
+AND
+IntegerSum(_Wave, 1, (INTEGER)_Next)
+THEN
+NOT DB_AMP_Plus_UltraWaveNext(_Wave);
+DB_AMP_Plus_UltraWaveNext(_Next);
+DB_AMP_Plus_UltraWaveMember(_Mob, _Wave);
+PROC_AMP_Plus_UltraWaveSyncCombat(_Mob, _Wave);
+
+PROC
+PROC_AMP_Plus_UltraWaveSyncCombat((CHARACTER)_Mob, (INTEGER)_Wave)
+AND
+CombatGetGuidFor(_Mob, (GUIDSTRING)_Combat)
+THEN
+DB_AMP_Plus_UltraWaveCombat(_Wave, _Combat);
+
+IF
+EnteredCombat((CHARACTER)_Mob, (GUIDSTRING)_Combat)
+AND
+DB_AMP_Plus_UltraWaveMember(_Mob, (INTEGER)_Wave)
+THEN
+DB_AMP_Plus_UltraWaveCombat(_Wave, _Combat);
+
+PROC
+PROC_AMP_Plus_UltraWaveCopy((CHARACTER)_Old, (CHARACTER)_New)
+AND
+DB_AMP_Plus_UltraWaveMember(_Old, (INTEGER)_Wave)
+AND
+NOT DB_AMP_Plus_UltraWaveMember(_New, _)
+THEN
+DB_AMP_Plus_UltraWaveMember(_New, _Wave);
+PROC_AMP_Plus_UltraWaveSyncCombat(_New, _Wave);
+
+IF
+DB_AMP_Plus_Undying_Blade((CHARACTER)_Blade)
+THEN
+PROC_AMP_Plus_UltraWaveRegister(_Blade);
+
+IF
+DB_AMP_Plus_Undying_Crab((CHARACTER)_Crab, (CHARACTER)_Blade)
+THEN
+PROC_AMP_Plus_UltraWaveCopy(_Blade, _Crab);
+PROC_AMP_Plus_UltraWaveRegister(_Crab);
+
+PROC
+PROC_AMP_Plus_UltraWaveAdoptExisting()
+AND
+DB_AMP_Plus_UltraMob((CHARACTER)_Mob, _)
+AND
+IsDead(_Mob, 0)
+THEN
+PROC_AMP_Plus_UltraWaveRegister(_Mob);
+PROC_AMP_Plus_UltraWaveRefreshMember(_Mob);
+
+PROC
+PROC_AMP_Plus_UltraWaveAdoptExisting()
+AND
+DB_AMP_Plus_Undying_Blade((CHARACTER)_Mob)
+AND
+IsDead(_Mob, 0)
+THEN
+PROC_AMP_Plus_UltraWaveRegister(_Mob);
+PROC_AMP_Plus_UltraWaveRefreshMember(_Mob);
+
+PROC
+PROC_AMP_Plus_UltraWaveAdoptExisting()
+AND
+DB_AMP_Plus_Undying_Crab((CHARACTER)_Mob, (CHARACTER)_Blade)
+AND
+IsDead(_Mob, 0)
+THEN
+PROC_AMP_Plus_UltraWaveCopy(_Blade, _Mob);
+PROC_AMP_Plus_UltraWaveRegister(_Mob);
+PROC_AMP_Plus_UltraWaveRefreshMember(_Mob);
+
+PROC
+PROC_AMP_Plus_UltraWaveRefreshMember((CHARACTER)_Mob)
+AND
+DB_AMP_Plus_UltraWaveMember(_Mob, (INTEGER)_Wave)
+THEN
+PROC_AMP_Plus_UltraWaveSyncCombat(_Mob, _Wave);
+
+IF
+CombatEnded((GUIDSTRING)_Combat)
+THEN
+PROC_AMP_Plus_UltraWaveClearCombat(_Combat);
+
+PROC
+PROC_AMP_Plus_UltraWaveClearCombat((GUIDSTRING)_Combat)
+AND
+DB_AMP_Plus_UltraWaveCombat((INTEGER)_Wave, _Combat)
+THEN
+NOT DB_AMP_Plus_UltraWaveCombat(_Wave, _Combat);
+PROC_AMP_Plus_UltraWaveClearCombat(_Combat);
+
+// Route the original odds through a tracked batch even while the cap is disabled.
+PROC
+PROC_AMP_Plus_UltraWaveSyncOmen()
+AND
+DB_AMP_RareOmen_Odds((INTEGER)_Odds)
+THEN
+NOT DB_AMP_RareOmen_Odds(_Odds);
+DB_AMP_Plus_UltraWaveOmenOdds(_Odds);
+
+PROC
+PROC_AMP_RareOmen_TryConjure((CHARACTER)_Boss)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
+AND
+DB_AMP_Plus_UltraWaveOmenOdds((INTEGER)_Odds)
+AND
+Random(_Odds, (INTEGER)_Roll)
+AND
+_Roll == 0
+THEN
+PROC_AMP_Plus_UltraWaveBegin(_Boss);
+PROC_AMP_RareOmen_Spawn(_Boss);
+PROC_AMP_Plus_UltraWaveEnd();
+
+PROC
+PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
+THEN
+PROC_AMP_Plus_UltraWaveBegin(_Boss);
+PROC_AMP_Plus_MirrorSpawnAdmitted(_Boss);
+PROC_AMP_Plus_UltraWaveEnd();
+
+PROC
+PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Host)
+THEN
+PROC_AMP_Plus_UltraWaveBegin(_Host);
+PROC_AMP_Plus_UltraSpawnAdmitted(_Host, _HX, _HY, _HZ);
+PROC_AMP_Plus_UltraWaveEnd();
+
+PROC
+PROC_AMP_Plus_UltraWaveForget((CHARACTER)_Mob)
+AND
+DB_AMP_Plus_UltraWaveMember(_Mob, (INTEGER)_Wave)
+THEN
+NOT DB_AMP_Plus_UltraWaveMember(_Mob, _Wave);
+
+// Unlimited retains the original exact-turn check; a capped wave can wait for room.
+QRY
+QRY_AMP_Plus_UltraWaveDue((INTEGER)_Turn, (INTEGER)_Due)
+AND
+DB_AMP_Plus_UltraWaveLimit(0)
+AND
+_Turn == _Due
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_AMP_Plus_UltraWaveDue((INTEGER)_Turn, (INTEGER)_Due)
+AND
+DB_AMP_Plus_UltraWaveLimit((INTEGER)_Limit)
+AND
+_Limit > 0
+AND
+_Turn >= _Due
+THEN
+DB_NOOP(1);
+
+// Keep a transforming wave occupied until its replacement has entered combat.
+PROC
+PROC_AMP_Plus_UltraWaveReserveReplacement((CHARACTER)_Old)
+AND
+DB_AMP_Plus_UltraWaveMember(_Old, (INTEGER)_Wave)
+AND
+GetHostCharacter((CHARACTER)_Host)
+THEN
+DB_AMP_Plus_UltraWaveReserved(_Wave, _Host);
+PROC_AMP_Plus_UltraWaveSyncCombat(_Old, _Wave);
+RealtimeObjectTimerLaunch(_Host, "AMP_Plus_UltraWaveJoin", 1000);
+
+EXITSECTION
+
+ENDEXITSECTION

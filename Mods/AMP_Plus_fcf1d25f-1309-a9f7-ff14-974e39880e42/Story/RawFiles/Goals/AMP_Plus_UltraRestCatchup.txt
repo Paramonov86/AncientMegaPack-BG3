@@ -110,6 +110,8 @@ AND
 DB_AMP_MirrorPool_Size((INTEGER)_Size)
 AND
 _Size > 0
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Host)
 THEN
 NOT DB_AMP_Plus_UltraRestOwed(1);
 PROC_AMP_Plus_UltraSpawnSized(_Host, _HX, _HY, _HZ);
@@ -156,6 +158,21 @@ THEN
 PROC_AMP_Plus_UltraRestArm(_Host);
 
 // batch size comes from AMP_Plus_UltraBossCount.txt, camp state from AMP_Plus_CampSafeZone.txt
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, "AMP_Plus_UltraRestAmbush")
+AND
+GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_UltraRestOwed(1)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+IsDead(_Host, 0)
+AND
+QRY_AMP_Plus_UltraWaveLimitReached(_Host)
+THEN
+PROC_AMP_Plus_UltraRestArm(_Host);
 
 EXITSECTION
 ENDEXITSECTION

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h7d5891e2gd28ag489bg9179gbafa07ad3c2c" version="1">Лимит одновременных волн ULTRA</content>
+	<content contentuid="h285cb17ag0364g425bga414g7707a9c6e779" version="1">Установите максимальное число автоматических волн подкреплений ULTRA, одновременно активных в одном бою: от 1 до 5 или Без ограничений (по умолчанию). Волна — это группа, появившаяся за один раз, а не количество боссов. Она остаётся активной, пока хотя бы один её участник жив и участвует в этом бою. Общее число последовательных волн в одном бою не ограничивается.</content>
+	<content contentuid="h106d43d2gcc83g4d4fg82b3g92ed1dfe80de" version="1">&lt;b&gt;Лимит одновременных волн ULTRA: 1&lt;/b&gt;&lt;br&gt;&lt;br&gt;«Да» выбирает этот лимит. «Нет» показывает следующий вариант.</content>
+	<content contentuid="h59bdf45fgb714g4644ga2d6ge5c5700030ae" version="1">&lt;b&gt;Лимит одновременных волн ULTRA: 2&lt;/b&gt;&lt;br&gt;&lt;br&gt;«Да» выбирает этот лимит. «Нет» показывает следующий вариант.</content>
+	<content contentuid="h1ce0c0aagea21g461cg9e2ag49869f92a024" version="1">&lt;b&gt;Лимит одновременных волн ULTRA: 3&lt;/b&gt;&lt;br&gt;&lt;br&gt;«Да» выбирает этот лимит. «Нет» показывает следующий вариант.</content>
+	<content contentuid="hb392be61g523bg4602g921dge05696c7f61f" version="1">&lt;b&gt;Лимит одновременных волн ULTRA: 4&lt;/b&gt;&lt;br&gt;&lt;br&gt;«Да» выбирает этот лимит. «Нет» показывает следующий вариант.</content>
+	<content contentuid="ha61402c9g773eg4d14g9fe7g2954eb371acb" version="1">&lt;b&gt;Лимит одновременных волн ULTRA: 5&lt;/b&gt;&lt;br&gt;&lt;br&gt;«Да» выбирает этот лимит. «Нет» показывает следующий вариант.</content>
+	<content contentuid="h407ca525g365eg474bg9bb5g2819f2249486" version="1">&lt;b&gt;Лимит одновременных волн ULTRA: Без ограничений&lt;/b&gt;&lt;br&gt;&lt;br&gt;«Да» выбирает вариант «Без ограничений». «Нет» возвращает к 1.</content>
+	<content contentuid="h989c751cg5297g4b63gb7f4g19186ab514a9" version="1">Лимит одновременных волн ULTRA обновлён.</content>
+</contentList>

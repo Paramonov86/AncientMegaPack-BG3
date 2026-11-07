@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <save>
 	<version major="4" minor="3" revision="0" build="302" lslib_meta="v1,bswap_guids" />
 	<region id="TranslatedStringKeys">
@@ -728,6 +728,55 @@
 				<node id="TranslatedStringKey">
 					<attribute id="Content" type="TranslatedString" handle="h3fc08e7eg2c53g472fg9053gdec403b1850d" version="1" />
 					<attribute id="UUID" type="FixedString" value="AMP_Plus_PureMind_Frozen" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Content" type="TranslatedString" handle="h106d43d2gcc83g4d4fg82b3g92ed1dfe80de" version="1" />
+					<attribute id="UUID" type="FixedString" value="AMP_Plus_UltraWaveLimit_1" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Content" type="TranslatedString" handle="h59bdf45fgb714g4644ga2d6ge5c5700030ae" version="1" />
+					<attribute id="UUID" type="FixedString" value="AMP_Plus_UltraWaveLimit_2" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Content" type="TranslatedString" handle="h1ce0c0aagea21g461cg9e2ag49869f92a024" version="1" />
+					<attribute id="UUID" type="FixedString" value="AMP_Plus_UltraWaveLimit_3" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Content" type="TranslatedString" handle="hb392be61g523bg4602g921dge05696c7f61f" version="1" />
+					<attribute id="UUID" type="FixedString" value="AMP_Plus_UltraWaveLimit_4" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Content" type="TranslatedString" handle="ha61402c9g773eg4d14g9fe7g2954eb371acb" version="1" />
+					<attribute id="UUID" type="FixedString" value="AMP_Plus_UltraWaveLimit_5" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Content" type="TranslatedString" handle="h407ca525g365eg474bg9bb5g2819f2249486" version="1" />
+					<attribute id="UUID" type="FixedString" value="AMP_Plus_UltraWaveLimit_Unlimited" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Content" type="TranslatedString" handle="h989c751cg5297g4b63gb7f4g19186ab514a9" version="1" />
+					<attribute id="UUID" type="FixedString" value="AMP_Plus_UltraWaveLimit_Done" />
 					<attribute id="Speaker" type="FixedString" value="" />
 					<attribute id="ExtraData" type="LSString" value="" />
 					<attribute id="Stub" type="bool" value="True" />

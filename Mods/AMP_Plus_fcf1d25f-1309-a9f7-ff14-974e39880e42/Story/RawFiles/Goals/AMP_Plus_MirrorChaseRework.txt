@@ -154,6 +154,8 @@ AND
 NOT QRY_AMP_Plus_CampGuard()
 AND
 DB_AMP_Plus_ChasePending((GUIDSTRING)_Template)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Host)
 THEN
 DB_AMP_Plus_ChaseSpawnQ(_Template);
 
@@ -161,8 +163,13 @@ IF
 ObjectTimerFinished((CHARACTER)_Host, "AMP_Plus_ChaseBreather")
 AND
 GetHostCharacter(_Host)
+AND
+DB_AMP_Plus_ChaseSpawnQ(_)
 THEN
+PROC_AMP_Plus_UltraWaveBegin(_Host);
 PROC_AMP_Plus_ChaseDrainSpawnQ(_Host);
+
+PROC_AMP_Plus_UltraWaveEnd();
 
 PROC
 PROC_AMP_Plus_ChaseDrainSpawnQ((CHARACTER)_Host)
@@ -481,6 +488,19 @@ AND
 _Roll >= 99
 THEN
 TemplateAddTo(AMP_CelestialCoin_4dbb1100-ae2a-4107-b69a-099285172cd1, _Host, 1, 1);
+
+IF
+ObjectTimerFinished((CHARACTER)_Host, "AMP_Plus_ChaseBreather")
+AND
+GetHostCharacter(_Host)
+AND
+NOT QRY_AMP_Plus_CampGuard()
+AND
+DB_AMP_Plus_ChasePending(_)
+AND
+QRY_AMP_Plus_UltraWaveLimitReached(_Host)
+THEN
+PROC_AMP_Plus_ChaseArmShort(_Host);
 
 EXITSECTION
 

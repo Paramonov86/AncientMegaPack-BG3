@@ -1,0 +1,78 @@
+ULTRA concurrent wave limit
+
+Setting: ULTRA > ULTRA Concurrent Wave Limit.
+The campaign host chooses 1, 2, 3, 4, 5, or Unlimited through the existing
+Yes/No message boxes. Yes selects the displayed value; No advances to the
+next value. Unlimited is the default, and the choice is saved.
+
+A wave is one automatic reinforcement batch, including all its spawned bosses.
+The cap applies separately to each combat. A wave occupies one slot while any
+member is alive and participating in that combat. The existing boss-count
+setting still controls batch size. Lowering the limit leaves existing actors
+in place and blocks new batches until there is room; it does not limit the
+number of successive waves over the whole combat.
+
+The cap covers sized ULTRA and mirror batches, mirror redirection, turtle
+fallback, MAX owed waves, rest catch-up, chase returns, Unbelievable due waves,
+quick-kill reinforcements and Rare Omen. Undying shell, blade and crab forms
+retain their originating wave. Brief reservations cover creation/combat-entry
+gaps and form replacement.
+
+Blocked owed, rest and chase waves stay pending through their existing retry
+mechanisms. Unbelievable due waves can retry under a finite cap; Unlimited
+keeps the original exact-turn requirement. Quick-kill and Rare Omen checks
+remain instantaneous opportunities rather than accumulating a backlog.
+Manual/debug summons are not admission-controlled by this setting.
+
+Existing saves
+
+A missing setting initializes to Unlimited. Known wave memberships persist
+through reloads; transient construction state and reservations are cleared.
+Original batch boundaries cannot be reconstructed for enemies spawned before
+the feature was installed. Each surviving untracked actor is conservatively
+counted as a separate wave; a known Undying blade/crab pair shares one wave.
+Use a new combat when checking exact batch counts.
+
+Changelog and icon
+
+ultra-wave-limit-changelog.tsv contains all 170 changed entries, with
+before/after content, languages and source paths. It compares this contribution
+with GitHub main at 676637557bfce3ef99c23e3b4c452956c05d18f4. Osiris rule bodies
+are shown with comments and blank lines omitted; XML indentation is normalized.
+The table covers rule heads and overloads, initial state, SpellData, message
+mappings, all 81 localized strings and the new icon's assets and registrations.
+The nine locales are English, French, Brazilian Portuguese, Simplified Chinese,
+Traditional Chinese, German, Italian, Korean and Russian.
+
+The icon's editable PNG and prompt are in assets/ultra-wave-limit-icon.png and
+assets/ultra-wave-limit-icon-prompt.txt. Runtime assets include a dedicated
+atlas plus controller and tooltip textures, registered under AMP_Plus_UltraWaveLimit.
+
+Validation
+
+The contributor and a community tester used the feature in-game; the tester
+confirmed the wave limit works. The shared ULTRA-only test build was 1.14.2.67,
+based on official AMP Plus 1.14.2.65. These reports precede the new icon; its
+in-game rendering has not yet been confirmed:
+https://discord.com/channels/1377301324252577925/1413388026851364964/1565082368283246592
+
+The ULTRA-only test build was based on official AMP Plus 1.14.2.65, mod.io file
+8389784. Native Toolkit compilation completed with zero errors and warnings.
+Independent LSLib readback compared all 1,356 compiled goals: 1,346 untouched
+goals matched the official release, exactly nine existing ULTRA goals changed,
+and one new wave-limit goal was added. The raw generated source and compiled
+story were checked for consistency. The PR contains source and UI resources;
+compiled story and PAK files are built separately.
+
+The source-driven mocked-engine harness passed 16 scenarios and 426 assertions,
+covering finite and Unlimited settings, whole batches, separate combats,
+reservations, nested Omen, form replacement, legacy adoption, reload cleanup,
+menu selection and timing. Its engine predicates are mocked. The compatibility
+wrapper also preserves the existing four-argument Undying spawn signature.
+Localization/resource checks round-tripped all 81 strings and preserved all
+105 official message records alongside seven new mappings.
+
+GitHub main currently lags the released mod. The feature was also applied to
+official 1.14.2.65 while preserving that release's enable checks, disabled chase
+cleanup and Undying shell-rise timers. Reported in-game success does not imply
+coverage of every harness scenario or every translation.

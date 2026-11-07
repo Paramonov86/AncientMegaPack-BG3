@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h7d5891e2gd28ag489bg9179gbafa07ad3c2c" version="1">ULTRA 동시 증원 횟수 제한</content>
+	<content contentuid="h285cb17ag0364g425bga414g7707a9c6e779" version="1">같은 전투에서 동시에 활성화될 수 있는 자동 ULTRA 증원을 1~5회 또는 무제한(기본값)으로 설정합니다. 증원 1회는 한 번에 생성된 병력 집단을 뜻하며, 우두머리 수를 뜻하지 않습니다. 각 증원은 구성원 중 한 명이라도 살아서 해당 전투에 참여하고 있는 동안 활성 상태로 간주됩니다. 한 전투에서 연속해서 발생하는 증원의 총횟수는 제한하지 않습니다.</content>
+	<content contentuid="h106d43d2gcc83g4d4fg82b3g92ed1dfe80de" version="1">&lt;b&gt;ULTRA 동시 증원 횟수 제한: 1&lt;/b&gt;&lt;br&gt;&lt;br&gt;예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.</content>
+	<content contentuid="h59bdf45fgb714g4644ga2d6ge5c5700030ae" version="1">&lt;b&gt;ULTRA 동시 증원 횟수 제한: 2&lt;/b&gt;&lt;br&gt;&lt;br&gt;예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.</content>
+	<content contentuid="h1ce0c0aagea21g461cg9e2ag49869f92a024" version="1">&lt;b&gt;ULTRA 동시 증원 횟수 제한: 3&lt;/b&gt;&lt;br&gt;&lt;br&gt;예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.</content>
+	<content contentuid="hb392be61g523bg4602g921dge05696c7f61f" version="1">&lt;b&gt;ULTRA 동시 증원 횟수 제한: 4&lt;/b&gt;&lt;br&gt;&lt;br&gt;예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.</content>
+	<content contentuid="ha61402c9g773eg4d14g9fe7g2954eb371acb" version="1">&lt;b&gt;ULTRA 동시 증원 횟수 제한: 5&lt;/b&gt;&lt;br&gt;&lt;br&gt;예를 선택하면 이 제한을 적용합니다. 아니요를 선택하면 다음 옵션을 표시합니다.</content>
+	<content contentuid="h407ca525g365eg474bg9bb5g2819f2249486" version="1">&lt;b&gt;ULTRA 동시 증원 횟수 제한: 무제한&lt;/b&gt;&lt;br&gt;&lt;br&gt;예를 선택하면 무제한으로 설정합니다. 아니요를 선택하면 1로 돌아갑니다.</content>
+	<content contentuid="h989c751cg5297g4b63gb7f4g19186ab514a9" version="1">ULTRA 동시 증원 횟수 제한을 변경했습니다.</content>
+</contentList>

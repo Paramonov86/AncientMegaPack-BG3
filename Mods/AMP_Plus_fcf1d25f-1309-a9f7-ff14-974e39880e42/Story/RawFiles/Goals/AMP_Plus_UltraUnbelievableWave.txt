@@ -43,7 +43,9 @@ DB_AMP_Plus_UnbWave_At(_C, _At);
 PROC
 PROC_AMP_Plus_UnbWave_Check((GUIDSTRING)_C, (CHARACTER)_Boss, (INTEGER)_N)
 AND
-DB_AMP_Plus_UnbWave_At(_C, _N)
+DB_AMP_Plus_UnbWave_At(_C, (INTEGER)_At)
+AND
+QRY_AMP_Plus_UltraWaveDue(_N, _At)
 AND
 DB_AMP_Plus_SpawnIntensity_Freq(3)
 AND
@@ -64,6 +66,8 @@ AND
 DB_AMP_MirrorPool_Size((INTEGER)_PoolSize)
 AND
 _PoolSize > 0
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
 THEN
 DB_AMP_Plus_MirrorFiredCombat(_C);
 PROC_AMP_Plus_MirrorSpawnSized(_Boss);

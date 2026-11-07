@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h7d5891e2gd28ag489bg9179gbafa07ad3c2c" version="1">ULTRA Concurrent Wave Limit</content>
+	<content contentuid="h285cb17ag0364g425bga414g7707a9c6e779" version="1">Set the maximum number of automatic ULTRA reinforcement waves active in the same combat: 1–5 or Unlimited (default). A wave is one spawned batch, not a number of bosses. It remains active while at least one of its members is alive and in that combat. This does not limit the total number of successive waves in a combat.</content>
+	<content contentuid="h106d43d2gcc83g4d4fg82b3g92ed1dfe80de" version="1">&lt;b&gt;ULTRA Concurrent Wave Limit: 1&lt;/b&gt;&lt;br&gt;&lt;br&gt;Yes selects this limit. No shows the next option.</content>
+	<content contentuid="h59bdf45fgb714g4644ga2d6ge5c5700030ae" version="1">&lt;b&gt;ULTRA Concurrent Wave Limit: 2&lt;/b&gt;&lt;br&gt;&lt;br&gt;Yes selects this limit. No shows the next option.</content>
+	<content contentuid="h1ce0c0aagea21g461cg9e2ag49869f92a024" version="1">&lt;b&gt;ULTRA Concurrent Wave Limit: 3&lt;/b&gt;&lt;br&gt;&lt;br&gt;Yes selects this limit. No shows the next option.</content>
+	<content contentuid="hb392be61g523bg4602g921dge05696c7f61f" version="1">&lt;b&gt;ULTRA Concurrent Wave Limit: 4&lt;/b&gt;&lt;br&gt;&lt;br&gt;Yes selects this limit. No shows the next option.</content>
+	<content contentuid="ha61402c9g773eg4d14g9fe7g2954eb371acb" version="1">&lt;b&gt;ULTRA Concurrent Wave Limit: 5&lt;/b&gt;&lt;br&gt;&lt;br&gt;Yes selects this limit. No shows the next option.</content>
+	<content contentuid="h407ca525g365eg474bg9bb5g2819f2249486" version="1">&lt;b&gt;ULTRA Concurrent Wave Limit: Unlimited&lt;/b&gt;&lt;br&gt;&lt;br&gt;Yes selects Unlimited. No returns to 1.</content>
+	<content contentuid="h989c751cg5297g4b63gb7f4g19186ab514a9" version="1">ULTRA concurrent wave limit updated.</content>
+</contentList>

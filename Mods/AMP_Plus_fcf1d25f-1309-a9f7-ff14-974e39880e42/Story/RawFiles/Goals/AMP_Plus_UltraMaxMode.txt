@@ -108,6 +108,8 @@ AND
 DB_AMP_Plus_UMax_WaveOwed((CHARACTER)_Boss, _C)
 AND
 IsDead(_Boss, 0)
+AND
+NOT QRY_AMP_Plus_UltraWaveLimitReached(_Boss)
 THEN
 NOT DB_AMP_Plus_UMax_WaveOwed(_Boss, _C);
 DB_AMP_Plus_UMax_WaveDone(_Boss, _C);

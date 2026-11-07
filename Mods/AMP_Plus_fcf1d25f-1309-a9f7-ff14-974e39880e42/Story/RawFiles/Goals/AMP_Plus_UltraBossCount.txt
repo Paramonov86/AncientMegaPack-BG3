@@ -146,7 +146,7 @@ DB_AMP_Plus_UltraSizeTable(3, 5, 999, 16, 999, 14);
 // three ordered rules, each resolves before the next reads the count
 
 PROC
-PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
 AND
 DB_AMP_Plus_PCAcc((INTEGER)_Old)
 THEN
@@ -154,20 +154,20 @@ NOT DB_AMP_Plus_PCAcc(_Old);
 DB_AMP_Plus_PCAcc(0);
 
 PROC
-PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
 THEN
 PROC_AMP_Plus_CountPlayers();
 
 // the hardest settings name a quarry before the ambush is placed
 PROC
-PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
 AND
 NOT QRY_AMP_Plus_CampGuard()
 THEN
 PROC_AMP_Plus_UMax_MarkPick(_Host);
 
 PROC
-PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
 AND
 NOT QRY_AMP_Plus_CampGuard()
 AND
@@ -192,7 +192,7 @@ THEN
 PROC_AMP_Plus_UltraSpawnN(0, _N, _Host, _HX, _HY, _HZ);
 
 PROC
-PROC_AMP_Plus_UltraSpawnSized((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
+PROC_AMP_Plus_UltraSpawnAdmitted((CHARACTER)_Host, (REAL)_HX, (REAL)_HY, (REAL)_HZ)
 AND
 NOT QRY_AMP_Plus_CampGuard()
 AND
@@ -296,7 +296,7 @@ THEN
 PROC_AMP_Plus_UltraSpawnN(_K, _N, _Host, _HX, _HY, _HZ);
 
 PROC
-PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+PROC_AMP_Plus_MirrorSpawnAdmitted((CHARACTER)_Boss)
 AND
 DB_AMP_Plus_PCAcc((INTEGER)_Old)
 THEN
@@ -304,17 +304,17 @@ NOT DB_AMP_Plus_PCAcc(_Old);
 DB_AMP_Plus_PCAcc(0);
 
 PROC
-PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+PROC_AMP_Plus_MirrorSpawnAdmitted((CHARACTER)_Boss)
 THEN
 PROC_AMP_Plus_CountPlayers();
 
 PROC
-PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+PROC_AMP_Plus_MirrorSpawnAdmitted((CHARACTER)_Boss)
 THEN
 PROC_AMP_Plus_TgtIndexBuild(_Boss);
 
 PROC
-PROC_AMP_Plus_MirrorSpawnSized((CHARACTER)_Boss)
+PROC_AMP_Plus_MirrorSpawnAdmitted((CHARACTER)_Boss)
 AND
 NOT QRY_AMP_Plus_CampGuard()
 AND
