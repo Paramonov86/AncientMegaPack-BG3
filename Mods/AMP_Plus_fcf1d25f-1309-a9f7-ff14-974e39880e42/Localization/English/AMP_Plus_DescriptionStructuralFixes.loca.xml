@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+  <content contentuid="ha466ba09g8878g40e3gbf1dgfbf8d7b820e0" version="1">&lt;b&gt;+[1]&lt;/b&gt; to &lt;LSTag Tooltip="ArmourClass"&gt;AC&lt;/LSTag&gt;. This creature's &lt;b&gt;weight and size class&lt;/b&gt; are reduced by &lt;b&gt;[3]&lt;/b&gt;.&lt;br&gt;&lt;br&gt;After this effect ends, &lt;LSTag Type="Status" Tooltip="WEAPON62_2"&gt;Shrinkage II&lt;/LSTag&gt; is inflicted for &lt;b&gt;[4]&lt;/b&gt; turn.</content>
+  <content contentuid="hf64ba1a8gedecg4714gbe02g71eb3a1d6c7e" version="1">Creatures that attack you while &lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;Off-Balanced&lt;/LSTag&gt; are &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stunned&lt;/LSTag&gt; for &lt;b&gt;[1]&lt;/b&gt; turn.</content>
+</contentList>

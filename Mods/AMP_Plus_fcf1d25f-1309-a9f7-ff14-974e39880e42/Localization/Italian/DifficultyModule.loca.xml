@@ -494,7 +494,7 @@
     <content contentuid="hec8f4742g44aag468agb068g65f4831aef4e" version="1">Indifferente</content>
     <content contentuid="h0f7cb951g6fa2g417cgb768g0264f186833b" version="1">Nulla su questo campo di battaglia merita la piena attenzione di Zephra. La Figlia del Vento non può essere resa &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Spaventata&lt;/LSTag&gt;; paura e minacce le scivolano addosso come pioggia su tela cerata.</content>
     <content contentuid="h7fe135bbg4bb8g4796ga1b9gf48482a0f49e" version="1">Vento in Poppa</content>
-    <content contentuid="h1001a673gf093g49aeg9743g562c32decfe2" version="1">Il vento si raccoglie alle spalle della Figlia del Vento. Il suo prossimo colpo va a segno come &lt;LSTag Tooltip="CriticalHit"&gt;Colpo Critico&lt;/LSTag&gt; garantito.</content>
+    <content contentuid="h1001a673gf093g49aeg9743g562c32decfe2" version="1">Il vento si raccoglie alle spalle della Portata dal vento. Fino alla fine del suo turno ha &lt;LSTag Tooltip="Advantage"&gt;Vantaggio&lt;/LSTag&gt; ai &lt;LSTag Tooltip="AttackRoll"&gt;tiri per colpire&lt;/LSTag&gt;, e ogni tiro riuscito è un &lt;LSTag Tooltip="CriticalHit"&gt;colpo critico&lt;/LSTag&gt;.</content>
     <content contentuid="h07681e0ag0a90g427agba04g2c49fc02d5fd" version="1">Orfana di una Guerra Dimenticata</content>
     <content contentuid="heb8d7351g1917g44e6gb920g5da37433059b" version="1">Nessuno ancora in vita ricorda la guerra che rese Zephra orfana, e la compagnia di mercenari che la trascinò fuori dalle ceneri e le insegnò a impugnare una lama molto prima che sapesse mettere in fila le lettere in parole si è da tempo dispersa in tombe straniere sotto vessilli stranieri.&lt;br&gt;&lt;br&gt;Ciò che resta è l'abitudine di farlo: andare ovunque l'acciaio e il sangue versato siano pagati in buona moneta, e non chiedersi mai una sola volta di chi sia la causa giusta.&lt;br&gt;&lt;br&gt;Il vento lo chiama il suo unico parente, l'unico che non tradisce né muore.</content>
     <content contentuid="hfbb108fageeaag4e3cg8c9cgbbb06fe2a064" version="1">Fenditempesta</content>
@@ -502,7 +502,7 @@
     <content contentuid="hb98bee9bg7b98g4d7bgb340g220f6a08e7b9" version="1">Abiti del Viandante</content>
     <content contentuid="h8bd3897dgdc41g4320g9883ga44d673b88fb" version="1">Cuoi logori dal viaggio, tagliati per la velocità, mai per resistere sul posto. Hanno varcato più confini di quanti la maggior parte delle mappe ne nominerà mai.</content>
     <content contentuid="h7a1cccdaga2fag4c12g8c85g43e8d81eb441" version="1">Passo del Vento</content>
-    <content contentuid="haebe3d64ga110g4ceag9d39gfad16eadc82f" version="1">Zephra sale sul vento ed è semplicemente altrove, il suo prossimo colpo già in preparazione dietro di lei.</content>
+    <content contentuid="haebe3d64ga110g4ceag9d39gfad16eadc82f" version="1">Zephra sale sul vento e riappare poco lontano. Il vento resta alle sue spalle: ottiene &lt;LSTag Type="Status" Tooltip="AMP_ZEPHRA_TAILWIND"&gt;Vento in poppa&lt;/LSTag&gt; fino alla fine del suo turno.</content>
     <content contentuid="hc5f22340g29d5g41f3ga628g59d4c443c4f8" version="1">Sferzata del Vento</content>
     <content contentuid="h222cca94ga79dg4461ga233g55d627ed9c1d" version="1">Colpisci la Figlia del Vento e il vento risponde al suo posto: l'attaccante viene scagliato indietro e lasciato &lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;Sbilanciato&lt;/LSTag&gt;. Una volta per round.</content>
     <content contentuid="h9ffd0f59g84f4g4872g81bdg324038fe55b8" version="1">Raffica di Vento</content>
@@ -588,7 +588,7 @@
   <content contentuid="h32f9076dgb1c4g495fgb56fg37140b2f5cdd" version="1">Clava di Ka'vir</content>
 
   <content contentuid="hb56a8698g6f87g4e21g8465g01c400c95ce7" version="1">Spaccacranio</content>
-  <content contentuid="h6d1223c3ga9b1g4fb8gb23bg6bf3fe4b7b46" version="1">Ka'vir scaglia una roccia contro un bersaglio lontano infliggendo &lt;b&gt;[1]&lt;/b&gt;, facendogli fischiare il cranio. Con un &lt;LSTag Tooltip="Constitution"&gt;Costituzione&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Tiro salvezza&lt;/LSTag&gt; fallito (&lt;b&gt;[2]&lt;/b&gt;) viene &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stordito&lt;/LSTag&gt;.</content>
+  <content contentuid="h6d1223c3ga9b1g4fb8gb23bg6bf3fe4b7b46" version="1">Ka'vir scaglia una roccia contro un bersaglio lontano infliggendo &lt;b&gt;[1]&lt;/b&gt;, facendogli fischiare il cranio. Se fallisce un &lt;LSTag Tooltip="SavingThrow"&gt;tiro salvezza&lt;/LSTag&gt; su &lt;LSTag Tooltip="Constitution"&gt;Costituzione&lt;/LSTag&gt;, viene &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stordito&lt;/LSTag&gt;.</content>
   <content contentuid="h480a0ef2g4672g4e0fgae52g8ff6bab92223" version="1">Grido di Guerra</content>
   <content contentuid="hdf763c15g968eg4e72g8d74gfcd0225abd72" version="1">Ka'vir baratta la sua difesa con pura aggressività — un grido di battaglia che abbassa la sua guardia in cambio di colpi più pesanti e maggiore velocità.</content>
   <content contentuid="hc3486012gef86g46b5ga3bag032684e45729" version="1">Balzo in Corsa</content>

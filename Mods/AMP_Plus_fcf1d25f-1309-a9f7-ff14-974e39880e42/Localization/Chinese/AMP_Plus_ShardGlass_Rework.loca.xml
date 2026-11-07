@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
-	<content contentuid="he4db1fdbg80d5g4cb6gbbdag633b9447b970" version="2">法术攻击在掷出&lt;b&gt;[1]&lt;/b&gt;或更高时即可造成&lt;LSTag Tooltip="CriticalHit"&gt;重击&lt;/LSTag&gt;。持有者的所有&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;具有&lt;LSTag Tooltip="Disadvantage"&gt;劣势&lt;/LSTag&gt;。&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Image" Info="TutorialHotbarLock"/&gt; 与同名碎片不叠加。</content>
+	<content contentuid="he4db1fdbg80d5g4cb6gbbdag633b9447b970" version="2">持有者的&lt;LSTag Type="Status" Tooltip="AMP_INFO_SPELL"&gt;法术&lt;/LSTag&gt;攻击的&lt;LSTag Tooltip="CriticalHit"&gt;重击&lt;/LSTag&gt;阈值降低&lt;b&gt;[1]&lt;/b&gt;。持有者的所有&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;具有&lt;LSTag Tooltip="Disadvantage"&gt;劣势&lt;/LSTag&gt;。&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Image" Info="TutorialHotbarLock"/&gt; 与同名碎片不叠加。</content>
 </contentList>

@@ -447,7 +447,7 @@
 <content contentuid="hec8f4742g44aag468agb068g65f4831aef4e" version="1">Unbeeindruckt</content>
 <content contentuid="h0f7cb951g6fa2g417cgb768g0264f186833b" version="1">Nichts auf diesem Schlachtfeld ist Zephras volle Aufmerksamkeit wert. Die Windgeborene kann nicht &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;verängstigt&lt;/LSTag&gt; werden; Angst und Drohungen perlen an ihr ab wie Regen an einer Wachstuchdecke.</content>
 <content contentuid="h7fe135bbg4bb8g4796ga1b9gf48482a0f49e" version="1">Rückenwind</content>
-<content contentuid="h1001a673gf093g49aeg9743g562c32decfe2" version="1">Der Wind sammelt sich hinter der Windgeborenen. Ihr nächster Schlag landet garantiert als &lt;LSTag Tooltip="CriticalHit"&gt;Kritischer Treffer&lt;/LSTag&gt;.</content>
+<content contentuid="h1001a673gf093g49aeg9743g562c32decfe2" version="1">Der Wind sammelt sich im Rücken der Windgetragenen. Bis zum Ende ihres Zuges hat sie &lt;LSTag Tooltip="Advantage"&gt;Vorteil&lt;/LSTag&gt; bei &lt;LSTag Tooltip="AttackRoll"&gt;Angriffswürfen&lt;/LSTag&gt;, und jeder erfolgreiche Wurf ist ein &lt;LSTag Tooltip="CriticalHit"&gt;kritischer Treffer&lt;/LSTag&gt;.</content>
 <content contentuid="h07681e0ag0a90g427agba04g2c49fc02d5fd" version="1">Waisenkind eines vergessenen Krieges</content>
 <content contentuid="heb8d7351g1917g44e6gb920g5da37433059b" version="1">Niemand, der noch atmet, erinnert sich an den Krieg, der Zephra zur Waise machte, und die Söldnertruppe, die sie aus der Asche zog und ihr das Schwertkampfhandwerk beibrachte, lange bevor sie Buchstaben zu Wörtern fügen konnte, hat sich längst in fremden Gräbern unter fremden Fahnen zerstreut.&lt;br/&gt;&lt;br/&gt;Was bleibt, ist die Gewohnheit – dorthin zu gehen, wo Stahl und vergossenes Blut mit gutem Geld bezahlt werden, und niemals zu fragen, wessen Sache die gerechte ist. &lt;br/&gt;&lt;br/&gt;Der Wind ist ihr einziger Verwandter, der sie weder verrät noch stirbt.</content>
 <content contentuid="hfbb108fageeaag4e3cg8c9cgbbb06fe2a064" version="1">Sturmschneider</content>
@@ -455,7 +455,7 @@
 <content contentuid="hb98bee9bg7b98g4d7bgb340g220f6a08e7b9" version="1">Wanderergewand</content>
 <content contentuid="h8bd3897dgdc41g4320g9883ga44d673b88fb" version="1">Von Reisen abgenutztes Leder, geschnitten für Geschwindigkeit, niemals dafür, Stellung zu halten. Es hat mehr Grenzen überschritten, als die meisten Karten jemals benennen werden.</content>
 <content contentuid="h7a1cccdaga2fag4c12g8c85g43e8d81eb441" version="1">Windschritt</content>
-<content contentuid="haebe3d64ga110g4ceag9d39gfad16eadc82f" version="1">Zephra tritt auf den Wind und ist einfach woanders, ihr nächster Schlag formt sich bereits hinter ihr.</content>
+<content contentuid="haebe3d64ga110g4ceag9d39gfad16eadc82f" version="1">Zephra tritt auf den Wind und taucht anderswo in der Nähe wieder auf. Der Wind bleibt in ihrem Rücken: Sie erhält &lt;LSTag Type="Status" Tooltip="AMP_ZEPHRA_TAILWIND"&gt;Rückenwind&lt;/LSTag&gt; bis zum Ende ihres Zuges.</content>
 <content contentuid="hc5f22340g29d5g41f3ga628g59d4c443c4f8" version="1">Windpeitsche</content>
 <content contentuid="h222cca94ga79dg4461ga233g55d627ed9c1d" version="1">Schlage die Windgetragene, und der Wind antwortet an ihrer Stelle: Der Angreifer wird zurückgeschleudert und &lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;aus dem Gleichgewicht gebracht&lt;/LSTag&gt;. Einmal pro Runde.</content>
 <content contentuid="h9ffd0f59g84f4g4872g81bdg324038fe55b8" version="1">Windstoß</content>

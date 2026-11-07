@@ -83,7 +83,7 @@
 	<content contentuid="hf927f96dg7481g48e3gb807gb73eb1163ba9" version="1">怒氣衝衝</content>
 	<content contentuid="h508f6a26g0b38g4871g94e8g3c6b1c2e4e10" version="1">進入&lt;LSTag Type="Status" Tooltip="RAGE"&gt;狂暴&lt;/LSTag&gt;時，恢復你所有&lt;b&gt;[1]&lt;/b&gt;環的&lt;LSTag Tooltip="SpellSlot"&gt;法術位&lt;/LSTag&gt;與&lt;LSTag Type="ActionResource" Tooltip="ChannelOath"&gt;引導誓言&lt;/LSTag&gt;。&lt;br&gt;每場戰鬥只能觸發&lt;b&gt;一次&lt;/b&gt;。</content>
 	<content contentuid="he2d895a5g65c7g4206gbfe0g7109dd2851b8" version="1">傲慢代償</content>
-	<content contentuid="h77322866gdb57g436dgba08g6d275156407f" version="1">曾佩這柄高貴匕首的，是一位令人不快的精靈貴族。他能在三百米開外，頂著狂風以弓箭射落一隻蘋果，並且同時撰寫自傳，不斷宣稱0這對他是何等的輕而易舉。他自以為永生不朽，直到最後，在一場與豺狼人的激戰中，他不慎失手掉落了自己的匕首——並就此喪命，成為同儕間的一樁笑柄。</content>
+	<content contentuid="h77322866gdb57g436dgba08g6d275156407f" version="1">曾佩這柄高貴匕首的，是一位令人不快的精靈貴族。他能在三百米開外，頂著狂風以弓箭射落一隻蘋果，並且同時撰寫自傳，不斷宣稱這對他是何等的輕而易舉。他自以為永生不朽，直到最後，在一場與豺狼人的激戰中，他不慎失手掉落了自己的匕首——並就此喪命，成為同儕間的一樁笑柄。</content>
 	<content contentuid="h29486460g2d87g4425g9ae2gd67d843b07d4" version="1">暴風之牙</content>
 	<content contentuid="h8a571f0egd0b7g4af2g8701g9a70f41def67" version="1">群山始終在呼喚著扎德羅提克。這位德魯伊的門徒在自己的同類中始終是個被放逐的異類，從未接受過教團戒律。當他置身荒蕪的山巒，在十年間便將這片無人之地變作一座欣欣向榮的樂園，供養著崇拜他的萬物生靈。在充滿敵意的環境中，他學會了駕馭自然之力以守護他的新王國，尤其鍾情於閃電之威。</content>
 	<content contentuid="hefce4f15g9efcg4e06ga24fgea0b6df866fa" version="1">風暴導體</content>
@@ -103,7 +103,7 @@
 	<content contentuid="hd0d0d600g3694g4a52gba1eg5c34edb890d1" version="1">恐懼精粹</content>
 	<content contentuid="hf6e538b7g0290g47d0g8e68g7a1f25821658" version="1">當層數超過&lt;b&gt;[1]&lt;/b&gt;時，恐懼精粹將&lt;b&gt;消失&lt;/b&gt;。在&lt;LSTag Tooltip="LongRest"&gt;長休&lt;/LSTag&gt;後消失。</content>
 	<content contentuid="hdc16e2e2g614bg4487gb568gab37d92deaec" version="1">精粹釋放</content>
-	<content contentuid="h236d502ege451g4cdbgbb9eg10a39aec0873" version="1">當你未命中敵人時，消耗一層&lt;LSTag Type="Status" Tooltip="WEAPON15"&gt;恐懼精粹&lt;/LSTag&gt;，若敵人未能透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，則對其施加&lt;LSTag Type="Status" Tooltip="FEARED"&gt;恐懼&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="h236d502ege451g4cdbgbb9eg10a39aec0873" version="2">當你未命中敵人時，消耗一層&lt;LSTag Type="Status" Tooltip="WEAPON15"&gt;恐懼精粹&lt;/LSTag&gt;，若敵人未能透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，則對其施加&lt;LSTag Type="Status" Tooltip="FEARED"&gt;恐懼&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
 	<content contentuid="h65e33f54gb36dg4a92gb369g2047ede9d07f" version="1">米爾寇僕從之匕</content>
 	<content contentuid="h5c08b3c0g9717g4fadgaa0age187d2cbe88f" version="1">這把陰森的匕首閃爍著一種不自然的蒼白綠光，它想訴說的，遠比它前任主人所允許的要多得多。這件遺物只低語著一個詞：不悅。</content>
 	<content contentuid="h469e8a17g4a65g423cg8212gd70830b91be1" version="1">米爾寇之不悅</content>
@@ -169,7 +169,7 @@
 	<content contentuid="h35293a19g9ff8g48f8gb8beg10be667f6ade" version="1">永無止飢</content>
 	<content contentuid="h0a97a980g9770g4973g89b2gb8ca29126e6e" version="1">只要你攜帶這把匕首，它便會不斷地索求&lt;b&gt;靈魂&lt;/b&gt;。每一天初始，你都會帶著&lt;LSTag Type="Status" Tooltip="WEAPON25"&gt;枯竭的劍柄&lt;/LSTag&gt;，你必須用受詛咒的靈魂&lt;b&gt;填滿它&lt;/b&gt;。</content>
 	<content contentuid="h91fe3c4fg188dg40d3g8b28gb3349b84dee0" version="1">靈魂獻祭</content>
-	<content contentuid="h7888b01bg177bg4209g89ffgc140a227b1f4" version="1">當你&lt;b&gt;殺死&lt;/b&gt;一名&lt;b&gt;受詛咒&lt;/b&gt;的敵人時，宿命之匕會向握柄中注入一個&lt;b&gt;新鮮靈魂&lt;/b&gt;，並賦予持有者&lt;LSTag Type="Status" Tooltip="WEAPON25_5"&gt;飽和增益&lt;/LSTag&gt;。&lt;br&gt;任何&lt;/b&gt;詛咒皆可。</content>
+	<content contentuid="h7888b01bg177bg4209g89ffgc140a227b1f4" version="1">當你&lt;b&gt;殺死&lt;/b&gt;一名&lt;b&gt;受詛咒&lt;/b&gt;的敵人時，宿命之匕會向握柄中注入一個&lt;b&gt;新鮮靈魂&lt;/b&gt;，並賦予持有者&lt;LSTag Type="Status" Tooltip="WEAPON25_5"&gt;飽和增益&lt;/LSTag&gt;。&lt;br&gt;&lt;br&gt;&lt;b&gt;任何&lt;/b&gt;詛咒皆可。</content>
 	<content contentuid="h7002e61eg22b7g40a3gb416g772952bcc684" version="1">劍柄枯竭</content>
 	<content contentuid="hb9dde03egcecdg4332g87d9gde3bf053eb03" version="1">匕首在榨取你的宿命，你所有擲骰結果減少&lt;b&gt;[1]&lt;/b&gt;。</content>
 	<content contentuid="h19c846ebg90f9g4009gae6bgd03cf2af1ebf" version="1">劍柄將盈</content>
@@ -222,7 +222,7 @@
 	<content contentuid="h9371b575g1805g4baagb1a5g8d9b9d52dcfb" version="1">發狂</content>
 	<content contentuid="h45b54dd4gc5a7g4616g924bgf90908a5f6cb" version="1">當你處於&lt;LSTag Type="Status" Tooltip="MADNESS"&gt;瘋狂&lt;/LSTag&gt;狀態時，所有其他生物在它們的回合開始時，累積&lt;b&gt;[1]&lt;/b&gt;回合的&lt;LSTag Type="Status" Tooltip="WEAPON31"&gt;折磨&lt;/LSTag&gt;。</content>
 	<content contentuid="h9278214bgfecbg442bg94e1ge0600d09921e" version="1">黑暗血統</content>
-	<content contentuid="h40e99367g790dg4c71g81f2g98c3e9470476" version="1">如果你是&lt;b&gt;獸人&lt;/b&gt;、&lt;b&gt;半獸人&lt;/b&gt;、&lt;b&gt;地精&lt;/b&gt;、&lt;b&gt;豺狼人&lt;/b&gt;、&lt;b&gt;熊地精&lt;/b&gt;、&lt;b&gt;坎比翁&lt;/b&gt;、&lt;b&gt;蛛化精靈&lt;/b&gt;、&lt;b&gt;大地精&lt;/b&gt;、&lt;b&gt;寇濤魚人&lt;/b&gt;、&lt;b&gt;扎瑞爾提夫林&lt;/b&gt;、&lt;b&gt;灰矮人&lt;/b&gt;或&lt;b&gt;蘿絲卓爾&lt;/b&gt;——以&lt;b&gt;這把連枷&lt;/b&gt;攻擊會迫使目標透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Wisdom"&gt;感知&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則受到&lt;LSTag Type="Status" Tooltip="WEAPON31"&gt;折磨詛咒&lt;/LSTag&gt;。</content>
+	<content contentuid="h40e99367g790dg4c71g81f2g98c3e9470476" version="2">如果你是&lt;b&gt;獸人&lt;/b&gt;、&lt;b&gt;半獸人&lt;/b&gt;、&lt;b&gt;地精&lt;/b&gt;、&lt;b&gt;豺狼人&lt;/b&gt;、&lt;b&gt;熊地精&lt;/b&gt;、&lt;b&gt;坎比翁&lt;/b&gt;、&lt;b&gt;蛛化精靈&lt;/b&gt;、&lt;b&gt;大地精&lt;/b&gt;、&lt;b&gt;寇濤魚人&lt;/b&gt;、&lt;b&gt;扎瑞爾提夫林&lt;/b&gt;、&lt;b&gt;灰矮人&lt;/b&gt;或&lt;b&gt;蘿絲卓爾&lt;/b&gt;——以&lt;b&gt;這把連枷&lt;/b&gt;攻擊會迫使目標透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Wisdom"&gt;感知&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則受到&lt;LSTag Type="Status" Tooltip="WEAPON31"&gt;折磨詛咒&lt;/LSTag&gt;。</content>
 	<content contentuid="h9450d0c3g83bdg4477g8e54g716260785713" version="1">淺海潮汐</content>
 	<content contentuid="h53e741c2g81f8g4657gaf8cg1f33af6de662" version="1">一個漁夫偶然瞥見沿岸淺海之中泛起一抹金屬的寒光，他便在頃刻間發家致富。那塊礦石是一種罕有的魔法金屬，沿岸的族人用它為他們最出色的戰士鑄就了一件驚人的兵器。數千年間，它在一代又一代的勇士中輾轉流傳，直到王朝的末裔在一場曠日之戰中被人從背後捅刀，悽慘地戰死。</content>
 	<content contentuid="h122107fcg9e76g4983g8d09g65830f0262ae" version="1">深海療愈</content>
@@ -286,11 +286,11 @@
 	<content contentuid="hf7853902g79adg4e33ga8a8g265f241f5a96" version="1">齊里斯克之牙</content>
 	<content contentuid="h5d104ad8g29d4g4dc2g8a94g2215e6beb160" version="1">齊里斯克是兩萬年前的一頭危險掠食者，彼時正是海什卡大軍征伐精靈諸國的時代。齊里斯克十分鐘愛獸人的肉，時常劫掠部落的馬車，一次便會抓走幾千個獸人充當口糧。海什卡很快就得知了此事，並親自展開了獵殺。他雖未能殺死這頭超級掠食者，卻設法拔下了它的獠牙——這徹底打消了它再吞食任何獸人的胃口。</content>
 	<content contentuid="h9404f6ebg85c1g4f7dg99fdg65476cbd23cf" version="1">毒腺</content>
-	<content contentuid="h3d614929gb0edg4220g8e68gbd3f812f2add" version="1">受到此鐮刀傷害的生物必須透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的體質&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則被施加&lt;LSTag Type="Status" Tooltip="WEAPON40"&gt;定身毒液&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="h3d614929gb0edg4220g8e68gbd3f812f2add" version="2">受到此鐮刀傷害的生物必須透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的體質&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則被施加&lt;LSTag Type="Status" Tooltip="WEAPON40"&gt;定身毒液&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
 	<content contentuid="h8bb1b2c6g2968g497bgb31fg4f1e161f0abc" version="1">定身毒液</content>
 	<content contentuid="hcf22cd19g065eg46c3gaed6g65e47da6dc43" version="1">此生物&lt;b&gt;無法&lt;/b&gt;恢復&lt;LSTag Tooltip="HitPoints"&gt;生命值&lt;/LSTag&gt;且&lt;b&gt;無法移動&lt;/b&gt;。</content>
 	<content contentuid="h0d552413g52feg4ca7g8080g13ee881804a6" version="1">遠古詛咒</content>
-	<content contentuid="h48ec1dcag04d4g4390g8188gbcd934ed8c2a" version="1">當敵人成為你的&lt;b&gt;環級法術&lt;/b&gt;的目標時，必須透過對抗你&lt;LSTag Tooltip="SpellDifficultyClass"&gt;法術豁免難度等級&lt;/LSTag&gt;的感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則承受&lt;b&gt;[1]&lt;/b&gt;層&lt;LSTag Type="Status" Tooltip="WEAPON40_2"&gt;虛弱詛咒&lt;/LSTag&gt;。</content>
+	<content contentuid="h48ec1dcag04d4g4390g8188gbcd934ed8c2a" version="2">當敵人成為你的&lt;b&gt;環級法術&lt;/b&gt;的目標時，必須透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則承受&lt;b&gt;[1]&lt;/b&gt;層&lt;LSTag Type="Status" Tooltip="WEAPON40_2"&gt;虛弱詛咒&lt;/LSTag&gt;。</content>
 	<content contentuid="h6343d620g0ee1g4509g9e38g086a4a9bc100" version="1">虛弱詛咒</content>
 	<content contentuid="hc89727cag737ag446dgb54bg8990a80df4b9" version="1">每有一層此效果，此生物便會損失&lt;b&gt;[1]&lt;/b&gt;點體質，並在回合開始時消耗其全部的&lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;附贈動作&lt;/LSTag&gt;。&lt;br&gt;&lt;br&gt;戰鬥結束時消失。</content>
 	<content contentuid="h092ede8fgcd63g4ce1gb13eg2fa2d49b86b2" version="1">血月</content>
@@ -337,7 +337,7 @@
 	<content contentuid="h94d78685g4091g431cg8be6g01e82eaeb637" version="1">馭獸咒術</content>
 	<content contentuid="h69fc6685g4bc5g491fg96bfga40feac287f9" version="1">使用此弓攻擊&lt;b&gt;野獸&lt;/b&gt;或&lt;b&gt;邪魔&lt;/b&gt;時，額外造成&lt;b&gt;[1]&lt;/b&gt;點傷害。</content>
 	<content contentuid="h9916e463gf295g4ad2ga77dgdfb3e3a14c07" version="1">原始恐懼</content>
-	<content contentuid="h8776a9b0gf37ag4cdega2b4g9b1dc025f4e7" version="1">被&lt;b&gt;這把弓&lt;/b&gt;傷害的&lt;b&gt;野獸&lt;/b&gt;必須透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Wisdom"&gt;感知&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則陷入&lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;恐慌&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="h8776a9b0gf37ag4cdega2b4g9b1dc025f4e7" version="2">被&lt;b&gt;這把弓&lt;/b&gt;傷害的&lt;b&gt;野獸&lt;/b&gt;必須透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Wisdom"&gt;感知&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則陷入&lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;恐慌&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
 	<content contentuid="he9cacadbgcce3g47ebg93deg767cd35fd61b" version="1">舒緩短弓</content>
 	<content contentuid="haf698339gd27dg4abeg8319g04d3f87fd950" version="1">精緻的銀質弓身，似乎閃爍著皎潔的月之輝光，為所有將此弓握在手中的人帶來希望。一件神祇的贈禮，自太古時代被挖掘出土——也許它本應沉眠於此，可它還是重返塵俗，隨時準備襄助偉業，並改變千萬人的命運。</content>
 	<content contentuid="h790ac3a6g7882g4623g9a62gaa093a702f15" version="1">至高賜福</content>
@@ -368,11 +368,11 @@
 	<content contentuid="h6500e69bg07d4g4f42g9fcfg51044128ca2a" version="1">易燃</content>
 	<content contentuid="h831fe42agccf6g48afg9b19g32d9597dc801" version="1">當你處於&lt;LSTag Type="Status" Tooltip="BURNING"&gt;燃燒&lt;/LSTag&gt;或類似狀態時，使用&lt;b&gt;此弓&lt;/b&gt;命中後會讓目標陷入&lt;LSTag Type="Status" Tooltip="BURNING"&gt;燃燒&lt;/LSTag&gt;。</content>
 	<content contentuid="h27244d37gc60cg4bbag9bf5g83f6b1b19733" version="1">北地長弓</content>
-	<content contentuid="hf1a54381gafeag4223g8133gf9ef28492fb5" version="1">眾所周知，冰天雪地的極北之地到處都是體型超乎想象的怪物。為了在這般惡劣的環境中生存，北方民族不得不窮盡發明，這把長弓便是其中之一。據悉，它是靜謐苔原氏族向那些北地的神祇供奉無數次祭品之後，所得到的賜禮。這把弓擁有著不可思議的力量，能重創即便是獵人團體也束手無策的巨型&lt;b&gt;野獸&lt;b&gt;和怪物。</content>
+	<content contentuid="hf1a54381gafeag4223g8133gf9ef28492fb5" version="1">眾所周知，冰天雪地的極北之地到處都是體型超乎想象的怪物。為了在這般惡劣的環境中生存，北方民族不得不窮盡發明，這把長弓便是其中之一。據悉，它是靜謐苔原氏族向那些北地的神祇供奉無數次祭品之後，所得到的賜禮。這把弓擁有著不可思議的力量，能重創即便是獵人團體也束手無策的巨型&lt;b&gt;野獸&lt;/b&gt;和怪物。</content>
 	<content contentuid="hb673d791g78e3g400cg95dbg13c476cf8422" version="1">怪物殺手</content>
 	<content contentuid="h43150863g0a07g45f3g86f6g0281e44feccb" version="1">使用&lt;b&gt;遠端武器攻擊&lt;/b&gt;對擁有&lt;b&gt;[3]&lt;/b&gt;點及以上最大&lt;LSTag Tooltip="HitPoints"&gt;生命值&lt;/LSTag&gt;的生物造成傷害時，額外造成&lt;b&gt;[1]&lt;/b&gt;點傷害。</content>
 	<content contentuid="hf520faf6gc016g4ca3gaa15ga90e2d914b88" version="1">靜謐苔原</content>
-	<content contentuid="hfab321a2g07c8g4531gbe20g19eb550eb938" version="1">處於&lt;LSTag Type="Status" Tooltip="MAGE_ARMOR"&gt;法師護甲&lt;/LSTag&gt;效果下時，&lt;b&gt;這把弓&lt;/b&gt;的射擊迫使目標透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Constitution"&gt;體質&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則陷入&lt;LSTag Type="Status" Tooltip="CHILLED"&gt;寒冷&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="hfab321a2g07c8g4531gbe20g19eb550eb938" version="2">處於&lt;LSTag Type="Status" Tooltip="MAGE_ARMOR"&gt;法師護甲&lt;/LSTag&gt;效果下時，&lt;b&gt;這把弓&lt;/b&gt;的射擊迫使目標透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Constitution"&gt;體質&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則陷入&lt;LSTag Type="Status" Tooltip="CHILLED"&gt;寒冷&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
 	<content contentuid="h66d0c65ag60ffg4778g8474g053e0a0a7b04" version="1">林地衛士</content>
 	<content contentuid="hd01fa9efg43bbg446egb314gbaa5eea49049" version="1">這片林地從未安寧過，無數人想要挑戰自然的平衡，但德魯伊們總能成功擊退一切來犯之敵。有一次，敵人如潮水般滾滾湧來，以至於大德魯伊開始向西凡納斯祈求偉大的贈禮，幫他們維繫這份平衡。西凡納斯憐憫了他的僕從們，於是降下眾多神兵利器，傾灑於林地之上，令他們能抵禦入侵者的猛攻。然而兩百年後，林地還是遭到了侵略與劫掠——歸因於內鬥的陰謀。</content>
 	<content contentuid="hdbe72ff9g56fbg431bgac0eg1db17d78830e" version="1">自然之禮</content>
@@ -409,7 +409,7 @@
 	<content contentuid="h2b5bb079g534ag4f9bg8178g4253394e2892" version="1">萎縮 II</content>
 	<content contentuid="hb1b283a1gb81ag489cg8336g248586818133" version="1">&lt;b&gt;+[1]&lt;/b&gt;&lt;LSTag Tooltip="ArmourClass"&gt;護甲等級&lt;/LSTag&gt;。此生物的&lt;b&gt;重量與體型等級&lt;/b&gt;減少&lt;b&gt;[3]&lt;/b&gt;。&lt;br&gt;此效果結束後，施加&lt;LSTag Type="Status" Tooltip="WEAPON62"&gt;萎縮 I&lt;/LSTag&gt;，持續&lt;b&gt;[4]&lt;/b&gt;回合。</content>
 	<content contentuid="h976016edg4289g442agb6fegbf85844099fe" version="1">萎縮 III</content>
-	<content contentuid="ha466ba09g8878g40e3gbf1dgfbf8d7b820e0" version="1">&lt;LSTag Tooltip="ArmourClass"&gt;護甲等級 (AC)&lt;/LSTag&gt; 獲得 &lt;b&gt;+[1]&lt;/b&gt;。此生物的&lt;b&gt;重量和體型等級&lt;/b&gt;減少&lt;b&gt;[3]&lt;/b&gt;點。&lt;br&gt;此效果結束後，施加&lt;LSTag Type="Status" Tooltip="WEAPON62"&gt;萎縮 II&lt;/LSTag&gt;，持續&lt;b&gt;[4]&lt;/b&gt;回合。</content>
+	<content contentuid="ha466ba09g8878g40e3gbf1dgfbf8d7b820e0" version="1">&lt;LSTag Tooltip="ArmourClass"&gt;護甲等級 (AC)&lt;/LSTag&gt; 獲得 &lt;b&gt;+[1]&lt;/b&gt;。此生物的&lt;b&gt;重量和體型等級&lt;/b&gt;減少&lt;b&gt;[3]&lt;/b&gt;點。&lt;br&gt;此效果結束後，施加&lt;LSTag Type="Status" Tooltip="WEAPON62_2"&gt;萎縮 II&lt;/LSTag&gt;，持續&lt;b&gt;[4]&lt;/b&gt;回合。</content>
 	<content contentuid="hea6adb7cg9217g46a7ga5b2ge7be301ec342" version="1">忠誠小圓盾</content>
 	<content contentuid="hf55e70e4g2fedg4c87g9abdgd70f8a054b34" version="1">一面不錯的魔法盾牌，曾服侍過不止一位主人。單看外表，便知它身經百戰。</content>
 	<content contentuid="h0d3b8215g0699g4f78g87fbg00215a40b79c" version="1">精靈之盾</content>
@@ -421,7 +421,7 @@
 	<content contentuid="h8ab79c2dg8944g439eg96b7g4fb4c4aaa96b" version="1">深海之盾</content>
 	<content contentuid="h86394d5fg5855g4772gb148gd74e73d50f28" version="1">這面盾牌散發著海靈與海草的腥鹹氣息，看起來脆弱不堪，卻莫名讓望向它的人心生敬畏，喚起對那深海中無底深淵的恐懼。</content>
 	<content contentuid="h63b4b42dg6134g4f6dg9db6gccd1a13bb4f6" version="1">安博裡之怒</content>
-	<content contentuid="hf64ba1a8gedecg4714gbe02g71eb3a1d6c7e" version="1">處於&lt;LSTag Type="Status" Tooltip="OFF_BALANCE"&gt;失衡&lt;/LSTag&gt;狀態下攻擊你的生物，將被&lt;LSTag Type="Status" Tooltip="STUNNED"&gt;震懾&lt;/LSTag&gt;&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="hf64ba1a8gedecg4714gbe02g71eb3a1d6c7e" version="1">處於&lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;失衡&lt;/LSTag&gt;狀態下攻擊你的生物，將被&lt;LSTag Type="Status" Tooltip="STUNNED"&gt;震懾&lt;/LSTag&gt;&lt;b&gt;[1]&lt;/b&gt;回合。</content>
 	<content contentuid="hc1839446g458eg4accgad40gfff88c42aee6" version="1">海之報償</content>
 	<content contentuid="hf5479219g3b47g47cfg8d46g709499801b39" version="1">受到傷害時，攻擊者將陷入&lt;LSTag Type="Status" Tooltip="MAG_FROST"&gt;霜覆&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
 	<content contentuid="h7c9a91a9g3499g4c7eg9eb8g75fafec033e4" version="1">獸人之盾</content>
@@ -635,7 +635,7 @@
 	<content contentuid="ha9ef8020gf08eg43f2g982fg7dcfca4b26db" version="1">女巫符文</content>
 	<content contentuid="hd03e711bg051cg4517g8eacg584ea9dd96f1" version="1">使用此手斧造成傷害時，對目標施加&lt;LSTag Type="Status" Tooltip="WEAPON102"&gt;暗影藤蔓&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。&lt;br&gt;每回合只能觸發&lt;b&gt;一次&lt;/b&gt;。</content>
 	<content contentuid="hb1567e17g2753g4c94g9e8eg25b02d60e1a8" version="1">暗影藤蔓</content>
-	<content contentuid="hbd6a2174g3d4dg4c36ga781g71ca7048b4f1" version="1">1&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;&lt;b&gt;-[1]&lt;/b&gt;。&lt;br&gt;針對此生物的&lt;LSTag Tooltip="AttackRoll"&gt;近戰法術攻擊檢定&lt;/LSTag&gt;具有&lt;LSTag Tooltip="Advantage"&gt;優勢&lt;/LSTag&gt;。</content>
+	<content contentuid="hbd6a2174g3d4dg4c36ga781g71ca7048b4f1" version="1">&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;&lt;b&gt;-[1]&lt;/b&gt;。&lt;br&gt;針對此生物的&lt;LSTag Tooltip="AttackRoll"&gt;近戰法術攻擊檢定&lt;/LSTag&gt;具有&lt;LSTag Tooltip="Advantage"&gt;優勢&lt;/LSTag&gt;。</content>
 	<content contentuid="hfb461524g0202g4a58g9481g133ff0944280" version="1">焦炎旋風</content>
 	<content contentuid="h6a268eb7gd358g4e27g9495g1ac23335b85f" version="1">這柄斧頭層層疊疊的刃口，始終閃爍著火炭般的柔光，在擊中目標時會驟然引燃，將他們籠罩在一道烈火的光環之中。戰士加薩，這柄斧頭的首任主人，曾用它來解放自己的族人，將一場場血戰化作了烈焰與灰燼的死亡之舞。這柄斧頭，不僅是毀滅的兵器，更是不屈求勝意志的象徵，足以在戰士們的心中點燃那戰鬥的狂熱與堅韌。</content>
 	<content contentuid="h1582351egc1ffg4561g87c5g78404657aae2" version="1">焦炎猛擊</content>
@@ -748,7 +748,7 @@
 	<content contentuid="h220213aegb728g4c3eg985bg5291f15490f9" version="1">影主獠牙</content>
 	<content contentuid="h8b968670gb685g4dbcgb1e6gc0391d19e446" version="1">在一本飽經風霜的日誌中，你發現了“公正者”達斯汀將軍的故事，他那場深入墮影冥界腹地的神聖遠征，最終指向了他的覆滅。當你手握這柄可怖的長矛時，它的鋒刃永遠被蠕行的黑暗所籠罩。你感知到，它曾經的主人那痴迷於征服陰影位面的執念，是如何引來了一頭遠古陰影巨龍的注意。那頭巨龍的“贈禮”，實為一道至為殘忍的詛咒，將這件武器與它的持有者一併轉化為了暮光的造物。如今，這柄長矛永不止息地飢渴著，正如據說它仍在狩獵的前任主人一般，永恆地困於光與影之間，既非血肉，亦非幽影。在你的掌握之中，它渴望生命本身，每一次穿刺，都威脅著榨乾被它所刺穿之人那最深處的精髓。</content>
 	<content contentuid="h9661732fg294bg45b9gb610g3d5d7579445f" version="1">黑暗詛咒</content>
-	<content contentuid="hbd2c3d81g06d8g4138g9d06gfed9ba5f8b37" version="1">處於&lt;LSTag Type="Spell" Tooltip="Target_Darkness"&gt;黑暗術&lt;/LSTag&gt;雲霧中時，被你傷害的目標若未能透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Wisdom"&gt;感知&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，則被施加&lt;LSTag Type="Status" Tooltip="WEAPON40_2"&gt;虛弱詛咒&lt;/LSTag&gt;。</content>
+	<content contentuid="hbd2c3d81g06d8g4138g9d06gfed9ba5f8b37" version="2">處於&lt;LSTag Type="Spell" Tooltip="Target_Darkness"&gt;黑暗術&lt;/LSTag&gt;雲霧中時，被你傷害的目標若未能透過對抗你&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的&lt;LSTag Tooltip="Wisdom"&gt;感知&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，則被施加&lt;LSTag Type="Status" Tooltip="WEAPON40_2"&gt;虛弱詛咒&lt;/LSTag&gt;。</content>
 	<content contentuid="h92be14f8gdcebg4876gbb55g30b2b016cde9" version="1">影主之飢</content>
 	<content contentuid="hfb730026gca48g4af8ga3fcg96f3d7714cfa" version="1">造成&lt;b&gt;[1]&lt;/b&gt;時，&lt;b&gt;額外&lt;/b&gt;造成&lt;b&gt;[2]&lt;/b&gt;點傷害。</content>
 	<content contentuid="hc8a2ca31g54a7g45fdgaccag1f83f0206cd5" version="1">星界奇點</content>

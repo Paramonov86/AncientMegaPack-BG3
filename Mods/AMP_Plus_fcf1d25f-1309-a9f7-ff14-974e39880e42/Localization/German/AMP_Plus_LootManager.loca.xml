@@ -5,5 +5,5 @@
 <content contentuid="h2ee3a584g2646g44e3g9739g7670c079e6d4" version="1">&lt;b&gt;Ancient Mega Pack&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Der Beute-Manager ist aktiviert. Möchtest du ihn aktiviert lassen? Wähle „Nein“, um ihn zu deaktivieren.</content>
 <content contentuid="h5610ce6eg92acg4f06gb17bg3bab1cfdbe17" version="1">&lt;b&gt;Ancient Mega Pack&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Der Beute-Manager ist deaktiviert. Möchtest du ihn deaktiviert lassen? Wähle „Nein“, um ihn zu aktivieren.</content>
 	<content contentuid="hcee8264fg163cg4a21ga030g10e8de7f7019" version="1">Beute-Manager</content>
-	<content contentuid="ha5342819g764eg40fdg9318g598f537a0d75" version="1">Automatically files picked-up loot into dedicated containers. The switch is shared by the whole party: turn it off on any character and the filing stops for everyone.</content>
+	<content contentuid="ha5342819g764eg40fdg9318g598f537a0d75" version="1">Sortiert eingesammelte Beute automatisch in die dafür vorgesehenen Behälter. Der Schalter gilt für die ganze Gruppe: Wird er bei einem Charakter ausgeschaltet, endet die Sortierung für alle.</content>
 </contentList>

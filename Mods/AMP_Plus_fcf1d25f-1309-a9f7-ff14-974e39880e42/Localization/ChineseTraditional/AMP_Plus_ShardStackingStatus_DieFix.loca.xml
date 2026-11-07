@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="h2b1d794cg3bfbg4078gb27bga11acfcf400c" version="2">該武器的傷害骰變爲&lt;b&gt;2d10&lt;/b&gt;，且傷害類型變更爲&lt;b&gt;[1]&lt;/b&gt;。&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Image" Info="TutorialHotbarLock"/&gt; 與同名碎片不疊加。</content>
-	<content contentuid="he59b69c6g9d36g468bgb983g32b506b549e9" version="2">使用此碎片對你已裝備的&lt;b&gt;武器&lt;/b&gt;進行&lt;b&gt;奧術化&lt;/b&gt;。若未裝備近戰武器，則改爲奧術化你主手的&lt;b&gt;遠程武器&lt;/b&gt;。&lt;br&gt;&lt;br&gt;此類碎片將武器傷害骰變更爲&lt;b&gt;2d10&lt;/b&gt;，並將其傷害類型轉換爲&lt;b&gt;[1]&lt;/b&gt;。&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Image" Info="TutorialHotbarLock"/&gt; 與同名碎片不疊加。</content>
+	<content contentuid="he59b69c6g9d36g468bgb983g32b506b549e9" version="2">使用此碎片對你&lt;b&gt;主手裝備的武器&lt;/b&gt;進行&lt;b&gt;奧術化&lt;/b&gt;。若未裝備&lt;b&gt;近戰武器&lt;/b&gt;，則改為奧術化你&lt;b&gt;主手&lt;/b&gt;的&lt;b&gt;遠程武器&lt;/b&gt;。&lt;br&gt;&lt;br&gt;此類碎片將武器傷害骰變更為&lt;b&gt;2d10&lt;/b&gt;，並將其傷害類型轉換為&lt;b&gt;[1]&lt;/b&gt;。&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Image" Info="TutorialHotbarLock"/&gt; 與同名碎片不疊加。</content>
 </contentList>

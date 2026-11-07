@@ -199,7 +199,7 @@
 	<content contentuid="hce96d6f4g5b61g4ee1ga07eg1d4509779d75" version="1">兇貓披風</content>
 	<content contentuid="h0514739cg860bg4b6bg98adg49ab2ef961d5" version="1">殺手貓印記</content>
 	<content contentuid="h6b67ffdag0090g45d2g905ag31ac2ce6ebcd" version="1">潛獵恐怖</content>
-	<content contentuid="h26ceba78gb4fbg4c7agb31ega5d682a64b8f" version="1">以&lt;LSTag Type="Spell" Tooltip="Target_SneakAttack"&gt;偷襲&lt;/LSTag&gt;達成&lt;LSTag Tooltip="CriticalHit"&gt;重擊&lt;/LSTag&gt;時，&lt;b&gt;[1]&lt;/b&gt;範圍內的所有敵人必須透過對抗你的&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則陷入&lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;恐慌&lt;/LSTag&gt;，持續&lt;b&gt;[2]&lt;/b&gt;回合。</content>
+	<content contentuid="h26ceba78gb4fbg4c7agb31ega5d682a64b8f" version="2">以&lt;LSTag Type="Spell" Tooltip="Target_SneakAttack"&gt;偷襲&lt;/LSTag&gt;達成&lt;LSTag Tooltip="CriticalHit"&gt;重擊&lt;/LSTag&gt;時，&lt;b&gt;[1]&lt;/b&gt;範圍內的所有敵人必須透過對抗你的&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則陷入&lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;恐慌&lt;/LSTag&gt;，持續&lt;b&gt;[2]&lt;/b&gt;回合。</content>
 	<content contentuid="h4970f8eege8e6g4bfcgad55g3de11c19cae9" version="1">%%% 已廢棄 %%%</content>
 	<content contentuid="hbf134bd6gc406g4596g9fe5gb08c0ecfd687" version="1">絲絃披風</content>
 	<content contentuid="h29ab2058g0de5g425dgbbbbgd2c109f10dd9" version="1">霜狼披風</content>
@@ -285,7 +285,7 @@
 	<content contentuid="h484ee2c3gc427g416cgac49g13020767e3ff" version="1">敵人以&lt;b&gt;近戰武器&lt;/b&gt;攻擊你時，有&lt;b&gt;[1]%&lt;/b&gt;的機率陷入&lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;困惑&lt;/LSTag&gt;，持續&lt;b&gt;[2]&lt;/b&gt;回合。</content>
 	<content contentuid="hbcb3eb9ag96c5g4628ga2cdgec36d8a19100" version="1">閃光披風</content>
 	<content contentuid="ha8bc1fb9g576cg4991g8e8fg7adb7d9acceb" version="1">閃光印記</content>
-	<content contentuid="hd3587a73g4b7fg45dbg8e95g4df7ba1b1c33" version="1">敵人以&lt;b&gt;遠端武器&lt;/b&gt;攻擊你時，必須透過對抗你的&lt;LSTag Tooltip="SpellDifficultyClass"&gt;法術豁免難度等級&lt;/LSTag&gt;的智力&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則獲得&lt;LSTag Type="Status" Tooltip="CLOAK79"&gt;強光干擾&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="hd3587a73g4b7fg45dbg8e95g4df7ba1b1c33" version="2">敵人以&lt;b&gt;遠端武器&lt;/b&gt;攻擊你時，必須透過對抗你的&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等級&lt;/LSTag&gt;的智力&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，否則獲得&lt;LSTag Type="Status" Tooltip="CLOAK79"&gt;強光干擾&lt;/LSTag&gt;，持續&lt;b&gt;[1]&lt;/b&gt;回合。</content>
 	<content contentuid="hfccb98b5g39b0g4891g97c5g763904604c08" version="1">強光干擾</content>
 	<content contentuid="h44736ad6ga2e5g455bgb2d6g9170dd48d396" version="1">&lt;b&gt;遠端武器&lt;/b&gt;的&lt;LSTag Tooltip="AttackRoll"&gt;攻擊檢定&lt;/LSTag&gt;獲得&lt;b&gt;-[1]~[2]&lt;/b&gt;。可以透過一次智力&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;移除此狀態，難度等於披風佩戴者的&lt;LSTag Tooltip="SpellDifficultyClass"&gt;法術豁免難度等級&lt;/LSTag&gt;。</content>
 	<content contentuid="h94d3393fged10g48b1g824agfdbbfe9cf47f" version="1">救贖披風</content>

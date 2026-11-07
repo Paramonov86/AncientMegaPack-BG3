@@ -50,7 +50,7 @@
 	<content contentuid="h5d2e6483gf35ag4e6cgad23g4dbcb1313855" version="1">进入&lt;b&gt;潜行状态&lt;/b&gt;时，你获得&lt;LSTag Type="Status" Tooltip="ARMOURC7_3"&gt;幽虫覆影&lt;/LSTag&gt;。</content>
 	<content contentuid="hbb273666g474fg430dg9f2bg42564f5be162" version="1">进入&lt;b&gt;潜行状态&lt;/b&gt;时，你获得&lt;LSTag Type="Status" Tooltip="ARMOURC7_4"&gt;幽虫覆影&lt;/LSTag&gt;。</content>
 	<content contentuid="hda1c1367gc8cag4d4bg91c3gc62f3f3fdcc3" version="1">幽虫覆影</content>
-	<content contentuid="hdb11a4ecg013fg4b30gbfa3g0d89934f06d5" version="1">&lt;LSTag Type="Skills" Tooltip="Stealth"&gt;隐匿&lt;/LSTag&gt; &lt;b&gt;+[1]&lt;/b&gt;，&lt;b&gt;武器攻击&lt;/b&gt;获得&lt;b&gt;+[2]&lt;/b&gt;。&lt;br&gt;&lt;br&gt;当离开&lt;b&gt;隐匿状态&lt;/b&gt;时，效果消失。&lt;/content&gt;</content>
+	<content contentuid="hdb11a4ecg013fg4b30gbfa3g0d89934f06d5" version="1">&lt;LSTag Type="Skills" Tooltip="Stealth"&gt;隐匿&lt;/LSTag&gt; &lt;b&gt;+[1]&lt;/b&gt;，&lt;b&gt;武器攻击&lt;/b&gt;获得&lt;b&gt;+[2]&lt;/b&gt;。&lt;br&gt;&lt;br&gt;当离开&lt;b&gt;隐匿状态&lt;/b&gt;时，效果消失。</content>
 	<content contentuid="he3719f2dg1229g4962g9ce1gd9b4c1fd1f43" version="1">皇家信使礼服</content>
 	<content contentuid="h3e01c84bgbf23g43d0g837eg1a83dc811581" version="1">这件礼服做工精良，选用最上乘的织物。无须赘言，数百年来，它刺绣上的皇家纹章几乎未有磨损，其内里的布料微微闪烁着的附魔之光，昭示着前任主人所负使命之重大。</content>
 	<content contentuid="h101d936ag9a7cg43e8ga419g9a10b08faae5" version="1">轻身步</content>
@@ -121,7 +121,7 @@
 	<content contentuid="hcba9b31bg51e9g467ega240g3e67e6c2f2ce" version="1">风语长袍</content>
 	<content contentuid="hc22e5e4bga8c9g40e6g938fgf7de7a8a2827" version="1">梅加利斯并非风暴神殿唯一的先知，但他却是最坚定不移者。当所有同伴都因绝望而一哄而散时，他独自坚守神殿大门，抵御那些试图夺取风暴与雷鸣祭坛的凶暴怪物。他遍体鳞伤，衣袍也疮痍累累。无人知晓这件圣物为何流落凡尘，但它灵魂的归宿，毋庸置疑，当属天外高天的长空。</content>
 	<content contentuid="hea312ed6g9d6cg4e9ag9328g8e7e5b990c13" version="1">守护姿态</content>
-	<content contentuid="h60451073gc935g4cd0g8b07g31d0a94ee2f2" version="1">若你在自己的回合中未移动，则在回合结束时获得&lt;b&gt;[1]&lt;/b&gt;层&lt;LSTag Type="Status" Tooltip="MAG_CHARGED_LIGHTNING"&gt;闪电充能&lt;/LSTag&gt;。&lt;/content&gt;</content>
+	<content contentuid="h60451073gc935g4cd0g8b07g31d0a94ee2f2" version="1">若你在自己的回合中未移动，则在回合结束时获得&lt;b&gt;[1]&lt;/b&gt;层&lt;LSTag Type="Status" Tooltip="MAG_CHARGED_LIGHTNING"&gt;闪电充能&lt;/LSTag&gt;。</content>
 	<content contentuid="hf02a440bga502g425fgaf21g28e41f68d721" version="1">坚守阵地</content>
 	<content contentuid="hc959349bgfb2cg4903gbe59g6358a421f794" version="1">如坚守神殿大门的梅加利斯般屹立不倒。回合结束时获得&lt;b&gt;[1]&lt;/b&gt;层&lt;LSTag Type="Status" Tooltip="MAG_CHARGED_LIGHTNING"&gt;闪电充能&lt;/LSTag&gt;。</content>
 	<content contentuid="hba68f3fcgc6cbg4eecg9f96g66322baf86f4" version="1">蓄能防护</content>
@@ -301,7 +301,7 @@
 	<content contentuid="h0e48b39dga2c0g4b51gad31gc9cbd2702409" version="1">龙裔护爪</content>
 	<content contentuid="hdc70334dg289eg4575gba98g637354322689" version="1">这双护爪曾属于泰曼瑟最强大的龙裔斗士，以远古巨兽的皮革鞣制，并缀以铆钉。它专为血脉中流淌着巨龙之力者打造，能让斗士的每一次打击都迸发龙族传承之力，将毁灭性的威能灌注于攻击之中。如今，护爪正静待新的英雄，以继承龙之勇士的征途。</content>
 	<content contentuid="h04fa547fgc715g4d3dgb2afgadf1a9b76c9b" version="1">龙之勇武</content>
-	<content contentuid="h8e269030g4b84g4c0cgab01gfe89af16447f" version="1">若你为&lt;b&gt;龙裔&lt;/b&gt;（或&lt;b&gt;伪装成龙裔&lt;/b&gt;），则你的&lt;b&gt;武器&lt;/b&gt;攻击造成&lt;b&gt;[1]&lt;/b&gt;点额外伤害。</content>
+	<content contentuid="h8e269030g4b84g4c0cgab01gfe89af16447f" version="1">若你为&lt;b&gt;龙裔&lt;/b&gt;，你的&lt;b&gt;武器&lt;/b&gt;攻击额外造成&lt;b&gt;[1]&lt;/b&gt;伤害，&lt;b&gt;徒手&lt;/b&gt;攻击也额外造成&lt;b&gt;[1]&lt;/b&gt;伤害。</content>
 	<content contentuid="h61ae4e47gab06g4502g903agf7eb4a1a5714" version="1">斗场直觉</content>
 	<content contentuid="hd1493823g03eeg41f1gac41gab4f73d55f50" version="1">当你&lt;b&gt;闪避&lt;/b&gt;一次&lt;b&gt;武器攻击&lt;/b&gt;时，获得&lt;b&gt;[1]&lt;/b&gt;层&lt;LSTag Type="Status" Tooltip="MAG_ZOC_FORCE_CONDUIT"&gt;力场导体&lt;/LSTag&gt;。若你为&lt;b&gt;龙裔&lt;/b&gt;，则改为获得&lt;b&gt;[2]&lt;/b&gt;层。</content>
 	<content contentuid="h1a37ad6egd782g408dga5fcg7ee89c736909" version="1">泰曼瑟之威</content>
@@ -329,7 +329,7 @@
 	<content contentuid="h79c34ad2gffdcg4a0ag9fc2ga36b83fc5da8" version="1">神射护手</content>
 	<content contentuid="h4e941c8ag3fa1g46c3g9238g670be57ec81e" version="1">这双护腕曾属于拉伦·锐目，一位信奉西凡纳斯的森林精灵弓箭手。在对抗卡林珊帝国的战争中，精灵们从先祖森林的阴影中出击，向远方的敌人倾泻箭雨。拉伦是他们中最出色的箭手之一，以百发百中而闻名。护腕中的魔法引导着他的箭矢，精准得无可挑剔。在一次残酷的伏击中，拉伦阵亡，护腕落入卡林珊士兵之手，随即被转卖。它们真正的历史就此被遗忘，沦落为集市货堆里一件来历不明的奇巧物件。</content>
 	<content contentuid="h61eea65fgaafeg4c28g8509g4a903663beca" version="1">精准技艺</content>
-	<content contentuid="hbd49481bg1544g4c84g8c6bgd2f36184861c" version="1">你的远程武器&lt;/b&gt;的&lt;LSTag Tooltip="AttackRoll"&gt;攻击检定&lt;/LSTag&gt;增加&lt;b&gt;+[1]&lt;/b&gt;。</content>
+	<content contentuid="hbd49481bg1544g4c84g8c6bgd2f36184861c" version="1">你的&lt;b&gt;远程武器&lt;/b&gt;的&lt;LSTag Tooltip="AttackRoll"&gt;攻击检定&lt;/LSTag&gt;增加&lt;b&gt;+[1]&lt;/b&gt;。</content>
 	<content contentuid="h8e766c19g92e7g4316g9b34g3974016e7c12" version="1">最后的微光</content>
 	<content contentuid="h24649b89g3ac8g435cg816cga0e87917db78" version="1">这双手套曾属于安姆一位恶名昭著的刺客，他的猎物总在黑暗的安谧中迎来终结。手套被注入了禁忌仪式的力量，只需轻轻一弹指，便能令弱者目盲，在命运面前毫无还手之力。然而，在他胆大妄为地试图刺杀城市执政官之后，这件珍贵的遗物便与它的主人一同消失得无影无踪。刺客的结局至今成谜，而那双浸染着阴影魔力的手套也再未现世——徒留传说的余音在风中低语。</content>
 	<content contentuid="h9e066c34gd8b3g4c31g8af5g40c3122f440a" version="1">束手待毙</content>
@@ -656,7 +656,7 @@
 	<content contentuid="h47d5d6b5g8db2g40ebgae64gdfda8eaa3cfa" version="1">天谴判官</content>
 	<content contentuid="hb673738fg278dg4d9bg90c7gb5003e147bc8" version="1">高阶审判官奥勒良在光明大教堂地下的圣锻炉中铸就了这顶头盔，并为其注入了所俘天界生物的精华。其独特的飞鸟造型，灵感源于那只曾在神启异象中造访他的传奇凤凰——它许诺了他对抗威胁国度的亡灵大军的胜利。数十年来，奥勒良领导着对抗至强巫妖与吸血鬼领主的圣战，头盔的神圣魔法能将它们的攻击如数奉还。当他最终陨落于暮光终焉之战中时，他的尸身与头盔均不知所踪——直到今日。尽管原本的力量已有所衰减，但遗物中束缚着的天界精魂仍在燃烧着义愤之火，渴望着再度将黑暗从这片土地上驱逐出去。</content>
 	<content contentuid="h6718d472gac06g4c61gb071gdd34417cc9dc" version="1">圣火复仇</content>
-	<content contentuid="hd9f4bd16gf946g42beg8228g4c830ec93c07" version="1">&lt;b&gt;不死生物&lt;/b&gt;对你造成伤害时，必须通过对抗你的&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;战技豁免难度等级&lt;/LSTag&gt;的体质&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;，否则陷入&lt;LSTag Type="Status" Tooltip="ARMOURH117"&gt;天界闪光&lt;/LSTag&gt;，持续&lt;b&gt;[1]&lt;/b&gt;回合。</content>
+	<content contentuid="hd9f4bd16gf946g42beg8228g4c830ec93c07" version="2">&lt;b&gt;不死生物&lt;/b&gt;对你造成伤害时，必须通过对抗你的&lt;LSTag Type="Status" Tooltip="AMP_POTENCY_DC"&gt;威能豁免等级&lt;/LSTag&gt;的体质&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;，否则陷入&lt;LSTag Type="Status" Tooltip="ARMOURH117"&gt;天界闪光&lt;/LSTag&gt;，持续&lt;b&gt;[1]&lt;/b&gt;回合。</content>
 	<content contentuid="h1fbe1dd9gb289g41b4ga41agb46578842f79" version="1">天界闪光</content>
 	<content contentuid="h61ba613fged0bg469fgada4g2e2eadac0aa5" version="1">该&lt;b&gt;不死生物&lt;/b&gt;被天界火焰环绕，损失&lt;b&gt;[1]&lt;/b&gt;点&lt;LSTag Tooltip="Strength"&gt;力量&lt;/LSTag&gt;和&lt;LSTag Tooltip="Dexterity"&gt;敏捷&lt;/LSTag&gt;。</content>
 	<content contentuid="h42fa8135g161dg4839g9368g24d8ea7f4f50" version="1">饥焰之冠</content>

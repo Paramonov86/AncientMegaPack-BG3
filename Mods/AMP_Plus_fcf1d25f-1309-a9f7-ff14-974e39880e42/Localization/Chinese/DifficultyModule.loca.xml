@@ -16,7 +16,7 @@
 	<content contentuid="h31ca5669g0653g493ag8559g741f3e12a912" version="1">提示设置</content>
 	<content contentuid="h45e877ecg4b1eg4e56gbf62ge0fb3b0c0a24" version="1">配置 AMP 提示和教程的显示方式。</content>
 	<content contentuid="hf1741769g2b85g4cdfga4f2g0d83814962b8" version="1">游戏模式</content>
-	<content contentuid="hd367f354gc05dg4ff5g9d03g0fad5c73bb43" version="1">更改 AMP 游戏模式。</content>
+	<content contentuid="hd367f354gc05dg4ff5g9d03g0fad5c73bb43" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [休闲模式和原版模式不属于正当模式]&lt;br&gt;&lt;br&gt;更改 AMP 游戏模式。</content>
 	<content contentuid="h8b01504dgb648g4f7ega3e3g335be9f60cb2" version="1">&lt;b&gt;AMP 提示设置&lt;/b&gt;&lt;br&gt;&lt;br&gt;每次操作都会显示提示，并反复说明 AMP 的机制。&lt;br&gt;&lt;br&gt;按“是”应用，按“否”查看下一个选项。</content>
 	<content contentuid="h79ef58f8g6069g4c4fgb130g09c359d5875b" version="1">&lt;b&gt;AMP 提示设置&lt;/b&gt;&lt;br&gt;&lt;br&gt;每次操作都会显示提示，但已经读过的 AMP 机制提示不会再重复出现。&lt;br&gt;&lt;br&gt;按“是”应用，按“否”查看下一个选项。</content>
 	<content contentuid="he429f8dbg9a51g4f12g831cg08f7b6e8ec6a" version="1">&lt;b&gt;AMP 提示设置&lt;/b&gt;&lt;br&gt;&lt;br&gt;每次操作都会显示提示，AMP 机制的一次性提示则完全不显示。&lt;br&gt;&lt;br&gt;按“是”应用，按“否”查看下一个选项。</content>
@@ -503,7 +503,7 @@
 	<content contentuid="h015b29e7gc5edg4098g8e62g7bff4c84be1d" version="1">一个从未赢得银剑的淘汰者，挥着一根银棒，报复把他赶出来的养育间。卡维尔每打中一次，势头就上升一层，提高伤害和速度，最终使目标&lt;LSTag Type="Status" Tooltip="STUNNED"&gt;震慑&lt;/LSTag&gt;。当一记猛挥只打中空气时，他会砸裂自己的脑袋，势头也随之崩溃。</content>
 	<content contentuid="h32f9076dgb1c4g495fgb56fg37140b2f5cdd" version="1">卡维尔的棍棒</content>
 	<content contentuid="hb56a8698g6f87g4e21g8465g01c400c95ce7" version="1">碎颅</content>
-	<content contentuid="h6d1223c3ga9b1g4fb8gb23bg6bf3fe4b7b46" version="1">卡维尔朝远处的目标掷出石块，造成&lt;b&gt;[1]&lt;/b&gt;，并震得对方头颅嗡鸣。若目标的&lt;LSTag Tooltip="Constitution"&gt;体质&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;（&lt;b&gt;[2]&lt;/b&gt;）失败，则陷入&lt;LSTag Type="Status" Tooltip="STUNNED"&gt;震慑&lt;/LSTag&gt;。</content>
+	<content contentuid="h6d1223c3ga9b1g4fb8gb23bg6bf3fe4b7b46" version="1">卡维尔朝远处的目标掷出石块，造成&lt;b&gt;[1]&lt;/b&gt;，并震得对方头颅嗡鸣。若目标的&lt;LSTag Tooltip="Constitution"&gt;体质&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;失败，则陷入&lt;LSTag Type="Status" Tooltip="STUNNED"&gt;震慑&lt;/LSTag&gt;。</content>
 	<content contentuid="h480a0ef2g4672g4e0fgae52g8ff6bab92223" version="1">战吼</content>
 	<content contentuid="hdf763c15g968eg4e72g8d74gfcd0225abd72" version="1">卡维尔用防守换取纯粹的攻势——一声战吼放下他的防备，换来更重的攻击和更快的速度。</content>
 	<content contentuid="hc3486012gef86g46b5ga3bag032684e45729" version="1">奔跃</content>

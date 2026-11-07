@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+  <content contentuid="h1e8ed970gfdd3g420fga2d8g30e6c10c6f74" version="1">在近战中攻击忍耐者，她体内的野兽便会还击，造成&lt;b&gt;[1]&lt;/b&gt;并施加&lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;流血&lt;/LSTag&gt;。</content>
+  <content contentuid="h28f4f95bg0e52g44d2gb5c3g645e56c5d7da" version="1">开启或关闭昼明术的明亮光芒。关闭后，光球不再显示视觉效果，受照亮的生物只保留微弱的光晕。</content>
+  <content contentuid="h2b5b8facg6602g4ed2gb236g712ed67db5cf" version="1">U'kra高声念诵战场祷言，将他者的生命注入一名盟友。赋予&lt;b&gt;+[1]&lt;/b&gt;最大&lt;LSTag Tooltip="HitPoints"&gt;生命值&lt;/LSTag&gt;。</content>
+  <content contentuid="h32831e46g967dg46d2g8126ge33f5e2a985d" version="1">无需攀登即可解决奥术高塔的事务。恢复供电，劝服伯纳德使其保持友善，并将塔内的鬼头菇孢子、疯狂之舌和指引之光戒指移入你的背包。</content>
+  <content contentuid="h4a852e08gb13dg4aa3g8b17g87f0d60ebed8" version="1">立即解决谋杀裁判所的事务。和平解救瓦莱里亚，或击杀沙洛佛克；无论选择哪种方式，都会揭示通往谋杀者圣所的道路。</content>
+  <content contentuid="h506597ceg0457g4801gb631gd14de7596c9f" version="1">立即结束翠绿林地的毒蛇审判。选择阿拉贝尔的命运后，场景会在画面外完成，并更新日志、给予经验与奖励，如同你亲自通过对话解决了一切。</content>
+  <content contentuid="h624aa579g3a4bg487agadc5g793c991c38c3" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [启用时视为作弊]&lt;br&gt;&lt;br&gt;可切换。启用时，只要尝试撬锁、打开或砸开上锁的箱子、门或容器，就会立即将其解锁并打开，无需进行开锁小游戏。适用于所有章节。再次使用可恢复门锁功能。</content>
+  <content contentuid="h69df4e69g0956g4344g81deg3f56244830f4" version="1">当U'kra治疗一名剩余不足&lt;b&gt;一半&lt;/b&gt;&lt;LSTag Tooltip="HitPoints"&gt;生命值&lt;/LSTag&gt;的盟友时，额外恢复&lt;b&gt;[1]&lt;/b&gt;。</content>
+  <content contentuid="h6f739eb8g0845g4277gadfeg67efcee1f934" version="1">跳过赫尔希克的材料搜集清单。仪式材料会出现在你的背包中，通往希望之邸的传送门也会自行开启。</content>
+  <content contentuid="h70c9ae95gb3a8g4d32gb474g8896ee760810" version="1">提卡哈拉向远处的敌人射出一道日光，造成[1]。如果目标正站在阳光下，则改为造成[2]。</content>
+  <content contentuid="h7db58815g66adg4584gb7e5g2367245f8bf9" version="1">U'kra通过治疗盟友来约束体内的野兽。如果连续2个回合结束时都未治疗盟友，就会触发持续1回合的兽性传承：获得&lt;b&gt;[1]&lt;/b&gt;个额外&lt;LSTag Tooltip="ActionPoint"&gt;动作点&lt;/LSTag&gt;，攻击与法术造成的伤害增加&lt;b&gt;+[2]&lt;/b&gt;。效果结束后，她恢复受祝的平静。</content>
+  <content contentuid="h7e6447e8g06dfg4982g855fg4fc35d6ffc02" version="1">&lt;br&gt;当敌人对你造成伤害时，你有&lt;b&gt;[3]%&lt;/b&gt;的概率进入&lt;LSTag Type="Status" Tooltip="INVISIBILITY"&gt;隐形&lt;/LSTag&gt;状态，持续&lt;b&gt;[2]&lt;/b&gt;回合，并以&lt;LSTag Type="Spell" Tooltip="Target_FogCloud"&gt;云雾术&lt;/LSTag&gt;笼罩周围区域。&lt;br&gt;&lt;br&gt;每回合最多触发&lt;b&gt;一次&lt;/b&gt;。</content>
+  <content contentuid="h8c5ca7c8ged53g4ad5gb063g0a6bb6dc9d4a" version="1">U'kra以自身的坚韧庇护盟友中最危险的一位；只要忍耐者还活着，那名盟友就&lt;b&gt;不会受到伤害&lt;/b&gt;。</content>
+  <content contentuid="ha1732e7cgdca6g4f8fgb326g42cd19deae2d" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [启用时视为作弊]&lt;br&gt;&lt;br&gt;获得无限金币。</content>
+  <content contentuid="ha4935fd0ga4a5g4efbg9adfgf1ba50b401ce" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [启用时视为作弊]&lt;br&gt;&lt;br&gt;立即完成指定的冗长任务。选择结果后，场景会在画面外完成，并更新日志、给予经验与奖励，如同你亲自完成了任务。</content>
+  <content contentuid="hb2c3d4e5gf6a7g8b9cg0d1eg2f3a4b5c6d7e" version="1">在攻击间隙迅速投掷，造成&lt;b&gt;[1]&lt;/b&gt;。若目标未通过&lt;LSTag Tooltip="Constitution"&gt;体质&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免检定&lt;/LSTag&gt;（&lt;b&gt;[2]&lt;/b&gt;），则陷入&lt;LSTag Type="Status" Tooltip="STUNNED"&gt;震慑&lt;/LSTag&gt;，持续至其下回合结束。</content>
+  <content contentuid="hb653b73eg309eg42f4gb723gb48be6aec054" version="1">结束寻找小丑散落遗骸的任务。日志会标记任务完成，并给予经验与奖励，如同你亲自找齐了他的遗骸。</content>
+  <content contentuid="hba8f343fg530eg4a37g88ccg6700b383fec9" version="1">U'kra以自身的苦痛为斗篷，庇护一名盟友。只要忍耐者尚有一息，受庇护的生物就&lt;b&gt;不会受到伤害&lt;/b&gt;。</content>
+  <content contentuid="hbb80ba70g109cg4aeag97ebga7c9eb7122b1" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; [作弊]&lt;br&gt;&lt;br&gt;将整个第一章直接推进至所选结局。所有支线任务都会结束，林地将获救或遭到洗劫，荒野中的敌人与其战利品会被一并清除，队伍则获得完整通关该章的经验。此操作无法撤销。</content>
+  <content contentuid="hbccafd73ga740g4decga6bbgd9fc4778589f" version="1">立即在《博德之口》刊登赞扬你的文章，跳过潜入印刷所的过程。墨迹一干，全城就能读到你的好消息。</content>
+  <content contentuid="hbfe85cd2g79f2g42fdgad0ag43cb966a319f" version="1">深藏的掠夺者挣脱了束缚。本回合U'kra获得&lt;b&gt;[1]&lt;/b&gt;个额外&lt;LSTag Tooltip="ActionPoint"&gt;动作点&lt;/LSTag&gt;，造成的伤害增加&lt;b&gt;+[2]&lt;/b&gt;，直到祷言将野兽重新带回受祝的平静。</content>
+  <content contentuid="hc23a554cg5021g49c1g92b8g765dc109dd94" version="1">祷言仍在生效，野兽安然蛰伏。若让U'kra太久无法施以治疗的慈悲，兽性传承便会挣脱束缚。</content>
+  <content contentuid="hcceadab8g94bdg4c73g9226gc1353c6a8833" version="1">将一盏影灯投向地面。在其周围&lt;b&gt;[1]&lt;/b&gt;范围内维持黑暗，持续&lt;b&gt;[2]&lt;/b&gt;回合，该区域内的一切都将无所遁形。&lt;br&gt;&lt;br&gt;消耗&lt;b&gt;[3]&lt;/b&gt;层&lt;LSTag Type="Status" Tooltip="AMP_ANCIENTCHAOS"&gt;远古混沌&lt;/LSTag&gt;。</content>
+  <content contentuid="hd67ce1ccg1a5fg4637g89ecgaacc6ed2ce9e" version="1">当U'kra治疗一名盟友时，该盟友还会获得&lt;b&gt;[1]&lt;/b&gt;点&lt;LSTag Tooltip="TemporaryHitPoints"&gt;临时生命值&lt;/LSTag&gt;。</content>
+  <content contentuid="hf7823edbga3d6g447egbdaagfda8fb748bae" version="1">&lt;LSTag Type="Image" Info="SoftWarning"/&gt; 你&lt;b&gt;免疫&lt;/b&gt;造成&lt;b&gt;[1]&lt;/b&gt;或更少伤害的攻击。&lt;br&gt;任何有害效果都无法施加于你。</content>
+</contentList>

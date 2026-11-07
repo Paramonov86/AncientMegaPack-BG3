@@ -419,7 +419,7 @@
 	<content contentuid="hc22194dbg3503g4e34ga007gf3166d9e0164" version="1">智識千鈞</content>
 	<content contentuid="h412d8914g1347g4fffgad0fg0f4e3712b71e" version="1">當你的&lt;LSTag Tooltip="Intelligence"&gt;智力&lt;/LSTag&gt;高於其他所有&lt;LSTag Tooltip="AbilityScore"&gt;屬性值&lt;/LSTag&gt;時，你不會被強行移動。</content>
 	<content contentuid="h0d4da946g9fe8g4365g8758g716a560ba2bd" version="1">複寫</content>
-	<content contentuid="h9d51e36eg253bg45efg9377g667898d34d4d" version="1">若你為&lt;b&gt;法師&lt;/b&gt;，使用&lt;LSTag Type="Spell" Tooltip="Shout_ArcaneRecovery"&gt;奧術恢復&lt;/LSTag&gt;時也會獲得&lt;LSTag Type="Status" Tooltip="AMP_ARCANE_V_4"&gt;頓悟&lt;/LSTag&gt;。</content>
+	<content contentuid="h9d51e36eg253bg45efg9377g667898d34d4d" version="2">若你為&lt;b&gt;法師&lt;/b&gt;，使用&lt;LSTag Type="Spell" Tooltip="Shout_ArcaneRecovery"&gt;奧術恢復&lt;/LSTag&gt;時也會獲得&lt;LSTag Type="Status" Tooltip="AMP_ARCANE_V_4"&gt;頓悟&lt;/LSTag&gt;。未成形的書頁無視戰鬥的法則：&lt;LSTag Type="Spell" Tooltip="Shout_ArcaneRecovery"&gt;奧術恢復&lt;/LSTag&gt;即使在戰鬥中也能施放。</content>
 	<content contentuid="hf7809f01g3ff3g4a57g8e9bg3891e9f3d3b2" version="1">塑能</content>
 	<content contentuid="hf8eb2936g3cb6g4a02gb8a9g3ec5cae870b0" version="1">本回合，魔網要求塑能系魔法。</content>
 	<content contentuid="h4f5d30c2gb097g49e6gbe14g99de58c43869" version="1">防護</content>
@@ -685,7 +685,7 @@
 	<content contentuid="h68a6c392g5c56g43e3g97abg2a86e71f0cb1" version="1">雷鳴裁決</content>
 	<content contentuid="h9b443cebgd1afg4168g9d4cgf5d8f9be18ad" version="1">當你以造成&lt;b&gt;[2]&lt;/b&gt;或&lt;b&gt;[3]&lt;/b&gt;的&lt;LSTag Type="Status" Tooltip="AMP_INFO_SPELL"&gt;法術&lt;/LSTag&gt;造成傷害時，有&lt;b&gt;[1]%&lt;/b&gt;的機率對自身及目標施加&lt;LSTag Type="Status" Tooltip="MAG_THUNDER_REVERBERATION"&gt;殘響&lt;/LSTag&gt;，持續&lt;b&gt;[4]&lt;/b&gt;回合。</content>
 	<content contentuid="h820bdeb0g7b3cg4aa1g99e4g520e7268a091" version="1">摩拉丁之迴響</content>
-	<content contentuid="h7a5d14e0g1b22g4ec7g806dgba0e80bd15ac" version="1">處於&lt;LSTag Type="Status" Tooltip="MAG_THUNDER_REVERBERATION"&gt;殘響&lt;/LSTag&gt;狀態時，造成&lt;b&gt;[2]&lt;/b&gt;或&lt;b&gt;[3]&lt;/b&gt;的&lt;LSTag Type="Status" Tooltip="AMP_INFO_SPELL"&gt;法術&lt;/b&gt;額外造成&lt;b&gt;[1]&lt;/b&gt;點傷害。</content>
+	<content contentuid="h7a5d14e0g1b22g4ec7g806dgba0e80bd15ac" version="1">處於&lt;LSTag Type="Status" Tooltip="MAG_THUNDER_REVERBERATION"&gt;殘響&lt;/LSTag&gt;狀態時，造成&lt;b&gt;[2]&lt;/b&gt;或&lt;b&gt;[3]&lt;/b&gt;的&lt;LSTag Type="Status" Tooltip="AMP_INFO_SPELL"&gt;法術&lt;/LSTag&gt;額外造成&lt;b&gt;[1]&lt;/b&gt;點傷害。</content>
 	<content contentuid="h9f5e6d15g6c7dg452fga72eg1f98340b04cb" version="1">粗壯</content>
 	<content contentuid="hd2bc4c4bgc75fg48ceg8c56g423ddab31504" version="1">矮人血統者的&lt;LSTag Tooltip="Constitution"&gt;體質&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;獲得&lt;b&gt;+2&lt;/b&gt;。</content>
 	<content contentuid="hba98a2c3g2e65g4e79g9abbg13296ab4c92f" version="1">矮人血統者的&lt;LSTag Tooltip="Constitution"&gt;體質&lt;/LSTag&gt;&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;獲得&lt;LSTag Tooltip="Advantage"&gt;優勢&lt;/LSTag&gt;。</content>
@@ -820,7 +820,7 @@
 	<content contentuid="h60621ae7gfe0eg067ag8d4ege6ecec4b6482" version="1">恐懼領主護甲</content>
 	<content contentuid="h70d91481g97c5g79f4g64b3gc5eea59e5df4" version="1">一具幽暗而不祥的甲殼，將穿戴者籠罩在惡毒的靈光之中。以黑曜石板與煉獄符文熔鑄而成，它散發著一層詭異的煙靄，在甲冑的邊緣繚繞舞動。這具可怖的護甲，以一股陰邪的生命力嗡鳴著，它的表面，流轉著被它所吞噬的靈魂的幽幽面龐。</content>
 	<content contentuid="h1b2bffa7g831fg4e74ga1e6g8e45250dda68" version="1">靈魂護盾</content>
-	<content contentuid="hf451d903g912eg443eg92eag8413bfc3ef7d" version="1">你被&lt;b&gt;[1]&lt;/b&gt;個（最多&lt;b&gt;[2]&lt;/b&gt;個）可怕的靈魂包圍。你的&lt;LSTag Tooltip="ArmourClass"&gt;護甲等級&lt;/LSTag&gt;獲得&lt;b&gt;+[3]&lt;/b&gt;加值。當敵人以近戰攻擊命中你時，一個靈魂將猛撲向該敵人，造成&lt;b&gt;[4]&lt;/b&gt;點傷害。若該敵人未透過一次對抗你&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;&lt;b&gt;-2&lt;/b&gt;的感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，則會陷入&lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;恐慌&lt;/LSTag&gt;。該靈魂隨後消散。</content>
+	<content contentuid="hf451d903g912eg443eg92eag8413bfc3ef7d" version="1">你被&lt;b&gt;[1]&lt;/b&gt;個（最多&lt;b&gt;[2]&lt;/b&gt;個）可怕的靈魂包圍。你的&lt;LSTag Tooltip="ArmourClass"&gt;護甲等級&lt;/LSTag&gt;獲得&lt;b&gt;+[3]&lt;/b&gt;加值。當敵人以近戰攻擊命中你時，一個靈魂將猛撲向該敵人，造成&lt;b&gt;[4]&lt;/b&gt;點傷害。若該敵人未透過一次對抗你&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，則會陷入&lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;恐慌&lt;/LSTag&gt;。該靈魂隨後消散。</content>
 	<content contentuid="ha2f3e578g2cafg4cadgbb2fg90ddff009d8e" version="1">擊殺敵人時，獲得一層&lt;b&gt;可怕靈魂充能&lt;/b&gt;（最多&lt;b&gt;[1]&lt;/b&gt;）。擁有靈魂時，&lt;LSTag Tooltip="ArmourClass"&gt;護甲等級&lt;/LSTag&gt;獲得&lt;b&gt;+[2]&lt;/b&gt;。被近戰攻擊命中時，迫使一個靈魂發動攻擊，造成&lt;b&gt;[3]&lt;/b&gt;，若敵人未能透過對抗你的&lt;LSTag Type="Status" Tooltip="AMP_MANEUVER_SAVE_DC"&gt;戰技豁免難度等級&lt;/LSTag&gt;的感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;，則使其&lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;恐慌&lt;/LSTag&gt;。靈魂在&lt;LSTag Tooltip="ShortRest"&gt;短休&lt;/LSTag&gt;後消散。</content>
 	<content contentuid="h19bf457ega7d2gfe9cg0a33g729a710a6c4d" version="1">恐懼領主頭盔</content>
 	<content contentuid="hcd1c0041gbeeeg1a3fg83f7g05284ba79031" version="1">恐懼領主之盔是一頂令人生畏的匠心之作，由深色精鐵鍛造而成，上面刻有泛著不詳光芒的奧術符文。它的面甲被塑成一副冷酷而毫無表情的面容，彷彿能徑直望穿人的靈魂。但凡凝視那空洞雙眼的人，都會被一股不可動搖的恐懼所震撼。沒有任何心智——無論多麼堅定不移，能抵抗這頭盔可怖的侵染。</content>
@@ -839,7 +839,7 @@
 	<content contentuid="haccb0e82g8bd6g4c11gad10g0ea9d72524ee" version="1">瘋狂低語</content>
 	<content contentuid="h0e1d1cb3g52a7g4713gb4c2gf23ab866e5a7" version="1">&lt;LSTag Type="Status" Tooltip="AMP_CURSED_ARTIFACT_INFO"&gt;詛咒遺物&lt;/LSTag&gt;。&lt;br&gt;這柄利刃的飢渴啃噬著你的心智。在戰鬥中&lt;b&gt;每回合開始時&lt;/b&gt;，若你在上一回閤中沒有殺死一名&lt;b&gt;有感知的生物&lt;/b&gt;，則必須透過一次感知&lt;LSTag Tooltip="SavingThrow"&gt;豁免檢定&lt;/LSTag&gt;(&lt;b&gt;[1]&lt;/b&gt;)，否則將屈服於&lt;LSTag Type="Status" Tooltip="MADNESS"&gt;瘋狂&lt;/LSTag&gt;。</content>
 	<content contentuid="hbb860902ga4c3g44f1g9a6cg17f521cabd0b" version="1">透骨橫掃</content>
-	<content contentuid="h75e28f20gea84g471cgb341g9659eacc5b14" version="1">以一道致命的弧線揮出你的利刃，對範圍內的&lt;b&gt;所有&lt;/b&gt;生物造成&lt;b&gt;武器傷害&gt;以及額外的&lt;b&gt;[1]&lt;/b&gt;。目標同時陷入&lt;LSTag Type="Status" Tooltip="CHILL_TOUCH"&gt;凍寒之觸&lt;/LSTag&gt;。&lt;br&gt;&lt;br&gt;使用此能力將喚醒這柄利刃的飢渴，對你施加&lt;LSTag Type="Status" Tooltip="GLO_DANGEROUSBOOK_MADNESS"&gt;瘋狂低語&lt;/LSTag&gt;。</content>
+	<content contentuid="h75e28f20gea84g471cgb341g9659eacc5b14" version="1">以一道致命的弧線揮出你的利刃，對範圍內的&lt;b&gt;所有&lt;/b&gt;生物造成&lt;b&gt;武器傷害&lt;/b&gt;以及額外的&lt;b&gt;[1]&lt;/b&gt;。目標同時陷入&lt;LSTag Type="Status" Tooltip="CHILL_TOUCH"&gt;凍寒之觸&lt;/LSTag&gt;。&lt;br&gt;&lt;br&gt;使用此能力將喚醒這柄利刃的飢渴，對你施加&lt;LSTag Type="Status" Tooltip="GLO_DANGEROUSBOOK_MADNESS"&gt;瘋狂低語&lt;/LSTag&gt;。</content>
 	<content contentuid="hb8cbc570gba6bg4b8cg8ab8gd5c799c2960d" version="1">不屈意志</content>
 	<content contentuid="h10df47a8g278fg4a8egb4fcg1eb404265f4d" version="1">這柄利刃幽暗的飢渴，守護著你的心智免受&lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;恐懼&lt;/LSTag&gt;與&lt;LSTag Type="Status" Tooltip="CHARMED"&gt;魅惑&lt;/LSTag&gt;。</content>
 	<content contentuid="h35421268g581ag1ccfg8b4fg91099c1f8773" version="1">隕落征服者披風</content>
@@ -1033,7 +1033,7 @@
 	<content contentuid="head985cag1808g4fc8g9ff4g5ea7a20de961" version="1">精銳斥候</content>
 	<content contentuid="h6146a7afgb68dg491dgb7b2gc17448fd0df3" version="1">一人成軍</content>
 	<content contentuid="h7e968d2bg0f26g4e8dgbcf5gfeead52ce7f6" version="1">戰爭之王</content>
-	<content contentuid="hff795e86gfd00g456fgb44dg60dfdaa409d9" version="1">你的戰爭充能（上限&lt;b&gt;[1]&lt;/b&gt;；戰鬥結束時重置）。&lt;br&gt;&lt;br&gt;消耗方式：&lt;br&gt;• &lt;LSTag Type="Spell" Tooltip="Target_AMP_Warrior_SummonFootman"&gt;召喚斥候&lt;/LSTag&gt;：每次召喚消耗1層。&lt;br&gt;• &lt;b&gt;直接命令&lt;/b&gt;與&lt;b&gt;武士道&lt;/b&gt;切換：啟用時每回合消耗1層。&lt;br&gt;&lt;br&gt;當至少保留1層時：&lt;br&gt;• 達成&lt;LSTag Tooltip="CriticalHit"&gt;重擊&lt;/LSTag&gt;的閾值降低。&lt;br&gt;• 受到傷害時，有機率獲得&lt;LSTag Type="Status" Tooltip="ACTION_SURGE"&gt;動作如潮&lt;/LSTag&gt;。</content>
+	<content contentuid="hff795e86gfd00g456fgb44dg60dfdaa409d9" version="2">你的戰爭充能（上限&lt;b&gt;[1]&lt;/b&gt;；戰鬥結束時重置）。&lt;br&gt;&lt;br&gt;消耗方式：&lt;br&gt;• &lt;LSTag Type="Spell" Tooltip="Target_AMP_Warrior_SummonFootman"&gt;鳴鼓吹角&lt;/LSTag&gt;：每次召喚消耗1層。&lt;br&gt;• &lt;b&gt;直接命令&lt;/b&gt;與&lt;b&gt;武士道&lt;/b&gt;切換：啟用時每回合消耗1層。&lt;br&gt;&lt;br&gt;當至少保留1層時：&lt;br&gt;• 受到傷害時，有機率獲得&lt;LSTag Type="Status" Tooltip="ACTION_SURGE"&gt;動作如潮&lt;/LSTag&gt;。</content>
 	<content contentuid="h3935042cgfd18g4819g8433g8fd19a51dd9b" version="1">臨陣</content>
 	<content contentuid="ha64d7d1bg498ag4242ga895gaf64669432d6" version="1">戰鬥開始時，獲得&lt;b&gt;[1]&lt;/b&gt;層&lt;LSTag Type="Status" Tooltip="AMP_MASTER_OF_WAR"&gt;戰爭之王&lt;/LSTag&gt;（總計上限&lt;b&gt;[2]&lt;/b&gt;層）。</content>
 	<content contentuid="h095c934fg8adcg4a94g840fg8ebf0ad7ae90" version="1">乘勝</content>
